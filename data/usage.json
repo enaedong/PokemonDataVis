@@ -1,0 +1,5287 @@
+[
+  {
+    "rank": 1,
+    "name": "Great Tusk",
+    "safe_name": "great-tusk",
+    "usage": 28.0,
+    "top_move": "Rapid Spin"
+  },
+  {
+    "rank": 2,
+    "name": "Kingambit",
+    "safe_name": "kingambit",
+    "usage": 18.8,
+    "top_move": "Sucker Punch"
+  },
+  {
+    "rank": 3,
+    "name": "Gholdengo",
+    "safe_name": "gholdengo",
+    "usage": 17.2,
+    "top_move": "Shadow Ball"
+  },
+  {
+    "rank": 4,
+    "name": "Dragapult",
+    "safe_name": "dragapult",
+    "usage": 17.0,
+    "top_move": "U-turn"
+  },
+  {
+    "rank": 5,
+    "name": "Dragonite",
+    "safe_name": "dragonite",
+    "usage": 15.3,
+    "top_move": "Dragon Dance"
+  },
+  {
+    "rank": 6,
+    "name": "Iron Valiant",
+    "safe_name": "iron-valiant",
+    "usage": 14.6,
+    "top_move": "Moonblast"
+  },
+  {
+    "rank": 7,
+    "name": "Corviknight",
+    "safe_name": "corviknight",
+    "usage": 12.9,
+    "top_move": "Roost"
+  },
+  {
+    "rank": 8,
+    "name": "Slowking-Galar",
+    "safe_name": "slowking-galar",
+    "usage": 12.9,
+    "top_move": "Sludge Bomb"
+  },
+  {
+    "rank": 9,
+    "name": "Gliscor",
+    "safe_name": "gliscor",
+    "usage": 11.9,
+    "top_move": "Protect"
+  },
+  {
+    "rank": 10,
+    "name": "Ogerpon-Wellspring",
+    "safe_name": "ogerpon-wellspring",
+    "usage": 11.8,
+    "top_move": "Ivy Cudgel"
+  },
+  {
+    "rank": 11,
+    "name": "Iron Moth",
+    "safe_name": "iron-moth",
+    "usage": 11.6,
+    "top_move": "Fiery Dance"
+  },
+  {
+    "rank": 12,
+    "name": "Zamazenta",
+    "safe_name": "zamazenta",
+    "usage": 11.5,
+    "top_move": "Crunch"
+  },
+  {
+    "rank": 13,
+    "name": "Raging Bolt",
+    "safe_name": "raging-bolt",
+    "usage": 11.4,
+    "top_move": "Thunderclap"
+  },
+  {
+    "rank": 14,
+    "name": "Landorus-Therian",
+    "safe_name": "landorus-therian",
+    "usage": 10.9,
+    "top_move": "U-turn"
+  },
+  {
+    "rank": 15,
+    "name": "Cinderace",
+    "safe_name": "cinderace",
+    "usage": 10.5,
+    "top_move": "Pyro Ball"
+  },
+  {
+    "rank": 16,
+    "name": "Samurott-Hisui",
+    "safe_name": "samurott-hisui",
+    "usage": 9.6,
+    "top_move": "Ceaseless Edge"
+  },
+  {
+    "rank": 17,
+    "name": "Ting-Lu",
+    "safe_name": "ting-lu",
+    "usage": 9.3,
+    "top_move": "Earthquake"
+  },
+  {
+    "rank": 18,
+    "name": "Hatterene",
+    "safe_name": "hatterene",
+    "usage": 8.9,
+    "top_move": "Draining Kiss"
+  },
+  {
+    "rank": 19,
+    "name": "Kyurem",
+    "safe_name": "kyurem",
+    "usage": 8.8,
+    "top_move": "Freeze-Dry"
+  },
+  {
+    "rank": 20,
+    "name": "Darkrai",
+    "safe_name": "darkrai",
+    "usage": 8.7,
+    "top_move": "Dark Pulse"
+  },
+  {
+    "rank": 21,
+    "name": "Garganacl",
+    "safe_name": "garganacl",
+    "usage": 8.2,
+    "top_move": "Salt Cure"
+  },
+  {
+    "rank": 22,
+    "name": "Glimmora",
+    "safe_name": "glimmora",
+    "usage": 7.6,
+    "top_move": "Mortal Spin"
+  },
+  {
+    "rank": 23,
+    "name": "Pecharunt",
+    "safe_name": "pecharunt",
+    "usage": 7.5,
+    "top_move": "Malignant Chain"
+  },
+  {
+    "rank": 24,
+    "name": "Walking Wake",
+    "safe_name": "walking-wake",
+    "usage": 7.2,
+    "top_move": "Draco Meteor"
+  },
+  {
+    "rank": 25,
+    "name": "Iron Treads",
+    "safe_name": "iron-treads",
+    "usage": 7.2,
+    "top_move": "Rapid Spin"
+  },
+  {
+    "rank": 26,
+    "name": "Zapdos",
+    "safe_name": "zapdos",
+    "usage": 6.9,
+    "top_move": "Hurricane"
+  },
+  {
+    "rank": 27,
+    "name": "Alomomola",
+    "safe_name": "alomomola",
+    "usage": 6.6,
+    "top_move": "Flip Turn"
+  },
+  {
+    "rank": 28,
+    "name": "Primarina",
+    "safe_name": "primarina",
+    "usage": 6.1,
+    "top_move": "Moonblast"
+  },
+  {
+    "rank": 29,
+    "name": "Araquanid",
+    "safe_name": "araquanid",
+    "usage": 5.8,
+    "top_move": "Sticky Web"
+  },
+  {
+    "rank": 30,
+    "name": "Meowscarada",
+    "safe_name": "meowscarada",
+    "usage": 5.6,
+    "top_move": "Flower Trick"
+  },
+  {
+    "rank": 31,
+    "name": "Clefable",
+    "safe_name": "clefable",
+    "usage": 5.4,
+    "top_move": "Moonblast"
+  },
+  {
+    "rank": 32,
+    "name": "Garchomp",
+    "safe_name": "garchomp",
+    "usage": 5.4,
+    "top_move": "Earthquake"
+  },
+  {
+    "rank": 33,
+    "name": "Moltres",
+    "safe_name": "moltres",
+    "usage": 5.3,
+    "top_move": "Roost"
+  },
+  {
+    "rank": 34,
+    "name": "Tinkaton",
+    "safe_name": "tinkaton",
+    "usage": 5.3,
+    "top_move": "Gigaton Hammer"
+  },
+  {
+    "rank": 35,
+    "name": "Rillaboom",
+    "safe_name": "rillaboom",
+    "usage": 5.2,
+    "top_move": "Grassy Glide"
+  },
+  {
+    "rank": 36,
+    "name": "Weavile",
+    "safe_name": "weavile",
+    "usage": 5.2,
+    "top_move": "Knock Off"
+  },
+  {
+    "rank": 37,
+    "name": "Scizor",
+    "safe_name": "scizor",
+    "usage": 5.2,
+    "top_move": "Bullet Punch"
+  },
+  {
+    "rank": 38,
+    "name": "Ceruledge",
+    "safe_name": "ceruledge",
+    "usage": 5.2,
+    "top_move": "Bitter Blade"
+  },
+  {
+    "rank": 39,
+    "name": "Iron Crown",
+    "safe_name": "iron-crown",
+    "usage": 4.6,
+    "top_move": "Tachyon Cutter"
+  },
+  {
+    "rank": 40,
+    "name": "Enamorus",
+    "safe_name": "enamorus",
+    "usage": 4.3,
+    "top_move": "Moonblast"
+  },
+  {
+    "rank": 41,
+    "name": "Dondozo",
+    "safe_name": "dondozo",
+    "usage": 3.9,
+    "top_move": "Rest"
+  },
+  {
+    "rank": 42,
+    "name": "Pelipper",
+    "safe_name": "pelipper",
+    "usage": 3.7,
+    "top_move": "Hurricane"
+  },
+  {
+    "rank": 43,
+    "name": "Clodsire",
+    "safe_name": "clodsire",
+    "usage": 3.6,
+    "top_move": "Recover"
+  },
+  {
+    "rank": 44,
+    "name": "Toxapex",
+    "safe_name": "toxapex",
+    "usage": 3.6,
+    "top_move": "Recover"
+  },
+  {
+    "rank": 45,
+    "name": "Heatran",
+    "safe_name": "heatran",
+    "usage": 3.5,
+    "top_move": "Earth Power"
+  },
+  {
+    "rank": 46,
+    "name": "Serperior",
+    "safe_name": "serperior",
+    "usage": 3.5,
+    "top_move": "Leaf Storm"
+  },
+  {
+    "rank": 47,
+    "name": "Torkoal",
+    "safe_name": "torkoal",
+    "usage": 3.5,
+    "top_move": "Rapid Spin"
+  },
+  {
+    "rank": 48,
+    "name": "Ninetales",
+    "safe_name": "ninetales",
+    "usage": 3.5,
+    "top_move": "Encore"
+  },
+  {
+    "rank": 49,
+    "name": "Blaziken",
+    "safe_name": "blaziken",
+    "usage": 3.3,
+    "top_move": "Close Combat"
+  },
+  {
+    "rank": 50,
+    "name": "Weezing-Galar",
+    "safe_name": "weezing-galar",
+    "usage": 3.3,
+    "top_move": "Defog"
+  },
+  {
+    "rank": 51,
+    "name": "Greninja",
+    "safe_name": "greninja",
+    "usage": 3.0,
+    "top_move": "Dark Pulse"
+  },
+  {
+    "rank": 52,
+    "name": "Blissey",
+    "safe_name": "blissey",
+    "usage": 3.0,
+    "top_move": "Soft-Boiled"
+  },
+  {
+    "rank": 53,
+    "name": "Rotom-Wash",
+    "safe_name": "rotom-wash",
+    "usage": 3.0,
+    "top_move": "Hydro Pump"
+  },
+  {
+    "rank": 54,
+    "name": "Tyranitar",
+    "safe_name": "tyranitar",
+    "usage": 2.9,
+    "top_move": "Knock Off"
+  },
+  {
+    "rank": 55,
+    "name": "Ursaluna",
+    "safe_name": "ursaluna",
+    "usage": 2.9,
+    "top_move": "Facade"
+  },
+  {
+    "rank": 56,
+    "name": "Ribombee",
+    "safe_name": "ribombee",
+    "usage": 2.9,
+    "top_move": "Sticky Web"
+  },
+  {
+    "rank": 57,
+    "name": "Ninetales-Alola",
+    "safe_name": "ninetales-alola",
+    "usage": 2.8,
+    "top_move": "Aurora Veil"
+  },
+  {
+    "rank": 58,
+    "name": "Deoxys-Speed",
+    "safe_name": "deoxys-speed",
+    "usage": 2.8,
+    "top_move": "Psycho Boost"
+  },
+  {
+    "rank": 59,
+    "name": "Quaquaval",
+    "safe_name": "quaquaval",
+    "usage": 2.7,
+    "top_move": "Aqua Step"
+  },
+  {
+    "rank": 60,
+    "name": "Skeledirge",
+    "safe_name": "skeledirge",
+    "usage": 2.6,
+    "top_move": "Torch Song"
+  },
+  {
+    "rank": 61,
+    "name": "Lokix",
+    "safe_name": "lokix",
+    "usage": 2.5,
+    "top_move": "First Impression"
+  },
+  {
+    "rank": 62,
+    "name": "Sinistcha",
+    "safe_name": "sinistcha",
+    "usage": 2.5,
+    "top_move": "Matcha Gotcha"
+  },
+  {
+    "rank": 63,
+    "name": "Venusaur",
+    "safe_name": "venusaur",
+    "usage": 2.5,
+    "top_move": "Sludge Bomb"
+  },
+  {
+    "rank": 64,
+    "name": "Hoopa-Unbound",
+    "safe_name": "hoopa-unbound",
+    "usage": 2.4,
+    "top_move": "Drain Punch"
+  },
+  {
+    "rank": 65,
+    "name": "Grimmsnarl",
+    "safe_name": "grimmsnarl",
+    "usage": 2.3,
+    "top_move": "Reflect"
+  },
+  {
+    "rank": 66,
+    "name": "Excadrill",
+    "safe_name": "excadrill",
+    "usage": 2.3,
+    "top_move": "Earthquake"
+  },
+  {
+    "rank": 67,
+    "name": "Skarmory",
+    "safe_name": "skarmory",
+    "usage": 2.2,
+    "top_move": "Roost"
+  },
+  {
+    "rank": 68,
+    "name": "Hydrapple",
+    "safe_name": "hydrapple",
+    "usage": 2.2,
+    "top_move": "Earth Power"
+  },
+  {
+    "rank": 69,
+    "name": "Keldeo",
+    "safe_name": "keldeo",
+    "usage": 2.1,
+    "top_move": "Vacuum Wave"
+  },
+  {
+    "rank": 70,
+    "name": "Iron Hands",
+    "safe_name": "iron-hands",
+    "usage": 2.1,
+    "top_move": "Ice Punch"
+  },
+  {
+    "rank": 71,
+    "name": "Ogerpon-Cornerstone",
+    "safe_name": "ogerpon-cornerstone",
+    "usage": 2.0,
+    "top_move": "Ivy Cudgel"
+  },
+  {
+    "rank": 72,
+    "name": "Latios",
+    "safe_name": "latios",
+    "usage": 2.0,
+    "top_move": "Draco Meteor"
+  },
+  {
+    "rank": 73,
+    "name": "Barraskewda",
+    "safe_name": "barraskewda",
+    "usage": 1.8,
+    "top_move": "Liquidation"
+  },
+  {
+    "rank": 74,
+    "name": "Hawlucha",
+    "safe_name": "hawlucha",
+    "usage": 1.7,
+    "top_move": "Acrobatics"
+  },
+  {
+    "rank": 75,
+    "name": "Arcanine-Hisui",
+    "safe_name": "arcanine-hisui",
+    "usage": 1.7,
+    "top_move": "Flare Blitz"
+  },
+  {
+    "rank": 76,
+    "name": "Mimikyu",
+    "safe_name": "mimikyu",
+    "usage": 1.7,
+    "top_move": "Play Rough"
+  },
+  {
+    "rank": 77,
+    "name": "Latias",
+    "safe_name": "latias",
+    "usage": 1.7,
+    "top_move": "Calm Mind"
+  },
+  {
+    "rank": 78,
+    "name": "Goodra-Hisui",
+    "safe_name": "goodra-hisui",
+    "usage": 1.6,
+    "top_move": "Flash Cannon"
+  },
+  {
+    "rank": 79,
+    "name": "Maushold",
+    "safe_name": "maushold",
+    "usage": 1.6,
+    "top_move": "Population Bomb"
+  },
+  {
+    "rank": 80,
+    "name": "Azumarill",
+    "safe_name": "azumarill",
+    "usage": 1.6,
+    "top_move": "Aqua Jet"
+  },
+  {
+    "rank": 81,
+    "name": "Incineroar",
+    "safe_name": "incineroar",
+    "usage": 1.5,
+    "top_move": "Knock Off"
+  },
+  {
+    "rank": 82,
+    "name": "Metagross",
+    "safe_name": "metagross",
+    "usage": 1.5,
+    "top_move": "Bullet Punch"
+  },
+  {
+    "rank": 83,
+    "name": "Gengar",
+    "safe_name": "gengar",
+    "usage": 1.5,
+    "top_move": "Shadow Ball"
+  },
+  {
+    "rank": 84,
+    "name": "Tornadus-Therian",
+    "safe_name": "tornadus-therian",
+    "usage": 1.3,
+    "top_move": "U-turn"
+  },
+  {
+    "rank": 85,
+    "name": "Thundurus-Therian",
+    "safe_name": "thundurus-therian",
+    "usage": 1.3,
+    "top_move": "Thunderbolt"
+  },
+  {
+    "rank": 86,
+    "name": "Manaphy",
+    "safe_name": "manaphy",
+    "usage": 1.3,
+    "top_move": "Tail Glow"
+  },
+  {
+    "rank": 87,
+    "name": "Hydreigon",
+    "safe_name": "hydreigon",
+    "usage": 1.3,
+    "top_move": "Dark Pulse"
+  },
+  {
+    "rank": 88,
+    "name": "Comfey",
+    "safe_name": "comfey",
+    "usage": 1.3,
+    "top_move": "Draining Kiss"
+  },
+  {
+    "rank": 89,
+    "name": "Zoroark-Hisui",
+    "safe_name": "zoroark-hisui",
+    "usage": 1.2,
+    "top_move": "Flamethrower"
+  },
+  {
+    "rank": 90,
+    "name": "Iron Boulder",
+    "safe_name": "iron-boulder",
+    "usage": 1.1,
+    "top_move": "Mighty Cleave"
+  },
+  {
+    "rank": 91,
+    "name": "Kommo-o",
+    "safe_name": "kommo-o",
+    "usage": 1.1,
+    "top_move": "Clangorous Soul"
+  },
+  {
+    "rank": 92,
+    "name": "Whimsicott",
+    "safe_name": "whimsicott",
+    "usage": 1.1,
+    "top_move": "Moonblast"
+  },
+  {
+    "rank": 93,
+    "name": "Charizard",
+    "safe_name": "charizard",
+    "usage": 1.1,
+    "top_move": "Flamethrower"
+  },
+  {
+    "rank": 94,
+    "name": "Galvantula",
+    "safe_name": "galvantula",
+    "usage": 1.1,
+    "top_move": "Sticky Web"
+  },
+  {
+    "rank": 95,
+    "name": "Indeedee",
+    "safe_name": "indeedee",
+    "usage": 1.1,
+    "top_move": "Expanding Force"
+  },
+  {
+    "rank": 96,
+    "name": "Gyarados",
+    "safe_name": "gyarados",
+    "usage": 1.1,
+    "top_move": "Dragon Dance"
+  },
+  {
+    "rank": 97,
+    "name": "Polteageist",
+    "safe_name": "polteageist",
+    "usage": 1.1,
+    "top_move": "Shell Smash"
+  },
+  {
+    "rank": 98,
+    "name": "Amoonguss",
+    "safe_name": "amoonguss",
+    "usage": 1.0,
+    "top_move": "Toxic"
+  },
+  {
+    "rank": 99,
+    "name": "Kingdra",
+    "safe_name": "kingdra",
+    "usage": 1.0,
+    "top_move": "Draco Meteor"
+  },
+  {
+    "rank": 100,
+    "name": "Umbreon",
+    "safe_name": "umbreon",
+    "usage": 1.0,
+    "top_move": "Toxic"
+  },
+  {
+    "rank": 101,
+    "name": "Talonflame",
+    "safe_name": "talonflame",
+    "usage": 1.0,
+    "top_move": "Defog"
+  },
+  {
+    "rank": 102,
+    "name": "Okidogi",
+    "safe_name": "okidogi",
+    "usage": 1.0,
+    "top_move": "Drain Punch"
+  },
+  {
+    "rank": 103,
+    "name": "Volcanion",
+    "safe_name": "volcanion",
+    "usage": 1.0,
+    "top_move": "Steam Eruption"
+  },
+  {
+    "rank": 104,
+    "name": "Blastoise",
+    "safe_name": "blastoise",
+    "usage": 1.0,
+    "top_move": "Shell Smash"
+  },
+  {
+    "rank": 105,
+    "name": "Salamence",
+    "safe_name": "salamence",
+    "usage": 1.0,
+    "top_move": "Dragon Dance"
+  },
+  {
+    "rank": 106,
+    "name": "Cloyster",
+    "safe_name": "cloyster",
+    "usage": 1.0,
+    "top_move": "Icicle Spear"
+  },
+  {
+    "rank": 107,
+    "name": "Magnezone",
+    "safe_name": "magnezone",
+    "usage": 0.9,
+    "top_move": "Flash Cannon"
+  },
+  {
+    "rank": 108,
+    "name": "Moltres-Galar",
+    "safe_name": "moltres-galar",
+    "usage": 0.9,
+    "top_move": "Fiery Wrath"
+  },
+  {
+    "rank": 109,
+    "name": "Ogerpon",
+    "safe_name": "ogerpon",
+    "usage": 0.9,
+    "top_move": "Ivy Cudgel"
+  },
+  {
+    "rank": 110,
+    "name": "Espeon",
+    "safe_name": "espeon",
+    "usage": 0.9,
+    "top_move": "Psychic"
+  },
+  {
+    "rank": 111,
+    "name": "Lilligant-Hisui",
+    "safe_name": "lilligant-hisui",
+    "usage": 0.9,
+    "top_move": "Close Combat"
+  },
+  {
+    "rank": 112,
+    "name": "Mandibuzz",
+    "safe_name": "mandibuzz",
+    "usage": 0.9,
+    "top_move": "Roost"
+  },
+  {
+    "rank": 113,
+    "name": "Mew",
+    "safe_name": "mew",
+    "usage": 0.9,
+    "top_move": "Transform"
+  },
+  {
+    "rank": 114,
+    "name": "Kleavor",
+    "safe_name": "kleavor",
+    "usage": 0.9,
+    "top_move": "Stone Axe"
+  },
+  {
+    "rank": 115,
+    "name": "Lucario",
+    "safe_name": "lucario",
+    "usage": 0.9,
+    "top_move": "Extreme Speed"
+  },
+  {
+    "rank": 116,
+    "name": "Slither Wing",
+    "safe_name": "slither-wing",
+    "usage": 0.9,
+    "top_move": "First Impression"
+  },
+  {
+    "rank": 117,
+    "name": "Gardevoir",
+    "safe_name": "gardevoir",
+    "usage": 0.9,
+    "top_move": "Moonblast"
+  },
+  {
+    "rank": 118,
+    "name": "Conkeldurr",
+    "safe_name": "conkeldurr",
+    "usage": 0.8,
+    "top_move": "Mach Punch"
+  },
+  {
+    "rank": 119,
+    "name": "Armarouge",
+    "safe_name": "armarouge",
+    "usage": 0.8,
+    "top_move": "Armor Cannon"
+  },
+  {
+    "rank": 120,
+    "name": "Mamoswine",
+    "safe_name": "mamoswine",
+    "usage": 0.8,
+    "top_move": "Earthquake"
+  },
+  {
+    "rank": 121,
+    "name": "Milotic",
+    "safe_name": "milotic",
+    "usage": 0.8,
+    "top_move": "Scald"
+  },
+  {
+    "rank": 122,
+    "name": "Jirachi",
+    "safe_name": "jirachi",
+    "usage": 0.8,
+    "top_move": "Iron Head"
+  },
+  {
+    "rank": 123,
+    "name": "Empoleon",
+    "safe_name": "empoleon",
+    "usage": 0.8,
+    "top_move": "Ice Beam"
+  },
+  {
+    "rank": 124,
+    "name": "Infernape",
+    "safe_name": "infernape",
+    "usage": 0.8,
+    "top_move": "Close Combat"
+  },
+  {
+    "rank": 125,
+    "name": "Ditto",
+    "safe_name": "ditto",
+    "usage": 0.8,
+    "top_move": "Nothing"
+  },
+  {
+    "rank": 126,
+    "name": "Haxorus",
+    "safe_name": "haxorus",
+    "usage": 0.8,
+    "top_move": "Earthquake"
+  },
+  {
+    "rank": 127,
+    "name": "Chandelure",
+    "safe_name": "chandelure",
+    "usage": 0.8,
+    "top_move": "Shadow Ball"
+  },
+  {
+    "rank": 128,
+    "name": "Breloom",
+    "safe_name": "breloom",
+    "usage": 0.8,
+    "top_move": "Mach Punch"
+  },
+  {
+    "rank": 129,
+    "name": "Forretress",
+    "safe_name": "forretress",
+    "usage": 0.7,
+    "top_move": "Rapid Spin"
+  },
+  {
+    "rank": 130,
+    "name": "Cresselia",
+    "safe_name": "cresselia",
+    "usage": 0.7,
+    "top_move": "Moonlight"
+  },
+  {
+    "rank": 131,
+    "name": "Slowking",
+    "safe_name": "slowking",
+    "usage": 0.7,
+    "top_move": "Scald"
+  },
+  {
+    "rank": 132,
+    "name": "Basculegion",
+    "safe_name": "basculegion",
+    "usage": 0.7,
+    "top_move": "Wave Crash"
+  },
+  {
+    "rank": 133,
+    "name": "Sandy Shocks",
+    "safe_name": "sandy-shocks",
+    "usage": 0.7,
+    "top_move": "Earth Power"
+  },
+  {
+    "rank": 134,
+    "name": "Reuniclus",
+    "safe_name": "reuniclus",
+    "usage": 0.7,
+    "top_move": "Focus Blast"
+  },
+  {
+    "rank": 135,
+    "name": "Chansey",
+    "safe_name": "chansey",
+    "usage": 0.6,
+    "top_move": "Soft-Boiled"
+  },
+  {
+    "rank": 136,
+    "name": "Porygon-Z",
+    "safe_name": "porygon-z",
+    "usage": 0.6,
+    "top_move": "Tri Attack"
+  },
+  {
+    "rank": 137,
+    "name": "Swampert",
+    "safe_name": "swampert",
+    "usage": 0.6,
+    "top_move": "Earthquake"
+  },
+  {
+    "rank": 138,
+    "name": "Gallade",
+    "safe_name": "gallade",
+    "usage": 0.6,
+    "top_move": "Psycho Cut"
+  },
+  {
+    "rank": 139,
+    "name": "Pawmot",
+    "safe_name": "pawmot",
+    "usage": 0.6,
+    "top_move": "Revival Blessing"
+  },
+  {
+    "rank": 140,
+    "name": "Jolteon",
+    "safe_name": "jolteon",
+    "usage": 0.6,
+    "top_move": "Volt Switch"
+  },
+  {
+    "rank": 141,
+    "name": "Snorlax",
+    "safe_name": "snorlax",
+    "usage": 0.6,
+    "top_move": "Body Slam"
+  },
+  {
+    "rank": 142,
+    "name": "Crawdaunt",
+    "safe_name": "crawdaunt",
+    "usage": 0.6,
+    "top_move": "Aqua Jet"
+  },
+  {
+    "rank": 143,
+    "name": "Porygon2",
+    "safe_name": "porygon2",
+    "usage": 0.6,
+    "top_move": "Recover"
+  },
+  {
+    "rank": 144,
+    "name": "Salazzle",
+    "safe_name": "salazzle",
+    "usage": 0.6,
+    "top_move": "Toxic"
+  },
+  {
+    "rank": 145,
+    "name": "Tentacruel",
+    "safe_name": "tentacruel",
+    "usage": 0.6,
+    "top_move": "Rapid Spin"
+  },
+  {
+    "rank": 146,
+    "name": "Chesnaught",
+    "safe_name": "chesnaught",
+    "usage": 0.5,
+    "top_move": "Body Press"
+  },
+  {
+    "rank": 147,
+    "name": "Quagsire",
+    "safe_name": "quagsire",
+    "usage": 0.5,
+    "top_move": "Recover"
+  },
+  {
+    "rank": 148,
+    "name": "Krookodile",
+    "safe_name": "krookodile",
+    "usage": 0.5,
+    "top_move": "Earthquake"
+  },
+  {
+    "rank": 149,
+    "name": "Noivern",
+    "safe_name": "noivern",
+    "usage": 0.5,
+    "top_move": "Draco Meteor"
+  },
+  {
+    "rank": 150,
+    "name": "Zapdos-Galar",
+    "safe_name": "zapdos-galar",
+    "usage": 0.5,
+    "top_move": "Brave Bird"
+  },
+  {
+    "rank": 151,
+    "name": "Sylveon",
+    "safe_name": "sylveon",
+    "usage": 0.5,
+    "top_move": "Hyper Voice"
+  },
+  {
+    "rank": 152,
+    "name": "Torterra",
+    "safe_name": "torterra",
+    "usage": 0.5,
+    "top_move": "Shell Smash"
+  },
+  {
+    "rank": 153,
+    "name": "Gastrodon",
+    "safe_name": "gastrodon",
+    "usage": 0.5,
+    "top_move": "Earth Power"
+  },
+  {
+    "rank": 154,
+    "name": "Frosmoth",
+    "safe_name": "frosmoth",
+    "usage": 0.5,
+    "top_move": "Quiver Dance"
+  },
+  {
+    "rank": 155,
+    "name": "Toxtricity",
+    "safe_name": "toxtricity",
+    "usage": 0.5,
+    "top_move": "Boomburst"
+  },
+  {
+    "rank": 156,
+    "name": "Muk-Alola",
+    "safe_name": "muk-alola",
+    "usage": 0.5,
+    "top_move": "Knock Off"
+  },
+  {
+    "rank": 157,
+    "name": "Overqwil",
+    "safe_name": "overqwil",
+    "usage": 0.5,
+    "top_move": "Crunch"
+  },
+  {
+    "rank": 158,
+    "name": "Politoed",
+    "safe_name": "politoed",
+    "usage": 0.5,
+    "top_move": "Ice Beam"
+  },
+  {
+    "rank": 159,
+    "name": "Cinccino",
+    "safe_name": "cinccino",
+    "usage": 0.5,
+    "top_move": "Tidy Up"
+  },
+  {
+    "rank": 160,
+    "name": "Feraligatr",
+    "safe_name": "feraligatr",
+    "usage": 0.5,
+    "top_move": "Ice Punch"
+  },
+  {
+    "rank": 161,
+    "name": "Pincurchin",
+    "safe_name": "pincurchin",
+    "usage": 0.5,
+    "top_move": "Spikes"
+  },
+  {
+    "rank": 162,
+    "name": "Klefki",
+    "safe_name": "klefki",
+    "usage": 0.5,
+    "top_move": "Reflect"
+  },
+  {
+    "rank": 163,
+    "name": "Thundurus",
+    "safe_name": "thundurus",
+    "usage": 0.5,
+    "top_move": "Thunder Wave"
+  },
+  {
+    "rank": 164,
+    "name": "Deoxys-Defense",
+    "safe_name": "deoxys-defense",
+    "usage": 0.5,
+    "top_move": "Recover"
+  },
+  {
+    "rank": 165,
+    "name": "Typhlosion-Hisui",
+    "safe_name": "typhlosion-hisui",
+    "usage": 0.5,
+    "top_move": "Eruption"
+  },
+  {
+    "rank": 166,
+    "name": "Sableye",
+    "safe_name": "sableye",
+    "usage": 0.4,
+    "top_move": "Encore"
+  },
+  {
+    "rank": 167,
+    "name": "Hippowdon",
+    "safe_name": "hippowdon",
+    "usage": 0.4,
+    "top_move": "Slack Off"
+  },
+  {
+    "rank": 168,
+    "name": "Scream Tail",
+    "safe_name": "scream-tail",
+    "usage": 0.4,
+    "top_move": "Wish"
+  },
+  {
+    "rank": 169,
+    "name": "Arcanine",
+    "safe_name": "arcanine",
+    "usage": 0.4,
+    "top_move": "Extreme Speed"
+  },
+  {
+    "rank": 170,
+    "name": "Fezandipiti",
+    "safe_name": "fezandipiti",
+    "usage": 0.4,
+    "top_move": "Roost"
+  },
+  {
+    "rank": 171,
+    "name": "Bisharp",
+    "safe_name": "bisharp",
+    "usage": 0.4,
+    "top_move": "Sucker Punch"
+  },
+  {
+    "rank": 172,
+    "name": "Cyclizar",
+    "safe_name": "cyclizar",
+    "usage": 0.4,
+    "top_move": "Rapid Spin"
+  },
+  {
+    "rank": 173,
+    "name": "Kilowattrel",
+    "safe_name": "kilowattrel",
+    "usage": 0.4,
+    "top_move": "Volt Switch"
+  },
+  {
+    "rank": 174,
+    "name": "Donphan",
+    "safe_name": "donphan",
+    "usage": 0.4,
+    "top_move": "Rapid Spin"
+  },
+  {
+    "rank": 175,
+    "name": "Iron Jugulis",
+    "safe_name": "iron-jugulis",
+    "usage": 0.4,
+    "top_move": "Dark Pulse"
+  },
+  {
+    "rank": 176,
+    "name": "Yanmega",
+    "safe_name": "yanmega",
+    "usage": 0.4,
+    "top_move": "Bug Buzz"
+  },
+  {
+    "rank": 177,
+    "name": "Leavanny",
+    "safe_name": "leavanny",
+    "usage": 0.4,
+    "top_move": "Sticky Web"
+  },
+  {
+    "rank": 178,
+    "name": "Inteleon",
+    "safe_name": "inteleon",
+    "usage": 0.4,
+    "top_move": "Snipe Shot"
+  },
+  {
+    "rank": 179,
+    "name": "Ambipom",
+    "safe_name": "ambipom",
+    "usage": 0.4,
+    "top_move": "Fake Out"
+  },
+  {
+    "rank": 180,
+    "name": "Sceptile",
+    "safe_name": "sceptile",
+    "usage": 0.4,
+    "top_move": "Leaf Blade"
+  },
+  {
+    "rank": 181,
+    "name": "Staraptor",
+    "safe_name": "staraptor",
+    "usage": 0.4,
+    "top_move": "Brave Bird"
+  },
+  {
+    "rank": 182,
+    "name": "Bronzong",
+    "safe_name": "bronzong",
+    "usage": 0.4,
+    "top_move": "Body Press"
+  },
+  {
+    "rank": 183,
+    "name": "Malamar",
+    "safe_name": "malamar",
+    "usage": 0.4,
+    "top_move": "Superpower"
+  },
+  {
+    "rank": 184,
+    "name": "Enamorus-Therian",
+    "safe_name": "enamorus-therian",
+    "usage": 0.4,
+    "top_move": "Earth Power"
+  },
+  {
+    "rank": 185,
+    "name": "Azelf",
+    "safe_name": "azelf",
+    "usage": 0.4,
+    "top_move": "Explosion"
+  },
+  {
+    "rank": 186,
+    "name": "Tsareena",
+    "safe_name": "tsareena",
+    "usage": 0.4,
+    "top_move": "Rapid Spin"
+  },
+  {
+    "rank": 187,
+    "name": "Slowbro",
+    "safe_name": "slowbro",
+    "usage": 0.4,
+    "top_move": "Scald"
+  },
+  {
+    "rank": 188,
+    "name": "Hitmonlee",
+    "safe_name": "hitmonlee",
+    "usage": 0.4,
+    "top_move": "Knock Off"
+  },
+  {
+    "rank": 189,
+    "name": "Smeargle",
+    "safe_name": "smeargle",
+    "usage": 0.4,
+    "top_move": "Sticky Web"
+  },
+  {
+    "rank": 190,
+    "name": "Rotom-Heat",
+    "safe_name": "rotom-heat",
+    "usage": 0.3,
+    "top_move": "Overheat"
+  },
+  {
+    "rank": 191,
+    "name": "Vaporeon",
+    "safe_name": "vaporeon",
+    "usage": 0.3,
+    "top_move": "Scald"
+  },
+  {
+    "rank": 192,
+    "name": "Revavroom",
+    "safe_name": "revavroom",
+    "usage": 0.3,
+    "top_move": "Shift Gear"
+  },
+  {
+    "rank": 193,
+    "name": "Vikavolt",
+    "safe_name": "vikavolt",
+    "usage": 0.3,
+    "top_move": "Bug Buzz"
+  },
+  {
+    "rank": 194,
+    "name": "Goodra",
+    "safe_name": "goodra",
+    "usage": 0.3,
+    "top_move": "Ice Beam"
+  },
+  {
+    "rank": 195,
+    "name": "Grafaiai",
+    "safe_name": "grafaiai",
+    "usage": 0.3,
+    "top_move": "Parting Shot"
+  },
+  {
+    "rank": 196,
+    "name": "Vileplume",
+    "safe_name": "vileplume",
+    "usage": 0.3,
+    "top_move": "Strength Sap"
+  },
+  {
+    "rank": 197,
+    "name": "Lapras",
+    "safe_name": "lapras",
+    "usage": 0.3,
+    "top_move": "Freeze-Dry"
+  },
+  {
+    "rank": 198,
+    "name": "Bellibolt",
+    "safe_name": "bellibolt",
+    "usage": 0.3,
+    "top_move": "Slack Off"
+  },
+  {
+    "rank": 199,
+    "name": "Cetitan",
+    "safe_name": "cetitan",
+    "usage": 0.3,
+    "top_move": "Earthquake"
+  },
+  {
+    "rank": 200,
+    "name": "Regidrago",
+    "safe_name": "regidrago",
+    "usage": 0.3,
+    "top_move": "Dragon Energy"
+  },
+  {
+    "rank": 201,
+    "name": "Minior",
+    "safe_name": "minior",
+    "usage": 0.3,
+    "top_move": "Shell Smash"
+  },
+  {
+    "rank": 202,
+    "name": "Heracross",
+    "safe_name": "heracross",
+    "usage": 0.3,
+    "top_move": "Close Combat"
+  },
+  {
+    "rank": 203,
+    "name": "Slowbro-Galar",
+    "safe_name": "slowbro-galar",
+    "usage": 0.3,
+    "top_move": "Shell Side Arm"
+  },
+  {
+    "rank": 204,
+    "name": "Eelektross",
+    "safe_name": "eelektross",
+    "usage": 0.3,
+    "top_move": "Drain Punch"
+  },
+  {
+    "rank": 205,
+    "name": "Pikachu",
+    "safe_name": "pikachu",
+    "usage": 0.3,
+    "top_move": "Thunderbolt"
+  },
+  {
+    "rank": 206,
+    "name": "Diancie",
+    "safe_name": "diancie",
+    "usage": 0.3,
+    "top_move": "Diamond Storm"
+  },
+  {
+    "rank": 207,
+    "name": "Abomasnow",
+    "safe_name": "abomasnow",
+    "usage": 0.3,
+    "top_move": "Aurora Veil"
+  },
+  {
+    "rank": 208,
+    "name": "Entei",
+    "safe_name": "entei",
+    "usage": 0.3,
+    "top_move": "Sacred Fire"
+  },
+  {
+    "rank": 209,
+    "name": "Golurk",
+    "safe_name": "golurk",
+    "usage": 0.3,
+    "top_move": "Earthquake"
+  },
+  {
+    "rank": 210,
+    "name": "Braviary-Hisui",
+    "safe_name": "braviary-hisui",
+    "usage": 0.3,
+    "top_move": "Esper Wing"
+  },
+  {
+    "rank": 211,
+    "name": "Roaring Moon",
+    "safe_name": "roaring-moon",
+    "usage": 0.3,
+    "top_move": "Knock Off"
+  },
+  {
+    "rank": 212,
+    "name": "Mienshao",
+    "safe_name": "mienshao",
+    "usage": 0.3,
+    "top_move": "U-turn"
+  },
+  {
+    "rank": 213,
+    "name": "Arboliva",
+    "safe_name": "arboliva",
+    "usage": 0.3,
+    "top_move": "Giga Drain"
+  },
+  {
+    "rank": 214,
+    "name": "Froslass",
+    "safe_name": "froslass",
+    "usage": 0.3,
+    "top_move": "Destiny Bond"
+  },
+  {
+    "rank": 215,
+    "name": "Necrozma",
+    "safe_name": "necrozma",
+    "usage": 0.3,
+    "top_move": "Photon Geyser"
+  },
+  {
+    "rank": 216,
+    "name": "Rhyperior",
+    "safe_name": "rhyperior",
+    "usage": 0.3,
+    "top_move": "Earthquake"
+  },
+  {
+    "rank": 217,
+    "name": "Suicune",
+    "safe_name": "suicune",
+    "usage": 0.3,
+    "top_move": "Calm Mind"
+  },
+  {
+    "rank": 218,
+    "name": "Zarude",
+    "safe_name": "zarude",
+    "usage": 0.3,
+    "top_move": "Knock Off"
+  },
+  {
+    "rank": 219,
+    "name": "Electivire",
+    "safe_name": "electivire",
+    "usage": 0.3,
+    "top_move": "Ice Punch"
+  },
+  {
+    "rank": 220,
+    "name": "Scovillain",
+    "safe_name": "scovillain",
+    "usage": 0.3,
+    "top_move": "Flamethrower"
+  },
+  {
+    "rank": 221,
+    "name": "Electrode-Hisui",
+    "safe_name": "electrode-hisui",
+    "usage": 0.3,
+    "top_move": "Volt Switch"
+  },
+  {
+    "rank": 222,
+    "name": "Decidueye-Hisui",
+    "safe_name": "decidueye-hisui",
+    "usage": 0.3,
+    "top_move": "Triple Arrows"
+  },
+  {
+    "rank": 223,
+    "name": "Lycanroc-Dusk",
+    "safe_name": "lycanroc-dusk",
+    "usage": 0.3,
+    "top_move": "Accelerock"
+  },
+  {
+    "rank": 224,
+    "name": "Decidueye",
+    "safe_name": "decidueye",
+    "usage": 0.3,
+    "top_move": "Spirit Shackle"
+  },
+  {
+    "rank": 225,
+    "name": "Drifblim",
+    "safe_name": "drifblim",
+    "usage": 0.3,
+    "top_move": "Strength Sap"
+  },
+  {
+    "rank": 226,
+    "name": "Masquerain",
+    "safe_name": "masquerain",
+    "usage": 0.3,
+    "top_move": "Sticky Web"
+  },
+  {
+    "rank": 227,
+    "name": "Basculegion-F",
+    "safe_name": "basculegion-f",
+    "usage": 0.3,
+    "top_move": "Shadow Ball"
+  },
+  {
+    "rank": 228,
+    "name": "Flygon",
+    "safe_name": "flygon",
+    "usage": 0.2,
+    "top_move": "Earthquake"
+  },
+  {
+    "rank": 229,
+    "name": "Delphox",
+    "safe_name": "delphox",
+    "usage": 0.2,
+    "top_move": "Flamethrower"
+  },
+  {
+    "rank": 230,
+    "name": "Iron Leaves",
+    "safe_name": "iron-leaves",
+    "usage": 0.2,
+    "top_move": "Psyblade"
+  },
+  {
+    "rank": 231,
+    "name": "Dusclops",
+    "safe_name": "dusclops",
+    "usage": 0.2,
+    "top_move": "Will-O-Wisp"
+  },
+  {
+    "rank": 232,
+    "name": "Scrafty",
+    "safe_name": "scrafty",
+    "usage": 0.2,
+    "top_move": "Drain Punch"
+  },
+  {
+    "rank": 233,
+    "name": "Ludicolo",
+    "safe_name": "ludicolo",
+    "usage": 0.2,
+    "top_move": "Giga Drain"
+  },
+  {
+    "rank": 234,
+    "name": "Leafeon",
+    "safe_name": "leafeon",
+    "usage": 0.2,
+    "top_move": "Solar Blade"
+  },
+  {
+    "rank": 235,
+    "name": "Iron Thorns",
+    "safe_name": "iron-thorns",
+    "usage": 0.2,
+    "top_move": "Dragon Dance"
+  },
+  {
+    "rank": 236,
+    "name": "Meloetta",
+    "safe_name": "meloetta",
+    "usage": 0.2,
+    "top_move": "Relic Song"
+  },
+  {
+    "rank": 237,
+    "name": "Avalugg",
+    "safe_name": "avalugg",
+    "usage": 0.2,
+    "top_move": "Body Press"
+  },
+  {
+    "rank": 238,
+    "name": "Raikou",
+    "safe_name": "raikou",
+    "usage": 0.2,
+    "top_move": "Scald"
+  },
+  {
+    "rank": 239,
+    "name": "Wo-Chien",
+    "safe_name": "wo-chien",
+    "usage": 0.2,
+    "top_move": "Leech Seed"
+  },
+  {
+    "rank": 240,
+    "name": "Luxray",
+    "safe_name": "luxray",
+    "usage": 0.2,
+    "top_move": "Supercell Slam"
+  },
+  {
+    "rank": 241,
+    "name": "Hitmontop",
+    "safe_name": "hitmontop",
+    "usage": 0.2,
+    "top_move": "Rapid Spin"
+  },
+  {
+    "rank": 242,
+    "name": "Dragalge",
+    "safe_name": "dragalge",
+    "usage": 0.2,
+    "top_move": "Draco Meteor"
+  },
+  {
+    "rank": 243,
+    "name": "Zoroark",
+    "safe_name": "zoroark",
+    "usage": 0.2,
+    "top_move": "Flamethrower"
+  },
+  {
+    "rank": 244,
+    "name": "Raichu-Alola",
+    "safe_name": "raichu-alola",
+    "usage": 0.2,
+    "top_move": "Psychic"
+  },
+  {
+    "rank": 245,
+    "name": "Brambleghast",
+    "safe_name": "brambleghast",
+    "usage": 0.2,
+    "top_move": "Rapid Spin"
+  },
+  {
+    "rank": 246,
+    "name": "Cobalion",
+    "safe_name": "cobalion",
+    "usage": 0.2,
+    "top_move": "Body Press"
+  },
+  {
+    "rank": 247,
+    "name": "Toxicroak",
+    "safe_name": "toxicroak",
+    "usage": 0.2,
+    "top_move": "Sucker Punch"
+  },
+  {
+    "rank": 248,
+    "name": "Floatzel",
+    "safe_name": "floatzel",
+    "usage": 0.2,
+    "top_move": "Wave Crash"
+  },
+  {
+    "rank": 249,
+    "name": "Tauros-Paldea-Blaze",
+    "safe_name": "tauros-paldea-blaze",
+    "usage": 0.2,
+    "top_move": "Close Combat"
+  },
+  {
+    "rank": 250,
+    "name": "Rabsca",
+    "safe_name": "rabsca",
+    "usage": 0.2,
+    "top_move": "Revival Blessing"
+  },
+  {
+    "rank": 251,
+    "name": "Spidops",
+    "safe_name": "spidops",
+    "usage": 0.2,
+    "top_move": "Sticky Web"
+  },
+  {
+    "rank": 252,
+    "name": "Trevenant",
+    "safe_name": "trevenant",
+    "usage": 0.2,
+    "top_move": "Leech Seed"
+  },
+  {
+    "rank": 253,
+    "name": "Cryogonal",
+    "safe_name": "cryogonal",
+    "usage": 0.2,
+    "top_move": "Freeze-Dry"
+  },
+  {
+    "rank": 254,
+    "name": "Glaceon",
+    "safe_name": "glaceon",
+    "usage": 0.2,
+    "top_move": "Freeze-Dry"
+  },
+  {
+    "rank": 255,
+    "name": "Orthworm",
+    "safe_name": "orthworm",
+    "usage": 0.2,
+    "top_move": "Body Press"
+  },
+  {
+    "rank": 256,
+    "name": "Glastrier",
+    "safe_name": "glastrier",
+    "usage": 0.2,
+    "top_move": "High Horsepower"
+  },
+  {
+    "rank": 257,
+    "name": "Registeel",
+    "safe_name": "registeel",
+    "usage": 0.2,
+    "top_move": "Body Press"
+  },
+  {
+    "rank": 258,
+    "name": "Florges",
+    "safe_name": "florges",
+    "usage": 0.2,
+    "top_move": "Moonblast"
+  },
+  {
+    "rank": 259,
+    "name": "Munkidori",
+    "safe_name": "munkidori",
+    "usage": 0.2,
+    "top_move": "Psychic"
+  },
+  {
+    "rank": 260,
+    "name": "Sandslash-Alola",
+    "safe_name": "sandslash-alola",
+    "usage": 0.2,
+    "top_move": "Iron Head"
+  },
+  {
+    "rank": 261,
+    "name": "Spiritomb",
+    "safe_name": "spiritomb",
+    "usage": 0.2,
+    "top_move": "Will-O-Wisp"
+  },
+  {
+    "rank": 262,
+    "name": "Avalugg-Hisui",
+    "safe_name": "avalugg-hisui",
+    "usage": 0.2,
+    "top_move": "Rapid Spin"
+  },
+  {
+    "rank": 263,
+    "name": "Beartic",
+    "safe_name": "beartic",
+    "usage": 0.2,
+    "top_move": "Icicle Crash"
+  },
+  {
+    "rank": 264,
+    "name": "Magmortar",
+    "safe_name": "magmortar",
+    "usage": 0.2,
+    "top_move": "Thunderbolt"
+  },
+  {
+    "rank": 265,
+    "name": "Farigiraf",
+    "safe_name": "farigiraf",
+    "usage": 0.2,
+    "top_move": "Trick Room"
+  },
+  {
+    "rank": 266,
+    "name": "Golem-Alola",
+    "safe_name": "golem-alola",
+    "usage": 0.2,
+    "top_move": "Explosion"
+  },
+  {
+    "rank": 267,
+    "name": "Flamigo",
+    "safe_name": "flamigo",
+    "usage": 0.2,
+    "top_move": "Close Combat"
+  },
+  {
+    "rank": 268,
+    "name": "Golduck",
+    "safe_name": "golduck",
+    "usage": 0.2,
+    "top_move": "Ice Beam"
+  },
+  {
+    "rank": 269,
+    "name": "Shiftry",
+    "safe_name": "shiftry",
+    "usage": 0.2,
+    "top_move": "Knock Off"
+  },
+  {
+    "rank": 270,
+    "name": "Dudunsparce",
+    "safe_name": "dudunsparce",
+    "usage": 0.2,
+    "top_move": "Roost"
+  },
+  {
+    "rank": 271,
+    "name": "Emboar",
+    "safe_name": "emboar",
+    "usage": 0.2,
+    "top_move": "Flare Blitz"
+  },
+  {
+    "rank": 272,
+    "name": "Scyther",
+    "safe_name": "scyther",
+    "usage": 0.2,
+    "top_move": "Dual Wingbeat"
+  },
+  {
+    "rank": 273,
+    "name": "Altaria",
+    "safe_name": "altaria",
+    "usage": 0.2,
+    "top_move": "Roost"
+  },
+  {
+    "rank": 274,
+    "name": "Raichu",
+    "safe_name": "raichu",
+    "usage": 0.2,
+    "top_move": "Thunderbolt"
+  },
+  {
+    "rank": 275,
+    "name": "Brute Bonnet",
+    "safe_name": "brute-bonnet",
+    "usage": 0.2,
+    "top_move": "Sucker Punch"
+  },
+  {
+    "rank": 276,
+    "name": "Articuno-Galar",
+    "safe_name": "articuno-galar",
+    "usage": 0.2,
+    "top_move": "Calm Mind"
+  },
+  {
+    "rank": 277,
+    "name": "Houndstone",
+    "safe_name": "houndstone",
+    "usage": 0.2,
+    "top_move": "Poltergeist"
+  },
+  {
+    "rank": 278,
+    "name": "Regice",
+    "safe_name": "regice",
+    "usage": 0.2,
+    "top_move": "Ice Beam"
+  },
+  {
+    "rank": 279,
+    "name": "Eiscue",
+    "safe_name": "eiscue",
+    "usage": 0.2,
+    "top_move": "Belly Drum"
+  },
+  {
+    "rank": 280,
+    "name": "Toedscruel",
+    "safe_name": "toedscruel",
+    "usage": 0.2,
+    "top_move": "Rapid Spin"
+  },
+  {
+    "rank": 281,
+    "name": "Indeedee-F",
+    "safe_name": "indeedee-f",
+    "usage": 0.2,
+    "top_move": "Psychic"
+  },
+  {
+    "rank": 282,
+    "name": "Rampardos",
+    "safe_name": "rampardos",
+    "usage": 0.1,
+    "top_move": "Earthquake"
+  },
+  {
+    "rank": 283,
+    "name": "Honchkrow",
+    "safe_name": "honchkrow",
+    "usage": 0.1,
+    "top_move": "Sucker Punch"
+  },
+  {
+    "rank": 284,
+    "name": "Typhlosion",
+    "safe_name": "typhlosion",
+    "usage": 0.1,
+    "top_move": "Eruption"
+  },
+  {
+    "rank": 285,
+    "name": "Rotom-Mow",
+    "safe_name": "rotom-mow",
+    "usage": 0.1,
+    "top_move": "Leaf Storm"
+  },
+  {
+    "rank": 286,
+    "name": "Poliwrath",
+    "safe_name": "poliwrath",
+    "usage": 0.1,
+    "top_move": "Drain Punch"
+  },
+  {
+    "rank": 287,
+    "name": "Mismagius",
+    "safe_name": "mismagius",
+    "usage": 0.1,
+    "top_move": "Shadow Ball"
+  },
+  {
+    "rank": 288,
+    "name": "Coalossal",
+    "safe_name": "coalossal",
+    "usage": 0.1,
+    "top_move": "Rapid Spin"
+  },
+  {
+    "rank": 289,
+    "name": "Lurantis",
+    "safe_name": "lurantis",
+    "usage": 0.1,
+    "top_move": "Superpower"
+  },
+  {
+    "rank": 290,
+    "name": "Morpeko",
+    "safe_name": "morpeko",
+    "usage": 0.1,
+    "top_move": "Aura Wheel"
+  },
+  {
+    "rank": 291,
+    "name": "Cramorant",
+    "safe_name": "cramorant",
+    "usage": 0.1,
+    "top_move": "Surf"
+  },
+  {
+    "rank": 292,
+    "name": "Tatsugiri",
+    "safe_name": "tatsugiri",
+    "usage": 0.1,
+    "top_move": "Rapid Spin"
+  },
+  {
+    "rank": 293,
+    "name": "Probopass",
+    "safe_name": "probopass",
+    "usage": 0.1,
+    "top_move": "Body Press"
+  },
+  {
+    "rank": 294,
+    "name": "Slaking",
+    "safe_name": "slaking",
+    "usage": 0.1,
+    "top_move": "Giga Impact"
+  },
+  {
+    "rank": 295,
+    "name": "Regirock",
+    "safe_name": "regirock",
+    "usage": 0.1,
+    "top_move": "Body Press"
+  },
+  {
+    "rank": 296,
+    "name": "Uxie",
+    "safe_name": "uxie",
+    "usage": 0.1,
+    "top_move": "Stealth Rock"
+  },
+  {
+    "rank": 297,
+    "name": "Sandaconda",
+    "safe_name": "sandaconda",
+    "usage": 0.1,
+    "top_move": "Earthquake"
+  },
+  {
+    "rank": 298,
+    "name": "Tropius",
+    "safe_name": "tropius",
+    "usage": 0.1,
+    "top_move": "Leech Seed"
+  },
+  {
+    "rank": 299,
+    "name": "Zangoose",
+    "safe_name": "zangoose",
+    "usage": 0.1,
+    "top_move": "Facade"
+  },
+  {
+    "rank": 300,
+    "name": "Hitmonchan",
+    "safe_name": "hitmonchan",
+    "usage": 0.1,
+    "top_move": "Drain Punch"
+  },
+  {
+    "rank": 301,
+    "name": "Gothitelle",
+    "safe_name": "gothitelle",
+    "usage": 0.1,
+    "top_move": "Trick Room"
+  },
+  {
+    "rank": 302,
+    "name": "Exeggutor",
+    "safe_name": "exeggutor",
+    "usage": 0.1,
+    "top_move": "Giga Drain"
+  },
+  {
+    "rank": 303,
+    "name": "Medicham",
+    "safe_name": "medicham",
+    "usage": 0.1,
+    "top_move": "Ice Punch"
+  },
+  {
+    "rank": 304,
+    "name": "Duraludon",
+    "safe_name": "duraludon",
+    "usage": 0.1,
+    "top_move": "Body Press"
+  },
+  {
+    "rank": 305,
+    "name": "Drednaw",
+    "safe_name": "drednaw",
+    "usage": 0.1,
+    "top_move": "Shell Smash"
+  },
+  {
+    "rank": 306,
+    "name": "Dusknoir",
+    "safe_name": "dusknoir",
+    "usage": 0.1,
+    "top_move": "Pain Split"
+  },
+  {
+    "rank": 307,
+    "name": "Flareon",
+    "safe_name": "flareon",
+    "usage": 0.1,
+    "top_move": "Flare Blitz"
+  },
+  {
+    "rank": 308,
+    "name": "Palossand",
+    "safe_name": "palossand",
+    "usage": 0.1,
+    "top_move": "Shore Up"
+  },
+  {
+    "rank": 309,
+    "name": "Houndoom",
+    "safe_name": "houndoom",
+    "usage": 0.1,
+    "top_move": "Dark Pulse"
+  },
+  {
+    "rank": 310,
+    "name": "Toucannon",
+    "safe_name": "toucannon",
+    "usage": 0.1,
+    "top_move": "Beak Blast"
+  },
+  {
+    "rank": 311,
+    "name": "Mudsdale",
+    "safe_name": "mudsdale",
+    "usage": 0.1,
+    "top_move": "Earthquake"
+  },
+  {
+    "rank": 312,
+    "name": "Venomoth",
+    "safe_name": "venomoth",
+    "usage": 0.1,
+    "top_move": "Quiver Dance"
+  },
+  {
+    "rank": 313,
+    "name": "Clawitzer",
+    "safe_name": "clawitzer",
+    "usage": 0.1,
+    "top_move": "Dark Pulse"
+  },
+  {
+    "rank": 314,
+    "name": "Tauros-Paldea-Aqua",
+    "safe_name": "tauros-paldea-aqua",
+    "usage": 0.1,
+    "top_move": "Close Combat"
+  },
+  {
+    "rank": 315,
+    "name": "Meganium",
+    "safe_name": "meganium",
+    "usage": 0.1,
+    "top_move": "Leech Seed"
+  },
+  {
+    "rank": 316,
+    "name": "Bastiodon",
+    "safe_name": "bastiodon",
+    "usage": 0.1,
+    "top_move": "Body Press"
+  },
+  {
+    "rank": 317,
+    "name": "Lanturn",
+    "safe_name": "lanturn",
+    "usage": 0.1,
+    "top_move": "Ice Beam"
+  },
+  {
+    "rank": 318,
+    "name": "Weezing",
+    "safe_name": "weezing",
+    "usage": 0.1,
+    "top_move": "Will-O-Wisp"
+  },
+  {
+    "rank": 319,
+    "name": "Tornadus",
+    "safe_name": "tornadus",
+    "usage": 0.1,
+    "top_move": "Tailwind"
+  },
+  {
+    "rank": 320,
+    "name": "Wyrdeer",
+    "safe_name": "wyrdeer",
+    "usage": 0.1,
+    "top_move": "Agility"
+  },
+  {
+    "rank": 321,
+    "name": "Alcremie",
+    "safe_name": "alcremie",
+    "usage": 0.1,
+    "top_move": "Calm Mind"
+  },
+  {
+    "rank": 322,
+    "name": "Primeape",
+    "safe_name": "primeape",
+    "usage": 0.1,
+    "top_move": "Rage Fist"
+  },
+  {
+    "rank": 323,
+    "name": "Articuno",
+    "safe_name": "articuno",
+    "usage": 0.1,
+    "top_move": "Freeze-Dry"
+  },
+  {
+    "rank": 324,
+    "name": "Ampharos",
+    "safe_name": "ampharos",
+    "usage": 0.1,
+    "top_move": "Thunderbolt"
+  },
+  {
+    "rank": 325,
+    "name": "Greedent",
+    "safe_name": "greedent",
+    "usage": 0.1,
+    "top_move": "Body Press"
+  },
+  {
+    "rank": 326,
+    "name": "Oricorio-Pom-Pom",
+    "safe_name": "oricorio-pom-pom",
+    "usage": 0.1,
+    "top_move": "Quiver Dance"
+  },
+  {
+    "rank": 327,
+    "name": "Veluza",
+    "safe_name": "veluza",
+    "usage": 0.1,
+    "top_move": "Aqua Cutter"
+  },
+  {
+    "rank": 328,
+    "name": "Exeggutor-Alola",
+    "safe_name": "exeggutor-alola",
+    "usage": 0.1,
+    "top_move": "Flamethrower"
+  },
+  {
+    "rank": 329,
+    "name": "Rhydon",
+    "safe_name": "rhydon",
+    "usage": 0.1,
+    "top_move": "Earthquake"
+  },
+  {
+    "rank": 330,
+    "name": "Lycanroc",
+    "safe_name": "lycanroc",
+    "usage": 0.1,
+    "top_move": "Accelerock"
+  },
+  {
+    "rank": 331,
+    "name": "Wigglytuff",
+    "safe_name": "wigglytuff",
+    "usage": 0.1,
+    "top_move": "Alluring Voice"
+  },
+  {
+    "rank": 332,
+    "name": "Bruxish",
+    "safe_name": "bruxish",
+    "usage": 0.1,
+    "top_move": "Psychic Fangs"
+  },
+  {
+    "rank": 333,
+    "name": "Lilligant",
+    "safe_name": "lilligant",
+    "usage": 0.1,
+    "top_move": "Alluring Voice"
+  },
+  {
+    "rank": 334,
+    "name": "Golem",
+    "safe_name": "golem",
+    "usage": 0.1,
+    "top_move": "Earthquake"
+  },
+  {
+    "rank": 335,
+    "name": "Sudowoodo",
+    "safe_name": "sudowoodo",
+    "usage": 0.1,
+    "top_move": "Endeavor"
+  },
+  {
+    "rank": 336,
+    "name": "Dachsbun",
+    "safe_name": "dachsbun",
+    "usage": 0.1,
+    "top_move": "Body Press"
+  },
+  {
+    "rank": 337,
+    "name": "Carbink",
+    "safe_name": "carbink",
+    "usage": 0.1,
+    "top_move": "Endeavor"
+  },
+  {
+    "rank": 338,
+    "name": "Victreebel",
+    "safe_name": "victreebel",
+    "usage": 0.1,
+    "top_move": "Weather Ball"
+  },
+  {
+    "rank": 339,
+    "name": "Ariados",
+    "safe_name": "ariados",
+    "usage": 0.1,
+    "top_move": "Sticky Web"
+  },
+  {
+    "rank": 340,
+    "name": "Cacturne",
+    "safe_name": "cacturne",
+    "usage": 0.1,
+    "top_move": "Sucker Punch"
+  },
+  {
+    "rank": 341,
+    "name": "Persian-Alola",
+    "safe_name": "persian-alola",
+    "usage": 0.1,
+    "top_move": "Parting Shot"
+  },
+  {
+    "rank": 342,
+    "name": "Hariyama",
+    "safe_name": "hariyama",
+    "usage": 0.1,
+    "top_move": "Bullet Punch"
+  },
+  {
+    "rank": 343,
+    "name": "Komala",
+    "safe_name": "komala",
+    "usage": 0.1,
+    "top_move": "Rapid Spin"
+  },
+  {
+    "rank": 344,
+    "name": "Mabosstiff",
+    "safe_name": "mabosstiff",
+    "usage": 0.1,
+    "top_move": "Crunch"
+  },
+  {
+    "rank": 345,
+    "name": "Appletun",
+    "safe_name": "appletun",
+    "usage": 0.1,
+    "top_move": "Apple Acid"
+  },
+  {
+    "rank": 346,
+    "name": "Regigigas",
+    "safe_name": "regigigas",
+    "usage": 0.1,
+    "top_move": "Body Slam"
+  },
+  {
+    "rank": 347,
+    "name": "Braviary",
+    "safe_name": "braviary",
+    "usage": 0.1,
+    "top_move": "Brave Bird"
+  },
+  {
+    "rank": 348,
+    "name": "Meowstic",
+    "safe_name": "meowstic",
+    "usage": 0.1,
+    "top_move": "Light Screen"
+  },
+  {
+    "rank": 349,
+    "name": "Falinks",
+    "safe_name": "falinks",
+    "usage": 0.1,
+    "top_move": "No Retreat"
+  },
+  {
+    "rank": 350,
+    "name": "Arbok",
+    "safe_name": "arbok",
+    "usage": 0.1,
+    "top_move": "Gunk Shot"
+  },
+  {
+    "rank": 351,
+    "name": "Muk",
+    "safe_name": "muk",
+    "usage": 0.1,
+    "top_move": "Knock Off"
+  },
+  {
+    "rank": 352,
+    "name": "Shaymin",
+    "safe_name": "shaymin",
+    "usage": 0.1,
+    "top_move": "Seed Flare"
+  },
+  {
+    "rank": 353,
+    "name": "Squawkabilly",
+    "safe_name": "squawkabilly",
+    "usage": 0.1,
+    "top_move": "Brave Bird"
+  },
+  {
+    "rank": 354,
+    "name": "Furret",
+    "safe_name": "furret",
+    "usage": 0.1,
+    "top_move": "Tidy Up"
+  },
+  {
+    "rank": 355,
+    "name": "Jumpluff",
+    "safe_name": "jumpluff",
+    "usage": 0.1,
+    "top_move": "Leech Seed"
+  },
+  {
+    "rank": 356,
+    "name": "Terrakion",
+    "safe_name": "terrakion",
+    "usage": 0.1,
+    "top_move": "Close Combat"
+  },
+  {
+    "rank": 357,
+    "name": "Sandslash",
+    "safe_name": "sandslash",
+    "usage": 0.1,
+    "top_move": "Earthquake"
+  },
+  {
+    "rank": 358,
+    "name": "Lycanroc-Midnight",
+    "safe_name": "lycanroc-midnight",
+    "usage": 0.1,
+    "top_move": "Stone Edge"
+  },
+  {
+    "rank": 359,
+    "name": "Gogoat",
+    "safe_name": "gogoat",
+    "usage": 0.1,
+    "top_move": "Horn Leech"
+  },
+  {
+    "rank": 360,
+    "name": "Oricorio-Sensu",
+    "safe_name": "oricorio-sensu",
+    "usage": 0.1,
+    "top_move": "Revelation Dance"
+  },
+  {
+    "rank": 361,
+    "name": "Murkrow",
+    "safe_name": "murkrow",
+    "usage": 0.1,
+    "top_move": "Tailwind"
+  },
+  {
+    "rank": 362,
+    "name": "Klawf",
+    "safe_name": "klawf",
+    "usage": 0.1,
+    "top_move": "Knock Off"
+  },
+  {
+    "rank": 363,
+    "name": "Chimecho",
+    "safe_name": "chimecho",
+    "usage": 0.1,
+    "top_move": "Stored Power"
+  },
+  {
+    "rank": 364,
+    "name": "Volbeat",
+    "safe_name": "volbeat",
+    "usage": 0.1,
+    "top_move": "Encore"
+  },
+  {
+    "rank": 365,
+    "name": "Haunter",
+    "safe_name": "haunter",
+    "usage": 0.1,
+    "top_move": "Shadow Ball"
+  },
+  {
+    "rank": 366,
+    "name": "Crabominable",
+    "safe_name": "crabominable",
+    "usage": 0.1,
+    "top_move": "Drain Punch"
+  },
+  {
+    "rank": 367,
+    "name": "Copperajah",
+    "safe_name": "copperajah",
+    "usage": 0.1,
+    "top_move": "Heavy Slam"
+  },
+  {
+    "rank": 368,
+    "name": "Rotom-Frost",
+    "safe_name": "rotom-frost",
+    "usage": 0.1,
+    "top_move": "Blizzard"
+  },
+  {
+    "rank": 369,
+    "name": "Tauros",
+    "safe_name": "tauros",
+    "usage": 0.1,
+    "top_move": "Body Slam"
+  },
+  {
+    "rank": 370,
+    "name": "Hoopa",
+    "safe_name": "hoopa",
+    "usage": 0.1,
+    "top_move": "Shadow Ball"
+  },
+  {
+    "rank": 371,
+    "name": "Flapple",
+    "safe_name": "flapple",
+    "usage": 0.1,
+    "top_move": "Grav Apple"
+  },
+  {
+    "rank": 372,
+    "name": "Bellossom",
+    "safe_name": "bellossom",
+    "usage": 0.1,
+    "top_move": "Quiver Dance"
+  },
+  {
+    "rank": 373,
+    "name": "Bombirdier",
+    "safe_name": "bombirdier",
+    "usage": 0.1,
+    "top_move": "Stone Edge"
+  },
+  {
+    "rank": 374,
+    "name": "Dipplin",
+    "safe_name": "dipplin",
+    "usage": 0.1,
+    "top_move": "Recover"
+  },
+  {
+    "rank": 375,
+    "name": "Skuntank",
+    "safe_name": "skuntank",
+    "usage": 0.0,
+    "top_move": "Sucker Punch"
+  },
+  {
+    "rank": 376,
+    "name": "Vivillon",
+    "safe_name": "vivillon",
+    "usage": 0.0,
+    "top_move": "Quiver Dance"
+  },
+  {
+    "rank": 377,
+    "name": "Camerupt",
+    "safe_name": "camerupt",
+    "usage": 0.0,
+    "top_move": "Earth Power"
+  },
+  {
+    "rank": 378,
+    "name": "Sawsbuck",
+    "safe_name": "sawsbuck",
+    "usage": 0.0,
+    "top_move": "Horn Leech"
+  },
+  {
+    "rank": 379,
+    "name": "Perrserker",
+    "safe_name": "perrserker",
+    "usage": 0.0,
+    "top_move": "Iron Head"
+  },
+  {
+    "rank": 380,
+    "name": "Dedenne",
+    "safe_name": "dedenne",
+    "usage": 0.0,
+    "top_move": "Nuzzle"
+  },
+  {
+    "rank": 381,
+    "name": "Noctowl",
+    "safe_name": "noctowl",
+    "usage": 0.0,
+    "top_move": "Roost"
+  },
+  {
+    "rank": 382,
+    "name": "Magcargo",
+    "safe_name": "magcargo",
+    "usage": 0.0,
+    "top_move": "Shell Smash"
+  },
+  {
+    "rank": 383,
+    "name": "Dodrio",
+    "safe_name": "dodrio",
+    "usage": 0.0,
+    "top_move": "Drill Run"
+  },
+  {
+    "rank": 384,
+    "name": "Pyroar",
+    "safe_name": "pyroar",
+    "usage": 0.0,
+    "top_move": "Hyper Voice"
+  },
+  {
+    "rank": 385,
+    "name": "Banette",
+    "safe_name": "banette",
+    "usage": 0.0,
+    "top_move": "Poltergeist"
+  },
+  {
+    "rank": 386,
+    "name": "Electrode",
+    "safe_name": "electrode",
+    "usage": 0.0,
+    "top_move": "Volt Switch"
+  },
+  {
+    "rank": 387,
+    "name": "Virizion",
+    "safe_name": "virizion",
+    "usage": 0.0,
+    "top_move": "Swords Dance"
+  },
+  {
+    "rank": 388,
+    "name": "Swalot",
+    "safe_name": "swalot",
+    "usage": 0.0,
+    "top_move": "Ice Beam"
+  },
+  {
+    "rank": 389,
+    "name": "Zebstrika",
+    "safe_name": "zebstrika",
+    "usage": 0.0,
+    "top_move": "High Horsepower"
+  },
+  {
+    "rank": 390,
+    "name": "Seviper",
+    "safe_name": "seviper",
+    "usage": 0.0,
+    "top_move": "Earthquake"
+  },
+  {
+    "rank": 391,
+    "name": "Ursaring",
+    "safe_name": "ursaring",
+    "usage": 0.0,
+    "top_move": "Facade"
+  },
+  {
+    "rank": 392,
+    "name": "Dewgong",
+    "safe_name": "dewgong",
+    "usage": 0.0,
+    "top_move": "Whirlpool"
+  },
+  {
+    "rank": 393,
+    "name": "Qwilfish-Hisui",
+    "safe_name": "qwilfish-hisui",
+    "usage": 0.0,
+    "top_move": "Barb Barrage"
+  },
+  {
+    "rank": 394,
+    "name": "Dugtrio-Alola",
+    "safe_name": "dugtrio-alola",
+    "usage": 0.0,
+    "top_move": "Earthquake"
+  },
+  {
+    "rank": 395,
+    "name": "Qwilfish",
+    "safe_name": "qwilfish",
+    "usage": 0.0,
+    "top_move": "Liquidation"
+  },
+  {
+    "rank": 396,
+    "name": "Illumise",
+    "safe_name": "illumise",
+    "usage": 0.0,
+    "top_move": "Encore"
+  },
+  {
+    "rank": 397,
+    "name": "Dugtrio",
+    "safe_name": "dugtrio",
+    "usage": 0.0,
+    "top_move": "Earthquake"
+  },
+  {
+    "rank": 398,
+    "name": "Misdreavus",
+    "safe_name": "misdreavus",
+    "usage": 0.0,
+    "top_move": "Will-O-Wisp"
+  },
+  {
+    "rank": 399,
+    "name": "Rotom",
+    "safe_name": "rotom",
+    "usage": 0.0,
+    "top_move": "Volt Switch"
+  },
+  {
+    "rank": 400,
+    "name": "Magneton",
+    "safe_name": "magneton",
+    "usage": 0.0,
+    "top_move": "Flash Cannon"
+  },
+  {
+    "rank": 401,
+    "name": "Oricorio",
+    "safe_name": "oricorio",
+    "usage": 0.0,
+    "top_move": "Revelation Dance"
+  },
+  {
+    "rank": 402,
+    "name": "Mesprit",
+    "safe_name": "mesprit",
+    "usage": 0.0,
+    "top_move": "Stealth Rock"
+  },
+  {
+    "rank": 403,
+    "name": "Granbull",
+    "safe_name": "granbull",
+    "usage": 0.0,
+    "top_move": "Play Rough"
+  },
+  {
+    "rank": 404,
+    "name": "Hattrem",
+    "safe_name": "hattrem",
+    "usage": 0.0,
+    "top_move": "Healing Wish"
+  },
+  {
+    "rank": 405,
+    "name": "Pachirisu",
+    "safe_name": "pachirisu",
+    "usage": 0.0,
+    "top_move": "Super Fang"
+  },
+  {
+    "rank": 406,
+    "name": "Whiscash",
+    "safe_name": "whiscash",
+    "usage": 0.0,
+    "top_move": "Earthquake"
+  },
+  {
+    "rank": 407,
+    "name": "Samurott",
+    "safe_name": "samurott",
+    "usage": 0.0,
+    "top_move": "Ice Beam"
+  },
+  {
+    "rank": 408,
+    "name": "Vespiquen",
+    "safe_name": "vespiquen",
+    "usage": 0.0,
+    "top_move": "Roost"
+  },
+  {
+    "rank": 409,
+    "name": "Kricketune",
+    "safe_name": "kricketune",
+    "usage": 0.0,
+    "top_move": "Sticky Web"
+  },
+  {
+    "rank": 410,
+    "name": "Cottonee",
+    "safe_name": "cottonee",
+    "usage": 0.0,
+    "top_move": "Leech Seed"
+  },
+  {
+    "rank": 411,
+    "name": "Gligar",
+    "safe_name": "gligar",
+    "usage": 0.0,
+    "top_move": "Earthquake"
+  },
+  {
+    "rank": 412,
+    "name": "Persian",
+    "safe_name": "persian",
+    "usage": 0.0,
+    "top_move": "Fake Out"
+  },
+  {
+    "rank": 413,
+    "name": "Delibird",
+    "safe_name": "delibird",
+    "usage": 0.0,
+    "top_move": "Rapid Spin"
+  },
+  {
+    "rank": 414,
+    "name": "Swanna",
+    "safe_name": "swanna",
+    "usage": 0.0,
+    "top_move": "Hurricane"
+  },
+  {
+    "rank": 415,
+    "name": "Sneasel-Hisui",
+    "safe_name": "sneasel-hisui",
+    "usage": 0.0,
+    "top_move": "Close Combat"
+  },
+  {
+    "rank": 416,
+    "name": "Dunsparce",
+    "safe_name": "dunsparce",
+    "usage": 0.0,
+    "top_move": "Roost"
+  },
+  {
+    "rank": 417,
+    "name": "Hypno",
+    "safe_name": "hypno",
+    "usage": 0.0,
+    "top_move": "Psychic"
+  },
+  {
+    "rank": 418,
+    "name": "Gumshoos",
+    "safe_name": "gumshoos",
+    "usage": 0.0,
+    "top_move": "Knock Off"
+  },
+  {
+    "rank": 419,
+    "name": "Wugtrio",
+    "safe_name": "wugtrio",
+    "usage": 0.0,
+    "top_move": "Triple Dive"
+  },
+  {
+    "rank": 420,
+    "name": "Sunflora",
+    "safe_name": "sunflora",
+    "usage": 0.0,
+    "top_move": "Solar Beam"
+  },
+  {
+    "rank": 421,
+    "name": "Mightyena",
+    "safe_name": "mightyena",
+    "usage": 0.0,
+    "top_move": "Sucker Punch"
+  },
+  {
+    "rank": 422,
+    "name": "Glalie",
+    "safe_name": "glalie",
+    "usage": 0.0,
+    "top_move": "Earthquake"
+  },
+  {
+    "rank": 423,
+    "name": "Basculin",
+    "safe_name": "basculin",
+    "usage": 0.0,
+    "top_move": "Wave Crash"
+  },
+  {
+    "rank": 424,
+    "name": "Electabuzz",
+    "safe_name": "electabuzz",
+    "usage": 0.0,
+    "top_move": "Volt Switch"
+  },
+  {
+    "rank": 425,
+    "name": "Grumpig",
+    "safe_name": "grumpig",
+    "usage": 0.0,
+    "top_move": "Psychic"
+  },
+  {
+    "rank": 426,
+    "name": "Magmar",
+    "safe_name": "magmar",
+    "usage": 0.0,
+    "top_move": "Will-O-Wisp"
+  },
+  {
+    "rank": 427,
+    "name": "Passimian",
+    "safe_name": "passimian",
+    "usage": 0.0,
+    "top_move": "Close Combat"
+  },
+  {
+    "rank": 428,
+    "name": "Plusle",
+    "safe_name": "plusle",
+    "usage": 0.0,
+    "top_move": "Thunderbolt"
+  },
+  {
+    "rank": 429,
+    "name": "Charjabug",
+    "safe_name": "charjabug",
+    "usage": 0.0,
+    "top_move": "Sticky Web"
+  },
+  {
+    "rank": 430,
+    "name": "Nosepass",
+    "safe_name": "nosepass",
+    "usage": 0.0,
+    "top_move": "Body Press"
+  },
+  {
+    "rank": 431,
+    "name": "Lumineon",
+    "safe_name": "lumineon",
+    "usage": 0.0,
+    "top_move": "Ice Beam"
+  },
+  {
+    "rank": 432,
+    "name": "Rotom-Fan",
+    "safe_name": "rotom-fan",
+    "usage": 0.0,
+    "top_move": "Air Slash"
+  },
+  {
+    "rank": 433,
+    "name": "Naclstack",
+    "safe_name": "naclstack",
+    "usage": 0.0,
+    "top_move": "Salt Cure"
+  },
+  {
+    "rank": 434,
+    "name": "Clefairy",
+    "safe_name": "clefairy",
+    "usage": 0.0,
+    "top_move": "Stealth Rock"
+  },
+  {
+    "rank": 435,
+    "name": "Piloswine",
+    "safe_name": "piloswine",
+    "usage": 0.0,
+    "top_move": "Ice Shard"
+  },
+  {
+    "rank": 436,
+    "name": "Minun",
+    "safe_name": "minun",
+    "usage": 0.0,
+    "top_move": "Nasty Plot"
+  },
+  {
+    "rank": 437,
+    "name": "Wartortle",
+    "safe_name": "wartortle",
+    "usage": 0.0,
+    "top_move": "Rapid Spin"
+  },
+  {
+    "rank": 438,
+    "name": "Gurdurr",
+    "safe_name": "gurdurr",
+    "usage": 0.0,
+    "top_move": "Drain Punch"
+  },
+  {
+    "rank": 439,
+    "name": "Sliggoo-Hisui",
+    "safe_name": "sliggoo-hisui",
+    "usage": 0.0,
+    "top_move": "Acid Spray"
+  },
+  {
+    "rank": 440,
+    "name": "Oranguru",
+    "safe_name": "oranguru",
+    "usage": 0.0,
+    "top_move": "Psychic"
+  },
+  {
+    "rank": 441,
+    "name": "Vigoroth",
+    "safe_name": "vigoroth",
+    "usage": 0.0,
+    "top_move": "Bulk Up"
+  },
+  {
+    "rank": 442,
+    "name": "Oinkologne",
+    "safe_name": "oinkologne",
+    "usage": 0.0,
+    "top_move": "Super Fang"
+  },
+  {
+    "rank": 443,
+    "name": "Tauros-Paldea-Combat",
+    "safe_name": "tauros-paldea-combat",
+    "usage": 0.0,
+    "top_move": "Close Combat"
+  },
+  {
+    "rank": 444,
+    "name": "Duskull",
+    "safe_name": "duskull",
+    "usage": 0.0,
+    "top_move": "Will-O-Wisp"
+  },
+  {
+    "rank": 445,
+    "name": "Eevee",
+    "safe_name": "eevee",
+    "usage": 0.0,
+    "top_move": "Quick Attack"
+  },
+  {
+    "rank": 446,
+    "name": "Dragonair",
+    "safe_name": "dragonair",
+    "usage": 0.0,
+    "top_move": "Dragon Dance"
+  },
+  {
+    "rank": 447,
+    "name": "Riolu",
+    "safe_name": "riolu",
+    "usage": 0.0,
+    "top_move": "Copycat"
+  },
+  {
+    "rank": 448,
+    "name": "Crocalor",
+    "safe_name": "crocalor",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 449,
+    "name": "Stonjourner",
+    "safe_name": "stonjourner",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 450,
+    "name": "Luvdisc",
+    "safe_name": "luvdisc",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 451,
+    "name": "Pineco",
+    "safe_name": "pineco",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 452,
+    "name": "Poliwhirl",
+    "safe_name": "poliwhirl",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 453,
+    "name": "Bayleef",
+    "safe_name": "bayleef",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 454,
+    "name": "Duosion",
+    "safe_name": "duosion",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 455,
+    "name": "Dewott",
+    "safe_name": "dewott",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 456,
+    "name": "Oricorio-Pa'u",
+    "safe_name": "oricorio-pau",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 457,
+    "name": "Squirtle",
+    "safe_name": "squirtle",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 458,
+    "name": "Torracat",
+    "safe_name": "torracat",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 459,
+    "name": "Bulbasaur",
+    "safe_name": "bulbasaur",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 460,
+    "name": "Phanpy",
+    "safe_name": "phanpy",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 461,
+    "name": "Glimmet",
+    "safe_name": "glimmet",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 462,
+    "name": "Gloom",
+    "safe_name": "gloom",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 463,
+    "name": "Starly",
+    "safe_name": "starly",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 464,
+    "name": "Wooper",
+    "safe_name": "wooper",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 465,
+    "name": "Servine",
+    "safe_name": "servine",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 466,
+    "name": "Sneasel",
+    "safe_name": "sneasel",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 467,
+    "name": "Ivysaur",
+    "safe_name": "ivysaur",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 468,
+    "name": "Oinkologne-F",
+    "safe_name": "oinkologne-f",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 469,
+    "name": "Girafarig",
+    "safe_name": "girafarig",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 470,
+    "name": "Morgrem",
+    "safe_name": "morgrem",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 471,
+    "name": "Psyduck",
+    "safe_name": "psyduck",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 472,
+    "name": "Arctibax",
+    "safe_name": "arctibax",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 473,
+    "name": "Thwackey",
+    "safe_name": "thwackey",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 474,
+    "name": "Koffing",
+    "safe_name": "koffing",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 475,
+    "name": "Magikarp",
+    "safe_name": "magikarp",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 476,
+    "name": "Vulpix",
+    "safe_name": "vulpix",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 477,
+    "name": "Numel",
+    "safe_name": "numel",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 478,
+    "name": "Shroodle",
+    "safe_name": "shroodle",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 479,
+    "name": "Piplup",
+    "safe_name": "piplup",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 480,
+    "name": "Munchlax",
+    "safe_name": "munchlax",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 481,
+    "name": "Carkol",
+    "safe_name": "carkol",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 482,
+    "name": "Pichu",
+    "safe_name": "pichu",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 483,
+    "name": "Graveler-Alola",
+    "safe_name": "graveler-alola",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 484,
+    "name": "Geodude",
+    "safe_name": "geodude",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 485,
+    "name": "Zweilous",
+    "safe_name": "zweilous",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 486,
+    "name": "Diglett",
+    "safe_name": "diglett",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 487,
+    "name": "Treecko",
+    "safe_name": "treecko",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 488,
+    "name": "Calyrex",
+    "safe_name": "calyrex",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 489,
+    "name": "Scraggy",
+    "safe_name": "scraggy",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 490,
+    "name": "Phione",
+    "safe_name": "phione",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 491,
+    "name": "Phantump",
+    "safe_name": "phantump",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 492,
+    "name": "Snivy",
+    "safe_name": "snivy",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 493,
+    "name": "Grimer",
+    "safe_name": "grimer",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 494,
+    "name": "Monferno",
+    "safe_name": "monferno",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 495,
+    "name": "Jigglypuff",
+    "safe_name": "jigglypuff",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 496,
+    "name": "Metang",
+    "safe_name": "metang",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 497,
+    "name": "Shroomish",
+    "safe_name": "shroomish",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 498,
+    "name": "Sentret",
+    "safe_name": "sentret",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 499,
+    "name": "Trapinch",
+    "safe_name": "trapinch",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 500,
+    "name": "Venonat",
+    "safe_name": "venonat",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 501,
+    "name": "Oshawott",
+    "safe_name": "oshawott",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 502,
+    "name": "Pawniard",
+    "safe_name": "pawniard",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 503,
+    "name": "Bergmite",
+    "safe_name": "bergmite",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 504,
+    "name": "Buizel",
+    "safe_name": "buizel",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 505,
+    "name": "Marshtomp",
+    "safe_name": "marshtomp",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 506,
+    "name": "Charmander",
+    "safe_name": "charmander",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 507,
+    "name": "Doduo",
+    "safe_name": "doduo",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 508,
+    "name": "Quilava",
+    "safe_name": "quilava",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 509,
+    "name": "Cacnea",
+    "safe_name": "cacnea",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 510,
+    "name": "Pignite",
+    "safe_name": "pignite",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 511,
+    "name": "Flittle",
+    "safe_name": "flittle",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 512,
+    "name": "Tandemaus",
+    "safe_name": "tandemaus",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 513,
+    "name": "Raboot",
+    "safe_name": "raboot",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 514,
+    "name": "Turtwig",
+    "safe_name": "turtwig",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 515,
+    "name": "Aipom",
+    "safe_name": "aipom",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 516,
+    "name": "Meowth",
+    "safe_name": "meowth",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 517,
+    "name": "Growlithe",
+    "safe_name": "growlithe",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 518,
+    "name": "Porygon",
+    "safe_name": "porygon",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 519,
+    "name": "Ralts",
+    "safe_name": "ralts",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 520,
+    "name": "Zorua-Hisui",
+    "safe_name": "zorua-hisui",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 521,
+    "name": "Combusken",
+    "safe_name": "combusken",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 522,
+    "name": "Drakloak",
+    "safe_name": "drakloak",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 523,
+    "name": "Gabite",
+    "safe_name": "gabite",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 524,
+    "name": "Prinplup",
+    "safe_name": "prinplup",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 525,
+    "name": "Joltik",
+    "safe_name": "joltik",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 526,
+    "name": "Charmeleon",
+    "safe_name": "charmeleon",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 527,
+    "name": "Voltorb",
+    "safe_name": "voltorb",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 528,
+    "name": "Lechonk",
+    "safe_name": "lechonk",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 529,
+    "name": "Graveler",
+    "safe_name": "graveler",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 530,
+    "name": "Surskit",
+    "safe_name": "surskit",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 531,
+    "name": "Rowlet",
+    "safe_name": "rowlet",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 532,
+    "name": "Totodile",
+    "safe_name": "totodile",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 533,
+    "name": "Grovyle",
+    "safe_name": "grovyle",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 534,
+    "name": "Inkay",
+    "safe_name": "inkay",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 535,
+    "name": "Shelgon",
+    "safe_name": "shelgon",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 536,
+    "name": "Cutiefly",
+    "safe_name": "cutiefly",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 537,
+    "name": "Sandygast",
+    "safe_name": "sandygast",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 538,
+    "name": "Tarountula",
+    "safe_name": "tarountula",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 539,
+    "name": "Braixen",
+    "safe_name": "braixen",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 540,
+    "name": "Seedot",
+    "safe_name": "seedot",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 541,
+    "name": "Swinub",
+    "safe_name": "swinub",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 542,
+    "name": "Wooper-Paldea",
+    "safe_name": "wooper-paldea",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 543,
+    "name": "Litten",
+    "safe_name": "litten",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 544,
+    "name": "Cyndaquil",
+    "safe_name": "cyndaquil",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 545,
+    "name": "Stantler",
+    "safe_name": "stantler",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 546,
+    "name": "Corvisquire",
+    "safe_name": "corvisquire",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 547,
+    "name": "Wattrel",
+    "safe_name": "wattrel",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 548,
+    "name": "Torchic",
+    "safe_name": "torchic",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 549,
+    "name": "Shuppet",
+    "safe_name": "shuppet",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 550,
+    "name": "Swadloon",
+    "safe_name": "swadloon",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 551,
+    "name": "Floragato",
+    "safe_name": "floragato",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 552,
+    "name": "Hippopotas",
+    "safe_name": "hippopotas",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 553,
+    "name": "Lombre",
+    "safe_name": "lombre",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 554,
+    "name": "Marill",
+    "safe_name": "marill",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 555,
+    "name": "Mareanie",
+    "safe_name": "mareanie",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 556,
+    "name": "Fuecoco",
+    "safe_name": "fuecoco",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 557,
+    "name": "Vullaby",
+    "safe_name": "vullaby",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 558,
+    "name": "Quaxly",
+    "safe_name": "quaxly",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 559,
+    "name": "Chespin",
+    "safe_name": "chespin",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 560,
+    "name": "Ekans",
+    "safe_name": "ekans",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 561,
+    "name": "Applin",
+    "safe_name": "applin",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 562,
+    "name": "Fraxure",
+    "safe_name": "fraxure",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 563,
+    "name": "Fletchinder",
+    "safe_name": "fletchinder",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 564,
+    "name": "Poltchageist",
+    "safe_name": "poltchageist",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 565,
+    "name": "Voltorb-Hisui",
+    "safe_name": "voltorb-hisui",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 566,
+    "name": "Froakie",
+    "safe_name": "froakie",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 567,
+    "name": "Mudkip",
+    "safe_name": "mudkip",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 568,
+    "name": "Spoink",
+    "safe_name": "spoink",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 569,
+    "name": "Shellos",
+    "safe_name": "shellos",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 570,
+    "name": "Snom",
+    "safe_name": "snom",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 571,
+    "name": "Corphish",
+    "safe_name": "corphish",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 572,
+    "name": "Gastly",
+    "safe_name": "gastly",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 573,
+    "name": "Rufflet",
+    "safe_name": "rufflet",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 574,
+    "name": "Cosmoem",
+    "safe_name": "cosmoem",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 575,
+    "name": "Sandshrew-Alola",
+    "safe_name": "sandshrew-alola",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 576,
+    "name": "Krokorok",
+    "safe_name": "krokorok",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 577,
+    "name": "Croagunk",
+    "safe_name": "croagunk",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 578,
+    "name": "Staravia",
+    "safe_name": "staravia",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 579,
+    "name": "Eelektrik",
+    "safe_name": "eelektrik",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 580,
+    "name": "Magnemite",
+    "safe_name": "magnemite",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 581,
+    "name": "Slowpoke",
+    "safe_name": "slowpoke",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 582,
+    "name": "Solosis",
+    "safe_name": "solosis",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 583,
+    "name": "Tinkatink",
+    "safe_name": "tinkatink",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 584,
+    "name": "Grotle",
+    "safe_name": "grotle",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 585,
+    "name": "Nuzleaf",
+    "safe_name": "nuzleaf",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 586,
+    "name": "Tentacool",
+    "safe_name": "tentacool",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 587,
+    "name": "Salandit",
+    "safe_name": "salandit",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 588,
+    "name": "Silicobra",
+    "safe_name": "silicobra",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 589,
+    "name": "Cranidos",
+    "safe_name": "cranidos",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 590,
+    "name": "Bonsly",
+    "safe_name": "bonsly",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 591,
+    "name": "Slowpoke-Galar",
+    "safe_name": "slowpoke-galar",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 592,
+    "name": "Geodude-Alola",
+    "safe_name": "geodude-alola",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 593,
+    "name": "Happiny",
+    "safe_name": "happiny",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 594,
+    "name": "Gible",
+    "safe_name": "gible",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 595,
+    "name": "Zorua",
+    "safe_name": "zorua",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 596,
+    "name": "Diglett-Alola",
+    "safe_name": "diglett-alola",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 597,
+    "name": "Bronzor",
+    "safe_name": "bronzor",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 598,
+    "name": "Barboach",
+    "safe_name": "barboach",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 599,
+    "name": "Magby",
+    "safe_name": "magby",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 600,
+    "name": "Larvesta",
+    "safe_name": "larvesta",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 601,
+    "name": "Hoothoot",
+    "safe_name": "hoothoot",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 602,
+    "name": "Sandshrew",
+    "safe_name": "sandshrew",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 603,
+    "name": "Drilbur",
+    "safe_name": "drilbur",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 604,
+    "name": "Skiploom",
+    "safe_name": "skiploom",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 605,
+    "name": "Quaxwell",
+    "safe_name": "quaxwell",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 606,
+    "name": "Grookey",
+    "safe_name": "grookey",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 607,
+    "name": "Hoppip",
+    "safe_name": "hoppip",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 608,
+    "name": "Chimchar",
+    "safe_name": "chimchar",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 609,
+    "name": "Drowzee",
+    "safe_name": "drowzee",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 610,
+    "name": "Scorbunny",
+    "safe_name": "scorbunny",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 611,
+    "name": "Toedscool",
+    "safe_name": "toedscool",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 612,
+    "name": "Impidimp",
+    "safe_name": "impidimp",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 613,
+    "name": "Ducklett",
+    "safe_name": "ducklett",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 614,
+    "name": "Rhyhorn",
+    "safe_name": "rhyhorn",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 615,
+    "name": "Seadra",
+    "safe_name": "seadra",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 616,
+    "name": "Mudbray",
+    "safe_name": "mudbray",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 617,
+    "name": "Cleffa",
+    "safe_name": "cleffa",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 618,
+    "name": "Shieldon",
+    "safe_name": "shieldon",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 619,
+    "name": "Sprigatito",
+    "safe_name": "sprigatito",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 620,
+    "name": "Pawmo",
+    "safe_name": "pawmo",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 621,
+    "name": "Gothorita",
+    "safe_name": "gothorita",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 622,
+    "name": "Pupitar",
+    "safe_name": "pupitar",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 623,
+    "name": "Espurr",
+    "safe_name": "espurr",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 624,
+    "name": "Trumbeak",
+    "safe_name": "trumbeak",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 625,
+    "name": "Sunkern",
+    "safe_name": "sunkern",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 626,
+    "name": "Teddiursa",
+    "safe_name": "teddiursa",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 627,
+    "name": "Yanma",
+    "safe_name": "yanma",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 628,
+    "name": "Fletchling",
+    "safe_name": "fletchling",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 629,
+    "name": "Shellder",
+    "safe_name": "shellder",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 630,
+    "name": "Elekid",
+    "safe_name": "elekid",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 631,
+    "name": "Tinkatuff",
+    "safe_name": "tinkatuff",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 632,
+    "name": "Lotad",
+    "safe_name": "lotad",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 633,
+    "name": "Slugma",
+    "safe_name": "slugma",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 634,
+    "name": "Tepig",
+    "safe_name": "tepig",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 635,
+    "name": "Azurill",
+    "safe_name": "azurill",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 636,
+    "name": "Greavard",
+    "safe_name": "greavard",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 637,
+    "name": "Kubfu",
+    "safe_name": "kubfu",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 638,
+    "name": "Charcadet",
+    "safe_name": "charcadet",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 639,
+    "name": "Tyrogue",
+    "safe_name": "tyrogue",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 640,
+    "name": "Chikorita",
+    "safe_name": "chikorita",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 641,
+    "name": "Dewpider",
+    "safe_name": "dewpider",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 642,
+    "name": "Sinistea",
+    "safe_name": "sinistea",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 643,
+    "name": "Rellor",
+    "safe_name": "rellor",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 644,
+    "name": "Growlithe-Hisui",
+    "safe_name": "growlithe-hisui",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 645,
+    "name": "Croconaw",
+    "safe_name": "croconaw",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 646,
+    "name": "Sliggoo",
+    "safe_name": "sliggoo",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 647,
+    "name": "Goomy",
+    "safe_name": "goomy",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 648,
+    "name": "Weepinbell",
+    "safe_name": "weepinbell",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 649,
+    "name": "Hakamo-o",
+    "safe_name": "hakamo-o",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 650,
+    "name": "Clauncher",
+    "safe_name": "clauncher",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 651,
+    "name": "Frogadier",
+    "safe_name": "frogadier",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 652,
+    "name": "Oddish",
+    "safe_name": "oddish",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 653,
+    "name": "Bramblin",
+    "safe_name": "bramblin",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 654,
+    "name": "Bagon",
+    "safe_name": "bagon",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 655,
+    "name": "Vulpix-Alola",
+    "safe_name": "vulpix-alola",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 656,
+    "name": "Blitzle",
+    "safe_name": "blitzle",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 657,
+    "name": "Drifloon",
+    "safe_name": "drifloon",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 658,
+    "name": "Tynamo",
+    "safe_name": "tynamo",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 659,
+    "name": "Jangmo-o",
+    "safe_name": "jangmo-o",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 660,
+    "name": "Deerling",
+    "safe_name": "deerling",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 661,
+    "name": "Minccino",
+    "safe_name": "minccino",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 662,
+    "name": "Finizen",
+    "safe_name": "finizen",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 663,
+    "name": "Dolliv",
+    "safe_name": "dolliv",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 664,
+    "name": "Dartrix",
+    "safe_name": "dartrix",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 665,
+    "name": "Chingling",
+    "safe_name": "chingling",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 666,
+    "name": "Quilladin",
+    "safe_name": "quilladin",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 667,
+    "name": "Petilil",
+    "safe_name": "petilil",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 668,
+    "name": "Chewtle",
+    "safe_name": "chewtle",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 669,
+    "name": "Shinx",
+    "safe_name": "shinx",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 670,
+    "name": "Hatenna",
+    "safe_name": "hatenna",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 671,
+    "name": "Brionne",
+    "safe_name": "brionne",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 672,
+    "name": "Kirlia",
+    "safe_name": "kirlia",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 673,
+    "name": "Horsea",
+    "safe_name": "horsea",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 674,
+    "name": "Gimmighoul",
+    "safe_name": "gimmighoul",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 675,
+    "name": "Larvitar",
+    "safe_name": "larvitar",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 676,
+    "name": "Litleo",
+    "safe_name": "litleo",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 677,
+    "name": "Mienfoo",
+    "safe_name": "mienfoo",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 678,
+    "name": "Skrelp",
+    "safe_name": "skrelp",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 679,
+    "name": "Nymble",
+    "safe_name": "nymble",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 680,
+    "name": "Rolycoly",
+    "safe_name": "rolycoly",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 681,
+    "name": "Noibat",
+    "safe_name": "noibat",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 682,
+    "name": "Lampent",
+    "safe_name": "lampent",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 683,
+    "name": "Nacli",
+    "safe_name": "nacli",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 684,
+    "name": "Yungoos",
+    "safe_name": "yungoos",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 685,
+    "name": "Grimer-Alola",
+    "safe_name": "grimer-alola",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 686,
+    "name": "Luxio",
+    "safe_name": "luxio",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 687,
+    "name": "Timburr",
+    "safe_name": "timburr",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 688,
+    "name": "Swablu",
+    "safe_name": "swablu",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 689,
+    "name": "Snover",
+    "safe_name": "snover",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 690,
+    "name": "Litwick",
+    "safe_name": "litwick",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 691,
+    "name": "Feebas",
+    "safe_name": "feebas",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 692,
+    "name": "Slakoth",
+    "safe_name": "slakoth",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 693,
+    "name": "Snorunt",
+    "safe_name": "snorunt",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 694,
+    "name": "Grubbin",
+    "safe_name": "grubbin",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 695,
+    "name": "Flaaffy",
+    "safe_name": "flaaffy",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 696,
+    "name": "Combee",
+    "safe_name": "combee",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 697,
+    "name": "Frigibax",
+    "safe_name": "frigibax",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 698,
+    "name": "Bellsprout",
+    "safe_name": "bellsprout",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 699,
+    "name": "Cosmog",
+    "safe_name": "cosmog",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 700,
+    "name": "Meowth-Galar",
+    "safe_name": "meowth-galar",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 701,
+    "name": "Gulpin",
+    "safe_name": "gulpin",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 702,
+    "name": "Meowth-Alola",
+    "safe_name": "meowth-alola",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 703,
+    "name": "Crabrawler",
+    "safe_name": "crabrawler",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 704,
+    "name": "Axew",
+    "safe_name": "axew",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 705,
+    "name": "Arrokuda",
+    "safe_name": "arrokuda",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 706,
+    "name": "Houndour",
+    "safe_name": "houndour",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 707,
+    "name": "Dreepy",
+    "safe_name": "dreepy",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 708,
+    "name": "Exeggcute",
+    "safe_name": "exeggcute",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 709,
+    "name": "Foongus",
+    "safe_name": "foongus",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 710,
+    "name": "Poliwag",
+    "safe_name": "poliwag",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 711,
+    "name": "Smoliv",
+    "safe_name": "smoliv",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 712,
+    "name": "Spinarak",
+    "safe_name": "spinarak",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 713,
+    "name": "Toxel",
+    "safe_name": "toxel",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 714,
+    "name": "Sandile",
+    "safe_name": "sandile",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 715,
+    "name": "Fennekin",
+    "safe_name": "fennekin",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 716,
+    "name": "Gimmighoul-Roaming",
+    "safe_name": "gimmighoul-roaming",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 717,
+    "name": "Fomantis",
+    "safe_name": "fomantis",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 718,
+    "name": "Fidough",
+    "safe_name": "fidough",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 719,
+    "name": "Wingull",
+    "safe_name": "wingull",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 720,
+    "name": "Skiddo",
+    "safe_name": "skiddo",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 721,
+    "name": "Igglybuff",
+    "safe_name": "igglybuff",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 722,
+    "name": "Deino",
+    "safe_name": "deino",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 723,
+    "name": "Sewaddle",
+    "safe_name": "sewaddle",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 724,
+    "name": "Wiglett",
+    "safe_name": "wiglett",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 725,
+    "name": "Flabebe",
+    "safe_name": "flabebe",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 726,
+    "name": "Dratini",
+    "safe_name": "dratini",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 727,
+    "name": "Meditite",
+    "safe_name": "meditite",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 728,
+    "name": "Mankey",
+    "safe_name": "mankey",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 729,
+    "name": "Floette",
+    "safe_name": "floette",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 730,
+    "name": "Sobble",
+    "safe_name": "sobble",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 731,
+    "name": "Drizzile",
+    "safe_name": "drizzile",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 732,
+    "name": "Scatterbug",
+    "safe_name": "scatterbug",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 733,
+    "name": "Kricketot",
+    "safe_name": "kricketot",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 734,
+    "name": "Milcery",
+    "safe_name": "milcery",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 735,
+    "name": "Cufant",
+    "safe_name": "cufant",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 736,
+    "name": "Vibrava",
+    "safe_name": "vibrava",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 737,
+    "name": "Popplio",
+    "safe_name": "popplio",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 738,
+    "name": "Pawmi",
+    "safe_name": "pawmi",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 739,
+    "name": "Rockruff",
+    "safe_name": "rockruff",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 740,
+    "name": "Rookidee",
+    "safe_name": "rookidee",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 741,
+    "name": "Steenee",
+    "safe_name": "steenee",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 742,
+    "name": "Mareep",
+    "safe_name": "mareep",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 743,
+    "name": "Gothita",
+    "safe_name": "gothita",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 744,
+    "name": "Snubbull",
+    "safe_name": "snubbull",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 745,
+    "name": "Cubchoo",
+    "safe_name": "cubchoo",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 746,
+    "name": "Bounsweet",
+    "safe_name": "bounsweet",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 747,
+    "name": "Finneon",
+    "safe_name": "finneon",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 748,
+    "name": "Seel",
+    "safe_name": "seel",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 749,
+    "name": "Cetoddle",
+    "safe_name": "cetoddle",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 750,
+    "name": "Tadbulb",
+    "safe_name": "tadbulb",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 751,
+    "name": "Varoom",
+    "safe_name": "varoom",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 752,
+    "name": "Poochyena",
+    "safe_name": "poochyena",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 753,
+    "name": "Maschiff",
+    "safe_name": "maschiff",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 754,
+    "name": "Skwovet",
+    "safe_name": "skwovet",
+    "usage": 0.0,
+    "top_move": null
+  },
+  {
+    "rank": 755,
+    "name": "Chinchou",
+    "safe_name": "chinchou",
+    "usage": 0.0,
+    "top_move": null
+  }
+]

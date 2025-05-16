@@ -1,0 +1,153 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f7f7f7;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  max-width: 900px;
+  height: 90vh;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  overflow: hidden;
+}
+
+.usage-section {
+  flex: 1;
+  padding: 32px 24px;
+  border-right: 1px solid #e0e0e0;
+  height: 90vh; /* Set fixed height */
+  display: flex;
+  flex-direction: column;
+}
+
+.stats-section {
+  flex: 1;
+  padding: 32px 24px;
+}
+
+.usage-table-container {
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 18px;
+  position: relative;
+}
+
+.usage-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 18px;
+}
+
+.usage-table th, .usage-table td {
+  padding: 8px 10px;
+  text-align: left;
+}
+
+.usage-table th {
+  background: #f3f3f3;
+  font-weight: 600;
+}
+
+.usage-table tr {
+  cursor: pointer;
+  transition: background 0.14s;
+}
+
+.usage-table tr:hover {
+  background: #e8f5e9;
+}
+
+.usage-bar-container {
+  position: relative;
+  width: 100px;
+  height: 20px;
+}
+
+.usage-bar-bg {
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.usage-bar-fill {
+  background: #4caf50;
+  height: 100%;
+  border-radius: 10px 0 0 10px;
+}
+
+.usage-label {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: black;
+  font-weight: bold;
+}
+
+.h2 {
+  margin-top: 0;
+  font-size: 1.4em;
+}
+
+.stats-section img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 12px;
+}
+
+.stats-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0 0;
+}
+
+.stats-section li {
+  margin-bottom: 6px;
+  font-size: 1.07em;
+}
+
+.type-box {
+  display: inline-block;
+  color: #fff;
+  font-weight: bold;
+  padding: 2px 12px;
+  margin-right: 6px;
+  border-radius: 12px;
+  font-size: 0.98em;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  font-size: 1em;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-bar:focus {
+  border-color: #4caf50;
+}
+
+#radar-chart {
+  margin: 0 auto 14px auto;
+  display: block;
+  width: 260px;
+  height: 260px;
+}
