@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import * as d3 from "d3";
-import "./Test.css"; // Use your existing styles
+import "./App.css"; // Use your existing styles
 
 const TYPE_COLORS = {
   normal:   '#A8A77A',
@@ -173,7 +173,7 @@ export default function Test() {
 
   // Load usage data
   useEffect(() => {
-    fetch("public/usage.json")
+    fetch("/usage.json")
       .then((res) => res.json())
       .then((data) => {
         setUsageData(data);
