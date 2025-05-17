@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Top Pokémon Usage</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="usage-section">
+      <h2>Top Pokémon Usage</h2>
+      <input
+        type="text"
+        id="search-bar"
+        placeholder="Search Pokémon..."
+        class="search-bar"
+        autocomplete="off"
+      />
+      <div class="usage-table-container">
+        <table class="usage-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Pokémon</th>
+              <th>Usage %</th>
+            </tr>
+          </thead>
+          <tbody id="usage-table-body">
+            <!-- Rows inserted by JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="stats-section" id="pokemon-stats">
+      <h2>Select a Pokémon to see stats.</h2>
+    </div>
+  </div>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
