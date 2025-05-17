@@ -162,7 +162,7 @@ function RadarChart({ statsObj }) {
   return <div id="radar-chart" ref={ref}></div>;
 }
 
-export default function Test() {
+export default function App() {
   const [usageData, setUsageData] = useState([]);
   const [filtered, setFiltered] = useState([]);
   const [search, setSearch] = useState("");
@@ -170,6 +170,58 @@ export default function Test() {
   const [pokeDetail, setPokeDetail] = useState(null);
   const [pokeStats, setPokeStats] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [damageDropdownOpen, setDamageDropdownOpen] = useState(false);
+  const [damageDropdownValue, setDamageDropdownValue] = useState("All damage");
+  const [damageDropdownHover, setDamageDropdownHover] = useState(null);
+
+  const [durabilityDropdownOpen, setDurabilityDropdownOpen] = useState(false);
+  const [durabilityDropdownValue, setDurabilityDropdownValue] = useState("All Durability");
+  const [durabilityDropdownHover, setDurabilityDropdownHover] = useState(null);
+
+  const damageOptions = [
+    "All damage",
+    "One shot kill",
+    "Two shot kill",
+    "Three shot kill"
+  ];
+
+  const durabilityOptions = [
+    "All Durability",
+    "Endure once",
+    "Endure twice",
+    "Endure thrice"
+  ];
+
+  const damageDropdownRef = useRef();
+  const durabilityDropdownRef = useRef();
+
+  // Close dropdowns on outside click
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        damageDropdownRef.current &&
+        !damageDropdownRef.current.contains(event.target)
+      ) {
+        setDamageDropdownOpen(false);
+        setDamageDropdownHover(null);
+      }
+      if (
+        durabilityDropdownRef.current &&
+        !durabilityDropdownRef.current.contains(event.target)
+      ) {
+        setDurabilityDropdownOpen(false);
+        setDurabilityDropdownHover(null);
+      }
+    }
+    if (damageDropdownOpen || durabilityDropdownOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [damageDropdownOpen, durabilityDropdownOpen]);
 
   // Load usage data
   useEffect(() => {
@@ -307,6 +359,107 @@ export default function Test() {
         {selected && !pokeDetail && !loading && (
           <div>Error loading data.</div>
         )}
+      </div>
+      <div className="charts-section" id="charts">
+        <h2>Counter Visualization</h2>
+        <div className="chart-buttons-row">
+          {/* Damage Dropdown */}
+          <div
+            className="dropdown-btn-wrapper"
+            ref={damageDropdownRef}
+            tabIndex={0}
+            onBlur={() => setDamageDropdownOpen(false)}
+          >
+            <button
+              className="chart-btn dropdown-btn"
+              onClick={() => setDamageDropdownOpen((open) => !open)}
+              aria-haspopup="listbox"
+              aria-expanded={damageDropdownOpen}
+            >
+              {damageDropdownHover || damageDropdownValue}
+              <span className="dropdown-arrow">&#9662;</span>
+            </button>
+            {damageDropdownOpen && (
+              <ul className="dropdown-menu" role="listbox">
+                {damageOptions.map((option) => (
+                  <li
+                    key={option}
+                    className={
+                      "dropdown-menu-item" +
+                      ((damageDropdownHover || damageDropdownValue) === option
+                        ? " selected"
+                        : "")
+                    }
+                    role="option"
+                    aria-selected={
+                      (damageDropdownHover || damageDropdownValue) === option
+                    }
+                    onMouseEnter={() => setDamageDropdownHover(option)}
+                    onMouseLeave={() => setDamageDropdownHover(null)}
+                    onClick={() => {
+                      setDamageDropdownValue(option);
+                      setDamageDropdownOpen(false);
+                      setDamageDropdownHover(null);
+                    }}
+                  >
+                    {option}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+          {/* Type Button */}
+          <button className="chart-btn">Type</button>
+          {/* Durability Dropdown */}
+          <div
+            className="dropdown-btn-wrapper"
+            ref={durabilityDropdownRef}
+            tabIndex={0}
+            onBlur={() => setDurabilityDropdownOpen(false)}
+          >
+            <button
+              className="chart-btn dropdown-btn"
+              onClick={() => setDurabilityDropdownOpen((open) => !open)}
+              aria-haspopup="listbox"
+              aria-expanded={durabilityDropdownOpen}
+            >
+              {durabilityDropdownHover || durabilityDropdownValue}
+              <span className="dropdown-arrow">&#9662;</span>
+            </button>
+            {durabilityDropdownOpen && (
+              <ul className="dropdown-menu" role="listbox">
+                {durabilityOptions.map((option) => (
+                  <li
+                    key={option}
+                    className={
+                      "dropdown-menu-item" +
+                      ((durabilityDropdownHover || durabilityDropdownValue) === option
+                        ? " selected"
+                        : "")
+                    }
+                    role="option"
+                    aria-selected={
+                      (durabilityDropdownHover || durabilityDropdownValue) === option
+                    }
+                    onMouseEnter={() => setDurabilityDropdownHover(option)}
+                    onMouseLeave={() => setDurabilityDropdownHover(null)}
+                    onClick={() => {
+                      setDurabilityDropdownValue(option);
+                      setDurabilityDropdownOpen(false);
+                      setDurabilityDropdownHover(null);
+                    }}
+                  >
+                    {option}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </div>
+        <div className="chart-area">
+          {/* Chart will be rendered here */}
+          <span className="chart-placeholder">Select a chart type above.</span>
+        </div>
       </div>
     </div>
   );

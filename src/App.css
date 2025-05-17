@@ -9,7 +9,7 @@ body {
 .container {
   display: flex;
   align-items: flex-start;
-  max-width: 900px;
+  max-width: 1500px;
   height: 90vh;
   margin: 40px auto;
   background: #fff;
@@ -21,6 +21,7 @@ body {
 .usage-section {
   flex: 1;
   padding: 32px 24px;
+  max-width: 400px;
   border-right: 1px solid #e0e0e0;
   height: 90vh; /* Set fixed height */
   display: flex;
@@ -30,6 +31,54 @@ body {
 .stats-section {
   flex: 1;
   padding: 32px 24px;
+  max-width: 400px;
+  border-right: 1px solid #e0e0e0;
+  height: 90vh; /* Set fixed height */
+}
+
+.charts-section {
+  flex: 1;
+  padding: 32px 24px;
+  height: 90vh; /* Set fixed height */
+}
+
+.chart-buttons-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.chart-btn {
+  flex: 1;
+  padding: 10px 0;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  background: #f3f3f3;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.18s;
+}
+
+.chart-btn:hover {
+  background: #e0e0e0;
+}
+
+.chart-area {
+  min-height: 220px;
+  background: #fafafa;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  padding: 18px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chart-placeholder {
+  color: #aaa;
+  font-size: 1.08em;
 }
 
 .usage-table-container {
@@ -150,4 +199,60 @@ body {
   display: block;
   width: 260px;
   height: 260px;
+}
+
+.dropdown-btn-wrapper {
+  position: relative;
+  flex: 1;
+  display: flex;
+}
+
+.dropdown-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 8px;
+  padding-left: 18px;
+}
+
+.dropdown-arrow {
+  margin-left: 8px;
+  font-size: 1.5em;
+  line-height: 1;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  z-index: 10;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  animation: fadeIn 0.13s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.dropdown-menu-item {
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 1em;
+  background: #fff;
+  transition: background 0.13s;
+}
+
+.dropdown-menu-item.selected,
+.dropdown-menu-item:hover {
+  background: #e0e0e0;
 }
