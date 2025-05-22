@@ -170,50 +170,95 @@ export default function App() {
   const [pokeDetail, setPokeDetail] = useState(null);
   const [pokeStats, setPokeStats] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [damageDropdownOpen, setDamageDropdownOpen] = useState(false);
-  const [damageDropdownValue, setDamageDropdownValue] = useState("All damage");
-  const [damageDropdownHover, setDamageDropdownHover] = useState(null);
+  // const [damageDropdownOpen, setDamageDropdownOpen] = useState(false);
+  // const [damageDropdownValue, setDamageDropdownValue] = useState("All damage");
+  // const [damageDropdownHover, setDamageDropdownHover] = useState(null);
 
-  const [durabilityDropdownOpen, setDurabilityDropdownOpen] = useState(false);
-  const [durabilityDropdownValue, setDurabilityDropdownValue] = useState("All Durability");
-  const [durabilityDropdownHover, setDurabilityDropdownHover] = useState(null);
+  // const [durabilityDropdownOpen, setDurabilityDropdownOpen] = useState(false);
+  // const [durabilityDropdownValue, setDurabilityDropdownValue] = useState("All Durability");
+  // const [durabilityDropdownHover, setDurabilityDropdownHover] = useState(null);
 
-  const damageOptions = [
-    "All damage",
-    "One shot kill",
-    "Two shot kill",
-    "Three shot kill"
+  // 차트에 표시할 데이터
+  const [items, setItems] = useState([]);
+  // 차트에서 사용자가 클릭한 점
+  const [selectedItem, setSelectedItem] = useState(null);
+  // 공격을 버티는가 or 쓰러트리는가 기준을 선택
+  const [koSelected, setKoSelected] = useState(false);
+  const [endureSelected, setEndureSelected] = useState(false);
+  // 사용자가 입력한 기술 위력
+  const powerInput = useRef();
+
+  // 버튼 클릭시 on off
+  const switchKo = () => {
+    if(koSelected != endureSelected){
+      setEndureSelected(!endureSelected);  
+    }
+    setKoSelected(!koSelected);        
+  }
+  const switchEndure = () => {
+    if(koSelected != endureSelected){
+      setKoSelected(!koSelected);   
+    }
+    setEndureSelected(!endureSelected);       
+  }
+
+  // search 버튼을 눌렀는지 여부
+  const [cliked, setClicked] = useState(false);
+
+  // 타입 상성 필터링
+  const typeDropdownRef = useRef();
+  const [typeDropdownOpen, setTypeDropdownOpen] = useState(false);
+  const [typeDropdownValue, setTypeDropdownValue] = useState("All");
+  const [typeDropdownHover, setTypeDropdownHover] = useState(null);
+  const typeOptions = [
+    "All",
+    "Advantage",
+    "Disadvantage"
   ];
 
-  const durabilityOptions = [
-    "All Durability",
-    "Endure once",
-    "Endure twice",
-    "Endure thrice"
-  ];
+  // const damageOptions = [
+  //   "All damage",
+  //   "One shot kill",
+  //   "Two shot kill",
+  //   "Three shot kill"
+  // ];
 
-  const damageDropdownRef = useRef();
-  const durabilityDropdownRef = useRef();
+  // const durabilityOptions = [
+  //   "All Durability",
+  //   "Endure once",
+  //   "Endure twice",
+  //   "Endure thrice"
+  // ];
+
+  // const damageDropdownRef = useRef();
+  // const durabilityDropdownRef = useRef();
 
   // Close dropdowns on outside click
   useEffect(() => {
     function handleClickOutside(event) {
       if (
-        damageDropdownRef.current &&
-        !damageDropdownRef.current.contains(event.target)
+        typeDropdownRef.current &&
+        !typeDropdownRef.current.contains(event.target)
       ) {
-        setDamageDropdownOpen(false);
-        setDamageDropdownHover(null);
+        setTypeDropdownOpen(false);
+        setTypeDropdownHover(null);
       }
-      if (
-        durabilityDropdownRef.current &&
-        !durabilityDropdownRef.current.contains(event.target)
-      ) {
-        setDurabilityDropdownOpen(false);
-        setDurabilityDropdownHover(null);
-      }
+      // if (
+      //   damageDropdownRef.current &&
+      //   !damageDropdownRef.current.contains(event.target)
+      // ) {
+      //   setDamageDropdownOpen(false);
+      //   setDamageDropdownHover(null);
+      // }
+      // if (
+      //   durabilityDropdownRef.current &&
+      //   !durabilityDropdownRef.current.contains(event.target)
+      // ) {
+      //   setDurabilityDropdownOpen(false);
+      //   setDurabilityDropdownHover(null);
+      // }
     }
-    if (damageDropdownOpen || durabilityDropdownOpen) {
+    if (typeDropdownOpen) {
       document.addEventListener("mousedown", handleClickOutside);
     } else {
       document.removeEventListener("mousedown", handleClickOutside);
@@ -221,7 +266,7 @@ export default function App() {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [damageDropdownOpen, durabilityDropdownOpen]);
+  }, [typeDropdownOpen]);
 
   // Load usage data
   useEffect(() => {
@@ -270,6 +315,162 @@ export default function App() {
       .finally(() => setLoading(false));
   }, [selected]);
 
+  // Define constant variables.
+	const width = 500;
+	const height = 300;
+	const marginTop = 20;
+	const marginBottom = 20;
+	const marginLeft = 40;
+	const marginRight = 20;
+
+	// Set scales.
+	const x = d3.scaleLinear()
+		.domain([0, 5])
+		.range([marginLeft, width - marginRight]);
+	const y = d3.scaleLinear()
+		.domain([0, 200])
+		.range([height - marginBottom, marginTop]);
+
+	// Set axes.
+	const gx = useRef();
+	const gy = useRef();
+	useEffect(() => void d3.select(gx.current).call(
+		d3.axisBottom(x).ticks(6)), [gx, x]);
+	useEffect(() => void d3.select(gy.current).call(
+		d3.axisLeft(y)), [gx, y]);
+
+function searchDex(ko, end, ty, pow, targetName){
+  console.log("pp", ko, end, ty, pow, targetName);
+  // 모든 포켓몬 하나하나 데미지 계산후 저장
+  // ko & end = knock-out vs endure
+  // ty = 상성 유리 불리 중 사용자가 보고 싶은 것
+  // pow = 사용자가 입력한 기술 위력
+  // target = 메타 포켓몬 이름 (데이터는 여기서 찾음)
+  function calcDm(isKo, tar, dex, pow, type){
+    // 몇대 버티는지, 몇방에 잡는지 계산
+    // isKo = 사용자가 knock-out을 선택했는가
+    // tar = 메타(타켓) 포켓몬 정보
+    // dex = 카운터 포켓몬 정보
+    const hp = 60 + Math.floor((2 * tar.stat.hp + 31 + 63) / 2)
+    const atk = Math.floor((Math.floor((2 * tar.stat.atk + 31 + 63) / 2) + 5) * 1.1)
+    const def = Math.floor((Math.floor((2 * tar.stat.def + 31 + 63) / 2) + 5) * 1.1)
+    const spa = Math.floor((Math.floor((2 * tar.stat.spa + 31 + 63) / 2) + 5) * 1.1)
+    const spd = Math.floor((Math.floor((2 * tar.stat.spd + 31 + 63) / 2) + 5) * 1.1)
+
+    const hpDex = 60 + Math.floor((2 * dex.stat.hp + 31 + 63) / 2)
+    const atkDex = Math.floor((Math.floor((2 * dex.stat.atk + 31 + 63) / 2) + 5) * 1.1)
+    const defDex = Math.floor((Math.floor((2 * dex.stat.def + 31 + 63) / 2) + 5) * 1.1)
+    const spaDex = Math.floor((Math.floor((2 * dex.stat.spa + 31 + 63) / 2) + 5) * 1.1)
+    const spdDex = Math.floor((Math.floor((2 * dex.stat.spd + 31 + 63) / 2) + 5) * 1.1)
+
+    // 메타 포켓몬을 몇방에 잡을수 있는가
+    if(type === 0){
+      return 5;
+    }
+    if(isKo){
+      const atkCount = hp / ((22 * pow * (atkDex / def) / 50 + 2) * 1.5 * type * 0.925)
+      const spaCount = hp / ((22 * pow * (spaDex / spd) / 50 + 2) * 1.5 * type * 0.925)
+      const dmgCount = Math.max(atkCount, spaCount) > 5 ? 5 : Math.max(atkCount, spaCount)
+      return dmgCount;
+    }
+    else{
+      // 메타 포켓몬 공격을 몇방 버티는가
+      const atkCount = hpDex / ((22 * pow * (atk / defDex) / 50 + 2) * 1.5 * type * 0.925)
+      const spaCount = hpDex / ((22 * pow * (spa / spdDex) / 50 + 2) * 1.5 * type * 0.925)
+      const dmgCount = Math.max(atkCount, spaCount) > 5 ? 5 : Math.max(atkCount, spaCount)
+      return dmgCount;
+    }
+  }
+  fetch('/dex.json')
+  .then((res) => res.json())
+  .then((data) => {
+    return fetch('/atkType.json')
+      .then(res => res.json())
+      .then(typeData => {
+        const target = data.find(obj => obj.name == targetName);
+        const pokeResult = [];
+        if(ko){
+          data.forEach(poke => {
+            let typeMatch;
+            // 타입 상성 계산
+            // 타겟 포켓몬 복합타입인가
+            if(target.type.length > 1){   
+              // 카운터 포켓몬이 복합타입인가           
+              if(poke.type.length > 1){
+                // 최종 타입 상성 (0~4)
+                typeMatch = Math.max(typeData[poke.type[0]][target.type[0]] * typeData[poke.type[0]][target.type[1]], typeData[poke.type[1]][target.type[0]] * typeData[poke.type[1]][target.type[1]])
+              }
+              else{
+                typeMatch = typeData[poke.type[0]][target.type[0]] * typeData[poke.type[0]][target.type[1]]
+              }
+            }
+            else{
+              if(poke.type.length > 1){
+                // 최종 타입 상성 (0~4)
+                typeMatch = Math.max(typeData[poke.type[0]][target.type[0]], typeData[poke.type[1]][target.type[0]])
+              }
+              else{
+                typeMatch = typeData[poke.type[0]][target.type[0]]
+              }
+            }
+            const pokeObj = {};
+            // 이름 & 1타입 & 타입 유불리 & 횟수 계산 결과 & 스피드를 object로 묶어서 저장
+            const typeAdv = typeMatch >= 1 ? true : false
+            if((ty == "Advantage" && typeAdv) || (ty == "Disadvantage" && !typeAdv) || ty == "All"){
+              pokeObj.name = poke.name;
+              pokeObj.type = poke.type[0].toLowerCase();
+              pokeObj.typeAdv = typeAdv;
+              pokeObj.count = calcDm(true, target, poke, pow, typeMatch);
+              pokeObj.speed = poke.stat.spe;
+              pokeResult.push(pokeObj);
+            }
+          })
+        }
+        else if(end){
+          // 몇 방 버티는지 계산
+          data.forEach(poke => {
+            let typeMatch;
+            // 타입 상성 계산
+            // 타겟 포켓몬 복합타입인가
+            if(poke.type.length > 1){   
+              // 카운터 포켓몬이 복합타입인가           
+              if(target.type.length > 1){
+                // 최종 타입 상성 (0~4)
+                typeMatch = Math.max(typeData[target.type[0]][poke.type[0]] * typeData[target.type[0]][poke.type[1]], typeData[target.type[1]][poke.type[0]] * typeData[target.type[1]][poke.type[1]])
+              }
+              else{
+                typeMatch = typeData[target.type[0]][poke.type[0]] * typeData[target.type[0]][poke.type[1]]
+              }
+            }
+            else{
+              if(target.type.length > 1){
+                // 최종 타입 상성 (0~4)
+                typeMatch = Math.max(typeData[target.type[0]][poke.type[0]], typeData[target.type[1]][poke.type[0]])
+              }
+              else{
+                typeMatch = typeData[target.type[0]][poke.type[0]]
+              }
+            }
+            const pokeObj = {};
+            // 이름 & 1타입 & 타입 유불리 & 횟수 계산 결과 & 스피드를 object로 묶어서 저장
+            const typeAdv = typeMatch > 1 ? false : true
+            if((ty == "Advantage" && typeAdv) || (ty == "Disadvantage" && !typeAdv) || ty == "All"){
+              pokeObj.name = poke.name;
+              pokeObj.type = poke.type[0].toLowerCase();
+              pokeObj.typeAdv = typeAdv;            
+              pokeObj.count = calcDm(false, target, poke, pow, typeMatch);
+              pokeObj.speed = poke.stat.spe;
+              pokeResult.push(pokeObj);
+            }
+          })
+        }
+        setItems(pokeResult);
+      })
+  })
+  .catch(err => console.error('Error fetching JSON:', err));
+}
+
+/////////////////////////////// return ////////////////////////////////
   return (
     <div className="container">
       <div className="usage-section">
@@ -362,13 +563,19 @@ export default function App() {
       </div>
       <div className="charts-section" id="charts">
         <h2>Counter Visualization</h2>
+        <div className="search-buttons-row">          
+          Search for Pokemon that
+        </div>
         <div className="chart-buttons-row">
+          <button className={koSelected ? "chart-btn-red" : "chart-btn"} onClick={() => switchKo()}>Knock-Out</button>
+          <button className={endureSelected ? "chart-btn-green" : "chart-btn"} onClick={() => switchEndure()}>Endure</button>
+          {selected != null ? <div className="target-name">{selected.name.toUpperCase()}</div> : <div className="target-name">target Pokemon</div>}
           {/* Damage Dropdown */}
-          <div
+          {/* <div
             className="dropdown-btn-wrapper"
             ref={damageDropdownRef}
             tabIndex={0}
-            onBlur={() => setDamageDropdownOpen(false)}
+            // onBlur={() => setDamageDropdownOpen(false)}
           >
             <button
               className="chart-btn dropdown-btn"
@@ -376,7 +583,7 @@ export default function App() {
               aria-haspopup="listbox"
               aria-expanded={damageDropdownOpen}
             >
-              {damageDropdownHover || damageDropdownValue}
+              {damageDropdownValue}
               <span className="dropdown-arrow">&#9662;</span>
             </button>
             {damageDropdownOpen && (
@@ -399,7 +606,7 @@ export default function App() {
                     onClick={() => {
                       setDamageDropdownValue(option);
                       setDamageDropdownOpen(false);
-                      setDamageDropdownHover(null);
+                      setDamageDropdownHover(null);                      
                     }}
                   >
                     {option}
@@ -407,15 +614,15 @@ export default function App() {
                 ))}
               </ul>
             )}
-          </div>
+          </div>           */}
           {/* Type Button */}
-          <button className="chart-btn">Type</button>
+          {/* <button className="chart-btn">Type</button> */}
           {/* Durability Dropdown */}
-          <div
+          {/* <div
             className="dropdown-btn-wrapper"
             ref={durabilityDropdownRef}
             tabIndex={0}
-            onBlur={() => setDurabilityDropdownOpen(false)}
+            // onBlur={() => setDurabilityDropdownOpen(false)}
           >
             <button
               className="chart-btn dropdown-btn"
@@ -423,7 +630,7 @@ export default function App() {
               aria-haspopup="listbox"
               aria-expanded={durabilityDropdownOpen}
             >
-              {durabilityDropdownHover || durabilityDropdownValue}
+              {durabilityDropdownValue}
               <span className="dropdown-arrow">&#9662;</span>
             </button>
             {durabilityDropdownOpen && (
@@ -446,19 +653,107 @@ export default function App() {
                     onClick={() => {
                       setDurabilityDropdownValue(option);
                       setDurabilityDropdownOpen(false);
-                      setDurabilityDropdownHover(null);
-                    }}
+                      setDurabilityDropdownHover(null);   
+                    }}                                                          
                   >
                     {option}
                   </li>
                 ))}
               </ul>
             )}
+          </div>           */}
+        </div>  
+        {(koSelected || endureSelected) &&
+          <div className="chart-buttons-row">            
+            <div className="target-name">with Type</div>
+            <div
+              className="dropdown-btn-wrapper"
+              ref={typeDropdownRef}
+              tabIndex={0}            
+            >
+              <button
+                className="chart-btn dropdown-btn"
+                onClick={() => setTypeDropdownOpen((open) => !open)}
+                aria-haspopup="listbox"
+                aria-expanded={typeDropdownOpen}
+              >
+                {typeDropdownValue}
+                <span className="dropdown-arrow">&#9662;</span>
+              </button>
+              {typeDropdownOpen && (
+                <ul className="dropdown-menu" role="listbox">
+                  {typeOptions.map((option) => (
+                    <li
+                      key={option}
+                      className={
+                        "dropdown-menu-item" +
+                        ((typeDropdownHover || typeDropdownValue) === option
+                          ? " selected"
+                          : "")
+                      }
+                      role="option"
+                      aria-selected={
+                        (typeDropdownHover || typeDropdownValue) === option
+                      }
+                      onMouseEnter={() => setTypeDropdownHover(option)}
+                      onMouseLeave={() => setTypeDropdownHover(null)}
+                      onClick={() => {
+                        setTypeDropdownValue(option);
+                        setTypeDropdownOpen(false);
+                        setTypeDropdownHover(null);   
+                      }}                                                          
+                    >
+                      {option}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+            <div style={{visibility: 'hidden'}} className="target-name">with Type</div>
           </div>
-        </div>
+        }      
+        {(koSelected || endureSelected) && 
+          <div className="search-buttons-row">
+            <div className="target-name">Attack power</div>     
+            <input className="move-btn" type="number" placeholder="Enter Move Power" style={{ textAlign: 'center' }}
+              ref={powerInput}
+            />   
+            <button className="chart-btn" 
+              onClick={() => {   
+                setClicked(true)             
+                searchDex(koSelected, endureSelected, typeDropdownValue, powerInput.current.value, selected.name)}}>search</button>         
+          </div>
+        }              
         <div className="chart-area">
           {/* Chart will be rendered here */}
-          <span className="chart-placeholder">Select a chart type above.</span>
+          {cliked ?
+            (<svg width={500} height={300}>
+              <g ref={gx}
+                transform={`translate(0, ${height - marginBottom})`} />
+              <g ref={gy}
+                transform={`translate(${marginLeft}, 0)`} />
+              <g>
+                {items.map((item) => {						
+                  return (
+                    <g key={item.name}
+                      className= 'datapoint'
+                      style={{ fill: TYPE_COLORS[item.type] }}
+                      transform={`translate(${
+                          x(item.count)}, ${
+                          y(item.speed)})`}>
+                      <circle cx="0" cy="0" r="3"
+                        onClick={() => setSelectedItem(item.name)}
+                      />		
+                      <g className= {selectedItem == item.name ? 'display' : 'hide'}>
+                        <rect x="-30" y="-20" width="60" height="20" fill="black" rx="5" ry="5"></rect>
+                        <text x="0" y="-10" textAnchor="middle" fontSize="10" fill="white"> {item.name} </text>
+                      </g>	
+                    </g>
+                  );
+                })}
+              </g>
+            </svg>) : (<span className="chart-placeholder">Click the button above to see the result</span>)
+          }
         </div>
       </div>
     </div>
