@@ -48,6 +48,13 @@ body {
   margin-bottom: 18px;
 }
 
+.search-buttons-row {
+  display: flex;  
+  justify-content: center;
+  margin-bottom: 18px;
+  gap: 16px;
+}
+
 .chart-btn {
   flex: 1;
   padding: 10px 0;
@@ -58,6 +65,45 @@ body {
   cursor: pointer;
   font-size: 1em;
   transition: background 0.18s;
+}
+.chart-btn-red {
+  flex: 1;
+  padding: 10px 0;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  background: palevioletred;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.18s;
+}
+.chart-btn-green {
+  flex: 1;
+  padding: 10px 0;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  background: greenyellow;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.18s;
+}
+.target-name {
+  flex: 1;
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+}
+
+.move-btn {
+  max-width: 200px;
+  flex: 1;
+  padding: 10px 0;  
+  font-weight: bold;
+  border-radius: 8px;
+  border: 1px solid #bbb;  
+  font-size: 1em;  
 }
 
 .chart-btn:hover {
@@ -261,4 +307,16 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.datapoint circle {
+	cursor: pointer;	
+}
+
+.display {
+	opacity: 1;
+}
+
+.hide {
+	opacity: 0;
 }
