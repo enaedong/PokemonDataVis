@@ -3,7 +3,6 @@ import ChartControls from "./components/ChartControls";
 import UsageTable from "./components/UsageTable";
 import PokemonDetails from "./components/PokemonDetails";
 import TYPE_COLORS from "./utils/typeColors";
-import * as d3 from "d3";
 import "./App.css";
 
 export default function App() {
@@ -14,7 +13,7 @@ export default function App() {
   const [pokeDetail, setPokeDetail] = useState(null);
   const [pokeStats, setPokeStats] = useState(null);
   const [loading, setLoading] = useState(false);
-  
+
   // 차트에 표시할 데이터
   const [items, setItems] = useState([]);
   // 차트에서 사용자가 클릭한 점
@@ -27,16 +26,16 @@ export default function App() {
 
   // 버튼 클릭시 on off
   const switchKo = () => {
-    if(koSelected != endureSelected){
-      setEndureSelected(!endureSelected);  
+    if (koSelected != endureSelected) {
+      setEndureSelected(!endureSelected);
     }
-    setKoSelected(!koSelected);        
+    setKoSelected(!koSelected);
   }
   const switchEndure = () => {
-    if(koSelected != endureSelected){
-      setKoSelected(!koSelected);   
+    if (koSelected != endureSelected) {
+      setKoSelected(!koSelected);
     }
-    setEndureSelected(!endureSelected);       
+    setEndureSelected(!endureSelected);
   }
 
   // search 버튼을 눌렀는지 여부
@@ -119,31 +118,7 @@ export default function App() {
       .finally(() => setLoading(false));
   }, [selected]);
 
-  // Define constant variables.
-	const width = 500;
-	const height = 300;
-	const marginTop = 20;
-	const marginBottom = 20;
-	const marginLeft = 40;
-	const marginRight = 20;
-
-	// Set scales.
-	const x = d3.scaleLinear()
-		.domain([0, 5])
-		.range([marginLeft, width - marginRight]);
-	const y = d3.scaleLinear()
-		.domain([0, 200])
-		.range([height - marginBottom, marginTop]);
-
-	// Set axes.
-	const gx = useRef();
-	const gy = useRef();
-	useEffect(() => void d3.select(gx.current).call(
-		d3.axisBottom(x).ticks(6)), [gx, x]);
-	useEffect(() => void d3.select(gy.current).call(
-		d3.axisLeft(y)), [gx, y]);
-
-/////////////////////////////// return ////////////////////////////////
+  /////////////////////////////// return ////////////////////////////////
   return (
     <div className="container">
       <div className="usage-section">
@@ -187,9 +162,9 @@ export default function App() {
           typeDropdownOpen={typeDropdownOpen} setTypeDropdownOpen={setTypeDropdownOpen}
           typeDropdownHover={typeDropdownHover} setTypeDropdownHover={setTypeDropdownHover}
           typeDropdownValue={typeDropdownValue} setTypeDropdownValue={setTypeDropdownValue}
-          typeDropdownRef={typeDropdownRef} x={x} y={y} gx={gx} gy={gy}
-          height={height} marginBottom={marginBottom} marginLeft={marginLeft}
-          TYPE_COLORS={TYPE_COLORS}>
+          typeDropdownRef={typeDropdownRef}
+          TYPE_COLORS={TYPE_COLORS}
+        >
         </ChartControls>
       </div>
     </div>
