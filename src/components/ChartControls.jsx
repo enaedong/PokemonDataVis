@@ -1,3 +1,5 @@
+import TYPE_COLORS from "../utils/typeColors";
+
 // components/ChartControls.jsx
 export default function ChartControls({
   selected,

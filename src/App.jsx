@@ -1,31 +1,9 @@
 import React, { useEffect, useState, useRef } from "react";
-import * as d3 from "d3";
-import "./App.css"; // Use your existing styles
 import ChartControls from "./components/ChartControls";
-
-const TYPE_COLORS = {
-  normal:   '#A8A77A',
-  fire:     '#EE8130',
-  water:    '#6390F0',
-  electric: '#F7D02C',
-  grass:    '#7AC74C',
-  ice:      '#96D9D6',
-  fighting: '#C22E28',
-  poison:   '#A33EA1',
-  ground:   '#E2BF65',
-  flying:   '#A98FF3',
-  psychic:  '#F95587',
-  bug:      '#A6B91A',
-  rock:     '#B6A136',
-  ghost:    '#735797',
-  dragon:   '#6F35FC',
-  dark:     '#705746',
-  steel:    '#B7B7CE',
-  fairy:    '#D685AD'
-};
 import UsageTable from "./components/UsageTable";
 import PokemonDetails from "./components/PokemonDetails";
-import ChartControls from "./components/ChartControls";
+import TYPE_COLORS from "./utils/typeColors";
+import * as d3 from "d3";
 import "./App.css";
 
 export default function App() {
@@ -36,14 +14,7 @@ export default function App() {
   const [pokeDetail, setPokeDetail] = useState(null);
   const [pokeStats, setPokeStats] = useState(null);
   const [loading, setLoading] = useState(false);
-  // const [damageDropdownOpen, setDamageDropdownOpen] = useState(false);
-  // const [damageDropdownValue, setDamageDropdownValue] = useState("All damage");
-  // const [damageDropdownHover, setDamageDropdownHover] = useState(null);
-
-  // const [durabilityDropdownOpen, setDurabilityDropdownOpen] = useState(false);
-  // const [durabilityDropdownValue, setDurabilityDropdownValue] = useState("All Durability");
-  // const [durabilityDropdownHover, setDurabilityDropdownHover] = useState(null);
-
+  
   // 차트에 표시할 데이터
   const [items, setItems] = useState([]);
   // 차트에서 사용자가 클릭한 점
@@ -77,23 +48,6 @@ export default function App() {
   const [typeDropdownValue, setTypeDropdownValue] = useState("All");
   const [typeDropdownHover, setTypeDropdownHover] = useState(null);
 
-  // const damageOptions = [
-  //   "All damage",
-  //   "One shot kill",
-  //   "Two shot kill",
-  //   "Three shot kill"
-  // ];
-
-  // const durabilityOptions = [
-  //   "All Durability",
-  //   "Endure once",
-  //   "Endure twice",
-  //   "Endure thrice"
-  // ];
-
-  // const damageDropdownRef = useRef();
-  // const durabilityDropdownRef = useRef();
-
   // Handle outside click to close dropdowns
   useEffect(() => {
     function handleClickOutside(event) {
@@ -104,20 +58,6 @@ export default function App() {
         setTypeDropdownOpen(false);
         setTypeDropdownHover(null);
       }
-      // if (
-      //   damageDropdownRef.current &&
-      //   !damageDropdownRef.current.contains(event.target)
-      // ) {
-      //   setDamageDropdownOpen(false);
-      //   setDamageDropdownHover(null);
-      // }
-      // if (
-      //   durabilityDropdownRef.current &&
-      //   !durabilityDropdownRef.current.contains(event.target)
-      // ) {
-      //   setDurabilityDropdownOpen(false);
-      //   setDurabilityDropdownHover(null);
-      // }
     }
     if (typeDropdownOpen) {
       document.addEventListener("mousedown", handleClickOutside);
