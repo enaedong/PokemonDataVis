@@ -23,145 +23,10 @@ const TYPE_COLORS = {
   steel:    '#B7B7CE',
   fairy:    '#D685AD'
 };
-
-function TypeBoxes({ types }) {
-  if (!types) return null;
-  return (
-    <>
-      {types.map((typeObj, i) => {
-        const type = typeObj.type.name;
-        const color = TYPE_COLORS[type] || "#AAA";
-        return (
-          <span
-            key={i}
-            className="type-box"
-            style={{ background: color }}
-          >
-            {type.charAt(0).toUpperCase() + type.slice(1)}
-          </span>
-        );
-      })}
-    </>
-  );
-}
-
-function RadarChart({ statsObj }) {
-  const ref = useRef();
-
-  useEffect(() => {
-    if (!statsObj) return;
-    d3.select(ref.current).selectAll("*").remove();
-
-    const statNames = [
-      "hp",
-      "attack",
-      "defense",
-      "special-attack",
-      "special-defense",
-      "speed"
-    ];
-    const displayNames = ["HP", "Atk", "Def", "SpA", "SpD", "Spe"];
-    const stats = statNames.map((name) => statsObj[name]);
-    const maxStat = 180;
-    const width = 260,
-      height = 260,
-      levels = 4;
-    const radius = Math.min(width, height) / 2 - 30;
-    const angleSlice = (Math.PI * 2) / statNames.length;
-    const center = { x: width / 2, y: height / 2 };
-
-    const svg = d3
-      .select(ref.current)
-      .append("svg")
-      .attr("width", width)
-      .attr("height", height);
-
-    // Grid circles
-    for (let level = 1; level <= levels; level++) {
-      const r = radius * (level / levels);
-      svg
-        .append("circle")
-        .attr("cx", center.x)
-        .attr("cy", center.y)
-        .attr("r", r)
-        .attr("fill", "none")
-        .attr("stroke", "#bbb")
-        .attr("stroke-width", 1);
-    }
-
-    // Axis lines and stat labels
-    for (let i = 0; i < statNames.length; i++) {
-      const angle = angleSlice * i - Math.PI / 2;
-      const x2 = center.x + radius * Math.cos(angle);
-      const y2 = center.y + radius * Math.sin(angle);
-
-      svg
-        .append("line")
-        .attr("x1", center.x)
-        .attr("y1", center.y)
-        .attr("x2", x2)
-        .attr("y2", y2)
-        .attr("stroke", "#bbb")
-        .attr("stroke-width", 1);
-
-      svg
-        .append("text")
-        .attr("x", center.x + (radius + 18) * Math.cos(angle))
-        .attr("y", center.y + (radius + 18) * Math.sin(angle) + 4)
-        .attr("text-anchor", "middle")
-        .attr("font-size", "13px")
-        .attr("fill", "#222")
-        .attr("font-weight", "bold")
-        .text(displayNames[i]);
-    }
-
-    // Radar area
-    const points = stats.map((stat, i) => {
-      const angle = angleSlice * i - Math.PI / 2;
-      const r = (stat / maxStat) * radius;
-      return [
-        center.x + r * Math.cos(angle),
-        center.y + r * Math.sin(angle)
-      ];
-    });
-    points.push(points[0]);
-
-    svg
-      .append("polygon")
-      .attr("points", points.map((p) => p.join(",")).join(" "))
-      .attr("fill", "rgba(76,175,80,0.20)")
-      .attr("stroke", "#4caf50")
-      .attr("stroke-width", 2);
-
-    // Stat dots and value labels
-    stats.forEach((stat, i) => {
-      const angle = angleSlice * i - Math.PI / 2;
-      const r = (stat / maxStat) * radius;
-      const x = center.x + r * Math.cos(angle);
-      const y = center.y + r * Math.sin(angle);
-
-      svg
-        .append("circle")
-        .attr("cx", x)
-        .attr("cy", y)
-        .attr("r", 4)
-        .attr("fill", "#4caf50")
-        .attr("stroke", "#fff")
-        .attr("stroke-width", 1.5);
-
-      svg
-        .append("text")
-        .attr("x", center.x + (r + 15) * Math.cos(angle))
-        .attr("y", center.y + (r + 15) * Math.sin(angle) + 4)
-        .attr("text-anchor", "middle")
-        .attr("font-size", "11px")
-        .attr("fill", "#222")
-        .text(stat);
-    });
-  }, [statsObj]);
-
-  return <div id="radar-chart" ref={ref}></div>;
-}
+import UsageTable from "./components/UsageTable";
+import PokemonDetails from "./components/PokemonDetails";
+import ChartControls from "./components/ChartControls";
+import "./App.css";
 
 export default function App() {
   const [usageData, setUsageData] = useState([]);
@@ -229,7 +94,7 @@ export default function App() {
   // const damageDropdownRef = useRef();
   // const durabilityDropdownRef = useRef();
 
-  // Close dropdowns on outside click
+  // Handle outside click to close dropdowns
   useEffect(() => {
     function handleClickOutside(event) {
       if (
@@ -259,6 +124,7 @@ export default function App() {
     } else {
       document.removeEventListener("mousedown", handleClickOutside);
     }
+
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
@@ -274,7 +140,7 @@ export default function App() {
       });
   }, []);
 
-  // Filter on search
+  // Filter data by search
   useEffect(() => {
     setFiltered(
       usageData.filter((p) =>
@@ -283,14 +149,16 @@ export default function App() {
     );
   }, [search, usageData]);
 
-  // Fetch Pokémon details
+  // Load selected Pokémon details
   useEffect(() => {
     if (!selected) {
       setPokeDetail(null);
       setPokeStats(null);
       return;
     }
+
     setLoading(true);
+
     fetch(`https://pokeapi.co/api/v2/pokemon/${selected.safe_name}`)
       .then((res) => {
         if (!res.ok) throw new Error("Pokémon not found");
@@ -349,83 +217,23 @@ export default function App() {
           autoComplete="off"
         />
         <div className="usage-table-container">
-          <table className="usage-table">
-            <thead>
-              <tr>
-                <th>Rank</th>
-                <th>Pokémon</th>
-                <th>Usage %</th>
-              </tr>
-            </thead>
-            <tbody>
-              {filtered.map((pokemon) => (
-                <tr
-                  key={pokemon.rank}
-                  onClick={() => setSelected(pokemon)}
-                  style={{
-                    background:
-                      selected && selected.rank === pokemon.rank
-                        ? "#e8f5e9"
-                        : undefined
-                  }}
-                >
-                  <td>{pokemon.rank}</td>
-                  <td>{pokemon.name}</td>
-                  <td>
-                    <div className="usage-bar-container">
-                      <div className="usage-bar-bg">
-                        <div
-                          className="usage-bar-fill"
-                          style={{ width: `${pokemon.usage}%` }}
-                        ></div>
-                      </div>
-                      <span className="usage-label">
-                        {parseFloat(pokemon.usage).toFixed(1)}%
-                      </span>
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <UsageTable
+            filtered={filtered}
+            selected={selected}
+            setSelected={setSelected}
+          />
         </div>
       </div>
+
       <div className="stats-section" id="pokemon-stats">
-        {!selected && <h2>Select a Pokémon to see stats.</h2>}
-        {selected && loading && <div>Loading...</div>}
-        {selected && pokeDetail && (
-          <div className="pokemon-detail-card">
-            <img
-              src={
-                pokeDetail.sprites.other["official-artwork"].front_default
-              }
-              alt={selected.name}
-            />
-            <h2>{selected.name.toUpperCase()}</h2>
-            <p>
-              <strong>Type:</strong>{" "}
-              <TypeBoxes types={pokeDetail.types} />
-            </p>
-            <p>
-              <strong>Abilities:</strong>{" "}
-              {pokeDetail.abilities
-                .map((a) => a.ability.name)
-                .join(", ")}
-            </p>
-            <p>
-              <strong>Most Used Move:</strong>{" "}
-              {selected.top_move ? selected.top_move : "N/A"}
-            </p>
-            <ul>
-              <strong>Base Stats:</strong>
-            </ul>
-            {pokeStats && <RadarChart statsObj={pokeStats} />}
-          </div>
-        )}
-        {selected && !pokeDetail && !loading && (
-          <div>Error loading data.</div>
-        )}
+        <PokemonDetails
+          selected={selected}
+          pokeDetail={pokeDetail}
+          pokeStats={pokeStats}
+          loading={loading}
+        />
       </div>
+
       <div className="charts-section" id="charts">
         <h2>Counter Visualization</h2>
         <ChartControls
