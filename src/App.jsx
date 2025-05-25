@@ -164,8 +164,7 @@ export default function App() {
           typeDropdownValue={typeDropdownValue} setTypeDropdownValue={setTypeDropdownValue}
           typeDropdownRef={typeDropdownRef}
           TYPE_COLORS={TYPE_COLORS}
-        >
-        </ChartControls>
+        />
       </div>
     </div>
   );

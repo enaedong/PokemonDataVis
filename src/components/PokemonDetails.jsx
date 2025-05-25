@@ -2,6 +2,7 @@
 import React from "react";
 import TypeBoxes from "./TypeBoxes";
 import RadarChart from "./RadarChart";
+import MoveBoxes from "./MoveBoxes";
 
 export default function PokemonDetails({ selected, pokeDetail, pokeStats, loading }) {
   if (!selected) return <h2>Select a Pokémon to see stats.</h2>;
@@ -20,11 +21,14 @@ export default function PokemonDetails({ selected, pokeDetail, pokeStats, loadin
       </p>
       <p>
         <strong>Abilities:</strong>{" "}
-        {pokeDetail.abilities.map((a) => a.ability.name).join(", ")}
-      </p>
-      <p>
-        <strong>Most Used Move:</strong>{" "}
-        {selected.top_move ? selected.top_move : "N/A"}
+        {selected.moves ? (
+          <MoveBoxes
+            moveNames={Object.keys(selected.moves)}
+            moveUsages={selected.moves}
+          />
+        ) : (
+          <p>N/A</p>
+        )}
       </p>
       <ul>
         <strong>Base Stats:</strong>
