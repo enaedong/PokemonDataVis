@@ -320,3 +320,37 @@ body {
 .hide {
 	opacity: 0;
 }
+
+.move-boxes-container {
+  position: relative;
+}
+
+.move-boxes-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.move-box {
+  padding: 4px 8px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.move-tooltip {
+  position: fixed;
+  background: #333;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  pointer-events: none;
+  z-index: 999;
+  max-width: 220px;
+  white-space: nowrap;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
