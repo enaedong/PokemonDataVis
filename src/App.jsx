@@ -1,14 +1,17 @@
 import React, { useEffect, useState, useRef } from "react";
 import ChartControls from "./components/ChartControls";
+import HitChart from "./components/HitChart";
 import UsageTable from "./components/UsageTable";
 import PokemonDetails from "./components/PokemonDetails";
 import TYPE_COLORS from "./utils/typeColors";
 import "./App.css";
 
 export default function App() {
-  const [usageData, setUsageData] = useState([]);
+
   const [filtered, setFiltered] = useState([]);
   const [search, setSearch] = useState("");
+  const [dex, setDex] = useState([]);
+  const [usage, setUsage] = useState([]);
   const [selected, setSelected] = useState(null);
   const [pokeDetail, setPokeDetail] = useState(null);
   const [pokeStats, setPokeStats] = useState(null);
@@ -71,22 +74,33 @@ export default function App() {
 
   // Load usage data
   useEffect(() => {
-    fetch("/usage.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setUsageData(data);
-        setFiltered(data);
-      });
+    const loadData = async () => {
+      const [dexRes, usageRes] = await Promise.all([
+        fetch("/dex.json"),
+        fetch("/usage.json"),
+      ]);
+
+      const [dexData, usageData] = await Promise.all([
+        dexRes.json(),
+        usageRes.json(),
+      ]);
+
+      setDex(dexData);
+      setUsage(usageData);
+    };
+
+    loadData().catch(err => console.error("Failed to load data", err));
   }, []);
+
 
   // Filter data by search
   useEffect(() => {
     setFiltered(
-      usageData.filter((p) =>
+      usage.filter((p) =>
         p.name.toLowerCase().includes(search.trim().toLowerCase())
       )
     );
-  }, [search, usageData]);
+  }, [search, usage]);
 
   // Load selected Pokémon details
   useEffect(() => {
@@ -117,6 +131,13 @@ export default function App() {
       })
       .finally(() => setLoading(false));
   }, [selected]);
+
+  const selectedUsage = selected;
+  const selectedDex = dex.find(p => p.name === selected?.name);
+
+  const selectedPokemon = selectedDex
+    ? { ...selectedDex, moves: selectedUsage?.moves || {} }
+    : null;
 
   /////////////////////////////// return ////////////////////////////////
   return (
@@ -151,7 +172,7 @@ export default function App() {
 
       <div className="charts-section" id="charts">
         <h2>Counter Visualization</h2>
-        <ChartControls
+        {/* <ChartControls
           selected={selected}
           items={items} setItems={setItems}
           selectedItem={selectedItem} setSelectedItem={setSelectedItem}
@@ -164,7 +185,14 @@ export default function App() {
           typeDropdownValue={typeDropdownValue} setTypeDropdownValue={setTypeDropdownValue}
           typeDropdownRef={typeDropdownRef}
           TYPE_COLORS={TYPE_COLORS}
+        /> */}
+
+        <HitChart
+          selectedPokemon={selectedPokemon}
+          dexData={dex}
+          usageData={usage}
         />
+
       </div>
     </div>
   );
