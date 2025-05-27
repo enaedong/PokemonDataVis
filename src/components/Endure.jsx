@@ -103,7 +103,7 @@ export default function EndureChart({ selectedPokemon, dexData, usageData }) {
 
   return (
     <div className="hit-chart">
-      <h3>Hits from {selectedPokemon.name} can Endure</h3>
+      <h3>Hits from {selectedPokemon.name} each Pokémon can Endure</h3>
 
       <select
         value={selectedMove || ''}

@@ -88,7 +88,7 @@ export default function KnockOutChart({ target, dexData, usageData }) {
 
   return (
     <div>
-      <h3>Hits Required to Knock-Out {target.name}</h3>
+      <h3>Hits Required for each Pokémon to Knock-Out {target.name}</h3>
       <ScatterPlot
         items={points}
         selectedItem={selectedItem}
