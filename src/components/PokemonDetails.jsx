@@ -16,10 +16,10 @@ export default function PokemonDetails({ selected, pokeDetail, pokeStats, loadin
         alt={selected.name}
       />
       <h2>{selected.name.toUpperCase()}</h2>
-      <p>
+      <div>
         <strong>Type:</strong> <TypeBoxes types={pokeDetail.types} />
-      </p>
-      <p>
+      </div>
+      <div>
         <strong>Abilities:</strong>{" "}
         {selected.moves ? (
           <MoveBoxes
@@ -27,9 +27,9 @@ export default function PokemonDetails({ selected, pokeDetail, pokeStats, loadin
             moveUsages={selected.moves}
           />
         ) : (
-          <p>N/A</p>
+          <div>N/A</div>
         )}
-      </p>
+      </div>
       <ul>
         <strong>Base Stats:</strong>
       </ul>

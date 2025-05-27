@@ -5,7 +5,7 @@ import TYPE_COLORS from '../utils/typeColors';
 
 const gen = Generations.get(9);
 
-export default function HitChart({ selectedPokemon, dexData, usageData }) {
+export default function EndureChart({ selectedPokemon, dexData, usageData }) {
   const [selectedMove, setSelectedMove] = useState(null);
   const [chartItems, setChartItems] = useState([]);
   const [selectedItem, setSelectedItem] = useState(null);
@@ -103,7 +103,7 @@ export default function HitChart({ selectedPokemon, dexData, usageData }) {
 
   return (
     <div className="hit-chart">
-      <h3>Hits to KO from {selectedPokemon.name}</h3>
+      <h3>Hits from {selectedPokemon.name} can Endure</h3>
 
       <select
         value={selectedMove || ''}
@@ -122,6 +122,7 @@ export default function HitChart({ selectedPokemon, dexData, usageData }) {
           selectedItem={selectedItem}
           setSelectedItem={setSelectedItem}
           TYPE_COLORS={TYPE_COLORS}
+          showMove={false}
         />
       ) : (
         selectedMove && <p>No data available for this move.</p>

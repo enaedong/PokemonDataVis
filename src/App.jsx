@@ -1,8 +1,9 @@
 import React, { useEffect, useState, useRef } from "react";
 import ChartControls from "./components/ChartControls";
-import HitChart from "./components/HitChart";
 import UsageTable from "./components/UsageTable";
 import PokemonDetails from "./components/PokemonDetails";
+import EndureChart from "./components/Endure";
+import KnockOutChart from "./components/KnockOut";
 import TYPE_COLORS from "./utils/typeColors";
 import "./App.css";
 
@@ -187,12 +188,17 @@ export default function App() {
           TYPE_COLORS={TYPE_COLORS}
         /> */}
 
-        <HitChart
+        <EndureChart
           selectedPokemon={selectedPokemon}
           dexData={dex}
           usageData={usage}
         />
 
+        <KnockOutChart
+          target={selectedPokemon}
+          dexData={dex}
+          usageData={usage}
+        />
       </div>
     </div>
   );

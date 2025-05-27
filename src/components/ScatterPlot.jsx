@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import * as d3 from 'd3';
 
-export default function ScatterPlot({ items, selectedItem, setSelectedItem, TYPE_COLORS }) {
+export default function ScatterPlot({ items, selectedItem, setSelectedItem, TYPE_COLORS, showMove = false }) {
     const ref = useRef();
 
     useEffect(() => {
@@ -59,24 +59,59 @@ export default function ScatterPlot({ items, selectedItem, setSelectedItem, TYPE
         const tooltips = dataPoints.append('g')
             .attr('class', d => (selectedItem === d.name ? 'display' : 'hide'))
             .style('pointer-events', 'none');
-
         tooltips.append('rect')
-            .attr('x', -30)
-            .attr('y', -20)
-            .attr('width', 60)
-            .attr('height', 20)
-            .attr('fill', 'black')
-            .attr('rx', 5);
+            .attr('x', 0)            // will be repositioned in the loop
+            .attr('y', 0)            // ditto
+            .attr('fill', 'black')   // or move this into CSS
+            .attr('rx', 5);          // corner radius
 
-        tooltips.append('text')
-            .attr('x', 0)
-            .attr('y', -10)
-            .attr('text-anchor', 'middle')
-            .attr('font-size', '10px')
+        // 1. Append <text> with two <tspan> lines
+        const text = tooltips.append('text')
+            .attr('text-anchor', 'middle')    // center text horizontally
+            .attr('dominant-baseline', 'middle')
             .attr('fill', 'white')
+            .attr('font-size', 10);
+
+        // first line: Pokémon name
+        text.append('tspan')
+            .attr('x', 0)
+            .attr('dy', 0)
             .text(d => d.name);
 
-    }, [items, selectedItem, setSelectedItem, TYPE_COLORS]);
+        // second line: move, 1.2em below the first line
+        text.append('tspan')
+            .attr('x', 0)
+            .attr('dy', '1.2em')
+            .text(d => d.bestMove);
+
+        // In section "2. After the text is in the DOM, measure and resize the rect"
+
+        tooltips.each(function () {
+            const tooltipG = d3.select(this);
+            const rect = tooltipG.select('rect');
+            const textEl = tooltipG.select('text'); // Get the text element
+            const bbox = textEl.node().getBBox();   // Get its bounding box
+
+            const paddingX = 6;
+            const paddingY = 4;
+            const gap = 8; // A small gap between the data point and the tooltip
+
+            const rectHeight = bbox.height + paddingY * 2;
+            const rectWidth = bbox.width + paddingX * 2;
+
+            // Position the rectangle to be above the data point
+            rect
+                .attr('width', rectWidth)
+                .attr('height', rectHeight)
+                .attr('x', -rectWidth / 2) // Center the rect horizontally
+                .attr('y', -(rectHeight + gap)); // Position rect above the point
+
+            // Calculate the vertical center of the rect and position the text there
+            const textY = -(rectHeight + gap) + (rectHeight / 2);
+            textEl.attr('y', textY);
+        });
+
+    }, [items, selectedItem, setSelectedItem, TYPE_COLORS, showMove]);
 
     return <svg ref={ref} />;
 }
