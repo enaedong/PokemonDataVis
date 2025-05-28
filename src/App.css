@@ -29,15 +29,16 @@ body {
 }
 
 .stats-section {
-  flex: 1;
+  flex: 0.5;
   padding: 32px 24px;
-  max-width: 400px;
+  max-width: 200px;
   border-right: 1px solid #e0e0e0;
   height: 90vh; /* Set fixed height */
+  background: #fcfcfc;
 }
 
 .charts-section {
-  flex: 1;
+  flex: 2;
   padding: 32px 24px;
   height: 90vh; /* Set fixed height */
 }
