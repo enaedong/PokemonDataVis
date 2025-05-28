@@ -55,7 +55,7 @@ def extract_moves(moveset_text):
 
     return all_moves
 
-def generate_usage_json(month="2025-04", format="gen9ou-", rating="0", output_file="public/usage.json"):
+def generate_usage_json(month="2025-04", format="gen9bssregi-", rating="1500", output_file="public/usage.json"):
     usage_url = f"https://www.smogon.com/stats/{month}/{format}{rating}.txt"
     moveset_url = f"https://www.smogon.com/stats/{month}/moveset/{format}{rating}.txt"
 
@@ -85,7 +85,7 @@ def generate_usage_json(month="2025-04", format="gen9ou-", rating="0", output_fi
             return
 
         usage_data = []
-        for line in usage_lines[start_index:452]:
+        for line in usage_lines[start_index:378]:
             if not line.strip():
                 break
 
