@@ -118,7 +118,7 @@ export default function App() {
       .finally(() => setLoading(false));
   }, [selected]);
 
-  // Load details for scatter plot clicked Pokémon (4번 탭)
+  // Load details for scatter plot clicked Pokémon
   const [selectedItemDetail, setSelectedItemDetail] = useState(null);
   const [selectedItemStats, setSelectedItemStats] = useState(null);
   const [selectedItemLoading, setSelectedItemLoading] = useState(false);
@@ -130,7 +130,7 @@ export default function App() {
       return;
     }
     setSelectedItemLoading(true);
-    // safe_name 변환: 소문자, 공백->-, 마침표 제거 등 pokeapi 규칙에 맞게 변환
+    // safe_name 변환
     const safeName = selectedItem
       .toLowerCase()
       .replace(/ /g, "-")
@@ -155,35 +155,59 @@ export default function App() {
       .finally(() => setSelectedItemLoading(false));
   }, [selectedItem]);
 
+  // 1번 탭: 순위표/포켓몬 정보 전환 상태
+  const [showUsageTable, setShowUsageTable] = useState(true);
+
   /////////////////////////////// return ////////////////////////////////
   return (
     <div className="container">
       <div className="usage-section">
-        <h2>Top Pokémon Usage</h2>
-        <input
-          type="text"
-          className="search-bar"
-          placeholder="Search Pokémon..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          autoComplete="off"
-        />
-        <div className="usage-table-container">
-          <UsageTable
-            filtered={filtered}
-            selected={selected}
-            setSelected={setSelected}
-          />
-        </div>
+        {showUsageTable ? (
+          <>
+            <h2>Top Pokémon Usage</h2>
+            <input
+              type="text"
+              className="search-bar"
+              placeholder="Search Pokémon..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              autoComplete="off"
+            />
+            <div className="usage-table-container">
+              <UsageTable
+                filtered={filtered}
+                selected={selected}
+                setSelected={(pokemon) => {
+                  setSelected(pokemon);
+                  setShowUsageTable(false);
+                }}
+              />
+            </div>
+          </>
+        ) : (
+          <>
+            <button
+              className="back-btn"
+              onClick={() => {
+                setShowUsageTable(true);
+                setSelected(null);
+              }}
+              style={{ marginBottom: 16 }}
+            >
+              ← Back
+            </button>
+            <PokemonDetails
+              selected={selected}
+              pokeDetail={pokeDetail}
+              pokeStats={pokeStats}
+              loading={loading}
+            />
+          </>
+        )}
       </div>
 
       <div className="stats-section" id="pokemon-stats">
-        <PokemonDetails
-          selected={selected}
-          pokeDetail={pokeDetail}
-          pokeStats={pokeStats}
-          loading={loading}
-        />
+        {/* 비워둠 (향후 산점도 필터 UI 예정) */}
       </div>
 
       <div className="charts-section" id="charts">
@@ -205,7 +229,7 @@ export default function App() {
         </ChartControls>
       </div>
 
-      {/* 4번 탭: 산점도에서 클릭한 포켓몬 정보 */}
+      
       <div className="scatter-detail-section" id="scatter-detail">
         <h2>Counter Pokémon Details</h2>
         <PokemonDetails

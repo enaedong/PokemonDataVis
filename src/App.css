@@ -339,3 +339,27 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+.back-btn {
+  background: #f3f3f3;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 16px;
+  transition: background 0.18s;
+}
+.back-btn:hover {
+  background: #e0e0e0;
+}
+
+.usage-section img {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 12px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
