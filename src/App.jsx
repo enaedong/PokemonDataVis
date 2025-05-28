@@ -18,6 +18,8 @@ export default function App() {
   // 차트에서 사용자가 클릭한 점
   const [selectedItem, setSelectedItem] = useState(null);
 
+  const [selectedMove, setSelectedMove] = useState('');
+
   // Load usage data
   useEffect(() => {
     const loadData = async () => {
@@ -173,7 +175,11 @@ export default function App() {
 
       {/* 필터 UI */}
       <div className="stats-section" id="pokemon-stats">
-        <FilterPanel />
+        <FilterPanel
+          selectedMove={selectedMove}
+          setSelectedMove={setSelectedMove}
+          selectedPokemon={selectedPokemon}
+        />
       </div>
 
       <div className="charts-section" id="charts">
@@ -186,6 +192,7 @@ export default function App() {
           setSelectedItem={setSelectedItem}
         />
       </div>
+
       <div className="scatter-detail-section" id="scatter-detail">
         <h2>Counter Pokémon Details</h2>
         <PokemonDetails
@@ -195,6 +202,7 @@ export default function App() {
           loading={selectedItemLoading}
         />
       </div>
+      
     </div>
   );
 }
