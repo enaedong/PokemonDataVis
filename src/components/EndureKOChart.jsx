@@ -30,7 +30,7 @@ export default function EndureKOChart({ selectedPokemon, dexData, usageData }) {
       const firstDamagingMove = Object.keys(selectedPokemon.moves).find(
         (move) => {
           const details = getMoveDetails(move);
-          return details.basePower && details.basePower > 0;
+          return details.basePower && details.basePower >= 40;
         }
       );
       setSelectedMove(firstDamagingMove || null);
@@ -175,7 +175,7 @@ export default function EndureKOChart({ selectedPokemon, dexData, usageData }) {
   const moveOptions = selectedPokemon.moves
     ? Object.keys(selectedPokemon.moves).filter((move) => {
         const details = getMoveDetails(move);
-        return details.basePower && details.basePower > 0;
+        return details.basePower && details.basePower >= 40;
       })
     : [];
 
