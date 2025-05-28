@@ -1,117 +1,120 @@
-import React, { useRef, useEffect } from 'react';
-import * as d3 from 'd3';
+import React, { useRef, useEffect } from "react";
+import * as d3 from "d3";
 
-export default function ScatterPlot({ items, selectedItem, setSelectedItem, TYPE_COLORS, showMove = false }) {
-    const ref = useRef();
+export default function ScatterPlot({
+  items,
+  selectedItem,
+  setSelectedItem,
+  TYPE_COLORS,
+  showMove = false,
+}) {
+  const ref = useRef();
 
-    useEffect(() => {
-        const svg = d3.select(ref.current);
-        svg.selectAll('*').remove(); // Clear SVG content before redrawing
+  useEffect(() => {
+    const svg = d3.select(ref.current);
+    svg.selectAll("*").remove(); // Clear SVG content before redrawing
 
-        if (!items || items.length === 0) return;
+    const tooltipGroup = svg.append("g").attr("class", "tooltip-group");
+    
+    if (!items || items.length === 0) return;
 
-        // 1. Define chart dimensions
-        const width = 500;
-        const height = 300;
-        const marginTop = 20;
-        const marginBottom = 20;
-        const marginLeft = 40;
-        const marginRight = 20;
+    // 1. Define chart dimensions
+    const width = 500;
+    const height = 300;
+    const marginTop = 20;
+    const marginBottom = 20;
+    const marginLeft = 40;
+    const marginRight = 20;
 
-        // 2. Set up scales
-        const x = d3.scaleLinear()
-            .domain([0, 5]) // Damage count
-            .range([marginLeft, width - marginRight]);
+    // 2. Set up scales
+    const x = d3
+      .scaleLinear()
+      .domain([0, 5]) // Damage count
+      .range([marginLeft, width - marginRight]);
 
-        const y = d3.scaleLinear()
-            .domain([0, 200]) // Pokemon speed
-            .range([height - marginBottom, marginTop]);
+    const y = d3
+      .scaleLinear()
+      .domain([0, 200]) // Pokemon speed
+      .range([height - marginBottom, marginTop]);
 
-        svg.attr('width', width).attr('height', height);
+    svg.attr("width", width).attr("height", height);
 
-        // 3. Render axes
-        svg.append('g')
-            .attr('transform', `translate(0, ${height - marginBottom})`)
-            .call(d3.axisBottom(x).ticks(6));
+    // 3. Render axes
+    svg
+      .append("g")
+      .attr("transform", `translate(0, ${height - marginBottom})`)
+      .call(d3.axisBottom(x).ticks(6));
 
-        svg.append('g')
-            .attr('transform', `translate(${marginLeft}, 0)`)
-            .call(d3.axisLeft(y));
+    svg
+      .append("g")
+      .attr("transform", `translate(${marginLeft}, 0)`)
+      .call(d3.axisLeft(y));
 
-        // 4. Plot data points
-        const dataPoints = svg.append('g')
-            .selectAll('g')
-            .data(items)
-            .join('g')
-            .attr('class', 'datapoint')
-            .attr('fill', d => TYPE_COLORS[d.type])
-            .attr('transform', d => `translate(${x(d.count)}, ${y(d.speed)})`);
+    // 4. Plot data points
+    const dataPoints = svg
+      .append("g")
+      .selectAll("g")
+      .data(items)
+      .join("g")
+      .attr("class", "datapoint")
+      .attr("fill", (d) => TYPE_COLORS[d.type])
+      .attr("transform", (d) => `translate(${x(d.count)}, ${y(d.speed)})`);
 
-        dataPoints.append('circle')
-            .attr('r', 3)
-            .style('cursor', 'pointer')
-            .on('click', (event, d) => {
-                // Toggle selection on click
-                setSelectedItem(d.name === selectedItem ? null : d.name);
-            });
+    dataPoints
+      .append("circle")
+      .attr("r", 3)
+      .style("cursor", "pointer")
+      .on("click", (event, d) => {
+        // Toggle selection on click
+        setSelectedItem(d.name === selectedItem ? null : d.name);
+      });
 
-        // 5. Display tooltips for selected points
-        const tooltips = dataPoints.append('g')
-            .attr('class', d => (selectedItem === d.name ? 'display' : 'hide'))
-            .style('pointer-events', 'none');
-        tooltips.append('rect')
-            .attr('x', 0)            // will be repositioned in the loop
-            .attr('y', 0)            // ditto
-            .attr('fill', 'black')   // or move this into CSS
-            .attr('rx', 5);          // corner radius
+    // In section "2. After the text is in the DOM, measure and resize the rect"
+    items.forEach((d) => {
+      if (d.name === selectedItem) {
+        const tx = x(d.count);
+        const ty = y(d.speed);
 
-        // 1. Append <text> with two <tspan> lines
-        const text = tooltips.append('text')
-            .attr('text-anchor', 'middle')    // center text horizontally
-            .attr('dominant-baseline', 'middle')
-            .attr('fill', 'white')
-            .attr('font-size', 10);
+        const tooltip = tooltipGroup
+          .append("g")
+          .attr("transform", `translate(${tx}, ${ty - 30})`);
 
-        // first line: Pokémon name
-        text.append('tspan')
-            .attr('x', 0)
-            .attr('dy', 0)
-            .text(d => d.name);
+        // Append both text lines
+        const nameText = tooltip
+          .append("text")
+          .text(d.name)
+          .attr("text-anchor", "middle")
+          .attr("font-size", 12)
+          .attr("fill", "white")
+          .attr("y", 0)
+          .style("font-weight", "bold");
 
-        // second line: move, 1.2em below the first line
-        text.append('tspan')
-            .attr('x', 0)
-            .attr('dy', '1.2em')
-            .text(d => d.bestMove);
+        const moveText = tooltip
+          .append("text")
+          .text(d.bestMove)
+          .attr("text-anchor", "middle")
+          .attr("font-size", 11)
+          .attr("fill", "white")
+          .attr("y", 16); // move below nameText
 
-        // In section "2. After the text is in the DOM, measure and resize the rect"
+        // Get bounding boxes AFTER rendering both lines
+        const nameBBox = nameText.node().getBBox();
+        const moveBBox = moveText.node().getBBox();
+        const width = Math.max(nameBBox.width, moveBBox.width) + 12;
+        const height = nameBBox.height + moveBBox.height + 12;
 
-        tooltips.each(function () {
-            const tooltipG = d3.select(this);
-            const rect = tooltipG.select('rect');
-            const textEl = tooltipG.select('text'); // Get the text element
-            const bbox = textEl.node().getBBox();   // Get its bounding box
+        // Background rect
+        tooltip
+          .insert("rect", "text")
+          .attr("x", -width / 2)
+          .attr("y", -nameBBox.height)
+          .attr("width", width)
+          .attr("height", height)
+          .attr("rx", 5)
+          .attr("fill", "black");
+      }
+    });
+  }, [items, selectedItem, setSelectedItem, TYPE_COLORS, showMove]);
 
-            const paddingX = 6;
-            const paddingY = 4;
-            const gap = 8; // A small gap between the data point and the tooltip
-
-            const rectHeight = bbox.height + paddingY * 2;
-            const rectWidth = bbox.width + paddingX * 2;
-
-            // Position the rectangle to be above the data point
-            rect
-                .attr('width', rectWidth)
-                .attr('height', rectHeight)
-                .attr('x', -rectWidth / 2) // Center the rect horizontally
-                .attr('y', -(rectHeight + gap)); // Position rect above the point
-
-            // Calculate the vertical center of the rect and position the text there
-            const textY = -(rectHeight + gap) + (rectHeight / 2);
-            textEl.attr('y', textY);
-        });
-
-    }, [items, selectedItem, setSelectedItem, TYPE_COLORS, showMove]);
-
-    return <svg ref={ref} />;
+  return <svg ref={ref} />;
 }
