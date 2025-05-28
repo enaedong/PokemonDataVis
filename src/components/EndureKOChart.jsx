@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Generations, toID } from "@smogon/calc";
 import ScatterPlot from "./ScatterPlot";
 import HitCount from "../utils/HitCount";
-import { EndureKOData, getMoveDetails } from "../utils/moveHelpers";
+import { EndureKOData } from "../utils/moveHelpers";
 
 const gen = Generations.get(9);
 

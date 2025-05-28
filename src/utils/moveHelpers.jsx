@@ -1,4 +1,3 @@
-// utils/prepareScatterData.js
 import { Generations, toID } from "@smogon/calc";
 const gen = Generations.get(9);
 
