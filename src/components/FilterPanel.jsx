@@ -8,13 +8,6 @@ export default function FilterPanel({ selectedMove, setSelectedMove, selectedPok
   const [weatherChecks, setWeatherChecks] = useState(Array(4).fill(false));
   // 랭크 슬라이더
   const [ranks, setRanks] = useState(Array(6).fill(0));
-  // 기술 드롭다운
-  // const moveList = selectedPokemon?.moves
-  //   ? Object.keys(selectedPokemon.moves).sort((a, b) => {
-  //     // Sort by usage % descending
-  //     return selectedPokemon.moves[b] - selectedPokemon.moves[a];
-  //   })
-  //   : [];
 
   return (
     <>
