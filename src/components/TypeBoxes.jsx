@@ -1,5 +1,3 @@
-// components/TypeBoxes.jsx
-import React from "react";
 import TYPE_COLORS from "../utils/typeColors";
 
 export default function TypeBoxes({ types }) {

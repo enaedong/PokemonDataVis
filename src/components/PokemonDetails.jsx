@@ -1,5 +1,3 @@
-// components/PokemonDetails.jsx
-import React from "react";
 import TypeBoxes from "./TypeBoxes";
 import RadarChart from "./RadarChart";
 import MoveBoxes from "./MoveBoxes";

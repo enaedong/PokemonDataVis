@@ -1,6 +1,3 @@
-// components/UsageTable.jsx
-import React from "react";
-
 export default function UsageTable({ filtered, selected, setSelected }) {
   return (
     <table className="usage-table">
