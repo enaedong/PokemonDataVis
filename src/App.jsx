@@ -118,6 +118,43 @@ export default function App() {
       .finally(() => setLoading(false));
   }, [selected]);
 
+  // Load details for scatter plot clicked Pokémon (4번 탭)
+  const [selectedItemDetail, setSelectedItemDetail] = useState(null);
+  const [selectedItemStats, setSelectedItemStats] = useState(null);
+  const [selectedItemLoading, setSelectedItemLoading] = useState(false);
+
+  useEffect(() => {
+    if (!selectedItem) {
+      setSelectedItemDetail(null);
+      setSelectedItemStats(null);
+      return;
+    }
+    setSelectedItemLoading(true);
+    // safe_name 변환: 소문자, 공백->-, 마침표 제거 등 pokeapi 규칙에 맞게 변환
+    const safeName = selectedItem
+      .toLowerCase()
+      .replace(/ /g, "-")
+      .replace(/\./g, "");
+    fetch(`https://pokeapi.co/api/v2/pokemon/${safeName}`)
+      .then((res) => {
+        if (!res.ok) throw new Error("Pokémon not found");
+        return res.json();
+      })
+      .then((data) => {
+        setSelectedItemDetail(data);
+        const statsObj = {};
+        data.stats.forEach((s) => {
+          statsObj[s.stat.name] = s.base_stat;
+        });
+        setSelectedItemStats(statsObj);
+      })
+      .catch(() => {
+        setSelectedItemDetail(null);
+        setSelectedItemStats(null);
+      })
+      .finally(() => setSelectedItemLoading(false));
+  }, [selectedItem]);
+
   /////////////////////////////// return ////////////////////////////////
   return (
     <div className="container">
@@ -166,6 +203,17 @@ export default function App() {
           TYPE_COLORS={TYPE_COLORS}
         >
         </ChartControls>
+      </div>
+
+      {/* 4번 탭: 산점도에서 클릭한 포켓몬 정보 */}
+      <div className="scatter-detail-section" id="scatter-detail">
+        <h2>Counter Pokémon Details</h2>
+        <PokemonDetails
+          selected={selectedItem ? { name: selectedItem } : null}
+          pokeDetail={selectedItemDetail}
+          pokeStats={selectedItemStats}
+          loading={selectedItemLoading}
+        />
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ body {
 .container {
   display: flex;
   align-items: flex-start;
-  max-width: 1500px;
+  max-width: 2000px;
   height: 90vh;
   margin: 40px auto;
   background: #fff;
@@ -319,4 +319,23 @@ body {
 
 .hide {
 	opacity: 0;
+}
+
+.scatter-detail-section {
+  flex: 1;
+  padding: 32px 24px;
+  max-width: 400px;
+  height: 90vh;
+  border-left: 1px solid #e0e0e0;
+  background: #fcfcfc;
+  overflow-y: auto;
+}
+
+.scatter-detail-section img {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 12px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
