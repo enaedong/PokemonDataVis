@@ -34,8 +34,7 @@ body {
   padding: 32px 24px;
   max-width: 200px;
   border-right: 1px solid #e0e0e0;
-  height: 90vh;
-  /* Set fixed height */
+  height: 90vh; /* Set fixed height */
   background: #fcfcfc;
   overflow-y: auto;
 }

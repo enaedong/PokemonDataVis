@@ -151,7 +151,6 @@ export default function App() {
 
   }, [selectedPokemon, moveList, selectedMove]);
 
-
   /////////////////////////////// return ////////////////////////////////
   return (
     <div className="container">

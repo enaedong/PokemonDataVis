@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 export default function FilterPanel({ selectedMove, setSelectedMove, selectedPokemon, moveList }) {
+
   // 타입 체크박스
   const [typeAll, setTypeAll] = useState(false);
   const [typeChecks, setTypeChecks] = useState(Array(18).fill(false));
@@ -9,12 +10,6 @@ export default function FilterPanel({ selectedMove, setSelectedMove, selectedPok
   // 랭크 슬라이더
   const [ranks, setRanks] = useState(Array(6).fill(0));
   // 기술 드롭다운
-  // const moveList = selectedPokemon?.moves
-  //   ? Object.keys(selectedPokemon.moves).sort((a, b) => {
-  //     // Sort by usage % descending
-  //     return selectedPokemon.moves[b] - selectedPokemon.moves[a];
-  //   })
-  //   : [];
 
   return (
     <>
