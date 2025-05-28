@@ -35,6 +35,7 @@ body {
   border-right: 1px solid #e0e0e0;
   height: 90vh; /* Set fixed height */
   background: #fcfcfc;
+  overflow-y: auto;
 }
 
 .charts-section {

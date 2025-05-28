@@ -207,7 +207,7 @@ export default function App() {
         )}
       </div>
 
-      {/* 2번 탭: 필터 UI */}
+      {/* 필터 UI */}
       <div className="stats-section" id="pokemon-stats">
         <FilterPanel />
       </div>
