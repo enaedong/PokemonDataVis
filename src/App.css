@@ -414,3 +414,14 @@ body {
   white-space: nowrap;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
+
+.move-select-group {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.move-select-group label {
+  font-weight: 500;
+}

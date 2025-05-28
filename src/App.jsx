@@ -3,6 +3,7 @@ import UsageTable from "./components/UsageTable";
 import FilterPanel from "./components/FilterPanel";
 import PokemonDetails from "./components/PokemonDetails";
 import EndureKOChart from "./components/EndureKOChart";
+import { getMoveDetails } from "./utils/moveHelpers";
 import "./App.css";
 
 export default function App() {
@@ -18,7 +19,8 @@ export default function App() {
   // 차트에서 사용자가 클릭한 점
   const [selectedItem, setSelectedItem] = useState(null);
 
-  const [selectedMove, setSelectedMove] = useState('');
+  const [selectedMove, setSelectedMove] = useState(null);
+  const [moveList, setMoveList] = useState([]);
 
   // Load usage data
   useEffect(() => {
@@ -125,6 +127,31 @@ export default function App() {
     ? { ...selectedDex, moves: selectedUsage?.moves || {} }
     : null;
 
+  useEffect(() => {
+    if (!selectedPokemon?.moves) {
+      if (moveList.length > 0) setMoveList([]);
+      if (selectedMove !== null) setSelectedMove(null);
+      return;
+    }
+
+    const validMoves = Object.keys(selectedPokemon.moves).filter((move) => {
+      const details = getMoveDetails(move);
+      return details.basePower && details.basePower >= 40;
+    });
+
+    // ✅ Compare contents before updating state
+    const isSame =
+      validMoves.length === moveList.length &&
+      validMoves.every((m, i) => m === moveList[i]);
+
+    if (!isSame) {
+      setMoveList(validMoves);
+      setSelectedMove(validMoves.length > 0 ? validMoves[0] : null);
+    }
+
+  }, [selectedPokemon, moveList, selectedMove]);
+
+
   /////////////////////////////// return ////////////////////////////////
   return (
     <div className="container">
@@ -179,6 +206,7 @@ export default function App() {
           selectedMove={selectedMove}
           setSelectedMove={setSelectedMove}
           selectedPokemon={selectedPokemon}
+          moveList={moveList}
         />
       </div>
 
@@ -188,6 +216,7 @@ export default function App() {
           selectedPokemon={selectedPokemon}
           dexData={dex}
           usageData={usage}
+          selectedMove={selectedMove}
           selectedItem={selectedItem}
           setSelectedItem={setSelectedItem}
         />
@@ -202,7 +231,7 @@ export default function App() {
           loading={selectedItemLoading}
         />
       </div>
-      
+
     </div>
   );
 }

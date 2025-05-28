@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function FilterPanel({ selectedMove, setSelectedMove, selectedPokemon }) {
+export default function FilterPanel({ selectedMove, setSelectedMove, selectedPokemon, moveList }) {
   // 타입 체크박스
   const [typeAll, setTypeAll] = useState(false);
   const [typeChecks, setTypeChecks] = useState(Array(18).fill(false));
@@ -9,12 +9,12 @@ export default function FilterPanel({ selectedMove, setSelectedMove, selectedPok
   // 랭크 슬라이더
   const [ranks, setRanks] = useState(Array(6).fill(0));
   // 기술 드롭다운
-  const moveList = selectedPokemon?.moves
-    ? Object.keys(selectedPokemon.moves).sort((a, b) => {
-      // Sort by usage % descending
-      return selectedPokemon.moves[b] - selectedPokemon.moves[a];
-    })
-    : [];
+  // const moveList = selectedPokemon?.moves
+  //   ? Object.keys(selectedPokemon.moves).sort((a, b) => {
+  //     // Sort by usage % descending
+  //     return selectedPokemon.moves[b] - selectedPokemon.moves[a];
+  //   })
+  //   : [];
 
   return (
     <>
@@ -112,15 +112,16 @@ export default function FilterPanel({ selectedMove, setSelectedMove, selectedPok
         </div>
       </div>
       {/* 기술 드롭다운 */}
-      <div style={{ marginBottom: 24 }}>
-        <label htmlFor="move-select">Select Move:</label>
+      <div className="move-select-group">
+        <label htmlFor="move-select">
+          Select Move:
+        </label>
         <select
           id="move-select"
           value={selectedMove || ""}
           onChange={(e) => setSelectedMove(e.target.value)}
           disabled={!selectedPokemon}
         >
-          <option value="">-- Select a Move --</option>
           {moveList.map((move) => (
             <option key={move} value={move}>
               {move}
