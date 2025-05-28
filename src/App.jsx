@@ -2,13 +2,13 @@ import React, { useEffect, useState, useRef } from "react";
 import ChartControls from "./components/ChartControls";
 import UsageTable from "./components/UsageTable";
 import PokemonDetails from "./components/PokemonDetails";
+import EndureKOChart from "./components/EndureKOChart";
 import EndureChart from "./components/Endure";
 import KnockOutChart from "./components/KnockOut";
 import TYPE_COLORS from "./utils/typeColors";
 import "./App.css";
 
 export default function App() {
-
   const [filtered, setFiltered] = useState([]);
   const [search, setSearch] = useState("");
   const [dex, setDex] = useState([]);
@@ -34,13 +34,13 @@ export default function App() {
       setEndureSelected(!endureSelected);
     }
     setKoSelected(!koSelected);
-  }
+  };
   const switchEndure = () => {
     if (koSelected != endureSelected) {
       setKoSelected(!koSelected);
     }
     setEndureSelected(!endureSelected);
-  }
+  };
 
   // search 버튼을 눌렀는지 여부
   const [clicked, setClicked] = useState(false);
@@ -90,9 +90,8 @@ export default function App() {
       setUsage(usageData);
     };
 
-    loadData().catch(err => console.error("Failed to load data", err));
+    loadData().catch((err) => console.error("Failed to load data", err));
   }, []);
-
 
   // Filter data by search
   useEffect(() => {
@@ -134,7 +133,7 @@ export default function App() {
   }, [selected]);
 
   const selectedUsage = selected;
-  const selectedDex = dex.find(p => p.name === selected?.name);
+  const selectedDex = dex.find((p) => p.name === selected?.name);
 
   const selectedPokemon = selectedDex
     ? { ...selectedDex, moves: selectedUsage?.moves || {} }
@@ -173,6 +172,13 @@ export default function App() {
 
       <div className="charts-section" id="charts">
         <h2>Counter Visualization</h2>
+
+        <EndureKOChart
+          selectedPokemon={selectedPokemon}
+          dexData={dex}
+          usageData={usage}
+        />
+        
         {/* <ChartControls
           selected={selected}
           items={items} setItems={setItems}
@@ -188,7 +194,7 @@ export default function App() {
           TYPE_COLORS={TYPE_COLORS}
         /> */}
 
-        <EndureChart
+        {/* <EndureChart
           selectedPokemon={selectedPokemon}
           dexData={dex}
           usageData={usage}
@@ -198,7 +204,7 @@ export default function App() {
           target={selectedPokemon}
           dexData={dex}
           usageData={usage}
-        />
+        /> */}
       </div>
     </div>
   );
