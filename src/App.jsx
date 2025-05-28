@@ -3,6 +3,7 @@ import ChartControls from "./components/ChartControls";
 import UsageTable from "./components/UsageTable";
 import PokemonDetails from "./components/PokemonDetails";
 import TYPE_COLORS from "./utils/typeColors";
+import FilterPanel from "./components/FilterPanel";
 import "./App.css";
 
 export default function App() {
@@ -118,35 +119,97 @@ export default function App() {
       .finally(() => setLoading(false));
   }, [selected]);
 
+  // Load details for scatter plot clicked Pokémon
+  const [selectedItemDetail, setSelectedItemDetail] = useState(null);
+  const [selectedItemStats, setSelectedItemStats] = useState(null);
+  const [selectedItemLoading, setSelectedItemLoading] = useState(false);
+
+  useEffect(() => {
+    if (!selectedItem) {
+      setSelectedItemDetail(null);
+      setSelectedItemStats(null);
+      return;
+    }
+    setSelectedItemLoading(true);
+    // safe_name 변환
+    const safeName = selectedItem
+      .toLowerCase()
+      .replace(/ /g, "-")
+      .replace(/\./g, "");
+    fetch(`https://pokeapi.co/api/v2/pokemon/${safeName}`)
+      .then((res) => {
+        if (!res.ok) throw new Error("Pokémon not found");
+        return res.json();
+      })
+      .then((data) => {
+        setSelectedItemDetail(data);
+        const statsObj = {};
+        data.stats.forEach((s) => {
+          statsObj[s.stat.name] = s.base_stat;
+        });
+        setSelectedItemStats(statsObj);
+      })
+      .catch(() => {
+        setSelectedItemDetail(null);
+        setSelectedItemStats(null);
+      })
+      .finally(() => setSelectedItemLoading(false));
+  }, [selectedItem]);
+
+  // 순위표/포켓몬 정보 전환 상태
+  const [showUsageTable, setShowUsageTable] = useState(true);
+
   /////////////////////////////// return ////////////////////////////////
   return (
     <div className="container">
       <div className="usage-section">
-        <h2>Top Pokémon Usage</h2>
-        <input
-          type="text"
-          className="search-bar"
-          placeholder="Search Pokémon..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          autoComplete="off"
-        />
-        <div className="usage-table-container">
-          <UsageTable
-            filtered={filtered}
-            selected={selected}
-            setSelected={setSelected}
-          />
-        </div>
+        {showUsageTable ? (
+          <>
+            <h2>Top Pokémon Usage</h2>
+            <input
+              type="text"
+              className="search-bar"
+              placeholder="Search Pokémon..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              autoComplete="off"
+            />
+            <div className="usage-table-container">
+              <UsageTable
+                filtered={filtered}
+                selected={selected}
+                setSelected={(pokemon) => {
+                  setSelected(pokemon);
+                  setShowUsageTable(false);
+                }}
+              />
+            </div>
+          </>
+        ) : (
+          <>
+            <button
+              className="back-btn"
+              onClick={() => {
+                setShowUsageTable(true);
+                setSelected(null);
+              }}
+              style={{ marginBottom: 16 }}
+            >
+              ← Back
+            </button>
+            <PokemonDetails
+              selected={selected}
+              pokeDetail={pokeDetail}
+              pokeStats={pokeStats}
+              loading={loading}
+            />
+          </>
+        )}
       </div>
 
+      {/* 필터 UI */}
       <div className="stats-section" id="pokemon-stats">
-        <PokemonDetails
-          selected={selected}
-          pokeDetail={pokeDetail}
-          pokeStats={pokeStats}
-          loading={loading}
-        />
+        <FilterPanel />
       </div>
 
       <div className="charts-section" id="charts">
@@ -166,6 +229,17 @@ export default function App() {
           TYPE_COLORS={TYPE_COLORS}
         >
         </ChartControls>
+      </div>
+
+      
+      <div className="scatter-detail-section" id="scatter-detail">
+        <h2>Counter Pokémon Details</h2>
+        <PokemonDetails
+          selected={selectedItem ? { name: selectedItem } : null}
+          pokeDetail={selectedItemDetail}
+          pokeStats={selectedItemStats}
+          loading={selectedItemLoading}
+        />
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ body {
 .container {
   display: flex;
   align-items: flex-start;
-  max-width: 1500px;
+  max-width: 2000px;
   height: 90vh;
   margin: 40px auto;
   background: #fff;
@@ -29,15 +29,17 @@ body {
 }
 
 .stats-section {
-  flex: 1;
+  flex: 0.5;
   padding: 32px 24px;
-  max-width: 400px;
+  max-width: 200px;
   border-right: 1px solid #e0e0e0;
   height: 90vh; /* Set fixed height */
+  background: #fcfcfc;
+  overflow-y: auto;
 }
 
 .charts-section {
-  flex: 1;
+  flex: 2;
   padding: 32px 24px;
   height: 90vh; /* Set fixed height */
 }
@@ -319,4 +321,47 @@ body {
 
 .hide {
 	opacity: 0;
+}
+
+.scatter-detail-section {
+  flex: 1;
+  padding: 32px 24px;
+  max-width: 400px;
+  height: 90vh;
+  border-left: 1px solid #e0e0e0;
+  background: #fcfcfc;
+  overflow-y: auto;
+}
+
+.scatter-detail-section img {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 12px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.back-btn {
+  background: #f3f3f3;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 16px;
+  transition: background 0.18s;
+}
+.back-btn:hover {
+  background: #e0e0e0;
+}
+
+.usage-section img {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 12px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
