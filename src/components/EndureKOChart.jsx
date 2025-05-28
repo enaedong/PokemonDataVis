@@ -2,15 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Generations, toID } from "@smogon/calc";
 import ScatterPlot from "./ScatterPlot";
 import HitCount from "./HitCount";
-import TYPE_COLORS from "../utils/typeColors";
 
 const gen = Generations.get(9);
 
-export default function EndureKOChart({ selectedPokemon, dexData, usageData }) {
+export default function EndureKOChart({ selectedPokemon, dexData, usageData, selectedItem, setSelectedItem }) {
   const [typeChart, setTypeChart] = useState(null);
   const [selectedMove, setSelectedMove] = useState(null);
   const [scatterItems, setScatterItems] = useState([]);
-  const [selectedItem, setSelectedItem] = useState(null);
 
   // Load type chart
   useEffect(() => {
@@ -37,8 +35,6 @@ export default function EndureKOChart({ selectedPokemon, dexData, usageData }) {
     } else {
       setSelectedMove(null);
     }
-    setSelectedItem(null);
-    // eslint-disable-next-line
   }, [selectedPokemon]);
 
   // Helper for type effectiveness (single move type vs. target types)
@@ -164,7 +160,6 @@ export default function EndureKOChart({ selectedPokemon, dexData, usageData }) {
     });
 
     setScatterItems(items);
-    setSelectedItem(null);
   }, [selectedPokemon, dexData, usageData, typeChart, selectedMove]);
 
   if (!selectedPokemon)
@@ -174,9 +169,9 @@ export default function EndureKOChart({ selectedPokemon, dexData, usageData }) {
   // Move select options: only moves with basePower > 0
   const moveOptions = selectedPokemon.moves
     ? Object.keys(selectedPokemon.moves).filter((move) => {
-        const details = getMoveDetails(move);
-        return details.basePower && details.basePower >= 40;
-      })
+      const details = getMoveDetails(move);
+      return details.basePower && details.basePower >= 40;
+    })
     : [];
 
   return (
@@ -201,7 +196,6 @@ export default function EndureKOChart({ selectedPokemon, dexData, usageData }) {
         selectedPokemon={dexData.find((p) => p.name === selectedPokemon.name)}
         selectedItem={selectedItem}
         setSelectedItem={setSelectedItem}
-        TYPE_COLORS={TYPE_COLORS}
         showMove={true}
       />
     </div>

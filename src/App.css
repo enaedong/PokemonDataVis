@@ -9,12 +9,12 @@ body {
 .container {
   display: flex;
   align-items: flex-start;
-  max-width: 1500px;
+  max-width: 2000px;
   height: 90vh;
   margin: 40px auto;
   background: #fff;
   border-radius: 14px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
   overflow: hidden;
 }
 
@@ -23,23 +23,28 @@ body {
   padding: 32px 24px;
   max-width: 400px;
   border-right: 1px solid #e0e0e0;
-  height: 90vh; /* Set fixed height */
+  height: 90vh;
+  /* Set fixed height */
   display: flex;
   flex-direction: column;
 }
 
 .stats-section {
-  flex: 1;
+  flex: 0.5;
   padding: 32px 24px;
-  max-width: 400px;
+  max-width: 200px;
   border-right: 1px solid #e0e0e0;
-  height: 90vh; /* Set fixed height */
+  height: 90vh;
+  /* Set fixed height */
+  background: #fcfcfc;
+  overflow-y: auto;
 }
 
 .charts-section {
-  flex: 1;
+  flex: 2;
   padding: 32px 24px;
-  height: 90vh; /* Set fixed height */
+  height: 90vh;
+  /* Set fixed height */
 }
 
 .chart-buttons-row {
@@ -49,7 +54,7 @@ body {
 }
 
 .search-buttons-row {
-  display: flex;  
+  display: flex;
   justify-content: center;
   margin-bottom: 18px;
   gap: 16px;
@@ -66,6 +71,7 @@ body {
   font-size: 1em;
   transition: background 0.18s;
 }
+
 .chart-btn-red {
   flex: 1;
   padding: 10px 0;
@@ -77,6 +83,7 @@ body {
   font-size: 1em;
   transition: background 0.18s;
 }
+
 .chart-btn-green {
   flex: 1;
   padding: 10px 0;
@@ -88,6 +95,7 @@ body {
   font-size: 1em;
   transition: background 0.18s;
 }
+
 .target-name {
   flex: 1;
   padding: 10px 0;
@@ -99,11 +107,11 @@ body {
 .move-btn {
   max-width: 200px;
   flex: 1;
-  padding: 10px 0;  
+  padding: 10px 0;
   font-weight: bold;
   border-radius: 8px;
-  border: 1px solid #bbb;  
-  font-size: 1em;  
+  border: 1px solid #bbb;
+  font-size: 1em;
 }
 
 .chart-btn:hover {
@@ -140,7 +148,8 @@ body {
   margin-top: 18px;
 }
 
-.usage-table th, .usage-table td {
+.usage-table th,
+.usage-table td {
   padding: 8px 10px;
   text-align: left;
 }
@@ -219,7 +228,7 @@ body {
   margin-right: 6px;
   border-radius: 12px;
   font-size: 0.98em;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   letter-spacing: 0.5px;
   margin-bottom: 2px;
 }
@@ -277,7 +286,7 @@ body {
   background: #fff;
   border: 1px solid #bbb;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
   z-index: 10;
   padding: 0;
   margin: 0;
@@ -286,8 +295,15 @@ body {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-8px);}
-  to { opacity: 1; transform: translateY(0);}
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .dropdown-menu-item {
@@ -310,15 +326,59 @@ body {
 }
 
 .datapoint circle {
-	cursor: pointer;	
+  cursor: pointer;
 }
 
 .display {
-	opacity: 1;
+  opacity: 1;
 }
 
 .hide {
-	opacity: 0;
+  opacity: 0;
+}
+
+.scatter-detail-section {
+  flex: 1;
+  padding: 32px 24px;
+  max-width: 400px;
+  height: 90vh;
+  border-left: 1px solid #e0e0e0;
+  background: #fcfcfc;
+  overflow-y: auto;
+}
+
+.scatter-detail-section img {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 12px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.back-btn {
+  background: #f3f3f3;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 16px;
+  transition: background 0.18s;
+}
+
+.back-btn:hover {
+  background: #e0e0e0;
+}
+
+.usage-section img {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 12px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .move-boxes-container {

@@ -1,11 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
-import ChartControls from "./components/ChartControls";
 import UsageTable from "./components/UsageTable";
+import FilterPanel from "./components/FilterPanel";
 import PokemonDetails from "./components/PokemonDetails";
 import EndureKOChart from "./components/EndureKOChart";
-import EndureChart from "./components/Endure";
-import KnockOutChart from "./components/KnockOut";
-import TYPE_COLORS from "./utils/typeColors";
 import "./App.css";
 
 export default function App() {
@@ -18,60 +15,8 @@ export default function App() {
   const [pokeStats, setPokeStats] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  // 차트에 표시할 데이터
-  const [items, setItems] = useState([]);
   // 차트에서 사용자가 클릭한 점
   const [selectedItem, setSelectedItem] = useState(null);
-  // 공격을 버티는가 or 쓰러트리는가 기준을 선택
-  const [koSelected, setKoSelected] = useState(false);
-  const [endureSelected, setEndureSelected] = useState(false);
-  // 사용자가 입력한 기술 위력
-  const powerInput = useRef();
-
-  // 버튼 클릭시 on off
-  const switchKo = () => {
-    if (koSelected != endureSelected) {
-      setEndureSelected(!endureSelected);
-    }
-    setKoSelected(!koSelected);
-  };
-  const switchEndure = () => {
-    if (koSelected != endureSelected) {
-      setKoSelected(!koSelected);
-    }
-    setEndureSelected(!endureSelected);
-  };
-
-  // search 버튼을 눌렀는지 여부
-  const [clicked, setClicked] = useState(false);
-
-  // 타입 상성 필터링
-  const typeDropdownRef = useRef();
-  const [typeDropdownOpen, setTypeDropdownOpen] = useState(false);
-  const [typeDropdownValue, setTypeDropdownValue] = useState("All");
-  const [typeDropdownHover, setTypeDropdownHover] = useState(null);
-
-  // Handle outside click to close dropdowns
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (
-        typeDropdownRef.current &&
-        !typeDropdownRef.current.contains(event.target)
-      ) {
-        setTypeDropdownOpen(false);
-        setTypeDropdownHover(null);
-      }
-    }
-    if (typeDropdownOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [typeDropdownOpen]);
 
   // Load usage data
   useEffect(() => {
@@ -132,6 +77,45 @@ export default function App() {
       .finally(() => setLoading(false));
   }, [selected]);
 
+  // Load details for scatter plot clicked Pokémon
+  const [selectedItemDetail, setSelectedItemDetail] = useState(null);
+  const [selectedItemStats, setSelectedItemStats] = useState(null);
+  const [selectedItemLoading, setSelectedItemLoading] = useState(false);
+
+  useEffect(() => {
+    if (!selectedItem) {
+      setSelectedItemDetail(null);
+      setSelectedItemStats(null);
+      return;
+    }
+    setSelectedItemLoading(true);
+    // safe_name 변환
+    const safeName = selectedItem
+      .toLowerCase()
+      .replace(/ /g, "-")
+      .replace(/\./g, "");
+    fetch(`https://pokeapi.co/api/v2/pokemon/${safeName}`)
+      .then((res) => {
+        if (!res.ok) throw new Error("Pokémon not found");
+        return res.json();
+      })
+      .then((data) => {
+        setSelectedItemDetail(data);
+        const statsObj = {};
+        data.stats.forEach((s) => {
+          statsObj[s.stat.name] = s.base_stat;
+        });
+        setSelectedItemStats(statsObj);
+      })
+      .catch(() => {
+        setSelectedItemDetail(null);
+        setSelectedItemStats(null);
+      })
+      .finally(() => setSelectedItemLoading(false));
+  }, [selectedItem]);
+
+  // 순위표/포켓몬 정보 전환 상태
+  const [showUsageTable, setShowUsageTable] = useState(true);
   const selectedUsage = selected;
   const selectedDex = dex.find((p) => p.name === selected?.name);
 
@@ -143,68 +127,73 @@ export default function App() {
   return (
     <div className="container">
       <div className="usage-section">
-        <h2>Top Pokémon Usage</h2>
-        <input
-          type="text"
-          className="search-bar"
-          placeholder="Search Pokémon..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          autoComplete="off"
-        />
-        <div className="usage-table-container">
-          <UsageTable
-            filtered={filtered}
-            selected={selected}
-            setSelected={setSelected}
-          />
-        </div>
+        {showUsageTable ? (
+          <>
+            <h2>Top Pokémon Usage</h2>
+            <input
+              type="text"
+              className="search-bar"
+              placeholder="Search Pokémon..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              autoComplete="off"
+            />
+            <div className="usage-table-container">
+              <UsageTable
+                filtered={filtered}
+                selected={selected}
+                setSelected={(pokemon) => {
+                  setSelected(pokemon);
+                  setShowUsageTable(false);
+                }}
+              />
+            </div>
+          </>
+        ) : (
+          <>
+            <button
+              className="back-btn"
+              onClick={() => {
+                setShowUsageTable(true);
+                setSelected(null);
+              }}
+              style={{ marginBottom: 16 }}
+            >
+              ← Back
+            </button>
+            <PokemonDetails
+              selected={selected}
+              pokeDetail={pokeDetail}
+              pokeStats={pokeStats}
+              loading={loading}
+            />
+          </>
+        )}
       </div>
 
+      {/* 필터 UI */}
       <div className="stats-section" id="pokemon-stats">
-        <PokemonDetails
-          selected={selected}
-          pokeDetail={pokeDetail}
-          pokeStats={pokeStats}
-          loading={loading}
-        />
+        <FilterPanel />
       </div>
 
       <div className="charts-section" id="charts">
         <h2>Counter Visualization</h2>
-
         <EndureKOChart
           selectedPokemon={selectedPokemon}
           dexData={dex}
           usageData={usage}
+          selectedItem={selectedItem}
+          setSelectedItem={setSelectedItem}
         />
-        
-        {/* <ChartControls
-          selected={selected}
-          items={items} setItems={setItems}
-          selectedItem={selectedItem} setSelectedItem={setSelectedItem}
-          koSelected={koSelected} switchKo={switchKo}
-          endureSelected={endureSelected} switchEndure={switchEndure}
-          powerInput={powerInput}
-          clicked={clicked} setClicked={setClicked}
-          typeDropdownOpen={typeDropdownOpen} setTypeDropdownOpen={setTypeDropdownOpen}
-          typeDropdownHover={typeDropdownHover} setTypeDropdownHover={setTypeDropdownHover}
-          typeDropdownValue={typeDropdownValue} setTypeDropdownValue={setTypeDropdownValue}
-          typeDropdownRef={typeDropdownRef}
-          TYPE_COLORS={TYPE_COLORS}
-        /> */}
-
-        {/* <EndureChart
-          selectedPokemon={selectedPokemon}
-          dexData={dex}
-          usageData={usage}
+      </div>
+      <div className="scatter-detail-section" id="scatter-detail">
+        <h2>Counter Pokémon Details</h2>
+        <PokemonDetails
+          selected={selectedItem ? { name: selectedItem } : null}
+          pokeDetail={selectedItemDetail}
+          pokeStats={selectedItemStats}
+          loading={selectedItemLoading}
         />
-
-        <KnockOutChart
-          target={selectedPokemon}
-          dexData={dex}
-          usageData={usage}
-        /> */}
       </div>
     </div>
   );

@@ -7,7 +7,6 @@ import * as d3 from "d3";
  * @param {Object} selectedPokemon - The selected Pokémon object (must have .stat.spe)
  * @param {string} selectedItem - Name of the currently selected Pokémon (for tooltip)
  * @param {function} setSelectedItem - Setter for selectedItem
- * @param {Object} TYPE_COLORS - Mapping from type to color (used for fallback)
  * @param {boolean} showMove - Whether to show move name in tooltip
  */
 export default function ScatterPlot({
@@ -15,7 +14,6 @@ export default function ScatterPlot({
   selectedPokemon,
   selectedItem,
   setSelectedItem,
-  TYPE_COLORS,
   showMove = false,
 }) {
   const ref = useRef();
@@ -150,7 +148,7 @@ export default function ScatterPlot({
           .attr("fill", "black");
       }
     });
-  }, [items, selectedItem, setSelectedItem, TYPE_COLORS, showMove, selectedPokemon]);
+  }, [items, selectedItem, setSelectedItem, showMove, selectedPokemon]);
 
   return <svg ref={ref} />;
 }
