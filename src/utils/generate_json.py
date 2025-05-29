@@ -7,7 +7,7 @@ def normalize_name(name: str) -> str:
     # Smogon usage file uses dashes, lowercase, no dots/apostrophes
     return name.lower().replace(" ", "-").replace(".", "").replace("'", "")
 
-def extract_top_moves(moveset_text):
+def extract_moves(moveset_text):
     # Split on +----...+ lines to get blocks
     blocks = re.split(r'\+[-]+\+', moveset_text)
     pokemon_data = {}
@@ -29,8 +29,8 @@ def extract_top_moves(moveset_text):
                 j += 1
             pokemon_data[pokemon_name] = sections
 
-    # Extract top move for each Pokémon
-    top_moves = {}
+    # Extract all moves (except "Other") for each Pokémon, only if used > 10%
+    all_moves = {}
     for pokemon_name, sections in pokemon_data.items():
         moves = {}
         for section in sections:
@@ -42,26 +42,20 @@ def extract_top_moves(moveset_text):
                         parts = line.rsplit(' ', 1)
                         if len(parts) == 2:
                             move_name, percent_str = parts
+                            if move_name.lower() == "other":
+                                continue
                             try:
                                 percent = float(percent_str.strip('%'))
-                                moves[move_name] = percent
+                                if percent > 15:
+                                    moves[move_name] = percent
                             except ValueError:
                                 pass
-        # Pick the move with the highest percent (excluding "Other")
-        if moves:
-            moves_no_other = {k: v for k, v in moves.items() if k.lower() != "other"}
-            if moves_no_other:
-                top_move = max(moves_no_other.items(), key=lambda x: x[1])[0]
-            else:
-                top_move = max(moves.items(), key=lambda x: x[1])[0]
-        else:
-            top_move = None
         normalized_name = normalize_name(pokemon_name)
-        top_moves[normalized_name] = top_move
+        all_moves[normalized_name] = moves
 
-    return top_moves
+    return all_moves
 
-def generate_usage_json(month="2025-04", format="gen9ou-", rating="0", output_file="data/usage.json"):
+def generate_usage_json(month="2025-04", format="gen9bssregi-", rating="1500", output_file="public/usage.json"):
     usage_url = f"https://www.smogon.com/stats/{month}/{format}{rating}.txt"
     moveset_url = f"https://www.smogon.com/stats/{month}/moveset/{format}{rating}.txt"
 
@@ -76,8 +70,8 @@ def generate_usage_json(month="2025-04", format="gen9ou-", rating="0", output_fi
         moveset_response.raise_for_status()
         moveset_text = moveset_response.text
 
-        # Extract top moves from moveset text
-        top_moves = extract_top_moves(moveset_text)
+        # Extract all moves from moveset text
+        all_moves = extract_moves(moveset_text)
 
         # Parse usage data block
         start_index = None
@@ -91,7 +85,7 @@ def generate_usage_json(month="2025-04", format="gen9ou-", rating="0", output_fi
             return
 
         usage_data = []
-        for line in usage_lines[start_index:]:
+        for line in usage_lines[start_index:378]:
             if not line.strip():
                 break
 
@@ -101,13 +95,13 @@ def generate_usage_json(month="2025-04", format="gen9ou-", rating="0", output_fi
                 name = columns[2].strip()
                 usage = float(columns[3].strip().replace('%', ''))
                 safe_name = normalize_name(name)
-                top_move = top_moves.get(safe_name, None)
+                moves = all_moves.get(safe_name, {})
                 usage_data.append({
                     "rank": rank,
                     "name": name,
                     "safe_name": safe_name,
                     "usage": round(usage, 1),
-                    "top_move": top_move
+                    "moves": moves  # <--- all moves except "Other"
                 })
 
         os.makedirs(os.path.dirname(output_file), exist_ok=True)

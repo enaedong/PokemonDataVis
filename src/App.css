@@ -14,7 +14,7 @@ body {
   margin: 40px auto;
   background: #fff;
   border-radius: 14px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
   overflow: hidden;
 }
 
@@ -23,7 +23,8 @@ body {
   padding: 32px 24px;
   max-width: 400px;
   border-right: 1px solid #e0e0e0;
-  height: 90vh; /* Set fixed height */
+  height: 90vh;
+  /* Set fixed height */
   display: flex;
   flex-direction: column;
 }
@@ -41,7 +42,8 @@ body {
 .charts-section {
   flex: 2;
   padding: 32px 24px;
-  height: 90vh; /* Set fixed height */
+  height: 90vh;
+  /* Set fixed height */
 }
 
 .chart-buttons-row {
@@ -51,7 +53,7 @@ body {
 }
 
 .search-buttons-row {
-  display: flex;  
+  display: flex;
   justify-content: center;
   margin-bottom: 18px;
   gap: 16px;
@@ -68,6 +70,7 @@ body {
   font-size: 1em;
   transition: background 0.18s;
 }
+
 .chart-btn-red {
   flex: 1;
   padding: 10px 0;
@@ -79,6 +82,7 @@ body {
   font-size: 1em;
   transition: background 0.18s;
 }
+
 .chart-btn-green {
   flex: 1;
   padding: 10px 0;
@@ -90,6 +94,7 @@ body {
   font-size: 1em;
   transition: background 0.18s;
 }
+
 .target-name {
   flex: 1;
   padding: 10px 0;
@@ -101,11 +106,11 @@ body {
 .move-btn {
   max-width: 200px;
   flex: 1;
-  padding: 10px 0;  
+  padding: 10px 0;
   font-weight: bold;
   border-radius: 8px;
-  border: 1px solid #bbb;  
-  font-size: 1em;  
+  border: 1px solid #bbb;
+  font-size: 1em;
 }
 
 .chart-btn:hover {
@@ -142,7 +147,8 @@ body {
   margin-top: 18px;
 }
 
-.usage-table th, .usage-table td {
+.usage-table th,
+.usage-table td {
   padding: 8px 10px;
   text-align: left;
 }
@@ -221,7 +227,7 @@ body {
   margin-right: 6px;
   border-radius: 12px;
   font-size: 0.98em;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   letter-spacing: 0.5px;
   margin-bottom: 2px;
 }
@@ -279,7 +285,7 @@ body {
   background: #fff;
   border: 1px solid #bbb;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
   z-index: 10;
   padding: 0;
   margin: 0;
@@ -288,8 +294,15 @@ body {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-8px);}
-  to { opacity: 1; transform: translateY(0);}
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .dropdown-menu-item {
@@ -312,15 +325,15 @@ body {
 }
 
 .datapoint circle {
-	cursor: pointer;	
+  cursor: pointer;
 }
 
 .display {
-	opacity: 1;
+  opacity: 1;
 }
 
 .hide {
-	opacity: 0;
+  opacity: 0;
 }
 
 .scatter-detail-section {
@@ -353,6 +366,7 @@ body {
   margin-bottom: 16px;
   transition: background 0.18s;
 }
+
 .back-btn:hover {
   background: #e0e0e0;
 }
@@ -364,4 +378,49 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.move-boxes-container {
+  position: relative;
+}
+
+.move-boxes-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.move-box {
+  padding: 4px 8px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.move-tooltip {
+  position: fixed;
+  background: #333;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  pointer-events: none;
+  z-index: 999;
+  max-width: 220px;
+  white-space: nowrap;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.move-select-group {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.move-select-group label {
+  font-weight: 500;
 }

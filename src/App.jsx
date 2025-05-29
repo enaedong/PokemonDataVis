@@ -1,93 +1,55 @@
 import React, { useEffect, useState, useRef } from "react";
-import ChartControls from "./components/ChartControls";
 import UsageTable from "./components/UsageTable";
-import PokemonDetails from "./components/PokemonDetails";
-import TYPE_COLORS from "./utils/typeColors";
 import FilterPanel from "./components/FilterPanel";
+import PokemonDetails from "./components/PokemonDetails";
+import EndureKOChart from "./components/EndureKOChart";
+import { getMoveDetails } from "./utils/moveHelpers";
 import "./App.css";
 
 export default function App() {
-  const [usageData, setUsageData] = useState([]);
   const [filtered, setFiltered] = useState([]);
   const [search, setSearch] = useState("");
+  const [dex, setDex] = useState([]);
+  const [usage, setUsage] = useState([]);
   const [selected, setSelected] = useState(null);
   const [pokeDetail, setPokeDetail] = useState(null);
   const [pokeStats, setPokeStats] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  // 차트에 표시할 데이터
-  const [items, setItems] = useState([]);
   // 차트에서 사용자가 클릭한 점
   const [selectedItem, setSelectedItem] = useState(null);
-  // 공격을 버티는가 or 쓰러트리는가 기준을 선택
-  const [koSelected, setKoSelected] = useState(false);
-  const [endureSelected, setEndureSelected] = useState(false);
-  // 사용자가 입력한 기술 위력
-  const powerInput = useRef();
 
-  // 버튼 클릭시 on off
-  const switchKo = () => {
-    if (koSelected != endureSelected) {
-      setEndureSelected(!endureSelected);
-    }
-    setKoSelected(!koSelected);
-  }
-  const switchEndure = () => {
-    if (koSelected != endureSelected) {
-      setKoSelected(!koSelected);
-    }
-    setEndureSelected(!endureSelected);
-  }
-
-  // search 버튼을 눌렀는지 여부
-  const [clicked, setClicked] = useState(false);
-
-  // 타입 상성 필터링
-  const typeDropdownRef = useRef();
-  const [typeDropdownOpen, setTypeDropdownOpen] = useState(false);
-  const [typeDropdownValue, setTypeDropdownValue] = useState("All");
-  const [typeDropdownHover, setTypeDropdownHover] = useState(null);
-
-  // Handle outside click to close dropdowns
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (
-        typeDropdownRef.current &&
-        !typeDropdownRef.current.contains(event.target)
-      ) {
-        setTypeDropdownOpen(false);
-        setTypeDropdownHover(null);
-      }
-    }
-    if (typeDropdownOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [typeDropdownOpen]);
+  const [selectedMove, setSelectedMove] = useState(null);
+  const [moveList, setMoveList] = useState([]);
 
   // Load usage data
   useEffect(() => {
-    fetch("/usage.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setUsageData(data);
-        setFiltered(data);
-      });
+    const loadData = async () => {
+      const [dexRes, usageRes] = await Promise.all([
+        fetch("/dex.json"),
+        fetch("/usage.json"),
+      ]);
+
+      const [dexData, usageData] = await Promise.all([
+        dexRes.json(),
+        usageRes.json(),
+      ]);
+
+      setDex(dexData);
+      setUsage(usageData);
+    };
+
+    loadData().catch((err) => console.error("Failed to load data", err));
   }, []);
 
   // Filter data by search
   useEffect(() => {
     setFiltered(
-      usageData.filter((p) =>
+      usage.filter((p) =>
         p.name.toLowerCase().includes(search.trim().toLowerCase())
       )
     );
-  }, [search, usageData]);
+  }, [search, usage]);
 
   // Load selected Pokémon details
   useEffect(() => {
@@ -158,6 +120,36 @@ export default function App() {
 
   // 순위표/포켓몬 정보 전환 상태
   const [showUsageTable, setShowUsageTable] = useState(true);
+  const selectedUsage = selected;
+  const selectedDex = dex.find((p) => p.name === selected?.name);
+
+  const selectedPokemon = selectedDex
+    ? { ...selectedDex, moves: selectedUsage?.moves || {} }
+    : null;
+
+  useEffect(() => {
+    if (!selectedPokemon?.moves) {
+      if (moveList.length > 0) setMoveList([]);
+      if (selectedMove !== null) setSelectedMove(null);
+      return;
+    }
+
+    const validMoves = Object.keys(selectedPokemon.moves).filter((move) => {
+      const details = getMoveDetails(move);
+      return details.basePower && details.basePower >= 40;
+    });
+
+    // ✅ Compare contents before updating state
+    const isSame =
+      validMoves.length === moveList.length &&
+      validMoves.every((m, i) => m === moveList[i]);
+
+    if (!isSame) {
+      setMoveList(validMoves);
+      setSelectedMove(validMoves.length > 0 ? validMoves[0] : null);
+    }
+
+  }, [selectedPokemon, moveList, selectedMove]);
 
   /////////////////////////////// return ////////////////////////////////
   return (
@@ -209,29 +201,26 @@ export default function App() {
 
       {/* 필터 UI */}
       <div className="stats-section" id="pokemon-stats">
-        <FilterPanel />
+        <FilterPanel
+          selectedMove={selectedMove}
+          setSelectedMove={setSelectedMove}
+          selectedPokemon={selectedPokemon}
+          moveList={moveList}
+        />
       </div>
 
       <div className="charts-section" id="charts">
         <h2>Counter Visualization</h2>
-        <ChartControls
-          selected={selected}
-          items={items} setItems={setItems}
-          selectedItem={selectedItem} setSelectedItem={setSelectedItem}
-          koSelected={koSelected} switchKo={switchKo}
-          endureSelected={endureSelected} switchEndure={switchEndure}
-          powerInput={powerInput}
-          clicked={clicked} setClicked={setClicked}
-          typeDropdownOpen={typeDropdownOpen} setTypeDropdownOpen={setTypeDropdownOpen}
-          typeDropdownHover={typeDropdownHover} setTypeDropdownHover={setTypeDropdownHover}
-          typeDropdownValue={typeDropdownValue} setTypeDropdownValue={setTypeDropdownValue}
-          typeDropdownRef={typeDropdownRef}
-          TYPE_COLORS={TYPE_COLORS}
-        >
-        </ChartControls>
+        <EndureKOChart
+          selectedPokemon={selectedPokemon}
+          dexData={dex}
+          usageData={usage}
+          selectedMove={selectedMove}
+          selectedItem={selectedItem}
+          setSelectedItem={setSelectedItem}
+        />
       </div>
 
-      
       <div className="scatter-detail-section" id="scatter-detail">
         <h2>Counter Pokémon Details</h2>
         <PokemonDetails
@@ -241,6 +230,7 @@ export default function App() {
           loading={selectedItemLoading}
         />
       </div>
+
     </div>
   );
 }

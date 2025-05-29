@@ -1,82 +1,139 @@
-import React, { useRef, useEffect } from 'react';
-import * as d3 from 'd3';
+import React, { useRef, useEffect, useState } from "react";
+import * as d3 from "d3";
 
-export default function ScatterPlot({ items, selectedItem, setSelectedItem, TYPE_COLORS }) {
-    const ref = useRef();
+/**
+ * ScatterPlot
+ * @param {Array} items - Array of data points, each with { x, y, speed, name, type, color? }
+ * @param {Object} selectedPokemon - The selected Pokémon object (must have .stat.spe)
+ * @param {string} selectedItem - Name of the currently selected Pokémon (for detail)
+ * @param {function} setSelectedItem - Setter for selectedItem
+ * @param {boolean} showMove - Whether to show move name in tooltip
+ */
+export default function ScatterPlot({
+  items,
+  selectedPokemon,
+  selectedItem,
+  setSelectedItem,
+  showMove = false,
+}) {
+  const ref = useRef();
+  const [hoveredItem, setHoveredItem] = useState(null);
 
-    useEffect(() => {
-        const svg = d3.select(ref.current);
-        svg.selectAll('*').remove(); // Clear SVG content before redrawing
+  useEffect(() => {
+    const svg = d3.select(ref.current);
+    svg.selectAll("*").remove();
 
-        if (!items || items.length === 0) return;
+    if (!items || items.length === 0 || !selectedPokemon) return;
 
-        // 1. Define chart dimensions
-        const width = 500;
-        const height = 300;
-        const marginTop = 20;
-        const marginBottom = 20;
-        const marginLeft = 40;
-        const marginRight = 20;
+    // Chart dimensions
+    const width = 450;
+    const height = 450;
+    const marginTop = 60;
+    const marginBottom = 40;
+    const marginLeft = 50;
+    const marginRight = 20;
 
-        // 2. Set up scales
-        const x = d3.scaleLinear()
-            .domain([0, 5]) // Damage count
-            .range([marginLeft, width - marginRight]);
+    const x = d3.scaleLinear().domain([0, 5]).range([marginLeft, width - marginRight]);
+    const y = d3.scaleLinear().domain([0, 5]).range([height - marginBottom, marginTop]);
 
-        const y = d3.scaleLinear()
-            .domain([0, 200]) // Pokemon speed
-            .range([height - marginBottom, marginTop]);
+    svg.attr("width", width).attr("height", height);
 
-        svg.attr('width', width).attr('height', height);
+    svg.append("g")
+      .attr("transform", `translate(0, ${height - marginBottom})`)
+      .call(d3.axisBottom(x).ticks(6))
+      .append("text")
+      .attr("x", width / 2)
+      .attr("y", 35)
+      .attr("fill", "#222")
+      .attr("text-anchor", "middle")
+      .attr("font-size", 14)
+      .text("Hits to KO Selected Pokémon");
 
-        // 3. Render axes
-        svg.append('g')
-            .attr('transform', `translate(0, ${height - marginBottom})`)
-            .call(d3.axisBottom(x).ticks(6));
+    svg.append("g")
+      .attr("transform", `translate(${marginLeft}, 0)`)
+      .call(d3.axisLeft(y).ticks(6))
+      .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("x", -height / 2)
+      .attr("y", -38)
+      .attr("fill", "#222")
+      .attr("text-anchor", "middle")
+      .attr("font-size", 14)
+      .text("Hits each Pokémon can endure from selected move");
 
-        svg.append('g')
-            .attr('transform', `translate(${marginLeft}, 0)`)
-            .call(d3.axisLeft(y));
+    const pointsGroup = svg.append("g").attr("class", "datapoints");
 
-        // 4. Plot data points
-        const dataPoints = svg.append('g')
-            .selectAll('g')
-            .data(items)
-            .join('g')
-            .attr('class', 'datapoint')
-            .attr('fill', d => TYPE_COLORS[d.type])
-            .attr('transform', d => `translate(${x(d.count)}, ${y(d.speed)})`);
+    pointsGroup.selectAll("circle")
+      .data(items)
+      .join("circle")
+      .attr("cx", (d) => x(d.x))
+      .attr("cy", (d) => y(d.y))
+      .attr("r", 5)
+      .attr("fill", (d) =>
+        d.speed > selectedPokemon.stat.spe ? "green" : "red"
+      )
+      .attr("stroke", (d) =>
+        d.name === selectedItem ? "#222" : "white"
+      )
+      .attr("stroke-width", (d) => (d.name === selectedItem ? 2 : 1))
+      .style("cursor", "pointer")
+      .on("click", (event, d) => {
+        setSelectedItem(d.name === selectedItem ? null : d.name);
+      })
+      .on("mouseenter", (event, d) => {
+        setHoveredItem(d);
+      })
+      .on("mouseleave", () => {
+        setHoveredItem(null);
+      });
 
-        dataPoints.append('circle')
-            .attr('r', 3)
-            .style('cursor', 'pointer')
-            .on('click', (event, d) => {
-                // Toggle selection on click
-                setSelectedItem(d.name === selectedItem ? null : d.name);
-            });
+    // Tooltip group
+    svg.selectAll(".tooltip-group").remove();
+    const tooltipGroup = svg.append("g").attr("class", "tooltip-group");
 
-        // 5. Display tooltips for selected points
-        const tooltips = dataPoints.append('g')
-            .attr('class', d => (selectedItem === d.name ? 'display' : 'hide'))
-            .style('pointer-events', 'none');
+    if (hoveredItem) {
+      const tx = x(hoveredItem.x);
+      const ty = y(hoveredItem.y) - 30;
 
-        tooltips.append('rect')
-            .attr('x', -30)
-            .attr('y', -20)
-            .attr('width', 60)
-            .attr('height', 20)
-            .attr('fill', 'black')
-            .attr('rx', 5);
+      const tooltip = tooltipGroup
+        .append("g")
+        .attr("transform", `translate(${tx}, ${ty})`);
 
-        tooltips.append('text')
-            .attr('x', 0)
-            .attr('y', -10)
-            .attr('text-anchor', 'middle')
-            .attr('font-size', '10px')
-            .attr('fill', 'white')
-            .text(d => d.name);
+      const nameText = tooltip
+        .append("text")
+        .text(hoveredItem.name)
+        .attr("text-anchor", "middle")
+        .attr("font-size", 13)
+        .attr("fill", "white")
+        .attr("y", 0)
+        .style("font-weight", "bold");
 
-    }, [items, selectedItem, setSelectedItem, TYPE_COLORS]);
+      let moveText = null;
+      if (showMove && hoveredItem.bestMove) {
+        moveText = tooltip
+          .append("text")
+          .text(hoveredItem.bestMove)
+          .attr("text-anchor", "middle")
+          .attr("font-size", 11)
+          .attr("fill", "white")
+          .attr("y", 16);
+      }
 
-    return <svg ref={ref} />;
+      const nameBBox = nameText.node().getBBox();
+      const moveBBox = moveText ? moveText.node().getBBox() : { width: 0, height: 0 };
+      const boxWidth = Math.max(nameBBox.width, moveBBox.width) + 12;
+      const boxHeight = nameBBox.height + (moveBBox ? moveBBox.height : 0) + 12;
+
+      tooltip
+        .insert("rect", "text")
+        .attr("x", -boxWidth / 2)
+        .attr("y", -nameBBox.height - 1.5)
+        .attr("width", boxWidth)
+        .attr("height", boxHeight)
+        .attr("rx", 5)
+        .attr("fill", "black");
+    }
+  }, [items, selectedItem, hoveredItem, setSelectedItem, showMove, selectedPokemon]);
+
+  return <svg ref={ref} />;
 }
