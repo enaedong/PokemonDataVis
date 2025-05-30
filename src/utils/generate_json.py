@@ -85,7 +85,7 @@ def generate_usage_json(month="2025-04", format="gen9bssregi-", rating="1500", o
             return
 
         usage_data = []
-        for line in usage_lines[start_index:378]:
+        for line in usage_lines[start_index:]:
             if not line.strip():
                 break
 
