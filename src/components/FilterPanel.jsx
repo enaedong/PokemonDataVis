@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 export default function FilterPanel({ selectedMove, setSelectedMove, selectedPokemon, moveList }) {
+
   // 타입 체크박스
   const [typeAll, setTypeAll] = useState(false);
   const [typeChecks, setTypeChecks] = useState(Array(18).fill(false));
@@ -8,7 +9,7 @@ export default function FilterPanel({ selectedMove, setSelectedMove, selectedPok
   const [weatherChecks, setWeatherChecks] = useState(Array(4).fill(false));
   // 랭크 슬라이더
   const [ranks, setRanks] = useState(Array(6).fill(0));
-
+ 
   return (
     <>
       {/* 타입 체크박스 */}

@@ -7,9 +7,9 @@ def normalize_name(name: str) -> str:
     # Smogon usage file uses dashes, lowercase, no dots/apostrophes
     return name.lower().replace(" ", "-").replace(".", "").replace("'", "")
 
-def extract_moves(moveset_text):
+def extract_pokemon_info(data_text):
     # Split on +----...+ lines to get blocks
-    blocks = re.split(r'\+[-]+\+', moveset_text)
+    blocks = re.split(r'\+[-]+\+', data_text)
     pokemon_data = {}
 
     # Build mapping: Pokémon name -> list of section blocks
@@ -29,14 +29,16 @@ def extract_moves(moveset_text):
                 j += 1
             pokemon_data[pokemon_name] = sections
 
-    # Extract all moves (except "Other") for each Pokémon, only if used > 10%
-    all_moves = {}
+    all_info = {}
     for pokemon_name, sections in pokemon_data.items():
         moves = {}
+        ability = None
+        item = None
+
         for section in sections:
+            lines = section.splitlines()
             if section.startswith('| Moves') or section.startswith('|Moves'):
-                lines = section.splitlines()
-                for line in lines[1:]:  # skip the header
+                for line in lines[1:]:
                     line = line.strip().strip('|').strip()
                     if line.endswith('%'):
                         parts = line.rsplit(' ', 1)
@@ -50,10 +52,35 @@ def extract_moves(moveset_text):
                                     moves[move_name] = percent
                             except ValueError:
                                 pass
-        normalized_name = normalize_name(pokemon_name)
-        all_moves[normalized_name] = moves
 
-    return all_moves
+            elif section.startswith('| Abilities') or section.startswith('|Abilities'):
+                for line in lines[1:]:
+                    line = line.strip().strip('|').strip()
+                    if line.endswith('%'):
+                        parts = line.rsplit(' ', 1)
+                        if len(parts) == 2:
+                            ability_name, _ = parts
+                            ability = ability_name
+                            break  # take only the most used one
+
+            elif section.startswith('| Items') or section.startswith('|Items'):
+                for line in lines[1:]:
+                    line = line.strip().strip('|').strip()
+                    if line.endswith('%'):
+                        parts = line.rsplit(' ', 1)
+                        if len(parts) == 2:
+                            item_name, _ = parts
+                            item = item_name
+                            break  # take only the most used one
+
+        normalized_name = normalize_name(pokemon_name)
+        all_info[normalized_name] = {
+            "moves": moves,
+            "ability": ability,
+            "item": item
+        }
+
+    return all_info
 
 def generate_usage_json(month="2025-04", format="gen9bssregi-", rating="1500", output_file="public/usage.json"):
     usage_url = f"https://www.smogon.com/stats/{month}/{format}{rating}.txt"
@@ -68,10 +95,10 @@ def generate_usage_json(month="2025-04", format="gen9bssregi-", rating="1500", o
         # Fetch moveset data
         moveset_response = requests.get(moveset_url)
         moveset_response.raise_for_status()
-        moveset_text = moveset_response.text
+        data_text = moveset_response.text
 
         # Extract all moves from moveset text
-        all_moves = extract_moves(moveset_text)
+        all_info = extract_pokemon_info(data_text)
 
         # Parse usage data block
         start_index = None
@@ -85,7 +112,7 @@ def generate_usage_json(month="2025-04", format="gen9bssregi-", rating="1500", o
             return
 
         usage_data = []
-        for line in usage_lines[start_index:378]:
+        for line in usage_lines[start_index:]:
             if not line.strip():
                 break
 
@@ -95,13 +122,18 @@ def generate_usage_json(month="2025-04", format="gen9bssregi-", rating="1500", o
                 name = columns[2].strip()
                 usage = float(columns[3].strip().replace('%', ''))
                 safe_name = normalize_name(name)
-                moves = all_moves.get(safe_name, {})
+                info = all_info.get(safe_name, {})
+                moves = info.get("moves", {})
+                ability = info.get("ability", None)
+                item = info.get("item", None)
                 usage_data.append({
                     "rank": rank,
                     "name": name,
                     "safe_name": safe_name,
                     "usage": round(usage, 1),
-                    "moves": moves  # <--- all moves except "Other"
+                    "ability": ability,
+                    "item": item,
+                    "moves": moves
                 })
 
         os.makedirs(os.path.dirname(output_file), exist_ok=True)
