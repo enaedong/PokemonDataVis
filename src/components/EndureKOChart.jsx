@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Generations, toID } from "@smogon/calc";
 import ScatterPlot from "./ScatterPlot";
 import HitCount from "../utils/HitCount";
+import HitCountSmogon from "./HitCountSmogon";
 import { EndureKOData } from "../utils/moveHelpers";
-
-const gen = Generations.get(9);
 
 export default function EndureKOChart({ selectedPokemon, dexData, usageData, selectedMove, selectedItem, setSelectedItem }) {
   const [typeChart, setTypeChart] = useState(null);
@@ -26,7 +24,7 @@ export default function EndureKOChart({ selectedPokemon, dexData, usageData, sel
       usageData,
       typeChart,
       selectedMove,
-      hitCountFn: HitCount,
+      hitCountFn: HitCountSmogon,
     });
     setScatterItems(data);
   }, [selectedPokemon, dexData, usageData, typeChart, selectedMove]);

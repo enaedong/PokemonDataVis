@@ -26,6 +26,7 @@ export default function PokemonDetails({
         <strong>Abilities:</strong>{" "}
         {pokeDetail.abilities.map((a) => a.ability.name).join(", ")}
       </div>
+      
       <div>
         <strong>Most Used Moves:</strong>{" "}
         {selected.moves ? (

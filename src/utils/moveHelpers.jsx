@@ -32,7 +32,7 @@ export function getBestMove(attacker, moveMap, target, typeChart, hitCountFn) {
     const effectiveness = getEffectiveness(typeChart, move.type, target.type);
     if (effectiveness === 0) continue;
 
-    const hits = hitCountFn(true, target, attacker, move.basePower, effectiveness);
+    const hits = hitCountFn(true, target, attacker, move.basePower, effectiveness, move);
 
     if (!best.name || hits < best.hits || (hits === best.hits && move.basePower > best.basePower)) {
       best = { ...move, eff: effectiveness, hits, name: move.name };
@@ -59,7 +59,7 @@ export function EndureKOData({ selectedPokemon, dexData, usageData, typeChart, s
       : { name: null, hits: 5 };
 
     const effY = getEffectiveness(typeChart, selectedMoveDetails.type, poke.type);
-    const y = hitCountFn(false, poke, selectedDex, selectedMoveDetails.basePower, effY);
+    const y = hitCountFn(true, poke, selectedDex, selectedMoveDetails.basePower, effY, selectedMoveDetails);
 
     return {
       name: poke.name,
