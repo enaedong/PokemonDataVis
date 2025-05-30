@@ -5590,5 +5590,1027 @@
       "Rest": 21.704,
       "Drain Punch": 20.04
     }
+  },
+  {
+    "rank": 374,
+    "name": "Rabsca",
+    "safe_name": "rabsca",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 375,
+    "name": "Ariados",
+    "safe_name": "ariados",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 376,
+    "name": "Furret",
+    "safe_name": "furret",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 377,
+    "name": "Gogoat",
+    "safe_name": "gogoat",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 378,
+    "name": "Eiscue",
+    "safe_name": "eiscue",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 379,
+    "name": "Dodrio",
+    "safe_name": "dodrio",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 380,
+    "name": "Slaking",
+    "safe_name": "slaking",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 381,
+    "name": "Magmar",
+    "safe_name": "magmar",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 382,
+    "name": "Bellibolt",
+    "safe_name": "bellibolt",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 383,
+    "name": "Sunkern",
+    "safe_name": "sunkern",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 384,
+    "name": "Hattrem",
+    "safe_name": "hattrem",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 385,
+    "name": "Glimmet",
+    "safe_name": "glimmet",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 386,
+    "name": "Glaceon",
+    "safe_name": "glaceon",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 387,
+    "name": "Braviary-Hisui",
+    "safe_name": "braviary-hisui",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 388,
+    "name": "Dipplin",
+    "safe_name": "dipplin",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 389,
+    "name": "Azurill",
+    "safe_name": "azurill",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 390,
+    "name": "Toucannon",
+    "safe_name": "toucannon",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 391,
+    "name": "Minior",
+    "safe_name": "minior",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 392,
+    "name": "Palossand",
+    "safe_name": "palossand",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 393,
+    "name": "Yanmega",
+    "safe_name": "yanmega",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 394,
+    "name": "Mudsdale",
+    "safe_name": "mudsdale",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 395,
+    "name": "Muk",
+    "safe_name": "muk",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 396,
+    "name": "Cetitan",
+    "safe_name": "cetitan",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 397,
+    "name": "Camerupt",
+    "safe_name": "camerupt",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 398,
+    "name": "Alcremie",
+    "safe_name": "alcremie",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 399,
+    "name": "Braviary",
+    "safe_name": "braviary",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 400,
+    "name": "Bruxish",
+    "safe_name": "bruxish",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 401,
+    "name": "Necrozma",
+    "safe_name": "necrozma",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 402,
+    "name": "Mightyena",
+    "safe_name": "mightyena",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 403,
+    "name": "Hitmonchan",
+    "safe_name": "hitmonchan",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 404,
+    "name": "Illumise",
+    "safe_name": "illumise",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 405,
+    "name": "Dedenne",
+    "safe_name": "dedenne",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 406,
+    "name": "Mandibuzz",
+    "safe_name": "mandibuzz",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 407,
+    "name": "Flapple",
+    "safe_name": "flapple",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 408,
+    "name": "Luxray",
+    "safe_name": "luxray",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 409,
+    "name": "Magcargo",
+    "safe_name": "magcargo",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 410,
+    "name": "Copperajah",
+    "safe_name": "copperajah",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 411,
+    "name": "Pichu",
+    "safe_name": "pichu",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 412,
+    "name": "Pincurchin",
+    "safe_name": "pincurchin",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 413,
+    "name": "Misdreavus",
+    "safe_name": "misdreavus",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 414,
+    "name": "Kricketune",
+    "safe_name": "kricketune",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 415,
+    "name": "Sunflora",
+    "safe_name": "sunflora",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 416,
+    "name": "Electabuzz",
+    "safe_name": "electabuzz",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 417,
+    "name": "Grumpig",
+    "safe_name": "grumpig",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 418,
+    "name": "Kyurem",
+    "safe_name": "kyurem",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 419,
+    "name": "Mesprit",
+    "safe_name": "mesprit",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 420,
+    "name": "Bombirdier",
+    "safe_name": "bombirdier",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 421,
+    "name": "Rotom-Frost",
+    "safe_name": "rotom-frost",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 422,
+    "name": "Flareon",
+    "safe_name": "flareon",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 423,
+    "name": "Uxie",
+    "safe_name": "uxie",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 424,
+    "name": "Wartortle",
+    "safe_name": "wartortle",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 425,
+    "name": "Deino",
+    "safe_name": "deino",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 426,
+    "name": "Shroomish",
+    "safe_name": "shroomish",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 427,
+    "name": "Bagon",
+    "safe_name": "bagon",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 428,
+    "name": "Banette",
+    "safe_name": "banette",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 429,
+    "name": "Tinkatuff",
+    "safe_name": "tinkatuff",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 430,
+    "name": "Fletchinder",
+    "safe_name": "fletchinder",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 431,
+    "name": "Honchkrow",
+    "safe_name": "honchkrow",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 432,
+    "name": "Probopass",
+    "safe_name": "probopass",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 433,
+    "name": "Sinistea",
+    "safe_name": "sinistea",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 434,
+    "name": "Fletchling",
+    "safe_name": "fletchling",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 435,
+    "name": "Skuntank",
+    "safe_name": "skuntank",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 436,
+    "name": "Brambleghast",
+    "safe_name": "brambleghast",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 437,
+    "name": "Sandslash",
+    "safe_name": "sandslash",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 438,
+    "name": "Froslass",
+    "safe_name": "froslass",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 439,
+    "name": "Girafarig",
+    "safe_name": "girafarig",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 440,
+    "name": "Slowbro",
+    "safe_name": "slowbro",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 441,
+    "name": "Vulpix-Alola",
+    "safe_name": "vulpix-alola",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 442,
+    "name": "Floatzel",
+    "safe_name": "floatzel",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 443,
+    "name": "Poltchageist",
+    "safe_name": "poltchageist",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 444,
+    "name": "Komala",
+    "safe_name": "komala",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 445,
+    "name": "Minun",
+    "safe_name": "minun",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 446,
+    "name": "Plusle",
+    "safe_name": "plusle",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 447,
+    "name": "Sneasel-Hisui",
+    "safe_name": "sneasel-hisui",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 448,
+    "name": "Swanna",
+    "safe_name": "swanna",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 449,
+    "name": "Torracat",
+    "safe_name": "torracat",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 450,
+    "name": "Arbok",
+    "safe_name": "arbok",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 451,
+    "name": "Wooper",
+    "safe_name": "wooper",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 452,
+    "name": "Pineco",
+    "safe_name": "pineco",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 453,
+    "name": "Rowlet",
+    "safe_name": "rowlet",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 454,
+    "name": "Nosepass",
+    "safe_name": "nosepass",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 455,
+    "name": "Drednaw",
+    "safe_name": "drednaw",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 456,
+    "name": "Squirtle",
+    "safe_name": "squirtle",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 457,
+    "name": "Noibat",
+    "safe_name": "noibat",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 458,
+    "name": "Drowzee",
+    "safe_name": "drowzee",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 459,
+    "name": "Trapinch",
+    "safe_name": "trapinch",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 460,
+    "name": "Electrode",
+    "safe_name": "electrode",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 461,
+    "name": "Seviper",
+    "safe_name": "seviper",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 462,
+    "name": "Sudowoodo",
+    "safe_name": "sudowoodo",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 463,
+    "name": "Crabominable",
+    "safe_name": "crabominable",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 464,
+    "name": "Vileplume",
+    "safe_name": "vileplume",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 465,
+    "name": "Cacturne",
+    "safe_name": "cacturne",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 466,
+    "name": "Braixen",
+    "safe_name": "braixen",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 467,
+    "name": "Gothorita",
+    "safe_name": "gothorita",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 468,
+    "name": "Grovyle",
+    "safe_name": "grovyle",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 469,
+    "name": "Luvdisc",
+    "safe_name": "luvdisc",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 470,
+    "name": "Oricorio-Pa'u",
+    "safe_name": "oricorio-pau",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 471,
+    "name": "Oinkologne-F",
+    "safe_name": "oinkologne-f",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 472,
+    "name": "Gloom",
+    "safe_name": "gloom",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 473,
+    "name": "Rotom-Fan",
+    "safe_name": "rotom-fan",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 474,
+    "name": "Lumineon",
+    "safe_name": "lumineon",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 475,
+    "name": "Magmortar",
+    "safe_name": "magmortar",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 476,
+    "name": "Tepig",
+    "safe_name": "tepig",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 477,
+    "name": "Snom",
+    "safe_name": "snom",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 478,
+    "name": "Dragonair",
+    "safe_name": "dragonair",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 479,
+    "name": "Dewott",
+    "safe_name": "dewott",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 480,
+    "name": "Thwackey",
+    "safe_name": "thwackey",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 481,
+    "name": "Monferno",
+    "safe_name": "monferno",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 482,
+    "name": "Wugtrio",
+    "safe_name": "wugtrio",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 483,
+    "name": "Persian",
+    "safe_name": "persian",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 484,
+    "name": "Inkay",
+    "safe_name": "inkay",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 485,
+    "name": "Snivy",
+    "safe_name": "snivy",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 486,
+    "name": "Dewgong",
+    "safe_name": "dewgong",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 487,
+    "name": "Smoliv",
+    "safe_name": "smoliv",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 488,
+    "name": "Seedot",
+    "safe_name": "seedot",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 489,
+    "name": "Samurott",
+    "safe_name": "samurott",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 490,
+    "name": "Whiscash",
+    "safe_name": "whiscash",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 491,
+    "name": "Gligar",
+    "safe_name": "gligar",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 492,
+    "name": "Noctowl",
+    "safe_name": "noctowl",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 493,
+    "name": "Delibird",
+    "safe_name": "delibird",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 494,
+    "name": "Charjabug",
+    "safe_name": "charjabug",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 495,
+    "name": "Cosmog",
+    "safe_name": "cosmog",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 496,
+    "name": "Spoink",
+    "safe_name": "spoink",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 497,
+    "name": "Houndoom",
+    "safe_name": "houndoom",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 498,
+    "name": "Venomoth",
+    "safe_name": "venomoth",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 499,
+    "name": "Hypno",
+    "safe_name": "hypno",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 500,
+    "name": "Oricorio-Sensu",
+    "safe_name": "oricorio-sensu",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 501,
+    "name": "Piloswine",
+    "safe_name": "piloswine",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 502,
+    "name": "Haunter",
+    "safe_name": "haunter",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 503,
+    "name": "Flygon",
+    "safe_name": "flygon",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 504,
+    "name": "Teddiursa",
+    "safe_name": "teddiursa",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 505,
+    "name": "Grookey",
+    "safe_name": "grookey",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 506,
+    "name": "Gothita",
+    "safe_name": "gothita",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 507,
+    "name": "Magnemite",
+    "safe_name": "magnemite",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 508,
+    "name": "Brionne",
+    "safe_name": "brionne",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 509,
+    "name": "Dartrix",
+    "safe_name": "dartrix",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 510,
+    "name": "Servine",
+    "safe_name": "servine",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 511,
+    "name": "Mudbray",
+    "safe_name": "mudbray",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 512,
+    "name": "Graveler-Alola",
+    "safe_name": "graveler-alola",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 513,
+    "name": "Bronzor",
+    "safe_name": "bronzor",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 514,
+    "name": "Drilbur",
+    "safe_name": "drilbur",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 515,
+    "name": "Vespiquen",
+    "safe_name": "vespiquen",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 516,
+    "name": "Carkol",
+    "safe_name": "carkol",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 517,
+    "name": "Drakloak",
+    "safe_name": "drakloak",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 518,
+    "name": "Starly",
+    "safe_name": "starly",
+    "usage": 0.0,
+    "moves": {}
+  },
+  {
+    "rank": 519,
+    "name": "Calyrex",
+    "safe_name": "calyrex",
+    "usage": 0.0,
+    "moves": {}
   }
 ]

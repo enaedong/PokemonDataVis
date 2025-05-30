@@ -127,6 +127,14 @@ export default function App() {
     ? { ...selectedDex, moves: selectedUsage?.moves || {} }
     : null;
 
+  // 카운터 포켓몬 정보
+  const selectedItemUsage = usage.find((p) => p.name === selectedItem);
+  const selectedItemDex = dex.find((p) => p.name === selectedItem);
+
+  const selectedItemPokemon = selectedItemDex
+    ? { ...selectedItemDex, moves: selectedItemUsage?.moves || {} }
+    : null;
+
   useEffect(() => {
     if (!selectedPokemon?.moves) {
       if (moveList.length > 0) setMoveList([]);
@@ -148,7 +156,6 @@ export default function App() {
       setMoveList(validMoves);
       setSelectedMove(validMoves.length > 0 ? validMoves[0] : null);
     }
-
   }, [selectedPokemon, moveList, selectedMove]);
 
   /////////////////////////////// return ////////////////////////////////
@@ -224,13 +231,12 @@ export default function App() {
       <div className="scatter-detail-section" id="scatter-detail">
         <h2>Counter Pokémon Details</h2>
         <PokemonDetails
-          selected={selectedItem ? { name: selectedItem } : null}
+          selected={selectedItemPokemon}
           pokeDetail={selectedItemDetail}
           pokeStats={selectedItemStats}
           loading={selectedItemLoading}
         />
       </div>
-
     </div>
   );
 }

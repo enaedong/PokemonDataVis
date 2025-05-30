@@ -3,14 +3,16 @@ body {
   background: #f7f7f7;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .container {
   display: flex;
   align-items: flex-start;
   max-width: 2000px;
-  height: 90vh;
+  height: auto;
+  min-height: 100vh;
+  flex-wrap: wrap;
   margin: 40px auto;
   background: #fff;
   border-radius: 14px;
@@ -23,8 +25,8 @@ body {
   padding: 32px 24px;
   max-width: 400px;
   border-right: 1px solid #e0e0e0;
-  height: 90vh;
-  /* Set fixed height */
+  height: auto;
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -34,16 +36,17 @@ body {
   padding: 32px 24px;
   max-width: 200px;
   border-right: 1px solid #e0e0e0;
-  height: 90vh; /* Set fixed height */
+  height: auto;
+  max-height: 100vh;
   background: #fcfcfc;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .charts-section {
   flex: 2;
   padding: 32px 24px;
-  height: 90vh;
-  /* Set fixed height */
+  height: auto;
+  max-height: 100vh;
 }
 
 .chart-buttons-row {
@@ -251,8 +254,9 @@ body {
 #radar-chart {
   margin: 0 auto 14px auto;
   display: block;
-  width: 260px;
-  height: 260px;
+  width: 100%;
+  max-width: 260px;
+  height: auto;
 }
 
 .dropdown-btn-wrapper {
@@ -322,6 +326,9 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
+  max-width: 250px;
+  height: auto;
 }
 
 .datapoint circle {
@@ -340,15 +347,18 @@ body {
   flex: 1;
   padding: 32px 24px;
   max-width: 400px;
-  height: 90vh;
+  height: auto;
+  min-height: 300px;
+  max-height: none;
   border-left: 1px solid #e0e0e0;
   background: #fcfcfc;
   overflow-y: auto;
 }
 
 .scatter-detail-section img {
-  width: 250px;
-  height: 250px;
+  width: 100%;
+  max-width: 250px;
+  height: auto;
   margin-bottom: 12px;
   display: block;
   margin-left: auto;
@@ -372,8 +382,9 @@ body {
 }
 
 .usage-section img {
-  width: 250px;
-  height: 250px;
+  width: 100%;
+  max-width: 250px;
+  height: auto;
   margin-bottom: 12px;
   display: block;
   margin-left: auto;
@@ -423,4 +434,32 @@ body {
 
 .move-select-group label {
   font-weight: 500;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .usage-section,
+  .stats-section,
+  .charts-section,
+  .scatter-detail-section {
+    max-width: 100%;
+    border: none;
+    padding: 16px;
+  }
+
+  .usage-section,
+  .scatter-detail-section {
+    order: 1;
+  }
+
+  .charts-section {
+    order: 2;
+  }
+
+  .stats-section {
+    order: 3;
+  }
 }

@@ -2,7 +2,12 @@ import TypeBoxes from "./TypeBoxes";
 import RadarChart from "./RadarChart";
 import MoveBoxes from "./MoveBoxes";
 
-export default function PokemonDetails({ selected, pokeDetail, pokeStats, loading }) {
+export default function PokemonDetails({
+  selected,
+  pokeDetail,
+  pokeStats,
+  loading,
+}) {
   if (!selected) return <h2>Select a Pokémon to see stats.</h2>;
   if (loading) return <div>Loading...</div>;
   if (!pokeDetail) return <div>Error loading data.</div>;
@@ -19,6 +24,10 @@ export default function PokemonDetails({ selected, pokeDetail, pokeStats, loadin
       </div>
       <div>
         <strong>Abilities:</strong>{" "}
+        {pokeDetail.abilities.map((a) => a.ability.name).join(", ")}
+      </div>
+      <div>
+        <strong>Most Used Moves:</strong>{" "}
         {selected.moves ? (
           <MoveBoxes
             moveNames={Object.keys(selected.moves)}
@@ -28,10 +37,10 @@ export default function PokemonDetails({ selected, pokeDetail, pokeStats, loadin
           <div>N/A</div>
         )}
       </div>
-      <ul>
+      <div>
         <strong>Base Stats:</strong>
-      </ul>
-      {pokeStats && <RadarChart statsObj={pokeStats} />}
+        {pokeStats && <RadarChart statsObj={pokeStats} />}
+      </div>
     </div>
   );
 }
