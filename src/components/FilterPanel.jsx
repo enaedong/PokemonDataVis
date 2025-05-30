@@ -1,10 +1,22 @@
 import React, { useState } from "react";
+import atkType from "../../public/atkType.json";
 
-export default function FilterPanel({ selectedMove, setSelectedMove, selectedPokemon, moveList }) {
+export default function FilterPanel({ 
+  selectedMove, 
+  setSelectedMove, 
+  selectedPokemon, 
+  moveList, 
+  typeChecks, 
+  setTypeChecks, 
+  typeAll, 
+  setTypeAll, 
+  typeNames, 
+}) {
 
   // 타입 체크박스
-  const [typeAll, setTypeAll] = useState(false);
-  const [typeChecks, setTypeChecks] = useState(Array(18).fill(false));
+  // const [typeAll, setTypeAll] = useState(false);
+  // const [typeChecks, setTypeChecks] = useState(Array(18).fill(false));
+  // const typeNames = Object.keys(atkType);
   // 날씨 체크박스
   const [weatherChecks, setWeatherChecks] = useState(Array(4).fill(false));
   // 랭크 슬라이더
@@ -15,15 +27,33 @@ export default function FilterPanel({ selectedMove, setSelectedMove, selectedPok
     <>
       {/* 타입 체크박스 */}
       <div style={{ marginBottom: 24 }}>
-        <div style={{ marginBottom: 8 }}>
-          <label style={{ fontWeight: 'bold', marginRight: 12 }}>
-            <input type="checkbox" checked={typeAll} onChange={e => setTypeAll(e.target.checked)} style={{ marginRight: 6 }} />
-            모두
+        <div style={{ marginBottom: 8 , marginLeft: 17}}>
+          <label style={{ fontWeight: 'bold', fontSize: "0.8em", marginRight: 12, cursor: "pointer" }}>
+            <input
+              type="checkbox"
+              checked={typeAll}
+              onChange={e => {
+                const checked = e.target.checked;
+                setTypeAll(checked);
+                setTypeChecks(Array(typeNames.length).fill(checked));
+              }}
+              style={{ marginRight: 6, cursor: "pointer" }}
+            />
+            All
           </label>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }}>
-          {Array.from({ length: 18 }).map((_, i) => (
-            <label key={i} style={{ fontWeight: 'bold' }}>
+          {typeNames.map((type, i) => (
+            <label
+              key={i}
+              style={{
+                fontWeight: 'bold',
+                fontSize: '0.8em',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center'
+              }}
+            >
               <input
                 type="checkbox"
                 checked={typeChecks[i]}
@@ -32,9 +62,9 @@ export default function FilterPanel({ selectedMove, setSelectedMove, selectedPok
                   arr[i] = e.target.checked;
                   setTypeChecks(arr);
                 }}
-                style={{ marginRight: 6 }}
+                style={{ marginRight: 0, marginBottom: 2, cursor: 'pointer' }} // Add cursor pointer
               />
-              타입{i + 1}
+              <span>{type}</span>
             </label>
           ))}
         </div>
