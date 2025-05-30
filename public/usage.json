@@ -4,8 +4,13 @@
     "name": "Calyrex-Shadow",
     "safe_name": "calyrex-shadow",
     "usage": 38.6,
-    "ability": "As One (Spectrier)",
-    "item": "Focus Sash",
+    "ability": [
+      "As One (Spectrier)"
+    ],
+    "items": {
+      "Focus Sash": 34.3,
+      "Choice Scarf": 31.301
+    },
     "moves": {
       "Astral Barrage": 97.312,
       "Trick": 34.535,
@@ -24,8 +29,14 @@
     "name": "Flutter Mane",
     "safe_name": "flutter-mane",
     "usage": 32.6,
-    "ability": "Protosynthesis",
-    "item": "Booster Energy",
+    "ability": [
+      "Protosynthesis"
+    ],
+    "items": {
+      "Booster Energy": 40.023,
+      "Focus Sash": 27.805,
+      "Choice Specs": 26.76
+    },
     "moves": {
       "Moonblast": 93.192,
       "Shadow Ball": 50.73,
@@ -42,8 +53,13 @@
     "name": "Ting-Lu",
     "safe_name": "ting-lu",
     "usage": 31.1,
-    "ability": "Vessel of Ruin",
-    "item": "Sitrus Berry",
+    "ability": [
+      "Vessel of Ruin"
+    ],
+    "items": {
+      "Sitrus Berry": 51.141,
+      "Assault Vest": 24.738
+    },
     "moves": {
       "Earthquake": 80.723,
       "Stealth Rock": 72.109,
@@ -58,8 +74,12 @@
     "name": "Chien-Pao",
     "safe_name": "chien-pao",
     "usage": 29.7,
-    "ability": "Sword of Ruin",
-    "item": "Focus Sash",
+    "ability": [
+      "Sword of Ruin"
+    ],
+    "items": {
+      "Focus Sash": 63.856
+    },
     "moves": {
       "Icicle Crash": 89.168,
       "Sucker Punch": 79.991,
@@ -75,8 +95,12 @@
     "name": "Miraidon",
     "safe_name": "miraidon",
     "usage": 25.1,
-    "ability": "Hadron Engine",
-    "item": "Choice Scarf",
+    "ability": [
+      "Hadron Engine"
+    ],
+    "items": {
+      "Choice Scarf": 37.035
+    },
     "moves": {
       "Electro Drift": 86.74,
       "Draco Meteor": 75.186,
@@ -92,8 +116,13 @@
     "name": "Koraidon",
     "safe_name": "koraidon",
     "usage": 24.9,
-    "ability": "Orichalcum Pulse",
-    "item": "Assault Vest",
+    "ability": [
+      "Orichalcum Pulse"
+    ],
+    "items": {
+      "Assault Vest": 26.67,
+      "Loaded Dice": 25.726
+    },
     "moves": {
       "Flare Blitz": 74.8,
       "Flame Charge": 51.844,
@@ -111,8 +140,15 @@
     "name": "Dondozo",
     "safe_name": "dondozo",
     "usage": 20.2,
-    "ability": "Unaware",
-    "item": "Leftovers",
+    "ability": [
+      "Unaware",
+      "Water Veil ",
+      "Oblivious "
+    ],
+    "items": {
+      "Leftovers": 59.973,
+      "Rocky Helmet": 29.99
+    },
     "moves": {
       "Wave Crash": 65.004,
       "Fissure": 62.627,
@@ -130,8 +166,12 @@
     "name": "Zacian-Crowned",
     "safe_name": "zacian-crowned",
     "usage": 19.8,
-    "ability": "Intrepid Sword",
-    "item": "Rusted Sword",
+    "ability": [
+      "Intrepid Sword"
+    ],
+    "items": {
+      "Rusted Sword": 100.0
+    },
     "moves": {
       "Iron Head": 99.781,
       "Play Rough": 67.876,
@@ -147,8 +187,14 @@
     "name": "Dragonite",
     "safe_name": "dragonite",
     "usage": 18.3,
-    "ability": "Multiscale",
-    "item": "Choice Band",
+    "ability": [
+      "Multiscale",
+      "Inner Focus "
+    ],
+    "items": {
+      "Choice Band": 34.198,
+      "Loaded Dice": 24.975
+    },
     "moves": {
       "Extreme Speed": 82.024,
       "Earthquake": 81.269,
@@ -165,8 +211,13 @@
     "name": "Ho-Oh",
     "safe_name": "ho-oh",
     "usage": 17.7,
-    "ability": "Regenerator",
-    "item": "Heavy-Duty Boots",
+    "ability": [
+      "Regenerator",
+      "Pressure "
+    ],
+    "items": {
+      "Heavy-Duty Boots": 68.802
+    },
     "moves": {
       "Sacred Fire": 96.209,
       "Recover": 80.129,
@@ -182,8 +233,15 @@
     "name": "Urshifu-Rapid-Strike",
     "safe_name": "urshifu-rapid-strike",
     "usage": 15.0,
-    "ability": "Unseen Fist",
-    "item": "Choice Band",
+    "ability": [
+      "Unseen Fist"
+    ],
+    "items": {
+      "Choice Band": 30.06,
+      "Focus Sash": 24.161,
+      "Choice Scarf": 21.027,
+      "Punching Glove": 20.401
+    },
     "moves": {
       "Surging Strikes": 99.435,
       "Close Combat": 78.654,
@@ -197,8 +255,12 @@
     "name": "Ursaluna-Bloodmoon",
     "safe_name": "ursaluna-bloodmoon",
     "usage": 14.4,
-    "ability": "Mind's Eye",
-    "item": "Assault Vest",
+    "ability": [
+      "Mind's Eye"
+    ],
+    "items": {
+      "Assault Vest": 39.542
+    },
     "moves": {
       "Blood Moon": 97.487,
       "Earth Power": 78.588,
@@ -213,8 +275,12 @@
     "name": "Kyogre",
     "safe_name": "kyogre",
     "usage": 14.2,
-    "ability": "Drizzle",
-    "item": "Choice Scarf",
+    "ability": [
+      "Drizzle"
+    ],
+    "items": {
+      "Choice Scarf": 31.607
+    },
     "moves": {
       "Thunder": 94.243,
       "Ice Beam": 93.995,
@@ -229,8 +295,13 @@
     "name": "Landorus-Therian",
     "safe_name": "landorus-therian",
     "usage": 13.8,
-    "ability": "Intimidate",
-    "item": "Assault Vest",
+    "ability": [
+      "Intimidate"
+    ],
+    "items": {
+      "Assault Vest": 34.961,
+      "Rocky Helmet": 32.074
+    },
     "moves": {
       "Earthquake": 97.247,
       "U-turn": 92.3,
@@ -245,8 +316,14 @@
     "name": "Ditto",
     "safe_name": "ditto",
     "usage": 11.1,
-    "ability": "Imposter",
-    "item": "Choice Scarf",
+    "ability": [
+      "Imposter",
+      "Limber "
+    ],
+    "items": {
+      "Choice Scarf": 55.611,
+      "Quick Claw": 28.393
+    },
     "moves": {
       "Nothing": 300.0,
       "Transform": 100.0
@@ -257,8 +334,12 @@
     "name": "Calyrex-Ice",
     "safe_name": "calyrex-ice",
     "usage": 9.6,
-    "ability": "As One (Glastrier)",
-    "item": "Leftovers",
+    "ability": [
+      "As One (Glastrier)"
+    ],
+    "items": {
+      "Leftovers": 39.966
+    },
     "moves": {
       "Glacial Lance": 91.329,
       "Trick Room": 57.682,
@@ -276,8 +357,14 @@
     "name": "Grimmsnarl",
     "safe_name": "grimmsnarl",
     "usage": 9.3,
-    "ability": "Prankster",
-    "item": "Light Clay",
+    "ability": [
+      "Prankster",
+      "Frisk ",
+      "Pickpocket "
+    ],
+    "items": {
+      "Light Clay": 83.174
+    },
     "moves": {
       "Spirit Break": 92.772,
       "Reflect": 85.79,
@@ -292,8 +379,12 @@
     "name": "Ogerpon-Hearthflame",
     "safe_name": "ogerpon-hearthflame",
     "usage": 8.6,
-    "ability": "Mold Breaker",
-    "item": "Hearthflame Mask",
+    "ability": [
+      "Mold Breaker"
+    ],
+    "items": {
+      "Hearthflame Mask": 100.0
+    },
     "moves": {
       "Ivy Cudgel": 99.976,
       "Horn Leech": 88.933,
@@ -306,8 +397,13 @@
     "name": "Gliscor",
     "safe_name": "gliscor",
     "usage": 8.4,
-    "ability": "Poison Heal",
-    "item": "Toxic Orb",
+    "ability": [
+      "Poison Heal",
+      "Hyper Cutter "
+    ],
+    "items": {
+      "Toxic Orb": 86.086
+    },
     "moves": {
       "Protect": 82.894,
       "Substitute": 81.311,
@@ -323,8 +419,13 @@
     "name": "Mimikyu",
     "safe_name": "mimikyu",
     "usage": 8.2,
-    "ability": "Disguise",
-    "item": "Rocky Helmet",
+    "ability": [
+      "Disguise"
+    ],
+    "items": {
+      "Rocky Helmet": 36.808,
+      "Life Orb": 36.707
+    },
     "moves": {
       "Curse": 90.669,
       "Play Rough": 88.709,
@@ -338,8 +439,14 @@
     "name": "Garganacl",
     "safe_name": "garganacl",
     "usage": 7.5,
-    "ability": "Purifying Salt",
-    "item": "Leftovers",
+    "ability": [
+      "Purifying Salt",
+      "Sturdy",
+      "Clear Body "
+    ],
+    "items": {
+      "Leftovers": 78.376
+    },
     "moves": {
       "Salt Cure": 99.62,
       "Recover": 90.711,
@@ -353,8 +460,12 @@
     "name": "Eternatus",
     "safe_name": "eternatus",
     "usage": 7.3,
-    "ability": "Pressure",
-    "item": "Leftovers",
+    "ability": [
+      "Pressure"
+    ],
+    "items": {
+      "Leftovers": 34.672
+    },
     "moves": {
       "Recover": 80.403,
       "Flamethrower": 45.495,
@@ -371,8 +482,15 @@
     "name": "Archaludon",
     "safe_name": "archaludon",
     "usage": 7.0,
-    "ability": "Stamina",
-    "item": "Custap Berry",
+    "ability": [
+      "Stamina",
+      "Sturdy",
+      "Stalwart "
+    ],
+    "items": {
+      "Custap Berry": 27.575,
+      "Leftovers": 23.206
+    },
     "moves": {
       "Draco Meteor": 57.755,
       "Stealth Rock": 52.188,
@@ -389,8 +507,14 @@
     "name": "Glimmora",
     "safe_name": "glimmora",
     "usage": 7.0,
-    "ability": "Toxic Debris",
-    "item": "Focus Sash",
+    "ability": [
+      "Toxic Debris",
+      "Corrosion "
+    ],
+    "items": {
+      "Focus Sash": 33.978,
+      "Red Card": 25.438
+    },
     "moves": {
       "Stealth Rock": 68.394,
       "Mortal Spin": 67.378,
@@ -409,8 +533,14 @@
     "name": "Alomomola",
     "safe_name": "alomomola",
     "usage": 6.9,
-    "ability": "Regenerator",
-    "item": "Rocky Helmet",
+    "ability": [
+      "Regenerator",
+      "Healer "
+    ],
+    "items": {
+      "Rocky Helmet": 65.324,
+      "Assault Vest": 25.257
+    },
     "moves": {
       "Flip Turn": 98.277,
       "Wish": 72.562,
@@ -427,8 +557,16 @@
     "name": "Muk-Alola",
     "safe_name": "muk-alola",
     "usage": 5.7,
-    "ability": "Poison Touch",
-    "item": "Leftovers",
+    "ability": [
+      "Poison Touch",
+      "Power of Alchemy ",
+      "Gluttony "
+    ],
+    "items": {
+      "Leftovers": 39.933,
+      "Black Sludge": 35.951,
+      "Assault Vest": 22.419
+    },
     "moves": {
       "Knock Off": 99.899,
       "Drain Punch": 68.712,
@@ -444,8 +582,14 @@
     "name": "Iron Treads",
     "safe_name": "iron-treads",
     "usage": 5.7,
-    "ability": "Quark Drive",
-    "item": "Booster Energy",
+    "ability": [
+      "Quark Drive"
+    ],
+    "items": {
+      "Booster Energy": 35.319,
+      "Choice Band": 29.343,
+      "Assault Vest": 24.805
+    },
     "moves": {
       "Earthquake": 90.293,
       "Knock Off": 68.392,
@@ -461,8 +605,15 @@
     "name": "Clodsire",
     "safe_name": "clodsire",
     "usage": 5.4,
-    "ability": "Water Absorb",
-    "item": "Sitrus Berry",
+    "ability": [
+      "Water Absorb",
+      "Unaware",
+      "Poison Point "
+    ],
+    "items": {
+      "Sitrus Berry": 46.931,
+      "Leftovers": 23.003
+    },
     "moves": {
       "Recover": 95.116,
       "Earthquake": 93.076,
@@ -477,8 +628,12 @@
     "name": "Terapagos",
     "safe_name": "terapagos",
     "usage": 5.3,
-    "ability": "Tera Shift",
-    "item": "Leftovers",
+    "ability": [
+      "Tera Shift"
+    ],
+    "items": {
+      "Leftovers": 36.272
+    },
     "moves": {
       "Tera Starstorm": 98.763,
       "Earth Power": 35.884,
@@ -496,8 +651,14 @@
     "name": "Smeargle",
     "safe_name": "smeargle",
     "usage": 5.2,
-    "ability": "Moody",
-    "item": "Focus Sash",
+    "ability": [
+      "Moody",
+      "Technician",
+      "Own Tempo "
+    ],
+    "items": {
+      "Focus Sash": 95.069
+    },
     "moves": {
       "Spore": 83.456,
       "Baton Pass": 75.976,
@@ -513,8 +674,13 @@
     "name": "Chi-Yu",
     "safe_name": "chi-yu",
     "usage": 4.8,
-    "ability": "Beads of Ruin",
-    "item": "Choice Scarf",
+    "ability": [
+      "Beads of Ruin"
+    ],
+    "items": {
+      "Choice Scarf": 44.387,
+      "Choice Specs": 31.625
+    },
     "moves": {
       "Dark Pulse": 98.532,
       "Overheat": 84.018,
@@ -529,8 +695,12 @@
     "name": "Lunala",
     "safe_name": "lunala",
     "usage": 4.7,
-    "ability": "Shadow Shield",
-    "item": "Choice Scarf",
+    "ability": [
+      "Shadow Shield"
+    ],
+    "items": {
+      "Choice Scarf": 26.771
+    },
     "moves": {
       "Moongeist Beam": 95.51,
       "Moonblast": 85.66,
@@ -545,8 +715,13 @@
     "name": "Scizor",
     "safe_name": "scizor",
     "usage": 4.6,
-    "ability": "Technician",
-    "item": "Sitrus Berry",
+    "ability": [
+      "Technician",
+      "Swarm "
+    ],
+    "items": {
+      "Sitrus Berry": 23.741
+    },
     "moves": {
       "Bullet Punch": 99.756,
       "Swords Dance": 63.998,
@@ -563,8 +738,15 @@
     "name": "Sneasler",
     "safe_name": "sneasler",
     "usage": 4.4,
-    "ability": "Unburden",
-    "item": "Focus Sash",
+    "ability": [
+      "Unburden",
+      "Poison Touch",
+      "Pressure "
+    ],
+    "items": {
+      "Focus Sash": 31.603,
+      "Normal Gem": 28.701
+    },
     "moves": {
       "Close Combat": 91.594,
       "Dire Claw": 89.771,
@@ -579,8 +761,12 @@
     "name": "Zamazenta-Crowned",
     "safe_name": "zamazenta-crowned",
     "usage": 4.2,
-    "ability": "Dauntless Shield",
-    "item": "Rusted Shield",
+    "ability": [
+      "Dauntless Shield"
+    ],
+    "items": {
+      "Rusted Shield": 100.0
+    },
     "moves": {
       "Body Press": 99.794,
       "Iron Defense": 92.308,
@@ -594,8 +780,13 @@
     "name": "Rillaboom",
     "safe_name": "rillaboom",
     "usage": 4.1,
-    "ability": "Grassy Surge",
-    "item": "Assault Vest",
+    "ability": [
+      "Grassy Surge",
+      "Overgrow "
+    ],
+    "items": {
+      "Assault Vest": 80.835
+    },
     "moves": {
       "Grassy Glide": 98.199,
       "U-turn": 74.323,
@@ -611,8 +802,14 @@
     "name": "Ursaluna",
     "safe_name": "ursaluna",
     "usage": 4.0,
-    "ability": "Guts",
-    "item": "Flame Orb",
+    "ability": [
+      "Guts",
+      "Bulletproof ",
+      "Unnerve "
+    ],
+    "items": {
+      "Flame Orb": 95.138
+    },
     "moves": {
       "Facade": 98.932,
       "Earthquake": 82.51,
@@ -628,8 +825,12 @@
     "name": "Ogerpon-Wellspring",
     "safe_name": "ogerpon-wellspring",
     "usage": 3.9,
-    "ability": "Water Absorb",
-    "item": "Wellspring Mask",
+    "ability": [
+      "Water Absorb"
+    ],
+    "items": {
+      "Wellspring Mask": 100.0
+    },
     "moves": {
       "Ivy Cudgel": 88.758,
       "Horn Leech": 62.125,
@@ -647,8 +848,12 @@
     "name": "Ogerpon-Cornerstone",
     "safe_name": "ogerpon-cornerstone",
     "usage": 3.5,
-    "ability": "Sturdy",
-    "item": "Cornerstone Mask",
+    "ability": [
+      "Sturdy"
+    ],
+    "items": {
+      "Cornerstone Mask": 100.0
+    },
     "moves": {
       "Ivy Cudgel": 96.834,
       "Knock Off": 73.674,
@@ -664,8 +869,13 @@
     "name": "Skeledirge",
     "safe_name": "skeledirge",
     "usage": 3.4,
-    "ability": "Unaware",
-    "item": "Leftovers",
+    "ability": [
+      "Unaware",
+      "Blaze "
+    ],
+    "items": {
+      "Leftovers": 42.894
+    },
     "moves": {
       "Torch Song": 94.424,
       "Slack Off": 89.4,
@@ -681,8 +891,13 @@
     "name": "Iron Hands",
     "safe_name": "iron-hands",
     "usage": 3.4,
-    "ability": "Quark Drive",
-    "item": "Assault Vest",
+    "ability": [
+      "Quark Drive"
+    ],
+    "items": {
+      "Assault Vest": 49.079,
+      "Leftovers": 36.414
+    },
     "moves": {
       "Drain Punch": 87.262,
       "Ice Punch": 74.909,
@@ -697,8 +912,12 @@
     "name": "Kyurem-Black",
     "safe_name": "kyurem-black",
     "usage": 3.2,
-    "ability": "Teravolt",
-    "item": "Loaded Dice",
+    "ability": [
+      "Teravolt"
+    ],
+    "items": {
+      "Loaded Dice": 95.642
+    },
     "moves": {
       "Icicle Spear": 97.764,
       "Dragon Dance": 96.348,
@@ -711,8 +930,12 @@
     "name": "Gholdengo",
     "safe_name": "gholdengo",
     "usage": 3.2,
-    "ability": "Good as Gold",
-    "item": "Covert Cloak",
+    "ability": [
+      "Good as Gold"
+    ],
+    "items": {
+      "Covert Cloak": 75.202
+    },
     "moves": {
       "Nasty Plot": 88.487,
       "Recover": 85.545,
@@ -727,8 +950,13 @@
     "name": "Chansey",
     "safe_name": "chansey",
     "usage": 2.6,
-    "ability": "Natural Cure",
-    "item": "Eviolite",
+    "ability": [
+      "Natural Cure",
+      "Healer "
+    ],
+    "items": {
+      "Eviolite": 99.431
+    },
     "moves": {
       "Soft-Boiled": 98.98,
       "Seismic Toss": 95.202,
@@ -742,8 +970,15 @@
     "name": "Gothitelle",
     "safe_name": "gothitelle",
     "usage": 2.6,
-    "ability": "Shadow Tag",
-    "item": "Choice Scarf",
+    "ability": [
+      "Shadow Tag",
+      "Frisk ",
+      "Competitive "
+    ],
+    "items": {
+      "Choice Scarf": 31.914,
+      "Air Balloon": 21.904
+    },
     "moves": {
       "Rest": 89.682,
       "Calm Mind": 80.471,
@@ -758,8 +993,13 @@
     "name": "Lugia",
     "safe_name": "lugia",
     "usage": 2.5,
-    "ability": "Multiscale",
-    "item": "Leftovers",
+    "ability": [
+      "Multiscale",
+      "Pressure "
+    ],
+    "items": {
+      "Leftovers": 52.409
+    },
     "moves": {
       "Recover": 85.045,
       "Psychic Noise": 58.941,
@@ -776,8 +1016,14 @@
     "name": "Whimsicott",
     "safe_name": "whimsicott",
     "usage": 2.2,
-    "ability": "Prankster",
-    "item": "Leftovers",
+    "ability": [
+      "Prankster",
+      "Chlorophyll ",
+      "Infiltrator "
+    ],
+    "items": {
+      "Leftovers": 41.901
+    },
     "moves": {
       "Encore": 77.885,
       "Leech Seed": 63.622,
@@ -794,8 +1040,13 @@
     "name": "Walking Wake",
     "safe_name": "walking-wake",
     "usage": 2.2,
-    "ability": "Protosynthesis",
-    "item": "Life Orb",
+    "ability": [
+      "Protosynthesis"
+    ],
+    "items": {
+      "Life Orb": 30.568,
+      "Choice Scarf": 22.619
+    },
     "moves": {
       "Draco Meteor": 92.752,
       "Hydro Steam": 83.716,
@@ -812,8 +1063,12 @@
     "name": "Glalie",
     "safe_name": "glalie",
     "usage": 2.1,
-    "ability": "Moody",
-    "item": "Black Sludge",
+    "ability": [
+      "Moody"
+    ],
+    "items": {
+      "Black Sludge": 87.731
+    },
     "moves": {
       "Protect": 100.0,
       "Freeze-Dry": 100.0,
@@ -826,8 +1081,13 @@
     "name": "Iron Bundle",
     "safe_name": "iron-bundle",
     "usage": 2.1,
-    "ability": "Quark Drive",
-    "item": "Focus Sash",
+    "ability": [
+      "Quark Drive"
+    ],
+    "items": {
+      "Focus Sash": 49.974,
+      "Booster Energy": 25.102
+    },
     "moves": {
       "Hydro Pump": 96.584,
       "Freeze-Dry": 95.094,
@@ -842,8 +1102,14 @@
     "name": "Hippowdon",
     "safe_name": "hippowdon",
     "usage": 2.1,
-    "ability": "Sand Stream",
-    "item": "Rocky Helmet",
+    "ability": [
+      "Sand Stream",
+      "Sand Force "
+    ],
+    "items": {
+      "Rocky Helmet": 59.929,
+      "Sitrus Berry": 28.706
+    },
     "moves": {
       "Earthquake": 97.922,
       "Stealth Rock": 88.819,
@@ -857,8 +1123,14 @@
     "name": "Serperior",
     "safe_name": "serperior",
     "usage": 2.0,
-    "ability": "Contrary",
-    "item": "Leftovers",
+    "ability": [
+      "Contrary",
+      "Overgrow "
+    ],
+    "items": {
+      "Leftovers": 63.586,
+      "Shell Bell": 27.029
+    },
     "moves": {
       "Leaf Storm": 99.954,
       "Tera Blast": 94.407,
@@ -871,8 +1143,13 @@
     "name": "Rayquaza",
     "safe_name": "rayquaza",
     "usage": 2.0,
-    "ability": "Air Lock",
-    "item": "Life Orb",
+    "ability": [
+      "Air Lock"
+    ],
+    "items": {
+      "Life Orb": 34.035,
+      "Focus Sash": 23.292
+    },
     "moves": {
       "Dragon Ascent": 91.555,
       "Extreme Speed": 82.697,
@@ -888,8 +1165,12 @@
     "name": "Groudon",
     "safe_name": "groudon",
     "usage": 1.9,
-    "ability": "Drought",
-    "item": "Assault Vest",
+    "ability": [
+      "Drought"
+    ],
+    "items": {
+      "Assault Vest": 46.266
+    },
     "moves": {
       "Heat Crash": 68.171,
       "Precipice Blades": 54.081,
@@ -905,8 +1186,14 @@
     "name": "Urshifu",
     "safe_name": "urshifu",
     "usage": 1.9,
-    "ability": "Unseen Fist",
-    "item": "Focus Sash",
+    "ability": [
+      "Unseen Fist"
+    ],
+    "items": {
+      "Focus Sash": 44.217,
+      "Choice Scarf": 21.903,
+      "Choice Band": 21.789
+    },
     "moves": {
       "Wicked Blow": 99.431,
       "Close Combat": 91.351,
@@ -921,8 +1208,14 @@
     "name": "Corviknight",
     "safe_name": "corviknight",
     "usage": 1.8,
-    "ability": "Pressure",
-    "item": "Covert Cloak",
+    "ability": [
+      "Pressure",
+      "Mirror Armor",
+      "Unnerve "
+    ],
+    "items": {
+      "Covert Cloak": 62.612
+    },
     "moves": {
       "Roost": 94.929,
       "Taunt": 59.16,
@@ -940,8 +1233,14 @@
     "name": "Incineroar",
     "safe_name": "incineroar",
     "usage": 1.8,
-    "ability": "Intimidate",
-    "item": "Sitrus Berry",
+    "ability": [
+      "Intimidate",
+      "Blaze "
+    ],
+    "items": {
+      "Sitrus Berry": 27.389,
+      "Safety Goggles": 22.597
+    },
     "moves": {
       "Knock Off": 86.414,
       "Parting Shot": 83.464,
@@ -957,8 +1256,12 @@
     "name": "Donphan",
     "safe_name": "donphan",
     "usage": 1.8,
-    "ability": "Sturdy",
-    "item": "Custap Berry",
+    "ability": [
+      "Sturdy"
+    ],
+    "items": {
+      "Custap Berry": 99.316
+    },
     "moves": {
       "Earthquake": 97.357,
       "Rapid Spin": 95.238,
@@ -971,8 +1274,12 @@
     "name": "Raging Bolt",
     "safe_name": "raging-bolt",
     "usage": 1.7,
-    "ability": "Protosynthesis",
-    "item": "Assault Vest",
+    "ability": [
+      "Protosynthesis"
+    ],
+    "items": {
+      "Assault Vest": 46.551
+    },
     "moves": {
       "Thunderclap": 98.271,
       "Draco Meteor": 91.79,
@@ -988,8 +1295,13 @@
     "name": "Iron Valiant",
     "safe_name": "iron-valiant",
     "usage": 1.7,
-    "ability": "Quark Drive",
-    "item": "Booster Energy",
+    "ability": [
+      "Quark Drive"
+    ],
+    "items": {
+      "Booster Energy": 60.336,
+      "Focus Sash": 27.972
+    },
     "moves": {
       "Encore": 60.178,
       "Moonblast": 58.784,
@@ -1006,8 +1318,12 @@
     "name": "Necrozma-Dusk-Mane",
     "safe_name": "necrozma-dusk-mane",
     "usage": 1.7,
-    "ability": "Prism Armor",
-    "item": "Weakness Policy",
+    "ability": [
+      "Prism Armor"
+    ],
+    "items": {
+      "Weakness Policy": 31.122
+    },
     "moves": {
       "Photon Geyser": 81.102,
       "Sunsteel Strike": 73.49,
@@ -1025,8 +1341,15 @@
     "name": "Toxapex",
     "safe_name": "toxapex",
     "usage": 1.6,
-    "ability": "Regenerator",
-    "item": "Black Sludge",
+    "ability": [
+      "Regenerator",
+      "Merciless ",
+      "Limber "
+    ],
+    "items": {
+      "Black Sludge": 29.767,
+      "Leftovers": 27.269
+    },
     "moves": {
       "Recover": 95.366,
       "Haze": 59.523,
@@ -1043,8 +1366,13 @@
     "name": "Ninetales-Alola",
     "safe_name": "ninetales-alola",
     "usage": 1.6,
-    "ability": "Snow Warning",
-    "item": "Light Clay",
+    "ability": [
+      "Snow Warning",
+      "Snow Cloak "
+    ],
+    "items": {
+      "Light Clay": 89.301
+    },
     "moves": {
       "Aurora Veil": 99.13,
       "Moonblast": 85.983,
@@ -1058,8 +1386,14 @@
     "name": "Porygon2",
     "safe_name": "porygon2",
     "usage": 1.6,
-    "ability": "Trace",
-    "item": "Eviolite",
+    "ability": [
+      "Trace",
+      "Analytic",
+      "Download"
+    ],
+    "items": {
+      "Eviolite": 100.0
+    },
     "moves": {
       "Recover": 97.993,
       "Foul Play": 82.81,
@@ -1075,8 +1409,14 @@
     "name": "Ceruledge",
     "safe_name": "ceruledge",
     "usage": 1.5,
-    "ability": "Flash Fire",
-    "item": "Air Balloon",
+    "ability": [
+      "Flash Fire",
+      "Weak Armor"
+    ],
+    "items": {
+      "Air Balloon": 43.031,
+      "Focus Sash": 20.927
+    },
     "moves": {
       "Bitter Blade": 99.824,
       "Shadow Sneak": 94.873,
@@ -1091,8 +1431,13 @@
     "name": "Hatterene",
     "safe_name": "hatterene",
     "usage": 1.5,
-    "ability": "Magic Bounce",
-    "item": "Focus Sash",
+    "ability": [
+      "Magic Bounce",
+      "Healer "
+    ],
+    "items": {
+      "Focus Sash": 82.172
+    },
     "moves": {
       "Trick Room": 84.061,
       "Healing Wish": 80.145,
@@ -1106,8 +1451,14 @@
     "name": "Blaziken",
     "safe_name": "blaziken",
     "usage": 1.4,
-    "ability": "Speed Boost",
-    "item": "Life Orb",
+    "ability": [
+      "Speed Boost",
+      "Blaze "
+    ],
+    "items": {
+      "Life Orb": 59.457,
+      "Focus Sash": 29.79
+    },
     "moves": {
       "Close Combat": 87.486,
       "Protect": 82.447,
@@ -1121,8 +1472,12 @@
     "name": "Wo-Chien",
     "safe_name": "wo-chien",
     "usage": 1.4,
-    "ability": "Tablets of Ruin",
-    "item": "Leftovers",
+    "ability": [
+      "Tablets of Ruin"
+    ],
+    "items": {
+      "Leftovers": 85.655
+    },
     "moves": {
       "Leech Seed": 96.946,
       "Protect": 83.872,
@@ -1137,8 +1492,12 @@
     "name": "Roaring Moon",
     "safe_name": "roaring-moon",
     "usage": 1.4,
-    "ability": "Protosynthesis",
-    "item": "Booster Energy",
+    "ability": [
+      "Protosynthesis"
+    ],
+    "items": {
+      "Booster Energy": 79.047
+    },
     "moves": {
       "Acrobatics": 78.231,
       "Knock Off": 74.994,
@@ -1154,8 +1513,12 @@
     "name": "Giratina-Origin",
     "safe_name": "giratina-origin",
     "usage": 1.4,
-    "ability": "Levitate",
-    "item": "Griseous Core",
+    "ability": [
+      "Levitate"
+    ],
+    "items": {
+      "Griseous Core": 100.0
+    },
     "moves": {
       "Poltergeist": 94.901,
       "Shadow Sneak": 89.871,
@@ -1169,8 +1532,15 @@
     "name": "Espeon",
     "safe_name": "espeon",
     "usage": 1.4,
-    "ability": "Magic Bounce",
-    "item": "Lum Berry",
+    "ability": [
+      "Magic Bounce",
+      "Synchronize "
+    ],
+    "items": {
+      "Lum Berry": 43.264,
+      "Kee Berry": 26.505,
+      "Leftovers": 22.33
+    },
     "moves": {
       "Calm Mind": 94.806,
       "Morning Sun": 93.978,
@@ -1183,8 +1553,16 @@
     "name": "Weezing-Galar",
     "safe_name": "weezing-galar",
     "usage": 1.3,
-    "ability": "Neutralizing Gas",
-    "item": "Black Sludge",
+    "ability": [
+      "Neutralizing Gas",
+      "Levitate",
+      "Misty Surge "
+    ],
+    "items": {
+      "Black Sludge": 32.057,
+      "Leftovers": 23.046,
+      "Air Balloon": 21.713
+    },
     "moves": {
       "Toxic Spikes": 80.135,
       "Strange Steam": 60.945,
@@ -1204,8 +1582,12 @@
     "name": "Great Tusk",
     "safe_name": "great-tusk",
     "usage": 1.3,
-    "ability": "Protosynthesis",
-    "item": "Booster Energy",
+    "ability": [
+      "Protosynthesis"
+    ],
+    "items": {
+      "Booster Energy": 87.378
+    },
     "moves": {
       "Close Combat": 90.548,
       "Stealth Rock": 87.119,
@@ -1219,8 +1601,13 @@
     "name": "Meowscarada",
     "safe_name": "meowscarada",
     "usage": 1.2,
-    "ability": "Overgrow",
-    "item": "Focus Sash",
+    "ability": [
+      "Overgrow",
+      "Protean"
+    ],
+    "items": {
+      "Focus Sash": 61.011
+    },
     "moves": {
       "Flower Trick": 94.498,
       "Knock Off": 77.06,
@@ -1237,8 +1624,13 @@
     "name": "Tyranitar",
     "safe_name": "tyranitar",
     "usage": 1.2,
-    "ability": "Sand Stream",
-    "item": "Assault Vest",
+    "ability": [
+      "Sand Stream",
+      "Unnerve "
+    ],
+    "items": {
+      "Assault Vest": 25.569
+    },
     "moves": {
       "Knock Off": 71.241,
       "Earthquake": 53.85,
@@ -1256,8 +1648,15 @@
     "name": "Kingambit",
     "safe_name": "kingambit",
     "usage": 1.1,
-    "ability": "Supreme Overlord",
-    "item": "Black Glasses",
+    "ability": [
+      "Supreme Overlord",
+      "Defiant",
+      "Pressure "
+    ],
+    "items": {
+      "Black Glasses": 35.894,
+      "Life Orb": 23.091
+    },
     "moves": {
       "Iron Head": 91.664,
       "Kowtow Cleave": 91.449,
@@ -1270,8 +1669,14 @@
     "name": "Primarina",
     "safe_name": "primarina",
     "usage": 1.1,
-    "ability": "Torrent",
-    "item": "Rocky Helmet",
+    "ability": [
+      "Torrent",
+      "Liquid Voice"
+    ],
+    "items": {
+      "Rocky Helmet": 33.41,
+      "Assault Vest": 25.555
+    },
     "moves": {
       "Moonblast": 95.346,
       "Flip Turn": 61.369,
@@ -1287,8 +1692,14 @@
     "name": "Drifblim",
     "safe_name": "drifblim",
     "usage": 1.1,
-    "ability": "Unburden",
-    "item": "Electric Seed",
+    "ability": [
+      "Unburden",
+      "Aftermath ",
+      "Flare Boost "
+    ],
+    "items": {
+      "Electric Seed": 84.87
+    },
     "moves": {
       "Minimize": 92.829,
       "Baton Pass": 92.402,
@@ -1302,8 +1713,15 @@
     "name": "Basculegion",
     "safe_name": "basculegion",
     "usage": 1.0,
-    "ability": "Adaptability",
-    "item": "Spell Tag",
+    "ability": [
+      "Adaptability",
+      "Swift Swim",
+      "Mold Breaker "
+    ],
+    "items": {
+      "Spell Tag": 43.162,
+      "Focus Sash": 21.382
+    },
     "moves": {
       "Last Respects": 98.968,
       "Wave Crash": 97.82,
@@ -1317,8 +1735,13 @@
     "name": "Dialga-Origin",
     "safe_name": "dialga-origin",
     "usage": 1.0,
-    "ability": "Pressure",
-    "item": "Adamant Crystal",
+    "ability": [
+      "Pressure",
+      "Telepathy "
+    ],
+    "items": {
+      "Adamant Crystal": 100.0
+    },
     "moves": {
       "Trick Room": 92.744,
       "Steel Beam": 78.054,
@@ -1334,8 +1757,15 @@
     "name": "Umbreon",
     "safe_name": "umbreon",
     "usage": 0.9,
-    "ability": "Synchronize",
-    "item": "Leftovers",
+    "ability": [
+      "Synchronize",
+      "Inner Focus"
+    ],
+    "items": {
+      "Leftovers": 31.593,
+      "Sitrus Berry": 30.778,
+      "Mental Herb": 22.459
+    },
     "moves": {
       "Foul Play": 87.184,
       "Toxic": 67.568,
@@ -1351,8 +1781,15 @@
     "name": "Breloom",
     "safe_name": "breloom",
     "usage": 0.9,
-    "ability": "Technician",
-    "item": "Focus Sash",
+    "ability": [
+      "Technician",
+      "Poison Heal",
+      "Effect Spore "
+    ],
+    "items": {
+      "Focus Sash": 56.4,
+      "Toxic Orb": 37.081
+    },
     "moves": {
       "Spore": 84.499,
       "Bullet Seed": 63.564,
@@ -1367,8 +1804,14 @@
     "name": "Garchomp",
     "safe_name": "garchomp",
     "usage": 0.9,
-    "ability": "Rough Skin",
-    "item": "Choice Scarf",
+    "ability": [
+      "Rough Skin",
+      "Sand Veil "
+    ],
+    "items": {
+      "Choice Scarf": 25.144,
+      "Rocky Helmet": 24.953
+    },
     "moves": {
       "Earthquake": 89.68,
       "Iron Head": 39.592,
@@ -1385,8 +1828,14 @@
     "name": "Heatran",
     "safe_name": "heatran",
     "usage": 0.8,
-    "ability": "Flash Fire",
-    "item": "Leftovers",
+    "ability": [
+      "Flash Fire",
+      "Flame Body"
+    ],
+    "items": {
+      "Leftovers": 57.411,
+      "Air Balloon": 20.771
+    },
     "moves": {
       "Magma Storm": 70.829,
       "Body Press": 52.173,
@@ -1402,8 +1851,13 @@
     "name": "Araquanid",
     "safe_name": "araquanid",
     "usage": 0.7,
-    "ability": "Water Bubble",
-    "item": "Red Card",
+    "ability": [
+      "Water Bubble",
+      "Water Absorb "
+    ],
+    "items": {
+      "Red Card": 28.027
+    },
     "moves": {
       "Sticky Web": 93.574,
       "Liquidation": 84.848,
@@ -1419,8 +1873,12 @@
     "name": "Brute Bonnet",
     "safe_name": "brute-bonnet",
     "usage": 0.7,
-    "ability": "Protosynthesis",
-    "item": "Loaded Dice",
+    "ability": [
+      "Protosynthesis"
+    ],
+    "items": {
+      "Loaded Dice": 85.246
+    },
     "moves": {
       "Spore": 98.281,
       "Bullet Seed": 85.786,
@@ -1436,8 +1894,12 @@
     "name": "Enamorus-Therian",
     "safe_name": "enamorus-therian",
     "usage": 0.7,
-    "ability": "Overcoat",
-    "item": "Choice Specs",
+    "ability": [
+      "Overcoat"
+    ],
+    "items": {
+      "Choice Specs": 96.752
+    },
     "moves": {
       "Earth Power": 98.997,
       "Moonblast": 97.349,
@@ -1451,8 +1913,12 @@
     "name": "Gouging Fire",
     "safe_name": "gouging-fire",
     "usage": 0.7,
-    "ability": "Protosynthesis",
-    "item": "Rocky Helmet",
+    "ability": [
+      "Protosynthesis"
+    ],
+    "items": {
+      "Rocky Helmet": 61.799
+    },
     "moves": {
       "Dragon Dance": 74.915,
       "Morning Sun": 68.879,
@@ -1468,8 +1934,13 @@
     "name": "Amoonguss",
     "safe_name": "amoonguss",
     "usage": 0.7,
-    "ability": "Regenerator",
-    "item": "Rocky Helmet",
+    "ability": [
+      "Regenerator",
+      "Effect Spore"
+    ],
+    "items": {
+      "Rocky Helmet": 50.206
+    },
     "moves": {
       "Spore": 90.593,
       "Rage Powder": 59.859,
@@ -1486,8 +1957,14 @@
     "name": "Blissey",
     "safe_name": "blissey",
     "usage": 0.7,
-    "ability": "Natural Cure",
-    "item": "Poison Barb",
+    "ability": [
+      "Natural Cure",
+      "Serene Grace ",
+      "Healer "
+    ],
+    "items": {
+      "Poison Barb": 57.678
+    },
     "moves": {
       "Soft-Boiled": 95.107,
       "Calm Mind": 79.294,
@@ -1502,8 +1979,14 @@
     "name": "Indeedee-F",
     "safe_name": "indeedee-f",
     "usage": 0.7,
-    "ability": "Psychic Surge",
-    "item": "Psychic Seed",
+    "ability": [
+      "Psychic Surge",
+      "Own Tempo ",
+      "Synchronize "
+    ],
+    "items": {
+      "Psychic Seed": 60.265
+    },
     "moves": {
       "Trick Room": 86.81,
       "Healing Wish": 49.71,
@@ -1519,8 +2002,12 @@
     "name": "Iron Moth",
     "safe_name": "iron-moth",
     "usage": 0.6,
-    "ability": "Quark Drive",
-    "item": "Booster Energy",
+    "ability": [
+      "Quark Drive"
+    ],
+    "items": {
+      "Booster Energy": 56.026
+    },
     "moves": {
       "Sludge Wave": 85.902,
       "Fiery Dance": 80.759,
@@ -1535,8 +2022,14 @@
     "name": "Azumarill",
     "safe_name": "azumarill",
     "usage": 0.6,
-    "ability": "Huge Power",
-    "item": "Assault Vest",
+    "ability": [
+      "Huge Power",
+      "Thick Fat",
+      "Sap Sipper "
+    ],
+    "items": {
+      "Assault Vest": 42.388
+    },
     "moves": {
       "Aqua Jet": 85.244,
       "Play Rough": 74.339,
@@ -1551,8 +2044,14 @@
     "name": "Dragapult",
     "safe_name": "dragapult",
     "usage": 0.6,
-    "ability": "Infiltrator",
-    "item": "Choice Band",
+    "ability": [
+      "Infiltrator",
+      "Clear Body",
+      "Cursed Body "
+    ],
+    "items": {
+      "Choice Band": 22.106
+    },
     "moves": {
       "Dragon Darts": 61.276,
       "Sucker Punch": 51.39,
@@ -1570,8 +2069,12 @@
     "name": "Iron Crown",
     "safe_name": "iron-crown",
     "usage": 0.6,
-    "ability": "Quark Drive",
-    "item": "Booster Energy",
+    "ability": [
+      "Quark Drive"
+    ],
+    "items": {
+      "Booster Energy": 77.485
+    },
     "moves": {
       "Tachyon Cutter": 99.812,
       "Tera Blast": 81.185,
@@ -1586,8 +2089,12 @@
     "name": "Zamazenta",
     "safe_name": "zamazenta",
     "usage": 0.6,
-    "ability": "Dauntless Shield",
-    "item": "Leftovers",
+    "ability": [
+      "Dauntless Shield"
+    ],
+    "items": {
+      "Leftovers": 78.011
+    },
     "moves": {
       "Body Press": 99.69,
       "Iron Defense": 96.316,
@@ -1601,8 +2108,14 @@
     "name": "Pelipper",
     "safe_name": "pelipper",
     "usage": 0.6,
-    "ability": "Drizzle",
-    "item": "Rocky Helmet",
+    "ability": [
+      "Drizzle",
+      "Keen Eye ",
+      "Rain Dish "
+    ],
+    "items": {
+      "Rocky Helmet": 61.317
+    },
     "moves": {
       "Hurricane": 84.727,
       "U-turn": 78.866,
@@ -1618,8 +2131,14 @@
     "name": "Ribombee",
     "safe_name": "ribombee",
     "usage": 0.6,
-    "ability": "Shield Dust",
-    "item": "Focus Sash",
+    "ability": [
+      "Shield Dust",
+      "Honey Gather ",
+      "Sweet Veil "
+    ],
+    "items": {
+      "Focus Sash": 97.636
+    },
     "moves": {
       "Sticky Web": 97.433,
       "Stun Spore": 89.073,
@@ -1633,8 +2152,15 @@
     "name": "Overqwil",
     "safe_name": "overqwil",
     "usage": 0.6,
-    "ability": "Intimidate",
-    "item": "Leftovers",
+    "ability": [
+      "Intimidate",
+      "Swift Swim ",
+      "Poison Point "
+    ],
+    "items": {
+      "Leftovers": 49.254,
+      "Black Sludge": 46.049
+    },
     "moves": {
       "Minimize": 88.292,
       "Substitute": 88.292,
@@ -1648,8 +2174,16 @@
     "name": "Goodra-Hisui",
     "safe_name": "goodra-hisui",
     "usage": 0.6,
-    "ability": "Sap Sipper",
-    "item": "Aguav Berry",
+    "ability": [
+      "Sap Sipper",
+      "Gooey",
+      "Shell Armor "
+    ],
+    "items": {
+      "Aguav Berry": 33.076,
+      "Assault Vest": 26.792,
+      "Expert Belt": 23.72
+    },
     "moves": {
       "Draco Meteor": 49.133,
       "Body Press": 44.079,
@@ -1667,8 +2201,13 @@
     "name": "Avalugg",
     "safe_name": "avalugg",
     "usage": 0.6,
-    "ability": "Sturdy",
-    "item": "Heavy-Duty Boots",
+    "ability": [
+      "Sturdy",
+      "Ice Body "
+    ],
+    "items": {
+      "Heavy-Duty Boots": 94.507
+    },
     "moves": {
       "Recover": 97.002,
       "Iron Defense": 95.012,
@@ -1682,8 +2221,12 @@
     "name": "Cresselia",
     "safe_name": "cresselia",
     "usage": 0.6,
-    "ability": "Levitate",
-    "item": "Mental Herb",
+    "ability": [
+      "Levitate"
+    ],
+    "items": {
+      "Mental Herb": 76.823
+    },
     "moves": {
       "Trick Room": 88.28,
       "Lunar Dance": 81.209,
@@ -1698,8 +2241,13 @@
     "name": "Maushold",
     "safe_name": "maushold",
     "usage": 0.5,
-    "ability": "Technician",
-    "item": "Wide Lens",
+    "ability": [
+      "Technician",
+      "Friend Guard "
+    ],
+    "items": {
+      "Wide Lens": 85.93
+    },
     "moves": {
       "Population Bomb": 97.86,
       "Tidy Up": 85.01,
@@ -1715,8 +2263,13 @@
     "name": "Kyurem-White",
     "safe_name": "kyurem-white",
     "usage": 0.5,
-    "ability": "Turboblaze",
-    "item": "Assault Vest",
+    "ability": [
+      "Turboblaze"
+    ],
+    "items": {
+      "Assault Vest": 33.153,
+      "Choice Specs": 30.115
+    },
     "moves": {
       "Freeze-Dry": 85.512,
       "Draco Meteor": 78.174,
@@ -1732,8 +2285,13 @@
     "name": "Rotom-Heat",
     "safe_name": "rotom-heat",
     "usage": 0.5,
-    "ability": "Levitate",
-    "item": "Leftovers",
+    "ability": [
+      "Levitate"
+    ],
+    "items": {
+      "Leftovers": 54.803,
+      "Rocky Helmet": 22.476
+    },
     "moves": {
       "Volt Switch": 95.086,
       "Will-O-Wisp": 93.96,
@@ -1749,8 +2307,12 @@
     "name": "Iron Leaves",
     "safe_name": "iron-leaves",
     "usage": 0.5,
-    "ability": "Quark Drive",
-    "item": "Choice Band",
+    "ability": [
+      "Quark Drive"
+    ],
+    "items": {
+      "Choice Band": 53.084
+    },
     "moves": {
       "Close Combat": 96.969,
       "Psyblade": 96.642,
@@ -1764,8 +2326,15 @@
     "name": "Annihilape",
     "safe_name": "annihilape",
     "usage": 0.5,
-    "ability": "Defiant",
-    "item": "Choice Scarf",
+    "ability": [
+      "Defiant",
+      "Vital Spirit",
+      "Inner Focus "
+    ],
+    "items": {
+      "Choice Scarf": 47.149,
+      "Leftovers": 22.465
+    },
     "moves": {
       "Rage Fist": 88.952,
       "Final Gambit": 51.107,
@@ -1781,8 +2350,12 @@
     "name": "Latios",
     "safe_name": "latios",
     "usage": 0.5,
-    "ability": "Levitate",
-    "item": "Choice Specs",
+    "ability": [
+      "Levitate"
+    ],
+    "items": {
+      "Choice Specs": 62.561
+    },
     "moves": {
       "Draco Meteor": 81.34,
       "Psychic Noise": 79.624,
@@ -1799,8 +2372,14 @@
     "name": "Reshiram",
     "safe_name": "reshiram",
     "usage": 0.5,
-    "ability": "Turboblaze",
-    "item": "Choice Specs",
+    "ability": [
+      "Turboblaze"
+    ],
+    "items": {
+      "Choice Specs": 38.79,
+      "Assault Vest": 26.108,
+      "Choice Scarf": 24.962
+    },
     "moves": {
       "Draco Meteor": 93.811,
       "Blue Flare": 82.531,
@@ -1816,8 +2395,13 @@
     "name": "Tornadus",
     "safe_name": "tornadus",
     "usage": 0.5,
-    "ability": "Prankster",
-    "item": "Covert Cloak",
+    "ability": [
+      "Prankster",
+      "Defiant "
+    ],
+    "items": {
+      "Covert Cloak": 59.442
+    },
     "moves": {
       "Tailwind": 98.892,
       "Bleakwind Storm": 83.568,
@@ -1831,8 +2415,13 @@
     "name": "Suicune",
     "safe_name": "suicune",
     "usage": 0.4,
-    "ability": "Pressure",
-    "item": "Chesto Berry",
+    "ability": [
+      "Pressure",
+      "Inner Focus "
+    ],
+    "items": {
+      "Chesto Berry": 79.962
+    },
     "moves": {
       "Scald": 97.706,
       "Rest": 85.594,
@@ -1846,8 +2435,13 @@
     "name": "Zoroark-Hisui",
     "safe_name": "zoroark-hisui",
     "usage": 0.4,
-    "ability": "Illusion",
-    "item": "Choice Scarf",
+    "ability": [
+      "Illusion"
+    ],
+    "items": {
+      "Choice Scarf": 53.95,
+      "Focus Sash": 30.201
+    },
     "moves": {
       "Bitter Malice": 62.615,
       "Trick": 51.066,
@@ -1865,8 +2459,15 @@
     "name": "Indeedee",
     "safe_name": "indeedee",
     "usage": 0.4,
-    "ability": "Psychic Surge",
-    "item": "Terrain Extender",
+    "ability": [
+      "Psychic Surge",
+      "Inner Focus "
+    ],
+    "items": {
+      "Terrain Extender": 35.297,
+      "Choice Scarf": 21.922,
+      "Eject Button": 21.052
+    },
     "moves": {
       "Expanding Force": 98.299,
       "Dazzling Gleam": 83.162,
@@ -1883,8 +2484,13 @@
     "name": "Infernape",
     "safe_name": "infernape",
     "usage": 0.4,
-    "ability": "Blaze",
-    "item": "Choice Scarf",
+    "ability": [
+      "Blaze",
+      "Iron Fist"
+    ],
+    "items": {
+      "Choice Scarf": 66.288
+    },
     "moves": {
       "Switcheroo": 62.665,
       "Overheat": 50.138,
@@ -1900,8 +2506,13 @@
     "name": "Swampert",
     "safe_name": "swampert",
     "usage": 0.4,
-    "ability": "Torrent",
-    "item": "Sitrus Berry",
+    "ability": [
+      "Torrent",
+      "Damp"
+    ],
+    "items": {
+      "Sitrus Berry": 56.349
+    },
     "moves": {
       "Flip Turn": 89.286,
       "Stealth Rock": 78.856,
@@ -1916,8 +2527,15 @@
     "name": "Excadrill",
     "safe_name": "excadrill",
     "usage": 0.4,
-    "ability": "Sand Rush",
-    "item": "Choice Band",
+    "ability": [
+      "Sand Rush",
+      "Mold Breaker",
+      "Sand Force "
+    ],
+    "items": {
+      "Choice Band": 43.561,
+      "Life Orb": 24.309
+    },
     "moves": {
       "Iron Head": 98.656,
       "Earthquake": 96.826,
@@ -1933,8 +2551,13 @@
     "name": "Rampardos",
     "safe_name": "rampardos",
     "usage": 0.4,
-    "ability": "Mold Breaker",
-    "item": "Loaded Dice",
+    "ability": [
+      "Mold Breaker",
+      "Sheer Force "
+    ],
+    "items": {
+      "Loaded Dice": 87.635
+    },
     "moves": {
       "Head Smash": 99.207,
       "Earthquake": 98.703,
@@ -1947,8 +2570,12 @@
     "name": "Regieleki",
     "safe_name": "regieleki",
     "usage": 0.4,
-    "ability": "Transistor",
-    "item": "Focus Sash",
+    "ability": [
+      "Transistor"
+    ],
+    "items": {
+      "Focus Sash": 33.029
+    },
     "moves": {
       "Tera Blast": 72.766,
       "Volt Switch": 48.629,
@@ -1968,8 +2595,13 @@
     "name": "Sableye",
     "safe_name": "sableye",
     "usage": 0.4,
-    "ability": "Prankster",
-    "item": "Focus Sash",
+    "ability": [
+      "Prankster",
+      "Keen Eye "
+    ],
+    "items": {
+      "Focus Sash": 80.837
+    },
     "moves": {
       "Encore": 88.187,
       "Will-O-Wisp": 88.047,
@@ -1982,8 +2614,13 @@
     "name": "Volcarona",
     "safe_name": "volcarona",
     "usage": 0.4,
-    "ability": "Flame Body",
-    "item": "Heavy-Duty Boots",
+    "ability": [
+      "Flame Body",
+      "Swarm "
+    ],
+    "items": {
+      "Heavy-Duty Boots": 51.382
+    },
     "moves": {
       "Quiver Dance": 91.965,
       "Fiery Dance": 73.109,
@@ -1998,8 +2635,14 @@
     "name": "Dialga",
     "safe_name": "dialga",
     "usage": 0.4,
-    "ability": "Pressure",
-    "item": "Assault Vest",
+    "ability": [
+      "Pressure",
+      "Telepathy "
+    ],
+    "items": {
+      "Assault Vest": 41.176,
+      "Eject Pack": 30.087
+    },
     "moves": {
       "Draco Meteor": 81.117,
       "Flash Cannon": 69.669,
@@ -2017,8 +2660,13 @@
     "name": "Grafaiai",
     "safe_name": "grafaiai",
     "usage": 0.4,
-    "ability": "Prankster",
-    "item": "Nothing",
+    "ability": [
+      "Prankster",
+      "Unburden"
+    ],
+    "items": {
+      "Nothing": 71.657
+    },
     "moves": {
       "Nothing": 222.016,
       "Acrobatics": 81.188,
@@ -2030,8 +2678,13 @@
     "name": "Fezandipiti",
     "safe_name": "fezandipiti",
     "usage": 0.3,
-    "ability": "Toxic Chain",
-    "item": "Black Sludge",
+    "ability": [
+      "Toxic Chain",
+      "Technician "
+    ],
+    "items": {
+      "Black Sludge": 85.879
+    },
     "moves": {
       "U-turn": 94.823,
       "Roost": 93.465,
@@ -2046,8 +2699,13 @@
     "name": "Mewtwo",
     "safe_name": "mewtwo",
     "usage": 0.3,
-    "ability": "Pressure",
-    "item": "Leftovers",
+    "ability": [
+      "Pressure",
+      "Unnerve"
+    ],
+    "items": {
+      "Leftovers": 27.131
+    },
     "moves": {
       "Psystrike": 46.631,
       "Aura Sphere": 41.6,
@@ -2065,8 +2723,13 @@
     "name": "Espathra",
     "safe_name": "espathra",
     "usage": 0.3,
-    "ability": "Speed Boost",
-    "item": "Leftovers",
+    "ability": [
+      "Speed Boost",
+      "Opportunist "
+    ],
+    "items": {
+      "Leftovers": 57.769
+    },
     "moves": {
       "Protect": 84.656,
       "Lumina Crash": 52.929,
@@ -2084,8 +2747,14 @@
     "name": "Gastrodon",
     "safe_name": "gastrodon",
     "usage": 0.3,
-    "ability": "Storm Drain",
-    "item": "Aguav Berry",
+    "ability": [
+      "Storm Drain",
+      "Sticky Hold"
+    ],
+    "items": {
+      "Aguav Berry": 26.116,
+      "Focus Sash": 22.83
+    },
     "moves": {
       "Recover": 73.198,
       "Yawn": 65.542,
@@ -2103,8 +2772,14 @@
     "name": "Vivillon",
     "safe_name": "vivillon",
     "usage": 0.3,
-    "ability": "Compound Eyes",
-    "item": "Leftovers",
+    "ability": [
+      "Compound Eyes",
+      "Shield Dust ",
+      "Friend Guard "
+    ],
+    "items": {
+      "Leftovers": 96.173
+    },
     "moves": {
       "Quiver Dance": 98.825,
       "Hurricane": 98.076,
@@ -2117,8 +2792,14 @@
     "name": "Thundurus-Therian",
     "safe_name": "thundurus-therian",
     "usage": 0.3,
-    "ability": "Volt Absorb",
-    "item": "Expert Belt",
+    "ability": [
+      "Volt Absorb"
+    ],
+    "items": {
+      "Expert Belt": 34.698,
+      "Choice Scarf": 25.473,
+      "Lum Berry": 22.019
+    },
     "moves": {
       "Thunderbolt": 80.451,
       "Nasty Plot": 56.292,
@@ -2136,8 +2817,13 @@
     "name": "Zekrom",
     "safe_name": "zekrom",
     "usage": 0.3,
-    "ability": "Teravolt",
-    "item": "Life Orb",
+    "ability": [
+      "Teravolt"
+    ],
+    "items": {
+      "Life Orb": 42.456,
+      "Lum Berry": 21.241
+    },
     "moves": {
       "Dragon Dance": 74.493,
       "Bolt Strike": 65.345,
@@ -2154,8 +2840,14 @@
     "name": "Baxcalibur",
     "safe_name": "baxcalibur",
     "usage": 0.3,
-    "ability": "Thermal Exchange",
-    "item": "Assault Vest",
+    "ability": [
+      "Thermal Exchange",
+      "Ice Body "
+    ],
+    "items": {
+      "Assault Vest": 60.484,
+      "Loaded Dice": 28.503
+    },
     "moves": {
       "Glaive Rush": 88.548,
       "Ice Shard": 79.389,
@@ -2170,8 +2862,14 @@
     "name": "Carbink",
     "safe_name": "carbink",
     "usage": 0.3,
-    "ability": "Sturdy",
-    "item": "Mental Herb",
+    "ability": [
+      "Sturdy",
+      "Clear Body "
+    ],
+    "items": {
+      "Mental Herb": 52.684,
+      "Heavy-Duty Boots": 23.097
+    },
     "moves": {
       "Trick Room": 98.356,
       "Misty Explosion": 97.516,
@@ -2185,8 +2883,13 @@
     "name": "Charizard",
     "safe_name": "charizard",
     "usage": 0.3,
-    "ability": "Solar Power",
-    "item": "Choice Scarf",
+    "ability": [
+      "Solar Power",
+      "Blaze"
+    ],
+    "items": {
+      "Choice Scarf": 48.487
+    },
     "moves": {
       "Solar Beam": 59.873,
       "Overheat": 52.269,
@@ -2202,8 +2905,13 @@
     "name": "Delphox",
     "safe_name": "delphox",
     "usage": 0.3,
-    "ability": "Magician",
-    "item": "Power Herb",
+    "ability": [
+      "Magician",
+      "Blaze "
+    ],
+    "items": {
+      "Power Herb": 93.269
+    },
     "moves": {
       "Flamethrower": 98.653,
       "Psyshock": 93.64,
@@ -2216,8 +2924,15 @@
     "name": "Snorlax",
     "safe_name": "snorlax",
     "usage": 0.3,
-    "ability": "Thick Fat",
-    "item": "Leftovers",
+    "ability": [
+      "Thick Fat",
+      "Immunity",
+      "Gluttony "
+    ],
+    "items": {
+      "Leftovers": 52.26,
+      "Sitrus Berry": 23.845
+    },
     "moves": {
       "Yawn": 59.079,
       "Earthquake": 47.477,
@@ -2236,8 +2951,14 @@
     "name": "Lilligant-Hisui",
     "safe_name": "lilligant-hisui",
     "usage": 0.3,
-    "ability": "Chlorophyll",
-    "item": "Loaded Dice",
+    "ability": [
+      "Chlorophyll",
+      "Hustle "
+    ],
+    "items": {
+      "Loaded Dice": 54.213,
+      "Wide Lens": 26.009
+    },
     "moves": {
       "Triple Axel": 81.53,
       "Axe Kick": 78.505,
@@ -2253,8 +2974,14 @@
     "name": "Cloyster",
     "safe_name": "cloyster",
     "usage": 0.3,
-    "ability": "Skill Link",
-    "item": "Focus Sash",
+    "ability": [
+      "Skill Link",
+      "Shell Armor "
+    ],
+    "items": {
+      "Focus Sash": 44.083,
+      "King's Rock": 31.989
+    },
     "moves": {
       "Icicle Spear": 99.392,
       "Rock Blast": 94.275,
@@ -2269,8 +2996,16 @@
     "name": "Clefable",
     "safe_name": "clefable",
     "usage": 0.3,
-    "ability": "Unaware",
-    "item": "Life Orb",
+    "ability": [
+      "Unaware",
+      "Magic Guard",
+      "Cute Charm "
+    ],
+    "items": {
+      "Life Orb": 32.816,
+      "Lum Berry": 30.81,
+      "Leftovers": 22.278
+    },
     "moves": {
       "Moonblast": 85.259,
       "Moonlight": 68.262,
@@ -2285,8 +3020,14 @@
     "name": "Lucario",
     "safe_name": "lucario",
     "usage": 0.3,
-    "ability": "Inner Focus",
-    "item": "Focus Sash",
+    "ability": [
+      "Inner Focus",
+      "Justified",
+      "Steadfast "
+    ],
+    "items": {
+      "Focus Sash": 76.989
+    },
     "moves": {
       "Close Combat": 92.442,
       "Bullet Punch": 82.286,
@@ -2301,8 +3042,12 @@
     "name": "Iron Boulder",
     "safe_name": "iron-boulder",
     "usage": 0.3,
-    "ability": "Quark Drive",
-    "item": "Focus Sash",
+    "ability": [
+      "Quark Drive"
+    ],
+    "items": {
+      "Focus Sash": 64.972
+    },
     "moves": {
       "Rock Blast": 64.972,
       "Body Slam": 64.972,
@@ -2320,8 +3065,14 @@
     "name": "Farigiraf",
     "safe_name": "farigiraf",
     "usage": 0.3,
-    "ability": "Armor Tail",
-    "item": "Electric Seed",
+    "ability": [
+      "Armor Tail",
+      "Sap Sipper ",
+      "Cud Chew "
+    ],
+    "items": {
+      "Electric Seed": 32.981
+    },
     "moves": {
       "Trick Room": 89.22,
       "Helping Hand": 50.768,
@@ -2337,8 +3088,14 @@
     "name": "Bellossom",
     "safe_name": "bellossom",
     "usage": 0.3,
-    "ability": "Chlorophyll",
-    "item": "Sitrus Berry",
+    "ability": [
+      "Chlorophyll",
+      "Healer "
+    ],
+    "items": {
+      "Sitrus Berry": 70.947,
+      "Custap Berry": 26.104
+    },
     "moves": {
       "Baton Pass": 99.713,
       "Ingrain": 99.625,
@@ -2353,8 +3110,13 @@
     "name": "Gengar",
     "safe_name": "gengar",
     "usage": 0.3,
-    "ability": "Cursed Body",
-    "item": "Focus Sash",
+    "ability": [
+      "Cursed Body"
+    ],
+    "items": {
+      "Focus Sash": 34.886,
+      "Choice Scarf": 23.821
+    },
     "moves": {
       "Shadow Ball": 70.372,
       "Destiny Bond": 49.106,
@@ -2372,8 +3134,12 @@
     "name": "Ogerpon",
     "safe_name": "ogerpon",
     "usage": 0.2,
-    "ability": "Defiant",
-    "item": "Loaded Dice",
+    "ability": [
+      "Defiant"
+    ],
+    "items": {
+      "Loaded Dice": 75.459
+    },
     "moves": {
       "Encore": 77.837,
       "Bullet Seed": 75.335,
@@ -2390,8 +3156,13 @@
     "name": "Greninja",
     "safe_name": "greninja",
     "usage": 0.2,
-    "ability": "Torrent",
-    "item": "Focus Sash",
+    "ability": [
+      "Torrent",
+      "Protean"
+    ],
+    "items": {
+      "Focus Sash": 61.456
+    },
     "moves": {
       "Ice Beam": 92.981,
       "Toxic Spikes": 68.162,
@@ -2406,8 +3177,14 @@
     "name": "Arcanine-Hisui",
     "safe_name": "arcanine-hisui",
     "usage": 0.2,
-    "ability": "Rock Head",
-    "item": "Heavy-Duty Boots",
+    "ability": [
+      "Rock Head",
+      "Intimidate"
+    ],
+    "items": {
+      "Heavy-Duty Boots": 30.221,
+      "Choice Scarf": 24.705
+    },
     "moves": {
       "Flare Blitz": 92.146,
       "Extreme Speed": 91.713,
@@ -2421,8 +3198,13 @@
     "name": "Toxicroak",
     "safe_name": "toxicroak",
     "usage": 0.2,
-    "ability": "Dry Skin",
-    "item": "Figy Berry",
+    "ability": [
+      "Dry Skin",
+      "Poison Touch "
+    ],
+    "items": {
+      "Figy Berry": 96.51
+    },
     "moves": {
       "Drain Punch": 97.696,
       "Gunk Shot": 96.908,
@@ -2435,8 +3217,12 @@
     "name": "Orthworm",
     "safe_name": "orthworm",
     "usage": 0.2,
-    "ability": "Earth Eater",
-    "item": "Leftovers",
+    "ability": [
+      "Earth Eater"
+    ],
+    "items": {
+      "Leftovers": 89.345
+    },
     "moves": {
       "Heavy Slam": 96.625,
       "Body Press": 89.334,
@@ -2450,8 +3236,13 @@
     "name": "Talonflame",
     "safe_name": "talonflame",
     "usage": 0.2,
-    "ability": "Gale Wings",
-    "item": "Choice Band",
+    "ability": [
+      "Gale Wings",
+      "Flame Body "
+    ],
+    "items": {
+      "Choice Band": 70.719
+    },
     "moves": {
       "Tailwind": 95.685,
       "U-turn": 78.737,
@@ -2464,8 +3255,13 @@
     "name": "Dugtrio-Alola",
     "safe_name": "dugtrio-alola",
     "usage": 0.2,
-    "ability": "Tangling Hair",
-    "item": "Focus Sash",
+    "ability": [
+      "Tangling Hair",
+      "Sand Veil "
+    ],
+    "items": {
+      "Focus Sash": 100.0
+    },
     "moves": {
       "Memento": 100.0,
       "Stealth Rock": 99.018,
@@ -2481,8 +3277,13 @@
     "name": "Rotom-Wash",
     "safe_name": "rotom-wash",
     "usage": 0.2,
-    "ability": "Levitate",
-    "item": "Sitrus Berry",
+    "ability": [
+      "Levitate"
+    ],
+    "items": {
+      "Sitrus Berry": 55.388,
+      "Choice Scarf": 20.824
+    },
     "moves": {
       "Volt Switch": 92.269,
       "Hydro Pump": 91.836,
@@ -2497,8 +3298,14 @@
     "name": "Galvantula",
     "safe_name": "galvantula",
     "usage": 0.2,
-    "ability": "Compound Eyes",
-    "item": "Focus Sash",
+    "ability": [
+      "Compound Eyes",
+      "Unnerve "
+    ],
+    "items": {
+      "Focus Sash": 69.613,
+      "Life Orb": 20.189
+    },
     "moves": {
       "Sticky Web": 98.615,
       "Thunder": 68.955,
@@ -2513,8 +3320,13 @@
     "name": "Zapdos",
     "safe_name": "zapdos",
     "usage": 0.2,
-    "ability": "Static",
-    "item": "Rocky Helmet",
+    "ability": [
+      "Static",
+      "Pressure "
+    ],
+    "items": {
+      "Rocky Helmet": 30.479
+    },
     "moves": {
       "Roost": 65.799,
       "Hurricane": 62.567,
@@ -2532,8 +3344,14 @@
     "name": "Slowking-Galar",
     "safe_name": "slowking-galar",
     "usage": 0.2,
-    "ability": "Regenerator",
-    "item": "Leftovers",
+    "ability": [
+      "Regenerator",
+      "Curious Medicine "
+    ],
+    "items": {
+      "Leftovers": 50.58,
+      "Sitrus Berry": 30.047
+    },
     "moves": {
       "Chilly Reception": 89.728,
       "Sludge Bomb": 82.702,
@@ -2546,8 +3364,13 @@
     "name": "Giratina",
     "safe_name": "giratina",
     "usage": 0.2,
-    "ability": "Pressure",
-    "item": "Leftovers",
+    "ability": [
+      "Pressure",
+      "Telepathy"
+    ],
+    "items": {
+      "Leftovers": 56.051
+    },
     "moves": {
       "Hex": 78.602,
       "Will-O-Wisp": 75.327,
@@ -2564,8 +3387,13 @@
     "name": "Torkoal",
     "safe_name": "torkoal",
     "usage": 0.2,
-    "ability": "Drought",
-    "item": "Charcoal",
+    "ability": [
+      "Drought",
+      "White Smoke "
+    ],
+    "items": {
+      "Charcoal": 41.114
+    },
     "moves": {
       "Eruption": 66.42,
       "Earth Power": 62.519,
@@ -2585,8 +3413,12 @@
     "name": "Tauros-Paldea-Blaze",
     "safe_name": "tauros-paldea-blaze",
     "usage": 0.2,
-    "ability": "Intimidate",
-    "item": "Life Orb",
+    "ability": [
+      "Intimidate"
+    ],
+    "items": {
+      "Life Orb": 81.302
+    },
     "moves": {
       "Close Combat": 100.0,
       "Raging Bull": 97.93,
@@ -2601,8 +3433,12 @@
     "name": "Scream Tail",
     "safe_name": "scream-tail",
     "usage": 0.2,
-    "ability": "Protosynthesis",
-    "item": "Booster Energy",
+    "ability": [
+      "Protosynthesis"
+    ],
+    "items": {
+      "Booster Energy": 67.109
+    },
     "moves": {
       "Misty Explosion": 54.681,
       "Stealth Rock": 54.317,
@@ -2619,8 +3455,12 @@
     "name": "Latias",
     "safe_name": "latias",
     "usage": 0.2,
-    "ability": "Levitate",
-    "item": "Rocky Helmet",
+    "ability": [
+      "Levitate"
+    ],
+    "items": {
+      "Rocky Helmet": 79.534
+    },
     "moves": {
       "Calm Mind": 86.257,
       "Recover": 85.167,
@@ -2634,8 +3474,15 @@
     "name": "Pawmot",
     "safe_name": "pawmot",
     "usage": 0.2,
-    "ability": "Volt Absorb",
-    "item": "Focus Sash",
+    "ability": [
+      "Volt Absorb",
+      "Natural Cure",
+      "Iron Fist "
+    ],
+    "items": {
+      "Focus Sash": 57.856,
+      "Leppa Berry": 26.536
+    },
     "moves": {
       "Revival Blessing": 93.475,
       "Nuzzle": 71.524,
@@ -2651,8 +3498,14 @@
     "name": "Entei",
     "safe_name": "entei",
     "usage": 0.2,
-    "ability": "Inner Focus",
-    "item": "Choice Band",
+    "ability": [
+      "Inner Focus",
+      "Pressure"
+    ],
+    "items": {
+      "Choice Band": 50.968,
+      "Assault Vest": 39.698
+    },
     "moves": {
       "Sacred Fire": 97.433,
       "Extreme Speed": 95.891,
@@ -2666,8 +3519,14 @@
     "name": "Salamence",
     "safe_name": "salamence",
     "usage": 0.2,
-    "ability": "Intimidate",
-    "item": "Life Orb",
+    "ability": [
+      "Intimidate",
+      "Moxie"
+    ],
+    "items": {
+      "Life Orb": 33.909,
+      "Blunder Policy": 20.632
+    },
     "moves": {
       "Hurricane": 54.705,
       "Draco Meteor": 52.157,
@@ -2684,8 +3543,13 @@
     "name": "Landorus",
     "safe_name": "landorus",
     "usage": 0.2,
-    "ability": "Sheer Force",
-    "item": "Life Orb",
+    "ability": [
+      "Sheer Force",
+      "Sand Force "
+    ],
+    "items": {
+      "Life Orb": 73.018
+    },
     "moves": {
       "Earth Power": 80.04,
       "Sludge Bomb": 56.566,
@@ -2703,8 +3567,13 @@
     "name": "Gyarados",
     "safe_name": "gyarados",
     "usage": 0.2,
-    "ability": "Intimidate",
-    "item": "Rocky Helmet",
+    "ability": [
+      "Intimidate",
+      "Moxie"
+    ],
+    "items": {
+      "Rocky Helmet": 37.622
+    },
     "moves": {
       "Waterfall": 70.49,
       "Earthquake": 47.106,
@@ -2723,8 +3592,13 @@
     "name": "Dugtrio",
     "safe_name": "dugtrio",
     "usage": 0.2,
-    "ability": "Arena Trap",
-    "item": "Focus Sash",
+    "ability": [
+      "Arena Trap",
+      "Sand Veil "
+    ],
+    "items": {
+      "Focus Sash": 82.382
+    },
     "moves": {
       "Earthquake": 92.178,
       "Sucker Punch": 81.347,
@@ -2738,8 +3612,14 @@
     "name": "Gardevoir",
     "safe_name": "gardevoir",
     "usage": 0.2,
-    "ability": "Trace",
-    "item": "Focus Sash",
+    "ability": [
+      "Trace",
+      "Synchronize",
+      "Telepathy "
+    ],
+    "items": {
+      "Focus Sash": 69.177
+    },
     "moves": {
       "Moonblast": 89.729,
       "Psyshock": 68.061,
@@ -2754,8 +3634,12 @@
     "name": "Qwilfish",
     "safe_name": "qwilfish",
     "usage": 0.2,
-    "ability": "Intimidate",
-    "item": "Sitrus Berry",
+    "ability": [
+      "Intimidate"
+    ],
+    "items": {
+      "Sitrus Berry": 98.778
+    },
     "moves": {
       "Flip Turn": 100.0,
       "Thunder Wave": 99.407,
@@ -2768,8 +3652,14 @@
     "name": "Chandelure",
     "safe_name": "chandelure",
     "usage": 0.2,
-    "ability": "Infiltrator",
-    "item": "Focus Sash",
+    "ability": [
+      "Infiltrator",
+      "Flash Fire",
+      "Flame Body "
+    ],
+    "items": {
+      "Focus Sash": 61.602
+    },
     "moves": {
       "Flamethrower": 84.983,
       "Shadow Ball": 83.547,
@@ -2783,8 +3673,13 @@
     "name": "Dusclops",
     "safe_name": "dusclops",
     "usage": 0.2,
-    "ability": "Frisk",
-    "item": "Eviolite",
+    "ability": [
+      "Frisk",
+      "Pressure"
+    ],
+    "items": {
+      "Eviolite": 100.0
+    },
     "moves": {
       "Trick Room": 89.583,
       "Pain Split": 88.563,
@@ -2798,8 +3693,12 @@
     "name": "Palafin",
     "safe_name": "palafin",
     "usage": 0.2,
-    "ability": "Zero to Hero",
-    "item": "Choice Band",
+    "ability": [
+      "Zero to Hero"
+    ],
+    "items": {
+      "Choice Band": 74.421
+    },
     "moves": {
       "Jet Punch": 92.352,
       "Flip Turn": 88.082,
@@ -2813,8 +3712,14 @@
     "name": "Forretress",
     "safe_name": "forretress",
     "usage": 0.2,
-    "ability": "Sturdy",
-    "item": "Rocky Helmet",
+    "ability": [
+      "Sturdy",
+      "Overcoat "
+    ],
+    "items": {
+      "Rocky Helmet": 53.004,
+      "Custap Berry": 28.511
+    },
     "moves": {
       "Volt Switch": 74.673,
       "Toxic Spikes": 67.923,
@@ -2831,8 +3736,13 @@
     "name": "Metagross",
     "safe_name": "metagross",
     "usage": 0.2,
-    "ability": "Clear Body",
-    "item": "Assault Vest",
+    "ability": [
+      "Clear Body",
+      "Light Metal "
+    ],
+    "items": {
+      "Assault Vest": 44.729
+    },
     "moves": {
       "Psychic Fangs": 72.548,
       "Bullet Punch": 61.377,
@@ -2848,8 +3758,15 @@
     "name": "Toxtricity",
     "safe_name": "toxtricity",
     "usage": 0.2,
-    "ability": "Punk Rock",
-    "item": "Focus Sash",
+    "ability": [
+      "Punk Rock",
+      "Minus ",
+      "Plus "
+    ],
+    "items": {
+      "Focus Sash": 57.018,
+      "Choice Specs": 28.264
+    },
     "moves": {
       "Overdrive": 95.122,
       "Toxic Spikes": 73.508,
@@ -2864,8 +3781,12 @@
     "name": "Necrozma-Dawn-Wings",
     "safe_name": "necrozma-dawn-wings",
     "usage": 0.2,
-    "ability": "Prism Armor",
-    "item": "Power Herb",
+    "ability": [
+      "Prism Armor"
+    ],
+    "items": {
+      "Power Herb": 71.899
+    },
     "moves": {
       "Moongeist Beam": 97.521,
       "Trick Room": 77.112,
@@ -2880,8 +3801,14 @@
     "name": "Quagsire",
     "safe_name": "quagsire",
     "usage": 0.2,
-    "ability": "Unaware",
-    "item": "Rocky Helmet",
+    "ability": [
+      "Unaware",
+      "Water Absorb",
+      "Damp "
+    ],
+    "items": {
+      "Rocky Helmet": 62.9
+    },
     "moves": {
       "Recover": 92.273,
       "Curse": 68.179,
@@ -2897,8 +3824,14 @@
     "name": "Palkia",
     "safe_name": "palkia",
     "usage": 0.2,
-    "ability": "Telepathy",
-    "item": "Choice Scarf",
+    "ability": [
+      "Telepathy",
+      "Pressure"
+    ],
+    "items": {
+      "Choice Scarf": 46.088,
+      "Leftovers": 22.413
+    },
     "moves": {
       "Spacial Rend": 65.882,
       "Earth Power": 39.903,
@@ -2917,8 +3850,15 @@
     "name": "Electrode-Hisui",
     "safe_name": "electrode-hisui",
     "usage": 0.2,
-    "ability": "Static",
-    "item": "Mental Herb",
+    "ability": [
+      "Static",
+      "Aftermath",
+      "Soundproof"
+    ],
+    "items": {
+      "Mental Herb": 45.29,
+      "Life Orb": 32.223
+    },
     "moves": {
       "Taunt": 61.403,
       "Thunder Wave": 55.874,
@@ -2934,8 +3874,12 @@
     "name": "Victreebel",
     "safe_name": "victreebel",
     "usage": 0.1,
-    "ability": "Chlorophyll",
-    "item": "Focus Sash",
+    "ability": [
+      "Chlorophyll"
+    ],
+    "items": {
+      "Focus Sash": 93.089
+    },
     "moves": {
       "Solar Beam": 96.6,
       "Weather Ball": 96.6,
@@ -2948,8 +3892,14 @@
     "name": "Samurott-Hisui",
     "safe_name": "samurott-hisui",
     "usage": 0.1,
-    "ability": "Sharpness",
-    "item": "Rocky Helmet",
+    "ability": [
+      "Sharpness",
+      "Torrent "
+    ],
+    "items": {
+      "Rocky Helmet": 36.049,
+      "Choice Band": 28.55
+    },
     "moves": {
       "Ceaseless Edge": 96.961,
       "Flip Turn": 67.381,
@@ -2965,8 +3915,14 @@
     "name": "Arcanine",
     "safe_name": "arcanine",
     "usage": 0.1,
-    "ability": "Intimidate",
-    "item": "Sitrus Berry",
+    "ability": [
+      "Intimidate",
+      "Flash Fire"
+    ],
+    "items": {
+      "Sitrus Berry": 54.853,
+      "Rocky Helmet": 20.423
+    },
     "moves": {
       "Will-O-Wisp": 59.322,
       "Extreme Speed": 57.304,
@@ -2983,8 +3939,13 @@
     "name": "Cinderace",
     "safe_name": "cinderace",
     "usage": 0.1,
-    "ability": "Libero",
-    "item": "Heavy-Duty Boots",
+    "ability": [
+      "Libero",
+      "Blaze "
+    ],
+    "items": {
+      "Heavy-Duty Boots": 31.76
+    },
     "moves": {
       "Pyro Ball": 82.643,
       "U-turn": 59.631,
@@ -2999,8 +3960,12 @@
     "name": "Moltres-Galar",
     "safe_name": "moltres-galar",
     "usage": 0.1,
-    "ability": "Berserk",
-    "item": "Sitrus Berry",
+    "ability": [
+      "Berserk"
+    ],
+    "items": {
+      "Sitrus Berry": 57.792
+    },
     "moves": {
       "Fiery Wrath": 100.0,
       "Nasty Plot": 55.514,
@@ -3018,8 +3983,12 @@
     "name": "Crawdaunt",
     "safe_name": "crawdaunt",
     "usage": 0.1,
-    "ability": "Adaptability",
-    "item": "Focus Sash",
+    "ability": [
+      "Adaptability"
+    ],
+    "items": {
+      "Focus Sash": 99.227
+    },
     "moves": {
       "Aqua Jet": 100.0,
       "Knock Off": 100.0,
@@ -3033,8 +4002,13 @@
     "name": "Venusaur",
     "safe_name": "venusaur",
     "usage": 0.1,
-    "ability": "Chlorophyll",
-    "item": "Life Orb",
+    "ability": [
+      "Chlorophyll",
+      "Overgrow"
+    ],
+    "items": {
+      "Life Orb": 41.439
+    },
     "moves": {
       "Sludge Bomb": 67.419,
       "Earth Power": 38.924,
@@ -3052,8 +4026,13 @@
     "name": "Empoleon",
     "safe_name": "empoleon",
     "usage": 0.1,
-    "ability": "Competitive",
-    "item": "Sitrus Berry",
+    "ability": [
+      "Competitive",
+      "Torrent"
+    ],
+    "items": {
+      "Sitrus Berry": 51.87
+    },
     "moves": {
       "Stealth Rock": 74.756,
       "Flip Turn": 53.096,
@@ -3070,8 +4049,14 @@
     "name": "Salazzle",
     "safe_name": "salazzle",
     "usage": 0.1,
-    "ability": "Oblivious",
-    "item": "Focus Sash",
+    "ability": [
+      "Oblivious",
+      "Corrosion"
+    ],
+    "items": {
+      "Focus Sash": 53.806,
+      "Black Sludge": 43.42
+    },
     "moves": {
       "Flamethrower": 74.314,
       "Toxic Spikes": 50.87,
@@ -3087,8 +4072,15 @@
     "name": "Lokix",
     "safe_name": "lokix",
     "usage": 0.1,
-    "ability": "Tinted Lens",
-    "item": "Choice Band",
+    "ability": [
+      "Tinted Lens",
+      "Swarm "
+    ],
+    "items": {
+      "Choice Band": 42.956,
+      "Life Orb": 24.612,
+      "Black Glasses": 22.991
+    },
     "moves": {
       "Sucker Punch": 95.425,
       "First Impression": 70.069,
@@ -3105,8 +4097,13 @@
     "name": "Palkia-Origin",
     "safe_name": "palkia-origin",
     "usage": 0.1,
-    "ability": "Pressure",
-    "item": "Lustrous Globe",
+    "ability": [
+      "Pressure",
+      "Telepathy"
+    ],
+    "items": {
+      "Lustrous Globe": 100.0
+    },
     "moves": {
       "Spacial Rend": 80.109,
       "Hydro Pump": 69.915,
@@ -3124,8 +4121,13 @@
     "name": "Sinistcha",
     "safe_name": "sinistcha",
     "usage": 0.1,
-    "ability": "Heatproof",
-    "item": "Rocky Helmet",
+    "ability": [
+      "Heatproof",
+      "Hospitality"
+    ],
+    "items": {
+      "Rocky Helmet": 65.759
+    },
     "moves": {
       "Matcha Gotcha": 98.14,
       "Strength Sap": 70.505,
@@ -3141,8 +4143,12 @@
     "name": "Oricorio-Pom-Pom",
     "safe_name": "oricorio-pom-pom",
     "usage": 0.1,
-    "ability": "Dancer",
-    "item": "Kee Berry",
+    "ability": [
+      "Dancer"
+    ],
+    "items": {
+      "Kee Berry": 92.983
+    },
     "moves": {
       "Quiver Dance": 98.595,
       "Taunt": 97.998,
@@ -3156,8 +4162,12 @@
     "name": "Cottonee",
     "safe_name": "cottonee",
     "usage": 0.1,
-    "ability": "Prankster",
-    "item": "Focus Sash",
+    "ability": [
+      "Prankster"
+    ],
+    "items": {
+      "Focus Sash": 98.496
+    },
     "moves": {
       "Encore": 100.0,
       "Leech Seed": 98.496,
@@ -3170,8 +4180,12 @@
     "name": "Skarmory",
     "safe_name": "skarmory",
     "usage": 0.1,
-    "ability": "Sturdy",
-    "item": "Custap Berry",
+    "ability": [
+      "Sturdy"
+    ],
+    "items": {
+      "Custap Berry": 63.553
+    },
     "moves": {
       "Body Press": 82.237,
       "Taunt": 81.316,
@@ -3188,8 +4202,13 @@
     "name": "Blastoise",
     "safe_name": "blastoise",
     "usage": 0.1,
-    "ability": "Torrent",
-    "item": "White Herb",
+    "ability": [
+      "Torrent",
+      "Rain Dish"
+    ],
+    "items": {
+      "White Herb": 45.91
+    },
     "moves": {
       "Ice Beam": 54.06,
       "Shell Smash": 49.403,
@@ -3207,8 +4226,13 @@
     "name": "Volbeat",
     "safe_name": "volbeat",
     "usage": 0.1,
-    "ability": "Prankster",
-    "item": "Focus Sash",
+    "ability": [
+      "Prankster"
+    ],
+    "items": {
+      "Focus Sash": 67.918,
+      "Air Balloon": 22.169
+    },
     "moves": {
       "Quick Attack": 57.97,
       "Endeavor": 56.221,
@@ -3227,8 +4251,14 @@
     "name": "Tinkaton",
     "safe_name": "tinkaton",
     "usage": 0.1,
-    "ability": "Mold Breaker",
-    "item": "Air Balloon",
+    "ability": [
+      "Mold Breaker",
+      "Own Tempo",
+      "Pickpocket "
+    ],
+    "items": {
+      "Air Balloon": 52.4
+    },
     "moves": {
       "Gigaton Hammer": 80.901,
       "Play Rough": 56.986,
@@ -3245,8 +4275,14 @@
     "name": "Hydreigon",
     "safe_name": "hydreigon",
     "usage": 0.1,
-    "ability": "Levitate",
-    "item": "Focus Sash",
+    "ability": [
+      "Levitate"
+    ],
+    "items": {
+      "Focus Sash": 25.162,
+      "Choice Scarf": 23.51,
+      "Choice Specs": 22.208
+    },
     "moves": {
       "Dark Pulse": 71.985,
       "Draco Meteor": 63.22,
@@ -3264,8 +4300,13 @@
     "name": "Articuno",
     "safe_name": "articuno",
     "usage": 0.1,
-    "ability": "Snow Cloak",
-    "item": "Bright Powder",
+    "ability": [
+      "Snow Cloak",
+      "Pressure "
+    ],
+    "items": {
+      "Bright Powder": 39.447
+    },
     "moves": {
       "Sheer Cold": 62.484,
       "Blizzard": 62.153,
@@ -3281,8 +4322,14 @@
     "name": "Cyclizar",
     "safe_name": "cyclizar",
     "usage": 0.1,
-    "ability": "Regenerator",
-    "item": "Choice Scarf",
+    "ability": [
+      "Regenerator",
+      "Shed Skin"
+    ],
+    "items": {
+      "Choice Scarf": 28.051,
+      "Covert Cloak": 20.715
+    },
     "moves": {
       "Shed Tail": 93.208,
       "Rapid Spin": 42.487,
@@ -3298,8 +4345,14 @@
     "name": "Regice",
     "safe_name": "regice",
     "usage": 0.1,
-    "ability": "Ice Body",
-    "item": "Blunder Policy",
+    "ability": [
+      "Ice Body",
+      "Clear Body"
+    ],
+    "items": {
+      "Blunder Policy": 40.539,
+      "Assault Vest": 36.407
+    },
     "moves": {
       "Zap Cannon": 63.516,
       "Body Press": 55.576,
@@ -3318,8 +4371,15 @@
     "name": "Abomasnow",
     "safe_name": "abomasnow",
     "usage": 0.1,
-    "ability": "Snow Warning",
-    "item": "Assault Vest",
+    "ability": [
+      "Snow Warning",
+      "Soundproof"
+    ],
+    "items": {
+      "Assault Vest": 23.835,
+      "Weakness Policy": 23.198,
+      "Focus Sash": 21.597
+    },
     "moves": {
       "Aurora Veil": 75.51,
       "Blizzard": 60.164,
@@ -3337,8 +4397,13 @@
     "name": "Bronzong",
     "safe_name": "bronzong",
     "usage": 0.1,
-    "ability": "Levitate",
-    "item": "Leftovers",
+    "ability": [
+      "Levitate",
+      "Heatproof"
+    ],
+    "items": {
+      "Leftovers": 49.673
+    },
     "moves": {
       "Body Press": 58.541,
       "Iron Defense": 53.6,
@@ -3356,8 +4421,14 @@
     "name": "Mamoswine",
     "safe_name": "mamoswine",
     "usage": 0.1,
-    "ability": "Thick Fat",
-    "item": "Assault Vest",
+    "ability": [
+      "Thick Fat",
+      "Oblivious ",
+      "Snow Cloak "
+    ],
+    "items": {
+      "Assault Vest": 87.791
+    },
     "moves": {
       "Earthquake": 96.236,
       "Ice Shard": 96.061,
@@ -3371,8 +4442,13 @@
     "name": "Okidogi",
     "safe_name": "okidogi",
     "usage": 0.1,
-    "ability": "Guard Dog",
-    "item": "Safety Goggles",
+    "ability": [
+      "Guard Dog",
+      "Toxic Chain"
+    ],
+    "items": {
+      "Safety Goggles": 60.413
+    },
     "moves": {
       "Drain Punch": 96.016,
       "Knock Off": 91.849,
@@ -3385,8 +4461,13 @@
     "name": "Kleavor",
     "safe_name": "kleavor",
     "usage": 0.1,
-    "ability": "Sharpness",
-    "item": "Choice Scarf",
+    "ability": [
+      "Sharpness"
+    ],
+    "items": {
+      "Choice Scarf": 61.834,
+      "Focus Sash": 22.146
+    },
     "moves": {
       "Stone Axe": 97.2,
       "X-Scissor": 73.155,
@@ -3400,8 +4481,13 @@
     "name": "Pikachu",
     "safe_name": "pikachu",
     "usage": 0.1,
-    "ability": "Lightning Rod",
-    "item": "Light Ball",
+    "ability": [
+      "Lightning Rod",
+      "Static"
+    ],
+    "items": {
+      "Light Ball": 100.0
+    },
     "moves": {
       "Volt Tackle": 83.087,
       "Fake Out": 79.626,
@@ -3415,8 +4501,14 @@
     "name": "Arboliva",
     "safe_name": "arboliva",
     "usage": 0.1,
-    "ability": "Seed Sower",
-    "item": "Maranga Berry",
+    "ability": [
+      "Seed Sower",
+      "Harvest"
+    ],
+    "items": {
+      "Maranga Berry": 48.973,
+      "Sitrus Berry": 22.463
+    },
     "moves": {
       "Strength Sap": 57.073,
       "Leech Seed": 56.195,
@@ -3434,8 +4526,13 @@
     "name": "Comfey",
     "safe_name": "comfey",
     "usage": 0.1,
-    "ability": "Triage",
-    "item": "Leftovers",
+    "ability": [
+      "Triage",
+      "Flower Veil "
+    ],
+    "items": {
+      "Leftovers": 47.584
+    },
     "moves": {
       "Draining Kiss": 93.098,
       "Calm Mind": 58.579,
@@ -3453,8 +4550,16 @@
     "name": "Hawlucha",
     "safe_name": "hawlucha",
     "usage": 0.1,
-    "ability": "Unburden",
-    "item": "Choice Scarf",
+    "ability": [
+      "Unburden",
+      "Limber",
+      "Mold Breaker "
+    ],
+    "items": {
+      "Choice Scarf": 31.633,
+      "Focus Sash": 29.272,
+      "Electric Seed": 22.852
+    },
     "moves": {
       "Acrobatics": 61.457,
       "Close Combat": 61.292,
@@ -3472,8 +4577,13 @@
     "name": "Zoroark",
     "safe_name": "zoroark",
     "usage": 0.1,
-    "ability": "Illusion",
-    "item": "Focus Sash",
+    "ability": [
+      "Illusion"
+    ],
+    "items": {
+      "Focus Sash": 45.755,
+      "Choice Scarf": 25.896
+    },
     "moves": {
       "Tera Blast": 70.073,
       "Knock Off": 56.746,
@@ -3491,8 +4601,14 @@
     "name": "Kingdra",
     "safe_name": "kingdra",
     "usage": 0.1,
-    "ability": "Sniper",
-    "item": "Scope Lens",
+    "ability": [
+      "Sniper",
+      "Swift Swim"
+    ],
+    "items": {
+      "Scope Lens": 57.627,
+      "Life Orb": 27.947
+    },
     "moves": {
       "Draco Meteor": 91.445,
       "Focus Energy": 57.627,
@@ -3508,8 +4624,12 @@
     "name": "Hitmonlee",
     "safe_name": "hitmonlee",
     "usage": 0.1,
-    "ability": "Unburden",
-    "item": "Liechi Berry",
+    "ability": [
+      "Unburden"
+    ],
+    "items": {
+      "Liechi Berry": 75.788
+    },
     "moves": {
       "Sucker Punch": 79.963,
       "Reversal": 75.788,
@@ -3523,8 +4643,14 @@
     "name": "Gallade",
     "safe_name": "gallade",
     "usage": 0.1,
-    "ability": "Sharpness",
-    "item": "Assault Vest",
+    "ability": [
+      "Sharpness",
+      "Justified "
+    ],
+    "items": {
+      "Assault Vest": 45.345,
+      "Choice Scarf": 32.121
+    },
     "moves": {
       "Sacred Sword": 98.353,
       "Psycho Cut": 91.029,
@@ -3539,8 +4665,14 @@
     "name": "Vaporeon",
     "safe_name": "vaporeon",
     "usage": 0.1,
-    "ability": "Water Absorb",
-    "item": "Sitrus Berry",
+    "ability": [
+      "Water Absorb",
+      "Hydration "
+    ],
+    "items": {
+      "Sitrus Berry": 50.837,
+      "Air Balloon": 24.688
+    },
     "moves": {
       "Protect": 82.415,
       "Baton Pass": 82.385,
@@ -3553,8 +4685,13 @@
     "name": "Weavile",
     "safe_name": "weavile",
     "usage": 0.1,
-    "ability": "Pressure",
-    "item": "Focus Sash",
+    "ability": [
+      "Pressure",
+      "Pickpocket"
+    ],
+    "items": {
+      "Focus Sash": 60.866
+    },
     "moves": {
       "Knock Off": 94.936,
       "Ice Shard": 50.627,
@@ -3571,8 +4708,12 @@
     "name": "Slowking",
     "safe_name": "slowking",
     "usage": 0.1,
-    "ability": "Regenerator",
-    "item": "Leftovers",
+    "ability": [
+      "Regenerator"
+    ],
+    "items": {
+      "Leftovers": 48.928
+    },
     "moves": {
       "Chilly Reception": 94.031,
       "Expanding Force": 53.895,
@@ -3588,8 +4729,13 @@
     "name": "Vikavolt",
     "safe_name": "vikavolt",
     "usage": 0.1,
-    "ability": "Levitate",
-    "item": "Sitrus Berry",
+    "ability": [
+      "Levitate"
+    ],
+    "items": {
+      "Sitrus Berry": 45.742,
+      "Mental Herb": 21.191
+    },
     "moves": {
       "Sticky Web": 80.727,
       "Bug Buzz": 64.601,
@@ -3606,8 +4752,13 @@
     "name": "Altaria",
     "safe_name": "altaria",
     "usage": 0.1,
-    "ability": "Natural Cure",
-    "item": "Focus Sash",
+    "ability": [
+      "Natural Cure",
+      "Cloud Nine"
+    ],
+    "items": {
+      "Focus Sash": 49.824
+    },
     "moves": {
       "Roost": 77.171,
       "Brave Bird": 51.247,
@@ -3623,8 +4774,13 @@
     "name": "Staraptor",
     "safe_name": "staraptor",
     "usage": 0.1,
-    "ability": "Reckless",
-    "item": "Choice Scarf",
+    "ability": [
+      "Reckless",
+      "Intimidate"
+    ],
+    "items": {
+      "Choice Scarf": 79.518
+    },
     "moves": {
       "Close Combat": 100.0,
       "Brave Bird": 86.093,
@@ -3639,8 +4795,13 @@
     "name": "Solgaleo",
     "safe_name": "solgaleo",
     "usage": 0.1,
-    "ability": "Full Metal Body",
-    "item": "Choice Scarf",
+    "ability": [
+      "Full Metal Body"
+    ],
+    "items": {
+      "Choice Scarf": 39.866,
+      "Air Balloon": 23.814
+    },
     "moves": {
       "Sunsteel Strike": 91.628,
       "Psychic Fangs": 73.71,
@@ -3656,8 +4817,14 @@
     "name": "Dachsbun",
     "safe_name": "dachsbun",
     "usage": 0.1,
-    "ability": "Well-Baked Body",
-    "item": "Rocky Helmet",
+    "ability": [
+      "Well-Baked Body",
+      "Aroma Veil "
+    ],
+    "items": {
+      "Rocky Helmet": 54.454,
+      "Leftovers": 29.866
+    },
     "moves": {
       "Protect": 97.549,
       "Play Rough": 96.428,
@@ -3672,8 +4839,12 @@
     "name": "Slither Wing",
     "safe_name": "slither-wing",
     "usage": 0.1,
-    "ability": "Protosynthesis",
-    "item": "Life Orb",
+    "ability": [
+      "Protosynthesis"
+    ],
+    "items": {
+      "Life Orb": 80.164
+    },
     "moves": {
       "Close Combat": 91.29,
       "Leech Life": 74.026,
@@ -3688,8 +4859,15 @@
     "name": "Haxorus",
     "safe_name": "haxorus",
     "usage": 0.1,
-    "ability": "Mold Breaker",
-    "item": "Loaded Dice",
+    "ability": [
+      "Mold Breaker",
+      "Rivalry ",
+      "Unnerve "
+    ],
+    "items": {
+      "Loaded Dice": 28.793,
+      "Lum Berry": 24.765
+    },
     "moves": {
       "Earthquake": 85.731,
       "Iron Head": 76.117,
@@ -3706,8 +4884,14 @@
     "name": "Jumpluff",
     "safe_name": "jumpluff",
     "usage": 0.1,
-    "ability": "Chlorophyll",
-    "item": "Big Root",
+    "ability": [
+      "Chlorophyll",
+      "Infiltrator "
+    ],
+    "items": {
+      "Big Root": 29.181,
+      "Covert Cloak": 28.75
+    },
     "moves": {
       "Sleep Powder": 56.348,
       "Tailwind": 51.912,
@@ -3725,8 +4909,14 @@
     "name": "Kommo-o",
     "safe_name": "kommo-o",
     "usage": 0.1,
-    "ability": "Overcoat",
-    "item": "Sitrus Berry",
+    "ability": [
+      "Overcoat",
+      "Soundproof",
+      "Bulletproof"
+    ],
+    "items": {
+      "Sitrus Berry": 35.645
+    },
     "moves": {
       "Clanging Scales": 46.705,
       "Clangorous Soul": 36.054,
@@ -3748,8 +4938,13 @@
     "name": "Leafeon",
     "safe_name": "leafeon",
     "usage": 0.1,
-    "ability": "Chlorophyll",
-    "item": "Life Orb",
+    "ability": [
+      "Chlorophyll",
+      "Leaf Guard "
+    ],
+    "items": {
+      "Life Orb": 62.527
+    },
     "moves": {
       "Tera Blast": 76.692,
       "Knock Off": 73.427,
@@ -3765,8 +4960,13 @@
     "name": "Armarouge",
     "safe_name": "armarouge",
     "usage": 0.1,
-    "ability": "Flash Fire",
-    "item": "Weakness Policy",
+    "ability": [
+      "Flash Fire",
+      "Weak Armor"
+    ],
+    "items": {
+      "Weakness Policy": 36.228
+    },
     "moves": {
       "Armor Cannon": 80.255,
       "Expanding Force": 64.742,
@@ -3781,8 +4981,13 @@
     "name": "Enamorus",
     "safe_name": "enamorus",
     "usage": 0.1,
-    "ability": "Contrary",
-    "item": "Leftovers",
+    "ability": [
+      "Contrary",
+      "Cute Charm"
+    ],
+    "items": {
+      "Leftovers": 45.515
+    },
     "moves": {
       "Moonblast": 68.087,
       "Taunt": 42.046,
@@ -3802,8 +5007,13 @@
     "name": "Quaquaval",
     "safe_name": "quaquaval",
     "usage": 0.1,
-    "ability": "Moxie",
-    "item": "Assault Vest",
+    "ability": [
+      "Moxie",
+      "Torrent "
+    ],
+    "items": {
+      "Assault Vest": 26.083
+    },
     "moves": {
       "Aqua Step": 98.636,
       "Close Combat": 74.878,
@@ -3820,8 +5030,13 @@
     "name": "Mismagius",
     "safe_name": "mismagius",
     "usage": 0.1,
-    "ability": "Levitate",
-    "item": "Covert Cloak",
+    "ability": [
+      "Levitate"
+    ],
+    "items": {
+      "Covert Cloak": 35.897,
+      "Sitrus Berry": 26.323
+    },
     "moves": {
       "Skill Swap": 66.609,
       "Protect": 66.363,
@@ -3838,8 +5053,15 @@
     "name": "Hydrapple",
     "safe_name": "hydrapple",
     "usage": 0.1,
-    "ability": "Regenerator",
-    "item": "Eject Pack",
+    "ability": [
+      "Regenerator",
+      "Supersweet Syrup ",
+      "Sticky Hold "
+    ],
+    "items": {
+      "Eject Pack": 47.348,
+      "Assault Vest": 21.803
+    },
     "moves": {
       "Earth Power": 85.828,
       "Draco Meteor": 73.911,
@@ -3856,8 +5078,13 @@
     "name": "Scovillain",
     "safe_name": "scovillain",
     "usage": 0.1,
-    "ability": "Moody",
-    "item": "White Herb",
+    "ability": [
+      "Moody",
+      "Chlorophyll"
+    ],
+    "items": {
+      "White Herb": 49.973
+    },
     "moves": {
       "Flamethrower": 76.395,
       "Protect": 61.719,
@@ -3873,8 +5100,14 @@
     "name": "Dudunsparce",
     "safe_name": "dudunsparce",
     "usage": 0.1,
-    "ability": "Serene Grace",
-    "item": "King's Rock",
+    "ability": [
+      "Serene Grace",
+      "Rattled"
+    ],
+    "items": {
+      "King's Rock": 29.43,
+      "Bright Powder": 20.185
+    },
     "moves": {
       "Roost": 64.579,
       "Glare": 51.138,
@@ -3893,8 +5126,13 @@
     "name": "Porygon-Z",
     "safe_name": "porygon-z",
     "usage": 0.1,
-    "ability": "Adaptability",
-    "item": "Choice Scarf",
+    "ability": [
+      "Adaptability",
+      "Download"
+    ],
+    "items": {
+      "Choice Scarf": 64.168
+    },
     "moves": {
       "Ice Beam": 76.79,
       "Hyper Beam": 75.523,
@@ -3909,8 +5147,13 @@
     "name": "Pachirisu",
     "safe_name": "pachirisu",
     "usage": 0.1,
-    "ability": "Volt Absorb",
-    "item": "Assault Vest",
+    "ability": [
+      "Volt Absorb",
+      "Run Away "
+    ],
+    "items": {
+      "Assault Vest": 80.1
+    },
     "moves": {
       "Nuzzle": 93.693,
       "Super Fang": 92.088,
@@ -3923,8 +5166,15 @@
     "name": "Thundurus",
     "safe_name": "thundurus",
     "usage": 0.1,
-    "ability": "Prankster",
-    "item": "Mental Herb",
+    "ability": [
+      "Prankster",
+      "Defiant"
+    ],
+    "items": {
+      "Mental Herb": 29.87,
+      "Sitrus Berry": 26.421,
+      "Covert Cloak": 22.384
+    },
     "moves": {
       "Wildbolt Storm": 65.682,
       "Taunt": 57.565,
@@ -3939,8 +5189,12 @@
     "name": "Munkidori",
     "safe_name": "munkidori",
     "usage": 0.1,
-    "ability": "Frisk",
-    "item": "Choice Scarf",
+    "ability": [
+      "Frisk"
+    ],
+    "items": {
+      "Choice Scarf": 91.164
+    },
     "moves": {
       "Psychic Noise": 100.0,
       "Trick": 95.835,
@@ -3954,8 +5208,14 @@
     "name": "Moltres",
     "safe_name": "moltres",
     "usage": 0.1,
-    "ability": "Flame Body",
-    "item": "Rocky Helmet",
+    "ability": [
+      "Flame Body",
+      "Pressure"
+    ],
+    "items": {
+      "Rocky Helmet": 29.34,
+      "Heavy-Duty Boots": 28.362
+    },
     "moves": {
       "Roost": 76.783,
       "Flamethrower": 71.352,
@@ -3972,8 +5232,12 @@
     "name": "Qwilfish-Hisui",
     "safe_name": "qwilfish-hisui",
     "usage": 0.1,
-    "ability": "Intimidate",
-    "item": "Eviolite",
+    "ability": [
+      "Intimidate"
+    ],
+    "items": {
+      "Eviolite": 100.0
+    },
     "moves": {
       "Pain Split": 100.0,
       "Toxic Spikes": 98.225,
@@ -3988,8 +5252,14 @@
     "name": "Chesnaught",
     "safe_name": "chesnaught",
     "usage": 0.1,
-    "ability": "Bulletproof",
-    "item": "Leftovers",
+    "ability": [
+      "Bulletproof",
+      "Overgrow "
+    ],
+    "items": {
+      "Leftovers": 42.082,
+      "Rocky Helmet": 41.252
+    },
     "moves": {
       "Leech Seed": 75.88,
       "Drain Punch": 66.238,
@@ -4009,8 +5279,12 @@
     "name": "Sylveon",
     "safe_name": "sylveon",
     "usage": 0.1,
-    "ability": "Pixilate",
-    "item": "Throat Spray",
+    "ability": [
+      "Pixilate"
+    ],
+    "items": {
+      "Throat Spray": 22.888
+    },
     "moves": {
       "Hyper Voice": 71.037,
       "Quick Attack": 37.509,
@@ -4029,8 +5303,13 @@
     "name": "Heracross",
     "safe_name": "heracross",
     "usage": 0.1,
-    "ability": "Moxie",
-    "item": "Focus Sash",
+    "ability": [
+      "Moxie",
+      "Guts "
+    ],
+    "items": {
+      "Focus Sash": 65.299
+    },
     "moves": {
       "Close Combat": 98.247,
       "Trailblaze": 75.171,
@@ -4046,8 +5325,14 @@
     "name": "Typhlosion",
     "safe_name": "typhlosion",
     "usage": 0.1,
-    "ability": "Flash Fire",
-    "item": "Charcoal",
+    "ability": [
+      "Flash Fire",
+      "Blaze "
+    ],
+    "items": {
+      "Charcoal": 46.346,
+      "Focus Sash": 35.636
+    },
     "moves": {
       "Eruption": 62.41,
       "Shadow Ball": 57.827,
@@ -4064,8 +5349,13 @@
     "name": "Ampharos",
     "safe_name": "ampharos",
     "usage": 0.1,
-    "ability": "Plus",
-    "item": "Punching Glove",
+    "ability": [
+      "Plus",
+      "Static "
+    ],
+    "items": {
+      "Punching Glove": 66.55
+    },
     "moves": {
       "Thunder Punch": 90.709,
       "Ice Punch": 88.04,
@@ -4078,8 +5368,13 @@
     "name": "Frosmoth",
     "safe_name": "frosmoth",
     "usage": 0.1,
-    "ability": "Ice Scales",
-    "item": "Leftovers",
+    "ability": [
+      "Ice Scales",
+      "Shield Dust "
+    ],
+    "items": {
+      "Leftovers": 79.148
+    },
     "moves": {
       "Quiver Dance": 88.491,
       "Giga Drain": 81.153,
@@ -4094,8 +5389,12 @@
     "name": "Glastrier",
     "safe_name": "glastrier",
     "usage": 0.1,
-    "ability": "Chilling Neigh",
-    "item": "Rocky Helmet",
+    "ability": [
+      "Chilling Neigh"
+    ],
+    "items": {
+      "Rocky Helmet": 78.631
+    },
     "moves": {
       "High Horsepower": 98.368,
       "Icicle Crash": 97.555,
@@ -4108,8 +5407,14 @@
     "name": "Polteageist",
     "safe_name": "polteageist",
     "usage": 0.1,
-    "ability": "Cursed Body",
-    "item": "White Herb",
+    "ability": [
+      "Cursed Body",
+      "Weak Armor"
+    ],
+    "items": {
+      "White Herb": 71.195,
+      "Focus Sash": 28.805
+    },
     "moves": {
       "Shell Smash": 100.0,
       "Stored Power": 95.791,
@@ -4123,8 +5428,12 @@
     "name": "Terrakion",
     "safe_name": "terrakion",
     "usage": 0.1,
-    "ability": "Justified",
-    "item": "Weakness Policy",
+    "ability": [
+      "Justified"
+    ],
+    "items": {
+      "Weakness Policy": 86.789
+    },
     "moves": {
       "Sacred Sword": 100.0,
       "Rock Slide": 100.0,
@@ -4139,8 +5448,14 @@
     "name": "Hitmontop",
     "safe_name": "hitmontop",
     "usage": 0.1,
-    "ability": "Intimidate",
-    "item": "Focus Sash",
+    "ability": [
+      "Intimidate",
+      "Technician"
+    ],
+    "items": {
+      "Focus Sash": 42.484,
+      "Assault Vest": 27.063
+    },
     "moves": {
       "Fake Out": 83.751,
       "Close Combat": 76.447,
@@ -4156,8 +5471,15 @@
     "name": "Magnezone",
     "safe_name": "magnezone",
     "usage": 0.1,
-    "ability": "Sturdy",
-    "item": "Weakness Policy",
+    "ability": [
+      "Sturdy",
+      "Analytic",
+      "Magnet Pull"
+    ],
+    "items": {
+      "Weakness Policy": 40.228,
+      "Air Balloon": 22.17
+    },
     "moves": {
       "Flash Cannon": 94.917,
       "Volt Switch": 49.797,
@@ -4174,8 +5496,13 @@
     "name": "Basculegion-F",
     "safe_name": "basculegion-f",
     "usage": 0.1,
-    "ability": "Adaptability",
-    "item": "Life Orb",
+    "ability": [
+      "Adaptability",
+      "Swift Swim"
+    ],
+    "items": {
+      "Life Orb": 77.457
+    },
     "moves": {
       "Wave Crash": 81.96,
       "Last Respects": 81.295,
@@ -4188,8 +5515,15 @@
     "name": "Avalugg-Hisui",
     "safe_name": "avalugg-hisui",
     "usage": 0.1,
-    "ability": "Sturdy",
-    "item": "Choice Band",
+    "ability": [
+      "Sturdy",
+      "Strong Jaw ",
+      "Ice Body "
+    ],
+    "items": {
+      "Choice Band": 40.035,
+      "Custap Berry": 21.607
+    },
     "moves": {
       "Avalanche": 60.885,
       "Gyro Ball": 55.562,
@@ -4209,8 +5543,12 @@
     "name": "Zacian",
     "safe_name": "zacian",
     "usage": 0.1,
-    "ability": "Intrepid Sword",
-    "item": "Choice Scarf",
+    "ability": [
+      "Intrepid Sword"
+    ],
+    "items": {
+      "Choice Scarf": 86.387
+    },
     "moves": {
       "Play Rough": 100.0,
       "Close Combat": 93.119,
@@ -4223,8 +5561,13 @@
     "name": "Klefki",
     "safe_name": "klefki",
     "usage": 0.1,
-    "ability": "Prankster",
-    "item": "Light Clay",
+    "ability": [
+      "Prankster"
+    ],
+    "items": {
+      "Light Clay": 47.75,
+      "Rocky Helmet": 23.417
+    },
     "moves": {
       "Light Screen": 78.796,
       "Reflect": 63.291,
@@ -4240,8 +5583,14 @@
     "name": "Malamar",
     "safe_name": "malamar",
     "usage": 0.1,
-    "ability": "Contrary",
-    "item": "Leftovers",
+    "ability": [
+      "Contrary",
+      "Suction Cups ",
+      "Infiltrator "
+    ],
+    "items": {
+      "Leftovers": 51.192
+    },
     "moves": {
       "Superpower": 70.807,
       "Knock Off": 62.851,
@@ -4256,8 +5605,13 @@
     "name": "Bastiodon",
     "safe_name": "bastiodon",
     "usage": 0.0,
-    "ability": "Sturdy",
-    "item": "Custap Berry",
+    "ability": [
+      "Sturdy",
+      "Soundproof"
+    ],
+    "items": {
+      "Custap Berry": 35.147
+    },
     "moves": {
       "Body Press": 56.219,
       "Metal Burst": 48.297,
@@ -4275,8 +5629,12 @@
     "name": "Trevenant",
     "safe_name": "trevenant",
     "usage": 0.0,
-    "ability": "Harvest",
-    "item": "Custap Berry",
+    "ability": [
+      "Harvest"
+    ],
+    "items": {
+      "Custap Berry": 91.355
+    },
     "moves": {
       "Poltergeist": 93.381,
       "Growth": 93.381,
@@ -4289,8 +5647,14 @@
     "name": "Beartic",
     "safe_name": "beartic",
     "usage": 0.0,
-    "ability": "Snow Cloak",
-    "item": "Focus Band",
+    "ability": [
+      "Snow Cloak",
+      "Slush Rush",
+      "Swift Swim"
+    ],
+    "items": {
+      "Focus Band": 58.807
+    },
     "moves": {
       "Earthquake": 78.072,
       "Aqua Jet": 69.727,
@@ -4306,8 +5670,13 @@
     "name": "Regirock",
     "safe_name": "regirock",
     "usage": 0.0,
-    "ability": "Sturdy",
-    "item": "Custap Berry",
+    "ability": [
+      "Sturdy",
+      "Clear Body"
+    ],
+    "items": {
+      "Custap Berry": 75.267
+    },
     "moves": {
       "Earthquake": 85.954,
       "Body Press": 85.939,
@@ -4320,8 +5689,13 @@
     "name": "Azelf",
     "safe_name": "azelf",
     "usage": 0.0,
-    "ability": "Levitate",
-    "item": "Nothing",
+    "ability": [
+      "Levitate"
+    ],
+    "items": {
+      "Nothing": 43.255,
+      "Focus Sash": 27.955
+    },
     "moves": {
       "Nothing": 129.764,
       "Energy Ball": 43.255,
@@ -4337,8 +5711,14 @@
     "name": "Lapras",
     "safe_name": "lapras",
     "usage": 0.0,
-    "ability": "Water Absorb",
-    "item": "Leftovers",
+    "ability": [
+      "Water Absorb",
+      "Shell Armor "
+    ],
+    "items": {
+      "Leftovers": 28.493,
+      "Rocky Helmet": 22.936
+    },
     "moves": {
       "Perish Song": 54.925,
       "Sheer Cold": 38.449,
@@ -4356,8 +5736,14 @@
     "name": "Revavroom",
     "safe_name": "revavroom",
     "usage": 0.0,
-    "ability": "Filter",
-    "item": "Focus Sash",
+    "ability": [
+      "Filter",
+      "Overcoat"
+    ],
+    "items": {
+      "Focus Sash": 36.485,
+      "Leftovers": 24.733
+    },
     "moves": {
       "Shift Gear": 97.841,
       "Iron Head": 50.077,
@@ -4374,8 +5760,13 @@
     "name": "Spidops",
     "safe_name": "spidops",
     "usage": 0.0,
-    "ability": "Insomnia",
-    "item": "Focus Sash",
+    "ability": [
+      "Insomnia",
+      "Stakeout"
+    ],
+    "items": {
+      "Focus Sash": 68.287
+    },
     "moves": {
       "Spikes": 92.474,
       "Sticky Web": 87.178,
@@ -4390,8 +5781,13 @@
     "name": "Ambipom",
     "safe_name": "ambipom",
     "usage": 0.0,
-    "ability": "Technician",
-    "item": "Life Orb",
+    "ability": [
+      "Technician",
+      "Skill Link "
+    ],
+    "items": {
+      "Life Orb": 35.192
+    },
     "moves": {
       "Fake Out": 100.0,
       "Double Hit": 66.369,
@@ -4407,8 +5803,15 @@
     "name": "Florges",
     "safe_name": "florges",
     "usage": 0.0,
-    "ability": "Flower Veil",
-    "item": "Leftovers",
+    "ability": [
+      "Flower Veil",
+      "Symbiosis "
+    ],
+    "items": {
+      "Leftovers": 38.513,
+      "Covert Cloak": 26.801,
+      "Assault Vest": 24.186
+    },
     "moves": {
       "Moonblast": 75.43,
       "Calm Mind": 49.955,
@@ -4430,8 +5833,13 @@
     "name": "Perrserker",
     "safe_name": "perrserker",
     "usage": 0.0,
-    "ability": "Battle Armor",
-    "item": "Mental Herb",
+    "ability": [
+      "Battle Armor",
+      "Steely Spirit "
+    ],
+    "items": {
+      "Mental Herb": 97.826
+    },
     "moves": {
       "Baton Pass": 97.826,
       "Iron Defense": 97.826,
@@ -4444,8 +5852,14 @@
     "name": "Milotic",
     "safe_name": "milotic",
     "usage": 0.0,
-    "ability": "Competitive",
-    "item": "Leftovers",
+    "ability": [
+      "Competitive",
+      "Marvel Scale",
+      "Cute Charm "
+    ],
+    "items": {
+      "Leftovers": 64.249
+    },
     "moves": {
       "Scald": 85.302,
       "Recover": 65.131,
@@ -4459,8 +5873,14 @@
     "name": "Oranguru",
     "safe_name": "oranguru",
     "usage": 0.0,
-    "ability": "Inner Focus",
-    "item": "Sitrus Berry",
+    "ability": [
+      "Inner Focus",
+      "Symbiosis",
+      "Telepathy "
+    ],
+    "items": {
+      "Sitrus Berry": 48.484
+    },
     "moves": {
       "Foul Play": 61.629,
       "Hyper Voice": 60.678,
@@ -4476,8 +5896,13 @@
     "name": "Goodra",
     "safe_name": "goodra",
     "usage": 0.0,
-    "ability": "Sap Sipper",
-    "item": "Assault Vest",
+    "ability": [
+      "Sap Sipper",
+      "Gooey "
+    ],
+    "items": {
+      "Assault Vest": 86.716
+    },
     "moves": {
       "Knock Off": 72.311,
       "Dragon Tail": 67.386,
@@ -4493,8 +5918,13 @@
     "name": "Ludicolo",
     "safe_name": "ludicolo",
     "usage": 0.0,
-    "ability": "Rain Dish",
-    "item": "Big Root",
+    "ability": [
+      "Rain Dish",
+      "Swift Swim"
+    ],
+    "items": {
+      "Big Root": 44.713
+    },
     "moves": {
       "Protect": 64.953,
       "Giga Drain": 64.395,
@@ -4511,8 +5941,15 @@
     "name": "Flamigo",
     "safe_name": "flamigo",
     "usage": 0.0,
-    "ability": "Scrappy",
-    "item": "Choice Scarf",
+    "ability": [
+      "Scrappy",
+      "Costar"
+    ],
+    "items": {
+      "Choice Scarf": 37.183,
+      "Focus Sash": 29.862,
+      "White Herb": 21.319
+    },
     "moves": {
       "Close Combat": 92.012,
       "Brave Bird": 50.187,
@@ -4530,8 +5967,12 @@
     "name": "Lycanroc-Dusk",
     "safe_name": "lycanroc-dusk",
     "usage": 0.0,
-    "ability": "Tough Claws",
-    "item": "Focus Sash",
+    "ability": [
+      "Tough Claws"
+    ],
+    "items": {
+      "Focus Sash": 75.331
+    },
     "moves": {
       "Accelerock": 68.771,
       "Close Combat": 57.259,
@@ -4549,8 +5990,13 @@
     "name": "Decidueye-Hisui",
     "safe_name": "decidueye-hisui",
     "usage": 0.0,
-    "ability": "Scrappy",
-    "item": "Assault Vest",
+    "ability": [
+      "Scrappy"
+    ],
+    "items": {
+      "Assault Vest": 29.564,
+      "Scope Lens": 20.463
+    },
     "moves": {
       "Triple Arrows": 97.38,
       "Leaf Blade": 40.954,
@@ -4567,8 +6013,13 @@
     "name": "Persian-Alola",
     "safe_name": "persian-alola",
     "usage": 0.0,
-    "ability": "Fur Coat",
-    "item": "Choice Scarf",
+    "ability": [
+      "Fur Coat",
+      "Technician "
+    ],
+    "items": {
+      "Choice Scarf": 97.162
+    },
     "moves": {
       "Parting Shot": 100.0,
       "Foul Play": 97.162,
@@ -4581,8 +6032,14 @@
     "name": "Swalot",
     "safe_name": "swalot",
     "usage": 0.0,
-    "ability": "Gluttony",
-    "item": "Custap Berry",
+    "ability": [
+      "Gluttony",
+      "Liquid Ooze ",
+      "Sticky Hold "
+    ],
+    "items": {
+      "Custap Berry": 88.516
+    },
     "moves": {
       "Toxic Spikes": 97.496,
       "Knock Off": 88.516,
@@ -4595,8 +6052,13 @@
     "name": "Torterra",
     "safe_name": "torterra",
     "usage": 0.0,
-    "ability": "Shell Armor",
-    "item": "Loaded Dice",
+    "ability": [
+      "Shell Armor",
+      "Overgrow"
+    ],
+    "items": {
+      "Loaded Dice": 77.403
+    },
     "moves": {
       "Shell Smash": 84.902,
       "Earthquake": 83.102,
@@ -4610,8 +6072,14 @@
     "name": "Typhlosion-Hisui",
     "safe_name": "typhlosion-hisui",
     "usage": 0.0,
-    "ability": "Frisk",
-    "item": "Choice Scarf",
+    "ability": [
+      "Frisk",
+      "Blaze"
+    ],
+    "items": {
+      "Choice Scarf": 29.435,
+      "Choice Specs": 28.276
+    },
     "moves": {
       "Eruption": 83.341,
       "Shadow Ball": 66.109,
@@ -4627,8 +6095,12 @@
     "name": "Lilligant",
     "safe_name": "lilligant",
     "usage": 0.0,
-    "ability": "Chlorophyll",
-    "item": "Life Orb",
+    "ability": [
+      "Chlorophyll"
+    ],
+    "items": {
+      "Life Orb": 71.212
+    },
     "moves": {
       "Encore": 92.176,
       "Alluring Voice": 87.262,
@@ -4642,8 +6114,13 @@
     "name": "Cramorant",
     "safe_name": "cramorant",
     "usage": 0.0,
-    "ability": "Gulp Missile",
-    "item": "Sitrus Berry",
+    "ability": [
+      "Gulp Missile"
+    ],
+    "items": {
+      "Sitrus Berry": 44.224,
+      "Focus Sash": 42.122
+    },
     "moves": {
       "Surf": 99.043,
       "Tailwind": 86.658,
@@ -4656,8 +6133,15 @@
     "name": "Kilowattrel",
     "safe_name": "kilowattrel",
     "usage": 0.0,
-    "ability": "Competitive",
-    "item": "Focus Sash",
+    "ability": [
+      "Competitive",
+      "Wind Power",
+      "Volt Absorb"
+    ],
+    "items": {
+      "Focus Sash": 22.819,
+      "Magnet": 22.235
+    },
     "moves": {
       "Air Slash": 67.792,
       "Volt Switch": 66.897,
@@ -4673,8 +6157,13 @@
     "name": "Registeel",
     "safe_name": "registeel",
     "usage": 0.0,
-    "ability": "Clear Body",
-    "item": "Leftovers",
+    "ability": [
+      "Clear Body"
+    ],
+    "items": {
+      "Leftovers": 44.979,
+      "Chesto Berry": 21.887
+    },
     "moves": {
       "Body Press": 83.924,
       "Iron Defense": 70.245,
@@ -4689,8 +6178,14 @@
     "name": "Clefairy",
     "safe_name": "clefairy",
     "usage": 0.0,
-    "ability": "Friend Guard",
-    "item": "Eviolite",
+    "ability": [
+      "Friend Guard",
+      "Cute Charm ",
+      "Magic Guard "
+    ],
+    "items": {
+      "Eviolite": 97.625
+    },
     "moves": {
       "Follow Me": 95.406,
       "Helping Hand": 69.219,
@@ -4706,8 +6201,12 @@
     "name": "Toedscruel",
     "safe_name": "toedscruel",
     "usage": 0.0,
-    "ability": "Mycelium Might",
-    "item": "Covert Cloak",
+    "ability": [
+      "Mycelium Might"
+    ],
+    "items": {
+      "Covert Cloak": 73.599
+    },
     "moves": {
       "Spore": 97.382,
       "Earth Power": 81.815,
@@ -4720,8 +6219,13 @@
     "name": "Decidueye",
     "safe_name": "decidueye",
     "usage": 0.0,
-    "ability": "Long Reach",
-    "item": "Assault Vest",
+    "ability": [
+      "Long Reach",
+      "Overgrow"
+    ],
+    "items": {
+      "Assault Vest": 68.198
+    },
     "moves": {
       "Spirit Shackle": 86.73,
       "Leaf Blade": 85.028,
@@ -4735,8 +6239,15 @@
     "name": "Barraskewda",
     "safe_name": "barraskewda",
     "usage": 0.0,
-    "ability": "Swift Swim",
-    "item": "Choice Band",
+    "ability": [
+      "Swift Swim",
+      "Propeller Tail "
+    ],
+    "items": {
+      "Choice Band": 44.911,
+      "Life Orb": 22.336,
+      "Mystic Water": 20.005
+    },
     "moves": {
       "Flip Turn": 88.214,
       "Close Combat": 60.574,
@@ -4754,8 +6265,13 @@
     "name": "Feraligatr",
     "safe_name": "feraligatr",
     "usage": 0.0,
-    "ability": "Sheer Force",
-    "item": "Life Orb",
+    "ability": [
+      "Sheer Force",
+      "Torrent"
+    ],
+    "items": {
+      "Life Orb": 78.764
+    },
     "moves": {
       "Dragon Dance": 79.165,
       "Liquidation": 70.093,
@@ -4770,8 +6286,15 @@
     "name": "Reuniclus",
     "safe_name": "reuniclus",
     "usage": 0.0,
-    "ability": "Magic Guard",
-    "item": "Life Orb",
+    "ability": [
+      "Magic Guard",
+      "Regenerator ",
+      "Overcoat "
+    ],
+    "items": {
+      "Life Orb": 52.002,
+      "Sitrus Berry": 25.835
+    },
     "moves": {
       "Psychic Noise": 68.007,
       "Trick Room": 35.064,
@@ -4790,8 +6313,14 @@
     "name": "Raichu",
     "safe_name": "raichu",
     "usage": 0.0,
-    "ability": "Lightning Rod",
-    "item": "Focus Sash",
+    "ability": [
+      "Lightning Rod",
+      "Static "
+    ],
+    "items": {
+      "Focus Sash": 32.712,
+      "Assault Vest": 25.436
+    },
     "moves": {
       "Fake Out": 81.112,
       "Nuzzle": 64.551,
@@ -4807,8 +6336,13 @@
     "name": "Politoed",
     "safe_name": "politoed",
     "usage": 0.0,
-    "ability": "Drizzle",
-    "item": "Damp Rock",
+    "ability": [
+      "Drizzle",
+      "Water Absorb "
+    ],
+    "items": {
+      "Damp Rock": 30.712
+    },
     "moves": {
       "Protect": 54.701,
       "Perish Song": 53.102,
@@ -4824,8 +6358,14 @@
     "name": "Sandaconda",
     "safe_name": "sandaconda",
     "usage": 0.0,
-    "ability": "Sand Spit",
-    "item": "Smooth Rock",
+    "ability": [
+      "Sand Spit",
+      "Shed Skin"
+    ],
+    "items": {
+      "Smooth Rock": 51.329,
+      "Leftovers": 42.677
+    },
     "moves": {
       "Glare": 75.404,
       "Stealth Rock": 51.329,
@@ -4842,8 +6382,13 @@
     "name": "Tropius",
     "safe_name": "tropius",
     "usage": 0.0,
-    "ability": "Harvest",
-    "item": "Sitrus Berry",
+    "ability": [
+      "Harvest",
+      "Chlorophyll "
+    ],
+    "items": {
+      "Sitrus Berry": 90.52
+    },
     "moves": {
       "Substitute": 94.099,
       "Leech Seed": 92.976,
@@ -4856,8 +6401,14 @@
     "name": "Tsareena",
     "safe_name": "tsareena",
     "usage": 0.0,
-    "ability": "Queenly Majesty",
-    "item": "Wide Lens",
+    "ability": [
+      "Queenly Majesty",
+      "Leaf Guard",
+      "Sweet Veil "
+    ],
+    "items": {
+      "Wide Lens": 30.768
+    },
     "moves": {
       "Triple Axel": 66.293,
       "Power Whip": 50.87,
@@ -4876,8 +6427,13 @@
     "name": "Articuno-Galar",
     "safe_name": "articuno-galar",
     "usage": 0.0,
-    "ability": "Competitive",
-    "item": "Bright Powder",
+    "ability": [
+      "Competitive"
+    ],
+    "items": {
+      "Bright Powder": 51.813,
+      "Leftovers": 22.439
+    },
     "moves": {
       "Freezing Glare": 83.894,
       "Tera Blast": 58.9,
@@ -4893,8 +6449,13 @@
     "name": "Spectrier",
     "safe_name": "spectrier",
     "usage": 0.0,
-    "ability": "Grim Neigh",
-    "item": "Leftovers",
+    "ability": [
+      "Grim Neigh"
+    ],
+    "items": {
+      "Leftovers": 63.154,
+      "Focus Sash": 22.933
+    },
     "moves": {
       "Shadow Ball": 70.121,
       "Substitute": 67.031,
@@ -4913,8 +6474,14 @@
     "name": "Mienshao",
     "safe_name": "mienshao",
     "usage": 0.0,
-    "ability": "Inner Focus",
-    "item": "Focus Sash",
+    "ability": [
+      "Inner Focus",
+      "Regenerator",
+      "Reckless"
+    ],
+    "items": {
+      "Focus Sash": 58.082
+    },
     "moves": {
       "Close Combat": 72.497,
       "Fake Out": 67.86,
@@ -4929,8 +6496,14 @@
     "name": "Ninetales",
     "safe_name": "ninetales",
     "usage": 0.0,
-    "ability": "Drought",
-    "item": "Heat Rock",
+    "ability": [
+      "Drought",
+      "Flash Fire "
+    ],
+    "items": {
+      "Heat Rock": 44.871,
+      "Eject Button": 24.253
+    },
     "moves": {
       "Solar Beam": 61.588,
       "Healing Wish": 38.79,
@@ -4947,8 +6520,14 @@
     "name": "Gumshoos",
     "safe_name": "gumshoos",
     "usage": 0.0,
-    "ability": "Adaptability",
-    "item": "Focus Sash",
+    "ability": [
+      "Adaptability",
+      "Stakeout"
+    ],
+    "items": {
+      "Focus Sash": 77.037,
+      "Life Orb": 21.841
+    },
     "moves": {
       "Nothing": 121.763,
       "Last Resort": 67.798,
@@ -4964,8 +6543,13 @@
     "name": "Poliwrath",
     "safe_name": "poliwrath",
     "usage": 0.0,
-    "ability": "Swift Swim",
-    "item": "Sitrus Berry",
+    "ability": [
+      "Swift Swim",
+      "Water Absorb"
+    ],
+    "items": {
+      "Sitrus Berry": 32.742
+    },
     "moves": {
       "Liquidation": 64.466,
       "Belly Drum": 47.061,
@@ -4982,8 +6566,12 @@
     "name": "Prinplup",
     "safe_name": "prinplup",
     "usage": 0.0,
-    "ability": "Torrent",
-    "item": "Eviolite",
+    "ability": [
+      "Torrent"
+    ],
+    "items": {
+      "Eviolite": 100.0
+    },
     "moves": {
       "Whirlpool": 100.0,
       "Roost": 100.0,
@@ -4996,8 +6584,13 @@
     "name": "Sandy Shocks",
     "safe_name": "sandy-shocks",
     "usage": 0.0,
-    "ability": "Protosynthesis",
-    "item": "Booster Energy",
+    "ability": [
+      "Protosynthesis"
+    ],
+    "items": {
+      "Booster Energy": 36.657,
+      "Assault Vest": 34.896
+    },
     "moves": {
       "Earth Power": 93.781,
       "Thunderbolt": 76.986,
@@ -5013,8 +6606,15 @@
     "name": "Rhyperior",
     "safe_name": "rhyperior",
     "usage": 0.0,
-    "ability": "Lightning Rod",
-    "item": "Assault Vest",
+    "ability": [
+      "Lightning Rod",
+      "Solid Rock"
+    ],
+    "items": {
+      "Assault Vest": 37.898,
+      "Choice Band": 25.86,
+      "Safety Goggles": 21.185
+    },
     "moves": {
       "Earthquake": 62.248,
       "Stone Edge": 55.174,
@@ -5030,8 +6630,14 @@
     "name": "Tornadus-Therian",
     "safe_name": "tornadus-therian",
     "usage": 0.0,
-    "ability": "Regenerator",
-    "item": "Assault Vest",
+    "ability": [
+      "Regenerator"
+    ],
+    "items": {
+      "Assault Vest": 33.364,
+      "Covert Cloak": 29.045,
+      "Heavy-Duty Boots": 22.216
+    },
     "moves": {
       "Bleakwind Storm": 63.316,
       "U-turn": 60.342,
@@ -5049,8 +6655,13 @@
     "name": "Hariyama",
     "safe_name": "hariyama",
     "usage": 0.0,
-    "ability": "Guts",
-    "item": "Sitrus Berry",
+    "ability": [
+      "Guts",
+      "Thick Fat"
+    ],
+    "items": {
+      "Sitrus Berry": 47.441
+    },
     "moves": {
       "Knock Off": 80.44,
       "Drain Punch": 61.799,
@@ -5067,8 +6678,13 @@
     "name": "Raichu-Alola",
     "safe_name": "raichu-alola",
     "usage": 0.0,
-    "ability": "Surge Surfer",
-    "item": "Focus Sash",
+    "ability": [
+      "Surge Surfer"
+    ],
+    "items": {
+      "Focus Sash": 40.468,
+      "Life Orb": 34.894
+    },
     "moves": {
       "Surf": 52.061,
       "Psyshock": 44.424,
@@ -5087,8 +6703,12 @@
     "name": "Morpeko",
     "safe_name": "morpeko",
     "usage": 0.0,
-    "ability": "Hunger Switch",
-    "item": "Focus Sash",
+    "ability": [
+      "Hunger Switch"
+    ],
+    "items": {
+      "Focus Sash": 77.727
+    },
     "moves": {
       "Aura Wheel": 100.0,
       "Fake Out": 71.126,
@@ -5104,8 +6724,13 @@
     "name": "Emboar",
     "safe_name": "emboar",
     "usage": 0.0,
-    "ability": "Reckless",
-    "item": "Choice Scarf",
+    "ability": [
+      "Reckless",
+      "Blaze"
+    ],
+    "items": {
+      "Choice Scarf": 45.239
+    },
     "moves": {
       "Flare Blitz": 84.862,
       "Sucker Punch": 56.729,
@@ -5119,8 +6744,16 @@
     "name": "Golurk",
     "safe_name": "golurk",
     "usage": 0.0,
-    "ability": "No Guard",
-    "item": "Assault Vest",
+    "ability": [
+      "No Guard",
+      "Iron Fist",
+      "Klutz "
+    ],
+    "items": {
+      "Assault Vest": 41.444,
+      "Choice Band": 29.103,
+      "Punching Glove": 21.916
+    },
     "moves": {
       "Dynamic Punch": 83.013,
       "Poltergeist": 74.029,
@@ -5137,8 +6770,14 @@
     "name": "Krookodile",
     "safe_name": "krookodile",
     "usage": 0.0,
-    "ability": "Intimidate",
-    "item": "Choice Scarf",
+    "ability": [
+      "Intimidate",
+      "Moxie",
+      "Anger Point "
+    ],
+    "items": {
+      "Choice Scarf": 20.183
+    },
     "moves": {
       "Earthquake": 91.405,
       "Knock Off": 37.136,
@@ -5157,8 +6796,13 @@
     "name": "Sceptile",
     "safe_name": "sceptile",
     "usage": 0.0,
-    "ability": "Overgrow",
-    "item": "Clear Amulet",
+    "ability": [
+      "Overgrow",
+      "Unburden"
+    ],
+    "items": {
+      "Clear Amulet": 42.886
+    },
     "moves": {
       "Dragon Pulse": 61.294,
       "Giga Drain": 46.059,
@@ -5175,8 +6819,15 @@
     "name": "Noivern",
     "safe_name": "noivern",
     "usage": 0.0,
-    "ability": "Infiltrator",
-    "item": "Choice Specs",
+    "ability": [
+      "Infiltrator",
+      "Frisk ",
+      "Telepathy "
+    ],
+    "items": {
+      "Choice Specs": 38.293,
+      "Focus Sash": 33.924
+    },
     "moves": {
       "Draco Meteor": 81.756,
       "Boomburst": 52.95,
@@ -5196,8 +6847,13 @@
     "name": "Iron Thorns",
     "safe_name": "iron-thorns",
     "usage": 0.0,
-    "ability": "Quark Drive",
-    "item": "Loaded Dice",
+    "ability": [
+      "Quark Drive"
+    ],
+    "items": {
+      "Loaded Dice": 74.439,
+      "Air Balloon": 25.561
+    },
     "moves": {
       "Rock Blast": 74.439,
       "Pin Missile": 74.439,
@@ -5216,8 +6872,15 @@
     "name": "Squawkabilly",
     "safe_name": "squawkabilly",
     "usage": 0.0,
-    "ability": "Intimidate",
-    "item": "Choice Scarf",
+    "ability": [
+      "Intimidate",
+      "Hustle",
+      "Guts "
+    ],
+    "items": {
+      "Choice Scarf": 65.993,
+      "Life Orb": 25.955
+    },
     "moves": {
       "U-turn": 91.947,
       "Final Gambit": 65.993,
@@ -5233,8 +6896,14 @@
     "name": "Scrafty",
     "safe_name": "scrafty",
     "usage": 0.0,
-    "ability": "Shed Skin",
-    "item": "Leftovers",
+    "ability": [
+      "Shed Skin",
+      "Intimidate",
+      "Moxie "
+    ],
+    "items": {
+      "Leftovers": 57.916
+    },
     "moves": {
       "Knock Off": 84.521,
       "Drain Punch": 73.307,
@@ -5249,8 +6918,13 @@
     "name": "Sawsbuck",
     "safe_name": "sawsbuck",
     "usage": 0.0,
-    "ability": "Chlorophyll",
-    "item": "Focus Sash",
+    "ability": [
+      "Chlorophyll",
+      "Serene Grace"
+    ],
+    "items": {
+      "Focus Sash": 79.57
+    },
     "moves": {
       "Throat Chop": 84.589,
       "Play Rough": 75.65,
@@ -5267,8 +6941,14 @@
     "name": "Inteleon",
     "safe_name": "inteleon",
     "usage": 0.0,
-    "ability": "Sniper",
-    "item": "Mystic Water",
+    "ability": [
+      "Sniper",
+      "Torrent"
+    ],
+    "items": {
+      "Mystic Water": 31.712,
+      "Choice Scarf": 21.888
+    },
     "moves": {
       "Snipe Shot": 93.673,
       "Shadow Ball": 71.945,
@@ -5284,8 +6964,12 @@
     "name": "Minccino",
     "safe_name": "minccino",
     "usage": 0.0,
-    "ability": "Cute Charm",
-    "item": "Focus Sash",
+    "ability": [
+      "Cute Charm"
+    ],
+    "items": {
+      "Focus Sash": 100.0
+    },
     "moves": {
       "Encore": 100.0,
       "Endeavor": 100.0,
@@ -5298,8 +6982,13 @@
     "name": "Zapdos-Galar",
     "safe_name": "zapdos-galar",
     "usage": 0.0,
-    "ability": "Defiant",
-    "item": "Assault Vest",
+    "ability": [
+      "Defiant"
+    ],
+    "items": {
+      "Assault Vest": 34.05,
+      "Life Orb": 27.639
+    },
     "moves": {
       "Brave Bird": 86.383,
       "U-turn": 65.241,
@@ -5314,8 +7003,12 @@
     "name": "Golem",
     "safe_name": "golem",
     "usage": 0.0,
-    "ability": "Sturdy",
-    "item": "Custap Berry",
+    "ability": [
+      "Sturdy"
+    ],
+    "items": {
+      "Custap Berry": 84.806
+    },
     "moves": {
       "Explosion": 96.976,
       "Earthquake": 96.976,
@@ -5328,8 +7021,14 @@
     "name": "Tatsugiri",
     "safe_name": "tatsugiri",
     "usage": 0.0,
-    "ability": "Commander",
-    "item": "Focus Sash",
+    "ability": [
+      "Commander",
+      "Storm Drain"
+    ],
+    "items": {
+      "Focus Sash": 35.487,
+      "Toxic Orb": 20.909
+    },
     "moves": {
       "Draco Meteor": 90.116,
       "Muddy Water": 62.874,
@@ -5345,8 +7044,12 @@
     "name": "Dunsparce",
     "safe_name": "dunsparce",
     "usage": 0.0,
-    "ability": "Serene Grace",
-    "item": "Eviolite",
+    "ability": [
+      "Serene Grace"
+    ],
+    "items": {
+      "Eviolite": 92.058
+    },
     "moves": {
       "Rock Slide": 96.901,
       "Body Slam": 92.058,
@@ -5359,8 +7062,14 @@
     "name": "Meganium",
     "safe_name": "meganium",
     "usage": 0.0,
-    "ability": "Overgrow",
-    "item": "Leftovers",
+    "ability": [
+      "Overgrow",
+      "Leaf Guard"
+    ],
+    "items": {
+      "Leftovers": 36.369,
+      "Jaboca Berry": 31.014
+    },
     "moves": {
       "Leech Seed": 73.417,
       "Protect": 49.23,
@@ -5376,8 +7085,14 @@
     "name": "Regidrago",
     "safe_name": "regidrago",
     "usage": 0.0,
-    "ability": "Dragon's Maw",
-    "item": "Choice Scarf",
+    "ability": [
+      "Dragon's Maw"
+    ],
+    "items": {
+      "Choice Scarf": 25.773,
+      "Life Orb": 22.586,
+      "Dragon Fang": 20.003
+    },
     "moves": {
       "Dragon Energy": 76.748,
       "Tera Blast": 55.87,
@@ -5397,8 +7112,14 @@
     "name": "Coalossal",
     "safe_name": "coalossal",
     "usage": 0.0,
-    "ability": "Steam Engine",
-    "item": "Chesto Berry",
+    "ability": [
+      "Steam Engine",
+      "Flame Body "
+    ],
+    "items": {
+      "Chesto Berry": 52.236,
+      "Weakness Policy": 38.346
+    },
     "moves": {
       "Power Gem": 90.582,
       "Will-O-Wisp": 52.236,
@@ -5414,8 +7135,13 @@
     "name": "Iron Jugulis",
     "safe_name": "iron-jugulis",
     "usage": 0.0,
-    "ability": "Quark Drive",
-    "item": "Booster Energy",
+    "ability": [
+      "Quark Drive"
+    ],
+    "items": {
+      "Booster Energy": 40.701,
+      "Assault Vest": 23.661
+    },
     "moves": {
       "Dark Pulse": 77.818,
       "Air Slash": 50.529,
@@ -5435,8 +7161,14 @@
     "name": "Zebstrika",
     "safe_name": "zebstrika",
     "usage": 0.0,
-    "ability": "Motor Drive",
-    "item": "Focus Sash",
+    "ability": [
+      "Motor Drive",
+      "Lightning Rod",
+      "Sap Sipper"
+    ],
+    "items": {
+      "Focus Sash": 68.688
+    },
     "moves": {
       "Thunder Wave": 84.159,
       "Supercell Slam": 78.704,
@@ -5453,8 +7185,14 @@
     "name": "Lycanroc",
     "safe_name": "lycanroc",
     "usage": 0.0,
-    "ability": "Keen Eye",
-    "item": "Focus Sash",
+    "ability": [
+      "Keen Eye",
+      "Steadfast",
+      "Sand Rush"
+    ],
+    "items": {
+      "Focus Sash": 77.741
+    },
     "moves": {
       "Accelerock": 88.44,
       "Stealth Rock": 79.825,
@@ -5470,8 +7208,12 @@
     "name": "Slowbro-Galar",
     "safe_name": "slowbro-galar",
     "usage": 0.0,
-    "ability": "Quick Draw",
-    "item": "Quick Claw",
+    "ability": [
+      "Quick Draw"
+    ],
+    "items": {
+      "Quick Claw": 100.0
+    },
     "moves": {
       "Shell Side Arm": 95.539,
       "Grass Knot": 63.547,
@@ -5489,8 +7231,14 @@
     "name": "Sandslash-Alola",
     "safe_name": "sandslash-alola",
     "usage": 0.0,
-    "ability": "Slush Rush",
-    "item": "Air Balloon",
+    "ability": [
+      "Slush Rush",
+      "Snow Cloak "
+    ],
+    "items": {
+      "Air Balloon": 41.768,
+      "Assault Vest": 29.544
+    },
     "moves": {
       "Iron Head": 100.0,
       "Icicle Crash": 54.918,
@@ -5506,8 +7254,13 @@
     "name": "Murkrow",
     "safe_name": "murkrow",
     "usage": 0.0,
-    "ability": "Prankster",
-    "item": "Eviolite",
+    "ability": [
+      "Prankster",
+      "Insomnia "
+    ],
+    "items": {
+      "Eviolite": 69.862
+    },
     "moves": {
       "Tailwind": 88.531,
       "Perish Song": 48.244,
@@ -5523,8 +7276,12 @@
     "name": "Virizion",
     "safe_name": "virizion",
     "usage": 0.0,
-    "ability": "Justified",
-    "item": "Light Clay",
+    "ability": [
+      "Justified"
+    ],
+    "items": {
+      "Light Clay": 55.891
+    },
     "moves": {
       "Aura Sphere": 73.748,
       "Giga Drain": 73.748,
@@ -5542,8 +7299,13 @@
     "name": "Golem-Alola",
     "safe_name": "golem-alola",
     "usage": 0.0,
-    "ability": "Galvanize",
-    "item": "Choice Scarf",
+    "ability": [
+      "Galvanize",
+      "Sturdy "
+    ],
+    "items": {
+      "Choice Scarf": 29.54
+    },
     "moves": {
       "Explosion": 81.646,
       "Double-Edge": 59.268,
@@ -5560,8 +7322,12 @@
     "name": "Dragalge",
     "safe_name": "dragalge",
     "usage": 0.0,
-    "ability": "Adaptability",
-    "item": "Assault Vest",
+    "ability": [
+      "Adaptability"
+    ],
+    "items": {
+      "Assault Vest": 88.619
+    },
     "moves": {
       "Hydro Pump": 88.619,
       "Dragon Pulse": 88.165,
@@ -5574,8 +7340,13 @@
     "name": "Scyther",
     "safe_name": "scyther",
     "usage": 0.0,
-    "ability": "Technician",
-    "item": "Eviolite",
+    "ability": [
+      "Technician",
+      "Steadfast "
+    ],
+    "items": {
+      "Eviolite": 92.812
+    },
     "moves": {
       "Dual Wingbeat": 93.173,
       "Swords Dance": 88.205,
@@ -5588,8 +7359,13 @@
     "name": "Rhydon",
     "safe_name": "rhydon",
     "usage": 0.0,
-    "ability": "Lightning Rod",
-    "item": "Eviolite",
+    "ability": [
+      "Lightning Rod",
+      "Rock Head "
+    ],
+    "items": {
+      "Eviolite": 100.0
+    },
     "moves": {
       "Earthquake": 61.441,
       "Heavy Slam": 48.712,
@@ -5608,8 +7384,13 @@
     "name": "Rotom-Mow",
     "safe_name": "rotom-mow",
     "usage": 0.0,
-    "ability": "Levitate",
-    "item": "Assault Vest",
+    "ability": [
+      "Levitate"
+    ],
+    "items": {
+      "Assault Vest": 44.812,
+      "Sitrus Berry": 40.966
+    },
     "moves": {
       "Leaf Storm": 94.561,
       "Dark Pulse": 91.217,
@@ -5622,8 +7403,14 @@
     "name": "Veluza",
     "safe_name": "veluza",
     "usage": 0.0,
-    "ability": "Mold Breaker",
-    "item": "Leftovers",
+    "ability": [
+      "Mold Breaker",
+      "Sharpness "
+    ],
+    "items": {
+      "Leftovers": 70.161,
+      "Aguav Berry": 24.82
+    },
     "moves": {
       "Fillet Away": 100.0,
       "Substitute": 94.981,
@@ -5637,8 +7424,13 @@
     "name": "Bisharp",
     "safe_name": "bisharp",
     "usage": 0.0,
-    "ability": "Defiant",
-    "item": "Eviolite",
+    "ability": [
+      "Defiant"
+    ],
+    "items": {
+      "Eviolite": 65.608,
+      "Leftovers": 24.372
+    },
     "moves": {
       "Iron Head": 90.787,
       "Sucker Punch": 85.127,
@@ -5656,8 +7448,15 @@
     "name": "Spiritomb",
     "safe_name": "spiritomb",
     "usage": 0.0,
-    "ability": "Infiltrator",
-    "item": "Leftovers",
+    "ability": [
+      "Infiltrator",
+      "Pressure"
+    ],
+    "items": {
+      "Leftovers": 31.14,
+      "Sitrus Berry": 30.176,
+      "Life Orb": 20.924
+    },
     "moves": {
       "Will-O-Wisp": 76.035,
       "Foul Play": 39.5,
@@ -5675,8 +7474,13 @@
     "name": "Jolteon",
     "safe_name": "jolteon",
     "usage": 0.0,
-    "ability": "Volt Absorb",
-    "item": "Air Balloon",
+    "ability": [
+      "Volt Absorb",
+      "Quick Feet"
+    ],
+    "items": {
+      "Air Balloon": 29.889
+    },
     "moves": {
       "Thunder": 68.124,
       "Shadow Ball": 41.608,
@@ -5696,8 +7500,13 @@
     "name": "Electivire",
     "safe_name": "electivire",
     "usage": 0.0,
-    "ability": "Motor Drive",
-    "item": "Assault Vest",
+    "ability": [
+      "Motor Drive",
+      "Vital Spirit "
+    ],
+    "items": {
+      "Assault Vest": 83.957
+    },
     "moves": {
       "Knock Off": 60.565,
       "Supercell Slam": 60.302,
@@ -5714,8 +7523,12 @@
     "name": "Masquerain",
     "safe_name": "masquerain",
     "usage": 0.0,
-    "ability": "Intimidate",
-    "item": "Focus Sash",
+    "ability": [
+      "Intimidate"
+    ],
+    "items": {
+      "Focus Sash": 86.035
+    },
     "moves": {
       "Whirlwind": 86.035,
       "Sticky Web": 86.035,
@@ -5729,8 +7542,13 @@
     "name": "Weezing",
     "safe_name": "weezing",
     "usage": 0.0,
-    "ability": "Levitate",
-    "item": "Sitrus Berry",
+    "ability": [
+      "Levitate",
+      "Neutralizing Gas"
+    ],
+    "items": {
+      "Sitrus Berry": 44.665
+    },
     "moves": {
       "Will-O-Wisp": 54.929,
       "Taunt": 49.797,
@@ -5750,8 +7568,15 @@
     "name": "Conkeldurr",
     "safe_name": "conkeldurr",
     "usage": 0.0,
-    "ability": "Guts",
-    "item": "Flame Orb",
+    "ability": [
+      "Guts",
+      "Sheer Force",
+      "Iron Fist"
+    ],
+    "items": {
+      "Flame Orb": 30.384,
+      "Punching Glove": 27.96
+    },
     "moves": {
       "Mach Punch": 80.203,
       "Drain Punch": 75.043,
@@ -5768,8 +7593,14 @@
     "name": "Klawf",
     "safe_name": "klawf",
     "usage": 0.0,
-    "ability": "Regenerator",
-    "item": "Leftovers",
+    "ability": [
+      "Regenerator",
+      "Anger Shell",
+      "Shell Armor "
+    ],
+    "items": {
+      "Leftovers": 85.137
+    },
     "moves": {
       "Guillotine": 85.228,
       "Iron Defense": 85.137,
@@ -5782,8 +7613,13 @@
     "name": "Lycanroc-Midnight",
     "safe_name": "lycanroc-midnight",
     "usage": 0.0,
-    "ability": "No Guard",
-    "item": "Salac Berry",
+    "ability": [
+      "No Guard",
+      "Keen Eye"
+    ],
+    "items": {
+      "Salac Berry": 67.732
+    },
     "moves": {
       "Stone Edge": 85.934,
       "Stealth Rock": 67.732,
@@ -5797,8 +7633,14 @@
     "name": "Duraludon",
     "safe_name": "duraludon",
     "usage": 0.0,
-    "ability": "Light Metal",
-    "item": "Eviolite",
+    "ability": [
+      "Light Metal",
+      "Heavy Metal",
+      "Stalwart"
+    ],
+    "items": {
+      "Eviolite": 92.093
+    },
     "moves": {
       "Body Press": 94.538,
       "Flash Cannon": 46.17,
@@ -5818,8 +7660,13 @@
     "name": "Cryogonal",
     "safe_name": "cryogonal",
     "usage": 0.0,
-    "ability": "Levitate",
-    "item": "Chople Berry",
+    "ability": [
+      "Levitate"
+    ],
+    "items": {
+      "Chople Berry": 58.989,
+      "Maranga Berry": 26.977
+    },
     "moves": {
       "Freeze-Dry": 100.0,
       "Recover": 92.904,
@@ -5834,8 +7681,14 @@
     "name": "Exeggutor",
     "safe_name": "exeggutor",
     "usage": 0.0,
-    "ability": "Chlorophyll",
-    "item": "Life Orb",
+    "ability": [
+      "Chlorophyll",
+      "Harvest"
+    ],
+    "items": {
+      "Life Orb": 45.638,
+      "Sitrus Berry": 36.594
+    },
     "moves": {
       "Solar Beam": 58.694,
       "Psychic": 53.805,
@@ -5853,8 +7706,14 @@
     "name": "Shiftry",
     "safe_name": "shiftry",
     "usage": 0.0,
-    "ability": "Wind Rider",
-    "item": "Focus Sash",
+    "ability": [
+      "Wind Rider",
+      "Chlorophyll "
+    ],
+    "items": {
+      "Focus Sash": 43.847,
+      "Muscle Band": 39.985
+    },
     "moves": {
       "Tailwind": 78.012,
       "Solar Blade": 63.46,
@@ -5871,8 +7730,14 @@
     "name": "Appletun",
     "safe_name": "appletun",
     "usage": 0.0,
-    "ability": "Thick Fat",
-    "item": "Rocky Helmet",
+    "ability": [
+      "Thick Fat",
+      "Ripen",
+      "Gluttony"
+    ],
+    "items": {
+      "Rocky Helmet": 38.364
+    },
     "moves": {
       "Body Press": 57.008,
       "Giga Drain": 50.057,
@@ -5890,8 +7755,12 @@
     "name": "Tauros-Paldea-Aqua",
     "safe_name": "tauros-paldea-aqua",
     "usage": 0.0,
-    "ability": "Intimidate",
-    "item": "Sitrus Berry",
+    "ability": [
+      "Intimidate"
+    ],
+    "items": {
+      "Sitrus Berry": 48.642
+    },
     "moves": {
       "Aqua Jet": 75.437,
       "Raging Bull": 75.424,
@@ -5906,8 +7775,14 @@
     "name": "Houndstone",
     "safe_name": "houndstone",
     "usage": 0.0,
-    "ability": "Sand Rush",
-    "item": "Leftovers",
+    "ability": [
+      "Sand Rush",
+      "Fluffy"
+    ],
+    "items": {
+      "Leftovers": 33.103,
+      "Choice Band": 27.486
+    },
     "moves": {
       "Last Respects": 88.061,
       "Play Rough": 40.534,
@@ -5925,8 +7800,14 @@
     "name": "Ursaring",
     "safe_name": "ursaring",
     "usage": 0.0,
-    "ability": "Guts",
-    "item": "Eviolite",
+    "ability": [
+      "Guts",
+      "Quick Feet "
+    ],
+    "items": {
+      "Eviolite": 64.585,
+      "Flame Orb": 35.415
+    },
     "moves": {
       "Earthquake": 100.0,
       "Body Slam": 64.585,
@@ -5942,8 +7823,12 @@
     "name": "Falinks",
     "safe_name": "falinks",
     "usage": 0.0,
-    "ability": "Defiant",
-    "item": "Liechi Berry",
+    "ability": [
+      "Defiant"
+    ],
+    "items": {
+      "Liechi Berry": 88.476
+    },
     "moves": {
       "No Retreat": 100.0,
       "Substitute": 88.476,
@@ -5956,8 +7841,12 @@
     "name": "Combusken",
     "safe_name": "combusken",
     "usage": 0.0,
-    "ability": "Speed Boost",
-    "item": "Focus Band",
+    "ability": [
+      "Speed Boost"
+    ],
+    "items": {
+      "Focus Band": 91.491
+    },
     "moves": {
       "Swords Dance": 100.0,
       "Protect": 91.491,
@@ -5970,8 +7859,14 @@
     "name": "Raikou",
     "safe_name": "raikou",
     "usage": 0.0,
-    "ability": "Pressure",
-    "item": "Safety Goggles",
+    "ability": [
+      "Pressure",
+      "Inner Focus"
+    ],
+    "items": {
+      "Safety Goggles": 55.612,
+      "Nothing": 28.614
+    },
     "moves": {
       "Discharge": 68.052,
       "Scald": 63.499,
@@ -5991,8 +7886,13 @@
     "name": "Zorua-Hisui",
     "safe_name": "zorua-hisui",
     "usage": 0.0,
-    "ability": "Illusion",
-    "item": "Eviolite",
+    "ability": [
+      "Illusion"
+    ],
+    "items": {
+      "Eviolite": 74.597,
+      "Choice Scarf": 25.403
+    },
     "moves": {
       "Shadow Sneak": 100.0,
       "Substitute": 74.597,
@@ -6008,8 +7908,14 @@
     "name": "Exeggutor-Alola",
     "safe_name": "exeggutor-alola",
     "usage": 0.0,
-    "ability": "Frisk",
-    "item": "Heavy-Duty Boots",
+    "ability": [
+      "Frisk",
+      "Harvest"
+    ],
+    "items": {
+      "Heavy-Duty Boots": 50.411,
+      "Lum Berry": 35.128
+    },
     "moves": {
       "Giga Drain": 56.294,
       "Dragon Hammer": 50.411,
@@ -6026,8 +7932,13 @@
     "name": "Cobalion",
     "safe_name": "cobalion",
     "usage": 0.0,
-    "ability": "Justified",
-    "item": "Rocky Helmet",
+    "ability": [
+      "Justified"
+    ],
+    "items": {
+      "Rocky Helmet": 30.141,
+      "Sitrus Berry": 29.424
+    },
     "moves": {
       "Body Press": 45.784,
       "Iron Defense": 43.241,
@@ -6047,8 +7958,16 @@
     "name": "Wigglytuff",
     "safe_name": "wigglytuff",
     "usage": 0.0,
-    "ability": "Frisk",
-    "item": "Life Orb",
+    "ability": [
+      "Frisk",
+      "Competitive",
+      "Cute Charm"
+    ],
+    "items": {
+      "Life Orb": 39.606,
+      "Leftovers": 25.021,
+      "Assault Vest": 20.72
+    },
     "moves": {
       "Alluring Voice": 70.095,
       "Shadow Ball": 39.606,
@@ -6067,8 +7986,13 @@
     "name": "Tentacruel",
     "safe_name": "tentacruel",
     "usage": 0.0,
-    "ability": "Liquid Ooze",
-    "item": "Leftovers",
+    "ability": [
+      "Liquid Ooze",
+      "Clear Body"
+    ],
+    "items": {
+      "Leftovers": 70.176
+    },
     "moves": {
       "Knock Off": 77.297,
       "Toxic": 76.821,
@@ -6083,8 +8007,13 @@
     "name": "Riolu",
     "safe_name": "riolu",
     "usage": 0.0,
-    "ability": "Prankster",
-    "item": "Focus Sash",
+    "ability": [
+      "Prankster"
+    ],
+    "items": {
+      "Focus Sash": 72.511,
+      "Eviolite": 20.603
+    },
     "moves": {
       "Copycat": 93.113,
       "Dig": 87.132,
@@ -6097,8 +8026,13 @@
     "name": "Clawitzer",
     "safe_name": "clawitzer",
     "usage": 0.0,
-    "ability": "Mega Launcher",
-    "item": "Assault Vest",
+    "ability": [
+      "Mega Launcher"
+    ],
+    "items": {
+      "Assault Vest": 40.546,
+      "Mental Herb": 32.753
+    },
     "moves": {
       "Water Pulse": 100.0,
       "Dragon Pulse": 93.584,
@@ -6113,8 +8047,14 @@
     "name": "Zangoose",
     "safe_name": "zangoose",
     "usage": 0.0,
-    "ability": "Toxic Boost",
-    "item": "Toxic Orb",
+    "ability": [
+      "Toxic Boost",
+      "Immunity"
+    ],
+    "items": {
+      "Toxic Orb": 65.75,
+      "Sitrus Berry": 22.555
+    },
     "moves": {
       "Shadow Claw": 65.75,
       "Facade": 65.75,
@@ -6131,8 +8071,16 @@
     "name": "Leavanny",
     "safe_name": "leavanny",
     "usage": 0.0,
-    "ability": "Chlorophyll",
-    "item": "Focus Sash",
+    "ability": [
+      "Chlorophyll",
+      "Overcoat",
+      "Swarm"
+    ],
+    "items": {
+      "Focus Sash": 31.246,
+      "Choice Band": 28.213,
+      "Eject Pack": 21.191
+    },
     "moves": {
       "Knock Off": 55.495,
       "Sticky Web": 48.472,
@@ -6151,8 +8099,13 @@
     "name": "Eelektross",
     "safe_name": "eelektross",
     "usage": 0.0,
-    "ability": "Levitate",
-    "item": "Nothing",
+    "ability": [
+      "Levitate"
+    ],
+    "items": {
+      "Nothing": 43.833,
+      "Sitrus Berry": 39.851
+    },
     "moves": {
       "Coil": 52.452,
       "Supercell Slam": 47.887,
@@ -6170,8 +8123,13 @@
     "name": "Lanturn",
     "safe_name": "lanturn",
     "usage": 0.0,
-    "ability": "Volt Absorb",
-    "item": "Leftovers",
+    "ability": [
+      "Volt Absorb",
+      "Water Absorb"
+    ],
+    "items": {
+      "Leftovers": 54.832
+    },
     "moves": {
       "Protect": 67.014,
       "Scald": 64.357,
@@ -6189,8 +8147,13 @@
     "name": "Dusknoir",
     "safe_name": "dusknoir",
     "usage": 0.0,
-    "ability": "Frisk",
-    "item": "Leftovers",
+    "ability": [
+      "Frisk",
+      "Pressure"
+    ],
+    "items": {
+      "Leftovers": 41.753
+    },
     "moves": {
       "Trick Room": 66.942,
       "Pain Split": 50.081,
@@ -6211,8 +8174,14 @@
     "name": "Munchlax",
     "safe_name": "munchlax",
     "usage": 0.0,
-    "ability": "Gluttony",
-    "item": "Aguav Berry",
+    "ability": [
+      "Gluttony",
+      "Thick Fat"
+    ],
+    "items": {
+      "Aguav Berry": 55.501,
+      "Assault Vest": 36.444
+    },
     "moves": {
       "Crunch": 91.945,
       "Belly Drum": 63.556,
@@ -6228,8 +8197,14 @@
     "name": "Medicham",
     "safe_name": "medicham",
     "usage": 0.0,
-    "ability": "Pure Power",
-    "item": "Focus Sash",
+    "ability": [
+      "Pure Power",
+      "Telepathy "
+    ],
+    "items": {
+      "Focus Sash": 33.318,
+      "Life Orb": 25.181
+    },
     "moves": {
       "Fake Out": 46.254,
       "Baton Pass": 35.99,
@@ -6249,8 +8224,13 @@
     "name": "Lurantis",
     "safe_name": "lurantis",
     "usage": 0.0,
-    "ability": "Contrary",
-    "item": "Assault Vest",
+    "ability": [
+      "Contrary"
+    ],
+    "items": {
+      "Assault Vest": 48.237,
+      "Leftovers": 42.508
+    },
     "moves": {
       "Superpower": 90.851,
       "Tera Blast": 64.278,
@@ -6266,8 +8246,14 @@
     "name": "Wyrdeer",
     "safe_name": "wyrdeer",
     "usage": 0.0,
-    "ability": "Sap Sipper",
-    "item": "Sitrus Berry",
+    "ability": [
+      "Sap Sipper",
+      "Intimidate"
+    ],
+    "items": {
+      "Sitrus Berry": 52.824,
+      "Leftovers": 20.372
+    },
     "moves": {
       "Body Slam": 65.782,
       "Psyshield Bash": 65.524,
@@ -6283,8 +8269,15 @@
     "name": "Cinccino",
     "safe_name": "cinccino",
     "usage": 0.0,
-    "ability": "Technician",
-    "item": "Wide Lens",
+    "ability": [
+      "Technician",
+      "Skill Link",
+      "Cute Charm "
+    ],
+    "items": {
+      "Wide Lens": 44.998,
+      "Choice Band": 36.089
+    },
     "moves": {
       "Tail Slap": 90.486,
       "Bullet Seed": 81.087,
@@ -6299,8 +8292,13 @@
     "name": "Meowstic",
     "safe_name": "meowstic",
     "usage": 0.0,
-    "ability": "Prankster",
-    "item": "Light Clay",
+    "ability": [
+      "Prankster"
+    ],
+    "items": {
+      "Light Clay": 26.921,
+      "Focus Sash": 21.594
+    },
     "moves": {
       "Thunder Wave": 47.492,
       "Light Screen": 38.106,
@@ -6322,8 +8320,13 @@
     "name": "Regigigas",
     "safe_name": "regigigas",
     "usage": 0.0,
-    "ability": "Slow Start",
-    "item": "Nothing",
+    "ability": [
+      "Slow Start"
+    ],
+    "items": {
+      "Nothing": 23.408,
+      "Lum Berry": 21.704
+    },
     "moves": {
       "Protect": 49.715,
       "Crush Grip": 49.715,
@@ -6342,8 +8345,8 @@
     "name": "Rabsca",
     "safe_name": "rabsca",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6351,8 +8354,8 @@
     "name": "Ariados",
     "safe_name": "ariados",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6360,8 +8363,8 @@
     "name": "Furret",
     "safe_name": "furret",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6369,8 +8372,8 @@
     "name": "Gogoat",
     "safe_name": "gogoat",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6378,8 +8381,8 @@
     "name": "Eiscue",
     "safe_name": "eiscue",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6387,8 +8390,8 @@
     "name": "Dodrio",
     "safe_name": "dodrio",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6396,8 +8399,8 @@
     "name": "Slaking",
     "safe_name": "slaking",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6405,8 +8408,8 @@
     "name": "Magmar",
     "safe_name": "magmar",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6414,8 +8417,8 @@
     "name": "Bellibolt",
     "safe_name": "bellibolt",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6423,8 +8426,8 @@
     "name": "Sunkern",
     "safe_name": "sunkern",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6432,8 +8435,8 @@
     "name": "Hattrem",
     "safe_name": "hattrem",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6441,8 +8444,8 @@
     "name": "Glimmet",
     "safe_name": "glimmet",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6450,8 +8453,8 @@
     "name": "Glaceon",
     "safe_name": "glaceon",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6459,8 +8462,8 @@
     "name": "Braviary-Hisui",
     "safe_name": "braviary-hisui",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6468,8 +8471,8 @@
     "name": "Dipplin",
     "safe_name": "dipplin",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6477,8 +8480,8 @@
     "name": "Azurill",
     "safe_name": "azurill",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6486,8 +8489,8 @@
     "name": "Toucannon",
     "safe_name": "toucannon",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6495,8 +8498,8 @@
     "name": "Minior",
     "safe_name": "minior",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6504,8 +8507,8 @@
     "name": "Palossand",
     "safe_name": "palossand",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6513,8 +8516,8 @@
     "name": "Yanmega",
     "safe_name": "yanmega",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6522,8 +8525,8 @@
     "name": "Mudsdale",
     "safe_name": "mudsdale",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6531,8 +8534,8 @@
     "name": "Muk",
     "safe_name": "muk",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6540,8 +8543,8 @@
     "name": "Cetitan",
     "safe_name": "cetitan",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6549,8 +8552,8 @@
     "name": "Camerupt",
     "safe_name": "camerupt",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6558,8 +8561,8 @@
     "name": "Alcremie",
     "safe_name": "alcremie",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6567,8 +8570,8 @@
     "name": "Braviary",
     "safe_name": "braviary",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6576,8 +8579,8 @@
     "name": "Bruxish",
     "safe_name": "bruxish",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6585,8 +8588,8 @@
     "name": "Necrozma",
     "safe_name": "necrozma",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6594,8 +8597,8 @@
     "name": "Mightyena",
     "safe_name": "mightyena",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6603,8 +8606,8 @@
     "name": "Hitmonchan",
     "safe_name": "hitmonchan",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6612,8 +8615,8 @@
     "name": "Illumise",
     "safe_name": "illumise",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6621,8 +8624,8 @@
     "name": "Dedenne",
     "safe_name": "dedenne",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6630,8 +8633,8 @@
     "name": "Mandibuzz",
     "safe_name": "mandibuzz",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6639,8 +8642,8 @@
     "name": "Flapple",
     "safe_name": "flapple",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6648,8 +8651,8 @@
     "name": "Luxray",
     "safe_name": "luxray",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6657,8 +8660,8 @@
     "name": "Magcargo",
     "safe_name": "magcargo",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6666,8 +8669,8 @@
     "name": "Copperajah",
     "safe_name": "copperajah",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6675,8 +8678,8 @@
     "name": "Pichu",
     "safe_name": "pichu",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6684,8 +8687,8 @@
     "name": "Pincurchin",
     "safe_name": "pincurchin",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6693,8 +8696,8 @@
     "name": "Misdreavus",
     "safe_name": "misdreavus",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6702,8 +8705,8 @@
     "name": "Kricketune",
     "safe_name": "kricketune",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6711,8 +8714,8 @@
     "name": "Sunflora",
     "safe_name": "sunflora",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6720,8 +8723,8 @@
     "name": "Electabuzz",
     "safe_name": "electabuzz",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6729,8 +8732,8 @@
     "name": "Grumpig",
     "safe_name": "grumpig",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6738,8 +8741,8 @@
     "name": "Kyurem",
     "safe_name": "kyurem",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6747,8 +8750,8 @@
     "name": "Mesprit",
     "safe_name": "mesprit",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6756,8 +8759,8 @@
     "name": "Bombirdier",
     "safe_name": "bombirdier",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6765,8 +8768,8 @@
     "name": "Rotom-Frost",
     "safe_name": "rotom-frost",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6774,8 +8777,8 @@
     "name": "Flareon",
     "safe_name": "flareon",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6783,8 +8786,8 @@
     "name": "Uxie",
     "safe_name": "uxie",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6792,8 +8795,8 @@
     "name": "Wartortle",
     "safe_name": "wartortle",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6801,8 +8804,8 @@
     "name": "Deino",
     "safe_name": "deino",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6810,8 +8813,8 @@
     "name": "Shroomish",
     "safe_name": "shroomish",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6819,8 +8822,8 @@
     "name": "Bagon",
     "safe_name": "bagon",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6828,8 +8831,8 @@
     "name": "Banette",
     "safe_name": "banette",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6837,8 +8840,8 @@
     "name": "Tinkatuff",
     "safe_name": "tinkatuff",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6846,8 +8849,8 @@
     "name": "Fletchinder",
     "safe_name": "fletchinder",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6855,8 +8858,8 @@
     "name": "Honchkrow",
     "safe_name": "honchkrow",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6864,8 +8867,8 @@
     "name": "Probopass",
     "safe_name": "probopass",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6873,8 +8876,8 @@
     "name": "Sinistea",
     "safe_name": "sinistea",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6882,8 +8885,8 @@
     "name": "Fletchling",
     "safe_name": "fletchling",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6891,8 +8894,8 @@
     "name": "Skuntank",
     "safe_name": "skuntank",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6900,8 +8903,8 @@
     "name": "Brambleghast",
     "safe_name": "brambleghast",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6909,8 +8912,8 @@
     "name": "Sandslash",
     "safe_name": "sandslash",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6918,8 +8921,8 @@
     "name": "Froslass",
     "safe_name": "froslass",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6927,8 +8930,8 @@
     "name": "Girafarig",
     "safe_name": "girafarig",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6936,8 +8939,8 @@
     "name": "Slowbro",
     "safe_name": "slowbro",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6945,8 +8948,8 @@
     "name": "Vulpix-Alola",
     "safe_name": "vulpix-alola",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6954,8 +8957,8 @@
     "name": "Floatzel",
     "safe_name": "floatzel",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6963,8 +8966,8 @@
     "name": "Poltchageist",
     "safe_name": "poltchageist",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6972,8 +8975,8 @@
     "name": "Komala",
     "safe_name": "komala",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6981,8 +8984,8 @@
     "name": "Minun",
     "safe_name": "minun",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6990,8 +8993,8 @@
     "name": "Plusle",
     "safe_name": "plusle",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -6999,8 +9002,8 @@
     "name": "Sneasel-Hisui",
     "safe_name": "sneasel-hisui",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7008,8 +9011,8 @@
     "name": "Swanna",
     "safe_name": "swanna",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7017,8 +9020,8 @@
     "name": "Torracat",
     "safe_name": "torracat",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7026,8 +9029,8 @@
     "name": "Arbok",
     "safe_name": "arbok",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7035,8 +9038,8 @@
     "name": "Wooper",
     "safe_name": "wooper",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7044,8 +9047,8 @@
     "name": "Pineco",
     "safe_name": "pineco",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7053,8 +9056,8 @@
     "name": "Rowlet",
     "safe_name": "rowlet",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7062,8 +9065,8 @@
     "name": "Nosepass",
     "safe_name": "nosepass",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7071,8 +9074,8 @@
     "name": "Drednaw",
     "safe_name": "drednaw",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7080,8 +9083,8 @@
     "name": "Squirtle",
     "safe_name": "squirtle",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7089,8 +9092,8 @@
     "name": "Noibat",
     "safe_name": "noibat",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7098,8 +9101,8 @@
     "name": "Drowzee",
     "safe_name": "drowzee",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7107,8 +9110,8 @@
     "name": "Trapinch",
     "safe_name": "trapinch",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7116,8 +9119,8 @@
     "name": "Electrode",
     "safe_name": "electrode",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7125,8 +9128,8 @@
     "name": "Seviper",
     "safe_name": "seviper",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7134,8 +9137,8 @@
     "name": "Sudowoodo",
     "safe_name": "sudowoodo",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7143,8 +9146,8 @@
     "name": "Crabominable",
     "safe_name": "crabominable",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7152,8 +9155,8 @@
     "name": "Vileplume",
     "safe_name": "vileplume",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7161,8 +9164,8 @@
     "name": "Cacturne",
     "safe_name": "cacturne",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7170,8 +9173,8 @@
     "name": "Braixen",
     "safe_name": "braixen",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7179,8 +9182,8 @@
     "name": "Gothorita",
     "safe_name": "gothorita",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7188,8 +9191,8 @@
     "name": "Grovyle",
     "safe_name": "grovyle",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7197,8 +9200,8 @@
     "name": "Luvdisc",
     "safe_name": "luvdisc",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7206,8 +9209,8 @@
     "name": "Oricorio-Pa'u",
     "safe_name": "oricorio-pau",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7215,8 +9218,8 @@
     "name": "Oinkologne-F",
     "safe_name": "oinkologne-f",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7224,8 +9227,8 @@
     "name": "Gloom",
     "safe_name": "gloom",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7233,8 +9236,8 @@
     "name": "Rotom-Fan",
     "safe_name": "rotom-fan",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7242,8 +9245,8 @@
     "name": "Lumineon",
     "safe_name": "lumineon",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7251,8 +9254,8 @@
     "name": "Magmortar",
     "safe_name": "magmortar",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7260,8 +9263,8 @@
     "name": "Tepig",
     "safe_name": "tepig",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7269,8 +9272,8 @@
     "name": "Snom",
     "safe_name": "snom",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7278,8 +9281,8 @@
     "name": "Dragonair",
     "safe_name": "dragonair",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7287,8 +9290,8 @@
     "name": "Dewott",
     "safe_name": "dewott",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7296,8 +9299,8 @@
     "name": "Thwackey",
     "safe_name": "thwackey",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7305,8 +9308,8 @@
     "name": "Monferno",
     "safe_name": "monferno",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7314,8 +9317,8 @@
     "name": "Wugtrio",
     "safe_name": "wugtrio",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7323,8 +9326,8 @@
     "name": "Persian",
     "safe_name": "persian",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7332,8 +9335,8 @@
     "name": "Inkay",
     "safe_name": "inkay",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7341,8 +9344,8 @@
     "name": "Snivy",
     "safe_name": "snivy",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7350,8 +9353,8 @@
     "name": "Dewgong",
     "safe_name": "dewgong",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7359,8 +9362,8 @@
     "name": "Smoliv",
     "safe_name": "smoliv",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7368,8 +9371,8 @@
     "name": "Seedot",
     "safe_name": "seedot",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7377,8 +9380,8 @@
     "name": "Samurott",
     "safe_name": "samurott",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7386,8 +9389,8 @@
     "name": "Whiscash",
     "safe_name": "whiscash",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7395,8 +9398,8 @@
     "name": "Gligar",
     "safe_name": "gligar",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7404,8 +9407,8 @@
     "name": "Noctowl",
     "safe_name": "noctowl",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7413,8 +9416,8 @@
     "name": "Delibird",
     "safe_name": "delibird",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7422,8 +9425,8 @@
     "name": "Charjabug",
     "safe_name": "charjabug",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7431,8 +9434,8 @@
     "name": "Cosmog",
     "safe_name": "cosmog",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7440,8 +9443,8 @@
     "name": "Spoink",
     "safe_name": "spoink",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7449,8 +9452,8 @@
     "name": "Houndoom",
     "safe_name": "houndoom",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7458,8 +9461,8 @@
     "name": "Venomoth",
     "safe_name": "venomoth",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7467,8 +9470,8 @@
     "name": "Hypno",
     "safe_name": "hypno",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7476,8 +9479,8 @@
     "name": "Oricorio-Sensu",
     "safe_name": "oricorio-sensu",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7485,8 +9488,8 @@
     "name": "Piloswine",
     "safe_name": "piloswine",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7494,8 +9497,8 @@
     "name": "Haunter",
     "safe_name": "haunter",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7503,8 +9506,8 @@
     "name": "Flygon",
     "safe_name": "flygon",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7512,8 +9515,8 @@
     "name": "Teddiursa",
     "safe_name": "teddiursa",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7521,8 +9524,8 @@
     "name": "Grookey",
     "safe_name": "grookey",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7530,8 +9533,8 @@
     "name": "Gothita",
     "safe_name": "gothita",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7539,8 +9542,8 @@
     "name": "Magnemite",
     "safe_name": "magnemite",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7548,8 +9551,8 @@
     "name": "Brionne",
     "safe_name": "brionne",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7557,8 +9560,8 @@
     "name": "Dartrix",
     "safe_name": "dartrix",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7566,8 +9569,8 @@
     "name": "Servine",
     "safe_name": "servine",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7575,8 +9578,8 @@
     "name": "Mudbray",
     "safe_name": "mudbray",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7584,8 +9587,8 @@
     "name": "Graveler-Alola",
     "safe_name": "graveler-alola",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7593,8 +9596,8 @@
     "name": "Bronzor",
     "safe_name": "bronzor",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7602,8 +9605,8 @@
     "name": "Drilbur",
     "safe_name": "drilbur",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7611,8 +9614,8 @@
     "name": "Vespiquen",
     "safe_name": "vespiquen",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7620,8 +9623,8 @@
     "name": "Carkol",
     "safe_name": "carkol",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7629,8 +9632,8 @@
     "name": "Drakloak",
     "safe_name": "drakloak",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7638,8 +9641,8 @@
     "name": "Starly",
     "safe_name": "starly",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   },
   {
@@ -7647,8 +9650,8 @@
     "name": "Calyrex",
     "safe_name": "calyrex",
     "usage": 0.0,
-    "ability": null,
-    "item": null,
+    "ability": [],
+    "items": {},
     "moves": {}
   }
 ]

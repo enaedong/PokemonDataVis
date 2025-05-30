@@ -7,18 +7,17 @@ def normalize_name(name: str) -> str:
     # Smogon usage file uses dashes, lowercase, no dots/apostrophes
     return name.lower().replace(" ", "-").replace(".", "").replace("'", "")
 
-def extract_pokemon_info(data_text):
-    # Split on +----...+ lines to get blocks
-    blocks = re.split(r'\+[-]+\+', data_text)
+def extract_pokemon_info(moveset_text):
+    import re
+
+    blocks = re.split(r'\+[-]+\+', moveset_text)
     pokemon_data = {}
 
-    # Build mapping: Pokémon name -> list of section blocks
+    # Parse Pokémon blocks
     for i in range(len(blocks)):
         block = blocks[i].strip()
-        # Pokémon name block: single line, starts and ends with |
         if block.startswith('|') and block.endswith('|') and len(block.splitlines()) == 1:
             pokemon_name = block.strip('|').strip()
-            # Collect subsequent blocks until next name or end
             j = i + 1
             sections = []
             while j < len(blocks):
@@ -32,11 +31,13 @@ def extract_pokemon_info(data_text):
     all_info = {}
     for pokemon_name, sections in pokemon_data.items():
         moves = {}
-        ability = None
-        item = None
+        ability = []
+        items = {}
 
         for section in sections:
             lines = section.splitlines()
+
+            # Moves used >15%
             if section.startswith('| Moves') or section.startswith('|Moves'):
                 for line in lines[1:]:
                     line = line.strip().strip('|').strip()
@@ -53,31 +54,36 @@ def extract_pokemon_info(data_text):
                             except ValueError:
                                 pass
 
+            # Top ability (most used)
             elif section.startswith('| Abilities') or section.startswith('|Abilities'):
                 for line in lines[1:]:
-                    line = line.strip().strip('|').strip()
+                    line = line.strip()
+                    line = line[1:-1].strip() if line.startswith('|') and line.endswith('|') else line
                     if line.endswith('%'):
                         parts = line.rsplit(' ', 1)
                         if len(parts) == 2:
                             ability_name, _ = parts
-                            ability = ability_name
-                            break  # take only the most used one
+                            ability.append(ability_name)
 
+            # Items used >10%
             elif section.startswith('| Items') or section.startswith('|Items'):
                 for line in lines[1:]:
-                    line = line.strip().strip('|').strip()
-                    if line.endswith('%'):
-                        parts = line.rsplit(' ', 1)
-                        if len(parts) == 2:
-                            item_name, _ = parts
-                            item = item_name
-                            break  # take only the most used one
+                    line = line.strip()
+                    line = line[1:-1].strip() if line.startswith('|') and line.endswith('|') else line
+                    if not line or 'Other' in line or not line.endswith('%'):
+                        continue
+                    match = re.match(r'^(.*?)\s+(\d+\.\d+)%$', line)
+                    if match:
+                        item_name = match.group(1).strip()
+                        percent = float(match.group(2))
+                        if percent > 20:
+                            items[item_name] = round(percent, 3)
 
         normalized_name = normalize_name(pokemon_name)
         all_info[normalized_name] = {
             "moves": moves,
             "ability": ability,
-            "item": item
+            "items": items
         }
 
     return all_info
@@ -124,15 +130,15 @@ def generate_usage_json(month="2025-04", format="gen9bssregi-", rating="1500", o
                 safe_name = normalize_name(name)
                 info = all_info.get(safe_name, {})
                 moves = info.get("moves", {})
-                ability = info.get("ability", None)
-                item = info.get("item", None)
+                ability = info.get("ability", [])
+                item = info.get("items", {})
                 usage_data.append({
                     "rank": rank,
                     "name": name,
                     "safe_name": safe_name,
                     "usage": round(usage, 1),
                     "ability": ability,
-                    "item": item,
+                    "items": item,
                     "moves": moves
                 })
 
