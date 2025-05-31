@@ -12,30 +12,17 @@ export function getMoveDetails(moveName) {
   };
 }
 
-export function getEffectiveness(typeChart, moveType, targetTypes) {
-  if (!typeChart) return 1;
-  const chart = typeChart[capitalize(moveType)];
-  if (!chart) return 1;
-  return targetTypes.reduce((mult, defType) => {
-    const type = capitalize(defType);
-    return mult * (chart[type] ?? 1);
-  }, 1);
-}
-
 export function getBestMove(attacker, moveMap, target, typeChart, hitCountFn) {
-  let best = { name: null, basePower: 0, type: "Normal", category: "Physical", eff: 1, hits: 5 };
+  let best = { name: null, basePower: 0, type: "Normal", category: "Physical", hits: 5 };
 
   for (const moveName of Object.keys(moveMap)) {
     const move = getMoveDetails(moveName);
     if (!move.basePower || move.basePower < 40) continue;
 
-    const effectiveness = getEffectiveness(typeChart, move.type, target.type);
-    if (effectiveness === 0) continue;
-
-    const hits = hitCountFn(true, target, attacker, move.basePower, effectiveness);
+    const hits = hitCountFn(true, target, attacker, move.basePower, move);
 
     if (!best.name || hits < best.hits || (hits === best.hits && move.basePower > best.basePower)) {
-      best = { ...move, eff: effectiveness, hits, name: move.name };
+      best = { ...move, hits, name: move.name };
     }
   }
 
@@ -58,8 +45,7 @@ export function EndureKOData({ selectedPokemon, dexData, usageData, typeChart, s
       ? getBestMove(poke, usageEntry.moves, selectedDex, typeChart, hitCountFn)
       : { name: null, hits: 5 };
 
-    const effY = getEffectiveness(typeChart, selectedMoveDetails.type, poke.type);
-    const y = hitCountFn(false, poke, selectedDex, selectedMoveDetails.basePower, effY);
+    const y = hitCountFn(true, poke, selectedDex, selectedMoveDetails.basePower, selectedMoveDetails);
 
     return {
       name: poke.name,
