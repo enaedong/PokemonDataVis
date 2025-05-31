@@ -17,7 +17,7 @@ function getItem(data) {
   return undefined; // ignore items if not present in usage
 }
 
-export default function HitCountSmogon(isKo, tar, dex, basePower, effectiveness, moveDetails) {
+export default function HitCountSmogon(isKo, tar, dex, basePower, moveDetails) {
   const attackerData = isKo ? dex : tar;
   const defenderData = isKo ? tar : dex;
 
