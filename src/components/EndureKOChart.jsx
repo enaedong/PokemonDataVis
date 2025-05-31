@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Generations, toID } from "@smogon/calc";
+import { Generations } from "@smogon/calc";
 import ScatterPlot from "./ScatterPlot";
 import HitCount from "../utils/HitCount";
 import { EndureKOData } from "../utils/moveHelpers";

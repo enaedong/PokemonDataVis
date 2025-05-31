@@ -11,16 +11,10 @@ export default function FilterPanel({
   setTypeAll, 
   typeNames, 
 }) {
-
-  // 타입 체크박스
-  // const [typeAll, setTypeAll] = useState(false);
-  // const [typeChecks, setTypeChecks] = useState(Array(18).fill(false));
-  // const typeNames = Object.keys(atkType);
   // 날씨 체크박스
   const [weatherChecks, setWeatherChecks] = useState(Array(4).fill(false));
   // 랭크 슬라이더
   const [ranks, setRanks] = useState(Array(6).fill(0));
-  // 기술 드롭다운
 
   return (
     <>
