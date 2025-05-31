@@ -15,15 +15,34 @@ export default function ScatterPlot({
   selectedItem,
   setSelectedItem,
   showMove = false,
+  typeChecks,
+  typeNames,
 }) {
   const ref = useRef();
   const [hoveredItem, setHoveredItem] = useState(null);
+
+  useEffect(() => {
+    if (items && items.length > 0) {
+      console.log("Sample data points:", items.slice(0, 5));
+      console.log("typeNames:", typeNames);
+    }
+  }, [items, typeNames]);
 
   useEffect(() => {
     const svg = d3.select(ref.current);
     svg.selectAll("*").remove();
 
     if (!items || items.length === 0 || !selectedPokemon) return;
+
+    // Filter items to only include those with checked types
+    const filteredItems = items.filter(d => {
+      const types = Array.isArray(d.type) ? d.type : [d.type];
+      return types.some(t => {
+        const tNorm = t.trim().toLowerCase();
+        const idx = typeNames.findIndex(name => name.trim().toLowerCase() === tNorm);
+        return idx !== -1 && typeChecks[idx];
+      });
+    });
 
     // Chart dimensions
     const width = 450;
@@ -64,11 +83,13 @@ export default function ScatterPlot({
     const pointsGroup = svg.append("g").attr("class", "datapoints");
 
     pointsGroup.selectAll("circle")
-      .data(items)
+      .data(filteredItems)
       .join("circle")
       .attr("cx", (d) => x(d.x))
       .attr("cy", (d) => y(d.y))
-      .attr("r", 5)
+      .attr("r", (d) => 
+        hoveredItem && hoveredItem.name === d.name ? 8 : 5 // Bigger if hovered
+      )
       .attr("fill", (d) =>
         d.speed > selectedPokemon.stat.spe ? "green" : "red"
       )
@@ -77,6 +98,7 @@ export default function ScatterPlot({
       )
       .attr("stroke-width", (d) => (d.name === selectedItem ? 2 : 1))
       .style("cursor", "pointer")
+      
       .on("click", (event, d) => {
         setSelectedItem(d.name === selectedItem ? null : d.name);
       })
@@ -133,7 +155,7 @@ export default function ScatterPlot({
         .attr("rx", 5)
         .attr("fill", "black");
     }
-  }, [items, selectedItem, hoveredItem, setSelectedItem, showMove, selectedPokemon]);
+  }, [items, selectedItem, hoveredItem, setSelectedItem, showMove, selectedPokemon, typeChecks, typeNames]);
 
   return <svg ref={ref} />;
 }

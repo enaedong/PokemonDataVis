@@ -5,6 +5,7 @@ import HitCountSmogon from "./HitCountSmogon";
 import { EndureKOData } from "../utils/moveHelpers";
 
 export default function EndureKOChart({ selectedPokemon, dexData, usageData, selectedMove, selectedItem, setSelectedItem }) {
+
   const [typeChart, setTypeChart] = useState(null);
   const [scatterItems, setScatterItems] = useState([]);
 
@@ -41,6 +42,8 @@ export default function EndureKOChart({ selectedPokemon, dexData, usageData, sel
         selectedItem={selectedItem}
         setSelectedItem={setSelectedItem}
         showMove={true}
+        typeChecks={typeChecks}
+        typeNames={typeNames}
       />
     </div>
   );

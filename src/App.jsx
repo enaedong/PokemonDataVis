@@ -85,6 +85,28 @@ export default function App() {
   const [selectedItemDetail, setSelectedItemDetail] = useState(null);
   const [selectedItemStats, setSelectedItemStats] = useState(null);
   const [selectedItemLoading, setSelectedItemLoading] = useState(false);
+  const [atkType, setAtkType] = useState({});
+  const [typeNames, setTypeNames] = useState([]);
+  const [typeChecks, setTypeChecks] = useState([]); // all checked by default
+  const [typeAll, setTypeAll] = useState(false);
+  
+  useEffect(() => {
+    fetch("/atkType.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setAtkType(data);
+        setTypeNames(Object.keys(data));
+      })
+      .catch((err) => console.error("Failed to load atkType.json:", err));
+  }, []);
+
+  useEffect(() => {
+    // If all checkboxes are checked, set typeAll to true, otherwise false
+    if (!selected) return;
+    if (typeChecks.length === typeNames.length) {
+      setTypeAll(typeChecks.every(Boolean));
+    }
+  }, [typeChecks, typeNames.length]);
 
   useEffect(() => {
     if (!selectedItem) {
@@ -95,42 +117,50 @@ export default function App() {
     setSelectedItemLoading(true);
     // safe_name 변환
     const safeName = selectedItem
-      .toLowerCase()
-      .replace(/ /g, "-")
-      .replace(/\./g, "");
+    .toLowerCase()
+    .replace(/ /g, "-")
+    .replace(/\./g, "");
     fetch(`https://pokeapi.co/api/v2/pokemon/${safeName}`)
-      .then((res) => {
-        if (!res.ok) throw new Error("Pokémon not found");
-        return res.json();
-      })
-      .then((data) => {
-        setSelectedItemDetail(data);
-        const statsObj = {};
-        data.stats.forEach((s) => {
-          statsObj[s.stat.name] = s.base_stat;
-        });
-        setSelectedItemStats(statsObj);
-      })
-      .catch(() => {
-        setSelectedItemDetail(null);
-        setSelectedItemStats(null);
-      })
-      .finally(() => setSelectedItemLoading(false));
+    .then((res) => {
+      if (!res.ok) throw new Error("Pokémon not found");
+      return res.json();
+    })
+    .then((data) => {
+      setSelectedItemDetail(data);
+      const statsObj = {};
+      data.stats.forEach((s) => {
+        statsObj[s.stat.name] = s.base_stat;
+      });
+      setSelectedItemStats(statsObj);
+    })
+    .catch(() => {
+      setSelectedItemDetail(null);
+      setSelectedItemStats(null);
+    })
+    .finally(() => setSelectedItemLoading(false));
   }, [selectedItem]);
-
+  
   // 순위표/포켓몬 정보 전환 상태
   const [showUsageTable, setShowUsageTable] = useState(true);
   const selectedUsage = selected;
   const selectedDex = dex.find((p) => p.name === selected?.name);
-
+  
   const selectedPokemon = selectedDex
-    ? { ...selectedDex, moves: selectedUsage?.moves || {} }
-    : null;
+  ? { ...selectedDex, moves: selectedUsage?.moves || {} }
+  : null;
+  
+  // check all checkbox when selectedPokemon is set:
+  useEffect(() => {
+    if (selectedPokemon && typeChecks.length === 0) {
+      setTypeChecks(Array(typeNames.length).fill(true));
+      setTypeAll(true);
+    }
+    // Do NOT reset if typeChecks already has values
+  }, [selectedPokemon, typeNames.length]);
 
   // 카운터 포켓몬 정보
   const selectedItemUsage = usage.find((p) => p.name === selectedItem);
   const selectedItemDex = dex.find((p) => p.name === selectedItem);
-
   const selectedItemPokemon =
     selectedItemUsage && selectedItemDex
       ? { ...selectedItemDex, ...selectedItemUsage }
@@ -181,6 +211,8 @@ export default function App() {
                 setSelected={(pokemon) => {
                   setSelected(pokemon);
                   setShowUsageTable(false);
+                  setTypeChecks(Array(typeNames.length).fill(true));
+                  setTypeAll(true);
                 }}
               />
             </div>
@@ -192,6 +224,9 @@ export default function App() {
               onClick={() => {
                 setShowUsageTable(true);
                 setSelected(null);
+                setTypeChecks(Array(typeNames.length).fill(false)); // Uncheck all
+                setTypeAll(false); // Uncheck "All"
+                //setSelectedItem(null); // <-- Add this line to clear scatter plot selection
               }}
               style={{ marginBottom: 16 }}
             >
@@ -214,6 +249,11 @@ export default function App() {
           setSelectedMove={setSelectedMove}
           selectedPokemon={selectedPokemon}
           moveList={moveList}
+          typeChecks={typeChecks}
+          setTypeChecks={setTypeChecks}
+          typeAll={typeAll}
+          setTypeAll={setTypeAll}
+          typeNames={typeNames}
         />
       </div>
 
@@ -226,6 +266,8 @@ export default function App() {
           selectedMove={selectedMove}
           selectedItem={selectedItem}
           setSelectedItem={setSelectedItem}
+          typeChecks={typeChecks}
+          typeNames={typeNames}
         />
       </div>
 
