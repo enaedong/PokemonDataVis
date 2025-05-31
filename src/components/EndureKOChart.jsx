@@ -6,7 +6,7 @@ import { EndureKOData } from "../utils/moveHelpers";
 
 const gen = Generations.get(9);
 
-export default function EndureKOChart({ selectedPokemon, dexData, usageData, selectedMove, selectedItem, setSelectedItem }) {
+export default function EndureKOChart({ selectedPokemon, dexData, usageData, selectedMove, selectedItem, setSelectedItem, typeChecks, typeNames }) {
   const [typeChart, setTypeChart] = useState(null);
   const [scatterItems, setScatterItems] = useState([]);
 
@@ -43,6 +43,8 @@ export default function EndureKOChart({ selectedPokemon, dexData, usageData, sel
         selectedItem={selectedItem}
         setSelectedItem={setSelectedItem}
         showMove={true}
+        typeChecks={typeChecks}
+        typeNames={typeNames}
       />
     </div>
   );
