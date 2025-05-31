@@ -2,27 +2,39 @@ import { Generations, Pokemon, Move, calculate, toID } from "@smogon/calc";
 
 const gen = Generations.get(9);
 
+function getAbility(data) {
+  const ability = data?.ability;
+  if (Array.isArray(ability)) return ability[0];
+  if (typeof ability === "string") return ability;
+  return undefined;
+}
+
+function getItem(data) {
+  const items = data?.items;
+  if (items && typeof items === "object" && Object.keys(items).length > 0) {
+    return Object.keys(items)[0];
+  }
+  return undefined; // ignore items if not present in usage
+}
+
 export default function HitCountSmogon(isKo, tar, dex, basePower, effectiveness, moveDetails) {
   const attackerData = isKo ? dex : tar;
   const defenderData = isKo ? tar : dex;
 
   const attacker = new Pokemon(gen, toID(attackerData.name), {
-    ability: attackerData.ability || undefined,
-    item: attackerData.item || undefined,
-    level: 100,
-    evs: { hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0 },
-    ivs: { hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31 }
+    ability: getAbility(attackerData),
+    item: getItem(attackerData),
+    level: 50,
   });
 
   const defender = new Pokemon(gen, toID(defenderData.name), {
-    ability: defenderData.ability || undefined,
-    item: defenderData.item || undefined,
-    level: 100,
-    evs: { hp: 0, atk: 0, def: 0, spa: 0, spd: 0, spe: 0 },
-    ivs: { hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31 }
+    ability: getAbility(defenderData),
+    item: getItem(defenderData),
+    level: 50,
   });
 
-  // Use move details if provided, otherwise fallback
+  defender.curHP = defender.stats.hp;
+
   const move = new Move(gen, moveDetails?.name || "Custom Move", {
     basePower: basePower,
     type: moveDetails?.type || "Normal",
@@ -35,8 +47,7 @@ export default function HitCountSmogon(isKo, tar, dex, basePower, effectiveness,
   if (!damage || !Array.isArray(damage)) return 5;
 
   const avgDmg = (Math.min(...damage) + Math.max(...damage)) / 2;
-  const scaledDmg = avgDmg * effectiveness;
-  const hitsToKO = defender.stats.hp / scaledDmg;
+  const hitsToKO = defender.stats.hp / avgDmg;
 
   return Math.min(hitsToKO, 5);
 }
