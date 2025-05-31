@@ -34,6 +34,16 @@ export default function ScatterPlot({
 
     if (!items || items.length === 0 || !selectedPokemon) return;
 
+    // Filter items to only include those with checked types
+    const filteredItems = items.filter(d => {
+      const types = Array.isArray(d.type) ? d.type : [d.type];
+      return types.some(t => {
+        const tNorm = t.trim().toLowerCase();
+        const idx = typeNames.findIndex(name => name.trim().toLowerCase() === tNorm);
+        return idx !== -1 && typeChecks[idx];
+      });
+    });
+
     // Chart dimensions
     const width = 450;
     const height = 450;
@@ -73,7 +83,7 @@ export default function ScatterPlot({
     const pointsGroup = svg.append("g").attr("class", "datapoints");
 
     pointsGroup.selectAll("circle")
-      .data(items)
+      .data(filteredItems)
       .join("circle")
       .attr("cx", (d) => x(d.x))
       .attr("cy", (d) => y(d.y))
@@ -88,20 +98,7 @@ export default function ScatterPlot({
       )
       .attr("stroke-width", (d) => (d.name === selectedItem ? 2 : 1))
       .style("cursor", "pointer")
-      .style("opacity", (d) => {
-        // If hovered, always show fully
-        if (hoveredItem && hoveredItem.name === d.name) return 1;
-        // Normalize type to array
-        const types = Array.isArray(d.type) ? d.type : [d.type];
-        // Find if any type is checked
-        const isChecked = types.some(t => {
-          // Normalize case and trim spaces
-          const tNorm = t.trim().toLowerCase();
-          const idx = typeNames.findIndex(name => name.trim().toLowerCase() === tNorm);
-          return idx !== -1 && typeChecks[idx];
-        });
-        return isChecked ? 1 : 0.2;
-      })
+      
       .on("click", (event, d) => {
         setSelectedItem(d.name === selectedItem ? null : d.name);
       })

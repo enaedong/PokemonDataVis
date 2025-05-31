@@ -4,7 +4,6 @@ import FilterPanel from "./components/FilterPanel";
 import PokemonDetails from "./components/PokemonDetails";
 import EndureKOChart from "./components/EndureKOChart";
 import { getMoveDetails } from "./utils/moveHelpers";
-import atkType from "../public/atkType.json"; // Import atkType JSON
 import "./App.css";
 
 export default function App() {
@@ -86,13 +85,24 @@ export default function App() {
   const [selectedItemDetail, setSelectedItemDetail] = useState(null);
   const [selectedItemStats, setSelectedItemStats] = useState(null);
   const [selectedItemLoading, setSelectedItemLoading] = useState(false);
-  const typeNames = Object.keys(atkType); // import atkType at the top 
+  const [atkType, setAtkType] = useState({});
+  const [typeNames, setTypeNames] = useState([]);
   const [typeChecks, setTypeChecks] = useState([]); // all checked by default
   const [typeAll, setTypeAll] = useState(false);
   
-  
+  useEffect(() => {
+    fetch("/atkType.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setAtkType(data);
+        setTypeNames(Object.keys(data));
+      })
+      .catch((err) => console.error("Failed to load atkType.json:", err));
+  }, []);
+
   useEffect(() => {
     // If all checkboxes are checked, set typeAll to true, otherwise false
+    if (!selected) return;
     if (typeChecks.length === typeNames.length) {
       setTypeAll(typeChecks.every(Boolean));
     }
@@ -216,7 +226,7 @@ export default function App() {
                 setSelected(null);
                 setTypeChecks(Array(typeNames.length).fill(false)); // Uncheck all
                 setTypeAll(false); // Uncheck "All"
-                setSelectedItem(null); // <-- Add this line to clear scatter plot selection
+                //setSelectedItem(null); // <-- Add this line to clear scatter plot selection
               }}
               style={{ marginBottom: 16 }}
             >

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import atkType from "../../public/atkType.json";
 
 export default function FilterPanel({ 
   selectedMove, 
