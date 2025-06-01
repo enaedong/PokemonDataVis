@@ -15,7 +15,7 @@ export default function FilterPanel({
   setTypeAll,
   typeNames,
 }) {
-  
+
   const weatherOptions = [
     { value: "", label: "Clear" },
     { value: "Sun", label: "Sun" },
