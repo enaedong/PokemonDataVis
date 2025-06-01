@@ -4,7 +4,7 @@ import HitCount from "../utils/HitCount";
 import HitCountSmogon from "./HitCountSmogon";
 import { EndureKOData } from "../utils/moveHelpers";
 
-export default function EndureKOChart({ selectedPokemon, dexData, usageData, selectedMove, selectedItem, setSelectedItem, typeChecks, typeNames }) {
+export default function EndureKOChart({ selectedPokemon, dexData, usageData, selectedMove, selectedItem, setSelectedItem, typeChecks, typeNames, selectedWeather, selectedTerrain }) {
 
   const [typeChart, setTypeChart] = useState(null);
   const [scatterItems, setScatterItems] = useState([]);
@@ -26,9 +26,11 @@ export default function EndureKOChart({ selectedPokemon, dexData, usageData, sel
       typeChart,
       selectedMove,
       hitCountFn: HitCountSmogon,
+      selectedWeather,
+      selectedTerrain,
     });
     setScatterItems(data);
-  }, [selectedPokemon, dexData, usageData, typeChart, selectedMove]);
+  }, [selectedPokemon, dexData, usageData, typeChart, selectedMove, selectedWeather, selectedTerrain]);
 
   if (!selectedPokemon)
     return <div>Select a Pokémon to view the scatter plot.</div>;

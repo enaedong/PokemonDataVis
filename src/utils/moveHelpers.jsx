@@ -12,14 +12,14 @@ export function getMoveDetails(moveName) {
   };
 }
 
-export function getBestMove(attacker, moveMap, target, typeChart, hitCountFn) {
-  let best = { name: null, basePower: 0, type: "Normal", category: "Physical", hits: 5 };
+export function getBestMove(attacker, moveMap, target, typeChart, hitCountFn, selectedWeather, selectedTerrain) {
+  let best = { name: null, basePower: 0, type: "Normal", category: "Physical", hits: 6 };
 
   for (const moveName of Object.keys(moveMap)) {
     const move = getMoveDetails(moveName);
     if (!move.basePower || move.basePower < 40) continue;
 
-    const hits = hitCountFn(true, target, attacker, move.basePower, move);
+    const hits = hitCountFn(true, target, attacker, move.basePower, move, selectedWeather, selectedTerrain);
 
     if (!best.name || hits < best.hits || (hits === best.hits && move.basePower > best.basePower)) {
       best = { ...move, hits, name: move.name };
@@ -29,7 +29,7 @@ export function getBestMove(attacker, moveMap, target, typeChart, hitCountFn) {
   return best;
 }
 
-export function EndureKOData({ selectedPokemon, dexData, usageData, typeChart, selectedMove, hitCountFn }) {
+export function EndureKOData({ selectedPokemon, dexData, usageData, typeChart, selectedMove, hitCountFn, selectedWeather, selectedTerrain }) {
   if (!selectedPokemon || !typeChart || !dexData || !usageData || !selectedMove) return [];
 
   const selectedDex = dexData.find(p => p.name === selectedPokemon.name);
@@ -42,15 +42,15 @@ export function EndureKOData({ selectedPokemon, dexData, usageData, typeChart, s
   return filteredDex.map(poke => {
     const usageEntry = usageData.find(u => u.name === poke.name);
     const bestMove = usageEntry?.moves
-      ? getBestMove(poke, usageEntry.moves, selectedDex, typeChart, hitCountFn)
-      : { name: null, hits: 5 };
+      ? getBestMove(poke, usageEntry.moves, selectedDex, typeChart, hitCountFn, selectedWeather, selectedTerrain)
+      : { name: null, hits: 6 };
 
-    const y = hitCountFn(true, poke, selectedDex, selectedMoveDetails.basePower, selectedMoveDetails);
+    const yHits = hitCountFn(true, poke, selectedDex, selectedMoveDetails.basePower, selectedMoveDetails, selectedWeather, selectedTerrain);
 
     return {
       name: poke.name,
-      x: bestMove.hits ?? 5,
-      y: y ?? 5,
+      x: bestMove.hits > 5 ? "5+" : bestMove.hits,
+      y: yHits > 5 ? "5+" : yHits,
       speed: poke.stat.spe,
       type: poke.type[0].toLowerCase(),
       color: poke.stat.spe > selectedDex.stat.spe ? "green" : "red",

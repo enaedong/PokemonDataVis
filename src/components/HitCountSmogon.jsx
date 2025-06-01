@@ -1,4 +1,4 @@
-import { Generations, Pokemon, Move, calculate, toID } from "@smogon/calc";
+import { Generations, Pokemon, Move, Field, calculate, toID } from "@smogon/calc";
 
 const gen = Generations.get(9);
 
@@ -17,7 +17,7 @@ function getItem(data) {
   return undefined; // ignore items if not present in usage
 }
 
-export default function HitCountSmogon(isKo, tar, dex, basePower, moveDetails) {
+export default function HitCountSmogon(isKo, tar, dex, basePower, moveDetails, weather, terrain) {
   const attackerData = isKo ? dex : tar;
   const defenderData = isKo ? tar : dex;
 
@@ -41,13 +41,18 @@ export default function HitCountSmogon(isKo, tar, dex, basePower, moveDetails) {
     category: moveDetails?.category || "Physical"
   });
 
-  const result = calculate(gen, attacker, defender, move);
+  const field = new Field({
+      weather: weather,
+      terrain: terrain,
+  });
+
+  const result = calculate(gen, attacker, defender, move, field);
   const damage = result.damage;
 
-  if (!damage || !Array.isArray(damage)) return 5;
+  if (!damage || !Array.isArray(damage)) return 6;
 
   const avgDmg = (Math.min(...damage) + Math.max(...damage)) / 2;
   const hitsToKO = defender.stats.hp / avgDmg;
 
-  return Math.min(hitsToKO, 5);
+  return hitsToKO;
 }
