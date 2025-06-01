@@ -12,7 +12,7 @@ export function getMoveDetails(moveName) {
   };
 }
 
-export function getBestMove(attacker, moveMap, target, typeChart, hitCountFn, selectedWeather, selectedTerrain) {
+export function getBestMove(attacker, moveMap, target, hitCountFn, selectedWeather, selectedTerrain) {
   let best = { name: null, basePower: 0, type: "Normal", category: "Physical", hits: 6 };
 
   for (const moveName of Object.keys(moveMap)) {
@@ -33,6 +33,8 @@ export function EndureKOData({ selectedPokemon, dexData, usageData, typeChart, s
   if (!selectedPokemon || !typeChart || !dexData || !usageData || !selectedMove) return [];
 
   const selectedDex = dexData.find(p => p.name === selectedPokemon.name);
+  const selectedUsage = usageData.find(u => u.name === selectedPokemon.name);
+  const selectedPoke = selectedUsage ? { ...selectedDex, ...selectedUsage } : selectedDex;
   if (!selectedDex) return [];
 
   const selectedMoveDetails = getMoveDetails(selectedMove);
@@ -41,24 +43,21 @@ export function EndureKOData({ selectedPokemon, dexData, usageData, typeChart, s
 
   return filteredDex.map(poke => {
     const usageEntry = usageData.find(u => u.name === poke.name);
-    const bestMove = usageEntry?.moves
-      ? getBestMove(poke, usageEntry.moves, selectedDex, typeChart, hitCountFn, selectedWeather, selectedTerrain)
+    const merged = usageEntry ? { ...poke, ...usageEntry } : poke;
+    const bestMove = merged?.moves
+      ? getBestMove(merged, merged.moves, selectedPoke, hitCountFn, selectedWeather, selectedTerrain)
       : { name: null, hits: 6 };
 
-    const yHits = hitCountFn(true, poke, selectedDex, selectedMoveDetails.basePower, selectedMoveDetails, selectedWeather, selectedTerrain);
+    const yHits = hitCountFn(true, merged, selectedPoke, selectedMoveDetails.basePower, selectedMoveDetails, selectedWeather, selectedTerrain);
 
     return {
-      name: poke.name,
+      name: merged.name,
       x: bestMove.hits > 5 ? "5+" : bestMove.hits,
       y: yHits > 5 ? "5+" : yHits,
-      speed: poke.stat.spe,
-      type: poke.type[0].toLowerCase(),
-      color: poke.stat.spe > selectedDex.stat.spe ? "green" : "red",
+      speed: merged.stat.spe,
+      type: merged.type[0].toLowerCase(),
+      color: merged.stat.spe > selectedPoke.stat.spe ? "green" : "red",
       bestMove: bestMove.name,
     };
   });
-}
-
-function capitalize(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
 }

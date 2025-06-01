@@ -32,7 +32,8 @@ def extract_pokemon_info(moveset_text):
     for pokemon_name, sections in pokemon_data.items():
         moves = {}
         ability = []
-        items = {}
+        item = None
+        spread = None
 
         for section in sections:
             lines = section.splitlines()
@@ -74,16 +75,30 @@ def extract_pokemon_info(moveset_text):
                         continue
                     match = re.match(r'^(.*?)\s+(\d+\.\d+)%$', line)
                     if match:
-                        item_name = match.group(1).strip()
-                        percent = float(match.group(2))
-                        if percent > 20:
-                            items[item_name] = round(percent, 3)
+                        item = match.group(1).strip()
+                        break
+            
+            elif section.startswith('| Spreads') or section.startswith('|Spreads'):
+                for line in lines[1:]:
+                    line = line.strip()
+                    line = line[1:-1].strip() if line.startswith('|') and line.endswith('|') else line
+                    if not line or 'Other' in line or not line.endswith('%'):
+                        continue
+                    # Match lines like: Timid:0/0/4/252/0/252 25.999%
+                    match = re.match(r'^(\w+):([\d/]+)\s+\d+\.\d+%$', line)
+                    if match:
+                        nature = match.group(1)
+                        evs = match.group(2)
+                        spread_str = f'Nature: {nature}, EVs: {evs}'
+                        spread = spread_str
+                        break  # Only the most used spread
 
         normalized_name = normalize_name(pokemon_name)
         all_info[normalized_name] = {
             "moves": moves,
             "ability": ability,
-            "items": items
+            "items": item,
+            "spread": spread
         }
 
     return all_info
@@ -132,6 +147,7 @@ def generate_usage_json(month="2025-04", format="gen9bssregi-", rating="1500", o
                 moves = info.get("moves", {})
                 ability = info.get("ability", [])
                 item = info.get("items", {})
+                spread = info.get("spread", {})
                 usage_data.append({
                     "rank": rank,
                     "name": name,
@@ -139,7 +155,8 @@ def generate_usage_json(month="2025-04", format="gen9bssregi-", rating="1500", o
                     "usage": round(usage, 1),
                     "ability": ability,
                     "items": item,
-                    "moves": moves
+                    "moves": moves,
+                    "spread": spread
                 })
 
         os.makedirs(os.path.dirname(output_file), exist_ok=True)
