@@ -161,11 +161,11 @@ export default function App() {
   // 카운터 포켓몬 정보
   const selectedItemUsage = usage.find((p) => p.name === selectedItem);
   const selectedItemDex = dex.find((p) => p.name === selectedItem);
-  
-  const selectedItemPokemon = selectedItemDex
-  ? { ...selectedItemDex, moves: selectedItemUsage?.moves || {} }
-  : null;
-  
+  const selectedItemPokemon =
+    selectedItemUsage && selectedItemDex
+      ? { ...selectedItemDex, ...selectedItemUsage }
+      : selectedItemUsage || selectedItemDex || null;
+
   useEffect(() => {
     if (!selectedPokemon?.moves) {
       if (moveList.length > 0) setMoveList([]);
