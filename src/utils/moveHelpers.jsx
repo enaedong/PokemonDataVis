@@ -46,15 +46,13 @@ export function EndureKOData({ selectedPokemon, dexData, usageData, typeChart, s
     const merged = usageEntry ? { ...poke, ...usageEntry } : poke;
     const bestMove = merged?.moves
       ? getBestMove(merged, merged.moves, selectedPoke, hitCountFn, selectedWeather, selectedTerrain, ranks)
-      : { name: null, hits: 6 };
+      : { name: null, hits: 6 };    
 
-    const yHits = hitCountFn(false, merged, selectedPoke, selectedMoveDetails.basePower, selectedMoveDetails, selectedWeather, selectedTerrain, ranks);
-
+    const yHits = hitCountFn(false, selectedPoke, merged, selectedMoveDetails.basePower, selectedMoveDetails, selectedWeather, selectedTerrain, ranks);
     // 스피드 랭크 변화 계산
     function reactiveSpeColor(){
       const totalRank = ranks[2] - ranks[5];
-      const rankSpeMult = (2 + Math.max(0, totalRank)) / (2 - Math.min(0, totalRank));     
-      console.log(totalRank); 
+      const rankSpeMult = (2 + Math.max(0, totalRank)) / (2 - Math.min(0, totalRank));           
       return merged.stat.spe > selectedPoke.stat.spe * rankSpeMult ? "green" : "red"
     }
 
