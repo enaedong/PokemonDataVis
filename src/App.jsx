@@ -16,9 +16,12 @@ export default function App() {
   const [pokeStats, setPokeStats] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  // 날씨 필드
+  const [selectedWeather, setSelectedWeather] = useState("");
+  const [selectedTerrain, setSelectedTerrain] = useState("");
+
   // 차트에서 사용자가 클릭한 점
   const [selectedItem, setSelectedItem] = useState(null);
-
   const [selectedMove, setSelectedMove] = useState(null);
   const [moveList, setMoveList] = useState([]);
 
@@ -89,7 +92,7 @@ export default function App() {
   const [typeNames, setTypeNames] = useState([]);
   const [typeChecks, setTypeChecks] = useState([]); // all checked by default
   const [typeAll, setTypeAll] = useState(false);
-  
+
   useEffect(() => {
     fetch("/atkType.json")
       .then((res) => res.json())
@@ -117,38 +120,38 @@ export default function App() {
     setSelectedItemLoading(true);
     // safe_name 변환
     const safeName = selectedItem
-    .toLowerCase()
-    .replace(/ /g, "-")
-    .replace(/\./g, "");
+      .toLowerCase()
+      .replace(/ /g, "-")
+      .replace(/\./g, "");
     fetch(`https://pokeapi.co/api/v2/pokemon/${safeName}`)
-    .then((res) => {
-      if (!res.ok) throw new Error("Pokémon not found");
-      return res.json();
-    })
-    .then((data) => {
-      setSelectedItemDetail(data);
-      const statsObj = {};
-      data.stats.forEach((s) => {
-        statsObj[s.stat.name] = s.base_stat;
-      });
-      setSelectedItemStats(statsObj);
-    })
-    .catch(() => {
-      setSelectedItemDetail(null);
-      setSelectedItemStats(null);
-    })
-    .finally(() => setSelectedItemLoading(false));
+      .then((res) => {
+        if (!res.ok) throw new Error("Pokémon not found");
+        return res.json();
+      })
+      .then((data) => {
+        setSelectedItemDetail(data);
+        const statsObj = {};
+        data.stats.forEach((s) => {
+          statsObj[s.stat.name] = s.base_stat;
+        });
+        setSelectedItemStats(statsObj);
+      })
+      .catch(() => {
+        setSelectedItemDetail(null);
+        setSelectedItemStats(null);
+      })
+      .finally(() => setSelectedItemLoading(false));
   }, [selectedItem]);
-  
+
   // 순위표/포켓몬 정보 전환 상태
   const [showUsageTable, setShowUsageTable] = useState(true);
   const selectedUsage = selected;
   const selectedDex = dex.find((p) => p.name === selected?.name);
-  
+
   const selectedPokemon = selectedDex
-  ? { ...selectedDex, moves: selectedUsage?.moves || {} }
-  : null;
-  
+    ? { ...selectedDex, moves: selectedUsage?.moves || {} }
+    : null;
+
   // check all checkbox when selectedPokemon is set:
   useEffect(() => {
     if (selectedPokemon && typeChecks.length === 0) {
@@ -245,6 +248,10 @@ export default function App() {
       {/* 필터 UI */}
       <div className="stats-section" id="pokemon-stats">
         <FilterPanel
+          selectedWeather={selectedWeather}
+          setSelectedWeather={setSelectedWeather}
+          selectedTerrain={selectedTerrain}
+          setSelectedTerrain={setSelectedTerrain}
           selectedMove={selectedMove}
           setSelectedMove={setSelectedMove}
           selectedPokemon={selectedPokemon}
@@ -268,6 +275,8 @@ export default function App() {
           setSelectedItem={setSelectedItem}
           typeChecks={typeChecks}
           typeNames={typeNames}
+          selectedWeather={selectedWeather}
+          selectedTerrain={selectedTerrain}
         />
       </div>
 

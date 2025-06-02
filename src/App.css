@@ -23,7 +23,7 @@ body {
 .usage-section {
   flex: 1;
   padding: 32px 24px;
-  max-width: 400px;
+  max-width: 340px;
   border-right: 1px solid #e0e0e0;
   height: auto;
   max-height: 100vh;
@@ -34,7 +34,7 @@ body {
 .stats-section {
   flex: 0.5;
   padding: 32px 24px;
-  max-width: 250px;
+  max-width: 180px;
   border-right: 1px solid #e0e0e0;
   height: auto;
   max-height: 100vh;
@@ -352,7 +352,7 @@ body {
 .scatter-detail-section {
   flex: 1;
   padding: 32px 24px;
-  max-width: 400px;
+  max-width: 340px;
   height: auto;
   min-height: 300px;
   max-height: none;

@@ -39,8 +39,8 @@ export default function PokemonDetails({
       </div>
       <div>
         <strong>Items:</strong>{" "}
-        {selected.items && Object.keys(selected.items).length > 0 ? (
-          Object.keys(selected.items).join(", ")
+        {selected.items && selected.items.trim() !== "" ? (
+          selected.items
         ) : (
           <span>N/A</span>
         )}
