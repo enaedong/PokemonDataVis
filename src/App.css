@@ -6,6 +6,11 @@ body {
   overflow: auto;
 }
 
+table, th, td {
+  border:1px solid black;
+  text-align: center;
+}
+
 .container {
   display: flex;
   align-items: flex-start;
@@ -33,7 +38,7 @@ body {
 
 .stats-section {
   flex: 0.5;
-  padding: 32px 24px;
+  padding: 32px 14px;
   max-width: 180px;
   border-right: 1px solid #e0e0e0;
   height: auto;

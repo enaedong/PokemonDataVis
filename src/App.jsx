@@ -20,6 +20,9 @@ export default function App() {
   const [selectedWeather, setSelectedWeather] = useState("");
   const [selectedTerrain, setSelectedTerrain] = useState("");
 
+  // 메타 & 카운터 포켓몬의 랭크 변화
+  const [ranks, setRanks] = useState(Array(6).fill(0));
+
   // 차트에서 사용자가 클릭한 점
   const [selectedItem, setSelectedItem] = useState(null);
   const [selectedMove, setSelectedMove] = useState(null);
@@ -250,6 +253,8 @@ export default function App() {
         <FilterPanel
           selectedWeather={selectedWeather}
           setSelectedWeather={setSelectedWeather}
+          ranks={ranks}
+          setRanks={setRanks}
           selectedTerrain={selectedTerrain}
           setSelectedTerrain={setSelectedTerrain}
           selectedMove={selectedMove}
@@ -277,6 +282,7 @@ export default function App() {
           typeNames={typeNames}
           selectedWeather={selectedWeather}
           selectedTerrain={selectedTerrain}
+          ranks={ranks}
         />
       </div>
 
