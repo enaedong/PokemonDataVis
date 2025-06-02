@@ -3,6 +3,8 @@ import React, { useState } from "react";
 export default function FilterPanel({
   selectedWeather,
   setSelectedWeather,
+  ranks,
+  setRanks,
   selectedTerrain,
   setSelectedTerrain,
   selectedMove,
@@ -32,8 +34,19 @@ export default function FilterPanel({
     { value: "Psychic", label: "Psychic" },
   ];
 
-  // 랭크 슬라이더
-  const [ranks, setRanks] = useState(Array(6).fill(0));
+  // 화면에 랭크 표 구현용
+  function getRankText(i) {
+    switch (i) {
+      case 0:
+        return "Atk";
+      case 1:
+        return "Def";
+      case 2:
+        return "Spd";
+      default:
+        return "";
+    }
+  }  
 
   return (
     <>
@@ -125,7 +138,56 @@ export default function FilterPanel({
         </select>
       </div>
       {/* 랭크 슬라이더 */}
-      <div style={{ marginBottom: 24 }}>
+      <table>
+        <thead>
+          <tr>
+            <th style={{background: "#f3f3f3"}}>Stage</th>
+          </tr>
+          <tr>
+            <th style={{background: "#f3f3f3"}}>Meta<br/>Pokémon</th>
+            <th style={{background: "#f3f3f3"}}>Counter<br/>Pokémon</th>
+          </tr>
+        </thead>
+        <tbody>
+          {Array.from({ length: 3 }).map((_, i) => (
+            <tr key={i}>
+              <td>
+                <label>{getRankText(i)}</label>
+                <input
+                  type="range"
+                  min={-6}
+                  max={6}
+                  value={ranks[i]}
+                  onChange={(e) => {
+                    const arr = [...ranks];
+                    arr[i] = Number(e.target.value);
+                    setRanks(arr);
+                  }}
+                  style={{ width: "70%" }}
+                />
+                <div>{ranks[i] > 0 ? "+"+ranks[i] : ranks[i]}</div>
+              </td>
+              <td>
+                <label>{getRankText(i)}</label>
+                <input
+                  type="range"
+                  min={-6}
+                  max={6}
+                  value={ranks[i+3]}
+                  onChange={(e) => {
+                    const arr = [...ranks];
+                    arr[i+3] = Number(e.target.value);
+                    setRanks(arr);
+                  }}
+                  style={{ width: "70%" }}
+                />
+                <div>{ranks[i+3] > 0 ? "+"+ranks[i+3] : ranks[i+3]}</div>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      {/* <div style={{ marginBottom: 24 }}>
         <div style={{ fontWeight: "bold", marginBottom: 8 }}>랭크</div>
         <div style={{ display: "flex", gap: 24 }}>
           <div
@@ -141,7 +203,7 @@ export default function FilterPanel({
                 <label style={{ marginRight: 8 }}>랭크{i + 1}</label>
                 <input
                   type="range"
-                  min={0}
+                  min={-6}
                   max={6}
                   value={ranks[i]}
                   onChange={(e) => {
@@ -168,7 +230,7 @@ export default function FilterPanel({
                 <label style={{ marginRight: 8 }}>랭크{i + 4}</label>
                 <input
                   type="range"
-                  min={0}
+                  min={-6}
                   max={6}
                   value={ranks[i + 3]}
                   onChange={(e) => {
@@ -183,7 +245,7 @@ export default function FilterPanel({
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
       {/* 기술 드롭다운 */}
       <div className="move-select-group">
         <label htmlFor="move-select">Select Move:</label>
