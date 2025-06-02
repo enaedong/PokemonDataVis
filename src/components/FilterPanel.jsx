@@ -42,7 +42,7 @@ export default function FilterPanel({
       case 1:
         return "Def";
       case 2:
-        return "Spd";
+        return "Spe";
       default:
         return "";
     }

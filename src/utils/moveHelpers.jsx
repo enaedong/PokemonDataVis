@@ -50,13 +50,21 @@ export function EndureKOData({ selectedPokemon, dexData, usageData, typeChart, s
 
     const yHits = hitCountFn(false, merged, selectedPoke, selectedMoveDetails.basePower, selectedMoveDetails, selectedWeather, selectedTerrain, ranks);
 
+    // 스피드 랭크 변화 계산
+    function reactiveSpeColor(){
+      const totalRank = ranks[2] - ranks[5];
+      const rankSpeMult = (2 + Math.max(0, totalRank)) / (2 - Math.min(0, totalRank));     
+      console.log(totalRank); 
+      return merged.stat.spe > selectedPoke.stat.spe * rankSpeMult ? "green" : "red"
+    }
+
     return {
       name: merged.name,
       x: bestMove.hits > 5 ? "5+" : bestMove.hits,
       y: yHits > 5 ? "5+" : yHits,
       speed: merged.stat.spe,
       type: merged.type[0].toLowerCase(),
-      color: merged.stat.spe > selectedPoke.stat.spe ? "green" : "red",
+      color: reactiveSpeColor(),
       bestMove: bestMove.name,
     };
   });

@@ -120,7 +120,7 @@ export default function ScatterPlot({
         (d) => (hoveredItem && hoveredItem.name === d.name ? 8 : 5) // Bigger if hovered
       )
       .attr("fill", (d) =>
-        d.speed > selectedPokemon.stat.spe ? "green" : "red"
+        d.color
       )
       .attr("stroke", (d) => (d.name === selectedItem ? "#222" : "white"))
       .attr("stroke-width", (d) => (d.name === selectedItem ? 2 : 1))
