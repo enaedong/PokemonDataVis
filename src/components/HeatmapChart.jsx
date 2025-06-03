@@ -24,9 +24,22 @@ function getColor(count, max) {
   return `rgb(${r},${g},${b})`;
 }
 
-export default function HeatmapChart({ items, xKey = "x", yKey = "y", width = 450, height = 450 }) {
+export default function HeatmapChart({ items, xKey = "x", yKey = "y", width = 450, height = 450, typeChecks, typeNames }) {
   const ref = useRef();
   const [hoveredCell, setHoveredCell] = useState(null);
+
+  // 타입 체크 필터링 
+  const filteredItems = (items || []).filter((d) => {
+    if (!typeChecks || !typeNames) return true;
+    const types = Array.isArray(d.type) ? d.type : [d.type];
+    return types.some((t) => {
+      const tNorm = t.trim().toLowerCase();
+      const idx = typeNames.findIndex(
+        (name) => name.trim().toLowerCase() === tNorm
+      );
+      return idx !== -1 && typeChecks[idx];
+    });
+  });
 
   useEffect(() => {
     const svg = d3.select(ref.current);
@@ -78,7 +91,7 @@ export default function HeatmapChart({ items, xKey = "x", yKey = "y", width = 45
 
     // 히트맵 셀 그리기 (6x6)
     const counts = Array.from({ length: 6 }, () => Array(6).fill(0));
-    items.forEach((d) => {
+    filteredItems.forEach((d) => {
       const xVal = d[xKey] === "5+" ? 5 : Number(d[xKey]);
       const yVal = d[yKey] === "5+" ? 5 : Number(d[yKey]);
       const xi = bins.findIndex((b, i) => xVal >= bins[i] && xVal < bins[i + 1]);
@@ -126,7 +139,7 @@ export default function HeatmapChart({ items, xKey = "x", yKey = "y", width = 45
       .attr("text-anchor", "middle")
       .attr("font-size", 14)
       .text("Hits each Pokémon can endure from selected move");
-  }, [items]);
+  }, [items, typeChecks, typeNames]);
 
   return (
     <svg ref={ref} width={width} height={height}>

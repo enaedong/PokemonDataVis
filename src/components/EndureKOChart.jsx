@@ -41,7 +41,7 @@ export default function EndureKOChart({ selectedPokemon, dexData, usageData, sel
   return (
     <div>
       <div style={{ marginBottom: 32 }}>
-        <HeatmapChart items={scatterItems} />
+        <HeatmapChart items={scatterItems} typeChecks={typeChecks} typeNames={typeNames} />
       </div>
       <ScatterPlot
         items={scatterItems}
