@@ -3,6 +3,7 @@ import ScatterPlot from "./ScatterPlot";
 import HitCount from "../utils/HitCount";
 import HitCountSmogon from "./HitCountSmogon";
 import { EndureKOData } from "../utils/moveHelpers";
+import HeatmapChart from "./HeatmapChart";
 
 export default function EndureKOChart({ selectedPokemon, dexData, usageData, selectedMove, selectedItem, setSelectedItem, typeChecks, typeNames, selectedWeather, selectedTerrain, ranks }) {
 
@@ -39,6 +40,9 @@ export default function EndureKOChart({ selectedPokemon, dexData, usageData, sel
 
   return (
     <div>
+      <div style={{ marginBottom: 32 }}>
+        <HeatmapChart items={scatterItems} />
+      </div>
       <ScatterPlot
         items={scatterItems}
         selectedPokemon={dexData.find((p) => p.name === selectedPokemon.name)}
