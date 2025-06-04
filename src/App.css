@@ -6,11 +6,6 @@ body {
   overflow: auto;
 }
 
-table, th, td {
-  border:1px solid black;
-  text-align: center;
-}
-
 .container {
   display: flex;
   align-items: flex-start;
@@ -475,15 +470,9 @@ table, th, td {
   }
 }
 
-.sidebar {
-  width: 300px;
-  border-right: 1px solid #ccc;
-  padding: 16px;
-  overflow-y: auto;
-}
-
-.details-panel {
-  flex: 1;
-  padding: 16px;
-  overflow-y: auto;
+table.Rank-Table,
+table.Rank-Table th,
+table.Rank-Table td {
+  border: 1px solid black;
+  text-align: center;
 }
