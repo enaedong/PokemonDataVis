@@ -39,8 +39,10 @@ export default function PokemonDetails({
       </div>
       <div>
         <strong>Items:</strong>{" "}
-        {selected.items && selected.items.trim() !== "" ? (
+        {typeof selected.items === "string" && selected.items.trim() !== "" ? (
           selected.items
+        ) : Array.isArray(selected.items) && selected.items.length > 0 ? (
+          selected.items.join(", ")
         ) : (
           <span>N/A</span>
         )}
