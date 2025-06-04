@@ -31,16 +31,6 @@ export default function HitCountSmogon(isKo, tar, dex, basePower, moveDetails, w
   const attackerData = isKo ? dex : tar;
   const defenderData = isKo ? tar : dex;
 
-  // console.log("Defender Data Check:", {    
-  //   name: defenderData.name,
-  //   ability: getAbility(defenderData),
-  //   item: getItem(defenderData),
-  //   level: defenderData.level || 50,
-  //   nature: getNature(defenderData),
-  //   evs: getEVs(defenderData)
-  // });
-  // console.log("랭크 변화", ranks);
-  
   const attacker = new Pokemon(gen, toID(attackerData.name), {
     ability: getAbility(attackerData),
     item: getItem(attackerData),
