@@ -143,7 +143,7 @@ export default function FilterPanel({
         </select>
       </div>
       {/* 랭크 슬라이더 */}
-      <table>
+      <table className="Rank-Table">
         <thead>
           <tr>
             <th style={{background: "#f3f3f3"}}>Stage</th>

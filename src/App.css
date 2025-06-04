@@ -476,3 +476,10 @@ table.Rank-Table td {
   border: 1px solid black;
   text-align: center;
 }
+
+table.Rank-Table,
+table.Rank-Table th,
+table.Rank-Table td {
+  border: 1px solid black;
+  text-align: center;
+}

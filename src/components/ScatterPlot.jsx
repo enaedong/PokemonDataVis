@@ -22,13 +22,6 @@ export default function ScatterPlot({
   const [hoveredItem, setHoveredItem] = useState(null);
 
   useEffect(() => {
-    if (items && items.length > 0) {
-      console.log("Sample data points:", items.slice(0, 5));
-      console.log("typeNames:", typeNames);
-    }
-  }, [items, typeNames]);
-
-  useEffect(() => {
     const svg = d3.select(ref.current);
     svg.selectAll("*").remove();
 

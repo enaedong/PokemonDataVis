@@ -7,8 +7,6 @@ import { getMoveDetails } from "./utils/moveHelpers";
 import "./App.css";
 
 export default function App() {
-  const [filtered, setFiltered] = useState([]);
-  const [search, setSearch] = useState("");
   const [dex, setDex] = useState([]);
   const [usage, setUsage] = useState([]);
   const [selected, setSelected] = useState(null);
@@ -47,15 +45,6 @@ export default function App() {
 
     loadData().catch((err) => console.error("Failed to load data", err));
   }, []);
-
-  // Filter data by search
-  useEffect(() => {
-    setFiltered(
-      usage.filter((p) =>
-        p.name.toLowerCase().includes(search.trim().toLowerCase())
-      )
-    );
-  }, [search, usage]);
 
   // Load selected Pokémon details
   useEffect(() => {
@@ -202,23 +191,19 @@ export default function App() {
         {showUsageTable ? (
           <>
             <h2>Top Pokémon Usage</h2>
-            <input
-              type="text"
-              className="search-bar"
-              placeholder="Search Pokémon..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              autoComplete="off"
-            />
             <div className="usage-table-container">
               <UsageTable
-                filtered={filtered}
+                data={usage}
                 selected={selected}
                 setSelected={(pokemon) => {
                   setSelected(pokemon);
                   setShowUsageTable(false);
-                  setTypeChecks(Array(typeNames.length).fill(true));
-                  setTypeAll(true);
+
+                  // Only initialize typeChecks if it hasn't been set before
+                  if (typeChecks.length === 0) {
+                    setTypeChecks(Array(typeNames.length).fill(true));
+                    setTypeAll(true);
+                  }
                 }}
               />
             </div>
@@ -229,9 +214,9 @@ export default function App() {
               className="back-btn"
               onClick={() => {
                 setShowUsageTable(true);
-                setSelected(null);
-                setTypeChecks(Array(typeNames.length).fill(false)); // Uncheck all
-                setTypeAll(false); // Uncheck "All"
+                // setSelected(null);
+                // setTypeChecks(Array(typeNames.length).fill(false)); // Uncheck all
+                // setTypeAll(false); // Uncheck "All"
                 //setSelectedItem(null); // <-- Add this line to clear scatter plot selection
               }}
               style={{ marginBottom: 16 }}
