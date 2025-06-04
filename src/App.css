@@ -474,3 +474,16 @@ table, th, td {
     order: 3;
   }
 }
+
+.sidebar {
+  width: 300px;
+  border-right: 1px solid #ccc;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.details-panel {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
