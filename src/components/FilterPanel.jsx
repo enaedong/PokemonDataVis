@@ -1,31 +1,70 @@
 import React, { useState } from "react";
 
-export default function FilterPanel({ 
-  selectedMove, 
-  setSelectedMove, 
-  selectedPokemon, 
-  moveList, 
-  typeChecks, 
-  setTypeChecks, 
-  typeAll, 
-  setTypeAll, 
-  typeNames, 
+export default function FilterPanel({
+  selectedWeather,
+  setSelectedWeather,
+  ranks,
+  setRanks,
+  selectedTerrain,
+  setSelectedTerrain,
+  selectedMove,
+  setSelectedMove,
+  selectedPokemon,
+  moveList,
+  typeChecks,
+  setTypeChecks,
+  typeAll,
+  setTypeAll,
+  typeNames,
 }) {
-  // 날씨 체크박스
-  const [weatherChecks, setWeatherChecks] = useState(Array(4).fill(false));
-  // 랭크 슬라이더
-  const [ranks, setRanks] = useState(Array(6).fill(0));
+
+  const weatherOptions = [
+    { value: "", label: "Clear" },
+    { value: "Sun", label: "Sun" },
+    { value: "Rain", label: "Rain" },
+    { value: "Sandstorm", label: "Sandstorm" },
+    { value: "Snow", label: "Snow" },
+  ];
+
+  const terrainOptions = [
+    { value: "", label: "Unset" },
+    { value: "Electric", label: "Electric" },
+    { value: "Grassy", label: "Grassy" },
+    { value: "Misty", label: "Misty" },
+    { value: "Psychic", label: "Psychic" },
+  ];
+
+  // 화면에 랭크 표 구현용
+  function getRankText(i) {
+    switch (i) {
+      case 0:
+        return "Atk";
+      case 1:
+        return "Def";
+      case 2:
+        return "Spe";
+      default:
+        return "";
+    }
+  }  
 
   return (
     <>
       {/* 타입 체크박스 */}
       <div style={{ marginBottom: 24 }}>
-        <div style={{ marginBottom: 8 , marginLeft: 17}}>
-          <label style={{ fontWeight: 'bold', fontSize: "0.8em", marginRight: 12, cursor: "pointer" }}>
+        <div style={{ marginBottom: 8, marginLeft: 17 }}>
+          <label
+            style={{
+              fontWeight: "bold",
+              fontSize: "0.8em",
+              marginRight: 12,
+              cursor: "pointer",
+            }}
+          >
             <input
               type="checkbox"
               checked={typeAll}
-              onChange={e => {
+              onChange={(e) => {
                 const checked = e.target.checked;
                 setTypeAll(checked);
                 setTypeChecks(Array(typeNames.length).fill(checked));
@@ -35,105 +74,123 @@ export default function FilterPanel({
             All
           </label>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }}>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(3, 1fr)",
+            gap: 8,
+          }}
+        >
           {typeNames.map((type, i) => (
             <label
               key={i}
               style={{
-                fontWeight: 'bold',
-                fontSize: '0.8em',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center'
+                fontWeight: "bold",
+                fontSize: "0.8em",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
               }}
             >
               <input
                 type="checkbox"
                 checked={typeChecks[i]}
-                onChange={e => {
+                onChange={(e) => {
                   const arr = [...typeChecks];
                   arr[i] = e.target.checked;
                   setTypeChecks(arr);
                 }}
-                style={{ marginRight: 0, marginBottom: 2, cursor: 'pointer' }} // Add cursor pointer
+                style={{ marginRight: 0, marginBottom: 2, cursor: "pointer" }} // Add cursor pointer
               />
               <span>{type}</span>
             </label>
           ))}
         </div>
       </div>
-      {/* 날씨 체크박스 */}
-      <div style={{ marginBottom: 24 }}>
-        <div style={{ fontWeight: 'bold', marginBottom: 8 }}>날씨</div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 8 }}>
-          {Array.from({ length: 4 }).map((_, i) => (
-            <label key={i}>
-              <input
-                type="checkbox"
-                checked={weatherChecks[i]}
-                onChange={e => {
-                  const arr = [...weatherChecks];
-                  arr[i] = e.target.checked;
-                  setWeatherChecks(arr);
-                }}
-                style={{ marginRight: 6 }}
-              />
-              날씨{i + 1}
-            </label>
+      {/* 날씨 드롭다운 */}
+      <div>
+        <label htmlFor="weather-select">Weather: </label>
+        <select
+          id="weather-select"
+          value={selectedWeather}
+          onChange={(e) => setSelectedWeather(e.target.value)}
+        >
+          {weatherOptions.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
           ))}
-        </div>
+        </select>
+      </div>
+      {/* 필드 드롭다운 */}
+      <div>
+        <label htmlFor="terrain-select">Terrain: </label>
+        <select
+          id="terrain-select"
+          value={selectedTerrain}
+          onChange={(e) => setSelectedTerrain(e.target.value)}
+        >
+          {terrainOptions.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
       </div>
       {/* 랭크 슬라이더 */}
-      <div style={{ marginBottom: 24 }}>
-        <div style={{ fontWeight: 'bold', marginBottom: 8 }}>랭크</div>
-        <div style={{ display: 'flex', gap: 24 }}>
-          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 16 }}>
-            {Array.from({ length: 3 }).map((_, i) => (
-              <div key={i}>
-                <label style={{ marginRight: 8 }}>랭크{i + 1}</label>
+      <table className="Rank-Table">
+        <thead>
+          <tr>
+            <th style={{background: "#f3f3f3"}}>Stage</th>
+          </tr>
+          <tr>
+            <th style={{background: "#f3f3f3"}}>Meta<br/>Pokémon</th>
+            <th style={{background: "#f3f3f3"}}>Counter<br/>Pokémon</th>
+          </tr>
+        </thead>
+        <tbody>
+          {Array.from({ length: 3 }).map((_, i) => (
+            <tr key={i}>
+              <td>
+                <label>{getRankText(i)}</label>
                 <input
                   type="range"
-                  min={0}
+                  min={-6}
                   max={6}
                   value={ranks[i]}
-                  onChange={e => {
+                  onChange={(e) => {
                     const arr = [...ranks];
                     arr[i] = Number(e.target.value);
                     setRanks(arr);
                   }}
-                  style={{ width: '70%' }}
+                  style={{ width: "70%" }}
                 />
-                <span style={{ marginLeft: 8 }}>{ranks[i]}</span>
-              </div>
-            ))}
-          </div>
-          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 16 }}>
-            {Array.from({ length: 3 }).map((_, i) => (
-              <div key={i}>
-                <label style={{ marginRight: 8 }}>랭크{i + 4}</label>
+                <div>{ranks[i] > 0 ? "+"+ranks[i] : ranks[i]}</div>
+              </td>
+              <td>
+                <label>{getRankText(i)}</label>
                 <input
                   type="range"
-                  min={0}
+                  min={-6}
                   max={6}
-                  value={ranks[i + 3]}
-                  onChange={e => {
+                  value={ranks[i+3]}
+                  onChange={(e) => {
                     const arr = [...ranks];
-                    arr[i + 3] = Number(e.target.value);
+                    arr[i+3] = Number(e.target.value);
                     setRanks(arr);
                   }}
-                  style={{ width: '70%' }}
+                  style={{ width: "70%" }}
                 />
-                <span style={{ marginLeft: 8 }}>{ranks[i + 3]}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+                <div>{ranks[i+3] > 0 ? "+"+ranks[i+3] : ranks[i+3]}</div>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      
       {/* 기술 드롭다운 */}
       <div className="move-select-group">
-        <label htmlFor="move-select">
-          Select Move:
-        </label>
+        <label htmlFor="move-select">Select Move:</label>
         <select
           id="move-select"
           value={selectedMove || ""}
@@ -149,4 +206,4 @@ export default function FilterPanel({
       </div>
     </>
   );
-} 
+}

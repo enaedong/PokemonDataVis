@@ -7,8 +7,6 @@ import { getMoveDetails } from "./utils/moveHelpers";
 import "./App.css";
 
 export default function App() {
-  const [filtered, setFiltered] = useState([]);
-  const [search, setSearch] = useState("");
   const [dex, setDex] = useState([]);
   const [usage, setUsage] = useState([]);
   const [selected, setSelected] = useState(null);
@@ -16,9 +14,15 @@ export default function App() {
   const [pokeStats, setPokeStats] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  // 날씨 필드
+  const [selectedWeather, setSelectedWeather] = useState("");
+  const [selectedTerrain, setSelectedTerrain] = useState("");
+
+  // 메타 & 카운터 포켓몬의 랭크 변화
+  const [ranks, setRanks] = useState(Array(6).fill(0));
+
   // 차트에서 사용자가 클릭한 점
   const [selectedItem, setSelectedItem] = useState(null);
-
   const [selectedMove, setSelectedMove] = useState(null);
   const [moveList, setMoveList] = useState([]);
 
@@ -41,15 +45,6 @@ export default function App() {
 
     loadData().catch((err) => console.error("Failed to load data", err));
   }, []);
-
-  // Filter data by search
-  useEffect(() => {
-    setFiltered(
-      usage.filter((p) =>
-        p.name.toLowerCase().includes(search.trim().toLowerCase())
-      )
-    );
-  }, [search, usage]);
 
   // Load selected Pokémon details
   useEffect(() => {
@@ -89,7 +84,7 @@ export default function App() {
   const [typeNames, setTypeNames] = useState([]);
   const [typeChecks, setTypeChecks] = useState([]); // all checked by default
   const [typeAll, setTypeAll] = useState(false);
-  
+
   useEffect(() => {
     fetch("/atkType.json")
       .then((res) => res.json())
@@ -117,38 +112,38 @@ export default function App() {
     setSelectedItemLoading(true);
     // safe_name 변환
     const safeName = selectedItem
-    .toLowerCase()
-    .replace(/ /g, "-")
-    .replace(/\./g, "");
+      .toLowerCase()
+      .replace(/ /g, "-")
+      .replace(/\./g, "");
     fetch(`https://pokeapi.co/api/v2/pokemon/${safeName}`)
-    .then((res) => {
-      if (!res.ok) throw new Error("Pokémon not found");
-      return res.json();
-    })
-    .then((data) => {
-      setSelectedItemDetail(data);
-      const statsObj = {};
-      data.stats.forEach((s) => {
-        statsObj[s.stat.name] = s.base_stat;
-      });
-      setSelectedItemStats(statsObj);
-    })
-    .catch(() => {
-      setSelectedItemDetail(null);
-      setSelectedItemStats(null);
-    })
-    .finally(() => setSelectedItemLoading(false));
+      .then((res) => {
+        if (!res.ok) throw new Error("Pokémon not found");
+        return res.json();
+      })
+      .then((data) => {
+        setSelectedItemDetail(data);
+        const statsObj = {};
+        data.stats.forEach((s) => {
+          statsObj[s.stat.name] = s.base_stat;
+        });
+        setSelectedItemStats(statsObj);
+      })
+      .catch(() => {
+        setSelectedItemDetail(null);
+        setSelectedItemStats(null);
+      })
+      .finally(() => setSelectedItemLoading(false));
   }, [selectedItem]);
-  
+
   // 순위표/포켓몬 정보 전환 상태
   const [showUsageTable, setShowUsageTable] = useState(true);
   const selectedUsage = selected;
   const selectedDex = dex.find((p) => p.name === selected?.name);
-  
+
   const selectedPokemon = selectedDex
-  ? { ...selectedDex, moves: selectedUsage?.moves || {} }
-  : null;
-  
+    ? { ...selectedDex, moves: selectedUsage?.moves || {} }
+    : null;
+
   // check all checkbox when selectedPokemon is set:
   useEffect(() => {
     if (selectedPokemon && typeChecks.length === 0) {
@@ -161,11 +156,11 @@ export default function App() {
   // 카운터 포켓몬 정보
   const selectedItemUsage = usage.find((p) => p.name === selectedItem);
   const selectedItemDex = dex.find((p) => p.name === selectedItem);
-  
-  const selectedItemPokemon = selectedItemDex
-  ? { ...selectedItemDex, moves: selectedItemUsage?.moves || {} }
-  : null;
-  
+  const selectedItemPokemon =
+    selectedItemUsage && selectedItemDex
+      ? { ...selectedItemDex, ...selectedItemUsage }
+      : selectedItemUsage || selectedItemDex || null;
+
   useEffect(() => {
     if (!selectedPokemon?.moves) {
       if (moveList.length > 0) setMoveList([]);
@@ -196,23 +191,19 @@ export default function App() {
         {showUsageTable ? (
           <>
             <h2>Top Pokémon Usage</h2>
-            <input
-              type="text"
-              className="search-bar"
-              placeholder="Search Pokémon..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              autoComplete="off"
-            />
             <div className="usage-table-container">
               <UsageTable
-                filtered={filtered}
+                data={usage}
                 selected={selected}
                 setSelected={(pokemon) => {
                   setSelected(pokemon);
                   setShowUsageTable(false);
-                  setTypeChecks(Array(typeNames.length).fill(true));
-                  setTypeAll(true);
+
+                  // Only initialize typeChecks if it hasn't been set before
+                  if (typeChecks.length === 0) {
+                    setTypeChecks(Array(typeNames.length).fill(true));
+                    setTypeAll(true);
+                  }
                 }}
               />
             </div>
@@ -223,9 +214,9 @@ export default function App() {
               className="back-btn"
               onClick={() => {
                 setShowUsageTable(true);
-                setSelected(null);
-                setTypeChecks(Array(typeNames.length).fill(false)); // Uncheck all
-                setTypeAll(false); // Uncheck "All"
+                // setSelected(null);
+                // setTypeChecks(Array(typeNames.length).fill(false)); // Uncheck all
+                // setTypeAll(false); // Uncheck "All"
                 //setSelectedItem(null); // <-- Add this line to clear scatter plot selection
               }}
               style={{ marginBottom: 16 }}
@@ -245,6 +236,12 @@ export default function App() {
       {/* 필터 UI */}
       <div className="stats-section" id="pokemon-stats">
         <FilterPanel
+          selectedWeather={selectedWeather}
+          setSelectedWeather={setSelectedWeather}
+          ranks={ranks}
+          setRanks={setRanks}
+          selectedTerrain={selectedTerrain}
+          setSelectedTerrain={setSelectedTerrain}
           selectedMove={selectedMove}
           setSelectedMove={setSelectedMove}
           selectedPokemon={selectedPokemon}
@@ -268,6 +265,9 @@ export default function App() {
           setSelectedItem={setSelectedItem}
           typeChecks={typeChecks}
           typeNames={typeNames}
+          selectedWeather={selectedWeather}
+          selectedTerrain={selectedTerrain}
+          ranks={ranks}
         />
       </div>
 

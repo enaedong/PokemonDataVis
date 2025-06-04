@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Generations } from "@smogon/calc";
 import ScatterPlot from "./ScatterPlot";
-import HitCount from "../utils/HitCount";
+import HitCountSmogon from "./HitCountSmogon";
 import { EndureKOData } from "../utils/moveHelpers";
+import HeatmapChart from "./HeatmapChart";
 
-const gen = Generations.get(9);
+export default function EndureKOChart({ selectedPokemon, dexData, usageData, selectedMove, selectedItem, setSelectedItem, typeChecks, typeNames, selectedWeather, selectedTerrain, ranks }) {
 
-export default function EndureKOChart({ selectedPokemon, dexData, usageData, selectedMove, selectedItem, setSelectedItem, typeChecks, typeNames }) {
   const [typeChart, setTypeChart] = useState(null);
   const [scatterItems, setScatterItems] = useState([]);
 
@@ -26,10 +25,13 @@ export default function EndureKOChart({ selectedPokemon, dexData, usageData, sel
       usageData,
       typeChart,
       selectedMove,
-      hitCountFn: HitCount,
+      hitCountFn: HitCountSmogon,
+      selectedWeather,
+      selectedTerrain,
+      ranks
     });
     setScatterItems(data);
-  }, [selectedPokemon, dexData, usageData, typeChart, selectedMove]);
+  }, [selectedPokemon, dexData, usageData, typeChart, selectedMove, selectedWeather, selectedTerrain, ranks]);
 
   if (!selectedPokemon)
     return <div>Select a Pokémon to view the scatter plot.</div>;
@@ -37,6 +39,9 @@ export default function EndureKOChart({ selectedPokemon, dexData, usageData, sel
 
   return (
     <div>
+      <div style={{ marginBottom: 32 }}>
+        <HeatmapChart items={scatterItems} typeChecks={typeChecks} typeNames={typeNames} />
+      </div>
       <ScatterPlot
         items={scatterItems}
         selectedPokemon={dexData.find((p) => p.name === selectedPokemon.name)}

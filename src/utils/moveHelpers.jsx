@@ -12,40 +12,29 @@ export function getMoveDetails(moveName) {
   };
 }
 
-export function getEffectiveness(typeChart, moveType, targetTypes) {
-  if (!typeChart) return 1;
-  const chart = typeChart[capitalize(moveType)];
-  if (!chart) return 1;
-  return targetTypes.reduce((mult, defType) => {
-    const type = capitalize(defType);
-    return mult * (chart[type] ?? 1);
-  }, 1);
-}
-
-export function getBestMove(attacker, moveMap, target, typeChart, hitCountFn) {
-  let best = { name: null, basePower: 0, type: "Normal", category: "Physical", eff: 1, hits: 5 };
+export function getBestMove(attacker, moveMap, target, hitCountFn, selectedWeather, selectedTerrain, ranks) {
+  let best = { name: null, basePower: 0, type: "Normal", category: "Physical", hits: 6 };
 
   for (const moveName of Object.keys(moveMap)) {
     const move = getMoveDetails(moveName);
     if (!move.basePower || move.basePower < 40) continue;
 
-    const effectiveness = getEffectiveness(typeChart, move.type, target.type);
-    if (effectiveness === 0) continue;
-
-    const hits = hitCountFn(true, target, attacker, move.basePower, effectiveness);
+    const hits = hitCountFn(true, target, attacker, move.basePower, move, selectedWeather, selectedTerrain, ranks);
 
     if (!best.name || hits < best.hits || (hits === best.hits && move.basePower > best.basePower)) {
-      best = { ...move, eff: effectiveness, hits, name: move.name };
+      best = { ...move, hits, name: move.name };
     }
   }
 
   return best;
 }
 
-export function EndureKOData({ selectedPokemon, dexData, usageData, typeChart, selectedMove, hitCountFn }) {
+export function EndureKOData({ selectedPokemon, dexData, usageData, typeChart, selectedMove, hitCountFn, selectedWeather, selectedTerrain, ranks }) {
   if (!selectedPokemon || !typeChart || !dexData || !usageData || !selectedMove) return [];
 
   const selectedDex = dexData.find(p => p.name === selectedPokemon.name);
+  const selectedUsage = usageData.find(u => u.name === selectedPokemon.name);
+  const selectedPoke = selectedUsage ? { ...selectedDex, ...selectedUsage } : selectedDex;
   if (!selectedDex) return [];
 
   const selectedMoveDetails = getMoveDetails(selectedMove);
@@ -54,25 +43,27 @@ export function EndureKOData({ selectedPokemon, dexData, usageData, typeChart, s
 
   return filteredDex.map(poke => {
     const usageEntry = usageData.find(u => u.name === poke.name);
-    const bestMove = usageEntry?.moves
-      ? getBestMove(poke, usageEntry.moves, selectedDex, typeChart, hitCountFn)
-      : { name: null, hits: 5 };
+    const merged = usageEntry ? { ...poke, ...usageEntry } : poke;
+    const bestMove = merged?.moves
+      ? getBestMove(merged, merged.moves, selectedPoke, hitCountFn, selectedWeather, selectedTerrain, ranks)
+      : { name: null, hits: 6 };    
 
-    const effY = getEffectiveness(typeChart, selectedMoveDetails.type, poke.type);
-    const y = hitCountFn(false, poke, selectedDex, selectedMoveDetails.basePower, effY);
+    const yHits = hitCountFn(false, selectedPoke, merged, selectedMoveDetails.basePower, selectedMoveDetails, selectedWeather, selectedTerrain, ranks);
+    // 스피드 랭크 변화 계산
+    function reactiveSpeColor(){
+      const totalRank = ranks[2] - ranks[5];
+      const rankSpeMult = (2 + Math.max(0, totalRank)) / (2 - Math.min(0, totalRank));           
+      return merged.stat.spe > selectedPoke.stat.spe * rankSpeMult ? "green" : "red"
+    }
 
     return {
-      name: poke.name,
-      x: bestMove.hits ?? 5,
-      y: y ?? 5,
-      speed: poke.stat.spe,
-      type: poke.type[0].toLowerCase(),
-      color: poke.stat.spe > selectedDex.stat.spe ? "green" : "red",
+      name: merged.name,
+      x: bestMove.hits > 5 ? "5+" : bestMove.hits,
+      y: yHits > 5 ? "5+" : yHits,
+      speed: merged.stat.spe,
+      type: merged.type[0].toLowerCase(),
+      color: reactiveSpeColor(),
       bestMove: bestMove.name,
     };
   });
-}
-
-function capitalize(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
 }

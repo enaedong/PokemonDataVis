@@ -24,7 +24,28 @@ export default function PokemonDetails({
       </div>
       <div>
         <strong>Abilities:</strong>{" "}
-        {pokeDetail.abilities.map((a) => a.ability.name).join(", ")}
+        {Array.isArray(selected.ability) && selected.ability.length > 0 ? (
+          selected.ability.map((a) => a.trim()).join(", ")
+        ) : pokeDetail.abilities && pokeDetail.abilities.length > 0 ? (
+          pokeDetail.abilities
+            .map(
+              (a) =>
+                a.ability.name.charAt(0).toUpperCase() + a.ability.name.slice(1)
+            )
+            .join(", ")
+        ) : (
+          <span>N/A</span>
+        )}
+      </div>
+      <div>
+        <strong>Items:</strong>{" "}
+        {typeof selected.items === "string" && selected.items.trim() !== "" ? (
+          selected.items
+        ) : Array.isArray(selected.items) && selected.items.length > 0 ? (
+          selected.items.join(", ")
+        ) : (
+          <span>N/A</span>
+        )}
       </div>
       <div>
         <strong>Most Used Moves:</strong>{" "}
