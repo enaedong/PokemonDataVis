@@ -6,11 +6,6 @@ body {
   overflow: auto;
 }
 
-table, th, td {
-  border:1px solid black;
-  text-align: center;
-}
-
 .container {
   display: flex;
   align-items: flex-start;
@@ -473,4 +468,11 @@ table, th, td {
   .stats-section {
     order: 3;
   }
+}
+
+table.Rank-Table,
+table.Rank-Table th,
+table.Rank-Table td {
+  border: 1px solid black;
+  text-align: center;
 }

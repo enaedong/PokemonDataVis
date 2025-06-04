@@ -79,7 +79,8 @@ export default function HitCountSmogon(isKo, tar, dex, basePower, moveDetails, w
   if (!damage || !Array.isArray(damage)) return 6;
 
   // 랭크 변화 계산
-  const totalRank = isKo ? (ranks[3] - ranks[1]) : (ranks[0] - ranks[4]);
+  let totalRank = isKo ? (ranks[3] - ranks[1]) : (ranks[0] - ranks[4]);
+  totalRank = Math.max(-6, Math.min(6, totalRank));
   const rankDmgMult = (2 + Math.max(0, totalRank)) / (2 - Math.min(0, totalRank));
 
   const avgDmg = (Math.min(...damage) + Math.max(...damage)) * rankDmgMult / 2;

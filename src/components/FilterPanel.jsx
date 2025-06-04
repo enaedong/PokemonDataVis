@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
+import TYPE_COLORS from '../utils/typeColors';
 
 export default function FilterPanel({
   selectedWeather,
@@ -74,38 +75,42 @@ export default function FilterPanel({
             All
           </label>
         </div>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: 8,
-          }}
-        >
-          {typeNames.map((type, i) => (
-            <label
-              key={i}
-              style={{
-                fontWeight: "bold",
-                fontSize: "0.8em",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}
-            >
-              <input
-                type="checkbox"
-                checked={typeChecks[i]}
-                onChange={(e) => {
-                  const arr = [...typeChecks];
-                  arr[i] = e.target.checked;
-                  setTypeChecks(arr);
-                }}
-                style={{ marginRight: 0, marginBottom: 2, cursor: "pointer" }} // Add cursor pointer
-              />
-              <span>{type}</span>
-            </label>
-          ))}
-        </div>
+        <table style={{ width: 180 + "px", tableLayout: "fixed"}}>
+          <tbody>
+            {Array.from({ length: 6 }).map((_, z) => (
+              <tr>
+                {Array.from({ length: 3 }).map((_, i) => (
+                  <td style={typeChecks[z * 3 + i] ? { background: TYPE_COLORS[typeNames[z * 3 + i].toLowerCase()] } : undefined}>
+                    <label
+                      key={i}
+                      // style={{
+                      //   fontWeight: "bold",
+                      //   fontSize: "0.8em",
+                      //   display: "flex",
+                      //   flexDirection: "column",
+                      //   alignItems: "center",
+                      // }}
+                    >
+                      <input
+                        key={i}
+                        type="checkbox"
+                        checked={typeChecks[z * 3 + i]}
+                        onChange={(e) => {
+                          const arr = [...typeChecks];
+                          arr[z * 3 + i] = e.target.checked;
+                          setTypeChecks(arr);
+                        }}
+                        style={{ display: "none", cursor: "pointer" }} // Add cursor pointer, marginRight: 0, marginBottom: 2, 
+                      />
+                      <img src={`/${typeNames[z * 3 + i]}_icon.png`} style={{width: 100 + "%", height: 100 + "%", objectFit: "cover", margin: 0 + "px"}}></img>                      
+                      <span>{typeNames[z * 3 + i]}</span>
+                    </label>
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
       {/* 날씨 드롭다운 */}
       <div>
@@ -187,65 +192,6 @@ export default function FilterPanel({
           ))}
         </tbody>
       </table>
-      {/* <div style={{ marginBottom: 24 }}>
-        <div style={{ fontWeight: "bold", marginBottom: 8 }}>랭크</div>
-        <div style={{ display: "flex", gap: 24 }}>
-          <div
-            style={{
-              flex: 1,
-              display: "flex",
-              flexDirection: "column",
-              gap: 16,
-            }}
-          >
-            {Array.from({ length: 3 }).map((_, i) => (
-              <div key={i}>
-                <label style={{ marginRight: 8 }}>랭크{i + 1}</label>
-                <input
-                  type="range"
-                  min={-6}
-                  max={6}
-                  value={ranks[i]}
-                  onChange={(e) => {
-                    const arr = [...ranks];
-                    arr[i] = Number(e.target.value);
-                    setRanks(arr);
-                  }}
-                  style={{ width: "70%" }}
-                />
-                <span style={{ marginLeft: 8 }}>{ranks[i]}</span>
-              </div>
-            ))}
-          </div>
-          <div
-            style={{
-              flex: 1,
-              display: "flex",
-              flexDirection: "column",
-              gap: 16,
-            }}
-          >
-            {Array.from({ length: 3 }).map((_, i) => (
-              <div key={i}>
-                <label style={{ marginRight: 8 }}>랭크{i + 4}</label>
-                <input
-                  type="range"
-                  min={-6}
-                  max={6}
-                  value={ranks[i + 3]}
-                  onChange={(e) => {
-                    const arr = [...ranks];
-                    arr[i + 3] = Number(e.target.value);
-                    setRanks(arr);
-                  }}
-                  style={{ width: "70%" }}
-                />
-                <span style={{ marginLeft: 8 }}>{ranks[i + 3]}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div> */}
       {/* 기술 드롭다운 */}
       <div className="move-select-group">
         <label htmlFor="move-select">Select Move:</label>
