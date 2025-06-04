@@ -198,8 +198,12 @@ export default function App() {
                 setSelected={(pokemon) => {
                   setSelected(pokemon);
                   setShowUsageTable(false);
-                  setTypeChecks(Array(typeNames.length).fill(true));
-                  setTypeAll(true);
+
+                  // Only initialize typeChecks if it hasn't been set before
+                  if (typeChecks.length === 0) {
+                    setTypeChecks(Array(typeNames.length).fill(true));
+                    setTypeAll(true);
+                  }
                 }}
               />
             </div>
@@ -210,9 +214,9 @@ export default function App() {
               className="back-btn"
               onClick={() => {
                 setShowUsageTable(true);
-                setSelected(null);
-                setTypeChecks(Array(typeNames.length).fill(false)); // Uncheck all
-                setTypeAll(false); // Uncheck "All"
+                // setSelected(null);
+                // setTypeChecks(Array(typeNames.length).fill(false)); // Uncheck all
+                // setTypeAll(false); // Uncheck "All"
                 //setSelectedItem(null); // <-- Add this line to clear scatter plot selection
               }}
               style={{ marginBottom: 16 }}
