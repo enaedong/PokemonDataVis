@@ -138,7 +138,7 @@ export default function FilterPanel({
         </select>
       </div>
       {/* 랭크 슬라이더 */}
-      <table>
+      <table className="Rank-Table">
         <thead>
           <tr>
             <th style={{background: "#f3f3f3"}}>Stage</th>
@@ -187,65 +187,7 @@ export default function FilterPanel({
           ))}
         </tbody>
       </table>
-      {/* <div style={{ marginBottom: 24 }}>
-        <div style={{ fontWeight: "bold", marginBottom: 8 }}>랭크</div>
-        <div style={{ display: "flex", gap: 24 }}>
-          <div
-            style={{
-              flex: 1,
-              display: "flex",
-              flexDirection: "column",
-              gap: 16,
-            }}
-          >
-            {Array.from({ length: 3 }).map((_, i) => (
-              <div key={i}>
-                <label style={{ marginRight: 8 }}>랭크{i + 1}</label>
-                <input
-                  type="range"
-                  min={-6}
-                  max={6}
-                  value={ranks[i]}
-                  onChange={(e) => {
-                    const arr = [...ranks];
-                    arr[i] = Number(e.target.value);
-                    setRanks(arr);
-                  }}
-                  style={{ width: "70%" }}
-                />
-                <span style={{ marginLeft: 8 }}>{ranks[i]}</span>
-              </div>
-            ))}
-          </div>
-          <div
-            style={{
-              flex: 1,
-              display: "flex",
-              flexDirection: "column",
-              gap: 16,
-            }}
-          >
-            {Array.from({ length: 3 }).map((_, i) => (
-              <div key={i}>
-                <label style={{ marginRight: 8 }}>랭크{i + 4}</label>
-                <input
-                  type="range"
-                  min={-6}
-                  max={6}
-                  value={ranks[i + 3]}
-                  onChange={(e) => {
-                    const arr = [...ranks];
-                    arr[i + 3] = Number(e.target.value);
-                    setRanks(arr);
-                  }}
-                  style={{ width: "70%" }}
-                />
-                <span style={{ marginLeft: 8 }}>{ranks[i + 3]}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div> */}
+      
       {/* 기술 드롭다운 */}
       <div className="move-select-group">
         <label htmlFor="move-select">Select Move:</label>
