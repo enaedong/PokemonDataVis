@@ -17,7 +17,8 @@ body {
   background: #fff;
   border-radius: 14px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: auto;
 }
 
 .usage-section {
@@ -472,6 +473,26 @@ body {
   .stats-section {
     order: 3;
   }
+}
+
+.vertical-slider .rc-slider-mark {
+  left: auto !important;
+  right: 100%; /* Move marks to the left of the slider */
+  width: 40px; /* Adjust as needed */
+  text-align: right;
+  margin-right: 17px;
+}
+
+/* For horizontal slider */
+.horizontal-slider .rc-slider-handle {
+  /* Example: move handle up by 2px */
+  margin-top: -3px;
+}
+
+/* For vertical slider */
+.vertical-slider .rc-slider-handle {
+  /* Example: move handle left by 2px */
+  margin-left: -3px;
 }
 
 table.Rank-Table,
