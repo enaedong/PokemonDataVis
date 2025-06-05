@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
 import ScatterPlot from "./ScatterPlot";
-import HitCount from "../utils/HitCount";
 import HitCountSmogon from "./HitCountSmogon";
 import { EndureKOData } from "../utils/moveHelpers";
 import HeatmapChart from "./HeatmapChart";

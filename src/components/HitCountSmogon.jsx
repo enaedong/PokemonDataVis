@@ -31,16 +31,6 @@ export default function HitCountSmogon(isKo, tar, dex, basePower, moveDetails, w
   const attackerData = isKo ? dex : tar;
   const defenderData = isKo ? tar : dex;
 
-  // console.log("Defender Data Check:", {    
-  //   name: defenderData.name,
-  //   ability: getAbility(defenderData),
-  //   item: getItem(defenderData),
-  //   level: defenderData.level || 50,
-  //   nature: getNature(defenderData),
-  //   evs: getEVs(defenderData)
-  // });
-  // console.log("랭크 변화", ranks);
-  
   const attacker = new Pokemon(gen, toID(attackerData.name), {
     ability: getAbility(attackerData),
     item: getItem(attackerData),
@@ -79,7 +69,8 @@ export default function HitCountSmogon(isKo, tar, dex, basePower, moveDetails, w
   if (!damage || !Array.isArray(damage)) return 6;
 
   // 랭크 변화 계산
-  const totalRank = isKo ? (ranks[3] - ranks[1]) : (ranks[0] - ranks[4]);
+  let totalRank = isKo ? (ranks[3] - ranks[1]) : (ranks[0] - ranks[4]);
+  totalRank = Math.max(-6, Math.min(6, totalRank));
   const rankDmgMult = (2 + Math.max(0, totalRank)) / (2 - Math.min(0, totalRank));
 
   const avgDmg = (Math.min(...damage) + Math.max(...damage)) * rankDmgMult / 2;
