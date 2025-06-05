@@ -38,8 +38,7 @@ body {
   border-right: 1px solid #e0e0e0;
   height: auto;
   max-height: 100vh;
-  background: #fcfcfc;
-  overflow-y: hidden;
+  background: #fcfcfc;  
 }
 
 .charts-section {
@@ -135,6 +134,11 @@ body {
 .chart-placeholder {
   color: #aaa;
   font-size: 1.08em;
+}
+
+.vertical-scroll {
+  height: 100vh;
+  overflow-y: auto;
 }
 
 .usage-table-container {
@@ -453,7 +457,7 @@ body {
   .scatter-detail-section {
     max-width: 100%;
     border: none;
-    padding: 16px;
+    padding: 5px;
   }
 
   .usage-section,
@@ -477,9 +481,6 @@ table.Rank-Table td {
   text-align: center;
 }
 
-table.Rank-Table,
-table.Rank-Table th,
-table.Rank-Table td {
-  border: 1px solid black;
-  text-align: center;
+.battlefield {
+  white-space: nowrap;
 }
