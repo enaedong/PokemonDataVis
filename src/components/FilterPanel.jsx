@@ -1,5 +1,7 @@
 // import React, { useState } from "react";
+import { color } from 'd3';
 import TYPE_COLORS from '../utils/typeColors';
+import Select from 'react-select';
 
 export default function FilterPanel({
   selectedWeather,
@@ -23,7 +25,7 @@ export default function FilterPanel({
     { value: "", label: "Clear", type: undefined},
     { value: "Sun", label: "Sun", type: "fire" },
     { value: "Rain", label: "Rain", type: "water" },
-    { value: "Sandstorm", label: "Sandstorm", type: "rock" },
+    { value: "Sandstorm", label: "Sand", type: "rock" },
     { value: "Snow", label: "Snow", type: "ice" },
   ];
 
@@ -48,6 +50,51 @@ export default function FilterPanel({
         return "";
     }
   }  
+
+  const customStylesWeather = {
+    control: (styles) => ({ ...styles, fontSize: 0.8 + "em", backgroundColor: selectedWeather !== "" ? TYPE_COLORS[weatherOptions.find(obj => obj.value == selectedWeather).type] : undefined }),
+    singleValue: (styles) => ({
+      ...styles,
+      color: selectedWeather !== "" ? "white" : "black", // This sets the color for the selected value text
+    }),
+    dropdownIndicator: (provided) => ({
+      ...provided,
+      padding: '0px',       // Adjust padding to fit your desired size
+    }),
+    option: (styles, { data, isDisabled, isFocused, isSelected }) => {
+    return {
+      ...styles,
+      backgroundColor: isDisabled
+        ? undefined
+        : isSelected
+        ? (data.type ? TYPE_COLORS[data.type] : TYPE_COLORS["normal"])
+        : isFocused
+        ? "#f3f3f3"
+        : undefined            
+    };
+  }}
+  const customStylesTerrain = {
+    control: (styles) => ({ ...styles, fontSize: 0.8 + "em", backgroundColor: selectedTerrain !== "" ? TYPE_COLORS[terrainOptions.find(obj => obj.value == selectedTerrain).type] : undefined }),
+    singleValue: (styles) => ({
+      ...styles,
+      color: selectedTerrain !== "" ? "white" : "black", // This sets the color for the selected value text
+    }),
+    dropdownIndicator: (provided) => ({
+      ...provided,
+      padding: '0px',
+    }),
+    option: (styles, { data, isDisabled, isFocused, isSelected }) => {
+    return {
+      ...styles,
+      backgroundColor: isDisabled
+        ? undefined
+        : isSelected
+        ? (data.type ? TYPE_COLORS[data.type] : TYPE_COLORS["normal"])
+        : isFocused
+        ? "#f3f3f3"
+        : undefined            
+    };
+  }}
 
   return (
     <>
@@ -86,14 +133,11 @@ export default function FilterPanel({
             </thead>
             <tbody>
               {Array.from({ length: 6 }).map((_, z) => (
-                <tr>
+                <tr key={`typeRow${z}`}>
                   {Array.from({ length: 3 }).map((_, i) => (
-                    <td style={typeChecks[z * 3 + i] ? { background: TYPE_COLORS[typeNames[z * 3 + i].toLowerCase()] } : undefined}>
-                      <label
-                        key={i}
-                      >
-                        <input
-                          key={i}
+                    <td key={`typeCell${z * 3 + i}`} style={typeChecks[z * 3 + i] ? { background: TYPE_COLORS[typeNames[z * 3 + i].toLowerCase()] } : undefined}>
+                      <label>
+                        <input                          
                           type="checkbox"
                           checked={typeChecks[z * 3 + i]}
                           onChange={(e) => {
@@ -114,46 +158,38 @@ export default function FilterPanel({
           </table>
         </div>
         {/* 날씨 드롭다운 */}
-        <table style={{ marginBottom: 24 }}>
-          <tr>
-            <td>
-              Weather:
-            </td>
-            <td>
-              <select
-                id="weather-select"
-                value={selectedWeather}
-                onChange={(e) => setSelectedWeather(e.target.value)}
-                style={{ background : selectedWeather !== "" ? TYPE_COLORS[weatherOptions.find(obj => obj.value == selectedWeather).type] : undefined }}
-              >
-                {weatherOptions.map((option) => (
-                  <option key={option.value} value={option.value}>
-                    {option.label}
-                  </option>
-                ))}
-              </select>
-            </td>
-          </tr>
-          <tr>
-            {/* 필드 드롭다운 */}
-            <td>
-              Terrain:
-            </td>
-            <td>
-              <select
-                id="terrain-select"
-                value={selectedTerrain}
-                onChange={(e) => setSelectedTerrain(e.target.value)}                
-                style={{ width: 100 + "%", background : selectedTerrain!== "" ? TYPE_COLORS[terrainOptions.find(obj => obj.value == selectedTerrain).type] : undefined }}
-              >
-                {terrainOptions.map((option) => (
-                  <option key={option.value} value={option.value}>
-                    {option.label}
-                  </option>
-                ))}
-              </select>
-            </td>
-          </tr>
+        <table style={{ marginBottom: 24, width: 100 + "%" }}>
+          <tbody>
+            <tr>
+              <td>
+                Weather:
+              </td>
+              <td>
+                <Select
+                  // id="weather-select"
+                  defaultValue={weatherOptions[0]}
+                  onChange={(e) => setSelectedWeather(e.value)}
+                  options={weatherOptions}
+                  styles={customStylesWeather}                
+                />
+              </td>
+            </tr>
+            <tr>
+              {/* 필드 드롭다운 */}
+              <td>
+                Terrain:
+              </td>
+              <td>
+                <Select
+                  // id="weather-select"
+                  defaultValue={terrainOptions[0]}
+                  onChange={(e) => setSelectedTerrain(e.value)}
+                  options={terrainOptions}
+                  styles={customStylesTerrain}                
+                />
+              </td>
+            </tr>
+          </tbody>
         </table>
         {/* 기술 드롭다운 */}
         <div className="move-select-group">
@@ -165,7 +201,7 @@ export default function FilterPanel({
             disabled={!selectedPokemon}
           >
             {moveList.map((move) => (
-              <option key={move} value={move}>
+              <option key={`move-${move}`} value={move}>
                 {move}
               </option>
             ))}
@@ -184,7 +220,7 @@ export default function FilterPanel({
           </thead>
           <tbody>
             {Array.from({ length: 3 }).map((_, i) => (
-              <tr key={i}>
+              <tr key={`rankRow${i}`}>
                 <td>
                   <label>{getRankText(i)}</label>
                   <input
