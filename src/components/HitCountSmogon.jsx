@@ -47,8 +47,6 @@ export default function HitCountSmogon(isKo, tar, dex, basePower, moveDetails, w
     evs: getEVs(defenderData),
   });
 
-  defender.curHP = defender.stats.hp;
-
   const move = new Move(gen, moveDetails?.name || "Custom Move", {
     basePower: basePower,
     type: moveDetails?.type || "Normal",

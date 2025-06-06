@@ -10,7 +10,7 @@ body {
   display: flex;
   align-items: flex-start;
   max-width: 2000px;
-  height: auto;
+  height: 100vh;
   max-height: 100vh;
   flex-wrap: wrap;
   margin: auto;
@@ -139,7 +139,6 @@ body {
 
 .vertical-scroll {
   height: 100vh;
-  overflow-y: auto;
 }
 
 .usage-table-container {
@@ -504,4 +503,32 @@ table.Rank-Table td {
 
 .battlefield {
   white-space: nowrap;
+}
+
+.search-bar {
+  position: relative;
+}
+
+.search-suggestions {
+  list-style: none;
+  margin: 4px 0 12px;
+  padding: 0;
+  border: 1px solid #ccc;
+  max-height: 150px;
+  overflow-y: auto;
+  background: white;
+  /* position: absolute; */
+  z-index: 10;
+  width: 240px; /* or match your input width */
+}
+
+.search-suggestions li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.search-suggestions li:hover,
+.search-suggestions li.active {
+  background-color: #eee;
+  font-weight: bold;
 }
