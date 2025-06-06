@@ -153,6 +153,7 @@ export default function ScatterPlot({
       });
 
     // Tooltip group
+    if (!items || items.length === 0 || !selectedPokemon) return;
     svg.selectAll(".tooltip-group").remove();
     const tooltipGroup = svg.append("g").attr("class", "tooltip-group");
 
