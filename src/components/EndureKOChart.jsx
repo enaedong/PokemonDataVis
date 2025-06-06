@@ -6,16 +6,28 @@ import HeatmapChart from "./HeatmapChart";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
 
-export default function EndureKOChart({ selectedPokemon, dexData, usageData, selectedMove, selectedItem, setSelectedItem, typeChecks, typeNames, selectedWeather, selectedTerrain, ranks }) {
-
+export default function EndureKOChart({
+  selectedPokemon,
+  dexData,
+  usageData,
+  selectedMove,
+  selectedItem,
+  setSelectedItem,
+  typeChecks,
+  typeNames,
+  selectedWeather,
+  selectedTerrain,
+  ranks,
+}) {
   const [typeChart, setTypeChart] = useState(null);
   const [scatterItems, setScatterItems] = useState([]);
-  
+  const [searchQuery, setSearchQuery] = useState("");
+
   // Range state for sliders
   const [verticalRange, setVerticalRange] = useState([0, 5.5]);
   const [horizontalRange, setHorizontalRange] = useState([0, 5.5]);
   const [dragging, setDragging] = useState({ slider: null, index: null }); // {slider: 'vertical'|'horizontal', index: 0|1}
-  
+
   const verticalSliderRef = useRef();
   const horizontalSliderRef = useRef();
 
@@ -38,10 +50,19 @@ export default function EndureKOChart({ selectedPokemon, dexData, usageData, sel
       hitCountFn: HitCountSmogon,
       selectedWeather,
       selectedTerrain,
-      ranks
+      ranks,
     });
     setScatterItems(data);
-  }, [selectedPokemon, dexData, usageData, typeChart, selectedMove, selectedWeather, selectedTerrain, ranks]);
+  }, [
+    selectedPokemon,
+    dexData,
+    usageData,
+    typeChart,
+    selectedMove,
+    selectedWeather,
+    selectedTerrain,
+    ranks,
+  ]);
 
   if (!selectedPokemon)
     return <div>Select a Pokémon to view the scatter plot.</div>;
@@ -68,7 +89,7 @@ export default function EndureKOChart({ selectedPokemon, dexData, usageData, sel
               width: "150px", // about half of Heatmap width, adjust as needed
               height: 30,
               display: "flex",
-              alignItems: "center"
+              alignItems: "center",
             }}
           >
             <Slider
@@ -80,13 +101,15 @@ export default function EndureKOChart({ selectedPokemon, dexData, usageData, sel
               step={0.1}
               value={horizontalRange}
               onChange={(val) => setHorizontalRange(val)}
-              onBeforeChange={(_, idx) => setDragging({ slider: "horizontal", index: idx })}
+              onBeforeChange={(_, idx) =>
+                setDragging({ slider: "horizontal", index: idx })
+              }
               onAfterChange={() => setDragging({ slider: null, index: null })}
               allowCross={false}
               trackStyle={[{ backgroundColor: "blue", height: 8 }]}
               handleStyle={[
                 { borderColor: "blue", backgroundColor: "white" },
-                { borderColor: "blue", backgroundColor: "white" }
+                { borderColor: "blue", backgroundColor: "white" },
               ]}
               railStyle={{ backgroundColor: "#e0e0e0", height: 8 }}
               marks={{ 0: "0", 5.5: "5+" }}
@@ -94,7 +117,7 @@ export default function EndureKOChart({ selectedPokemon, dexData, usageData, sel
             {horizontalRange.map((val, idx) => {
               // const show = dragging.slider === "horizontal" && dragging.index === idx || dragging.slider === null;
               // if (!show) return null;
-              const percent = (val / 5.5);
+              const percent = val / 5.5;
               return (
                 <div
                   key={idx}
@@ -108,7 +131,7 @@ export default function EndureKOChart({ selectedPokemon, dexData, usageData, sel
                     padding: "2px 6px",
                     fontSize: 12,
                     pointerEvents: "none",
-                    transform: "translateX(-50%)"
+                    transform: "translateX(-50%)",
                   }}
                 >
                   {val > 5 ? "5+" : val.toFixed(1)}
@@ -125,7 +148,7 @@ export default function EndureKOChart({ selectedPokemon, dexData, usageData, sel
             marginLeft: 16,
             marginBottom: 80,
             display: "flex",
-            alignItems: "center"
+            alignItems: "center",
           }}
         >
           <Slider
@@ -138,13 +161,15 @@ export default function EndureKOChart({ selectedPokemon, dexData, usageData, sel
             step={0.1}
             value={verticalRange}
             onChange={(val) => setVerticalRange(val)}
-            onBeforeChange={(_, idx) => setDragging({ slider: "vertical", index: idx })}
+            onBeforeChange={(_, idx) =>
+              setDragging({ slider: "vertical", index: idx })
+            }
             onAfterChange={() => setDragging({ slider: null, index: null })}
             allowCross={false}
             trackStyle={[{ backgroundColor: "blue", width: 8 }]}
             handleStyle={[
               { borderColor: "blue", backgroundColor: "white" },
-              { borderColor: "blue", backgroundColor: "white" }
+              { borderColor: "blue", backgroundColor: "white" },
             ]}
             railStyle={{ backgroundColor: "#e0e0e0", width: 8 }}
             marks={{ 0: "0", 5.5: "5+" }}
@@ -154,7 +179,7 @@ export default function EndureKOChart({ selectedPokemon, dexData, usageData, sel
             // const show = dragging.slider === "vertical" && dragging.index === idx || dragging.slider === null;
             // if (!show) return null;
             // Calculate position: 0 is bottom, 5.5 is top
-            const percent = 1 - (val / 5.5);
+            const percent = 1 - val / 5.5;
             return (
               <div
                 key={idx}
@@ -168,7 +193,7 @@ export default function EndureKOChart({ selectedPokemon, dexData, usageData, sel
                   padding: "2px 6px",
                   fontSize: 12,
                   pointerEvents: "none",
-                  transform: "translateY(-50%)"
+                  transform: "translateY(-50%)",
                 }}
               >
                 {val > 5 ? "5+" : val.toFixed(1)}
@@ -186,7 +211,36 @@ export default function EndureKOChart({ selectedPokemon, dexData, usageData, sel
         showMove={true}
         typeChecks={typeChecks}
         typeNames={typeNames}
+        searchQuery={searchQuery}
       />
+      <div className="search-bar">
+        <input
+          type="text"
+          placeholder="Search Pokémon..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          style={{ marginBottom: 16 }}
+        />
+        {searchQuery && (
+          <ul className="search-suggestions">
+            {scatterItems
+              .filter((d) =>
+                d.name.toLowerCase().includes(searchQuery.toLowerCase())
+              )
+              .map((d) => (
+                <li
+                  key={d.name}
+                  onClick={() => {
+                    setSearchQuery(d.name);
+                    setSelectedItem(d.name);
+                  }} // triggers exact-match effect
+                >
+                  {d.name}
+                </li>
+              ))}
+          </ul>
+        )}
+      </div>
     </div>
   );
 }
