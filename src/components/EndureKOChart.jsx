@@ -102,7 +102,7 @@ export default function EndureKOChart({
           searchQuery={searchQuery}
         />
         {/* Search bar above scatter plot */}
-        <div className="search-bar">
+        <div className="search-bar" style={{ marginTop: 20}}>
           <input
             type="text"
             placeholder="Search Pokémon..."
