@@ -95,27 +95,25 @@ export default function EndureKOChart({
       })
       .on("drag", (event) => {
         if (!dragStartRef.current) return;
-        const minimapWidth = 135;
-        const minimapHeight = 135;
-        const dataWidth = 5.5;
-        const dataHeight = 5.5;
+        const minimapSize = 135;
+        const dataMax = 5.5;
         const xRangeSize = horizontalRange[1] - horizontalRange[0];
         const yRangeSize = verticalRange[1] - verticalRange[0];
 
         const dx =
-          (event.x - dragStartRef.current.mouseX) * (dataWidth / minimapWidth);
+          (event.x - dragStartRef.current.mouseX) * (dataMax / minimapSize);
         const dy =
           -(event.y - dragStartRef.current.mouseY) *
-          (dataHeight / minimapHeight);
+          (dataMax / minimapSize);
 
         let newXMin = Math.max(
           0,
-          Math.min(dragStartRef.current.boxX + dx, dataWidth - xRangeSize)
+          Math.min(dragStartRef.current.boxX + dx, dataMax - xRangeSize)
         );
         let newXMax = newXMin + xRangeSize;
         let newYMin = Math.max(
           0,
-          Math.min(dragStartRef.current.boxY + dy, dataHeight - yRangeSize)
+          Math.min(dragStartRef.current.boxY + dy, dataMax - yRangeSize)
         );
         let newYMax = newYMin + yRangeSize;
 
