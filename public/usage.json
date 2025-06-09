@@ -7612,13 +7612,12 @@
     ],
     "items": "Choice Band",
     "moves": {
-      "Giga Impact": 54.588,
-      "Earthquake": 39.059,
-      "Knock Off": 31.882,
-      "Yawn": 22.353,
-      "Slack Off": 20.706,
-      "Sucker Punch": 20.235,
-      "Drain Punch": 19.294
+      "Giga Impact": 62.817,
+      "Earthquake": 59.184,
+      "Knock Off": 42.566,
+      "Drain Punch": 22.202,
+      "Double-Edge": 15.564,
+      "Play Rough": 15.295
     },
     "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
   },
@@ -7628,23 +7627,23 @@
     "safe_name": "perrserker",
     "usage": 0.0,
     "ability": [
-      "Tough Claws",
       "Steely Spirit",
+      "Tough Claws",
       "Battle Armor "
     ],
     "items": "Iron Ball",
     "moves": {
-      "Iron Head": 61.479,
-      "Fake Out": 50.973,
-      "U-turn": 35.019,
-      "Stealth Rock": 34.241,
-      "Knock Off": 33.074,
-      "Play Rough": 33.074,
-      "Gyro Ball": 31.128,
-      "Close Combat": 29.183,
-      "Swords Dance": 24.903
+      "Gyro Ball": 54.234,
+      "Iron Head": 47.387,
+      "Knock Off": 43.333,
+      "U-turn": 34.505,
+      "Play Rough": 30.991,
+      "Fake Out": 27.748,
+      "Swords Dance": 27.477,
+      "Close Combat": 24.685,
+      "Stealth Rock": 22.793
     },
-    "spread": "Nature: Adamant, EVs: 252/252/0/0/4/0"
+    "spread": "Nature: Adamant, EVs: 248/252/0/0/8/0"
   },
   {
     "rank": 364,
@@ -7655,19 +7654,18 @@
       "Fluffy",
       "Sand Rush"
     ],
-    "items": "Leftovers",
+    "items": "Rocky Helmet",
     "moves": {
-      "Body Press": 50.952,
-      "Poltergeist": 43.81,
-      "Will-O-Wisp": 43.333,
-      "Play Rough": 34.762,
-      "Pain Split": 32.381,
-      "Destiny Bond": 31.429,
-      "Night Shade": 28.095,
-      "Shadow Sneak": 27.143,
-      "Stomping Tantrum": 18.095
+      "Poltergeist": 53.297,
+      "Will-O-Wisp": 52.972,
+      "Body Press": 49.925,
+      "Play Rough": 37.038,
+      "Roar": 34.915,
+      "Shadow Sneak": 33.766,
+      "Pain Split": 28.147,
+      "Tera Blast": 17.882
     },
-    "spread": "Nature: Bold, EVs: 252/0/252/0/4/0"
+    "spread": "Nature: Impish, EVs: 252/0/252/0/4/0"
   },
   {
     "rank": 365,
@@ -7675,20 +7673,18 @@
     "safe_name": "medicham",
     "usage": 0.0,
     "ability": [
-      "Pure Power",
-      "Telepathy "
+      "Pure Power"
     ],
     "items": "Life Orb",
     "moves": {
-      "Close Combat": 50.838,
-      "Bullet Punch": 48.045,
-      "Ice Punch": 39.385,
-      "Psycho Cut": 39.385,
-      "Zen Headbutt": 39.106,
-      "Fake Out": 31.285,
-      "High Jump Kick": 20.95,
-      "Drain Punch": 20.95,
-      "Nothing": 17.877
+      "Zen Headbutt": 52.166,
+      "Ice Punch": 47.051,
+      "Close Combat": 39.862,
+      "Bullet Punch": 39.447,
+      "High Jump Kick": 32.258,
+      "Fake Out": 29.631,
+      "Psycho Cut": 24.47,
+      "Drain Punch": 18.479
     },
     "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
   },
@@ -7698,19 +7694,21 @@
     "safe_name": "sandslash",
     "usage": 0.0,
     "ability": [
-      "Sand Rush",
-      "Sand Veil"
+      "Sand Rush"
     ],
-    "items": "Heavy-Duty Boots",
+    "items": "Focus Sash",
     "moves": {
-      "Earthquake": 91.44,
-      "Rapid Spin": 71.595,
-      "Swords Dance": 67.315,
-      "Tera Blast": 56.42,
-      "Stealth Rock": 17.51,
-      "Knock Off": 15.175
+      "Earthquake": 87.375,
+      "Rapid Spin": 42.513,
+      "Knock Off": 34.469,
+      "Swords Dance": 34.41,
+      "Sandstorm": 21.844,
+      "Stealth Rock": 19.789,
+      "Rock Slide": 18.203,
+      "Smack Down": 16.265,
+      "Gunk Shot": 15.678
     },
-    "spread": "Nature: Adamant, EVs: 0/252/0/0/76/136"
+    "spread": "Nature: Adamant, EVs: 0/252/0/0/4/252"
   },
   {
     "rank": 367,
@@ -7724,16 +7722,17 @@
     ],
     "items": "Eviolite",
     "moves": {
-      "Dual Wingbeat": 90.17,
-      "Swords Dance": 67.675,
-      "Bug Bite": 47.259,
-      "Trailblaze": 30.057,
-      "U-turn": 27.788,
-      "Defog": 25.331,
-      "Quick Attack": 25.142,
-      "Tailwind": 16.446
+      "Swords Dance": 75.573,
+      "Dual Wingbeat": 73.029,
+      "Close Combat": 37.466,
+      "Trailblaze": 27.658,
+      "Bug Bite": 27.36,
+      "Quick Attack": 27.154,
+      "Defog": 26.535,
+      "U-turn": 21.654,
+      "Aerial Ace": 21.654
     },
-    "spread": "Nature: Jolly, EVs: 4/252/0/0/0/252"
+    "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
   },
   {
     "rank": 368,
@@ -7744,17 +7743,16 @@
       "Contrary",
       "Leaf Guard "
     ],
-    "items": "Heavy-Duty Boots",
+    "items": "Leftovers",
     "moves": {
-      "Superpower": 94.061,
-      "Leaf Storm": 91.022,
-      "Synthesis": 48.066,
-      "Defog": 34.945,
-      "Leech Life": 27.901,
-      "Knock Off": 23.619,
-      "Poison Jab": 15.055
+      "Superpower": 91.582,
+      "Leaf Storm": 70.315,
+      "Knock Off": 40.109,
+      "Synthesis": 38.911,
+      "Leech Life": 34.376,
+      "Defog": 32.108
     },
-    "spread": "Nature: Sassy, EVs: 248/0/8/0/252/0"
+    "spread": "Nature: Adamant, EVs: 248/252/0/0/8/0"
   },
   {
     "rank": 369,
@@ -7763,24 +7761,22 @@
     "usage": 0.0,
     "ability": [
       "Moxie",
-      "Rivalry",
-      "Unnerve"
+      "Unnerve",
+      "Rivalry"
     ],
     "items": "Leftovers",
     "moves": {
-      "Hyper Voice": 50.877,
-      "Flamethrower": 49.123,
-      "Fire Blast": 30.994,
-      "Overheat": 28.655,
-      "Body Slam": 24.561,
-      "Will-O-Wisp": 23.977,
-      "Tera Blast": 23.392,
-      "Work Up": 23.392,
-      "Dark Pulse": 21.637,
-      "Taunt": 16.959,
-      "Trailblaze": 16.374
+      "Overheat": 48.469,
+      "Hyper Voice": 44.74,
+      "Work Up": 41.278,
+      "Tera Blast": 40.479,
+      "Trailblaze": 38.415,
+      "Dark Pulse": 32.29,
+      "Fire Blast": 31.292,
+      "Flamethrower": 27.83,
+      "Will-O-Wisp": 21.838
     },
-    "spread": "Nature: Naive, EVs: 0/4/0/252/0/252"
+    "spread": "Nature: Timid, EVs: 0/0/0/252/4/252"
   },
   {
     "rank": 370,
@@ -7788,22 +7784,21 @@
     "safe_name": "beartic",
     "usage": 0.0,
     "ability": [
-      "Swift Swim",
       "Slush Rush",
-      "Snow Cloak"
+      "Swift Swim"
     ],
-    "items": "Life Orb",
+    "items": "Loaded Dice",
     "moves": {
-      "Icicle Crash": 68.78,
-      "Swords Dance": 56.098,
-      "Earthquake": 47.317,
-      "Aqua Jet": 34.634,
-      "Close Combat": 28.293,
-      "Play Rough": 25.366,
-      "Liquidation": 21.463,
-      "Superpower": 17.073
+      "Earthquake": 74.087,
+      "Swords Dance": 54.203,
+      "Close Combat": 50.729,
+      "Icicle Crash": 50.482,
+      "Icicle Spear": 39.834,
+      "Aqua Jet": 21.206,
+      "Tera Blast": 19.413,
+      "Liquidation": 17.485
     },
-    "spread": "Nature: Adamant, EVs: 0/252/0/0/4/252"
+    "spread": "Nature: Jolly, EVs: 4/252/0/0/0/252"
   },
   {
     "rank": 371,
@@ -7816,13 +7811,14 @@
     ],
     "items": "Choice Scarf",
     "moves": {
-      "Eruption": 87.562,
-      "Flamethrower": 51.478,
-      "Focus Blast": 38.424,
-      "Scorching Sands": 33.744,
-      "Extrasensory": 25.862,
-      "Shadow Ball": 24.877,
-      "Tera Blast": 16.626
+      "Eruption": 83.511,
+      "Scorching Sands": 50.083,
+      "Shadow Ball": 36.22,
+      "Focus Blast": 35.699,
+      "Flamethrower": 35.344,
+      "Extrasensory": 19.659,
+      "Solar Beam": 18.24,
+      "Fire Blast": 17.98
     },
     "spread": "Nature: Timid, EVs: 0/0/0/252/4/252"
   },
@@ -7836,16 +7832,14 @@
     ],
     "items": "Heavy-Duty Boots",
     "moves": {
-      "U-turn": 71.136,
-      "Knock Off": 49.211,
-      "Hurricane": 46.53,
-      "Bleakwind Storm": 38.486,
-      "Taunt": 31.861,
-      "Heat Wave": 24.29,
-      "Focus Blast": 15.615,
-      "Icy Wind": 15.3
+      "U-turn": 83.261,
+      "Bleakwind Storm": 70.912,
+      "Knock Off": 62.696,
+      "Heat Wave": 62.373,
+      "Taunt": 26.427,
+      "Hurricane": 22.814
     },
-    "spread": "Nature: Timid, EVs: 0/0/0/252/4/252"
+    "spread": "Nature: Timid, EVs: 248/0/20/0/0/240"
   },
   {
     "rank": 373,
@@ -7857,16 +7851,16 @@
       "Leaf Guard ",
       "Sweet Veil "
     ],
-    "items": "Heavy-Duty Boots",
+    "items": "Assault Vest",
     "moves": {
-      "Rapid Spin": 73.368,
-      "Power Whip": 55.842,
-      "Knock Off": 48.11,
-      "High Jump Kick": 44.33,
-      "Triple Axel": 39.003,
-      "U-turn": 35.739,
-      "Play Rough": 21.993,
-      "Trop Kick": 17.01
+      "Rapid Spin": 78.801,
+      "Triple Axel": 53.083,
+      "Knock Off": 47.554,
+      "Power Whip": 45.571,
+      "High Jump Kick": 43.673,
+      "Trop Kick": 25.586,
+      "U-turn": 22.077,
+      "Petal Blizzard": 15.539
     },
     "spread": "Nature: Adamant, EVs: 252/252/0/0/4/0"
   },
@@ -7878,19 +7872,21 @@
     "ability": [
       "Guts",
       "Intimidate",
-      "Rivalry"
+      "Rivalry "
     ],
     "items": "Flame Orb",
     "moves": {
-      "Supercell Slam": 58.815,
-      "Play Rough": 41.322,
-      "Facade": 37.879,
-      "Crunch": 32.645,
-      "Ice Fang": 32.507,
-      "Volt Switch": 29.89,
-      "Psychic Fangs": 16.253
+      "Supercell Slam": 48.181,
+      "Crunch": 44.191,
+      "Facade": 39.448,
+      "Ice Fang": 36.713,
+      "Trailblaze": 28.407,
+      "Wild Charge": 28.407,
+      "Volt Switch": 27.629,
+      "Play Rough": 21.982,
+      "Agility": 18.595
     },
-    "spread": "Nature: Jolly, EVs: 4/252/0/0/0/252"
+    "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
   },
   {
     "rank": 375,
@@ -7900,18 +7896,18 @@
     "ability": [
       "Levitate"
     ],
-    "items": "Air Balloon",
+    "items": "Choice Scarf",
     "moves": {
-      "Air Slash": 72.571,
-      "Thunderbolt": 60.0,
-      "Will-O-Wisp": 41.714,
-      "Volt Switch": 38.857,
-      "Nasty Plot": 28.571,
-      "Pain Split": 28.0,
-      "Dark Pulse": 26.857,
-      "Sleep Talk": 25.143,
-      "Rest": 25.143,
-      "Foul Play": 16.571
+      "Air Slash": 77.381,
+      "Volt Switch": 44.762,
+      "Nasty Plot": 29.048,
+      "Thunderbolt": 25.952,
+      "Discharge": 23.333,
+      "Will-O-Wisp": 22.619,
+      "Hex": 19.048,
+      "Trick": 19.048,
+      "Shadow Ball": 18.333,
+      "Light Screen": 16.19
     },
     "spread": "Nature: Timid, EVs: 0/0/0/252/4/252"
   },
@@ -7927,14 +7923,13 @@
     ],
     "items": "Assault Vest",
     "moves": {
-      "Draco Meteor": 49.883,
-      "Sludge Bomb": 37.179,
-      "Ice Beam": 34.848,
-      "Flamethrower": 31.469,
-      "Thunderbolt": 28.671,
-      "Dragon Pulse": 27.389,
-      "Dragon Tail": 17.133,
-      "Scald": 16.55
+      "Draco Meteor": 40.396,
+      "Flamethrower": 30.479,
+      "Sludge Bomb": 26.722,
+      "Dragon Pulse": 26.621,
+      "Ice Beam": 24.765,
+      "Thunderbolt": 23.815,
+      "Fire Blast": 16.1
     },
     "spread": "Nature: Modest, EVs: 248/0/0/252/8/0"
   },
@@ -7945,17 +7940,22 @@
     "usage": 0.0,
     "ability": [
       "Storm Drain",
-      "Swift Swim ",
-      "Water Veil "
+      "Swift Swim"
     ],
-    "items": "Leftovers",
+    "items": "Choice Specs",
     "moves": {
-      "Substitute": 95.401,
-      "Attract": 84.139,
-      "Confuse Ray": 83.869,
-      "Whirlpool": 83.767
+      "Ice Beam": 57.21,
+      "Flip Turn": 49.645,
+      "Surf": 43.026,
+      "Alluring Voice": 42.08,
+      "Hydro Pump": 23.404,
+      "Confuse Ray": 19.858,
+      "Chilling Water": 18.44,
+      "Attract": 18.44,
+      "Tailwind": 17.258,
+      "Agility": 15.13
     },
-    "spread": "Nature: Modest, EVs: 92/0/152/132/92/40"
+    "spread": "Nature: Modest, EVs: 0/0/0/252/4/252"
   },
   {
     "rank": 378,
@@ -7964,16 +7964,17 @@
     "usage": 0.0,
     "ability": [
       "Storm Drain",
-      "Commander"
+      "Commander "
     ],
     "items": "Heavy-Duty Boots",
     "moves": {
-      "Rapid Spin": 82.024,
-      "Draco Meteor": 78.01,
-      "Nasty Plot": 64.398,
-      "Surf": 47.993,
-      "Hydro Pump": 40.663,
-      "Dragon Pulse": 20.593
+      "Rapid Spin": 85.923,
+      "Surf": 79.498,
+      "Draco Meteor": 66.618,
+      "Nasty Plot": 48.16,
+      "Dragon Pulse": 32.71,
+      "Tera Blast": 22.605,
+      "Hydro Pump": 16.53
     },
     "spread": "Nature: Timid, EVs: 0/0/0/252/4/252"
   },
@@ -7989,17 +7990,18 @@
     ],
     "items": "Power Herb",
     "moves": {
-      "Close Combat": 66.6,
-      "Brave Bird": 47.316,
-      "Acrobatics": 32.207,
-      "Sky Attack": 30.417,
-      "U-turn": 30.02,
-      "Agility": 26.64,
-      "Defog": 20.676,
-      "Rock Slide": 20.676,
-      "Body Slam": 18.29
+      "Close Combat": 64.071,
+      "Acrobatics": 42.888,
+      "Agility": 41.263,
+      "Brave Bird": 40.926,
+      "Sky Attack": 40.221,
+      "Defog": 22.716,
+      "U-turn": 21.827,
+      "Roost": 20.877,
+      "Iron Head": 18.271,
+      "Body Slam": 15.512
     },
-    "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
+    "spread": "Nature: Adamant, EVs: 0/252/0/0/4/252"
   },
   {
     "rank": 380,
@@ -8012,16 +8014,19 @@
     ],
     "items": "Focus Sash",
     "moves": {
-      "Sticky Web": 69.011,
-      "Quiver Dance": 49.67,
-      "Hurricane": 40.659,
-      "Bug Buzz": 38.462,
-      "Air Slash": 30.549,
-      "U-turn": 27.473,
-      "Hydro Pump": 19.121,
-      "Chilling Water": 18.242
+      "Sticky Web": 83.008,
+      "Ice Beam": 54.37,
+      "Air Slash": 47.815,
+      "Bug Buzz": 40.87,
+      "Quiver Dance": 29.77,
+      "Energy Ball": 21.206,
+      "Surf": 18.845,
+      "Hurricane": 16.992,
+      "Hydro Pump": 16.855,
+      "U-turn": 15.607,
+      "Stun Spore": 15.412
     },
-    "spread": "Nature: Modest, EVs: 0/0/0/252/4/252"
+    "spread": "Nature: Relaxed, EVs: 252/0/252/0/4/0"
   },
   {
     "rank": 381,
@@ -8032,14 +8037,15 @@
       "Defiant",
       "Battle Armor"
     ],
-    "items": "Life Orb",
+    "items": "Leftovers",
     "moves": {
-      "Close Combat": 80.569,
-      "No Retreat": 80.095,
-      "Iron Head": 40.758,
-      "First Impression": 39.336,
-      "Knock Off": 36.493,
-      "Megahorn": 15.64
+      "No Retreat": 88.583,
+      "Close Combat": 70.04,
+      "Knock Off": 39.595,
+      "Iron Head": 29.717,
+      "First Impression": 19.676,
+      "High Horsepower": 18.381,
+      "Megahorn": 17.571
     },
     "spread": "Nature: Adamant, EVs: 252/252/0/0/4/0"
   },
@@ -8050,20 +8056,20 @@
     "usage": 0.0,
     "ability": [
       "Shed Skin",
-      "Sand Spit",
-      "Sand Veil "
+      "Sand Spit"
     ],
-    "items": "Rocky Helmet",
+    "items": "Leftovers",
     "moves": {
-      "Glare": 76.374,
-      "Earthquake": 73.81,
-      "Stealth Rock": 47.619,
-      "Rest": 47.436,
-      "Coil": 26.19,
-      "Stone Edge": 25.824,
-      "Iron Head": 22.527
+      "Earthquake": 74.159,
+      "Glare": 61.006,
+      "Stealth Rock": 45.377,
+      "Coil": 42.282,
+      "Rest": 32.07,
+      "Scale Shot": 20.426,
+      "Rock Blast": 16.634,
+      "Body Press": 16.596
     },
-    "spread": "Nature: Impish, EVs: 0/252/252/0/4/0"
+    "spread": "Nature: Impish, EVs: 252/4/252/0/0/0"
   },
   {
     "rank": 383,
@@ -8077,18 +8083,19 @@
     ],
     "items": "Leftovers",
     "moves": {
-      "Alluring Voice": 54.795,
-      "Thunder Wave": 39.041,
-      "Wish": 29.452,
-      "Light Screen": 27.397,
-      "Reflect": 26.712,
-      "Calm Mind": 17.808,
-      "Draining Kiss": 16.438,
-      "Stealth Rock": 15.753,
-      "Body Slam": 15.753,
-      "Hyper Voice": 15.068
+      "Wish": 44.509,
+      "Alluring Voice": 44.046,
+      "Stealth Rock": 39.133,
+      "Ice Beam": 35.145,
+      "Dazzling Gleam": 25.954,
+      "Fire Blast": 21.561,
+      "Protect": 18.613,
+      "Flamethrower": 16.994,
+      "Draining Kiss": 16.821,
+      "Thunderbolt": 15.838,
+      "Thunder Wave": 15.26
     },
-    "spread": "Nature: Hardy, EVs: 164/0/140/0/180/24"
+    "spread": "Nature: Calm, EVs: 252/0/0/4/252/0"
   },
   {
     "rank": 384,
@@ -8097,19 +8104,20 @@
     "usage": 0.0,
     "ability": [
       "Intimidate",
-      "Cud Chew",
+      "Cud Chew ",
       "Anger Point "
     ],
-    "items": "Assault Vest",
+    "items": "Choice Band",
     "moves": {
-      "Close Combat": 74.905,
-      "Raging Bull": 54.373,
-      "Aqua Jet": 47.148,
-      "Earthquake": 33.46,
-      "Iron Head": 31.939,
-      "Zen Headbutt": 30.038,
-      "Trailblaze": 20.532,
-      "Wave Crash": 19.772
+      "Close Combat": 63.312,
+      "Raging Bull": 56.715,
+      "Aqua Jet": 49.411,
+      "Earthquake": 39.852,
+      "Wave Crash": 33.457,
+      "Wild Charge": 31.202,
+      "Bulk Up": 26.456,
+      "Iron Head": 18.58,
+      "Body Press": 15.214
     },
     "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
   },
@@ -8120,45 +8128,19 @@
     "usage": 0.0,
     "ability": [
       "Reckless",
-      "Blaze"
+      "Blaze "
     ],
     "items": "Choice Band",
     "moves": {
-      "Flare Blitz": 77.701,
-      "Drain Punch": 54.253,
-      "Head Smash": 30.345,
-      "Knock Off": 28.276,
-      "Earthquake": 26.782,
-      "Wild Charge": 24.023,
-      "Double-Edge": 19.54,
-      "Brick Break": 17.126
+      "Flare Blitz": 88.048,
+      "Wild Charge": 51.339,
+      "Close Combat": 45.452,
+      "Earthquake": 30.233,
+      "Head Smash": 29.497,
+      "Drain Punch": 27.289,
+      "Sucker Punch": 18.87
     },
-    "spread": "Nature: Naughty, EVs: 252/128/48/0/76/4"
-  },
-  {
-    "rank": 386,
-    "name": "Luvdisc",
-    "safe_name": "luvdisc",
-    "usage": 0.0,
-    "ability": [
-      "Swift Swim",
-      "Hydration"
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Aqua Jet": 65.185,
-      "Endeavor": 61.728,
-      "Flip Turn": 35.062,
-      "Facade": 30.123,
-      "Nothing": 29.63,
-      "Protect": 25.185,
-      "Rain Dance": 24.198,
-      "Wish": 20.494,
-      "Draining Kiss": 17.531,
-      "Agility": 16.79,
-      "Hydro Pump": 15.309
-    },
-    "spread": "Nature: Adamant, EVs: 0/252/0/4/0/252"
+    "spread": "Nature: Adamant, EVs: 248/252/0/0/8/0"
   },
   {
     "rank": 387,
@@ -8166,19 +8148,21 @@
     "safe_name": "raikou",
     "usage": 0.0,
     "ability": [
-      "Pressure",
-      "Inner Focus"
+      "Inner Focus",
+      "Pressure"
     ],
-    "items": "Heavy-Duty Boots",
+    "items": "Leftovers",
     "moves": {
-      "Thunderbolt": 77.64,
-      "Scald": 60.404,
-      "Calm Mind": 43.478,
-      "Aura Sphere": 34.627,
-      "Volt Switch": 27.329,
-      "Thunder Wave": 22.981,
-      "Extrasensory": 18.634,
-      "Substitute": 18.478
+      "Scald": 66.976,
+      "Thunderbolt": 61.955,
+      "Calm Mind": 51.162,
+      "Aura Sphere": 41.208,
+      "Volt Switch": 38.134,
+      "Shadow Ball": 26.483,
+      "Discharge": 21.372,
+      "Substitute": 18.567,
+      "Tera Blast": 17.763,
+      "Extrasensory": 15.44
     },
     "spread": "Nature: Timid, EVs: 0/0/0/252/4/252"
   },
@@ -8188,22 +8172,23 @@
     "safe_name": "klawf",
     "usage": 0.0,
     "ability": [
-      "Anger Shell",
       "Regenerator",
+      "Anger Shell",
       "Shell Armor "
     ],
-    "items": "Focus Sash",
+    "items": "Rocky Helmet",
     "moves": {
-      "Crabhammer": 57.463,
-      "Swords Dance": 52.239,
-      "High Horsepower": 45.522,
-      "Stone Edge": 38.806,
-      "Knock Off": 32.09,
-      "Stealth Rock": 21.642,
-      "Trailblaze": 21.642,
-      "Rock Blast": 21.642
+      "Knock Off": 59.155,
+      "Stealth Rock": 55.671,
+      "Crabhammer": 38.176,
+      "Stone Edge": 37.658,
+      "Brick Break": 32.172,
+      "Tera Blast": 28.984,
+      "Swords Dance": 20.608,
+      "High Horsepower": 20.089,
+      "Trailblaze": 17.791
     },
-    "spread": "Nature: Adamant, EVs: 248/252/0/0/8/0"
+    "spread": "Nature: Impish, EVs: 252/60/140/0/0/56"
   },
   {
     "rank": 389,
@@ -8216,32 +8201,16 @@
     ],
     "items": "Leftovers",
     "moves": {
-      "Giga Drain": 40.741,
-      "Leech Seed": 39.683,
-      "Dragon Tail": 31.746,
-      "Earthquake": 31.217,
-      "Synthesis": 27.513,
-      "Knock Off": 20.106,
-      "Petal Blizzard": 16.402
+      "Leech Seed": 68.221,
+      "Synthesis": 31.953,
+      "Giga Drain": 30.602,
+      "Light Screen": 19.704,
+      "Dragon Tail": 19.006,
+      "Reflect": 18.788,
+      "Earthquake": 17.655,
+      "Energy Ball": 15.955
     },
-    "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
-  },
-  {
-    "rank": 390,
-    "name": "Cosmoem",
-    "safe_name": "cosmoem",
-    "usage": 0.0,
-    "ability": [
-      "Sturdy"
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Nothing": 108.967,
-      "Cosmic Power": 99.185,
-      "Splash": 98.37,
-      "Teleport": 93.478
-    },
-    "spread": "Nature: Quirky, EVs: 32/0/228/0/248/0"
+    "spread": "Nature: Calm, EVs: 252/0/0/4/252/0"
   },
   {
     "rank": 391,
@@ -8249,19 +8218,21 @@
     "safe_name": "swalot",
     "usage": 0.0,
     "ability": [
-      "Sticky Hold",
       "Liquid Ooze",
-      "Gluttony "
+      "Gluttony",
+      "Sticky Hold"
     ],
     "items": "Black Sludge",
     "moves": {
-      "Toxic Spikes": 89.686,
-      "Gunk Shot": 87.444,
-      "Yawn": 84.305,
-      "Knock Off": 69.507,
-      "Toxic": 24.215
+      "Ice Beam": 61.938,
+      "Toxic": 59.922,
+      "Gastro Acid": 50.698,
+      "Knock Off": 36.124,
+      "Thunder Wave": 31.085,
+      "Body Press": 19.845,
+      "Toxic Spikes": 17.597
     },
-    "spread": "Nature: Impish, EVs: 252/0/164/0/92/0"
+    "spread": "Nature: Calm, EVs: 252/0/0/4/252/0"
   },
   {
     "rank": 392,
@@ -8270,20 +8241,20 @@
     "usage": 0.0,
     "ability": [
       "Adaptability",
-      "Poison Point",
-      "Poison Touch"
+      "Poison Point ",
+      "Poison Touch "
     ],
-    "items": "Choice Specs",
+    "items": "Assault Vest",
     "moves": {
-      "Draco Meteor": 67.89,
-      "Sludge Bomb": 43.425,
-      "Sludge Wave": 41.59,
-      "Flip Turn": 28.899,
-      "Dragon Pulse": 28.746,
-      "Scald": 24.159,
-      "Focus Blast": 20.183,
-      "Toxic": 19.419,
-      "Toxic Spikes": 18.196
+      "Draco Meteor": 58.539,
+      "Sludge Bomb": 45.02,
+      "Dragon Pulse": 39.486,
+      "Sludge Wave": 38.209,
+      "Flip Turn": 36.131,
+      "Scald": 29.644,
+      "Thunderbolt": 21.42,
+      "Focus Blast": 19.768,
+      "Toxic Spikes": 17.351
     },
     "spread": "Nature: Modest, EVs: 252/0/0/252/4/0"
   },
@@ -8297,15 +8268,16 @@
     ],
     "items": "Loaded Dice",
     "moves": {
-      "Dragon Dance": 46.474,
-      "Freeze-Dry": 42.659,
-      "Icicle Spear": 38.035,
-      "Draco Meteor": 34.22,
-      "Earth Power": 32.37,
-      "Ice Beam": 25.78,
-      "Scale Shot": 25.549,
-      "Blizzard": 22.659,
-      "Substitute": 19.075
+      "Freeze-Dry": 65.146,
+      "Earth Power": 62.477,
+      "Icicle Spear": 41.127,
+      "Dragon Dance": 40.62,
+      "Draco Meteor": 33.675,
+      "Ice Beam": 32.781,
+      "Scale Shot": 31.248,
+      "Tera Blast": 27.81,
+      "Substitute": 16.335,
+      "Blizzard": 15.884
     },
     "spread": "Nature: Timid, EVs: 0/0/0/252/4/252"
   },
@@ -8316,18 +8288,21 @@
     "usage": 0.0,
     "ability": [
       "Quick Draw",
-      "Regenerator ",
+      "Regenerator",
       "Own Tempo "
     ],
     "items": "Quick Claw",
     "moves": {
-      "Shell Side Arm": 73.626,
-      "Drain Punch": 50.879,
-      "Belly Drum": 45.055,
-      "Zen Headbutt": 32.418,
-      "Psychic": 15.824
+      "Shell Side Arm": 70.051,
+      "Psychic": 34.01,
+      "Flamethrower": 28.101,
+      "Ice Beam": 26.708,
+      "Nasty Plot": 24.951,
+      "Drain Punch": 18.131,
+      "Psyshock": 17.858,
+      "Belly Drum": 15.632
     },
-    "spread": "Nature: Adamant, EVs: 252/252/4/0/0/0"
+    "spread": "Nature: Modest, EVs: 252/0/0/252/4/0"
   },
   {
     "rank": 395,
@@ -8336,21 +8311,19 @@
     "usage": 0.0,
     "ability": [
       "Cheek Pouch",
-      "Gluttony "
+      "Gluttony"
     ],
     "items": "Sitrus Berry",
     "moves": {
-      "Knock Off": 55.28,
-      "Gyro Ball": 55.28,
-      "Body Press": 45.342,
-      "Curse": 43.478,
-      "Belly Drum": 40.373,
-      "Body Slam": 28.571,
-      "Earthquake": 28.571,
-      "Stockpile": 17.391,
-      "Spit Up": 17.391
+      "Body Press": 66.142,
+      "Gyro Ball": 48.962,
+      "Curse": 47.011,
+      "Knock Off": 46.507,
+      "Earthquake": 23.977,
+      "Body Slam": 20.201,
+      "Belly Drum": 19.32
     },
-    "spread": "Nature: Adamant, EVs: 24/192/160/0/132/0"
+    "spread": "Nature: Brave, EVs: 252/4/252/0/0/0"
   },
   {
     "rank": 396,
@@ -8359,18 +8332,21 @@
     "usage": 0.0,
     "ability": [
       "Electromorphosis",
-      "Static ",
+      "Static",
       "Damp "
     ],
     "items": "Leftovers",
     "moves": {
-      "Parabolic Charge": 70.197,
-      "Slack Off": 69.47,
-      "Soak": 49.844,
-      "Volt Switch": 46.21,
-      "Toxic": 30.945,
-      "Thunderbolt": 23.572,
-      "Muddy Water": 23.053
+      "Slack Off": 47.186,
+      "Volt Switch": 44.184,
+      "Parabolic Charge": 41.262,
+      "Toxic": 32.633,
+      "Soak": 30.807,
+      "Tera Blast": 23.73,
+      "Weather Ball": 22.303,
+      "Thunder": 20.112,
+      "Chilling Water": 16.859,
+      "Muddy Water": 16.71
     },
     "spread": "Nature: Bold, EVs: 252/0/252/4/0/0"
   },
@@ -8382,37 +8358,18 @@
     "ability": [
       "Prism Armor"
     ],
-    "items": "Leftovers",
+    "items": "Colbur Berry",
     "moves": {
-      "Photon Geyser": 67.33,
-      "Calm Mind": 30.114,
-      "Dragon Dance": 26.42,
-      "Dark Pulse": 24.716,
-      "Heat Wave": 19.602,
-      "Earthquake": 18.182,
-      "Psycho Cut": 16.477
+      "Photon Geyser": 89.933,
+      "Trick Room": 54.73,
+      "Earth Power": 49.827,
+      "Tera Blast": 47.399,
+      "Heat Wave": 25.848,
+      "Calm Mind": 17.563,
+      "Dragon Dance": 17.408,
+      "Meteor Beam": 15.482
     },
-    "spread": "Nature: Modest, EVs: 252/0/0/252/4/0"
-  },
-  {
-    "rank": 398,
-    "name": "Metang",
-    "safe_name": "metang",
-    "usage": 0.0,
-    "ability": [
-      "Clear Body",
-      "Light Metal "
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Earthquake": 89.231,
-      "Bullet Punch": 70.769,
-      "Stealth Rock": 53.846,
-      "Meteor Beam": 49.231,
-      "Meteor Mash": 41.538,
-      "Zen Headbutt": 21.538
-    },
-    "spread": "Nature: Adamant, EVs: 0/88/204/0/0/216"
+    "spread": "Nature: Quiet, EVs: 252/0/4/252/0/0"
   },
   {
     "rank": 399,
@@ -8420,20 +8377,21 @@
     "safe_name": "sandslash-alola",
     "usage": 0.0,
     "ability": [
-      "Snow Cloak",
       "Slush Rush"
     ],
-    "items": "Focus Sash",
+    "items": "Heavy-Duty Boots",
     "moves": {
-      "Rapid Spin": 62.901,
-      "Earthquake": 62.29,
-      "Counter": 42.595,
-      "Mirror Coat": 42.443,
-      "Iron Head": 33.588,
-      "Swords Dance": 19.084,
-      "Triple Axel": 18.931
+      "Iron Head": 55.41,
+      "Earthquake": 54.942,
+      "Rapid Spin": 46.603,
+      "Swords Dance": 39.288,
+      "Triple Axel": 30.338,
+      "Icicle Crash": 26.366,
+      "Ice Spinner": 23.167,
+      "Knock Off": 22.843,
+      "Ice Shard": 18.494
     },
-    "spread": "Nature: Hardy, EVs: 0/252/0/0/0/252"
+    "spread": "Nature: Adamant, EVs: 0/252/0/0/4/252"
   },
   {
     "rank": 400,
@@ -8442,19 +8400,22 @@
     "usage": 0.0,
     "ability": [
       "Sticky Hold",
-      "Supersweet Syrup"
+      "Supersweet Syrup ",
+      "Gluttony "
     ],
     "items": "Eviolite",
     "moves": {
-      "Recover": 90.116,
-      "Giga Drain": 80.233,
-      "Dragon Pulse": 55.814,
-      "Dragon Tail": 30.233,
-      "Syrup Bomb": 26.744,
-      "Infestation": 20.93,
-      "Pollen Puff": 19.767
+      "Recover": 86.359,
+      "Giga Drain": 65.945,
+      "Dragon Tail": 40.263,
+      "Infestation": 33.866,
+      "Dragon Pulse": 30.386,
+      "Growth": 19.003,
+      "Tera Blast": 17.592,
+      "Draco Meteor": 17.027,
+      "Substitute": 15.992
     },
-    "spread": "Nature: Relaxed, EVs: 252/4/252/0/0/0"
+    "spread": "Nature: Bold, EVs: 252/0/252/4/0/0"
   },
   {
     "rank": 401,
@@ -8466,14 +8427,15 @@
     ],
     "items": "Leftovers",
     "moves": {
-      "Shadow Ball": 72.546,
-      "Dazzling Gleam": 47.48,
-      "Nasty Plot": 38.329,
-      "Substitute": 23.21,
-      "Thunderbolt": 21.883,
-      "Will-O-Wisp": 19.496,
-      "Calm Mind": 17.772,
-      "Mystical Fire": 16.446
+      "Shadow Ball": 71.689,
+      "Dazzling Gleam": 35.381,
+      "Will-O-Wisp": 26.999,
+      "Thunderbolt": 26.52,
+      "Mystical Fire": 25.336,
+      "Nasty Plot": 22.457,
+      "Hex": 16.411,
+      "Destiny Bond": 16.315,
+      "Draining Kiss": 15.803
     },
     "spread": "Nature: Timid, EVs: 0/0/0/252/4/252"
   },
@@ -8483,92 +8445,21 @@
     "safe_name": "banette",
     "usage": 0.0,
     "ability": [
-      "Insomnia",
       "Cursed Body",
+      "Insomnia",
       "Frisk"
     ],
     "items": "Life Orb",
     "moves": {
-      "Knock Off": 43.902,
-      "Sucker Punch": 41.463,
-      "Swords Dance": 36.585,
-      "Shadow Sneak": 33.537,
-      "Poltergeist": 32.927,
-      "Gunk Shot": 31.098,
-      "Foul Play": 22.561,
-      "Destiny Bond": 18.293,
-      "Shadow Claw": 18.293,
-      "Thunderbolt": 17.073
-    },
-    "spread": "Nature: Hardy, EVs: 252/252/0/0/0/0"
-  },
-  {
-    "rank": 403,
-    "name": "Calyrex",
-    "safe_name": "calyrex",
-    "usage": 0.0,
-    "ability": [
-      "Unnerve"
-    ],
-    "items": "Leftovers",
-    "moves": {
-      "Leech Seed": 45.528,
-      "Calm Mind": 44.715,
-      "Giga Drain": 42.276,
-      "Reflect": 29.268,
-      "Light Screen": 29.268,
-      "Psyshock": 22.764,
-      "Trick": 20.325,
-      "Trick Room": 20.325,
-      "Future Sight": 17.886
-    },
-    "spread": "Nature: Calm, EVs: 252/0/4/0/252/0"
-  },
-  {
-    "rank": 404,
-    "name": "Diglett",
-    "safe_name": "diglett",
-    "usage": 0.0,
-    "ability": [
-      "Arena Trap",
-      "Sand Veil",
-      "Sand Force "
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Nothing": 90.291,
-      "Endeavor": 71.845,
-      "Sucker Punch": 61.65,
-      "Protect": 39.32,
-      "Memento": 25.243,
-      "Endure": 16.019,
-      "Stealth Rock": 15.534
-    },
-    "spread": "Nature: Hardy, EVs: 0/0/0/0/0/0"
-  },
-  {
-    "rank": 405,
-    "name": "Trapinch",
-    "safe_name": "trapinch",
-    "usage": 0.0,
-    "ability": [
-      "Arena Trap",
-      "Hyper Cutter"
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Earthquake": 100.0,
-      "First Impression": 62.162,
-      "Nothing": 48.649,
-      "Protect": 24.324,
-      "Stealth Rock": 21.622,
-      "Substitute": 21.622,
-      "Rock Slide": 21.622,
-      "Crunch": 21.622,
-      "Stone Edge": 21.622,
-      "Facade": 16.216,
-      "Quick Attack": 16.216,
-      "Superpower": 16.216
+      "Knock Off": 43.506,
+      "Shadow Sneak": 41.362,
+      "Poltergeist": 39.218,
+      "Destiny Bond": 31.148,
+      "Gunk Shot": 30.013,
+      "Swords Dance": 25.851,
+      "Trick Room": 20.555,
+      "Will-O-Wisp": 18.159,
+      "Sucker Punch": 15.763
     },
     "spread": "Nature: Adamant, EVs: 252/252/0/0/4/0"
   },
@@ -8582,36 +8473,20 @@
       "Big Pecks",
       "Keen Eye "
     ],
-    "items": "Salac Berry",
+    "items": "Choice Scarf",
     "moves": {
-      "Stone Edge": 76.768,
-      "Sucker Punch": 73.485,
-      "Hone Claws": 71.717,
-      "Acrobatics": 69.949,
-      "Brave Bird": 19.192
+      "Stone Edge": 58.389,
+      "Knock Off": 50.485,
+      "Hone Claws": 30.5,
+      "Brave Bird": 30.276,
+      "Sucker Punch": 29.978,
+      "Acrobatics": 26.771,
+      "Stealth Rock": 20.433,
+      "U-turn": 20.06,
+      "Parting Shot": 18.568,
+      "Dual Wingbeat": 15.66
     },
-    "spread": "Nature: Jolly, EVs: 4/252/0/0/0/252"
-  },
-  {
-    "rank": 407,
-    "name": "Yanma",
-    "safe_name": "yanma",
-    "usage": 0.0,
-    "ability": [
-      "Speed Boost",
-      "Compound Eyes"
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Protect": 71.916,
-      "Hypnosis": 64.567,
-      "Air Slash": 48.819,
-      "Tailwind": 44.619,
-      "Detect": 34.383,
-      "Bug Buzz": 33.858,
-      "Giga Drain": 21.785
-    },
-    "spread": "Nature: Timid, EVs: 4/0/0/252/0/252"
+    "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
   },
   {
     "rank": 408,
@@ -8620,21 +8495,19 @@
     "usage": 0.0,
     "ability": [
       "Flash Fire",
-      "Early Bird ",
-      "Unnerve "
+      "Unnerve ",
+      "Early Bird "
     ],
-    "items": "Life Orb",
+    "items": "Focus Sash",
     "moves": {
-      "Dark Pulse": 65.483,
-      "Nasty Plot": 43.195,
-      "Flamethrower": 42.998,
-      "Sucker Punch": 33.531,
-      "Crunch": 28.6,
-      "Thunder Fang": 26.036,
-      "Fire Blast": 23.471,
-      "Flame Charge": 22.091,
-      "Sludge Bomb": 21.499,
-      "Destiny Bond": 21.499
+      "Dark Pulse": 67.192,
+      "Flamethrower": 60.046,
+      "Sludge Bomb": 38.379,
+      "Nasty Plot": 30.388,
+      "Destiny Bond": 25.816,
+      "Sucker Punch": 23.934,
+      "Counter": 18.095,
+      "Fire Blast": 17.826
     },
     "spread": "Nature: Timid, EVs: 0/0/0/252/4/252"
   },
@@ -8649,17 +8522,18 @@
     ],
     "items": "Leftovers",
     "moves": {
-      "Thunderbolt": 58.242,
-      "Dazzling Gleam": 43.956,
-      "Dragon Pulse": 32.601,
-      "Power Gem": 30.769,
-      "Ice Punch": 25.641,
-      "Discharge": 25.092,
-      "Volt Switch": 24.908,
-      "Thunder": 23.81,
-      "Focus Blast": 15.568
+      "Thunderbolt": 64.416,
+      "Dragon Pulse": 45.653,
+      "Volt Switch": 35.261,
+      "Dazzling Gleam": 34.371,
+      "Focus Blast": 31.945,
+      "Agility": 21.917,
+      "Power Gem": 21.472,
+      "Meteor Beam": 21.351,
+      "Discharge": 16.336,
+      "Cotton Guard": 15.042
     },
-    "spread": "Nature: Quiet, EVs: 236/8/4/252/8/0"
+    "spread": "Nature: Modest, EVs: 252/0/0/252/4/0"
   },
   {
     "rank": 410,
@@ -8671,14 +8545,13 @@
     ],
     "items": "Heavy-Duty Boots",
     "moves": {
-      "Rapid Spin": 95.095,
-      "Freeze-Dry": 77.384,
-      "Recover": 45.232,
-      "Flash Cannon": 41.962,
-      "Ancient Power": 29.428,
-      "Chilling Water": 20.708,
-      "Ice Beam": 18.256,
-      "Haze": 17.439
+      "Freeze-Dry": 82.908,
+      "Rapid Spin": 82.297,
+      "Recover": 44.359,
+      "Tera Blast": 33.054,
+      "Flash Cannon": 30.839,
+      "Haze": 23.875,
+      "Blizzard": 15.759
     },
     "spread": "Nature: Timid, EVs: 0/0/0/252/4/252"
   },
@@ -8690,18 +8563,19 @@
     "ability": [
       "Hustle",
       "Ripen",
-      "Gluttony"
+      "Gluttony "
     ],
-    "items": "Focus Sash",
+    "items": "Choice Scarf",
     "moves": {
-      "Grav Apple": 94.783,
-      "Sucker Punch": 66.087,
-      "U-turn": 53.913,
-      "Dragon Dance": 44.348,
-      "Acrobatics": 42.609,
-      "Outrage": 33.043
+      "Grav Apple": 94.562,
+      "Outrage": 62.997,
+      "Dragon Dance": 46.618,
+      "Sucker Punch": 44.43,
+      "U-turn": 43.369,
+      "Tera Blast": 23.077,
+      "Dragon Rush": 21.154
     },
-    "spread": "Nature: Jolly, EVs: 0/252/4/0/0/252"
+    "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
   },
   {
     "rank": 412,
@@ -8710,19 +8584,18 @@
     "usage": 0.0,
     "ability": [
       "Harvest",
-      "Solar Power ",
-      "Chlorophyll "
+      "Chlorophyll ",
+      "Solar Power "
     ],
     "items": "Sitrus Berry",
     "moves": {
-      "Leech Seed": 71.849,
-      "Air Slash": 63.235,
-      "Substitute": 62.395,
-      "Protect": 61.765,
-      "Sunny Day": 19.538,
-      "Giga Drain": 16.597
+      "Leech Seed": 80.453,
+      "Substitute": 80.318,
+      "Protect": 64.863,
+      "Air Slash": 37.098,
+      "Curse": 22.016
     },
-    "spread": "Nature: Calm, EVs: 252/0/4/0/0/252"
+    "spread": "Nature: Careful, EVs: 252/0/0/0/252/0"
   },
   {
     "rank": 413,
@@ -8735,14 +8608,13 @@
     ],
     "items": "Leftovers",
     "moves": {
-      "Horn Leech": 77.288,
-      "Bulk Up": 65.763,
-      "Milk Drink": 55.593,
-      "Earthquake": 42.034,
-      "Rock Slide": 41.356,
-      "Leech Seed": 20.678
+      "Horn Leech": 83.317,
+      "Bulk Up": 69.93,
+      "Milk Drink": 55.345,
+      "Earthquake": 52.348,
+      "Leech Seed": 15.185
     },
-    "spread": "Nature: Careful, EVs: 252/0/0/0/252/0"
+    "spread": "Nature: Careful, EVs: 252/4/0/0/252/0"
   },
   {
     "rank": 414,
@@ -8754,16 +8626,13 @@
     ],
     "items": "Focus Sash",
     "moves": {
-      "Dark Pulse": 52.644,
-      "Flamethrower": 38.832,
-      "Sludge Bomb": 31.728,
-      "Knock Off": 24.073,
-      "Sucker Punch": 21.863,
-      "Focus Blast": 21.152,
-      "Trick": 20.442,
-      "U-turn": 15.785,
-      "Swords Dance": 15.706,
-      "Nasty Plot": 15.627
+      "Dark Pulse": 54.236,
+      "Flamethrower": 53.305,
+      "Sludge Bomb": 32.205,
+      "Knock Off": 26.141,
+      "Sucker Punch": 23.757,
+      "U-turn": 23.711,
+      "Nasty Plot": 22.076
     },
     "spread": "Nature: Timid, EVs: 0/0/0/252/4/252"
   },
@@ -8774,15 +8643,18 @@
     "usage": 0.0,
     "ability": [
       "Technician",
-      "Limber",
+      "Limber ",
       "Unnerve "
     ],
     "items": "Life Orb",
     "moves": {
-      "Fake Out": 73.404,
-      "U-turn": 38.298,
-      "Double-Edge": 29.255,
-      "Knock Off": 21.277
+      "Fake Out": 79.151,
+      "Bite": 33.582,
+      "U-turn": 31.497,
+      "Metal Claw": 27.699,
+      "Knock Off": 21.966,
+      "Trailblaze": 21.668,
+      "Thunder Wave": 18.019
     },
     "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
   },
@@ -8793,18 +8665,17 @@
     "usage": 0.0,
     "ability": [
       "Tangling Hair",
-      "Sand Force",
-      "Sand Veil "
+      "Sand Force"
     ],
     "items": "Focus Sash",
     "moves": {
-      "Earthquake": 88.412,
-      "Iron Head": 82.403,
-      "Sucker Punch": 39.056,
-      "Stealth Rock": 33.906,
-      "Endeavor": 24.464,
-      "Stone Edge": 24.034,
-      "Memento": 21.888
+      "Earthquake": 82.148,
+      "Iron Head": 66.98,
+      "Sucker Punch": 45.638,
+      "Stealth Rock": 42.282,
+      "Swords Dance": 22.685,
+      "Endeavor": 20.0,
+      "Stone Edge": 17.584
     },
     "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
   },
@@ -8816,19 +8687,19 @@
     "ability": [
       "Justified"
     ],
-    "items": "Choice Scarf",
+    "items": "Choice Band",
     "moves": {
-      "Earthquake": 70.325,
-      "Close Combat": 49.187,
-      "Rock Slide": 45.528,
-      "Sacred Sword": 41.463,
-      "Tera Blast": 40.65,
-      "Stone Edge": 39.837,
-      "Swords Dance": 23.171,
-      "Iron Head": 18.699,
-      "Stealth Rock": 17.886
+      "Close Combat": 78.991,
+      "Earthquake": 67.625,
+      "Stone Edge": 63.091,
+      "Swords Dance": 26.373,
+      "Sacred Sword": 21.073,
+      "Stealth Rock": 20.754,
+      "Iron Head": 18.455,
+      "Rock Slide": 17.944,
+      "Quick Attack": 15.709
     },
-    "spread": "Nature: Adamant, EVs: 4/252/0/0/0/252"
+    "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
   },
   {
     "rank": 418,
@@ -8837,18 +8708,17 @@
     "usage": 0.0,
     "ability": [
       "Toxic Boost",
-      "Immunity "
+      "Immunity"
     ],
     "items": "Toxic Orb",
     "moves": {
-      "Facade": 87.963,
-      "Close Combat": 55.556,
-      "Knock Off": 32.407,
-      "Switcheroo": 28.704,
-      "Swords Dance": 28.472,
-      "Quick Attack": 22.917,
-      "Gunk Shot": 18.981,
-      "Shadow Claw": 16.898
+      "Facade": 80.799,
+      "Knock Off": 63.164,
+      "Close Combat": 35.858,
+      "Quick Attack": 32.364,
+      "Ice Punch": 24.707,
+      "Swords Dance": 21.576,
+      "Agility": 16.35
     },
     "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
   },
@@ -8859,20 +8729,18 @@
     "usage": 0.0,
     "ability": [
       "Intimidate",
-      "Quick Feet ",
+      "Quick Feet",
       "Rattled "
     ],
     "items": "Leftovers",
     "moves": {
-      "Play Rough": 86.111,
-      "Earthquake": 72.222,
-      "Thunder Wave": 38.889,
-      "Fire Punch": 26.389,
-      "Encore": 23.611,
-      "Close Combat": 22.222,
-      "Psychic Fangs": 22.222,
-      "Wild Charge": 15.278,
-      "Trailblaze": 15.278
+      "Play Rough": 94.754,
+      "Earthquake": 52.009,
+      "Close Combat": 37.612,
+      "Bulk Up": 28.683,
+      "Psychic Fangs": 25.67,
+      "Thunder Wave": 16.629,
+      "Roar": 15.179
     },
     "spread": "Nature: Adamant, EVs: 248/252/0/0/8/0"
   },
@@ -8888,13 +8756,15 @@
     ],
     "items": "Assault Vest",
     "moves": {
-      "Ice Hammer": 70.0,
-      "Drain Punch": 67.0,
-      "Thunder Punch": 57.0,
-      "Earthquake": 49.5,
-      "Close Combat": 38.0,
-      "Crabhammer": 37.5,
-      "Ice Punch": 20.0
+      "Ice Hammer": 73.523,
+      "Drain Punch": 64.142,
+      "Thunder Punch": 47.464,
+      "Earthquake": 46.56,
+      "Close Combat": 38.638,
+      "Knock Off": 23.28,
+      "Ice Punch": 22.307,
+      "Bulk Up": 20.153,
+      "Crabhammer": 18.277
     },
     "spread": "Nature: Adamant, EVs: 252/252/0/0/4/0"
   },
@@ -8908,12 +8778,13 @@
     ],
     "items": "Heavy-Duty Boots",
     "moves": {
-      "Quiver Dance": 89.749,
-      "Revelation Dance": 87.244,
-      "Roost": 61.731,
-      "Hurricane": 49.886,
-      "Air Slash": 38.724,
-      "Alluring Voice": 26.196
+      "Revelation Dance": 97.049,
+      "Quiver Dance": 93.464,
+      "Air Slash": 54.537,
+      "Roost": 54.442,
+      "Hurricane": 25.825,
+      "Alluring Voice": 23.953,
+      "Defog": 16.085
     },
     "spread": "Nature: Modest, EVs: 0/0/0/252/4/252"
   },
@@ -8923,16 +8794,19 @@
     "safe_name": "hattrem",
     "usage": 0.0,
     "ability": [
-      "Magic Bounce"
+      "Magic Bounce",
+      "Healer "
     ],
     "items": "Eviolite",
     "moves": {
-      "Healing Wish": 96.923,
-      "Trick Room": 90.769,
-      "Mystical Fire": 89.231,
-      "Thunder Wave": 86.923
+      "Healing Wish": 85.861,
+      "Mystical Fire": 64.344,
+      "Trick Room": 60.246,
+      "Nuzzle": 52.869,
+      "Psychic": 46.516,
+      "Light Screen": 16.189
     },
-    "spread": "Nature: Bold, EVs: 4/0/252/0/252/0"
+    "spread": "Nature: Sassy, EVs: 252/0/240/0/16/0"
   },
   {
     "rank": 423,
@@ -8943,19 +8817,19 @@
       "Pressure",
       "Unnerve"
     ],
-    "items": "Custap Berry",
+    "items": "Leftovers",
     "moves": {
-      "Toxic Spikes": 60.0,
-      "Destiny Bond": 41.0,
-      "Endure": 34.0,
-      "Air Slash": 28.0,
-      "Attack Order": 24.0,
-      "Taunt": 23.0,
-      "U-turn": 19.0,
-      "Roost": 19.0,
-      "Toxic": 17.0
+      "Roost": 78.201,
+      "Defend Order": 50.173,
+      "Toxic": 43.829,
+      "Attack Order": 25.606,
+      "Fell Stinger": 24.221,
+      "Spikes": 23.299,
+      "Protect": 21.569,
+      "Acrobatics": 20.992,
+      "U-turn": 15.456
     },
-    "spread": "Nature: Calm, EVs: 248/0/8/0/252/0"
+    "spread": "Nature: Impish, EVs: 252/0/252/0/4/0"
   },
   {
     "rank": 424,
@@ -8963,23 +8837,22 @@
     "safe_name": "electrode",
     "usage": 0.0,
     "ability": [
-      "Static",
       "Aftermath",
+      "Static",
       "Soundproof"
     ],
-    "items": "Choice Scarf",
+    "items": "Focus Sash",
     "moves": {
-      "Nothing": 71.364,
-      "Explosion": 63.182,
-      "Thunder Wave": 32.727,
-      "Volt Switch": 30.0,
-      "Thunder": 23.636,
-      "Taunt": 23.182,
-      "Tera Blast": 21.818,
-      "Rain Dance": 16.818,
-      "Discharge": 15.909
+      "Volt Switch": 68.366,
+      "Explosion": 40.858,
+      "Thunder Wave": 37.54,
+      "Taunt": 31.715,
+      "Thunderbolt": 28.236,
+      "Tera Blast": 24.029,
+      "Foul Play": 23.139,
+      "Nothing": 17.314
     },
-    "spread": "Nature: Hardy, EVs: 0/252/0/0/0/252"
+    "spread": "Nature: Timid, EVs: 0/0/0/252/4/252"
   },
   {
     "rank": 425,
@@ -8991,18 +8864,17 @@
     ],
     "items": "Leftovers",
     "moves": {
-      "Body Press": 56.4,
-      "Iron Head": 52.0,
-      "Iron Defense": 47.6,
-      "Swords Dance": 34.8,
-      "Stealth Rock": 24.4,
-      "Volt Switch": 24.0,
-      "Flash Cannon": 16.0,
-      "Aura Sphere": 15.6,
-      "Close Combat": 15.6,
-      "Sacred Sword": 15.2
+      "Body Press": 56.247,
+      "Stealth Rock": 48.451,
+      "Thunder Wave": 40.63,
+      "Volt Switch": 40.285,
+      "Iron Head": 39.154,
+      "Iron Defense": 31.776,
+      "Flash Cannon": 17.905,
+      "Sacred Sword": 15.74,
+      "Taunt": 15.273
     },
-    "spread": "Nature: Impish, EVs: 252/4/252/0/0/0"
+    "spread": "Nature: Jolly, EVs: 252/4/0/0/0/252"
   },
   {
     "rank": 427,
@@ -9012,21 +8884,21 @@
     "ability": [
       "Vital Spirit",
       "Hustle",
-      "Insomnia"
+      "Insomnia "
     ],
     "items": "Focus Sash",
     "moves": {
-      "Destiny Bond": 58.019,
-      "Spikes": 46.698,
-      "Nothing": 35.849,
-      "Rapid Spin": 35.377,
-      "Counter": 29.245,
-      "Endeavor": 25.0,
-      "Memento": 22.17,
-      "Fake Out": 16.509,
-      "Agility": 16.038
+      "Rapid Spin": 51.075,
+      "Fake Out": 38.71,
+      "Destiny Bond": 33.871,
+      "Spikes": 26.882,
+      "Memento": 25.0,
+      "Endeavor": 19.892,
+      "Ice Shard": 18.548,
+      "Tailwind": 16.129,
+      "Brave Bird": 15.86
     },
-    "spread": "Nature: Hasty, EVs: 252/0/0/4/0/252"
+    "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
   },
   {
     "rank": 428,
@@ -9040,19 +8912,16 @@
     ],
     "items": "Leftovers",
     "moves": {
-      "Trick Room": 45.055,
-      "Calm Mind": 34.066,
-      "Encore": 25.275,
-      "Hyper Voice": 21.978,
-      "Stored Power": 19.78,
-      "Shadow Ball": 19.78,
-      "Psychic": 18.681,
-      "Knock Off": 18.681,
-      "Focus Blast": 16.484,
-      "Instruct": 16.484,
-      "Thunderbolt": 15.385
+      "Trick Room": 57.538,
+      "Psychic": 46.154,
+      "Hyper Voice": 29.231,
+      "Protect": 18.462,
+      "Nasty Plot": 17.846,
+      "Shadow Ball": 17.846,
+      "Calm Mind": 17.846,
+      "Light Screen": 17.231
     },
-    "spread": "Nature: Quiet, EVs: 252/0/0/252/4/0"
+    "spread": "Nature: Quiet, EVs: 248/0/0/252/8/0"
   },
   {
     "rank": 429,
@@ -9061,23 +8930,21 @@
     "usage": 0.0,
     "ability": [
       "Tinted Lens",
-      "Insomnia",
+      "Insomnia ",
       "Keen Eye "
     ],
     "items": "Heavy-Duty Boots",
     "moves": {
-      "Defog": 56.881,
-      "Hurricane": 52.294,
-      "Hyper Voice": 27.523,
-      "Air Slash": 27.523,
-      "Psychic": 23.853,
-      "Roost": 22.018,
-      "Calm Mind": 19.266,
-      "Hypnosis": 17.431,
-      "Tera Blast": 15.596,
-      "Hyper Beam": 15.596
+      "Air Slash": 50.473,
+      "Roost": 50.379,
+      "Defog": 37.689,
+      "Calm Mind": 34.659,
+      "Hurricane": 30.871,
+      "Shadow Ball": 28.409,
+      "Moonblast": 25.473,
+      "Hyper Voice": 24.242
     },
-    "spread": "Nature: Calm, EVs: 252/0/0/180/76/0"
+    "spread": "Nature: Calm, EVs: 252/0/0/4/252/0"
   },
   {
     "rank": 430,
@@ -9091,15 +8958,14 @@
     ],
     "items": "Black Sludge",
     "moves": {
-      "Coil": 75.13,
-      "Gunk Shot": 46.632,
-      "Earthquake": 37.824,
-      "Poison Jab": 28.497,
-      "Glare": 25.389,
-      "Knock Off": 21.762,
-      "Scale Shot": 21.762,
-      "Crunch": 18.653,
-      "Leech Life": 16.062
+      "Gunk Shot": 60.626,
+      "Coil": 53.748,
+      "Earthquake": 42.837,
+      "Glare": 33.966,
+      "Sucker Punch": 30.503,
+      "Scale Shot": 28.795,
+      "Knock Off": 20.209,
+      "Switcheroo": 20.019
     },
     "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
   },
@@ -9111,20 +8977,18 @@
     "ability": [
       "Guts",
       "Thick Fat",
-      "Sheer Force"
+      "Sheer Force "
     ],
     "items": "Flame Orb",
     "moves": {
-      "Drain Punch": 73.899,
-      "Bullet Punch": 33.648,
-      "Fake Out": 33.648,
-      "Belly Drum": 32.39,
-      "Facade": 25.157,
-      "Knock Off": 21.698,
-      "Ice Punch": 21.698,
-      "Bulk Up": 21.069,
-      "Stone Edge": 16.352,
-      "Rest": 15.723
+      "Bullet Punch": 62.251,
+      "Drain Punch": 58.377,
+      "Knock Off": 55.916,
+      "Close Combat": 31.414,
+      "Fake Out": 30.052,
+      "Belly Drum": 29.372,
+      "Ice Punch": 19.319,
+      "Facade": 17.853
     },
     "spread": "Nature: Adamant, EVs: 252/252/0/0/4/0"
   },
@@ -9134,22 +8998,22 @@
     "safe_name": "dodrio",
     "usage": 0.0,
     "ability": [
-      "Early Bird",
       "Tangled Feet",
-      "Run Away"
+      "Early Bird",
+      "Run Away "
     ],
     "items": "Focus Sash",
     "moves": {
-      "Drill Run": 67.347,
-      "Brave Bird": 48.299,
-      "Swords Dance": 33.333,
-      "Knock Off": 30.612,
-      "Drill Peck": 27.211,
-      "Quick Attack": 25.85,
-      "Endeavor": 23.129,
-      "Nothing": 19.048,
-      "Double-Edge": 18.367,
-      "Thrash": 16.327
+      "Brave Bird": 50.152,
+      "Drill Run": 50.051,
+      "Swords Dance": 38.423,
+      "Knock Off": 34.277,
+      "Thrash": 25.986,
+      "Acrobatics": 21.436,
+      "Quick Attack": 20.02,
+      "Flail": 16.38,
+      "Drill Peck": 16.178,
+      "Low Kick": 15.571
     },
     "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
   },
@@ -9160,19 +9024,21 @@
     "usage": 0.0,
     "ability": [
       "Insomnia",
-      "Forewarn",
-      "Inner Focus "
+      "Inner Focus",
+      "Forewarn"
     ],
-    "items": "Nothing",
+    "items": "Leftovers",
     "moves": {
-      "Hypnosis": 78.75,
-      "Psychic": 73.75,
-      "Hyper Beam": 46.25,
-      "Dazzling Gleam": 35.0,
-      "Focus Blast": 26.25,
-      "Calm Mind": 25.0
+      "Psychic": 48.104,
+      "Toxic": 28.199,
+      "Knock Off": 21.801,
+      "Protect": 18.957,
+      "Calm Mind": 17.536,
+      "Drain Punch": 17.536,
+      "Thunder Wave": 16.825,
+      "Dazzling Gleam": 16.588
     },
-    "spread": "Nature: Hardy, EVs: 52/96/120/112/40/88"
+    "spread": "Nature: Calm, EVs: 252/0/0/4/252/0"
   },
   {
     "rank": 434,
@@ -9186,16 +9052,18 @@
     ],
     "items": "Sitrus Berry",
     "moves": {
-      "Leech Seed": 66.443,
-      "Protect": 62.081,
-      "Horn Leech": 37.584,
-      "Pain Split": 21.98,
-      "Poltergeist": 21.141,
-      "Knock Off": 19.799,
-      "Drain Punch": 16.946,
-      "Toxic": 15.772
+      "Leech Seed": 52.851,
+      "Horn Leech": 47.034,
+      "Poltergeist": 35.287,
+      "Protect": 30.46,
+      "Curse": 24.414,
+      "Substitute": 21.333,
+      "Will-O-Wisp": 20.368,
+      "Drain Punch": 17.701,
+      "Wood Hammer": 16.115,
+      "Shadow Claw": 15.287
     },
-    "spread": "Nature: Calm, EVs: 252/0/4/0/252/0"
+    "spread": "Nature: Careful, EVs: 252/4/0/0/252/0"
   },
   {
     "rank": 435,
@@ -9203,21 +9071,21 @@
     "safe_name": "magneton",
     "usage": 0.0,
     "ability": [
+      "Magnet Pull",
       "Analytic",
-      "Sturdy",
-      "Magnet Pull"
+      "Sturdy"
     ],
     "items": "Eviolite",
     "moves": {
-      "Flash Cannon": 94.118,
-      "Volt Switch": 64.706,
-      "Thunderbolt": 54.118,
-      "Thunder Wave": 36.471,
-      "Tera Blast": 30.588,
-      "Discharge": 23.529,
-      "Tri Attack": 18.824
+      "Flash Cannon": 73.983,
+      "Volt Switch": 64.735,
+      "Thunderbolt": 47.472,
+      "Tera Blast": 38.348,
+      "Thunder Wave": 33.416,
+      "Discharge": 22.072,
+      "Tri Attack": 15.166
     },
-    "spread": "Nature: Quiet, EVs: 252/0/0/64/192/0"
+    "spread": "Nature: Modest, EVs: 248/0/0/252/8/0"
   },
   {
     "rank": 437,
@@ -9227,38 +9095,18 @@
     "ability": [
       "Levitate"
     ],
-    "items": "Leftovers",
+    "items": "Choice Scarf",
     "moves": {
-      "Blizzard": 94.853,
-      "Volt Switch": 69.118,
-      "Discharge": 51.471,
-      "Protect": 29.779,
-      "Will-O-Wisp": 29.412,
-      "Trick": 21.324
+      "Blizzard": 91.842,
+      "Volt Switch": 50.988,
+      "Thunderbolt": 50.096,
+      "Pain Split": 34.799,
+      "Will-O-Wisp": 33.779,
+      "Nasty Plot": 27.279,
+      "Trick": 24.602,
+      "Discharge": 18.483
     },
     "spread": "Nature: Timid, EVs: 0/0/0/252/4/252"
-  },
-  {
-    "rank": 438,
-    "name": "Sentret",
-    "safe_name": "sentret",
-    "usage": 0.0,
-    "ability": [
-      "Frisk",
-      "Run Away",
-      "Keen Eye "
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Endeavor": 100.0,
-      "Quick Attack": 100.0,
-      "Nothing": 47.154,
-      "Protect": 34.146,
-      "Knock Off": 30.081,
-      "Trick": 15.447,
-      "Endure": 15.447
-    },
-    "spread": "Nature: Careful, EVs: 0/0/0/0/0/116"
   },
   {
     "rank": 439,
@@ -9267,19 +9115,19 @@
     "usage": 0.0,
     "ability": [
       "Guts",
-      "Unnerve",
-      "Quick Feet"
+      "Quick Feet",
+      "Unnerve "
     ],
     "items": "Eviolite",
     "moves": {
-      "Facade": 55.439,
-      "Bulk Up": 50.526,
-      "Close Combat": 40.702,
-      "Shadow Claw": 35.088,
-      "Body Slam": 30.877,
-      "Earthquake": 30.877,
-      "Crunch": 23.509,
-      "Fire Punch": 20.351
+      "Facade": 47.416,
+      "Swords Dance": 44.696,
+      "Earthquake": 38.985,
+      "Bulk Up": 25.839,
+      "Body Slam": 23.572,
+      "Play Rough": 20.127,
+      "Close Combat": 18.404,
+      "Shadow Claw": 15.775
     },
     "spread": "Nature: Adamant, EVs: 248/252/0/0/8/0"
   },
@@ -9295,12 +9143,14 @@
     ],
     "items": "Focus Sash",
     "moves": {
-      "Stone Edge": 76.517,
-      "Play Rough": 34.037,
-      "Close Combat": 33.773,
-      "Swords Dance": 21.636,
-      "Sucker Punch": 20.317,
-      "Crunch": 19.789
+      "Stone Edge": 72.295,
+      "Close Combat": 36.733,
+      "Sucker Punch": 32.667,
+      "Swords Dance": 26.396,
+      "Stealth Rock": 23.915,
+      "Play Rough": 21.916,
+      "Knock Off": 16.885,
+      "Counter": 15.438
     },
     "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
   },
@@ -9315,35 +9165,14 @@
     ],
     "items": "Assault Vest",
     "moves": {
-      "Drain Punch": 73.869,
-      "Knock Off": 51.697,
-      "Bulk Up": 45.136,
-      "Poison Jab": 42.76,
-      "Ice Punch": 34.276,
-      "Gunk Shot": 31.674,
-      "Close Combat": 23.077
+      "Drain Punch": 87.757,
+      "Knock Off": 85.546,
+      "Ice Punch": 54.929,
+      "Bulk Up": 48.4,
+      "Gunk Shot": 45.972,
+      "Poison Jab": 30.0
     },
-    "spread": "Nature: Adamant, EVs: 252/252/0/0/4/0"
-  },
-  {
-    "rank": 442,
-    "name": "Torchic",
-    "safe_name": "torchic",
-    "usage": 0.0,
-    "ability": [
-      "Speed Boost",
-      "Blaze "
-    ],
-    "items": "Expert Belt",
-    "moves": {
-      "Agility": 75.714,
-      "Flare Blitz": 65.714,
-      "Fire Blast": 62.857,
-      "Night Slash": 62.857,
-      "Protect": 20.0,
-      "Swords Dance": 18.571
-    },
-    "spread": "Nature: Hardy, EVs: 80/100/96/68/52/112"
+    "spread": "Nature: Adamant, EVs: 240/252/0/0/0/16"
   },
   {
     "rank": 443,
@@ -9352,18 +9181,19 @@
     "usage": 0.0,
     "ability": [
       "Prankster",
-      "Infiltrator "
+      "Infiltrator ",
+      "Chlorophyll "
     ],
     "items": "Focus Sash",
     "moves": {
-      "Leech Seed": 98.351,
-      "Substitute": 95.052,
-      "Protect": 87.01,
-      "Encore": 57.113,
-      "Stun Spore": 17.938,
-      "Endeavor": 17.526
+      "Leech Seed": 96.937,
+      "Substitute": 90.352,
+      "Protect": 67.534,
+      "Encore": 41.501,
+      "Endeavor": 31.394,
+      "Stun Spore": 18.683
     },
-    "spread": "Nature: Hardy, EVs: 0/0/0/0/0/0"
+    "spread": "Nature: Relaxed, EVs: 4/0/252/0/252/0"
   },
   {
     "rank": 444,
@@ -9374,41 +9204,19 @@
       "Chlorophyll",
       "Gluttony"
     ],
-    "items": "Life Orb",
+    "items": "Heat Rock",
     "moves": {
-      "Strength Sap": 37.356,
-      "Weather Ball": 34.483,
-      "Solar Beam": 28.161,
-      "Sunny Day": 26.437,
-      "Poison Jab": 21.839,
-      "Sludge Wave": 21.264,
-      "Clear Smog": 20.115,
-      "Energy Ball": 17.241,
-      "Swords Dance": 16.092,
-      "Sucker Punch": 16.092,
-      "Growth": 16.092,
-      "Sludge Bomb": 16.092,
-      "Ingrain": 15.517
+      "Weather Ball": 70.187,
+      "Growth": 53.436,
+      "Giga Drain": 45.656,
+      "Sunny Day": 44.236,
+      "Solar Beam": 26.178,
+      "Sludge Wave": 20.67,
+      "Power Whip": 17.149,
+      "Sucker Punch": 15.9,
+      "Sludge Bomb": 15.275
     },
-    "spread": "Nature: Sassy, EVs: 252/0/156/0/100/0"
-  },
-  {
-    "rank": 445,
-    "name": "Gastly",
-    "safe_name": "gastly",
-    "usage": 0.0,
-    "ability": [
-      "Levitate"
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Destiny Bond": 81.595,
-      "Nothing": 65.031,
-      "Protect": 46.012,
-      "Toxic": 36.81,
-      "Trick Room": 21.472
-    },
-    "spread": "Nature: Hardy, EVs: 0/0/0/0/0/0"
+    "spread": "Nature: Timid, EVs: 0/0/0/252/4/252"
   },
   {
     "rank": 446,
@@ -9416,21 +9224,23 @@
     "safe_name": "sunflora",
     "usage": 0.0,
     "ability": [
-      "Solar Power",
       "Chlorophyll",
+      "Solar Power",
       "Early Bird "
     ],
-    "items": "Choice Specs",
+    "items": "Life Orb",
     "moves": {
-      "Earth Power": 68.919,
-      "Solar Beam": 53.378,
-      "Weather Ball": 47.297,
-      "Dazzling Gleam": 43.919,
-      "Sunny Day": 31.757,
-      "Sludge Bomb": 25.676,
-      "Giga Drain": 23.649
+      "Solar Beam": 61.679,
+      "Earth Power": 56.934,
+      "Weather Ball": 54.197,
+      "Dazzling Gleam": 40.511,
+      "Giga Drain": 31.752,
+      "Sludge Bomb": 23.175,
+      "Tera Blast": 21.35,
+      "Sunny Day": 19.891,
+      "Leech Seed": 17.336
     },
-    "spread": "Nature: Quiet, EVs: 252/0/4/252/0/0"
+    "spread": "Nature: Modest, EVs: 0/0/0/252/4/252"
   },
   {
     "rank": 447,
@@ -9438,45 +9248,23 @@
     "safe_name": "camerupt",
     "usage": 0.0,
     "ability": [
-      "Anger Point",
       "Solid Rock",
+      "Anger Point",
       "Magma Armor "
     ],
-    "items": "Rocky Helmet",
+    "items": "Leftovers",
     "moves": {
-      "Earth Power": 69.805,
-      "Stealth Rock": 40.909,
-      "Eruption": 32.468,
-      "Flamethrower": 32.468,
-      "Rest": 30.519,
-      "Fire Blast": 29.87,
-      "Earthquake": 20.13,
-      "Ancient Power": 17.208
+      "Earth Power": 64.449,
+      "Lava Plume": 37.734,
+      "Eruption": 35.759,
+      "Stealth Rock": 32.952,
+      "Flamethrower": 25.052,
+      "Earthquake": 20.998,
+      "Protect": 20.374,
+      "Will-O-Wisp": 19.335,
+      "Fire Blast": 18.919
     },
     "spread": "Nature: Modest, EVs: 248/0/0/252/8/0"
-  },
-  {
-    "rank": 448,
-    "name": "Gloom",
-    "safe_name": "gloom",
-    "usage": 0.0,
-    "ability": [
-      "Stench",
-      "Chlorophyll "
-    ],
-    "items": "Loaded Dice",
-    "moves": {
-      "Bullet Seed": 75.281,
-      "Leech Seed": 58.427,
-      "Protect": 44.944,
-      "Toxic": 34.831,
-      "Strength Sap": 26.966,
-      "Nothing": 26.966,
-      "Stun Spore": 23.596,
-      "Substitute": 15.73,
-      "Swords Dance": 15.73
-    },
-    "spread": "Nature: Careful, EVs: 252/4/0/0/252/0"
   },
   {
     "rank": 449,
@@ -9485,20 +9273,20 @@
     "usage": 0.0,
     "ability": [
       "Gooey",
-      "Sand Veil",
-      "Rattled "
+      "Rattled"
     ],
-    "items": "Eject Button",
+    "items": "Choice Band",
     "moves": {
-      "Sucker Punch": 60.331,
-      "Memento": 51.653,
-      "Endure": 42.149,
-      "Triple Dive": 34.711,
-      "Pain Split": 26.86,
-      "Aqua Jet": 22.727,
-      "Liquidation": 22.727,
-      "Mud Shot": 21.074,
-      "Stomping Tantrum": 17.769
+      "Triple Dive": 86.268,
+      "Aqua Jet": 55.194,
+      "Sucker Punch": 52.817,
+      "Stomping Tantrum": 39.701,
+      "Foul Play": 33.891,
+      "Throat Chop": 27.817,
+      "Memento": 20.951,
+      "Tera Blast": 20.863,
+      "Liquidation": 15.845,
+      "Pain Split": 15.317
     },
     "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
   },
@@ -9512,14 +9300,15 @@
       "Iron Fist",
       "Klutz "
     ],
-    "items": "Leftovers",
+    "items": "Choice Band",
     "moves": {
-      "Earthquake": 68.77,
-      "Poltergeist": 57.282,
-      "Dynamic Punch": 56.149,
-      "Drain Punch": 26.375,
-      "Stealth Rock": 20.712,
-      "Ice Punch": 18.932
+      "Earthquake": 81.61,
+      "Poltergeist": 78.701,
+      "Dynamic Punch": 55.041,
+      "Stone Edge": 26.789,
+      "Ice Punch": 25.837,
+      "Stealth Rock": 24.867,
+      "Trick": 21.885
     },
     "spread": "Nature: Adamant, EVs: 252/252/0/0/4/0"
   },
@@ -9530,64 +9319,19 @@
     "usage": 0.0,
     "ability": [
       "Static",
-      "Vital Spirit"
+      "Vital Spirit "
     ],
     "items": "Eviolite",
     "moves": {
-      "Volt Switch": 38.333,
-      "Bulk Up": 25.0,
-      "Knock Off": 23.333,
-      "Thunder Wave": 21.667,
-      "Thunderbolt": 21.667,
-      "Light Screen": 20.0,
-      "Ice Punch": 20.0,
-      "Discharge": 18.333,
-      "Thunder": 18.333,
-      "Body Slam": 18.333,
-      "Supercell Slam": 16.667
+      "Volt Switch": 62.042,
+      "Thunderbolt": 58.115,
+      "Tera Blast": 47.644,
+      "Knock Off": 38.743,
+      "Thunder Wave": 20.157,
+      "Focus Blast": 17.277,
+      "Psychic": 15.445
     },
-    "spread": "Nature: Hasty, EVs: 0/252/0/4/0/252"
-  },
-  {
-    "rank": 453,
-    "name": "Sandile",
-    "safe_name": "sandile",
-    "usage": 0.0,
-    "ability": [
-      "Moxie",
-      "Anger Point ",
-      "Intimidate "
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Power Trip": 89.506,
-      "Substitute": 78.395,
-      "Rest": 76.543,
-      "Sleep Talk": 76.543,
-      "Nothing": 30.247
-    },
-    "spread": "Nature: Jolly, EVs: 252/0/0/0/0/252"
-  },
-  {
-    "rank": 454,
-    "name": "Vulpix-Alola",
-    "safe_name": "vulpix-alola",
-    "usage": 0.0,
-    "ability": [
-      "Snow Warning",
-      "Snow Cloak "
-    ],
-    "items": "Ability Shield",
-    "moves": {
-      "Nothing": 126.087,
-      "Baton Pass": 71.014,
-      "Agility": 60.87,
-      "Aurora Veil": 36.232,
-      "Freeze-Dry": 24.638,
-      "Encore": 21.739,
-      "Protect": 17.391
-    },
-    "spread": "Nature: Rash, EVs: 0/0/0/0/0/16"
+    "spread": "Nature: Modest, EVs: 4/0/0/252/0/252"
   },
   {
     "rank": 457,
@@ -9600,17 +9344,18 @@
     ],
     "items": "Life Orb",
     "moves": {
-      "X-Scissor": 41.026,
-      "Aqua Jet": 33.333,
-      "Sacred Sword": 32.821,
-      "Flip Turn": 32.821,
-      "Liquidation": 32.821,
-      "Knock Off": 30.769,
-      "Aqua Cutter": 21.026,
-      "Swords Dance": 20.0,
-      "Drill Run": 18.462
+      "Swords Dance": 48.534,
+      "Aqua Jet": 34.419,
+      "Knock Off": 33.55,
+      "Sacred Sword": 29.859,
+      "Ice Beam": 26.927,
+      "Megahorn": 25.299,
+      "Hydro Pump": 21.281,
+      "Grass Knot": 17.915,
+      "Aqua Cutter": 16.612,
+      "Razor Shell": 15.527
     },
-    "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
+    "spread": "Nature: Adamant, EVs: 252/252/0/0/4/0"
   },
   {
     "rank": 458,
@@ -9619,41 +9364,20 @@
     "usage": 0.0,
     "ability": [
       "Strong Jaw",
-      "Dazzling"
+      "Dazzling",
+      "Wonder Skin "
     ],
-    "items": "Choice Band",
+    "items": "Choice Scarf",
     "moves": {
-      "Psychic Fangs": 96.154,
-      "Crunch": 73.626,
-      "Wave Crash": 55.495,
-      "Aqua Jet": 48.901,
-      "Ice Fang": 34.615,
-      "Liquidation": 29.121,
-      "Poison Fang": 16.484,
-      "Swords Dance": 15.934
+      "Psychic Fangs": 94.817,
+      "Crunch": 62.729,
+      "Flip Turn": 53.354,
+      "Wave Crash": 51.22,
+      "Ice Fang": 30.64,
+      "Aqua Jet": 18.064,
+      "Swords Dance": 16.235
     },
     "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
-  },
-  {
-    "rank": 459,
-    "name": "Scraggy",
-    "safe_name": "scraggy",
-    "usage": 0.0,
-    "ability": [
-      "Moxie",
-      "Intimidate",
-      "Shed Skin "
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Bulk Up": 89.56,
-      "Drain Punch": 89.011,
-      "Crunch": 46.703,
-      "Amnesia": 44.505,
-      "Knock Off": 43.956,
-      "Poison Jab": 38.462
-    },
-    "spread": "Nature: Adamant, EVs: 248/252/0/0/8/0"
   },
   {
     "rank": 460,
@@ -9665,16 +9389,17 @@
       "Keen Eye ",
       "Inner Focus "
     ],
-    "items": "Assault Vest",
+    "items": "Punching Glove",
     "moves": {
-      "Drain Punch": 57.252,
-      "Ice Punch": 53.435,
-      "Bullet Punch": 46.947,
-      "Thunder Punch": 41.221,
-      "Fire Punch": 40.84,
-      "Nothing": 25.954,
-      "Mach Punch": 23.664,
-      "Close Combat": 16.031
+      "Drain Punch": 85.454,
+      "Bullet Punch": 54.563,
+      "Ice Punch": 48.094,
+      "Thunder Punch": 40.633,
+      "Mach Punch": 31.24,
+      "Swords Dance": 30.22,
+      "Rapid Spin": 28.1,
+      "Knock Off": 22.625,
+      "Bulk Up": 16.157
     },
     "spread": "Nature: Adamant, EVs: 248/252/0/0/8/0"
   },
@@ -9687,17 +9412,15 @@
       "Magician",
       "Blaze"
     ],
-    "items": "Nothing",
+    "items": "Heavy-Duty Boots",
     "moves": {
-      "Psychic": 63.949,
-      "Flamethrower": 40.58,
-      "Fire Blast": 39.674,
-      "Dazzling Gleam": 28.442,
-      "Grass Knot": 27.717,
-      "Calm Mind": 21.739,
-      "Nasty Plot": 19.384,
-      "Scorching Sands": 18.116,
-      "Trick": 15.58
+      "Flamethrower": 55.138,
+      "Psychic": 33.687,
+      "Psyshock": 30.48,
+      "Dazzling Gleam": 29.622,
+      "Nasty Plot": 27.416,
+      "Calm Mind": 21.369,
+      "Fire Blast": 20.225
     },
     "spread": "Nature: Timid, EVs: 0/0/0/252/4/252"
   },
@@ -9708,20 +9431,19 @@
     "usage": 0.0,
     "ability": [
       "Defiant",
-      "Vital Spirit",
-      "Anger Point "
+      "Anger Point ",
+      "Vital Spirit "
     ],
     "items": "Eviolite",
     "moves": {
-      "Bulk Up": 76.166,
-      "Drain Punch": 66.839,
-      "Rage Fist": 61.658,
-      "Ice Punch": 29.016,
-      "Earthquake": 27.461,
-      "Close Combat": 21.244,
-      "U-turn": 18.135
+      "Rage Fist": 79.637,
+      "Drain Punch": 76.448,
+      "Bulk Up": 67.329,
+      "Taunt": 30.374,
+      "Ice Punch": 23.037,
+      "Close Combat": 20.466
     },
-    "spread": "Nature: Adamant, EVs: 252/252/0/0/4/0"
+    "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
   },
   {
     "rank": 463,
@@ -9731,19 +9453,19 @@
     "ability": [
       "Flame Body",
       "Weak Armor",
-      "Magma Armor "
+      "Magma Armor"
     ],
-    "items": "Rocky Helmet",
+    "items": "Focus Sash",
     "moves": {
-      "Shell Smash": 45.86,
-      "Earth Power": 28.662,
-      "Power Gem": 26.752,
-      "Stealth Rock": 23.567,
-      "Fire Blast": 21.656,
-      "Recover": 21.019,
-      "Ancient Power": 17.197,
-      "Flamethrower": 15.924,
-      "Acid Armor": 15.287
+      "Shell Smash": 54.295,
+      "Power Gem": 49.629,
+      "Flamethrower": 43.478,
+      "Earth Power": 33.722,
+      "Recover": 28.95,
+      "Stealth Rock": 28.526,
+      "Will-O-Wisp": 22.8,
+      "Lava Plume": 22.8,
+      "Tera Blast": 17.179
     },
     "spread": "Nature: Modest, EVs: 0/0/0/252/4/252"
   },
@@ -9754,90 +9476,18 @@
     "usage": 0.0,
     "ability": [
       "Sturdy",
-      "Rock Head",
-      "Sand Veil "
+      "Rock Head"
     ],
     "items": "Custap Berry",
     "moves": {
-      "Earthquake": 63.71,
-      "Stealth Rock": 63.71,
-      "Explosion": 63.306,
-      "Stone Edge": 39.516,
-      "Body Press": 20.968,
-      "Fire Punch": 19.355,
-      "Nothing": 19.355,
-      "Rock Slide": 18.952
+      "Earthquake": 90.365,
+      "Explosion": 81.354,
+      "Stealth Rock": 53.594,
+      "Stone Edge": 27.5,
+      "Thunder Punch": 17.083,
+      "Rock Blast": 15.104
     },
-    "spread": "Nature: Jolly, EVs: 40/88/92/0/36/252"
-  },
-  {
-    "rank": 466,
-    "name": "Oinkologne",
-    "safe_name": "oinkologne",
-    "usage": 0.0,
-    "ability": [
-      "Gluttony",
-      "Lingering Aroma",
-      "Thick Fat"
-    ],
-    "items": "Custap Berry",
-    "moves": {
-      "Body Slam": 55.769,
-      "High Horsepower": 55.769,
-      "Endeavor": 38.462,
-      "Lash Out": 38.462,
-      "Play Rough": 23.077,
-      "Yawn": 19.231,
-      "Work Up": 19.231,
-      "Bullet Seed": 19.231,
-      "Double-Edge": 17.308,
-      "Thief": 17.308,
-      "Facade": 17.308,
-      "Stomping Tantrum": 17.308
-    },
-    "spread": "Nature: Adamant, EVs: 248/252/0/0/8/0"
-  },
-  {
-    "rank": 467,
-    "name": "Voltorb",
-    "safe_name": "voltorb",
-    "usage": 0.0,
-    "ability": [
-      "Aftermath",
-      "Soundproof",
-      "Static"
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Nothing": 169.634,
-      "Explosion": 84.817,
-      "Thunderbolt": 23.037,
-      "Double-Edge": 20.419,
-      "Thunder Wave": 16.23
-    },
-    "spread": "Nature: Lonely, EVs: 4/252/0/0/0/252"
-  },
-  {
-    "rank": 469,
-    "name": "Tandemaus",
-    "safe_name": "tandemaus",
-    "usage": 0.0,
-    "ability": [
-      "Pickup",
-      "Own Tempo",
-      "Run Away "
-    ],
-    "items": "Choice Scarf",
-    "moves": {
-      "Population Bomb": 100.0,
-      "Crunch": 56.061,
-      "Grass Knot": 53.03,
-      "Facade": 48.485,
-      "Protect": 24.242,
-      "Super Fang": 22.727,
-      "Play Rough": 19.697
-    },
-    "spread": "Nature: Hardy, EVs: 196/172/0/0/0/140"
+    "spread": "Nature: Adamant, EVs: 252/252/0/0/4/0"
   },
   {
     "rank": 470,
@@ -9847,17 +9497,20 @@
     "ability": [
       "Power Spot"
     ],
-    "items": "Loaded Dice",
+    "items": "Focus Sash",
     "moves": {
-      "Heat Crash": 86.139,
-      "Earthquake": 84.158,
-      "Rock Blast": 50.495,
-      "Body Press": 43.564,
-      "Stone Edge": 30.693,
-      "Heavy Slam": 28.713,
-      "Giga Impact": 19.802
+      "Earthquake": 76.792,
+      "Stone Edge": 43.686,
+      "Heat Crash": 40.614,
+      "Stealth Rock": 37.543,
+      "Curse": 30.375,
+      "Heavy Slam": 27.986,
+      "Tera Blast": 23.891,
+      "Substitute": 19.113,
+      "Rock Polish": 18.43,
+      "Body Press": 16.041
     },
-    "spread": "Nature: Adamant, EVs: 252/124/132/0/0/0"
+    "spread": "Nature: Sassy, EVs: 36/116/156/0/200/0"
   },
   {
     "rank": 471,
@@ -9866,44 +9519,42 @@
     "usage": 0.0,
     "ability": [
       "Thick Fat",
-      "Ice Body ",
+      "Ice Body",
       "Hydration "
     ],
     "items": "Leftovers",
     "moves": {
-      "Whirlpool": 60.656,
-      "Perish Song": 49.18,
-      "Protect": 42.623,
-      "Aqua Jet": 37.705,
-      "Ice Beam": 24.59,
-      "Muddy Water": 18.033,
-      "Weather Ball": 18.033,
-      "Alluring Voice": 16.393
+      "Whirlpool": 37.306,
+      "Flip Turn": 35.756,
+      "Perish Song": 35.465,
+      "Ice Shard": 22.481,
+      "Rest": 22.19,
+      "Aqua Jet": 21.705,
+      "Curse": 17.636,
+      "Drill Run": 15.407,
+      "Triple Axel": 15.31
     },
-    "spread": "Nature: Careful, EVs: 192/0/160/0/156/0"
+    "spread": "Nature: Calm, EVs: 252/0/4/0/252/0"
   },
   {
-    "rank": 472,
-    "name": "Minun",
-    "safe_name": "minun",
+    "rank": 475,
+    "name": "Pignite",
+    "safe_name": "pignite",
     "usage": 0.0,
     "ability": [
-      "Volt Absorb",
-      "Minus"
+      "Thick Fat",
+      "Blaze"
     ],
-    "items": "Focus Sash",
+    "items": "Eviolite",
     "moves": {
-      "Alluring Voice": 47.826,
-      "Endeavor": 42.029,
-      "Nuzzle": 40.58,
-      "Discharge": 40.58,
-      "Grass Knot": 39.13,
-      "Thunderbolt": 37.681,
-      "Quick Attack": 33.333,
-      "Nothing": 23.188,
-      "Super Fang": 20.29
+      "Bulk Up": 82.911,
+      "Flare Blitz": 80.063,
+      "Drain Punch": 64.873,
+      "Will-O-Wisp": 51.582,
+      "Close Combat": 32.278,
+      "Head Smash": 27.848
     },
-    "spread": "Nature: Modest, EVs: 0/0/4/252/0/252"
+    "spread": "Nature: Adamant, EVs: 252/252/0/0/0/0"
   },
   {
     "rank": 476,
@@ -9913,14 +9564,15 @@
     "ability": [
       "Dancer"
     ],
-    "items": "Focus Sash",
+    "items": "Heavy-Duty Boots",
     "moves": {
-      "Revelation Dance": 81.938,
-      "Quiver Dance": 79.736,
-      "Hurricane": 47.137,
-      "U-turn": 43.612,
-      "Alluring Voice": 38.767,
-      "Air Slash": 27.313
+      "Revelation Dance": 96.922,
+      "Quiver Dance": 89.489,
+      "Roost": 43.393,
+      "Air Slash": 34.91,
+      "Hurricane": 29.655,
+      "Alluring Voice": 24.399,
+      "Defog": 20.495
     },
     "spread": "Nature: Modest, EVs: 0/0/0/252/4/252"
   },
@@ -9935,34 +9587,15 @@
     ],
     "items": "Toxic Orb",
     "moves": {
-      "Flare Blitz": 77.083,
-      "Facade": 66.204,
-      "Quick Attack": 37.731,
-      "Flame Charge": 34.259,
-      "Protect": 31.25,
-      "Will-O-Wisp": 21.991,
-      "Trailblaze": 18.056,
-      "Endeavor": 15.741
+      "Flare Blitz": 66.84,
+      "Facade": 45.502,
+      "Trailblaze": 36.928,
+      "Quick Attack": 36.798,
+      "Wish": 27.476,
+      "Will-O-Wisp": 24.748,
+      "Flame Charge": 20.299
     },
     "spread": "Nature: Adamant, EVs: 252/252/0/0/4/0"
-  },
-  {
-    "rank": 478,
-    "name": "Magikarp",
-    "safe_name": "magikarp",
-    "usage": 0.0,
-    "ability": [
-      "Swift Swim",
-      "Rattled"
-    ],
-    "items": "Choice Band",
-    "moves": {
-      "Nothing": 237.037,
-      "Splash": 90.741,
-      "Tackle": 37.037,
-      "Flail": 35.185
-    },
-    "spread": "Nature: Hardy, EVs: 0/20/0/0/0/0"
   },
   {
     "rank": 479,
@@ -9972,16 +9605,16 @@
     "ability": [
       "Levitate"
     ],
-    "items": "Expert Belt",
+    "items": "Life Orb",
     "moves": {
-      "Hex": 71.277,
-      "Will-O-Wisp": 68.085,
-      "Volt Switch": 56.383,
-      "Trick": 40.426,
-      "Nasty Plot": 37.234,
-      "Discharge": 36.17,
-      "Shadow Ball": 32.979,
-      "Thunderbolt": 30.851
+      "Shadow Ball": 67.539,
+      "Thunderbolt": 67.539,
+      "Pain Split": 49.346,
+      "Will-O-Wisp": 44.828,
+      "Nasty Plot": 41.855,
+      "Volt Switch": 35.196,
+      "Hex": 29.845,
+      "Trick": 19.144
     },
     "spread": "Nature: Timid, EVs: 0/0/0/252/4/252"
   },
@@ -9992,19 +9625,22 @@
     "usage": 0.0,
     "ability": [
       "Intimidate",
-      "Moxie ",
-      "Quick Feet "
+      "Moxie",
+      "Quick Feet"
     ],
     "items": "Focus Sash",
     "moves": {
-      "Sucker Punch": 84.231,
-      "Crunch": 73.077,
-      "Psychic Fangs": 70.0,
-      "Endeavor": 61.923,
-      "Play Rough": 25.0,
-      "Throat Chop": 17.692
+      "Sucker Punch": 76.498,
+      "Play Rough": 49.211,
+      "Crunch": 45.11,
+      "Endeavor": 29.338,
+      "Taunt": 28.391,
+      "Psychic Fangs": 19.085,
+      "Fire Fang": 17.35,
+      "Body Slam": 17.35,
+      "Trailblaze": 16.877
     },
-    "spread": "Nature: Brave, EVs: 0/252/0/252/0/0"
+    "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
   },
   {
     "rank": 481,
@@ -10016,17 +9652,17 @@
     ],
     "items": "Eviolite",
     "moves": {
-      "Calm Mind": 77.586,
-      "Shadow Ball": 62.069,
-      "Draining Kiss": 48.276,
-      "Dazzling Gleam": 39.655,
-      "Psychic": 27.586,
-      "Will-O-Wisp": 27.586,
-      "Destiny Bond": 25.862,
-      "Perish Song": 24.138,
-      "Nothing": 17.241
+      "Will-O-Wisp": 58.466,
+      "Shadow Ball": 43.131,
+      "Pain Split": 34.665,
+      "Calm Mind": 33.866,
+      "Draining Kiss": 33.866,
+      "Perish Song": 22.684,
+      "Hex": 22.364,
+      "Mean Look": 20.128,
+      "Protect": 16.773
     },
-    "spread": "Nature: Modest, EVs: 0/0/252/200/56/0"
+    "spread": "Nature: Calm, EVs: 252/0/0/4/252/0"
   },
   {
     "rank": 485,
@@ -10034,21 +9670,23 @@
     "safe_name": "duraludon",
     "usage": 0.0,
     "ability": [
-      "Heavy Metal",
       "Light Metal",
-      "Stalwart"
+      "Stalwart",
+      "Heavy Metal"
     ],
     "items": "Eviolite",
     "moves": {
-      "Body Press": 59.091,
-      "Iron Defense": 43.29,
-      "Stealth Rock": 33.55,
-      "Flash Cannon": 33.117,
-      "Draco Meteor": 25.758,
-      "Thunder Wave": 24.242,
-      "Swords Dance": 15.368
+      "Body Press": 59.006,
+      "Flash Cannon": 54.532,
+      "Draco Meteor": 47.339,
+      "Stealth Rock": 32.865,
+      "Iron Defense": 27.778,
+      "Dragon Pulse": 25.029,
+      "Thunder Wave": 21.55,
+      "Thunderbolt": 21.023,
+      "Roar": 17.953
     },
-    "spread": "Nature: Adamant, EVs: 120/148/0/0/4/224"
+    "spread": "Nature: Bold, EVs: 50/0/252/206/0/0"
   },
   {
     "rank": 486,
@@ -10061,13 +9699,18 @@
     ],
     "items": "Focus Sash",
     "moves": {
-      "Alluring Voice": 78.212,
-      "Nasty Plot": 74.302,
-      "Thunderbolt": 63.128,
-      "Encore": 59.218,
-      "Grass Knot": 16.201
+      "Thunderbolt": 54.74,
+      "Nasty Plot": 50.153,
+      "Grass Knot": 39.144,
+      "Alluring Voice": 36.086,
+      "Thunder": 29.358,
+      "Nuzzle": 28.135,
+      "Quick Attack": 27.829,
+      "Encore": 24.465,
+      "Endeavor": 23.853,
+      "Volt Switch": 22.018
     },
-    "spread": "Nature: Timid, EVs: 4/0/0/252/0/252"
+    "spread": "Nature: Timid, EVs: 0/0/0/252/4/252"
   },
   {
     "rank": 487,
@@ -10076,45 +9719,21 @@
     "usage": 0.0,
     "ability": [
       "Oblivious",
-      "Anticipation",
-      "Hydration"
+      "Hydration",
+      "Anticipation"
     ],
-    "items": "Focus Sash",
+    "items": "Leftovers",
     "moves": {
-      "Earthquake": 60.0,
-      "Spikes": 47.368,
-      "Stealth Rock": 42.632,
-      "Earth Power": 39.474,
-      "Dragon Dance": 23.684,
-      "Waterfall": 21.579,
-      "Blizzard": 19.474,
-      "Hydro Pump": 16.316,
-      "Surf": 15.263
+      "Earthquake": 63.229,
+      "Stealth Rock": 42.9,
+      "Dragon Dance": 42.75,
+      "Spikes": 34.828,
+      "Liquidation": 33.782,
+      "Earth Power": 20.777,
+      "Ice Beam": 18.386,
+      "Rest": 15.546
     },
-    "spread": "Nature: Jolly, EVs: 252/76/0/0/4/176"
-  },
-  {
-    "rank": 488,
-    "name": "Numel",
-    "safe_name": "numel",
-    "usage": 0.0,
-    "ability": [
-      "Simple",
-      "Oblivious",
-      "Own Tempo "
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Ancient Power": 47.794,
-      "Earth Power": 42.647,
-      "Stockpile": 40.441,
-      "Flamethrower": 28.676,
-      "Tera Blast": 28.676,
-      "Earthquake": 21.569,
-      "Body Press": 19.608,
-      "Rest": 16.667
-    },
-    "spread": "Nature: Modest, EVs: 0/0/0/252/4/252"
+    "spread": "Nature: Adamant, EVs: 0/252/0/0/4/252"
   },
   {
     "rank": 489,
@@ -10123,19 +9742,21 @@
     "usage": 0.0,
     "ability": [
       "Flame Body",
-      "Vital Spirit "
+      "Vital Spirit"
     ],
-    "items": "Choice Specs",
+    "items": "Sitrus Berry",
     "moves": {
-      "Thunderbolt": 57.977,
-      "Flamethrower": 42.023,
-      "Focus Blast": 38.911,
-      "Fire Blast": 35.798,
-      "Scorching Sands": 34.241,
-      "Psychic": 19.844,
-      "Overheat": 16.342
+      "Thunderbolt": 62.719,
+      "Flamethrower": 36.299,
+      "Flame Charge": 32.758,
+      "Tera Blast": 28.563,
+      "Psychic": 28.117,
+      "Scorching Sands": 26.867,
+      "Fire Blast": 24.903,
+      "Belly Drum": 22.612,
+      "Mach Punch": 20.738
     },
-    "spread": "Nature: Timid, EVs: 4/0/0/252/0/252"
+    "spread": "Nature: Timid, EVs: 0/0/0/252/4/252"
   },
   {
     "rank": 491,
@@ -10144,42 +9765,20 @@
     "usage": 0.0,
     "ability": [
       "Prankster",
-      "Steadfast",
-      "Inner Focus "
+      "Inner Focus ",
+      "Steadfast "
     ],
-    "items": "Jaboca Berry",
+    "items": "Custap Berry",
     "moves": {
-      "Close Combat": 53.061,
-      "Focus Punch": 46.939,
-      "Agility": 44.898,
-      "Focus Blast": 44.898,
-      "Copycat": 38.776,
-      "Nothing": 21.429,
-      "Dig": 21.429
+      "Copycat": 89.396,
+      "Endure": 53.181,
+      "Dig": 48.777,
+      "Upper Hand": 33.768,
+      "Swords Dance": 27.406,
+      "Nothing": 22.838,
+      "Bullet Punch": 15.987
     },
-    "spread": "Nature: Hardy, EVs: 120/88/48/56/60/136"
-  },
-  {
-    "rank": 494,
-    "name": "Jigglypuff",
-    "safe_name": "jigglypuff",
-    "usage": 0.0,
-    "ability": [
-      "Cute Charm",
-      "Competitive",
-      "Friend Guard "
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Light Screen": 37.687,
-      "Covet": 29.851,
-      "Reflect": 28.731,
-      "Draining Kiss": 23.507,
-      "Alluring Voice": 20.149,
-      "Pain Split": 19.03,
-      "Sing": 17.91
-    },
-    "spread": "Nature: Sassy, EVs: 200/1/105/1/200/1"
+    "spread": "Nature: Brave, EVs: 252/252/4/0/0/0"
   },
   {
     "rank": 495,
@@ -10191,37 +9790,13 @@
     ],
     "items": "Eviolite",
     "moves": {
-      "Sticky Web": 94.03,
-      "Volt Switch": 51.493,
-      "Lunge": 37.313,
-      "Thunder Wave": 35.821,
-      "Spark": 34.328,
-      "Crunch": 34.328,
-      "Pounce": 34.328,
-      "Skitter Smack": 22.388,
-      "String Shot": 21.642
+      "Sticky Web": 96.472,
+      "Thunder Wave": 89.012,
+      "Volt Switch": 63.004,
+      "Lunge": 49.899,
+      "Skitter Smack": 39.214
     },
-    "spread": "Nature: Adamant, EVs: 96/252/0/0/160/0"
-  },
-  {
-    "rank": 497,
-    "name": "Ivysaur",
-    "safe_name": "ivysaur",
-    "usage": 0.0,
-    "ability": [
-      "Overgrow",
-      "Chlorophyll"
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Sludge Bomb": 78.641,
-      "Giga Drain": 76.699,
-      "Synthesis": 48.544,
-      "Knock Off": 45.631,
-      "Leech Seed": 27.184,
-      "Energy Ball": 20.388
-    },
-    "spread": "Nature: Quiet, EVs: 252/4/0/252/0/0"
+    "spread": "Nature: Impish, EVs: 252/4/252/0/0/0"
   },
   {
     "rank": 498,
@@ -10234,89 +9809,20 @@
     ],
     "items": "Eviolite",
     "moves": {
-      "Knock Off": 36.19,
-      "Flamethrower": 29.524,
-      "Follow Me": 25.714,
-      "Sunny Day": 25.714,
-      "Smokescreen": 24.762,
-      "Fire Blast": 24.762,
-      "Overheat": 23.81,
-      "Curse": 23.81,
-      "Psychic": 22.857,
-      "Roar": 19.048,
-      "Will-O-Wisp": 16.19,
-      "Tera Blast": 16.19
+      "Clear Smog": 38.333,
+      "Will-O-Wisp": 32.5,
+      "Scorching Sands": 29.167,
+      "Knock Off": 27.778,
+      "Lava Plume": 26.667,
+      "Thunder Punch": 19.444,
+      "Overheat": 18.056,
+      "Acid Spray": 17.778,
+      "Belly Drum": 17.222,
+      "Flamethrower": 17.222,
+      "Fire Punch": 16.944,
+      "Mach Punch": 16.667
     },
-    "spread": "Nature: Bold, EVs: 4/0/252/0/252/0"
-  },
-  {
-    "rank": 499,
-    "name": "Sunkern",
-    "safe_name": "sunkern",
-    "usage": 0.0,
-    "ability": [
-      "Chlorophyll",
-      "Solar Power",
-      "Early Bird "
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Solar Beam": 55.157,
-      "Weather Ball": 43.498,
-      "Sunny Day": 43.049,
-      "Protect": 38.565,
-      "Nothing": 37.22,
-      "Earth Power": 31.839,
-      "Energy Ball": 29.596,
-      "Endeavor": 20.628
-    },
-    "spread": "Nature: Timid, EVs: 0/0/0/252/4/252"
-  },
-  {
-    "rank": 500,
-    "name": "Azurill",
-    "safe_name": "azurill",
-    "usage": 0.0,
-    "ability": [
-      "Huge Power",
-      "Sap Sipper ",
-      "Thick Fat "
-    ],
-    "items": "Leftovers",
-    "moves": {
-      "Aqua Jet": 65.957,
-      "Belly Drum": 61.702,
-      "Waterfall": 53.191,
-      "Body Slam": 36.17,
-      "Tera Blast": 31.915,
-      "Protect": 31.915,
-      "Facade": 27.66,
-      "Bounce": 17.021
-    },
-    "spread": "Nature: Bold, EVs: 252/0/56/0/76/124"
-  },
-  {
-    "rank": 501,
-    "name": "Snom",
-    "safe_name": "snom",
-    "usage": 0.0,
-    "ability": [
-      "Ice Scales",
-      "Shield Dust"
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Icy Wind": 59.259,
-      "Protect": 52.675,
-      "Rest": 45.267,
-      "Mirror Coat": 44.444,
-      "Bug Buzz": 40.329,
-      "Icicle Spear": 28.395,
-      "Sleep Talk": 21.811,
-      "Struggle Bug": 21.399,
-      "Tera Blast": 17.284
-    },
-    "spread": "Nature: Modest, EVs: 252/0/0/252/4/0"
+    "spread": "Nature: Calm, EVs: 252/0/0/4/252/0"
   },
   {
     "rank": 502,
@@ -10328,18 +9834,17 @@
       "Lightning Rod",
       "Motor Drive"
     ],
-    "items": "Heavy-Duty Boots",
+    "items": "Life Orb",
     "moves": {
-      "Flame Charge": 48.792,
-      "Trailblaze": 47.826,
-      "Supercell Slam": 45.411,
-      "High Horsepower": 36.715,
-      "Volt Switch": 33.816,
-      "Overheat": 31.401,
-      "Low Kick": 29.469,
-      "Wild Charge": 27.053
+      "Supercell Slam": 71.276,
+      "High Horsepower": 68.421,
+      "Flame Charge": 33.541,
+      "Overheat": 27.386,
+      "Volt Switch": 25.156,
+      "Trailblaze": 23.729,
+      "Thunder Wave": 20.071
     },
-    "spread": "Nature: Serious, EVs: 83/120/80/0/80/145"
+    "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
   },
   {
     "rank": 504,
@@ -10347,21 +9852,24 @@
     "safe_name": "gumshoos",
     "usage": 0.0,
     "ability": [
-      "Strong Jaw",
       "Adaptability",
+      "Strong Jaw",
       "Stakeout"
     ],
-    "items": "Leftovers",
+    "items": "Choice Band",
     "moves": {
-      "Crunch": 79.592,
-      "Psychic Fangs": 63.265,
-      "U-turn": 48.98,
-      "Ice Fang": 44.898,
-      "Knock Off": 24.49,
-      "Nothing": 24.49,
-      "Body Slam": 18.367
+      "Crunch": 55.876,
+      "Double-Edge": 44.536,
+      "Psychic Fangs": 31.959,
+      "Earthquake": 31.959,
+      "Ice Fang": 29.897,
+      "Knock Off": 27.835,
+      "U-turn": 26.392,
+      "Body Slam": 20.0,
+      "Fire Fang": 17.526,
+      "Nothing": 15.258
     },
-    "spread": "Nature: Brave, EVs: 0/176/148/0/184/0"
+    "spread": "Nature: Adamant, EVs: 252/252/0/0/4/0"
   },
   {
     "rank": 505,
@@ -10371,40 +9879,18 @@
     "ability": [
       "Comatose"
     ],
-    "items": "Leftovers",
+    "items": "Assault Vest",
     "moves": {
-      "Rapid Spin": 76.981,
-      "Knock Off": 44.906,
-      "Sucker Punch": 27.17,
-      "Endeavor": 24.906,
-      "Wish": 21.887,
-      "Wood Hammer": 20.755,
-      "Body Slam": 19.623,
-      "Nothing": 19.623,
-      "Earthquake": 19.623
+      "Rapid Spin": 88.372,
+      "Knock Off": 40.31,
+      "U-turn": 37.865,
+      "Earthquake": 36.792,
+      "Wish": 34.109,
+      "Body Slam": 23.256,
+      "Protect": 23.137,
+      "Sucker Punch": 22.898
     },
     "spread": "Nature: Adamant, EVs: 252/252/0/0/4/0"
-  },
-  {
-    "rank": 506,
-    "name": "Vigoroth",
-    "safe_name": "vigoroth",
-    "usage": 0.0,
-    "ability": [
-      "Vital Spirit"
-    ],
-    "items": "Leftovers",
-    "moves": {
-      "Slack Off": 65.476,
-      "Bulk Up": 65.476,
-      "Body Slam": 58.333,
-      "Drain Punch": 51.19,
-      "Knock Off": 29.762,
-      "Encore": 27.381,
-      "Protect": 25.0,
-      "Endeavor": 25.0
-    },
-    "spread": "Nature: Hardy, EVs: 0/108/36/112/0/252"
   },
   {
     "rank": 507,
@@ -10414,19 +9900,17 @@
     "ability": [
       "Swift Swim",
       "Cloud Nine",
-      "Damp"
+      "Damp "
     ],
-    "items": "Focus Sash",
+    "items": "Life Orb",
     "moves": {
-      "Ice Beam": 78.919,
-      "Surf": 50.27,
-      "Psychic": 48.108,
-      "Nasty Plot": 36.216,
-      "Grass Knot": 27.027,
-      "Hydro Pump": 25.405,
-      "Knock Off": 20.0,
-      "Chilling Water": 17.297,
-      "Rain Dance": 16.757
+      "Ice Beam": 81.48,
+      "Surf": 60.572,
+      "Hydro Pump": 41.789,
+      "Nasty Plot": 27.886,
+      "Vacuum Wave": 27.65,
+      "Focus Blast": 19.491,
+      "Rain Dance": 16.92
     },
     "spread": "Nature: Modest, EVs: 0/0/0/252/4/252"
   },
@@ -10436,179 +9920,25 @@
     "safe_name": "swanna",
     "usage": 0.0,
     "ability": [
-      "Keen Eye",
       "Hydration",
+      "Keen Eye",
       "Big Pecks"
     ],
     "items": "Heavy-Duty Boots",
     "moves": {
-      "Tailwind": 53.153,
-      "Air Slash": 45.045,
-      "Rain Dance": 45.045,
-      "Defog": 33.333,
-      "Chilling Water": 23.423,
-      "Liquidation": 22.523,
-      "Knock Off": 22.523,
-      "Steel Wing": 21.622,
-      "Fly": 20.721,
-      "Flip Turn": 19.82,
-      "Ice Beam": 18.919,
-      "Surf": 15.315
+      "Defog": 51.606,
+      "Flip Turn": 38.427,
+      "Hurricane": 37.099,
+      "Brave Bird": 31.783,
+      "Ice Beam": 27.575,
+      "Surf": 27.021,
+      "Roost": 24.917,
+      "Knock Off": 23.92,
+      "Liquidation": 17.386,
+      "Hydro Pump": 16.279,
+      "Rain Dance": 15.615
     },
-    "spread": "Nature: Rash, EVs: 4/0/0/252/0/252"
-  },
-  {
-    "rank": 510,
-    "name": "Slowpoke",
-    "safe_name": "slowpoke",
-    "usage": 0.0,
-    "ability": [
-      "Oblivious",
-      "Regenerator",
-      "Own Tempo "
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Slack Off": 62.626,
-      "Calm Mind": 52.525,
-      "Thunder Wave": 52.525,
-      "Stored Power": 33.333,
-      "Protect": 22.222,
-      "Chilling Water": 21.212,
-      "Hydro Pump": 20.202,
-      "Curse": 15.152
-    },
-    "spread": "Nature: Bold, EVs: 248/0/252/8/0/0"
-  },
-  {
-    "rank": 511,
-    "name": "Lechonk",
-    "safe_name": "lechonk",
-    "usage": 0.0,
-    "ability": [
-      "Aroma Veil",
-      "Thick Fat",
-      "Gluttony "
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Nothing": 142.478,
-      "Body Slam": 57.522,
-      "Endeavor": 42.478,
-      "Play Rough": 33.628,
-      "Yawn": 25.664,
-      "Sunny Day": 22.124
-    },
-    "spread": "Nature: Hardy, EVs: 16/0/0/0/0/0"
-  },
-  {
-    "rank": 512,
-    "name": "Dragonair",
-    "safe_name": "dragonair",
-    "usage": 0.0,
-    "ability": [
-      "Shed Skin",
-      "Marvel Scale"
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Dragon Dance": 62.791,
-      "Outrage": 44.186,
-      "Dragon Tail": 44.186,
-      "Thunder Wave": 37.209,
-      "Draco Meteor": 30.233,
-      "Rest": 27.907,
-      "Extreme Speed": 25.581,
-      "Rain Dance": 23.256,
-      "Aqua Jet": 23.256,
-      "Thunder": 23.256
-    },
-    "spread": "Nature: Quiet, EVs: 96/196/88/128/0/0"
-  },
-  {
-    "rank": 513,
-    "name": "Croconaw",
-    "safe_name": "croconaw",
-    "usage": 0.0,
-    "ability": [
-      "Torrent",
-      "Sheer Force"
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Crunch": 78.481,
-      "Dragon Claw": 46.835,
-      "Ice Beam": 45.57,
-      "Counter": 44.304,
-      "Liquidation": 30.38,
-      "Dragon Dance": 26.582,
-      "Aqua Jet": 22.785,
-      "Scary Face": 17.722,
-      "Brick Break": 16.456
-    },
-    "spread": "Nature: Adamant, EVs: 100/208/100/40/40/20"
-  },
-  {
-    "rank": 514,
-    "name": "Charmander",
-    "safe_name": "charmander",
-    "usage": 0.0,
-    "ability": [
-      "Solar Power",
-      "Blaze"
-    ],
-    "items": "Leftovers",
-    "moves": {
-      "Fire Blast": 60.262,
-      "Sunny Day": 58.952,
-      "Dragon Breath": 58.079,
-      "Dig": 56.332
-    },
-    "spread": "Nature: Hasty, EVs: 105/1/200/1/1/200"
-  },
-  {
-    "rank": 516,
-    "name": "Glimmet",
-    "safe_name": "glimmet",
-    "usage": 0.0,
-    "ability": [
-      "Toxic Debris",
-      "Corrosion "
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Stealth Rock": 73.171,
-      "Sludge Bomb": 62.195,
-      "Memento": 60.976,
-      "Spikes": 41.463,
-      "Toxic": 36.585,
-      "Power Gem": 24.39,
-      "Toxic Spikes": 17.073,
-      "Dazzling Gleam": 15.854
-    },
-    "spread": "Nature: Calm, EVs: 252/0/0/4/252/0"
-  },
-  {
-    "rank": 517,
-    "name": "Marill",
-    "safe_name": "marill",
-    "usage": 0.0,
-    "ability": [
-      "Huge Power",
-      "Sap Sipper ",
-      "Thick Fat "
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Aqua Jet": 94.624,
-      "Belly Drum": 77.419,
-      "Knock Off": 43.011,
-      "Play Rough": 40.86,
-      "Liquidation": 23.656,
-      "Trailblaze": 21.505,
-      "Aqua Tail": 15.054
-    },
-    "spread": "Nature: Adamant, EVs: 248/252/0/0/8/0"
+    "spread": "Nature: Timid, EVs: 0/0/0/252/4/252"
   },
   {
     "rank": 518,
@@ -10617,47 +9947,20 @@
     "usage": 0.0,
     "ability": [
       "Defiant",
-      "Receiver"
+      "Receiver "
     ],
     "items": "Choice Scarf",
     "moves": {
-      "U-turn": 88.085,
-      "Knock Off": 77.447,
-      "Close Combat": 73.191,
-      "Earthquake": 38.298,
-      "Drain Punch": 24.681,
-      "Iron Head": 19.574,
-      "Gunk Shot": 17.872
+      "Knock Off": 75.429,
+      "Close Combat": 72.381,
+      "U-turn": 54.667,
+      "Gunk Shot": 29.524,
+      "Earthquake": 28.381,
+      "Drain Punch": 25.333,
+      "Trailblaze": 18.476,
+      "Rock Slide": 15.429
     },
     "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
-  },
-  {
-    "rank": 519,
-    "name": "Pawmo",
-    "safe_name": "pawmo",
-    "usage": 0.0,
-    "ability": [
-      "Iron Fist",
-      "Volt Absorb",
-      "Natural Cure "
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Mach Punch": 64.474,
-      "Nuzzle": 50.0,
-      "Knock Off": 43.421,
-      "Fake Out": 35.526,
-      "Super Fang": 34.211,
-      "Crunch": 23.684,
-      "Thunder Punch": 23.684,
-      "Tera Blast": 23.684,
-      "Low Kick": 19.737,
-      "Play Rough": 17.105,
-      "Thunder": 15.789,
-      "Agility": 15.789,
-      "Electro Ball": 15.789
-    },
-    "spread": "Nature: Hasty, EVs: 0/252/0/4/0/252"
   },
   {
     "rank": 520,
@@ -10666,20 +9969,20 @@
     "usage": 0.0,
     "ability": [
       "Torrent",
-      "Shell Armor"
+      "Shell Armor "
     ],
-    "items": "Life Orb",
+    "items": "Eviolite",
     "moves": {
-      "Sacred Sword": 70.667,
-      "Aqua Jet": 68.0,
-      "Swords Dance": 61.333,
-      "Aqua Tail": 45.333,
-      "Grass Knot": 20.0,
-      "Aqua Cutter": 20.0,
-      "Substitute": 16.0,
-      "Tera Blast": 16.0
+      "Ice Beam": 70.241,
+      "Hydro Pump": 65.147,
+      "Aqua Jet": 53.083,
+      "Protect": 44.772,
+      "Grass Knot": 37.265,
+      "Blizzard": 23.056,
+      "Taunt": 15.818,
+      "Surf": 15.282
     },
-    "spread": "Nature: Jolly, EVs: 17/236/0/15/4/236"
+    "spread": "Nature: Hardy, EVs: 0/0/0/252/0/252"
   },
   {
     "rank": 521,
@@ -10689,47 +9992,22 @@
     "ability": [
       "Adaptability",
       "Rock Head",
-      "Mold Breaker ",
-      "Reckless "
+      "Reckless ",
+      "Rattled ",
+      "Mold Breaker "
     ],
     "items": "Choice Band",
     "moves": {
-      "Wave Crash": 69.608,
-      "Aqua Jet": 66.667,
-      "Nothing": 54.902,
-      "Flip Turn": 52.941,
-      "Psychic Fangs": 43.137,
-      "Head Smash": 23.529,
-      "Liquidation": 17.647,
-      "Final Gambit": 15.686
+      "Wave Crash": 80.084,
+      "Aqua Jet": 73.585,
+      "Flip Turn": 46.96,
+      "Head Smash": 31.237,
+      "Liquidation": 29.56,
+      "Psychic Fangs": 26.834,
+      "Double-Edge": 20.755,
+      "Ice Fang": 15.514
     },
     "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
-  },
-  {
-    "rank": 522,
-    "name": "Torracat",
-    "safe_name": "torracat",
-    "usage": 0.0,
-    "ability": [
-      "Intimidate",
-      "Blaze"
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Fake Out": 75.385,
-      "Will-O-Wisp": 35.385,
-      "Parting Shot": 26.154,
-      "Flare Blitz": 21.538,
-      "Power Trip": 21.538,
-      "Crunch": 20.0,
-      "Acrobatics": 20.0,
-      "Substitute": 20.0,
-      "Body Slam": 16.923,
-      "Fire Fang": 16.923,
-      "Swords Dance": 16.923,
-      "Protect": 15.385
-    },
-    "spread": "Nature: Jolly, EVs: 252/4/0/0/0/252"
   },
   {
     "rank": 524,
@@ -10737,44 +10015,20 @@
     "safe_name": "drifloon",
     "usage": 0.0,
     "ability": [
-      "Flare Boost",
       "Aftermath",
-      "Unburden "
+      "Unburden"
     ],
-    "items": "Eviolite",
+    "items": "Focus Sash",
     "moves": {
-      "Calm Mind": 68.889,
-      "Amnesia": 68.889,
-      "Explosion": 68.889,
-      "Payback": 66.667,
-      "Destiny Bond": 31.111,
-      "Trick Room": 26.667,
-      "Curse": 26.667
+      "Defog": 90.698,
+      "Will-O-Wisp": 70.543,
+      "Curse": 62.791,
+      "Thunder Wave": 44.961,
+      "Acrobatics": 27.519,
+      "Trick Room": 26.357,
+      "Haze": 18.605
     },
-    "spread": "Nature: Lonely, EVs: 20/160/0/116/152/56"
-  },
-  {
-    "rank": 525,
-    "name": "Squirtle",
-    "safe_name": "squirtle",
-    "usage": 0.0,
-    "ability": [
-      "Torrent",
-      "Rain Dish"
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Flip Turn": 61.905,
-      "Protect": 47.619,
-      "Rapid Spin": 45.238,
-      "Haze": 33.333,
-      "Fake Out": 28.571,
-      "Hydro Pump": 23.81,
-      "Chilling Water": 21.429,
-      "Aqua Jet": 19.048,
-      "Blizzard": 19.048
-    },
-    "spread": "Nature: Bold, EVs: 252/0/252/4/0/0"
+    "spread": "Nature: Jolly, EVs: 4/0/0/0/252/252"
   },
   {
     "rank": 529,
@@ -10784,105 +10038,19 @@
     "ability": [
       "Levitate"
     ],
-    "items": "Eviolite",
+    "items": "Choice Scarf",
     "moves": {
-      "Destiny Bond": 49.689,
-      "Shadow Ball": 41.615,
-      "Hypnosis": 28.571,
-      "Will-O-Wisp": 20.497,
-      "Clear Smog": 19.255,
-      "Nothing": 18.634,
-      "Focus Blast": 18.012,
-      "Dazzling Gleam": 16.149,
-      "Toxic Spikes": 15.528,
-      "Sludge Bomb": 15.528,
-      "Dream Eater": 15.528,
-      "Confuse Ray": 15.528
+      "Shadow Ball": 65.131,
+      "Destiny Bond": 41.373,
+      "Sludge Wave": 29.359,
+      "Sludge Bomb": 27.733,
+      "Nasty Plot": 21.409,
+      "Trick": 20.235,
+      "Will-O-Wisp": 18.428,
+      "Dazzling Gleam": 17.886,
+      "Hex": 17.525
     },
-    "spread": "Nature: Timid, EVs: 252/0/0/4/0/252"
-  },
-  {
-    "rank": 530,
-    "name": "Gothorita",
-    "safe_name": "gothorita",
-    "usage": 0.0,
-    "ability": [
-      "Shadow Tag",
-      "Frisk",
-      "Competitive "
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Trick Room": 68.75,
-      "Protect": 60.417,
-      "Fake Out": 60.417,
-      "Foul Play": 55.208,
-      "Psychic": 25.0,
-      "Light Screen": 21.875,
-      "Reflect": 21.875,
-      "Fake Tears": 21.875
-    },
-    "spread": "Nature: Impish, EVs: 196/0/252/0/60/0"
-  },
-  {
-    "rank": 533,
-    "name": "Pichu",
-    "safe_name": "pichu",
-    "usage": 0.0,
-    "ability": [
-      "Static",
-      "Lightning Rod "
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Nuzzle": 78.704,
-      "Wish": 77.778,
-      "Volt Switch": 70.37,
-      "Sweet Kiss": 68.519,
-      "Thunder Wave": 17.593
-    },
-    "spread": "Nature: Jolly, EVs: 0/0/128/0/128/252"
-  },
-  {
-    "rank": 534,
-    "name": "Marshtomp",
-    "safe_name": "marshtomp",
-    "usage": 0.0,
-    "ability": [
-      "Torrent",
-      "Damp"
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Stealth Rock": 83.333,
-      "Mirror Coat": 46.154,
-      "Yawn": 46.154,
-      "Counter": 46.154,
-      "Earthquake": 44.872,
-      "Rest": 41.026,
-      "Sleep Talk": 41.026
-    },
-    "spread": "Nature: Calm, EVs: 248/0/8/0/252/0"
-  },
-  {
-    "rank": 535,
-    "name": "Pawniard",
-    "safe_name": "pawniard",
-    "usage": 0.0,
-    "ability": [
-      "Defiant",
-      "Inner Focus",
-      "Pressure "
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Iron Head": 86.5,
-      "Sucker Punch": 78.5,
-      "Thunder Wave": 69.25,
-      "Guillotine": 45.75,
-      "Stealth Rock": 32.25
-    },
-    "spread": "Nature: Adamant, EVs: 0/252/4/0/0/252"
+    "spread": "Nature: Timid, EVs: 0/0/0/252/4/252"
   },
   {
     "rank": 539,
@@ -10891,477 +10059,21 @@
     "usage": 0.0,
     "ability": [
       "Sheer Force",
-      "Intimidate"
+      "Intimidate",
+      "Anger Point "
     ],
     "items": "Life Orb",
     "moves": {
-      "Earthquake": 70.098,
-      "Body Slam": 60.784,
-      "Close Combat": 49.51,
-      "Iron Head": 38.235,
-      "Wild Charge": 26.471,
-      "Protect": 24.51,
-      "Zen Headbutt": 19.118,
-      "Rock Slide": 17.647,
-      "Double-Edge": 15.196
+      "Body Slam": 51.836,
+      "Earthquake": 43.988,
+      "Close Combat": 38.373,
+      "Iron Head": 38.301,
+      "Zen Headbutt": 35.061,
+      "Rock Slide": 28.798,
+      "Raging Bull": 25.342,
+      "Throat Chop": 18.215
     },
     "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
-  },
-  {
-    "rank": 540,
-    "name": "Feebas",
-    "safe_name": "feebas",
-    "usage": 0.0,
-    "ability": [
-      "Swift Swim"
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Dragon Pulse": 98.039,
-      "Haze": 94.118,
-      "Mud Shot": 90.196,
-      "Confuse Ray": 86.275
-    },
-    "spread": "Nature: Jolly, EVs: 180/0/0/0/0/252"
-  },
-  {
-    "rank": null,
-    "name": "Aipom",
-    "safe_name": "aipom",
-    "usage": 0.0,
-    "ability": [
-      "Skill Link",
-      "Pickup "
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Fake Out": 75.0,
-      "Mud-Slap": 66.463,
-      "Thunder Wave": 66.463,
-      "Tickle": 63.415,
-      "Nothing": 26.829,
-      "Endeavor": 16.463,
-      "Shadow Ball": 16.463,
-      "Foul Play": 16.463
-    },
-    "spread": "Nature: Modest, EVs: 100/0/184/0/160/64"
-  },
-  {
-    "rank": null,
-    "name": "Applin",
-    "safe_name": "applin",
-    "usage": 0.0,
-    "ability": [
-      "Ripen",
-      "Bulletproof",
-      "Gluttony "
-    ],
-    "items": "Leftovers",
-    "moves": {
-      "Rollout": 87.879,
-      "Sucker Punch": 86.869,
-      "Tera Blast": 71.717,
-      "Defense Curl": 63.636,
-      "Pounce": 35.354,
-      "Withdraw": 22.222,
-      "Astonish": 18.182
-    },
-    "spread": "Nature: Sassy, EVs: 116/252/0/0/100/0"
-  },
-  {
-    "rank": null,
-    "name": "Arceus",
-    "safe_name": "arceus",
-    "usage": 0.0,
-    "ability": [
-      "Multitype"
-    ],
-    "items": "Silk Scarf",
-    "moves": {
-      "Extreme Speed": 93.201,
-      "Swords Dance": 71.919,
-      "Shadow Claw": 63.55,
-      "Recover": 34.509,
-      "Taunt": 26.566,
-      "Earthquake": 24.046
-    },
-    "spread": "Nature: Adamant, EVs: 200/252/0/0/0/56"
-  },
-  {
-    "rank": null,
-    "name": "Arceus-Bug",
-    "safe_name": "arceus-bug",
-    "usage": 0.0,
-    "ability": [
-      "Multitype"
-    ],
-    "items": "Insect Plate",
-    "moves": {
-      "Recover": 64.783,
-      "Calm Mind": 64.218,
-      "Judgment": 61.017,
-      "Ice Beam": 22.034,
-      "Hydro Pump": 22.034,
-      "Earth Power": 21.281,
-      "Bug Buzz": 16.384,
-      "Dark Pulse": 16.008
-    },
-    "spread": "Nature: Modest, EVs: 4/0/0/252/0/252"
-  },
-  {
-    "rank": null,
-    "name": "Arceus-Dark",
-    "safe_name": "arceus-dark",
-    "usage": 0.0,
-    "ability": [
-      "Multitype"
-    ],
-    "items": "Dread Plate",
-    "moves": {
-      "Judgment": 71.875,
-      "Recover": 54.552,
-      "Calm Mind": 42.459,
-      "Taunt": 32.133,
-      "Foul Play": 22.418
-    },
-    "spread": "Nature: Timid, EVs: 248/0/0/8/0/252"
-  },
-  {
-    "rank": null,
-    "name": "Arceus-Dragon",
-    "safe_name": "arceus-dragon",
-    "usage": 0.0,
-    "ability": [
-      "Multitype"
-    ],
-    "items": "Draco Plate",
-    "moves": {
-      "Judgment": 42.164,
-      "Dragon Dance": 30.1,
-      "Draco Meteor": 25.373,
-      "Extreme Speed": 25.249,
-      "Dragon Claw": 23.507,
-      "Recover": 22.512,
-      "Flare Blitz": 16.915
-    },
-    "spread": "Nature: Adamant, EVs: 128/252/0/0/0/128"
-  },
-  {
-    "rank": null,
-    "name": "Arceus-Electric",
-    "safe_name": "arceus-electric",
-    "usage": 0.0,
-    "ability": [
-      "Multitype"
-    ],
-    "items": "Zap Plate",
-    "moves": {
-      "Judgment": 79.768,
-      "Calm Mind": 69.072,
-      "Ice Beam": 66.659,
-      "Recover": 33.767,
-      "Taunt": 32.489
-    },
-    "spread": "Nature: Modest, EVs: 0/0/4/252/0/252"
-  },
-  {
-    "rank": null,
-    "name": "Arceus-Fairy",
-    "safe_name": "arceus-fairy",
-    "usage": 0.0,
-    "ability": [
-      "Multitype"
-    ],
-    "items": "Pixie Plate",
-    "moves": {
-      "Judgment": 96.953,
-      "Recover": 90.153,
-      "Calm Mind": 53.619,
-      "Stealth Rock": 27.201,
-      "Iron Defense": 22.748,
-      "Thunder Wave": 16.294,
-      "Roar": 15.1
-    },
-    "spread": "Nature: Bold, EVs: 240/0/252/0/0/16"
-  },
-  {
-    "rank": null,
-    "name": "Arceus-Fighting",
-    "safe_name": "arceus-fighting",
-    "usage": 0.0,
-    "ability": [
-      "Multitype"
-    ],
-    "items": "Fist Plate",
-    "moves": {
-      "Recover": 61.182,
-      "Body Press": 54.792,
-      "Cosmic Power": 47.284,
-      "Stored Power": 42.652,
-      "Judgment": 34.026,
-      "Calm Mind": 18.371
-    },
-    "spread": "Nature: Bold, EVs: 252/0/252/0/4/0"
-  },
-  {
-    "rank": null,
-    "name": "Arceus-Fire",
-    "safe_name": "arceus-fire",
-    "usage": 0.0,
-    "ability": [
-      "Multitype"
-    ],
-    "items": "Flame Plate",
-    "moves": {
-      "Judgment": 55.51,
-      "Calm Mind": 35.547,
-      "Recover": 35.411,
-      "Flare Blitz": 31.075,
-      "Extreme Speed": 26.649,
-      "Ice Beam": 23.08,
-      "Swords Dance": 16.17
-    },
-    "spread": "Nature: Timid, EVs: 0/0/48/252/56/152"
-  },
-  {
-    "rank": null,
-    "name": "Arceus-Flying",
-    "safe_name": "arceus-flying",
-    "usage": 0.0,
-    "ability": [
-      "Multitype"
-    ],
-    "items": "Sky Plate",
-    "moves": {
-      "Judgment": 81.248,
-      "Calm Mind": 71.909,
-      "Recover": 52.447,
-      "Aura Sphere": 17.818,
-      "Iron Defense": 16.212
-    },
-    "spread": "Nature: Timid, EVs: 0/0/0/252/4/252"
-  },
-  {
-    "rank": null,
-    "name": "Arceus-Ghost",
-    "safe_name": "arceus-ghost",
-    "usage": 0.0,
-    "ability": [
-      "Multitype"
-    ],
-    "items": "Spooky Plate",
-    "moves": {
-      "Judgment": 87.939,
-      "Calm Mind": 60.658,
-      "Recover": 48.81,
-      "Aura Sphere": 32.162,
-      "Focus Blast": 28.577,
-      "Power Gem": 25.124
-    },
-    "spread": "Nature: Modest, EVs: 64/0/0/252/0/192"
-  },
-  {
-    "rank": null,
-    "name": "Arceus-Grass",
-    "safe_name": "arceus-grass",
-    "usage": 0.0,
-    "ability": [
-      "Multitype"
-    ],
-    "items": "Meadow Plate",
-    "moves": {
-      "Judgment": 60.64,
-      "Calm Mind": 51.653,
-      "Recover": 46.694,
-      "Giga Drain": 28.822,
-      "Power Gem": 20.764
-    },
-    "spread": "Nature: Modest, EVs: 244/0/0/160/104/0"
-  },
-  {
-    "rank": null,
-    "name": "Arceus-Ground",
-    "safe_name": "arceus-ground",
-    "usage": 0.0,
-    "ability": [
-      "Multitype"
-    ],
-    "items": "Earth Plate",
-    "moves": {
-      "Earthquake": 66.502,
-      "Dragon Dance": 57.881,
-      "Stone Edge": 47.756,
-      "Taunt": 39.64,
-      "Recover": 37.186,
-      "Judgment": 33.089,
-      "Calm Mind": 22.518,
-      "Ice Beam": 15.654
-    },
-    "spread": "Nature: Adamant, EVs: 132/252/0/0/0/124"
-  },
-  {
-    "rank": null,
-    "name": "Arceus-Ice",
-    "safe_name": "arceus-ice",
-    "usage": 0.0,
-    "ability": [
-      "Multitype"
-    ],
-    "items": "Icicle Plate",
-    "moves": {
-      "Judgment": 77.521,
-      "Calm Mind": 42.647,
-      "Recover": 41.387,
-      "Ice Beam": 22.479,
-      "Earth Power": 18.277,
-      "Extreme Speed": 16.176
-    },
-    "spread": "Nature: Timid, EVs: 248/0/0/8/0/252"
-  },
-  {
-    "rank": null,
-    "name": "Arceus-Poison",
-    "safe_name": "arceus-poison",
-    "usage": 0.0,
-    "ability": [
-      "Multitype"
-    ],
-    "items": "Toxic Plate",
-    "moves": {
-      "Recover": 54.609,
-      "Judgment": 41.484,
-      "Calm Mind": 20.859,
-      "Poison Jab": 19.297,
-      "Will-O-Wisp": 19.141,
-      "Sludge Bomb": 18.75,
-      "Extreme Speed": 16.016
-    },
-    "spread": "Nature: Timid, EVs: 252/0/0/4/0/252"
-  },
-  {
-    "rank": null,
-    "name": "Arceus-Psychic",
-    "safe_name": "arceus-psychic",
-    "usage": 0.0,
-    "ability": [
-      "Multitype"
-    ],
-    "items": "Mind Plate",
-    "moves": {
-      "Recover": 82.74,
-      "Stored Power": 77.477,
-      "Cosmic Power": 71.749,
-      "Body Press": 60.217,
-      "Calm Mind": 16.409,
-      "Judgment": 16.022
-    },
-    "spread": "Nature: Timid, EVs: 252/0/0/4/0/252"
-  },
-  {
-    "rank": null,
-    "name": "Arceus-Rock",
-    "safe_name": "arceus-rock",
-    "usage": 0.0,
-    "ability": [
-      "Multitype"
-    ],
-    "items": "Stone Plate",
-    "moves": {
-      "Judgment": 78.108,
-      "Recover": 46.757,
-      "Calm Mind": 40.27,
-      "Stealth Rock": 18.919,
-      "Stone Edge": 18.919,
-      "Earth Power": 18.108,
-      "Grass Knot": 17.027
-    },
-    "spread": "Nature: Modest, EVs: 252/0/0/252/4/0"
-  },
-  {
-    "rank": null,
-    "name": "Arceus-Steel",
-    "safe_name": "arceus-steel",
-    "usage": 0.0,
-    "ability": [
-      "Multitype"
-    ],
-    "items": "Iron Plate",
-    "moves": {
-      "Judgment": 70.536,
-      "Recover": 52.889,
-      "Calm Mind": 33.212,
-      "Extreme Speed": 22.957,
-      "Swords Dance": 17.439,
-      "Earthquake": 16.71
-    },
-    "spread": "Nature: Timid, EVs: 252/0/4/0/0/252"
-  },
-  {
-    "rank": null,
-    "name": "Arceus-Water",
-    "safe_name": "arceus-water",
-    "usage": 0.0,
-    "ability": [
-      "Multitype"
-    ],
-    "items": "Splash Plate",
-    "moves": {
-      "Judgment": 94.573,
-      "Recover": 90.72,
-      "Calm Mind": 39.116,
-      "Dragon Tail": 29.126,
-      "Thunder Wave": 26.532,
-      "Ice Beam": 21.441,
-      "Will-O-Wisp": 19.664
-    },
-    "spread": "Nature: Bold, EVs: 240/0/252/0/0/16"
-  },
-  {
-    "rank": null,
-    "name": "Bergmite",
-    "safe_name": "bergmite",
-    "usage": 0.0,
-    "ability": [
-      "Sturdy",
-      "Own Tempo "
-    ],
-    "items": "Heavy-Duty Boots",
-    "moves": {
-      "Rapid Spin": 86.792,
-      "Mirror Coat": 43.396,
-      "Protect": 39.623,
-      "Rest": 35.849,
-      "Substitute": 35.849,
-      "Chilling Water": 32.075,
-      "Aurora Veil": 32.075,
-      "Avalanche": 20.755,
-      "Gyro Ball": 16.981
-    },
-    "spread": "Nature: Hardy, EVs: 1/0/0/0/0/0"
-  },
-  {
-    "rank": null,
-    "name": "Buizel",
-    "safe_name": "buizel",
-    "usage": 0.0,
-    "ability": [
-      "Swift Swim",
-      "Water Veil"
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Aqua Jet": 68.132,
-      "Ice Punch": 48.352,
-      "Brick Break": 45.055,
-      "Bulk Up": 30.769,
-      "Aqua Tail": 28.571,
-      "Waterfall": 27.473,
-      "Quick Attack": 25.275,
-      "Water Pulse": 25.275,
-      "Ice Beam": 23.077,
-      "Liquidation": 17.582
-    },
-    "spread": "Nature: Adamant, EVs: 0/252/0/0/4/252"
   },
   {
     "rank": null,
@@ -11372,87 +10084,17 @@
       "Overgrow",
       "Chlorophyll"
     ],
-    "items": "Focus Sash",
-    "moves": {
-      "Leech Seed": 74.603,
-      "Toxic": 69.048,
-      "Knock Off": 35.714,
-      "Substitute": 34.921,
-      "Protect": 30.952,
-      "Synthesis": 27.778,
-      "Giga Drain": 23.81,
-      "Sludge Bomb": 18.254
-    },
-    "spread": "Nature: Calm, EVs: 152/0/148/28/148/32"
-  },
-  {
-    "rank": null,
-    "name": "Chimchar",
-    "safe_name": "chimchar",
-    "usage": 0.0,
-    "ability": [
-      "Blaze",
-      "Iron Fist "
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Endeavor": 73.333,
-      "Fake Out": 69.333,
-      "Flame Charge": 44.0,
-      "Nothing": 40.0,
-      "Knock Off": 34.667,
-      "Vacuum Wave": 34.667,
-      "Acrobatics": 20.0
-    },
-    "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
-  },
-  {
-    "rank": null,
-    "name": "Combusken",
-    "safe_name": "combusken",
-    "usage": 0.0,
-    "ability": [
-      "Speed Boost",
-      "Blaze "
-    ],
     "items": "Eviolite",
     "moves": {
-      "Baton Pass": 67.0,
-      "Swords Dance": 63.0,
-      "Flare Blitz": 31.0,
-      "Protect": 30.0,
-      "Agility": 21.0,
-      "Close Combat": 21.0,
-      "Blaze Kick": 21.0,
-      "Substitute": 18.0,
-      "Will-O-Wisp": 17.0
+      "Leech Seed": 51.172,
+      "Toxic": 49.219,
+      "Giga Drain": 41.016,
+      "Protect": 39.453,
+      "Sludge Bomb": 36.719,
+      "Substitute": 16.406,
+      "Solar Beam": 15.234
     },
-    "spread": "Nature: Timid, EVs: 252/0/0/0/4/252"
-  },
-  {
-    "rank": null,
-    "name": "Cutiefly",
-    "safe_name": "cutiefly",
-    "usage": 0.0,
-    "ability": [
-      "Shield Dust",
-      "Honey Gather",
-      "Sweet Veil "
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Quiver Dance": 53.846,
-      "Energy Ball": 51.282,
-      "Dazzling Gleam": 48.718,
-      "Leech Life": 48.718,
-      "Sticky Web": 43.59,
-      "Thief": 25.641,
-      "Tailwind": 23.077,
-      "Pounce": 23.077,
-      "Stun Spore": 20.513,
-      "Moonblast": 17.949
-    },
-    "spread": "Nature: Naive, EVs: 20/100/108/0/164/116"
+    "spread": "Nature: Timid, EVs: 252/0/0/4/0/252"
   },
   {
     "rank": null,
@@ -11462,59 +10104,17 @@
     "ability": [
       "Bad Dreams"
     ],
-    "items": "Leftovers",
+    "items": "Heavy-Duty Boots",
     "moves": {
-      "Dark Pulse": 80.943,
-      "Nasty Plot": 45.839,
-      "Hypnosis": 45.419,
-      "Sludge Bomb": 29.927,
-      "Ice Beam": 29.913,
-      "Dream Eater": 21.673,
-      "Dark Void": 21.212,
-      "Focus Blast": 15.356
+      "Dark Pulse": 97.271,
+      "Ice Beam": 82.615,
+      "Sludge Bomb": 67.702,
+      "Nasty Plot": 31.425,
+      "Focus Blast": 30.841,
+      "Trick": 21.542,
+      "Will-O-Wisp": 17.246
     },
     "spread": "Nature: Timid, EVs: 0/0/0/252/4/252"
-  },
-  {
-    "rank": null,
-    "name": "Deoxys",
-    "safe_name": "deoxys",
-    "usage": 0.0,
-    "ability": [
-      "Pressure"
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Psycho Boost": 38.4,
-      "Psychic": 34.24,
-      "Ice Beam": 33.28,
-      "Extreme Speed": 27.52,
-      "Calm Mind": 26.72,
-      "Dark Pulse": 21.44,
-      "Shadow Ball": 21.12,
-      "Stealth Rock": 15.52
-    },
-    "spread": "Nature: Timid, EVs: 0/0/0/252/4/252"
-  },
-  {
-    "rank": null,
-    "name": "Deoxys-Attack",
-    "safe_name": "deoxys-attack",
-    "usage": 0.0,
-    "ability": [
-      "Pressure"
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Psycho Boost": 70.793,
-      "Extreme Speed": 33.832,
-      "Ice Beam": 30.578,
-      "Shadow Ball": 29.191,
-      "Knock Off": 24.329,
-      "Superpower": 22.216,
-      "Dark Pulse": 17.666
-    },
-    "spread": "Nature: Hasty, EVs: 0/4/0/252/0/252"
   },
   {
     "rank": null,
@@ -11526,16 +10126,16 @@
     ],
     "items": "Leftovers",
     "moves": {
-      "Recover": 61.124,
-      "Cosmic Power": 32.881,
-      "Stored Power": 31.712,
-      "Stealth Rock": 26.244,
-      "Spikes": 25.038,
-      "Knock Off": 18.439,
-      "Night Shade": 18.1,
-      "Calm Mind": 15.837
+      "Recover": 62.456,
+      "Stored Power": 33.336,
+      "Cosmic Power": 30.652,
+      "Teleport": 28.841,
+      "Night Shade": 23.296,
+      "Trick Room": 22.915,
+      "Stealth Rock": 20.881,
+      "Knock Off": 20.091
     },
-    "spread": "Nature: Impish, EVs: 252/0/128/0/128/0"
+    "spread": "Nature: Sassy, EVs: 248/0/8/0/252/0"
   },
   {
     "rank": null,
@@ -11545,42 +10145,19 @@
     "ability": [
       "Pressure"
     ],
-    "items": "Focus Sash",
+    "items": "Life Orb",
     "moves": {
-      "Taunt": 83.598,
-      "Spikes": 76.667,
-      "Stealth Rock": 72.809,
-      "Psycho Boost": 58.431,
-      "Thunder Wave": 37.178
+      "Psycho Boost": 75.055,
+      "Ice Beam": 48.534,
+      "Stealth Rock": 42.744,
+      "Taunt": 39.72,
+      "Focus Blast": 24.235,
+      "Nasty Plot": 23.948,
+      "Knock Off": 23.645,
+      "Superpower": 21.154,
+      "Shadow Ball": 15.332
     },
-    "spread": "Nature: Timid, EVs: 124/0/132/0/0/252"
-  },
-  {
-    "rank": null,
-    "name": "Dewott",
-    "safe_name": "dewott",
-    "usage": 0.0,
-    "ability": [
-      "Torrent",
-      "Shell Armor"
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Aqua Jet": 52.632,
-      "Sacred Sword": 40.351,
-      "Brick Break": 33.333,
-      "Aqua Cutter": 28.07,
-      "Avalanche": 26.316,
-      "Tera Blast": 21.053,
-      "Hydro Pump": 21.053,
-      "Swords Dance": 19.298,
-      "Razor Shell": 17.544,
-      "Ice Beam": 17.544,
-      "Knock Off": 17.544,
-      "Air Slash": 17.544,
-      "Grass Knot": 15.789
-    },
-    "spread": "Nature: Lonely, EVs: 0/164/72/0/0/252"
+    "spread": "Nature: Timid, EVs: 248/0/0/200/0/60"
   },
   {
     "rank": null,
@@ -11590,103 +10167,18 @@
     "ability": [
       "Clear Body"
     ],
-    "items": "Leftovers",
+    "items": "Power Herb",
     "moves": {
-      "Diamond Storm": 69.311,
-      "Moonblast": 47.599,
-      "Body Press": 40.814,
-      "Stealth Rock": 24.843,
-      "Calm Mind": 24.739,
-      "Draining Kiss": 22.338,
-      "Earth Power": 21.19,
-      "Trick Room": 21.086,
-      "Meteor Beam": 18.476
+      "Moonblast": 54.575,
+      "Diamond Storm": 50.185,
+      "Earth Power": 45.339,
+      "Trick Room": 42.36,
+      "Meteor Beam": 35.262,
+      "Body Press": 31.856,
+      "Draining Kiss": 19.584,
+      "Calm Mind": 16.933
     },
-    "spread": "Nature: Quiet, EVs: 252/0/0/252/4/0"
-  },
-  {
-    "rank": null,
-    "name": "Doduo",
-    "safe_name": "doduo",
-    "usage": 0.0,
-    "ability": [
-      "Run Away",
-      "Early Bird",
-      "Tangled Feet "
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Endeavor": 83.607,
-      "Brave Bird": 63.934,
-      "Quick Attack": 60.656,
-      "Body Slam": 42.623,
-      "Nothing": 32.787,
-      "Double-Edge": 24.59,
-      "Tailwind": 18.033,
-      "Agility": 16.393,
-      "Drill Peck": 16.393,
-      "Swords Dance": 16.393
-    },
-    "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
-  },
-  {
-    "rank": null,
-    "name": "Ducklett",
-    "safe_name": "ducklett",
-    "usage": 0.0,
-    "ability": [
-      "Keen Eye",
-      "Big Pecks "
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Aqua Jet": 98.077,
-      "Endeavor": 69.231,
-      "Protect": 69.231,
-      "Tailwind": 65.385,
-      "Tera Blast": 30.769,
-      "Liquidation": 28.846,
-      "Aerial Ace": 28.846
-    },
-    "spread": "Nature: Adamant, EVs: 0/244/0/0/0/0"
-  },
-  {
-    "rank": null,
-    "name": "Duosion",
-    "safe_name": "duosion",
-    "usage": 0.0,
-    "ability": [
-      "Magic Guard",
-      "Regenerator "
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Psychic": 89.474,
-      "Shadow Ball": 78.947,
-      "Energy Ball": 78.947,
-      "Tera Blast": 56.14,
-      "Trick Room": 36.842
-    },
-    "spread": "Nature: Modest, EVs: 252/0/0/252/4/0"
-  },
-  {
-    "rank": null,
-    "name": "Duskull",
-    "safe_name": "duskull",
-    "usage": 0.0,
-    "ability": [
-      "Levitate",
-      "Frisk "
-    ],
-    "items": "Leftovers",
-    "moves": {
-      "Future Sight": 86.885,
-      "Haze": 83.607,
-      "Curse": 81.967,
-      "Dark Pulse": 81.967,
-      "Nothing": 19.672
-    },
-    "spread": "Nature: Sassy, EVs: 105/1/200/1/200/1"
+    "spread": "Nature: Quiet, EVs: 248/0/0/252/8/0"
   },
   {
     "rank": null,
@@ -11695,384 +10187,20 @@
     "usage": 0.0,
     "ability": [
       "Adaptability",
-      "Anticipation",
-      "Run Away"
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Quick Attack": 50.0,
-      "Trailblaze": 45.714,
-      "Last Resort": 35.714,
-      "Protect": 27.143,
-      "Detect": 18.571,
-      "Nothing": 18.571,
-      "Wish": 18.571,
-      "Flail": 17.143,
-      "Double-Edge": 15.714,
-      "Endure": 15.714
-    },
-    "spread": "Nature: Adamant, EVs: 252/252/0/0/4/0"
-  },
-  {
-    "rank": null,
-    "name": "Espurr",
-    "safe_name": "espurr",
-    "usage": 0.0,
-    "ability": [
-      "Keen Eye",
-      "Infiltrator",
-      "Own Tempo "
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Psychic": 54.348,
-      "Nasty Plot": 46.739,
-      "Thunder Wave": 39.13,
-      "Trick Room": 34.783,
-      "Shadow Ball": 30.435,
-      "Yawn": 25.0,
-      "Fake Out": 20.652,
-      "Light Screen": 19.565,
-      "Tera Blast": 16.304,
-      "Sleep Talk": 15.217,
-      "Reflect": 15.217
-    },
-    "spread": "Nature: Quiet, EVs: 0/0/128/252/128/0"
-  },
-  {
-    "rank": null,
-    "name": "Fletchinder",
-    "safe_name": "fletchinder",
-    "usage": 0.0,
-    "ability": [
-      "Flame Body",
-      "Gale Wings"
-    ],
-    "items": "Nothing",
-    "moves": {
-      "Brave Bird": 50.0,
-      "Defog": 48.0,
-      "Fire Blast": 40.0,
-      "Steel Wing": 36.0,
-      "Flame Charge": 34.0,
-      "Will-O-Wisp": 24.0,
-      "Quick Attack": 22.0,
-      "Tailwind": 20.0,
-      "Flare Blitz": 20.0,
-      "U-turn": 18.0,
-      "Roost": 18.0,
-      "Dual Wingbeat": 16.0
-    },
-    "spread": "Nature: Hardy, EVs: 100/100/60/120/20/110"
-  },
-  {
-    "rank": null,
-    "name": "Flittle",
-    "safe_name": "flittle",
-    "usage": 0.0,
-    "ability": [
-      "Speed Boost",
+      "Run Away",
       "Anticipation "
     ],
-    "items": "Leftovers",
-    "moves": {
-      "Baton Pass": 90.173,
-      "Calm Mind": 83.237,
-      "Stored Power": 79.191,
-      "Substitute": 70.52,
-      "Nothing": 20.231
-    },
-    "spread": "Nature: Timid, EVs: 252/0/0/0/0/252"
-  },
-  {
-    "rank": null,
-    "name": "Floette",
-    "safe_name": "floette",
-    "usage": 0.0,
-    "ability": [
-      "Flower Veil"
-    ],
-    "items": "Leftovers",
-    "moves": {
-      "Draining Kiss": 54.167,
-      "Protect": 52.083,
-      "Giga Drain": 50.0,
-      "Substitute": 50.0,
-      "Charm": 27.083,
-      "Trick": 27.083,
-      "Skill Swap": 27.083,
-      "Tearful Look": 27.083,
-      "Nothing": 25.0
-    },
-    "spread": "Nature: Calm, EVs: 136/72/40/40/64/156"
-  },
-  {
-    "rank": null,
-    "name": "Floragato",
-    "safe_name": "floragato",
-    "usage": 0.0,
-    "ability": [
-      "Protean",
-      "Overgrow"
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Petal Blizzard": 71.429,
-      "Sucker Punch": 69.388,
-      "Play Rough": 32.653,
-      "Thunder Punch": 28.571,
-      "Aerial Ace": 24.49,
-      "U-turn": 24.49,
-      "Leech Seed": 20.408,
-      "Energy Ball": 20.408,
-      "Seed Bomb": 16.327,
-      "Leaf Storm": 16.327,
-      "Shadow Claw": 16.327
-    },
-    "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
-  },
-  {
-    "rank": null,
-    "name": "Foongus",
-    "safe_name": "foongus",
-    "usage": 0.0,
-    "ability": [
-      "Regenerator",
-      "Effect Spore "
-    ],
-    "items": "Leftovers",
-    "moves": {
-      "Spore": 89.706,
-      "Toxic": 70.588,
-      "Giga Drain": 67.647,
-      "Substitute": 60.294,
-      "Foul Play": 22.059,
-      "Rest": 22.059,
-      "Sleep Talk": 22.059,
-      "Clear Smog": 17.647
-    },
-    "spread": "Nature: Calm, EVs: 252/0/0/4/252/0"
-  },
-  {
-    "rank": null,
-    "name": "Fuecoco",
-    "safe_name": "fuecoco",
-    "usage": 0.0,
-    "ability": [
-      "Unaware",
-      "Blaze"
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Fire Blast": 49.324,
-      "Outrage": 47.297,
-      "Seed Bomb": 45.946,
-      "Flamethrower": 43.919,
-      "Yawn": 43.919,
-      "Roar": 22.973,
-      "Fire Spin": 22.297,
-      "Will-O-Wisp": 21.622,
-      "Overheat": 19.595,
-      "Protect": 18.919,
-      "Flare Blitz": 15.541
-    },
-    "spread": "Nature: Modest, EVs: 0/0/252/212/44/0"
-  },
-  {
-    "rank": null,
-    "name": "Gabite",
-    "safe_name": "gabite",
-    "usage": 0.0,
-    "ability": [
-      "Sand Veil",
-      "Rough Skin"
-    ],
-    "items": "Bright Powder",
-    "moves": {
-      "Dragon Claw": 60.714,
-      "Earthquake": 58.929,
-      "Swords Dance": 41.071,
-      "Crunch": 28.571,
-      "Sandstorm": 28.571,
-      "Fire Fang": 23.214,
-      "Rock Slide": 19.643
-    },
-    "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
-  },
-  {
-    "rank": null,
-    "name": "Geodude",
-    "safe_name": "geodude",
-    "usage": 0.0,
-    "ability": [
-      "Sturdy"
-    ],
-    "items": "Rocky Helmet",
-    "moves": {
-      "Explosion": 100.0,
-      "Stealth Rock": 90.909,
-      "Body Slam": 68.831,
-      "Mud-Slap": 68.831,
-      "Earthquake": 22.078,
-      "Nothing": 17.532,
-      "Stone Edge": 17.532
-    },
-    "spread": "Nature: Hardy, EVs: 176/0/160/0/172/0"
-  },
-  {
-    "rank": null,
-    "name": "Gible",
-    "safe_name": "gible",
-    "usage": 0.0,
-    "ability": [
-      "Sand Veil",
-      "Rough Skin"
-    ],
-    "items": "Nothing",
-    "moves": {
-      "Earthquake": 56.716,
-      "Draco Meteor": 49.254,
-      "Rock Slide": 41.791,
-      "Dragon Claw": 37.313,
-      "Fire Fang": 34.328,
-      "Scorching Sands": 19.403
-    },
-    "spread": "Nature: Hardy, EVs: 100/90/100/90/90/40"
-  },
-  {
-    "rank": null,
-    "name": "Girafarig",
-    "safe_name": "girafarig",
-    "usage": 0.0,
-    "ability": [
-      "Inner Focus",
-      "Early Bird",
-      "Sap Sipper"
-    ],
-    "items": "Toxic Orb",
-    "moves": {
-      "Light Screen": 45.455,
-      "Trick": 43.182,
-      "Thunder Wave": 43.182,
-      "Confuse Ray": 43.182,
-      "Energy Ball": 38.636,
-      "Calm Mind": 27.273,
-      "Future Sight": 25.0,
-      "Stomping Tantrum": 22.727,
-      "High Horsepower": 22.727,
-      "Agility": 20.455,
-      "Stored Power": 20.455
-    },
-    "spread": "Nature: Hardy, EVs: 136/0/120/0/100/152"
-  },
-  {
-    "rank": null,
-    "name": "Goomy",
-    "safe_name": "goomy",
-    "usage": 0.0,
-    "ability": [
-      "Sap Sipper",
-      "Gooey",
-      "Hydration"
-    ],
-    "items": "Leftovers",
-    "moves": {
-      "Draco Meteor": 53.731,
-      "Nothing": 53.731,
-      "Chilling Water": 41.791,
-      "Substitute": 26.866,
-      "Sludge Bomb": 22.388,
-      "Body Slam": 22.388,
-      "Rock Slide": 20.896,
-      "Thunderbolt": 19.403,
-      "Dragon Pulse": 17.91,
-      "Rain Dance": 16.418
-    },
-    "spread": "Nature: Gentle, EVs: 76/36/156/76/76/88"
-  },
-  {
-    "rank": null,
-    "name": "Graveler",
-    "safe_name": "graveler",
-    "usage": 0.0,
-    "ability": [
-      "Sturdy",
-      "Sand Veil",
-      "Rock Head "
-    ],
-    "items": "Choice Band",
-    "moves": {
-      "Explosion": 72.043,
-      "Body Press": 61.29,
-      "Rest": 49.462,
-      "Facade": 48.387,
-      "Nothing": 44.086,
-      "Earthquake": 25.806,
-      "Curse": 15.054
-    },
-    "spread": "Nature: Relaxed, EVs: 0/0/252/0/252/4"
-  },
-  {
-    "rank": null,
-    "name": "Greavard",
-    "safe_name": "greavard",
-    "usage": 0.0,
-    "ability": [
-      "Fluffy",
-      "Pickup"
-    ],
     "items": "Focus Sash",
     "moves": {
-      "Nothing": 54.206,
-      "Memento": 52.336,
-      "Shadow Sneak": 41.121,
-      "Destiny Bond": 40.187,
-      "Disable": 31.776,
-      "Endeavor": 29.907,
-      "Sandstorm": 26.168,
-      "Protect": 16.822
+      "Quick Attack": 66.535,
+      "Wish": 35.827,
+      "Double-Edge": 30.315,
+      "Sunny Day": 29.528,
+      "Protect": 27.559,
+      "Trailblaze": 23.228,
+      "Body Slam": 21.26
     },
-    "spread": "Nature: Impish, EVs: 248/8/252/0/0/0"
-  },
-  {
-    "rank": null,
-    "name": "Grotle",
-    "safe_name": "grotle",
-    "usage": 0.0,
-    "ability": [
-      "Overgrow",
-      "Shell Armor "
-    ],
-    "items": "White Herb",
-    "moves": {
-      "Shell Smash": 86.538,
-      "Iron Head": 86.538,
-      "Seed Bomb": 86.538,
-      "Crunch": 53.846,
-      "Stealth Rock": 40.385
-    },
-    "spread": "Nature: Adamant, EVs: 0/252/0/0/4/252"
-  },
-  {
-    "rank": null,
-    "name": "Grovyle",
-    "safe_name": "grovyle",
-    "usage": 0.0,
-    "ability": [
-      "Unburden",
-      "Overgrow"
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Leaf Blade": 79.365,
-      "Acrobatics": 69.841,
-      "Swords Dance": 58.73,
-      "Drain Punch": 39.683,
-      "Endeavor": 33.333,
-      "Agility": 15.873,
-      "Giga Drain": 15.873
-    },
-    "spread": "Nature: Adamant, EVs: 0/252/0/0/4/252"
+    "spread": "Nature: Careful, EVs: 252/0/4/0/252/0"
   },
   {
     "rank": null,
@@ -12080,88 +10208,22 @@
     "safe_name": "grumpig",
     "usage": 0.0,
     "ability": [
-      "Thick Fat",
       "Gluttony",
+      "Thick Fat",
       "Own Tempo "
     ],
-    "items": "Leftovers",
+    "items": "Salac Berry",
     "moves": {
-      "Dazzling Gleam": 73.077,
-      "Psychic": 46.154,
-      "Earth Power": 38.462,
-      "Psyshock": 36.538,
-      "Trick Room": 26.923,
-      "Belch": 25.0,
-      "Power Gem": 23.077,
-      "Shadow Ball": 19.231,
-      "Nasty Plot": 15.385
+      "Nasty Plot": 53.882,
+      "Belch": 43.765,
+      "Earth Power": 41.882,
+      "Psychic Noise": 41.647,
+      "Dazzling Gleam": 30.118,
+      "Psychic": 30.118,
+      "Thunder Wave": 17.882,
+      "Calm Mind": 16.0
     },
-    "spread": "Nature: Quiet, EVs: 252/0/0/252/4/0"
-  },
-  {
-    "rank": null,
-    "name": "Gurdurr",
-    "safe_name": "gurdurr",
-    "usage": 0.0,
-    "ability": [
-      "Iron Fist",
-      "Guts"
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Drain Punch": 70.968,
-      "Thunder Punch": 50.0,
-      "Fire Punch": 45.161,
-      "Ice Punch": 45.161,
-      "Knock Off": 37.097,
-      "Bulk Up": 32.258,
-      "Mach Punch": 24.194,
-      "Facade": 17.742,
-      "Defog": 17.742
-    },
-    "spread": "Nature: Adamant, EVs: 0/0/252/0/252/0"
-  },
-  {
-    "rank": null,
-    "name": "Hatenna",
-    "safe_name": "hatenna",
-    "usage": 0.0,
-    "ability": [
-      "Magic Bounce",
-      "Healer "
-    ],
-    "items": "Leftovers",
-    "moves": {
-      "Thunder Wave": 82.581,
-      "Baton Pass": 80.645,
-      "Substitute": 80.0,
-      "Metronome": 78.71,
-      "Trick Room": 16.774,
-      "Healing Wish": 16.129
-    },
-    "spread": "Nature: Timid, EVs: 252/0/0/0/0/252"
-  },
-  {
-    "rank": null,
-    "name": "Hippopotas",
-    "safe_name": "hippopotas",
-    "usage": 0.0,
-    "ability": [
-      "Sand Stream"
-    ],
-    "items": "Smooth Rock",
-    "moves": {
-      "Nothing": 123.143,
-      "Earthquake": 39.033,
-      "Double-Edge": 34.715,
-      "Protect": 34.37,
-      "Curse": 32.642,
-      "Roar": 22.971,
-      "Yawn": 22.798,
-      "Whirlwind": 18.48,
-      "Fissure": 16.235
-    },
-    "spread": "Nature: Hardy, EVs: 0/252/0/252/0/4"
+    "spread": "Nature: Timid, EVs: 0/0/0/252/4/252"
   },
   {
     "rank": null,
@@ -12171,18 +10233,18 @@
     "ability": [
       "Magician"
     ],
-    "items": "Choice Scarf",
+    "items": "Assault Vest",
     "moves": {
-      "Shadow Ball": 76.378,
-      "Psychic": 59.055,
-      "Dark Pulse": 42.52,
-      "Energy Ball": 30.709,
-      "Focus Blast": 25.197,
-      "Calm Mind": 16.535,
-      "Trick": 15.748,
-      "Nasty Plot": 15.748
+      "Shadow Ball": 88.008,
+      "Psychic": 38.008,
+      "Focus Blast": 34.72,
+      "Thunderbolt": 30.851,
+      "Hyperspace Hole": 29.884,
+      "Psyshock": 26.983,
+      "Energy Ball": 20.406,
+      "Trick": 17.602
     },
-    "spread": "Nature: Modest, EVs: 4/0/0/252/0/252"
+    "spread": "Nature: Timid, EVs: 0/0/0/252/4/252"
   },
   {
     "rank": null,
@@ -12192,40 +10254,19 @@
     "ability": [
       "Magician"
     ],
-    "items": "Life Orb",
+    "items": "Assault Vest",
     "moves": {
-      "Hyperspace Fury": 56.859,
-      "Drain Punch": 39.861,
-      "Psychic": 38.568,
-      "Dark Pulse": 23.372,
-      "Trick Room": 23.095,
-      "Knock Off": 15.843,
-      "Thunderbolt": 15.289
+      "Drain Punch": 58.75,
+      "Thunderbolt": 46.504,
+      "Knock Off": 43.712,
+      "Psychic Noise": 41.468,
+      "Hyperspace Fury": 39.085,
+      "Psychic": 26.459,
+      "Dark Pulse": 21.824,
+      "Gunk Shot": 16.448,
+      "Trick Room": 15.697
     },
-    "spread": "Nature: Brave, EVs: 4/252/0/252/0/0"
-  },
-  {
-    "rank": null,
-    "name": "Hoothoot",
-    "safe_name": "hoothoot",
-    "usage": 0.0,
-    "ability": [
-      "Tinted Lens",
-      "Insomnia"
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Hypnosis": 67.273,
-      "Dream Eater": 65.455,
-      "Calm Mind": 43.636,
-      "Shadow Ball": 40.0,
-      "Tailwind": 38.182,
-      "Moonblast": 25.455,
-      "Protect": 21.818,
-      "Roost": 21.818,
-      "Stored Power": 18.182
-    },
-    "spread": "Nature: Modest, EVs: 4/0/0/252/0/252"
+    "spread": "Nature: Quiet, EVs: 252/0/180/76/0/0"
   },
   {
     "rank": null,
@@ -12234,60 +10275,20 @@
     "usage": 0.0,
     "ability": [
       "Prankster",
-      "Tinted Lens "
+      "Tinted Lens",
+      "Oblivious "
     ],
-    "items": "Eject Button",
+    "items": "Heavy-Duty Boots",
     "moves": {
-      "Thunder Wave": 86.01,
-      "Encore": 75.13,
-      "Roost": 39.896,
-      "Bug Buzz": 37.824,
-      "U-turn": 26.943,
-      "Wish": 26.425,
-      "Nothing": 25.907
+      "Encore": 63.164,
+      "Thunder Wave": 47.095,
+      "U-turn": 43.881,
+      "Bug Buzz": 40.173,
+      "Tailwind": 32.88,
+      "Wish": 23.362,
+      "Roost": 15.451
     },
-    "spread": "Nature: Calm, EVs: 252/0/0/4/252/0"
-  },
-  {
-    "rank": null,
-    "name": "Impidimp",
-    "safe_name": "impidimp",
-    "usage": 0.0,
-    "ability": [
-      "Prankster",
-      "Frisk "
-    ],
-    "items": "Lagging Tail",
-    "moves": {
-      "Fake Out": 86.449,
-      "Protect": 85.514,
-      "Trick": 79.439,
-      "Foul Play": 55.14,
-      "Thunder Wave": 26.636
-    },
-    "spread": "Nature: Hardy, EVs: 0/252/0/252/0/4"
-  },
-  {
-    "rank": null,
-    "name": "Inkay",
-    "safe_name": "inkay",
-    "usage": 0.0,
-    "ability": [
-      "Contrary",
-      "Infiltrator",
-      "Suction Cups "
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Topsy-Turvy": 75.258,
-      "Knock Off": 69.072,
-      "Destiny Bond": 69.072,
-      "Trick Room": 60.825,
-      "Superpower": 26.804,
-      "Foul Play": 23.711,
-      "Baton Pass": 16.495
-    },
-    "spread": "Nature: Brave, EVs: 0/252/0/0/0/0"
+    "spread": "Nature: Calm, EVs: 252/0/4/0/252/0"
   },
   {
     "rank": null,
@@ -12297,42 +10298,17 @@
     "ability": [
       "Serene Grace"
     ],
-    "items": "Choice Scarf",
+    "items": "Leftovers",
     "moves": {
-      "Iron Head": 75.882,
-      "Body Slam": 38.007,
-      "Wish": 36.464,
-      "U-turn": 22.84,
-      "Zen Headbutt": 19.709,
-      "Meteor Mash": 18.122,
-      "Fire Punch": 17.284
+      "Iron Head": 65.268,
+      "U-turn": 38.401,
+      "Body Slam": 29.312,
+      "Zen Headbutt": 22.152,
+      "Wish": 21.377,
+      "Doom Desire": 16.482,
+      "Stealth Rock": 15.241
     },
-    "spread": "Nature: Adamant, EVs: 4/252/0/0/0/252"
-  },
-  {
-    "rank": null,
-    "name": "Joltik",
-    "safe_name": "joltik",
-    "usage": 0.0,
-    "ability": [
-      "Compound Eyes",
-      "Unnerve",
-      "Swarm "
-    ],
-    "items": "Aguav Berry",
-    "moves": {
-      "Leech Life": 52.597,
-      "Electroweb": 42.208,
-      "Thunder": 38.961,
-      "Electro Ball": 35.714,
-      "Gastro Acid": 32.468,
-      "Bug Buzz": 30.519,
-      "Giga Drain": 19.481,
-      "Discharge": 18.831,
-      "Substitute": 17.532,
-      "Sucker Punch": 15.584
-    },
-    "spread": "Nature: Hasty, EVs: 200/1/1/1/105/200"
+    "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
   },
   {
     "rank": null,
@@ -12344,83 +10320,16 @@
     ],
     "items": "Choice Specs",
     "moves": {
-      "Secret Sword": 72.837,
-      "Surf": 44.591,
-      "Air Slash": 43.87,
-      "Hydro Pump": 31.971,
-      "Calm Mind": 23.798,
-      "Vacuum Wave": 23.798,
-      "Aura Sphere": 19.111,
-      "Flip Turn": 16.827,
-      "Icy Wind": 16.466
+      "Surf": 85.524,
+      "Vacuum Wave": 80.19,
+      "Secret Sword": 77.084,
+      "Flip Turn": 49.206,
+      "Icy Wind": 28.063,
+      "Aura Sphere": 20.651,
+      "Hydro Pump": 15.937,
+      "Calm Mind": 15.785
     },
     "spread": "Nature: Timid, EVs: 0/0/0/252/4/252"
-  },
-  {
-    "rank": null,
-    "name": "Koffing",
-    "safe_name": "koffing",
-    "usage": 0.0,
-    "ability": [
-      "Levitate",
-      "Neutralizing Gas",
-      "Stench "
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Nothing": 76.271,
-      "Explosion": 45.763,
-      "Destiny Bond": 37.288,
-      "Acid Spray": 30.508,
-      "Stockpile": 30.508,
-      "Shadow Ball": 30.508,
-      "Rest": 30.508,
-      "Self-Destruct": 22.034
-    },
-    "spread": "Nature: Calm, EVs: 252/0/4/0/252/0"
-  },
-  {
-    "rank": null,
-    "name": "Magearna",
-    "safe_name": "magearna",
-    "usage": 0.0,
-    "ability": [
-      "Soul-Heart"
-    ],
-    "items": "Leftovers",
-    "moves": {
-      "Fleur Cannon": 47.678,
-      "Calm Mind": 39.775,
-      "Draining Kiss": 37.452,
-      "Flash Cannon": 34.961,
-      "Stored Power": 29.504,
-      "Trick Room": 27.993,
-      "Shift Gear": 25.378,
-      "Volt Switch": 22.57,
-      "Dazzling Gleam": 15.445,
-      "Iron Defense": 15.287
-    },
-    "spread": "Nature: Modest, EVs: 252/0/0/252/4/0"
-  },
-  {
-    "rank": null,
-    "name": "Magnemite",
-    "safe_name": "magnemite",
-    "usage": 0.0,
-    "ability": [
-      "Analytic",
-      "Sturdy"
-    ],
-    "items": "Expert Belt",
-    "moves": {
-      "Explosion": 81.69,
-      "Iron Head": 77.465,
-      "Gyro Ball": 67.606,
-      "Iron Defense": 66.197,
-      "Nothing": 40.845,
-      "Flash Cannon": 16.901
-    },
-    "spread": "Nature: Serious, EVs: 132/92/60/36/56/132"
   },
   {
     "rank": null,
@@ -12432,60 +10341,18 @@
     ],
     "items": "Leftovers",
     "moves": {
-      "Tail Glow": 82.775,
-      "Scald": 66.248,
-      "Ice Beam": 32.566,
-      "Alluring Voice": 31.59,
-      "Energy Ball": 27.824,
-      "Rain Dance": 24.128,
-      "Surf": 23.361,
-      "Heart Swap": 21.548,
-      "Stored Power": 15.342
+      "Tail Glow": 76.7,
+      "Surf": 67.515,
+      "Alluring Voice": 52.466,
+      "Substitute": 38.655,
+      "Scald": 28.454,
+      "Ice Beam": 24.379,
+      "Energy Ball": 23.789,
+      "Take Heart": 21.778,
+      "Stored Power": 19.302,
+      "Acid Armor": 19.232
     },
-    "spread": "Nature: Timid, EVs: 4/0/0/252/0/252"
-  },
-  {
-    "rank": null,
-    "name": "Mareanie",
-    "safe_name": "mareanie",
-    "usage": 0.0,
-    "ability": [
-      "Merciless",
-      "Regenerator"
-    ],
-    "items": "Leftovers",
-    "moves": {
-      "Blizzard": 71.795,
-      "Pain Split": 69.231,
-      "Sludge Wave": 69.231,
-      "Toxic": 56.41,
-      "Hydro Pump": 25.641,
-      "Liquidation": 20.513,
-      "Ice Spinner": 17.949,
-      "Gunk Shot": 17.949,
-      "Poison Jab": 15.385
-    },
-    "spread": "Nature: Hardy, EVs: 120/92/76/52/52/116"
-  },
-  {
-    "rank": null,
-    "name": "Meditite",
-    "safe_name": "meditite",
-    "usage": 0.0,
-    "ability": [
-      "Pure Power",
-      "Telepathy "
-    ],
-    "items": "Life Orb",
-    "moves": {
-      "Ice Punch": 67.46,
-      "Close Combat": 64.286,
-      "Zen Headbutt": 58.73,
-      "Fake Out": 57.937,
-      "Nothing": 42.857,
-      "Reversal": 15.079
-    },
-    "spread": "Nature: Jolly, EVs: 4/252/0/0/0/252"
+    "spread": "Nature: Timid, EVs: 0/0/16/252/0/240"
   },
   {
     "rank": null,
@@ -12495,36 +10362,17 @@
     "ability": [
       "Serene Grace"
     ],
-    "items": "Leftovers",
+    "items": "Assault Vest",
     "moves": {
-      "Relic Song": 61.74,
-      "Psychic": 40.331,
-      "Calm Mind": 31.354,
-      "Hyper Voice": 29.834,
-      "Drain Punch": 23.204,
-      "Alluring Voice": 19.337
+      "Relic Song": 67.048,
+      "Psychic": 52.014,
+      "Close Combat": 34.716,
+      "Shadow Ball": 26.619,
+      "Knock Off": 24.694,
+      "Drain Punch": 18.962,
+      "Hyper Voice": 15.234
     },
     "spread": "Nature: Timid, EVs: 0/0/0/252/4/252"
-  },
-  {
-    "rank": null,
-    "name": "Meowth",
-    "safe_name": "meowth",
-    "usage": 0.0,
-    "ability": [
-      "Technician",
-      "Pickup",
-      "Unnerve"
-    ],
-    "items": "Choice Band",
-    "moves": {
-      "Nothing": 77.841,
-      "Fake Out": 50.0,
-      "Knock Off": 43.75,
-      "Aerial Ace": 41.477,
-      "Tera Blast": 26.705
-    },
-    "spread": "Nature: Naive, EVs: 4/252/0/0/0/252"
   },
   {
     "rank": null,
@@ -12534,23 +10382,20 @@
     "ability": [
       "Levitate"
     ],
-    "items": "Choice Band",
+    "items": "Leftovers",
     "moves": {
-      "Zen Headbutt": 52.8,
-      "Drain Punch": 28.0,
-      "Thunder": 26.4,
-      "Iron Tail": 24.0,
-      "Psyshock": 24.0,
-      "U-turn": 23.2,
-      "Psychic Noise": 23.2,
-      "Draining Kiss": 23.2,
-      "Knock Off": 22.4,
-      "Mystical Power": 21.6,
-      "Dazzling Gleam": 16.8,
-      "Trick Room": 16.0,
-      "Shadow Ball": 16.0
+      "Healing Wish": 38.398,
+      "Stealth Rock": 37.077,
+      "U-turn": 36.499,
+      "Knock Off": 26.424,
+      "Ice Beam": 26.094,
+      "Psychic Noise": 21.965,
+      "Mystical Power": 21.8,
+      "Encore": 17.424,
+      "Draining Kiss": 16.928,
+      "Trick Room": 16.268
     },
-    "spread": "Nature: Hardy, EVs: 4/252/252/0/0/0"
+    "spread": "Nature: Calm, EVs: 252/0/4/0/252/0"
   },
   {
     "rank": null,
@@ -12562,122 +10407,13 @@
     ],
     "items": "Leftovers",
     "moves": {
-      "Transform": 46.809,
-      "Imprison": 35.263,
-      "Fire Spin": 24.939,
-      "Stealth Rock": 21.451
+      "Transform": 30.521,
+      "Imprison": 27.819,
+      "Stealth Rock": 21.257,
+      "Fire Spin": 18.825,
+      "Psychic": 16.206
     },
-    "spread": "Nature: Timid, EVs: 252/0/4/0/0/252"
-  },
-  {
-    "rank": null,
-    "name": "Mienfoo",
-    "safe_name": "mienfoo",
-    "usage": 0.0,
-    "ability": [
-      "Regenerator"
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Knock Off": 98.529,
-      "Hone Claws": 94.118,
-      "Substitute": 94.118,
-      "Baton Pass": 94.118
-    },
-    "spread": "Nature: Jolly, EVs: 252/0/0/0/0/252"
-  },
-  {
-    "rank": null,
-    "name": "Minccino",
-    "safe_name": "minccino",
-    "usage": 0.0,
-    "ability": [
-      "Cute Charm",
-      "Skill Link",
-      "Technician"
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Tidy Up": 52.239,
-      "Bullet Seed": 41.791,
-      "Tail Slap": 41.791,
-      "Calm Mind": 35.821,
-      "Baton Pass": 31.343,
-      "Alluring Voice": 28.358,
-      "Aqua Tail": 28.358,
-      "Protect": 26.866,
-      "Endeavor": 25.373,
-      "Sing": 23.881
-    },
-    "spread": "Nature: Hardy, EVs: 0/0/0/0/0/0"
-  },
-  {
-    "rank": null,
-    "name": "Monferno",
-    "safe_name": "monferno",
-    "usage": 0.0,
-    "ability": [
-      "Iron Fist",
-      "Blaze"
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Endeavor": 58.621,
-      "Drain Punch": 57.471,
-      "Mach Punch": 43.678,
-      "Flame Charge": 29.885,
-      "Thunder Punch": 28.736,
-      "Fake Out": 28.736,
-      "Fire Punch": 20.69,
-      "Close Combat": 18.391,
-      "Flare Blitz": 17.241
-    },
-    "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
-  },
-  {
-    "rank": null,
-    "name": "Mudkip",
-    "safe_name": "mudkip",
-    "usage": 0.0,
-    "ability": [
-      "Damp",
-      "Torrent"
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Endeavor": 46.729,
-      "Counter": 31.776,
-      "Mirror Coat": 27.103,
-      "Hydro Pump": 27.103,
-      "Ice Beam": 25.234,
-      "Double-Edge": 21.963,
-      "Waterfall": 21.495,
-      "Ancient Power": 19.159,
-      "Avalanche": 18.692,
-      "Body Slam": 18.224,
-      "Earth Power": 17.757,
-      "Curse": 15.421
-    },
-    "spread": "Nature: Careful, EVs: 248/8/0/0/252/0"
-  },
-  {
-    "rank": null,
-    "name": "Naclstack",
-    "safe_name": "naclstack",
-    "usage": 0.0,
-    "ability": [
-      "Purifying Salt"
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Salt Cure": 100.0,
-      "Recover": 78.261,
-      "Stealth Rock": 78.261,
-      "Body Press": 78.261,
-      "Earthquake": 21.739,
-      "Iron Head": 21.739
-    },
-    "spread": "Nature: Careful, EVs: 252/0/4/0/252/0"
+    "spread": "Nature: Timid, EVs: 0/0/0/252/4/252"
   },
   {
     "rank": null,
@@ -12686,85 +10422,19 @@
     "usage": 0.0,
     "ability": [
       "Sturdy",
-      "Sand Force "
+      "Magnet Pull"
     ],
-    "items": "Rocky Helmet",
+    "items": "Eviolite",
     "moves": {
-      "Pain Split": 92.683,
-      "Protect": 54.878,
-      "Stealth Rock": 35.366,
-      "Taunt": 31.707,
-      "Thunder Wave": 25.61,
-      "Body Press": 23.171,
-      "Earthquake": 21.951,
-      "Endure": 18.293,
-      "Sandstorm": 15.854,
-      "Iron Defense": 15.854
+      "Pain Split": 83.202,
+      "Stealth Rock": 54.593,
+      "Thunder Wave": 50.656,
+      "Body Press": 50.131,
+      "Protect": 41.732,
+      "Nothing": 31.234,
+      "Volt Switch": 26.772
     },
-    "spread": "Nature: Hardy, EVs: 0/0/0/0/0/0"
-  },
-  {
-    "rank": null,
-    "name": "Oddish",
-    "safe_name": "oddish",
-    "usage": 0.0,
-    "ability": [
-      "Chlorophyll",
-      "Run Away "
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Giga Drain": 92.994,
-      "Protect": 58.599,
-      "Sleep Powder": 56.051,
-      "Moonlight": 53.503,
-      "Leech Seed": 36.943,
-      "Ingrain": 31.847,
-      "Sunny Day": 31.847
-    },
-    "spread": "Nature: Serious, EVs: 252/0/4/252/0/0"
-  },
-  {
-    "rank": null,
-    "name": "Oinkologne-F",
-    "safe_name": "oinkologne-f",
-    "usage": 0.0,
-    "ability": [
-      "Aroma Veil",
-      "Thick Fat"
-    ],
-    "items": "Rocky Helmet",
-    "moves": {
-      "Endeavor": 71.795,
-      "Headbutt": 71.795,
-      "Endure": 71.795,
-      "Body Press": 69.231,
-      "Curse": 23.077,
-      "Rest": 20.513,
-      "Body Slam": 17.949
-    },
-    "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
-  },
-  {
-    "rank": null,
-    "name": "Oricorio-Pau",
-    "safe_name": "oricorio-pau",
-    "usage": 0.0,
-    "ability": [
-      "Dancer"
-    ],
-    "items": "Heavy-Duty Boots",
-    "moves": {
-      "Quiver Dance": 86.842,
-      "Revelation Dance": 75.188,
-      "Roost": 53.008,
-      "Baton Pass": 28.947,
-      "Air Slash": 21.053,
-      "Attract": 19.549,
-      "Alluring Voice": 17.669,
-      "Hurricane": 15.038
-    },
-    "spread": "Nature: Hardy, EVs: 252/0/0/4/0/252"
+    "spread": "Nature: Bold, EVs: 248/0/252/0/8/0"
   },
   {
     "rank": null,
@@ -12774,17 +10444,17 @@
     "ability": [
       "Dancer"
     ],
-    "items": "Focus Sash",
+    "items": "Heavy-Duty Boots",
     "moves": {
-      "Revelation Dance": 92.252,
-      "Quiver Dance": 77.24,
-      "Roost": 62.47,
-      "Air Slash": 52.542,
-      "Hurricane": 34.625,
-      "Defog": 24.939,
-      "Tailwind": 18.402
+      "Revelation Dance": 95.726,
+      "Quiver Dance": 88.26,
+      "Roost": 53.913,
+      "Air Slash": 41.349,
+      "Hurricane": 34.243,
+      "Alluring Voice": 24.15,
+      "Defog": 20.855
     },
-    "spread": "Nature: Modest, EVs: 0/0/4/252/0/252"
+    "spread": "Nature: Modest, EVs: 0/0/0/252/4/252"
   },
   {
     "rank": null,
@@ -12794,17 +10464,17 @@
     "ability": [
       "Poison Puppeteer"
     ],
-    "items": "Leftovers",
+    "items": "Heavy-Duty Boots",
     "moves": {
-      "Malignant Chain": 85.175,
-      "Recover": 66.381,
-      "Hex": 48.938,
-      "Parting Shot": 43.231,
-      "Toxic": 30.487,
-      "Shadow Ball": 25.231,
-      "Nasty Plot": 23.622
+      "Malignant Chain": 95.697,
+      "Recover": 88.763,
+      "Parting Shot": 74.927,
+      "Hex": 45.976,
+      "Shadow Ball": 29.276,
+      "Foul Play": 22.613,
+      "Nasty Plot": 16.571
     },
-    "spread": "Nature: Bold, EVs: 252/0/252/4/0/0"
+    "spread": "Nature: Timid, EVs: 252/0/4/0/0/252"
   },
   {
     "rank": null,
@@ -12812,303 +10482,17 @@
     "safe_name": "phanpy",
     "usage": 0.0,
     "ability": [
-      "Sand Veil",
       "Pickup"
     ],
-    "items": "Eviolite",
+    "items": "Custap Berry",
     "moves": {
-      "Fissure": 80.769,
-      "Counter": 80.769,
-      "Smack Down": 79.231,
-      "Rest": 79.231,
-      "Endeavor": 20.769,
-      "Ice Shard": 15.385,
-      "Protect": 15.385
+      "Ice Shard": 98.423,
+      "Earthquake": 93.849,
+      "Play Rough": 93.691,
+      "Endeavor": 76.025,
+      "Rock Slide": 22.397
     },
-    "spread": "Nature: Careful, EVs: 4/0/252/0/252/0"
-  },
-  {
-    "rank": null,
-    "name": "Phantump",
-    "safe_name": "phantump",
-    "usage": 0.0,
-    "ability": [
-      "Harvest",
-      "Frisk",
-      "Natural Cure "
-    ],
-    "items": "Sitrus Berry",
-    "moves": {
-      "Horn Leech": 60.465,
-      "Leech Seed": 60.465,
-      "Sunny Day": 60.0,
-      "Ingrain": 60.0,
-      "Giga Drain": 32.558,
-      "Destiny Bond": 29.302,
-      "Dark Pulse": 26.047,
-      "Grass Knot": 23.721
-    },
-    "spread": "Nature: Sassy, EVs: 200/1/105/1/200/1"
-  },
-  {
-    "rank": null,
-    "name": "Phione",
-    "safe_name": "phione",
-    "usage": 0.0,
-    "ability": [
-      "Hydration"
-    ],
-    "items": "Leftovers",
-    "moves": {
-      "Scald": 78.302,
-      "Flip Turn": 54.717,
-      "Protect": 51.887,
-      "Ice Beam": 47.17,
-      "Take Heart": 22.642,
-      "Rest": 19.811,
-      "Sleep Talk": 18.868
-    },
-    "spread": "Nature: Modest, EVs: 0/0/160/100/116/132"
-  },
-  {
-    "rank": null,
-    "name": "Pineco",
-    "safe_name": "pineco",
-    "usage": 0.0,
-    "ability": [
-      "Sturdy"
-    ],
-    "items": "Ability Shield",
-    "moves": {
-      "Toxic Spikes": 78.125,
-      "Pain Split": 67.708,
-      "Protect": 46.875,
-      "Spikes": 45.833,
-      "Explosion": 31.25,
-      "Nothing": 31.25,
-      "Rapid Spin": 18.75,
-      "Stealth Rock": 15.625
-    },
-    "spread": "Nature: Bold, EVs: 0/0/0/0/0/156"
-  },
-  {
-    "rank": null,
-    "name": "Piplup",
-    "safe_name": "piplup",
-    "usage": 0.0,
-    "ability": [
-      "Competitive",
-      "Torrent"
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Ice Beam": 39.326,
-      "Substitute": 38.577,
-      "Roost": 38.202,
-      "Power Trip": 37.453,
-      "Aqua Ring": 37.453,
-      "Protect": 32.959,
-      "Surf": 27.341,
-      "Yawn": 25.843,
-      "Blizzard": 15.356
-    },
-    "spread": "Nature: Adamant, EVs: 132/116/100/0/64/96"
-  },
-  {
-    "rank": null,
-    "name": "Porygon",
-    "safe_name": "porygon",
-    "usage": 0.0,
-    "ability": [
-      "Download",
-      "Analytic",
-      "Trace"
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Ice Beam": 46.043,
-      "Recover": 41.727,
-      "Thunder Wave": 38.129,
-      "Discharge": 37.41,
-      "Trick Room": 28.058,
-      "Tri Attack": 26.619,
-      "Protect": 24.46,
-      "Foul Play": 20.144,
-      "Thunderbolt": 17.266,
-      "Psychic": 16.547
-    },
-    "spread": "Nature: Calm, EVs: 252/0/0/4/252/0"
-  },
-  {
-    "rank": null,
-    "name": "Psyduck",
-    "safe_name": "psyduck",
-    "usage": 0.0,
-    "ability": [
-      "Cloud Nine",
-      "Swift Swim",
-      "Damp"
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Ice Beam": 50.195,
-      "Hydro Pump": 40.467,
-      "Clear Smog": 28.405,
-      "Surf": 26.848,
-      "Psychic": 23.735,
-      "Skill Swap": 21.79,
-      "Muddy Water": 18.677,
-      "Encore": 16.342,
-      "Vacuum Wave": 15.175
-    },
-    "spread": "Nature: Modest, EVs: 252/0/120/32/104/0"
-  },
-  {
-    "rank": null,
-    "name": "Quaxly",
-    "safe_name": "quaxly",
-    "usage": 0.0,
-    "ability": [
-      "Moxie",
-      "Torrent "
-    ],
-    "items": "Choice Band",
-    "moves": {
-      "Liquidation": 88.889,
-      "Nothing": 83.838,
-      "Aqua Cutter": 70.707,
-      "Aqua Jet": 56.566,
-      "Acrobatics": 31.313,
-      "Rapid Spin": 17.172,
-      "Tera Blast": 16.162
-    },
-    "spread": "Nature: Adamant, EVs: 0/252/4/0/0/252"
-  },
-  {
-    "rank": null,
-    "name": "Quaxwell",
-    "safe_name": "quaxwell",
-    "usage": 0.0,
-    "ability": [
-      "Moxie"
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Triple Axel": 100.0,
-      "Liquidation": 98.077,
-      "Aqua Jet": 90.385,
-      "Rapid Spin": 88.462
-    },
-    "spread": "Nature: Jolly, EVs: 4/0/252/0/0/252"
-  },
-  {
-    "rank": null,
-    "name": "Raboot",
-    "safe_name": "raboot",
-    "usage": 0.0,
-    "ability": [
-      "Blaze",
-      "Libero"
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Sucker Punch": 79.63,
-      "Flame Charge": 51.852,
-      "Bulk Up": 42.593,
-      "Gunk Shot": 40.741,
-      "Swords Dance": 33.333,
-      "Flare Blitz": 31.481,
-      "High Jump Kick": 22.222,
-      "U-turn": 18.519
-    },
-    "spread": "Nature: Jolly, EVs: 24/252/0/0/0/232"
-  },
-  {
-    "rank": null,
-    "name": "Ralts",
-    "safe_name": "ralts",
-    "usage": 0.0,
-    "ability": [
-      "Trace",
-      "Synchronize",
-      "Telepathy "
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Destiny Bond": 52.5,
-      "Trick Room": 38.75,
-      "Disable": 37.5,
-      "Calm Mind": 34.375,
-      "Encore": 21.875,
-      "Nothing": 20.0,
-      "Mystical Fire": 15.625
-    },
-    "spread": "Nature: Hardy, EVs: 0/0/0/0/0/0"
-  },
-  {
-    "rank": null,
-    "name": "Seadra",
-    "safe_name": "seadra",
-    "usage": 0.0,
-    "ability": [
-      "Poison Point",
-      "Sniper",
-      "Damp "
-    ],
-    "items": "Dragon Scale",
-    "moves": {
-      "Dragon Dance": 90.244,
-      "Dragon Pulse": 70.732,
-      "Protect": 60.976,
-      "Hydro Pump": 56.098,
-      "Outrage": 24.39,
-      "Waterfall": 24.39,
-      "Flip Turn": 24.39,
-      "Agility": 19.512
-    },
-    "spread": "Nature: Hardy, EVs: 50/50/50/50/50/50"
-  },
-  {
-    "rank": null,
-    "name": "Seedot",
-    "safe_name": "seedot",
-    "usage": 0.0,
-    "ability": [
-      "Chlorophyll",
-      "Early Bird",
-      "Pickpocket"
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Nothing": 111.111,
-      "Quick Attack": 78.472,
-      "Endeavor": 78.472,
-      "Explosion": 30.556,
-      "Sucker Punch": 27.083,
-      "Leech Seed": 26.389
-    },
-    "spread": "Nature: Adamant, EVs: 0/0/0/0/0/36"
-  },
-  {
-    "rank": null,
-    "name": "Seel",
-    "safe_name": "seel",
-    "usage": 0.0,
-    "ability": [
-      "Thick Fat",
-      "Hydration "
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Nothing": 84.444,
-      "Horn Drill": 73.333,
-      "Disable": 52.593,
-      "Curse": 43.704,
-      "Ice Beam": 43.704,
-      "Perish Song": 26.667,
-      "Blizzard": 22.222
-    },
-    "spread": "Nature: Serious, EVs: 0/0/0/0/0/252"
+    "spread": "Nature: Adamant, EVs: 4/252/252/0/0/0"
   },
   {
     "rank": null,
@@ -13121,13 +10505,16 @@
     ],
     "items": "Black Sludge",
     "moves": {
-      "Coil": 69.742,
-      "Switcheroo": 60.517,
-      "Poison Jab": 54.982,
-      "Knock Off": 54.613,
-      "Trailblaze": 20.664,
-      "Earthquake": 19.557,
-      "Gunk Shot": 19.188
+      "Gunk Shot": 36.695,
+      "Earthquake": 30.252,
+      "Flamethrower": 27.311,
+      "Trailblaze": 25.91,
+      "Knock Off": 21.148,
+      "Sludge Bomb": 20.728,
+      "Glare": 19.888,
+      "Toxic": 19.468,
+      "Coil": 19.048,
+      "Giga Drain": 18.908
     },
     "spread": "Nature: Adamant, EVs: 252/252/0/0/4/0"
   },
@@ -13139,37 +10526,17 @@
     "ability": [
       "Natural Cure"
     ],
-    "items": "Power Herb",
+    "items": "Leftovers",
     "moves": {
-      "Seed Flare": 40.833,
-      "Solar Beam": 35.0,
-      "Healing Wish": 31.667,
-      "Synthesis": 30.0,
-      "Earth Power": 29.167,
-      "Dazzling Gleam": 28.333,
-      "Air Slash": 27.5,
-      "Leech Seed": 23.333,
-      "Bullet Seed": 20.833,
-      "Giga Drain": 20.0
-    },
-    "spread": "Nature: Hardy, EVs: 228/152/128/0/0/0"
-  },
-  {
-    "rank": null,
-    "name": "Shaymin-Sky",
-    "safe_name": "shaymin-sky",
-    "usage": 0.0,
-    "ability": [
-      "Serene Grace"
-    ],
-    "items": "Choice Scarf",
-    "moves": {
-      "Air Slash": 95.635,
-      "Seed Flare": 78.952,
-      "Earth Power": 52.096,
-      "Dazzling Gleam": 23.742,
-      "Leech Seed": 22.793,
-      "Healing Wish": 21.899
+      "Seed Flare": 58.232,
+      "Earth Power": 57.012,
+      "Air Slash": 46.829,
+      "Leech Seed": 41.707,
+      "Synthesis": 23.841,
+      "Protect": 23.841,
+      "Dazzling Gleam": 23.049,
+      "Giga Drain": 19.695,
+      "Substitute": 19.634
     },
     "spread": "Nature: Timid, EVs: 0/0/0/252/4/252"
   },
@@ -13180,154 +10547,19 @@
     "usage": 0.0,
     "ability": [
       "Prankster",
-      "Pickpocket "
+      "Pickpocket ",
+      "Unburden "
     ],
-    "items": "Ring Target",
+    "items": "Air Balloon",
     "moves": {
-      "Copycat": 92.308,
-      "Dig": 69.231,
-      "Encore": 51.282,
-      "Toxic": 51.282,
-      "Switcheroo": 48.718,
-      "Parting Shot": 41.026,
-      "Sludge Bomb": 23.077
+      "Encore": 86.905,
+      "Copycat": 81.845,
+      "Dig": 81.548,
+      "Toxic": 63.988,
+      "Switcheroo": 33.036,
+      "Parting Shot": 16.071
     },
-    "spread": "Nature: Brave, EVs: 252/252/0/0/4/0"
-  },
-  {
-    "rank": null,
-    "name": "Shroomish",
-    "safe_name": "shroomish",
-    "usage": 0.0,
-    "ability": [
-      "Poison Heal",
-      "Quick Feet",
-      "Effect Spore "
-    ],
-    "items": "Toxic Orb",
-    "moves": {
-      "Leech Seed": 89.231,
-      "Spore": 50.0,
-      "Giga Drain": 46.154,
-      "Protect": 39.231,
-      "Substitute": 36.923,
-      "Drain Punch": 34.615,
-      "Toxic": 34.615
-    },
-    "spread": "Nature: Calm, EVs: 252/0/0/4/252/0"
-  },
-  {
-    "rank": null,
-    "name": "Shuppet",
-    "safe_name": "shuppet",
-    "usage": 0.0,
-    "ability": [
-      "Cursed Body",
-      "Insomnia "
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Hex": 87.143,
-      "Disable": 87.143,
-      "Destiny Bond": 82.857,
-      "Curse": 82.857
-    },
-    "spread": "Nature: Hardy, EVs: 1/1/1/1/252/252"
-  },
-  {
-    "rank": null,
-    "name": "Sinistea",
-    "safe_name": "sinistea",
-    "usage": 0.0,
-    "ability": [
-      "Cursed Body",
-      "Weak Armor"
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Nothing": 62.637,
-      "Protect": 36.264,
-      "Baton Pass": 32.967,
-      "Calm Mind": 31.868,
-      "Memento": 30.769,
-      "Shell Smash": 29.67,
-      "Substitute": 23.077,
-      "Stored Power": 20.879,
-      "Shadow Ball": 19.78,
-      "Trick": 17.582,
-      "Skill Swap": 15.385
-    },
-    "spread": "Nature: Bold, EVs: 248/0/252/0/8/0"
-  },
-  {
-    "rank": null,
-    "name": "Sliggoo-Hisui",
-    "safe_name": "sliggoo-hisui",
-    "usage": 0.0,
-    "ability": [
-      "Gooey",
-      "Sap Sipper",
-      "Shell Armor"
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Flash Cannon": 85.714,
-      "Dragon Pulse": 50.794,
-      "Acid Spray": 39.683,
-      "Acid Armor": 39.683,
-      "Thunderbolt": 38.095,
-      "Counter": 36.508,
-      "Skitter Smack": 31.746,
-      "Chilling Water": 17.46
-    },
-    "spread": "Nature: Relaxed, EVs: 252/0/0/252/0/0"
-  },
-  {
-    "rank": null,
-    "name": "Slowpoke-Galar",
-    "safe_name": "slowpoke-galar",
-    "usage": 0.0,
-    "ability": [
-      "Regenerator",
-      "Own Tempo",
-      "Gluttony"
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Calm Mind": 51.282,
-      "Trick Room": 48.718,
-      "Slack Off": 35.897,
-      "Hydro Pump": 33.333,
-      "Stored Power": 32.051,
-      "Yawn": 26.923,
-      "Psychic": 20.513,
-      "Shadow Ball": 20.513,
-      "Protect": 19.231
-    },
-    "spread": "Nature: Bold, EVs: 248/0/252/8/0/0"
-  },
-  {
-    "rank": null,
-    "name": "Sneasel",
-    "safe_name": "sneasel",
-    "usage": 0.0,
-    "ability": [
-      "Inner Focus",
-      "Keen Eye",
-      "Pickpocket "
-    ],
-    "items": "Choice Band",
-    "moves": {
-      "Knock Off": 66.129,
-      "Triple Axel": 61.29,
-      "Ice Shard": 61.29,
-      "Low Kick": 53.226,
-      "Avalanche": 22.581,
-      "Lash Out": 22.581,
-      "Fake Out": 16.129,
-      "Blizzard": 16.129
-    },
-    "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
+    "spread": "Nature: Brave, EVs: 252/252/4/0/0/0"
   },
   {
     "rank": null,
@@ -13336,22 +10568,23 @@
     "usage": 0.0,
     "ability": [
       "Inner Focus",
-      "Keen Eye",
-      "Pickpocket "
+      "Pickpocket",
+      "Keen Eye "
     ],
     "items": "Eviolite",
     "moves": {
-      "Close Combat": 96.078,
-      "Swords Dance": 45.098,
-      "Shadow Claw": 41.176,
-      "Quick Attack": 41.176,
-      "Poison Jab": 39.216,
-      "Gunk Shot": 25.49,
-      "Brick Break": 23.529,
-      "Facade": 21.569,
-      "Aerial Ace": 21.569
+      "Close Combat": 66.807,
+      "Poison Jab": 57.143,
+      "Swords Dance": 43.697,
+      "Gunk Shot": 38.866,
+      "Fake Out": 19.538,
+      "X-Scissor": 19.538,
+      "Throat Chop": 18.277,
+      "Brick Break": 18.067,
+      "Shadow Claw": 16.597,
+      "Tera Blast": 16.176
     },
-    "spread": "Nature: Jolly, EVs: 4/252/0/0/0/252"
+    "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
   },
   {
     "rank": null,
@@ -13360,276 +10593,17 @@
     "usage": 0.0,
     "ability": [
       "Contrary",
-      "Overgrow"
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Leaf Storm": 71.739,
-      "Giga Drain": 43.478,
-      "Twister": 38.043,
-      "Energy Ball": 28.261,
-      "Leaf Blade": 25.0,
-      "Grass Pledge": 21.739,
-      "Coil": 19.565,
-      "Knock Off": 19.565,
-      "Vine Whip": 17.391
-    },
-    "spread": "Nature: Timid, EVs: 0/0/0/252/0/252"
-  },
-  {
-    "rank": null,
-    "name": "Solosis",
-    "safe_name": "solosis",
-    "usage": 0.0,
-    "ability": [
-      "Magic Guard",
-      "Regenerator",
-      "Overcoat "
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Trick Room": 57.143,
-      "Endeavor": 39.683,
-      "Protect": 36.508,
-      "Pain Split": 36.508,
-      "Psychic": 20.635,
-      "Light Screen": 20.635,
-      "Energy Ball": 19.048,
-      "Reflect": 19.048
-    },
-    "spread": "Nature: Hardy, EVs: 0/0/0/0/0/0"
-  },
-  {
-    "rank": null,
-    "name": "Spinarak",
-    "safe_name": "spinarak",
-    "usage": 0.0,
-    "ability": [
-      "Sniper",
-      "Swarm ",
-      "Insomnia "
-    ],
-    "items": "Lansat Berry",
-    "moves": {
-      "Sticky Web": 90.541,
-      "Infestation": 90.541,
-      "Agility": 87.162,
-      "Cross Poison": 87.162
-    },
-    "spread": "Nature: Hasty, EVs: 200/1/1/1/1/200"
-  },
-  {
-    "rank": null,
-    "name": "Spoink",
-    "safe_name": "spoink",
-    "usage": 0.0,
-    "ability": [
-      "Thick Fat",
-      "Own Tempo "
-    ],
-    "items": "Shell Bell",
-    "moves": {
-      "Rest": 57.143,
-      "Bounce": 46.032,
-      "Confuse Ray": 36.508,
-      "Future Sight": 35.714,
-      "Sleep Talk": 33.333,
-      "Calm Mind": 33.333,
-      "Protect": 28.571,
-      "Thunder Wave": 27.778,
-      "Snore": 23.81
-    },
-    "spread": "Nature: Adamant, EVs: 144/112/64/0/72/112"
-  },
-  {
-    "rank": null,
-    "name": "Sprigatito",
-    "safe_name": "sprigatito",
-    "usage": 0.0,
-    "ability": [
-      "Protean",
-      "Overgrow"
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Acrobatics": 43.137,
-      "Protect": 39.216,
-      "Shadow Claw": 34.314,
-      "Leech Seed": 32.353,
-      "Giga Drain": 31.373,
-      "Mud-Slap": 31.373,
-      "Taunt": 31.373,
-      "Bite": 28.431,
-      "Leafage": 24.51
-    },
-    "spread": "Nature: Adamant, EVs: 252/252/0/0/4/0"
-  },
-  {
-    "rank": null,
-    "name": "Starly",
-    "safe_name": "starly",
-    "usage": 0.0,
-    "ability": [
-      "Keen Eye",
-      "Reckless "
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Endeavor": 97.101,
-      "Quick Attack": 93.237,
-      "Nothing": 50.242,
-      "Protect": 41.546,
-      "Sand Attack": 32.85,
-      "Air Slash": 15.459
-    },
-    "spread": "Nature: Adamant, EVs: 228/252/0/0/28/0"
-  },
-  {
-    "rank": null,
-    "name": "Swinub",
-    "safe_name": "swinub",
-    "usage": 0.0,
-    "ability": [
-      "Snow Cloak",
-      "Oblivious",
-      "Thick Fat "
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Ice Shard": 89.773,
-      "Endeavor": 78.977,
-      "Protect": 44.318,
-      "Mud-Slap": 25.568,
-      "Fissure": 25.0,
-      "Snowscape": 24.432,
-      "Sandstorm": 22.159,
-      "Stealth Rock": 21.591,
-      "Charm": 15.341
-    },
-    "spread": "Nature: Hardy, EVs: 0/252/0/0/0/0"
-  },
-  {
-    "rank": null,
-    "name": "Tarountula",
-    "safe_name": "tarountula",
-    "usage": 0.0,
-    "ability": [
-      "Insomnia"
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Sticky Web": 86.555,
-      "Memento": 71.429,
-      "Knock Off": 65.546,
-      "Circle Throw": 63.025,
-      "Gastro Acid": 15.126
-    },
-    "spread": "Nature: Jolly, EVs: 252/0/0/0/4/252"
-  },
-  {
-    "rank": null,
-    "name": "Tauros-Paldea-Combat",
-    "safe_name": "tauros-paldea-combat",
-    "usage": 0.0,
-    "ability": [
-      "Intimidate",
-      "Anger Point"
-    ],
-    "items": "Adrenaline Orb",
-    "moves": {
-      "Bulk Up": 80.0,
-      "Close Combat": 67.143,
-      "Earthquake": 58.571,
-      "Trailblaze": 50.0,
-      "Iron Head": 30.0,
-      "Rock Slide": 25.714,
-      "Body Press": 25.714
-    },
-    "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
-  },
-  {
-    "rank": null,
-    "name": "Tinkatink",
-    "safe_name": "tinkatink",
-    "usage": 0.0,
-    "ability": [
-      "Mold Breaker",
-      "Own Tempo ",
-      "Pickpocket "
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Draining Kiss": 87.097,
-      "Endeavor": 64.516,
-      "Ice Hammer": 45.161,
-      "Feint": 41.935,
-      "Play Rough": 35.484,
-      "Thunder Wave": 27.419,
-      "Knock Off": 22.581,
-      "Fake Out": 19.355,
-      "Skill Swap": 17.742,
-      "Stone Edge": 17.742
-    },
-    "spread": "Nature: Lonely, EVs: 248/248/0/12/0/0"
-  },
-  {
-    "rank": null,
-    "name": "Totodile",
-    "safe_name": "totodile",
-    "usage": 0.0,
-    "ability": [
-      "Torrent",
-      "Sheer Force"
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Nothing": 130.303,
-      "Aqua Jet": 80.303,
-      "Endeavor": 77.273
-    },
-    "spread": "Nature: Lonely, EVs: 0/252/0/0/0/0"
-  },
-  {
-    "rank": null,
-    "name": "Treecko",
-    "safe_name": "treecko",
-    "usage": 0.0,
-    "ability": [
-      "Unburden",
-      "Overgrow"
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Endeavor": 97.674,
-      "Quick Attack": 95.349,
-      "Nothing": 83.721,
-      "Crunch": 22.093,
-      "Swords Dance": 19.767,
-      "Detect": 18.605,
-      "Drain Punch": 15.116
-    },
-    "spread": "Nature: Hardy, EVs: 0/0/0/156/0/116"
-  },
-  {
-    "rank": null,
-    "name": "Venonat",
-    "safe_name": "venonat",
-    "usage": 0.0,
-    "ability": [
-      "Tinted Lens",
-      "Compound Eyes",
-      "Run Away "
+      "Overgrow "
     ],
     "items": "Eviolite",
     "moves": {
-      "Stun Spore": 78.505,
-      "Sleep Powder": 75.701,
-      "Toxic Spikes": 67.29,
-      "Bug Buzz": 62.617,
-      "Poison Fang": 23.364,
-      "Toxic": 16.822
+      "Glare": 90.643,
+      "Leech Seed": 86.257,
+      "Leaf Storm": 86.257,
+      "Giga Drain": 55.263,
+      "Protect": 33.333
     },
-    "spread": "Nature: Timid, EVs: 248/0/0/0/8/252"
+    "spread": "Nature: Modest, EVs: 0/0/0/252/0/252"
   },
   {
     "rank": null,
@@ -13639,20 +10613,20 @@
     "ability": [
       "Justified"
     ],
-    "items": "Leftovers",
+    "items": "Life Orb",
     "moves": {
-      "Swords Dance": 61.567,
-      "Leaf Blade": 61.194,
-      "Sacred Sword": 45.149,
-      "X-Scissor": 34.701,
-      "Aura Sphere": 31.716,
-      "Calm Mind": 30.224,
-      "Giga Drain": 30.224,
-      "Synthesis": 27.239,
-      "Close Combat": 23.507,
-      "Stone Edge": 18.284
+      "Close Combat": 48.986,
+      "Giga Drain": 36.193,
+      "Leaf Blade": 31.825,
+      "Swords Dance": 30.889,
+      "Calm Mind": 29.485,
+      "Stone Edge": 29.173,
+      "Aura Sphere": 27.301,
+      "Tera Blast": 20.749,
+      "Sacred Sword": 17.473,
+      "Air Slash": 16.225
     },
-    "spread": "Nature: Calm, EVs: 252/0/0/4/252/0"
+    "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
   },
   {
     "rank": null,
@@ -13664,148 +10638,13 @@
     ],
     "items": "Assault Vest",
     "moves": {
-      "Steam Eruption": 77.377,
-      "Earth Power": 52.05,
-      "Flamethrower": 50.473,
-      "Sludge Bomb": 31.726,
-      "Fire Blast": 23.299,
-      "Hydro Pump": 15.277
+      "Steam Eruption": 94.198,
+      "Flamethrower": 69.466,
+      "Earth Power": 64.759,
+      "Sludge Bomb": 35.749,
+      "Sludge Wave": 21.017
     },
     "spread": "Nature: Modest, EVs: 248/0/0/252/8/0"
-  },
-  {
-    "rank": null,
-    "name": "Voltorb-Hisui",
-    "safe_name": "voltorb-hisui",
-    "usage": 0.0,
-    "ability": [
-      "Aftermath",
-      "Static",
-      "Soundproof"
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Leech Seed": 56.422,
-      "Nothing": 40.367,
-      "Protect": 38.532,
-      "Endure": 30.734,
-      "Energy Ball": 30.275,
-      "Recycle": 30.275,
-      "Explosion": 29.817,
-      "Thunderbolt": 19.266,
-      "Thunder Wave": 16.972
-    },
-    "spread": "Nature: Hardy, EVs: 0/0/0/0/0/0"
-  },
-  {
-    "rank": null,
-    "name": "Wartortle",
-    "safe_name": "wartortle",
-    "usage": 0.0,
-    "ability": [
-      "Torrent",
-      "Rain Dish"
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Haze": 83.333,
-      "Rapid Spin": 81.579,
-      "Ice Beam": 77.193,
-      "Liquidation": 75.439
-    },
-    "spread": "Nature: Sassy, EVs: 252/4/0/0/252/0"
-  },
-  {
-    "rank": null,
-    "name": "Wattrel",
-    "safe_name": "wattrel",
-    "usage": 0.0,
-    "ability": [
-      "Wind Power",
-      "Volt Absorb",
-      "Competitive "
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Quick Attack": 94.949,
-      "Endeavor": 94.949,
-      "Nothing": 61.616,
-      "Protect": 52.525,
-      "Dual Wingbeat": 38.384
-    },
-    "spread": "Nature: Timid, EVs: 0/4/0/252/0/252"
-  },
-  {
-    "rank": null,
-    "name": "Wiglett",
-    "safe_name": "wiglett",
-    "usage": 0.0,
-    "ability": [
-      "Gooey",
-      "Sand Veil",
-      "Rattled "
-    ],
-    "items": "Chesto Berry",
-    "moves": {
-      "Sand Attack": 32.051,
-      "Aqua Jet": 32.051,
-      "Memento": 26.923,
-      "Nothing": 26.923,
-      "Protect": 25.641,
-      "Wrap": 25.641,
-      "Rest": 20.513,
-      "Sucker Punch": 19.231,
-      "Throat Chop": 15.385
-    },
-    "spread": "Nature: Hardy, EVs: 252/0/252/0/0/0"
-  },
-  {
-    "rank": null,
-    "name": "Wooper",
-    "safe_name": "wooper",
-    "usage": 0.0,
-    "ability": [
-      "Unaware",
-      "Water Absorb",
-      "Damp"
-    ],
-    "items": "Eviolite",
-    "moves": {
-      "Counter": 36.076,
-      "Recover": 35.127,
-      "Protect": 28.797,
-      "Earthquake": 27.215,
-      "Toxic": 25.0,
-      "Haze": 20.886,
-      "Encore": 16.772,
-      "Stone Edge": 16.456,
-      "Hydro Pump": 15.19
-    },
-    "spread": "Nature: Impish, EVs: 252/0/252/0/0/4"
-  },
-  {
-    "rank": null,
-    "name": "Wooper-Paldea",
-    "safe_name": "wooper-paldea",
-    "usage": 0.0,
-    "ability": [
-      "Water Absorb",
-      "Poison Point",
-      "Unaware"
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Toxic Spikes": 64.0,
-      "Stealth Rock": 54.0,
-      "Nothing": 44.0,
-      "Spikes": 36.0,
-      "Protect": 28.0,
-      "Toxic": 18.0,
-      "Counter": 18.0,
-      "Dig": 18.0,
-      "Haze": 18.0
-    },
-    "spread": "Nature: Hardy, EVs: 252/0/252/0/0/0"
   },
   {
     "rank": null,
@@ -13817,36 +10656,16 @@
     ],
     "items": "Leftovers",
     "moves": {
-      "Power Whip": 45.663,
-      "Knock Off": 42.553,
-      "Drain Punch": 33.879,
-      "Crunch": 30.933,
-      "Close Combat": 30.933,
-      "Bulk Up": 27.66,
-      "U-turn": 25.368,
-      "Jungle Healing": 23.241,
-      "Swords Dance": 16.039
+      "Knock Off": 78.962,
+      "Power Whip": 49.161,
+      "Swords Dance": 40.122,
+      "U-turn": 31.399,
+      "Jungle Healing": 25.696,
+      "Drain Punch": 22.439,
+      "Trailblaze": 21.61,
+      "Close Combat": 20.505,
+      "Bulk Up": 16.381
     },
     "spread": "Nature: Jolly, EVs: 0/252/0/0/4/252"
-  },
-  {
-    "rank": null,
-    "name": "Zorua",
-    "safe_name": "zorua",
-    "usage": 0.0,
-    "ability": [
-      "Illusion"
-    ],
-    "items": "Focus Sash",
-    "moves": {
-      "Sludge Bomb": 56.716,
-      "U-turn": 56.716,
-      "Night Daze": 49.254,
-      "Night Shade": 46.269,
-      "Knock Off": 22.388,
-      "Protect": 16.418,
-      "Foul Play": 16.418
-    },
-    "spread": "Nature: Modest, EVs: 252/0/0/252/4/0"
   }
 ]
