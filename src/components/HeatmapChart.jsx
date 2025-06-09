@@ -46,7 +46,7 @@ export default function HeatmapChart({ items, xKey = "x", yKey = "y", width = 45
     svg.selectAll("*").remove();
 
     // margin, width, height
-    const marginTop = 60, marginBottom = 40, marginLeft = 50, marginRight = 20;
+    const marginTop = 20, marginBottom = 20, marginLeft = 20, marginRight = 20;
     const plotW = width - marginLeft - marginRight;
     const plotH = height - marginTop - marginBottom;
 
@@ -75,18 +75,18 @@ export default function HeatmapChart({ items, xKey = "x", yKey = "y", width = 45
 
     // 5+ 라벨
     svg.append("text")
-      .attr("x", x(5.5))
-      .attr("y", height - marginBottom + 20)
+      .attr("x", x(5.6))
+      .attr("y", height - marginBottom + 16)
       .attr("fill", "#222")
       .attr("text-anchor", "middle")
-      .attr("font-size", 12)
+      .attr("font-size", 10)
       .text("5+");
     svg.append("text")
-      .attr("x", marginLeft - 10)
-      .attr("y", y(5.5) + 4)
+      .attr("x", marginLeft - 4)
+      .attr("y", y(5.5) + 2)
       .attr("fill", "#222")
       .attr("text-anchor", "end")
-      .attr("font-size", 12)
+      .attr("font-size", 10)
       .text("5+");
 
     // 히트맵 셀 그리기 (6x6)
@@ -124,21 +124,21 @@ export default function HeatmapChart({ items, xKey = "x", yKey = "y", width = 45
       }
     }
     // 축 제목
-    svg.append("text")
-      .attr("x", width / 2)
-      .attr("y", height - 5)
-      .attr("fill", "#222")
-      .attr("text-anchor", "middle")
-      .attr("font-size", 14)
-      .text("Hits to KO Selected Pokémon");
-    svg.append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("x", -height / 2)
-      .attr("y", 15)
-      .attr("fill", "#222")
-      .attr("text-anchor", "middle")
-      .attr("font-size", 14)
-      .text("Hits each Pokémon can endure from selected move");
+    // svg.append("text")
+    //   .attr("x", width / 2)
+    //   .attr("y", height - 5)
+    //   .attr("fill", "#222")
+    //   .attr("text-anchor", "middle")
+    //   .attr("font-size", Math.max(12, Math.round(width / 16)))
+    //   .text("Hits to KO Selected Pokémon");
+    // svg.append("text")
+    //   .attr("transform", "rotate(-90)")
+    //   .attr("x", -height / 2)
+    //   .attr("y", 15)
+    //   .attr("fill", "#222")
+    //   .attr("text-anchor", "middle")
+    //   .attr("font-size", Math.max(12, Math.round(width / 16)))
+    //   .text("Hits each Pokémon can endure from selected move");
   }, [items, typeChecks, typeNames]);
 
   return (

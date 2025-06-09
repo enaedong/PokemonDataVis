@@ -17,6 +17,8 @@ export default function ScatterPlot({
   showMove = false,
   typeChecks,
   typeNames,
+  xRange = [0, 5.5],
+  yRange = [0, 5.5],
   searchQuery,
 }) {
   const ref = useRef();
@@ -24,11 +26,12 @@ export default function ScatterPlot({
 
   useEffect(() => {
     const svg = d3.select(ref.current);
-
+    svg.selectAll("*").remove(); // To remove previous content
+    
     if (!items || items.length === 0 || !selectedPokemon) return;
 
     // Filter items to only include those with checked types
-    const filteredItems = items.filter((d) => {
+    let filteredItems = items.filter((d) => {
       const types = Array.isArray(d.type) ? d.type : [d.type];
       return types.some((t) => {
         const tNorm = t.trim().toLowerCase();
@@ -39,67 +42,198 @@ export default function ScatterPlot({
       });
     });
 
-    // Chart dimensions
-    const width = 450;
-    const height = 450;
+    // Calculate axis ranges
+    const xMin = Math.min(...xRange);
+    const yMin = Math.min(...yRange);
+
+    const xMaxRaw = Math.max(...xRange);
+    const yMaxRaw = Math.max(...yRange);
+
+    const xMax = xMaxRaw > 5 ? 5.5 : xMaxRaw;
+    const yMax = yMaxRaw > 5 ? 5.5 : yMaxRaw;
+
+    const xSpan = xMax - xMin;
+    const ySpan = yMax - yMin;
+
+    // Set the maximum axis length (e.g., 400px)
+    const maxAxisLength = 400;
+    let plotWidth, plotHeight;
+
+    if (xSpan >= ySpan) {
+      plotWidth = maxAxisLength;
+      plotHeight = maxAxisLength * (ySpan / xSpan);
+    } else {
+      plotHeight = maxAxisLength;
+      plotWidth = maxAxisLength * (xSpan / ySpan);
+    }
+
     const marginTop = 60;
     const marginBottom = 40;
     const marginLeft = 50;
     const marginRight = 20;
 
+    const width = plotWidth + marginLeft + marginRight;
+    const height = plotHeight + marginTop + marginBottom;
+
+    // Scales
     const x = d3
       .scaleLinear()
-      .domain([0, 5.8])
-      .range([marginLeft, width - marginRight]);
+      .domain([xMin, xMax])
+      .range([marginLeft, marginLeft + plotWidth]);
     const y = d3
       .scaleLinear()
-      .domain([0, 5.8])
+      .domain([yMin, yMax])
       .range([height - marginBottom, marginTop]);
+
+    // X-axis ticks
+    const xTicks = [];
+    let v = Math.ceil(xMin * 10) / 10;
+    while (v < xMax - 1e-8) {
+      xTicks.push(Math.round(v * 10) / 10);
+      v += 0.1;
+    }
+    if (xMaxRaw > 5) {
+      xTicks.push(5.5); // Only add 5+ tick if over 5
+    } else {
+      xTicks.push(Math.round(xMax * 10) / 10);
+    }
+
+    // Y-axis ticks
+    const yTicks = [];
+    v = Math.ceil(yMin * 10) / 10;
+    while (v < yMax - 1e-8) {
+      yTicks.push(Math.round(v * 10) / 10);
+      v += 0.1;
+    }
+    if (yMaxRaw > 5) {
+      yTicks.push(5.5);
+    } else {
+      yTicks.push(Math.round(yMax * 10) / 10);
+    }
+
+    // Further filter to only show points within the current axis range
+    filteredItems = filteredItems.filter((d) => {
+      const dx = d.x === "5+" ? 5.5 : d.x;
+      const dy = d.y === "5+" ? 5.5 : d.y;
+      return (
+        dx >= xMin &&
+        dx <= xMax &&
+        dy >= yMin &&
+        dy <= yMax
+      );
+    });
 
     svg.attr("width", width).attr("height", height);
 
-    svg
-      .append("g")
-      .attr("transform", `translate(0, ${height - marginBottom})`)
-      .call(d3.axisBottom(x).ticks(6))
-      .append("text")
-      .attr("x", width / 2)
-      .attr("y", 35)
-      .attr("fill", "#222")
+    // Draw X axis line
+    svg.append("line")
+      .attr("x1", marginLeft)
+      .attr("y1", height - marginBottom)
+      .attr("x2", marginLeft + plotWidth)
+      .attr("y2", height - marginBottom)
+      .attr("stroke", "#222");
+
+    // Draw X axis ticks and labels
+    xTicks.forEach((v) => {
+      svg.append("line")
+        .attr("x1", x(v))
+        .attr("y1", height - marginBottom)
+        .attr("x2", x(v))
+        .attr("y2", height - marginBottom + (Number.isInteger(v) ? 12 : 6))
+        .attr("stroke", "#222");
+      if (Number.isInteger(v)) {
+        svg.append("text")
+          .attr("x", x(v))
+          .attr("y", height - marginBottom + 24)
+          .attr("text-anchor", "middle")
+          .attr("font-size", 14)
+          .attr("fill", "#222")
+          .text(v >= 5.5 ? "5+" : v);
+      }
+    });
+    
+    // X axis label
+    svg.append("text")
+    .attr("x", marginLeft + plotWidth / 2)
+    .attr("y", height)
+    .attr("text-anchor", "middle")
+    .attr("font-size", 16)
+    .attr("fill", "#222")
+    .text("Hits to KO Selected Pokémon");
+    
+    // Draw Y axis line
+    svg.append("line")
+    .attr("x1", marginLeft)
+    .attr("y1", height - marginBottom)
+    .attr("x2", marginLeft)
+    .attr("y2", marginTop)
+    .attr("stroke", "#222");
+    
+    // Draw Y axis ticks and labels
+    yTicks.forEach((v) => {
+      svg.append("line")
+      .attr("x1", marginLeft)
+      .attr("y1", y(v))
+      .attr("x2", marginLeft - (Number.isInteger(v) ? 12 : 6))
+      .attr("y2", y(v))
+      .attr("stroke", "#222");
+      if (Number.isInteger(v)) {
+        svg.append("text")
+        .attr("x", marginLeft - 16)
+        .attr("y", y(v) + 5)
+        .attr("text-anchor", "end")
+        .attr("font-size", 14)
+        .attr("fill", "#222")
+        .text(v >= 5.5 ? "5+" : v);
+      }
+    });
+    
+    // Y axis label (rotated)
+    svg.append("text")
+    .attr("x", marginLeft - 40)
+    .attr("y", marginTop + plotHeight / 2)
+    .attr("text-anchor", "middle")
+    .attr("font-size", 16)
+    .attr("fill", "#222")
+    .attr("transform", `rotate(-90,${marginLeft - 40},${marginTop + plotHeight / 2})`)
+    .text("Hits each Pokémon can endure from selected move");
+    
+    // X-axis end label (right end)
+    svg.append("text")
+      .attr("x", x(xMax))
+      .attr("y", height - marginBottom + 24)
       .attr("text-anchor", "middle")
       .attr("font-size", 14)
-      .text("Hits to KO Selected Pokémon");
+      .attr("fill", "#222")
+      .text(xMaxRaw > 5 ? "5+" : Number.isInteger(xMax) ? xMax : xMax.toFixed(1));
 
-    svg
-      .append("g")
-      .attr("transform", `translate(${marginLeft}, 0)`)
-      .call(d3.axisLeft(y).ticks(6))
-      .append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("x", -height / 2)
-      .attr("y", -38)
-      .attr("fill", "#222")
-      .attr("text-anchor", "middle")
-      .attr("font-size", 14)
-      .text("Hits each Pokémon can endure from selected move");
-
-    svg
-      .append("text")
-      .attr("x", x(5.5))
-      .attr("y", height - marginBottom + 20)
-      .attr("fill", "#222")
-      .attr("text-anchor", "middle")
-      .attr("font-size", 12)
-      .text("5+");
-    svg
-      .append("text")
-      .attr("x", marginLeft - 10)
-      .attr("y", y(5.5) + 4)
-      .attr("fill", "#222")
+    // Y-axis end label (top end)
+    svg.append("text")
+      .attr("x", marginLeft - 16)
+      .attr("y", y(yMax) + 5)
       .attr("text-anchor", "end")
-      .attr("font-size", 12)
-      .text("5+");
+      .attr("font-size", 14)
+      .attr("fill", "#222")
+      .text(yMaxRaw > 5 ? "5+" : Number.isInteger(yMax) ? yMax : yMax.toFixed(1));
 
+    // X-axis start label (left end)
+    svg.append("text")
+      .attr("x", x(xMin))
+      .attr("y", height - marginBottom + 24)
+      .attr("text-anchor", "middle")
+      .attr("font-size", 14)
+      .attr("fill", "#222")
+      .text(Number.isInteger(xMin) ? xMin : xMin.toFixed(1));
+
+    // Y-axis start label (bottom end)
+    svg.append("text")
+      .attr("x", marginLeft - 16)
+      .attr("y", y(yMin) + 5)
+      .attr("text-anchor", "end")
+      .attr("font-size", 14)
+      .attr("fill", "#222")
+      .text(Number.isInteger(yMin) ? yMin : yMin.toFixed(1));
+  
     let pointsGroup = svg.select("g.datapoints");
     if (pointsGroup.empty()) {
       pointsGroup = svg.append("g").attr("class", "datapoints");
@@ -210,6 +344,8 @@ export default function ScatterPlot({
     selectedPokemon,
     typeChecks,
     typeNames,
+    xRange,
+    yRange,
     searchQuery,
   ]);
 
