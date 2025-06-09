@@ -46,8 +46,7 @@ export default function EndureKOChart({
   const rectHeight = rectYBottom - rectYTop;
 
   const rectRef = useRef();
-  const startXRangeRef = useRef(horizontalRange);
-  const startYRangeRef = useRef(verticalRange);
+  const dragStartRef = useRef(null);
 
   useEffect(() => {
     fetch("/atkType.json")
@@ -81,35 +80,42 @@ export default function EndureKOChart({
   ]);
 
   useEffect(() => {
+    if (!rectRef.current) return;
     const rect = d3.select(rectRef.current);
-
-    const effectiveDrawSize = 135;
 
     const drag = d3
       .drag()
-      .on("start", () => {
-        // Correctly captures the range at the start of a drag
-        startXRangeRef.current = horizontalRange;
-        startYRangeRef.current = verticalRange;
+      .on("start", (event) => {
+        dragStartRef.current = {
+          mouseX: event.x,
+          mouseY: event.y,
+          boxX: horizontalRange[0],
+          boxY: verticalRange[0],
+        };
       })
       .on("drag", (event) => {
-        const deltaX = (event.dx / effectiveDrawSize) * displayMax;
-        const deltaY = -(event.dy / effectiveDrawSize) * displayMax;
+        if (!dragStartRef.current) return;
+        const minimapWidth = 135;
+        const minimapHeight = 135;
+        const dataWidth = 5.5;
+        const dataHeight = 5.5;
+        const xRangeSize = horizontalRange[1] - horizontalRange[0];
+        const yRangeSize = verticalRange[1] - verticalRange[0];
 
-        const xRangeSize =
-          startXRangeRef.current[1] - startXRangeRef.current[0];
-        const yRangeSize =
-          startYRangeRef.current[1] - startYRangeRef.current[0];
+        const dx =
+          (event.x - dragStartRef.current.mouseX) * (dataWidth / minimapWidth);
+        const dy =
+          -(event.y - dragStartRef.current.mouseY) *
+          (dataHeight / minimapHeight);
 
         let newXMin = Math.max(
           0,
-          Math.min(startXRangeRef.current[0] + deltaX, 5.5 - xRangeSize)
+          Math.min(dragStartRef.current.boxX + dx, dataWidth - xRangeSize)
         );
         let newXMax = newXMin + xRangeSize;
-
         let newYMin = Math.max(
           0,
-          Math.min(startYRangeRef.current[0] + deltaY, 5.5 - yRangeSize)
+          Math.min(dragStartRef.current.boxY + dy, dataHeight - yRangeSize)
         );
         let newYMax = newYMin + yRangeSize;
 
@@ -119,12 +125,10 @@ export default function EndureKOChart({
 
     rect.call(drag);
 
-    // Cleanup function to remove old event listeners
     return () => {
       rect.on(".drag", null);
     };
-    // ✅ Add dependencies here
-  }, [horizontalRange, verticalRange]);
+  }, [horizontalRange, verticalRange, displayMax]);
 
   if (!selectedPokemon)
     return <div>Select a Pokémon to view the scatter plot.</div>;
