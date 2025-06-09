@@ -5,6 +5,7 @@ import { EndureKOData } from "../utils/moveHelpers";
 import HeatmapChart from "./HeatmapChart";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
+import * as d3 from "d3";
 
 export default function EndureKOChart({
   selectedPokemon,
@@ -23,32 +24,31 @@ export default function EndureKOChart({
   const [scatterItems, setScatterItems] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
 
-  // Range state for sliders
   const [verticalRange, setVerticalRange] = useState([0, 5.5]);
   const [horizontalRange, setHorizontalRange] = useState([0, 5.5]);
-  
+
   const verticalSliderRef = useRef();
   const horizontalSliderRef = useRef();
 
-  // Clamp for heatmap limits (visual)
-  const displayMax = 5.0; // The visible max value for the heatmap
+  const displayMax = 5.0;
 
-  const x0 = Math.min(horizontalRange[0], displayMax); // left
-  const x1 = horizontalRange[1]; // right
-  const y0 = Math.min(verticalRange[0]-0.9, displayMax);   // bottom
-  const y1 = verticalRange[1] - 0.9; // top
+  const x0 = Math.min(horizontalRange[0], displayMax);
+  const x1 = horizontalRange[1];
+  const y0 = Math.min(verticalRange[0] - 0.9, displayMax);
+  const y1 = verticalRange[1] - 0.9;
 
-  // x-axis (horizontal)
   const rectX = (x0 / displayMax) * 135;
-  const rectRightX = x1 > displayMax ? 470/3 : (x1 / displayMax) * 135;
+  const rectRightX = x1 > displayMax ? 470 / 3 : (x1 / displayMax) * 135;
   const rectWidth = rectRightX - rectX;
 
-  // y-axis (vertical, inverted)
   const rectYBottom = (1 - y0 / displayMax) * 135;
   const rectYTop = y1 + 0.9 > displayMax ? 0 : (1 - y1 / displayMax) * 135;
   const rectHeight = rectYBottom - rectYTop;
 
-  // Load type chart
+  const rectRef = useRef();
+  const startXRangeRef = useRef(horizontalRange);
+  const startYRangeRef = useRef(verticalRange);
+
   useEffect(() => {
     fetch("/atkType.json")
       .then((res) => res.json())
@@ -56,7 +56,6 @@ export default function EndureKOChart({
       .catch((err) => console.error("Failed to load atkType.json:", err));
   }, []);
 
-  // Prepare scatter plot data
   useEffect(() => {
     const data = EndureKOData({
       selectedPokemon,
@@ -81,13 +80,65 @@ export default function EndureKOChart({
     ranks,
   ]);
 
+  useEffect(() => {
+    const rect = d3.select(rectRef.current);
+
+    const effectiveDrawSize = 135;
+
+    const drag = d3
+      .drag()
+      .on("start", () => {
+        // Correctly captures the range at the start of a drag
+        startXRangeRef.current = horizontalRange;
+        startYRangeRef.current = verticalRange;
+      })
+      .on("drag", (event) => {
+        const deltaX = (event.dx / effectiveDrawSize) * displayMax;
+        const deltaY = -(event.dy / effectiveDrawSize) * displayMax;
+
+        const xRangeSize =
+          startXRangeRef.current[1] - startXRangeRef.current[0];
+        const yRangeSize =
+          startYRangeRef.current[1] - startYRangeRef.current[0];
+
+        let newXMin = Math.max(
+          0,
+          Math.min(startXRangeRef.current[0] + deltaX, 5.5 - xRangeSize)
+        );
+        let newXMax = newXMin + xRangeSize;
+
+        let newYMin = Math.max(
+          0,
+          Math.min(startYRangeRef.current[0] + deltaY, 5.5 - yRangeSize)
+        );
+        let newYMax = newYMin + yRangeSize;
+
+        setHorizontalRange([newXMin, newXMax]);
+        setVerticalRange([newYMin, newYMax]);
+      });
+
+    rect.call(drag);
+
+    // Cleanup function to remove old event listeners
+    return () => {
+      rect.on(".drag", null);
+    };
+    // ✅ Add dependencies here
+  }, [horizontalRange, verticalRange]);
+
   if (!selectedPokemon)
     return <div>Select a Pokémon to view the scatter plot.</div>;
   if (!selectedMove) return <div>No moves available for this Pokémon.</div>;
-  
+
   return (
-    <div style={{ display: "flex", flexDirection: "row", alignItems: "flex-start", width: "100%" }}>
-      {/* ScatterPlot remains below */}
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "flex-start",
+        width: "100%",
+      }}
+    >
       <div style={{ flex: 1, minWidth: 0 }}>
         <ScatterPlot
           items={scatterItems}
@@ -101,8 +152,7 @@ export default function EndureKOChart({
           yRange={verticalRange}
           searchQuery={searchQuery}
         />
-        {/* Search bar above scatter plot */}
-        <div className="search-bar" style={{ marginTop: 20}}>
+        <div className="search-bar" style={{ marginTop: 20 }}>
           <input
             type="text"
             placeholder="Search Pokémon..."
@@ -122,7 +172,7 @@ export default function EndureKOChart({
                     onClick={() => {
                       setSearchQuery(d.name);
                       setSelectedItem(d.name);
-                    }} // triggers exact-match effect
+                    }}
                   >
                     {d.name}
                   </li>
@@ -131,20 +181,33 @@ export default function EndureKOChart({
           )}
         </div>
       </div>
-      {/* Right panel: Heatmap + sliders */}
-      <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", marginLeft: 20, minWidth: 0, marginTop: 50 }}>
-        {/* Heatmap and vertical slider */}
-        <div style={{ display: "flex", flexDirection: "row", alignItems: "flex-start" }}>
-          {/* Vertical slider (right of heatmap) */}
+
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-start",
+          marginLeft: 20,
+          minWidth: 0,
+          marginTop: 50,
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "flex-start",
+          }}
+        >
           <div
             style={{
               position: "relative",
-              height: 150, // match heatmap height
+              height: 150,
               marginRight: 5,
               marginTop: 31,
               display: "flex",
               alignItems: "center",
-              justifyContent: "center"
+              justifyContent: "center",
             }}
           >
             <Slider
@@ -166,21 +229,20 @@ export default function EndureKOChart({
               railStyle={{ backgroundColor: "#e0e0e0", width: 8 }}
             />
             {verticalRange.map((val, idx) => {
-              // Always show labels for both handles
-              const percent = 1 - (val / 5.5);
+              const percent = 1 - val / 5.5;
               return (
                 <div
                   key={idx}
                   style={{
                     position: "absolute",
-                    left: "-25px", // right side of slider
+                    left: "-25px",
                     top: `calc(${percent * 100}% )`,
                     background: "#fff",
                     padding: "2px 6px",
                     fontSize: 12,
                     pointerEvents: "none",
                     transform: "translateY(-50%)",
-                    textAlign: "right"
+                    textAlign: "right",
                   }}
                 >
                   {val > 5 ? "5+" : val.toFixed(1)}
@@ -188,7 +250,7 @@ export default function EndureKOChart({
               );
             })}
           </div>
-          {/* Heatmap (right of vertical slider) */}
+
           <div style={{ position: "relative", width: 200, height: 200 }}>
             <HeatmapChart
               items={scatterItems}
@@ -197,21 +259,21 @@ export default function EndureKOChart({
               width={200}
               height={200}
             />
-            {/* Rectangle overlay */}
             <svg
               width={160}
               height={160}
               style={{
                 position: "absolute",
-                marginLeft: 20, // align with heatmap
-                marginTop: 20, // align with heatmap
+                marginLeft: 20,
+                marginTop: 20,
                 left: 0,
                 top: 0,
-                pointerEvents: "none",
-                zIndex: 2
+                pointerEvents: "auto",
+                zIndex: 2,
               }}
             >
               <rect
+                ref={rectRef}
                 x={rectX}
                 y={rectYTop}
                 width={rectWidth}
@@ -219,17 +281,18 @@ export default function EndureKOChart({
                 fill="none"
                 stroke="black"
                 strokeWidth={5}
+                style={{ cursor: "move", pointerEvents: "auto" }}
               />
             </svg>
           </div>
         </div>
-        {/* Horizontal slider (below heatmap, aligned left with heatmap) */}
+
         <div
           style={{
             position: "relative",
-            marginLeft: 41, // space from vertical slider
+            marginLeft: 41,
             marginTop: 4,
-            width: 145, // about half of Heatmap width, adjust as needed
+            width: 145,
             height: 30,
           }}
         >
@@ -251,20 +314,20 @@ export default function EndureKOChart({
             railStyle={{ backgroundColor: "#e0e0e0", height: 8 }}
           />
           {horizontalRange.map((val, idx) => {
-            const percent = (val / 5.5);
+            const percent = val / 5.5;
             return (
               <div
                 key={idx}
                 style={{
                   position: "absolute",
                   left: `calc(${percent * 100}%)`,
-                  top: "15px", // above the slider
+                  top: "15px",
                   background: "#fff",
                   padding: "2px 6px",
                   fontSize: 12,
                   pointerEvents: "none",
                   transform: "translateX(-50%)",
-                  textAlign: "center"
+                  textAlign: "center",
                 }}
               >
                 {val > 5 ? "5+" : val.toFixed(1)}
@@ -273,7 +336,6 @@ export default function EndureKOChart({
           })}
         </div>
       </div>
-      
     </div>
   );
 }
