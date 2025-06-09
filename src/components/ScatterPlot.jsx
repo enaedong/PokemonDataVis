@@ -24,11 +24,6 @@ export default function ScatterPlot({
   const ref = useRef();
   const [hoveredItem, setHoveredItem] = useState(null);
 
-  const [gradX1, setGradX1] = useState(0);
-  const [gradY1, setGradY1] = useState(0);
-  const [gradX2, setGradX2] = useState(0);
-  const [gradY2, setGradY2] = useState(0);
-
   useEffect(() => {
     const svg = d3.select(ref.current);
     svg.selectAll("*").remove(); // To remove previous content
@@ -79,20 +74,6 @@ export default function ScatterPlot({
 
     const width = plotWidth + marginLeft + marginRight;
     const height = plotHeight + marginTop + marginBottom;
-
-    setGradX1(marginLeft);
-    setGradY1(marginTop);
-    setGradX2(marginLeft + maxAxisLength);
-    setGradY2(marginTop + maxAxisLength);
-
-    if (yMax < 5.5) {
-      setGradY1(marginTop - (maxAxisLength - plotHeight));
-      setGradY2(marginTop + plotHeight);
-    }
-    if (xMin > 0) {
-      setGradX1(marginLeft - (maxAxisLength - plotWidth));
-      setGradX2(marginLeft + plotWidth);
-    }
     
     // Scales
     const x = d3
@@ -146,13 +127,21 @@ export default function ScatterPlot({
 
     // 배경색
     const defs = svg.append("defs");
+
+    defs.append('clipPath')
+      .attr('id', 'clip-chart-area')
+      .append('rect')
+      .attr('x', marginLeft)
+      .attr('y', marginTop - 10)
+      .attr('width', plotWidth + 10)
+      .attr('height', plotHeight + 10);
+
     const gradient = defs.append("linearGradient")
       .attr("id", "chart-bg-gradient")
-      .attr("gradientUnits", "userSpaceOnUse")
-      .attr("x1", gradX1)
-      .attr("y1", gradY1)
-      .attr("x2", gradX2)
-      .attr("y2", gradY2);      
+      .attr("x1", "0%")
+      .attr("y1", "0%")
+      .attr("x2", "100%")
+      .attr("y2", "100%");     
 
     // 좌측 상단 색깔
     gradient.append("stop")
@@ -170,11 +159,12 @@ export default function ScatterPlot({
       .attr("stop-opacity", 0.3);
 
     svg.append("rect")
-      .attr("x", marginLeft)
-      .attr("y", marginTop - 10)
-      .attr("width", plotWidth + 10)
-      .attr("height", plotHeight + 10)
-      .style("fill", "url(#chart-bg-gradient)");    
+      .attr("x", marginLeft - plotWidth * (xMin / xSpan))
+      .attr("y", marginTop - 10 - plotHeight * ((5.5 - yMax) / ySpan))
+      .attr("width", plotWidth * (5.5 / xSpan) + 10)
+      .attr("height", plotHeight * (5.5 / ySpan) + 10)
+      .style("fill", "url(#chart-bg-gradient)")  
+      .attr('clip-path', 'url(#clip-chart-area)');
 
     // Draw X axis line
     svg.append("line")
