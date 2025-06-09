@@ -133,6 +133,35 @@ export default function ScatterPlot({
       .attr("y2", height - marginBottom)
       .attr("stroke", "#222");
 
+    
+    // 배경색
+    const defs = svg.append("defs");
+    const gradient = defs.append("linearGradient")
+      .attr("id", "chart-bg-gradient")
+      .attr("x1", "0%")
+      .attr("y1", "0%")
+      .attr("x2", "100%")
+      .attr("y2", "100%");
+
+    // 좌측 상단 색깔
+    gradient.append("stop")
+      .attr("offset", "0%")
+      .attr("stop-color", "DeepSkyBlue")
+      .attr("stop-opacity", 0.3);
+    // 우측 하단 색깔
+    gradient.append("stop")
+      .attr("offset", "100%")
+      .attr("stop-color", "Orange")
+      .attr("stop-opacity", 0.3);
+
+    svg.append("rect")
+      .attr("x", marginLeft)
+      .attr("y", marginTop - 10)
+      .attr("width", plotWidth + 10)
+      .attr("height", plotHeight + 10)
+      .style("fill", "url(#chart-bg-gradient)");    
+
+
     // Draw X axis ticks and labels
     xTicks.forEach((v) => {
       svg.append("line")
