@@ -6,11 +6,23 @@ import HeatmapChart from "./HeatmapChart";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
 
-export default function EndureKOChart({ selectedPokemon, dexData, usageData, selectedMove, selectedItem, setSelectedItem, typeChecks, typeNames, selectedWeather, selectedTerrain, ranks }) {
-
+export default function EndureKOChart({
+  selectedPokemon,
+  dexData,
+  usageData,
+  selectedMove,
+  selectedItem,
+  setSelectedItem,
+  typeChecks,
+  typeNames,
+  selectedWeather,
+  selectedTerrain,
+  ranks,
+}) {
   const [typeChart, setTypeChart] = useState(null);
   const [scatterItems, setScatterItems] = useState([]);
-  
+  const [searchQuery, setSearchQuery] = useState("");
+
   // Range state for sliders
   const [verticalRange, setVerticalRange] = useState([0, 5.5]);
   const [horizontalRange, setHorizontalRange] = useState([0, 5.5]);
@@ -55,11 +67,20 @@ export default function EndureKOChart({ selectedPokemon, dexData, usageData, sel
       hitCountFn: HitCountSmogon,
       selectedWeather,
       selectedTerrain,
-      ranks
+      ranks,
     });
     setScatterItems(data);
-  }, [selectedPokemon, dexData, usageData, typeChart, selectedMove, selectedWeather, selectedTerrain, ranks]);
-  
+  }, [
+    selectedPokemon,
+    dexData,
+    usageData,
+    typeChart,
+    selectedMove,
+    selectedWeather,
+    selectedTerrain,
+    ranks,
+  ]);
+
   if (!selectedPokemon)
     return <div>Select a Pokémon to view the scatter plot.</div>;
   if (!selectedMove) return <div>No moves available for this Pokémon.</div>;
@@ -78,7 +99,37 @@ export default function EndureKOChart({ selectedPokemon, dexData, usageData, sel
           typeNames={typeNames}
           xRange={horizontalRange}
           yRange={verticalRange}
+          searchQuery={searchQuery}
         />
+        {/* Search bar above scatter plot */}
+        <div className="search-bar">
+          <input
+            type="text"
+            placeholder="Search Pokémon..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            style={{ marginBottom: 16 }}
+          />
+          {searchQuery && (
+            <ul className="search-suggestions">
+              {scatterItems
+                .filter((d) =>
+                  d.name.toLowerCase().includes(searchQuery.toLowerCase())
+                )
+                .map((d) => (
+                  <li
+                    key={d.name}
+                    onClick={() => {
+                      setSearchQuery(d.name);
+                      setSelectedItem(d.name);
+                    }} // triggers exact-match effect
+                  >
+                    {d.name}
+                  </li>
+                ))}
+            </ul>
+          )}
+        </div>
       </div>
       {/* Right panel: Heatmap + sliders */}
       <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", marginLeft: 20, minWidth: 0, marginTop: 50 }}>
@@ -110,7 +161,7 @@ export default function EndureKOChart({ selectedPokemon, dexData, usageData, sel
               trackStyle={[{ backgroundColor: "blue", width: 8 }]}
               handleStyle={[
                 { borderColor: "blue", backgroundColor: "white" },
-                { borderColor: "blue", backgroundColor: "white" }
+                { borderColor: "blue", backgroundColor: "white" },
               ]}
               railStyle={{ backgroundColor: "#e0e0e0", width: 8 }}
             />
@@ -195,7 +246,7 @@ export default function EndureKOChart({ selectedPokemon, dexData, usageData, sel
             trackStyle={[{ backgroundColor: "blue", height: 8 }]}
             handleStyle={[
               { borderColor: "blue", backgroundColor: "white" },
-              { borderColor: "blue", backgroundColor: "white" }
+              { borderColor: "blue", backgroundColor: "white" },
             ]}
             railStyle={{ backgroundColor: "#e0e0e0", height: 8 }}
           />
@@ -222,6 +273,7 @@ export default function EndureKOChart({ selectedPokemon, dexData, usageData, sel
           })}
         </div>
       </div>
+      
     </div>
   );
 }
