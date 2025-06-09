@@ -9,7 +9,7 @@ import * as d3 from "d3";
  * @param {function} setSelectedItem - Setter for selectedItem
  * @param {boolean} showMove - Whether to show move name in tooltip
  */
-export default function ScatterPlot1({
+export default function ScatterPlot({
   items,
   selectedPokemon,
   selectedItem,
@@ -26,7 +26,8 @@ export default function ScatterPlot1({
 
   useEffect(() => {
     const svg = d3.select(ref.current);
-
+    svg.selectAll("*").remove(); // To remove previous content
+    
     if (!items || items.length === 0 || !selectedPokemon) return;
 
     // Filter items to only include those with checked types
