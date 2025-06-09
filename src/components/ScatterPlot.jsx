@@ -17,13 +17,13 @@ export default function ScatterPlot({
   showMove = false,
   typeChecks,
   typeNames,
+  searchQuery,
 }) {
   const ref = useRef();
   const [hoveredItem, setHoveredItem] = useState(null);
 
   useEffect(() => {
     const svg = d3.select(ref.current);
-    svg.selectAll("*").remove();
 
     if (!items || items.length === 0 || !selectedPokemon) return;
 
@@ -100,23 +100,46 @@ export default function ScatterPlot({
       .attr("font-size", 12)
       .text("5+");
 
-    const pointsGroup = svg.append("g").attr("class", "datapoints");
+    let pointsGroup = svg.select("g.datapoints");
+    if (pointsGroup.empty()) {
+      pointsGroup = svg.append("g").attr("class", "datapoints");
+    }
+    const lowerQuery = searchQuery?.toLowerCase() || "";
 
     pointsGroup
       .selectAll("circle")
-      .data(filteredItems)
+      .data(filteredItems, (d) => d.name)
       .join("circle")
       .attr("cx", (d) => (d.x === "5+" ? x(5.5) : x(d.x)))
       .attr("cy", (d) => (d.y === "5+" ? y(5.5) : y(d.y)))
-      .attr(
-        "r",
-        (d) => (hoveredItem && hoveredItem.name === d.name ? 8 : 5) // Bigger if hovered
-      )
-      .attr("fill", (d) =>
-        d.color
-      )
-      .attr("stroke", (d) => (d.name === selectedItem ? "#222" : "white"))
-      .attr("stroke-width", (d) => (d.name === selectedItem ? 2 : 1))
+      .attr("r", (d) => {
+        const isHovered = hoveredItem?.name === d.name;
+        const isMatch = lowerQuery && d.name.toLowerCase().includes(lowerQuery);
+        return isHovered ? 8 : isMatch ? 7 : 5;
+      })
+      .attr("fill", (d) => d.color)
+      .attr("stroke", (d) => {
+        const isMatch = lowerQuery && d.name.toLowerCase().includes(lowerQuery);
+        if (d.name === selectedItem) return "#222"; // exact selected
+        if (isMatch) return "gold"; // partial match
+        return "white";
+      })
+      .attr("stroke-width", (d) => {
+        if (d.name === selectedItem) return 2;
+        if (
+          searchQuery &&
+          d.name.toLowerCase().includes(searchQuery.toLowerCase())
+        )
+          return 2;
+        return 1;
+      })
+      .attr("opacity", (d) => {
+        const isMatch = lowerQuery && d.name.toLowerCase().includes(lowerQuery);
+
+        if (isMatch) return 1; // partial match always full opacity
+        if (selectedItem) return d.name === selectedItem ? 1 : 0.3;
+        return 1;
+      })
       .style("cursor", "pointer")
 
       .on("click", (event, d) => {
@@ -130,12 +153,13 @@ export default function ScatterPlot({
       });
 
     // Tooltip group
+    if (!items || items.length === 0 || !selectedPokemon) return;
     svg.selectAll(".tooltip-group").remove();
     const tooltipGroup = svg.append("g").attr("class", "tooltip-group");
 
     if (hoveredItem) {
       const tx = hoveredItem.x === "5+" ? x(5.5) : x(hoveredItem.x);
-      const ty = hoveredItem.y === "5+" ? y(5.5) -30 : y(hoveredItem.y) - 30;
+      const ty = hoveredItem.y === "5+" ? y(5.5) - 30 : y(hoveredItem.y) - 30;
 
       const tooltip = tooltipGroup
         .append("g")
@@ -186,6 +210,7 @@ export default function ScatterPlot({
     selectedPokemon,
     typeChecks,
     typeNames,
+    searchQuery,
   ]);
 
   return <svg ref={ref} />;
