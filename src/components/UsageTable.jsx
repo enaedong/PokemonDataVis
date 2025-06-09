@@ -3,8 +3,10 @@ import { useState } from "react";
 export default function UsageTable({ data, selected, setSelected }) {
   const [search, setSearch] = useState("");
 
-  const filtered = data.filter((pokemon) =>
-    pokemon.name.toLowerCase().includes(search.toLowerCase())
+  const filtered = data.filter(
+    (pokemon) =>
+      pokemon.rank !== null &&
+      pokemon.name.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
@@ -32,7 +34,9 @@ export default function UsageTable({ data, selected, setSelected }) {
               onClick={() => setSelected(pokemon)}
               style={{
                 background:
-                  selected && selected.rank === pokemon.rank ? "#e8f5e9" : undefined
+                  selected && selected.rank === pokemon.rank
+                    ? "#e8f5e9"
+                    : undefined,
               }}
             >
               <td>{pokemon.rank}</td>

@@ -7,6 +7,14 @@ export default function MoveBoxes({ moveNames, moveUsages = {} }) {
 
   useEffect(() => {
     const fetchMoveInfo = async (moveName) => {
+      if (!moveName || moveName.trim() === "" || moveName.toLowerCase() === "nothing") {
+        return {
+          type: "unknown",
+          category: "unknown",
+          power: null,
+        };
+      }
+      
       const safe = moveName.toLowerCase().replace(/[^a-z0-9-]/g, "-");
       try {
         const res = await fetch(`https://pokeapi.co/api/v2/move/${safe}`);
