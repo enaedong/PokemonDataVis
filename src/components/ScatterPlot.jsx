@@ -24,6 +24,11 @@ export default function ScatterPlot({
   const ref = useRef();
   const [hoveredItem, setHoveredItem] = useState(null);
 
+  const [gradX1, setGradX1] = useState(0);
+  const [gradY1, setGradY1] = useState(0);
+  const [gradX2, setGradX2] = useState(0);
+  const [gradY2, setGradY2] = useState(0);
+
   useEffect(() => {
     const svg = d3.select(ref.current);
     svg.selectAll("*").remove(); // To remove previous content
@@ -75,6 +80,20 @@ export default function ScatterPlot({
     const width = plotWidth + marginLeft + marginRight;
     const height = plotHeight + marginTop + marginBottom;
 
+    setGradX1(marginLeft);
+    setGradY1(marginTop);
+    setGradX2(marginLeft + maxAxisLength);
+    setGradY2(marginTop + maxAxisLength);
+
+    if (yMax < 5.5) {
+      setGradY1(marginTop - (maxAxisLength - plotHeight));
+      setGradY2(marginTop + plotHeight);
+    }
+    if (xMin > 0) {
+      setGradX1(marginLeft - (maxAxisLength - plotWidth));
+      setGradX2(marginLeft + plotWidth);
+    }
+    
     // Scales
     const x = d3
       .scaleLinear()
@@ -125,29 +144,25 @@ export default function ScatterPlot({
 
     svg.attr("width", width).attr("height", height);
 
-    // Draw X axis line
-    svg.append("line")
-      .attr("x1", marginLeft)
-      .attr("y1", height - marginBottom)
-      .attr("x2", marginLeft + plotWidth)
-      .attr("y2", height - marginBottom)
-      .attr("stroke", "#222");
-
-    
     // 배경색
     const defs = svg.append("defs");
     const gradient = defs.append("linearGradient")
       .attr("id", "chart-bg-gradient")
-      .attr("x1", "0%")
-      .attr("y1", "0%")
-      .attr("x2", "100%")
-      .attr("y2", "100%");
+      .attr("gradientUnits", "userSpaceOnUse")
+      .attr("x1", gradX1)
+      .attr("y1", gradY1)
+      .attr("x2", gradX2)
+      .attr("y2", gradY2);      
 
     // 좌측 상단 색깔
     gradient.append("stop")
       .attr("offset", "0%")
       .attr("stop-color", "DeepSkyBlue")
       .attr("stop-opacity", 0.3);
+    gradient.append("stop")
+      .attr("offset", "50%")
+      .attr("stop-color", "white")
+      .attr("stop-opacity", 1);
     // 우측 하단 색깔
     gradient.append("stop")
       .attr("offset", "100%")
@@ -161,6 +176,13 @@ export default function ScatterPlot({
       .attr("height", plotHeight + 10)
       .style("fill", "url(#chart-bg-gradient)");    
 
+    // Draw X axis line
+    svg.append("line")
+      .attr("x1", marginLeft)
+      .attr("y1", height - marginBottom)
+      .attr("x2", marginLeft + plotWidth)
+      .attr("y2", height - marginBottom)
+      .attr("stroke", "#222");
 
     // Draw X axis ticks and labels
     xTicks.forEach((v) => {
