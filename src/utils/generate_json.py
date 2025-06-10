@@ -154,12 +154,12 @@ def generate_usage_json(month="2025-05", output_file="public/usage.json"):
             return None
 
         # 1. From BSSregi usage list
+        rank_count = 1
         for line in usage_lines[start_index:]:
             if not line.strip():
                 break
             columns = line.split("|")
             if len(columns) >= 4:
-                rank = int(columns[1].strip())
                 name = columns[2].strip()
                 usage = float(columns[3].strip().replace('%', ''))
                 safe_name = normalize_name(name)
@@ -169,7 +169,7 @@ def generate_usage_json(month="2025-05", output_file="public/usage.json"):
                     continue  # skip Pokémon with no moves in any dataset
 
                 usage_data.append({
-                    "rank": rank,
+                    "rank": rank_count,
                     "name": name,
                     "safe_name": safe_name,
                     "usage": round(usage, 1),
@@ -179,11 +179,11 @@ def generate_usage_json(month="2025-05", output_file="public/usage.json"):
                     "spread": info.get("spread", None),
                 })
                 included_names.add(safe_name)
+                rank_count += 1
 
         print(f"{len(usage_data)} Pokémon from BSSregi usage with valid move data")
 
         # 2. Append Pokémon not in BSSregi from ou or AG (only if they have moves)
-        fallback_sources = [ou_info]
         fallback_names = set(ou_info.keys())
 
         added_count = 0
