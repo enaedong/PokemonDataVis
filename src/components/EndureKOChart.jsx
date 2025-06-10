@@ -161,7 +161,7 @@ export default function EndureKOChart({
           display: "flex",
           flexDirection: "column",
           alignItems: "flex-start",
-          marginLeft: 20,
+          marginLeft: 35,
           minWidth: 0,
           marginTop: 50,
         }}
@@ -195,12 +195,41 @@ export default function EndureKOChart({
               value={verticalRange}
               onChange={(val) => setVerticalRange(val)}
               allowCross={false}
-              trackStyle={[{ backgroundColor: "blue", width: 8 }]}
+              trackStyle={[{
+                background: 'linear-gradient(180deg, #1976d2 0%, #64b5f6 100%)',
+                width: 7,
+                boxShadow: '0 1px 4px rgba(25, 118, 210, 0.10)',
+                borderRadius: 4,
+              }]}
               handleStyle={[
-                { borderColor: "blue", backgroundColor: "white" },
-                { borderColor: "blue", backgroundColor: "white" },
+                {
+                  borderColor: '#1976d2',
+                  backgroundColor: '#fff',
+                  width: 18,
+                  height: 18,
+                  marginLeft: -3.5,
+                  marginTop: -3.5,
+                  boxShadow: '0 1px 4px rgba(25, 118, 210, 0.10)',
+                  borderWidth: 2,
+                  transition: 'border 0.2s, box-shadow 0.2s',
+                },
+                {
+                  borderColor: '#1976d2',
+                  backgroundColor: '#fff',
+                  width: 18,
+                  height: 18,
+                  marginLeft: -3.5,
+                  marginTop: -3.5,
+                  boxShadow: '0 1px 4px rgba(25, 118, 210, 0.10)',
+                  borderWidth: 2,
+                  transition: 'border 0.2s, box-shadow 0.2s',
+                },
               ]}
-              railStyle={{ backgroundColor: "#e0e0e0", width: 8 }}
+              railStyle={{
+                background: 'linear-gradient(180deg, #e3f2fd 0%, #e0e0e0 100%)',
+                width: 7,
+                borderRadius: 4,
+              }}
             />
             {verticalRange.map((val, idx) => {
               const percent = 1 - val / 5.5;
@@ -209,14 +238,18 @@ export default function EndureKOChart({
                   key={idx}
                   style={{
                     position: "absolute",
-                    left: "-25px",
+                    left: "-28px",
                     top: `calc(${percent * 100}% )`,
-                    background: "#fff",
-                    padding: "2px 6px",
-                    fontSize: 12,
+                    background: "#1976d2",
+                    color: '#fff',
+                    padding: "2px 7px",
+                    fontSize: 11,
+                    borderRadius: 7,
+                    fontWeight: 600,
                     pointerEvents: "none",
                     transform: "translateY(-50%)",
                     textAlign: "right",
+                    boxShadow: '0 1px 4px rgba(25, 118, 210, 0.07)',
                   }}
                 >
                   {val > 5 ? "5+" : val.toFixed(1)}
@@ -280,12 +313,41 @@ export default function EndureKOChart({
             value={horizontalRange}
             onChange={(val) => setHorizontalRange(val)}
             allowCross={false}
-            trackStyle={[{ backgroundColor: "blue", height: 8 }]}
+            trackStyle={[{
+              background: 'linear-gradient(90deg, #1976d2 0%, #64b5f6 100%)',
+              height: 7,
+              boxShadow: '0 1px 4px rgba(25, 118, 210, 0.10)',
+              borderRadius: 4,
+            }]}
             handleStyle={[
-              { borderColor: "blue", backgroundColor: "white" },
-              { borderColor: "blue", backgroundColor: "white" },
+              {
+                borderColor: '#1976d2',
+                backgroundColor: '#fff',
+                width: 18,
+                height: 18,
+                marginTop: -3.5,
+                marginLeft: -3.5,
+                boxShadow: '0 1px 4px rgba(25, 118, 210, 0.10)',
+                borderWidth: 2,
+                transition: 'border 0.2s, box-shadow 0.2s',
+              },
+              {
+                borderColor: '#1976d2',
+                backgroundColor: '#fff',
+                width: 18,
+                height: 18,
+                marginTop: -3.5,
+                marginLeft: -3.5,
+                boxShadow: '0 1px 4px rgba(25, 118, 210, 0.10)',
+                borderWidth: 2,
+                transition: 'border 0.2s, box-shadow 0.2s',
+              },
             ]}
-            railStyle={{ backgroundColor: "#e0e0e0", height: 8 }}
+            railStyle={{
+              background: 'linear-gradient(90deg, #e3f2fd 0%, #e0e0e0 100%)',
+              height: 7,
+              borderRadius: 4,
+            }}
           />
           {horizontalRange.map((val, idx) => {
             const percent = val / 5.5;
@@ -295,13 +357,17 @@ export default function EndureKOChart({
                 style={{
                   position: "absolute",
                   left: `calc(${percent * 100}%)`,
-                  top: "15px",
-                  background: "#fff",
-                  padding: "2px 6px",
-                  fontSize: 12,
+                  top: "22px",
+                  background: "#1976d2",
+                  color: '#fff',
+                  padding: "2px 7px",
+                  fontSize: 11,
+                  borderRadius: 7,
+                  fontWeight: 600,
                   pointerEvents: "none",
                   transform: "translateX(-50%)",
                   textAlign: "center",
+                  boxShadow: '0 1px 4px rgba(25, 118, 210, 0.07)',
                 }}
               >
                 {val > 5 ? "5+" : val.toFixed(1)}
