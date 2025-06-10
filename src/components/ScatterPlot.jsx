@@ -26,7 +26,7 @@ export default function ScatterPlot({
 
   useEffect(() => {
     const svg = d3.select(ref.current);
-    svg.selectAll("*").remove(); // To remove previous content
+    svg.selectAll("*").remove();
     
     if (!items || items.length === 0 || !selectedPokemon) return;
 
@@ -56,7 +56,7 @@ export default function ScatterPlot({
     const ySpan = yMax - yMin;
 
     // Set the maximum axis length (e.g., 400px)
-    const maxAxisLength = 400;
+    const maxAxisLength = 550;
     let plotWidth, plotHeight;
 
     if (xSpan >= ySpan) {

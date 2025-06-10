@@ -116,15 +116,13 @@ def generate_usage_json(month="2025-05", output_file="public/usage.json"):
     base_url = f"https://www.smogon.com/stats/{month}"
     usage_url = f"{base_url}/gen9bssregi-1500.txt"
     bssregi_moveset_url = f"{base_url}/moveset/gen9bssregi-1500.txt"
-    ubers_moveset_url = f"{base_url}/moveset/gen9ubers-0.txt"
-    ag_moveset_url = f"{base_url}/moveset/gen9anythinggoes-0.txt"
+    ou_moveset_url = f"{base_url}/moveset/gen9ou-0.txt"
 
     try:
         # Fetch moveset data in order of fallback priority
         print("Fetching moveset data...")
         bss_info = fetch_and_parse_moveset(bssregi_moveset_url)
-        ubers_info = fetch_and_parse_moveset(ubers_moveset_url)
-        ag_info = fetch_and_parse_moveset(ag_moveset_url)
+        ou_info = fetch_and_parse_moveset(ou_moveset_url)
 
         # Fetch usage ranking data from BSSregi
         print("Fetching BSS usage ranking...")
@@ -146,14 +144,11 @@ def generate_usage_json(month="2025-05", output_file="public/usage.json"):
         included_names = set()
 
         def get_fallback_info(name):
-            """Tries to get move data from bss, then ubers, then AG."""
+            """Tries to get move data from bss, then ou, then AG."""
             info = bss_info.get(name)
             if info and info.get("moves"):
                 return info
-            info = ubers_info.get(name)
-            if info and info.get("moves"):
-                return info
-            info = ag_info.get(name)
+            info = ou_info.get(name)
             if info and info.get("moves"):
                 return info
             return None
@@ -187,9 +182,9 @@ def generate_usage_json(month="2025-05", output_file="public/usage.json"):
 
         print(f"{len(usage_data)} Pokémon from BSSregi usage with valid move data")
 
-        # 2. Append Pokémon not in BSSregi from ubers or AG (only if they have moves)
-        fallback_sources = [ubers_info, ag_info]
-        fallback_names = set(ubers_info.keys()).union(ag_info.keys())
+        # 2. Append Pokémon not in BSSregi from ou or AG (only if they have moves)
+        fallback_sources = [ou_info]
+        fallback_names = set(ou_info.keys())
 
         added_count = 0
         for name in sorted(fallback_names):
