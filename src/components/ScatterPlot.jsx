@@ -74,7 +74,7 @@ export default function ScatterPlot({
 
     const width = plotWidth + marginLeft + marginRight;
     const height = plotHeight + marginTop + marginBottom;
-
+    
     // Scales
     const x = d3
       .scaleLinear()
@@ -124,6 +124,47 @@ export default function ScatterPlot({
     });
 
     svg.attr("width", width).attr("height", height);
+
+    // 배경색
+    const defs = svg.append("defs");
+
+    defs.append('clipPath')
+      .attr('id', 'clip-chart-area')
+      .append('rect')
+      .attr('x', marginLeft)
+      .attr('y', marginTop - 10)
+      .attr('width', plotWidth + 10)
+      .attr('height', plotHeight + 10);
+
+    const gradient = defs.append("linearGradient")
+      .attr("id", "chart-bg-gradient")
+      .attr("x1", "0%")
+      .attr("y1", "0%")
+      .attr("x2", "100%")
+      .attr("y2", "100%");     
+
+    // 좌측 상단 색깔
+    gradient.append("stop")
+      .attr("offset", "0%")
+      .attr("stop-color", "DeepSkyBlue")
+      .attr("stop-opacity", 0.3);
+    gradient.append("stop")
+      .attr("offset", "50%")
+      .attr("stop-color", "white")
+      .attr("stop-opacity", 1);
+    // 우측 하단 색깔
+    gradient.append("stop")
+      .attr("offset", "100%")
+      .attr("stop-color", "Orange")
+      .attr("stop-opacity", 0.3);
+
+    svg.append("rect")
+      .attr("x", marginLeft - plotWidth * (xMin / xSpan))
+      .attr("y", marginTop - 10 - plotHeight * ((5.5 - yMax) / ySpan))
+      .attr("width", plotWidth * (5.5 / xSpan) + 10)
+      .attr("height", plotHeight * (5.5 / ySpan) + 10)
+      .style("fill", "url(#chart-bg-gradient)")  
+      .attr('clip-path', 'url(#clip-chart-area)');
 
     // Draw X axis line
     svg.append("line")
