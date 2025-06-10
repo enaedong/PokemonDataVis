@@ -116,7 +116,7 @@ def generate_usage_json(month="2025-05", output_file="public/usage.json"):
     base_url = f"https://www.smogon.com/stats/{month}"
     usage_url = f"{base_url}/gen9bssregi-1500.txt"
     bssregi_moveset_url = f"{base_url}/moveset/gen9bssregi-1500.txt"
-    ou_moveset_url = f"{base_url}/moveset/gen9ou-0.txt"
+    ou_moveset_url = f"{base_url}/moveset/gen9ou-1500.txt"
 
     try:
         # Fetch moveset data in order of fallback priority
