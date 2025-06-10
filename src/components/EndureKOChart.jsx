@@ -270,7 +270,7 @@ export default function EndureKOChart({
                 marginTop: 20,
                 left: 0,
                 top: 0,
-                pointerEvents: "auto",
+                pointerEvents: "none",
                 zIndex: 2,
               }}
             >
