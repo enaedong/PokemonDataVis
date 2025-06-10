@@ -123,22 +123,6 @@ export default function HeatmapChart({ items, xKey = "x", yKey = "y", width = 45
           });
       }
     }
-    // 축 제목
-    // svg.append("text")
-    //   .attr("x", width / 2)
-    //   .attr("y", height - 5)
-    //   .attr("fill", "#222")
-    //   .attr("text-anchor", "middle")
-    //   .attr("font-size", Math.max(12, Math.round(width / 16)))
-    //   .text("Hits to KO Selected Pokémon");
-    // svg.append("text")
-    //   .attr("transform", "rotate(-90)")
-    //   .attr("x", -height / 2)
-    //   .attr("y", 15)
-    //   .attr("fill", "#222")
-    //   .attr("text-anchor", "middle")
-    //   .attr("font-size", Math.max(12, Math.round(width / 16)))
-    //   .text("Hits each Pokémon can endure from selected move");
   }, [items, typeChecks, typeNames]);
 
   return (
