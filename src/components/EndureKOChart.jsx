@@ -207,8 +207,8 @@ export default function EndureKOChart({
                   backgroundColor: '#fff',
                   width: 18,
                   height: 18,
-                  marginLeft: -3.5,
-                  marginTop: -3.5,
+                  marginLeft: -5.5,
+                  marginTop: -5.5,
                   boxShadow: '0 1px 4px rgba(25, 118, 210, 0.10)',
                   borderWidth: 2,
                   transition: 'border 0.2s, box-shadow 0.2s',
@@ -218,8 +218,8 @@ export default function EndureKOChart({
                   backgroundColor: '#fff',
                   width: 18,
                   height: 18,
-                  marginLeft: -3.5,
-                  marginTop: -3.5,
+                  marginLeft: -5.5,
+                  marginTop: -5.5,
                   boxShadow: '0 1px 4px rgba(25, 118, 210, 0.10)',
                   borderWidth: 2,
                   transition: 'border 0.2s, box-shadow 0.2s',
@@ -325,8 +325,8 @@ export default function EndureKOChart({
                 backgroundColor: '#fff',
                 width: 18,
                 height: 18,
-                marginTop: -3.5,
-                marginLeft: -3.5,
+                marginLeft: -5.5,
+                marginTop: -5.5,
                 boxShadow: '0 1px 4px rgba(25, 118, 210, 0.10)',
                 borderWidth: 2,
                 transition: 'border 0.2s, box-shadow 0.2s',
@@ -336,8 +336,8 @@ export default function EndureKOChart({
                 backgroundColor: '#fff',
                 width: 18,
                 height: 18,
-                marginTop: -3.5,
-                marginLeft: -3.5,
+                marginLeft: -5.5,
+                marginTop: -5.5,
                 boxShadow: '0 1px 4px rgba(25, 118, 210, 0.10)',
                 borderWidth: 2,
                 transition: 'border 0.2s, box-shadow 0.2s',
@@ -377,17 +377,17 @@ export default function EndureKOChart({
         </div>
 
         <div className="search-bar" style={{ marginTop: 16, marginBottom: 8, width: '100%', position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <div style={{ position: 'relative', width: 220 }}>
+          <div style={{ position: 'relative', width: 180, boxSizing: 'border-box' }}>
             <input
               type="text"
               placeholder="Search Pokémon..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               style={{
-                width: 220,
-                height: 38,
-                fontSize: 18,
-                padding: '0 14px',
+                width: 180,
+                height: 32,
+                fontSize: 15,
+                padding: '0 10px',
                 border: '1.5px solid #bbb',
                 borderRadius: 0,
                 outline: 'none',
@@ -405,19 +405,20 @@ export default function EndureKOChart({
               <ul
                 className="search-suggestions"
                 style={{
-                  maxHeight: 160,
+                  maxHeight: 120,
                   overflowY: 'auto',
                   background: '#fff',
                   border: '1.5px solid #bbb',
-                  borderTop: 'none',
+                  borderTop: '1.5px solid #bbb',
                   borderRadius: 0,
                   margin: 0,
                   padding: 0,
                   position: 'absolute',
                   left: 0,
-                  top: 'calc(100% - 1.5px)',
-                  width: 220,
+                  top: '100%',
+                  width: 180,
                   zIndex: 10,
+                  boxSizing: 'border-box',
                   boxShadow: '0 4px 16px rgba(0,0,0,0.08)',
                   listStyle: 'none',
                 }}
