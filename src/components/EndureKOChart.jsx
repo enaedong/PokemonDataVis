@@ -297,7 +297,7 @@ export default function EndureKOChart({
         <div
           style={{
             position: "relative",
-            marginLeft: 41,
+            marginLeft: 46,
             marginTop: 4,
             width: 145,
             height: 30,
