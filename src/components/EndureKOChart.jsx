@@ -154,34 +154,6 @@ export default function EndureKOChart({
           yRange={verticalRange}
           searchQuery={searchQuery}
         />
-        <div className="search-bar" style={{ marginTop: 20 }}>
-          <input
-            type="text"
-            placeholder="Search Pokémon..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            style={{ marginBottom: 16 }}
-          />
-          {searchQuery && (
-            <ul className="search-suggestions">
-              {scatterItems
-                .filter((d) =>
-                  d.name.toLowerCase().includes(searchQuery.toLowerCase())
-                )
-                .map((d) => (
-                  <li
-                    key={d.name}
-                    onClick={() => {
-                      setSearchQuery(d.name);
-                      setSelectedItem(d.name);
-                    }}
-                  >
-                    {d.name}
-                  </li>
-                ))}
-            </ul>
-          )}
-        </div>
       </div>
 
       <div
@@ -336,6 +308,36 @@ export default function EndureKOChart({
               </div>
             );
           })}
+        </div>
+
+        <div className="search-bar" style={{ marginTop: 16, marginBottom: 8, width: 200 }}>
+          <input
+            type="text"
+            placeholder="Search Pokémon..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            style={{ marginBottom: 8, width: '100%' }}
+          />
+          {searchQuery && (
+            <ul className="search-suggestions" style={{ maxHeight: 120, overflowY: 'auto', background: '#fff', border: '1px solid #ccc', borderRadius: 4, margin: 0, padding: 0, position: 'absolute', zIndex: 10, width: '100%' }}>
+              {scatterItems
+                .filter((d) =>
+                  d.name.toLowerCase().includes(searchQuery.toLowerCase())
+                )
+                .map((d) => (
+                  <li
+                    key={d.name}
+                    onClick={() => {
+                      setSearchQuery(d.name);
+                      setSelectedItem(d.name);
+                    }}
+                    style={{ padding: '4px 8px', cursor: 'pointer' }}
+                  >
+                    {d.name}
+                  </li>
+                ))}
+            </ul>
+          )}
         </div>
       </div>
     </div>
