@@ -310,34 +310,79 @@ export default function EndureKOChart({
           })}
         </div>
 
-        <div className="search-bar" style={{ marginTop: 16, marginBottom: 8, width: 200 }}>
-          <input
-            type="text"
-            placeholder="Search Pokémon..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            style={{ marginBottom: 8, width: '100%' }}
-          />
-          {searchQuery && (
-            <ul className="search-suggestions" style={{ maxHeight: 120, overflowY: 'auto', background: '#fff', border: '1px solid #ccc', borderRadius: 4, margin: 0, padding: 0, position: 'absolute', zIndex: 10, width: '100%' }}>
-              {scatterItems
-                .filter((d) =>
-                  d.name.toLowerCase().includes(searchQuery.toLowerCase())
-                )
-                .map((d) => (
-                  <li
-                    key={d.name}
-                    onClick={() => {
-                      setSearchQuery(d.name);
-                      setSelectedItem(d.name);
-                    }}
-                    style={{ padding: '4px 8px', cursor: 'pointer' }}
-                  >
-                    {d.name}
-                  </li>
-                ))}
-            </ul>
-          )}
+        <div className="search-bar" style={{ marginTop: 16, marginBottom: 8, width: '100%', position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <div style={{ position: 'relative', width: 220 }}>
+            <input
+              type="text"
+              placeholder="Search Pokémon..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              style={{
+                width: 220,
+                height: 38,
+                fontSize: 18,
+                padding: '0 14px',
+                border: '1.5px solid #bbb',
+                borderRadius: 0,
+                outline: 'none',
+                boxSizing: 'border-box',
+                boxShadow: '0 1px 4px rgba(0,0,0,0.04)',
+                background: '#fafbfc',
+                margin: 0,
+                transition: 'border 0.2s',
+                display: 'block',
+              }}
+              onFocus={e => e.target.style.border = '1.5px solid #4caf50'}
+              onBlur={e => e.target.style.border = '1.5px solid #bbb'}
+            />
+            {searchQuery && (
+              <ul
+                className="search-suggestions"
+                style={{
+                  maxHeight: 160,
+                  overflowY: 'auto',
+                  background: '#fff',
+                  border: '1.5px solid #bbb',
+                  borderTop: 'none',
+                  borderRadius: 0,
+                  margin: 0,
+                  padding: 0,
+                  position: 'absolute',
+                  left: 0,
+                  top: 'calc(100% - 1.5px)',
+                  width: 220,
+                  zIndex: 10,
+                  boxShadow: '0 4px 16px rgba(0,0,0,0.08)',
+                  listStyle: 'none',
+                }}
+              >
+                {scatterItems
+                  .filter((d) =>
+                    d.name.toLowerCase().includes(searchQuery.toLowerCase())
+                  )
+                  .map((d) => (
+                    <li
+                      key={d.name}
+                      onClick={() => {
+                        setSearchQuery("");
+                        setSelectedItem(d.name);
+                      }}
+                      style={{
+                        padding: '8px 14px',
+                        cursor: 'pointer',
+                        fontSize: 16,
+                        borderBottom: '1px solid #f3f3f3',
+                        transition: 'background 0.15s',
+                      }}
+                      onMouseOver={e => e.currentTarget.style.background = '#f3f3f3'}
+                      onMouseOut={e => e.currentTarget.style.background = '#fff'}
+                    >
+                      {d.name}
+                    </li>
+                  ))}
+              </ul>
+            )}
+          </div>
         </div>
       </div>
     </div>
