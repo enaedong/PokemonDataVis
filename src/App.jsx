@@ -89,8 +89,10 @@ export default function App() {
     fetch("/atkType.json")
       .then((res) => res.json())
       .then((data) => {
+        const names = Object.keys(data);
         setAtkType(data);
-        setTypeNames(Object.keys(data));
+        setTypeNames(names);
+        setTypeChecks(Array(names.length).fill(false));
       })
       .catch((err) => console.error("Failed to load atkType.json:", err));
   }, []);
@@ -144,15 +146,6 @@ export default function App() {
     ? { ...selectedDex, moves: selectedUsage?.moves || {} }
     : null;
 
-  // check all checkbox when selectedPokemon is set:
-  useEffect(() => {
-    if (selectedPokemon && typeChecks.length === 0) {
-      setTypeChecks(Array(typeNames.length).fill(true));
-      setTypeAll(true);
-    }
-    // Do NOT reset if typeChecks already has values
-  }, [selectedPokemon, typeNames.length]);
-
   // 카운터 포켓몬 정보
   const selectedItemUsage = usage.find((p) => p.name === selectedItem);
   const selectedItemDex = dex.find((p) => p.name === selectedItem);
@@ -173,7 +166,7 @@ export default function App() {
       return details.basePower && details.basePower >= 40;
     });
 
-    // ✅ Compare contents before updating state
+    // Compare contents before updating state
     const isSame =
       validMoves.length === moveList.length &&
       validMoves.every((m, i) => m === moveList[i]);
@@ -199,11 +192,8 @@ export default function App() {
                   setSelected(pokemon);
                   setShowUsageTable(false);
 
-                  // Only initialize typeChecks if it hasn't been set before
-                  if (typeChecks.length === 0) {
-                    setTypeChecks(Array(typeNames.length).fill(true));
-                    setTypeAll(true);
-                  }
+                  setTypeChecks(Array(typeNames.length).fill(true));
+                  setTypeAll(true);
                 }}
               />
             </div>
@@ -214,10 +204,6 @@ export default function App() {
               className="back-btn"
               onClick={() => {
                 setShowUsageTable(true);
-                // setSelected(null);
-                // setTypeChecks(Array(typeNames.length).fill(false)); // Uncheck all
-                // setTypeAll(false); // Uncheck "All"
-                //setSelectedItem(null); // <-- Add this line to clear scatter plot selection
               }}
               style={{ marginBottom: 16 }}
             >
