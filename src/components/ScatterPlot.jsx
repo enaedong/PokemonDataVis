@@ -318,6 +318,7 @@ export default function ScatterPlot({
       .style("cursor", "pointer")
 
       .on("click", (event, d) => {
+        event.stopPropagation();
         setSelectedItem(d.name === selectedItem ? null : d.name);
       })
       .on("mouseenter", (event, d) => {
@@ -390,5 +391,5 @@ export default function ScatterPlot({
     searchQuery,
   ]);
 
-  return <svg ref={ref} />;
+  return <svg ref={ref} onClick={() => setSelectedItem(null)} style={{ cursor: 'pointer' }} />;
 }
