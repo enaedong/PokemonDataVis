@@ -23,10 +23,18 @@ export default function ScatterPlot({
 }) {
   const ref = useRef();
   const [hoveredItem, setHoveredItem] = useState(null);
+  const maxAxisLength = 400;
+  const marginTop = 60;
+  const marginBottom = 40;
+  const marginLeft = 50;
+  const marginRight = 20;
 
   useEffect(() => {
     const svg = d3.select(ref.current);
-    svg.selectAll("*").remove(); // To remove previous content
+    svg.selectAll("g").remove();
+    svg.selectAll("text").remove(); // To remove previous content
+    svg.selectAll("line").remove();
+    svg.selectAll("defs").remove();
     
     if (!items || items.length === 0 || !selectedPokemon) return;
 
@@ -53,10 +61,8 @@ export default function ScatterPlot({
     const yMax = yMaxRaw > 5 ? 5.5 : yMaxRaw;
 
     const xSpan = xMax - xMin;
-    const ySpan = yMax - yMin;
-
-    // Set the maximum axis length (e.g., 400px)
-    const maxAxisLength = 400;
+    const ySpan = yMax - yMin;    
+    
     let plotWidth, plotHeight;
 
     if (xSpan >= ySpan) {
@@ -66,11 +72,6 @@ export default function ScatterPlot({
       plotHeight = maxAxisLength;
       plotWidth = maxAxisLength * (xSpan / ySpan);
     }
-
-    const marginTop = 60;
-    const marginBottom = 40;
-    const marginLeft = 50;
-    const marginRight = 20;
 
     const width = plotWidth + marginLeft + marginRight;
     const height = plotHeight + marginTop + marginBottom;
@@ -148,6 +149,7 @@ export default function ScatterPlot({
       .attr("offset", "0%")
       .attr("stop-color", "DeepSkyBlue")
       .attr("stop-opacity", 0.3);
+    // 가운데
     gradient.append("stop")
       .attr("offset", "50%")
       .attr("stop-color", "white")
@@ -158,13 +160,23 @@ export default function ScatterPlot({
       .attr("stop-color", "Orange")
       .attr("stop-opacity", 0.3);
 
-    svg.append("rect")
+    if (svg.select("#bg-rect").empty()) {
+      svg.append("rect")
+        .attr("x", marginLeft)
+        .attr("y", marginTop - 10)
+        .attr("width", plotWidth + 10)
+        .attr("height", plotHeight + 10)
+        .style("fill", "url(#chart-bg-gradient)")  
+        .attr('clip-path', 'url(#clip-chart-area)')
+        .attr("id", "bg-rect");
+    }
+    svg.select("#bg-rect")
+      .transition()
+      .duration(500)
       .attr("x", marginLeft - plotWidth * (xMin / xSpan))
       .attr("y", marginTop - 10 - plotHeight * ((5.5 - yMax) / ySpan))
       .attr("width", plotWidth * (5.5 / xSpan) + 10)
-      .attr("height", plotHeight * (5.5 / ySpan) + 10)
-      .style("fill", "url(#chart-bg-gradient)")  
-      .attr('clip-path', 'url(#clip-chart-area)');
+      .attr("height", plotHeight * (5.5 / ySpan) + 10);
 
     // Draw X axis line
     svg.append("line")
@@ -281,17 +293,16 @@ export default function ScatterPlot({
     }
     const lowerQuery = searchQuery?.toLowerCase() || "";
 
-    pointsGroup
+    const points = pointsGroup
       .selectAll("circle")
-      .data(filteredItems, (d) => d.name)
-      .join("circle")
+      .data(filteredItems, (d) => d.name);
+      // .join("circle")
+
+    const pointEnter = points.enter()
+      .append("circle")
       .attr("cx", (d) => (d.x === "5+" ? x(5.5) : x(d.x)))
       .attr("cy", (d) => (d.y === "5+" ? y(5.5) : y(d.y)))
-      .attr("r", (d) => {
-        const isHovered = hoveredItem?.name === d.name;
-        const isMatch = lowerQuery && d.name.toLowerCase().includes(lowerQuery);
-        return isHovered ? 8 : isMatch ? 7 : 5;
-      })
+      .attr("r", 0)
       .attr("fill", (d) => d.color)
       .attr("stroke", (d) => {
         const isMatch = lowerQuery && d.name.toLowerCase().includes(lowerQuery);
@@ -326,6 +337,31 @@ export default function ScatterPlot({
       .on("mouseleave", () => {
         setHoveredItem(null);
       });
+
+    pointEnter.transition()
+      .duration(800)
+      .attr("r", (d) => {
+        const isHovered = hoveredItem?.name === d.name;
+        const isMatch = lowerQuery && d.name.toLowerCase().includes(lowerQuery);
+        return isHovered ? 8 : isMatch ? 7 : 5;
+      });
+
+    points.merge(pointEnter)
+      .transition()
+      .duration(800)
+      .attr("cx", d => (d.x === "5+" ? x(5.5) : x(d.x)))
+      .attr("cy", d => (d.y === "5+" ? y(5.5) : y(d.y)))
+      .attr("r", (d) => {
+        const isHovered = hoveredItem?.name === d.name;
+        const isMatch = lowerQuery && d.name.toLowerCase().includes(lowerQuery);
+        return isHovered ? 8 : isMatch ? 7 : 5;
+      });
+
+    points.exit()
+      .transition()
+      .duration(800)
+      .attr("r", 0)
+      .remove();
 
     // Tooltip group
     if (!items || items.length === 0 || !selectedPokemon) return;
@@ -390,5 +426,6 @@ export default function ScatterPlot({
     searchQuery,
   ]);
 
-  return <svg ref={ref} />;
+  return <div style={{width: maxAxisLength + marginLeft + marginRight}}><svg ref={ref} /></div>
+    
 }
