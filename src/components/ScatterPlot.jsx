@@ -20,6 +20,7 @@ export default function ScatterPlot({
   xRange = [0, 5.5],
   yRange = [0, 5.5],
   searchQuery,
+  transitionDuration = 300,
 }) {
   const ref = useRef();
   const [hoveredItem, setHoveredItem] = useState(null);
@@ -126,7 +127,7 @@ export default function ScatterPlot({
     svg.attr("width", width).attr("height", height);
 
     // 애니메이션 속도
-    const posTransition = d3.transition().duration(300);
+    const posTransition = d3.transition().duration(transitionDuration);
 
     // 배경색
     const defs = svg.append("defs");
