@@ -125,6 +125,9 @@ export default function ScatterPlot({
 
     svg.attr("width", width).attr("height", height);
 
+    // 애니메이션 속도
+    const posTransition = d3.transition().duration(300);
+
     // 배경색
     const defs = svg.append("defs");
 
@@ -170,8 +173,7 @@ export default function ScatterPlot({
         .attr("id", "bg-rect");
     }
     svg.select("#bg-rect")
-      .transition()
-      .duration(500)
+      .transition(posTransition)
       .attr("x", marginLeft - plotWidth * (xMin / xSpan))
       .attr("y", marginTop - 10 - plotHeight * ((5.5 - yMax) / ySpan))
       .attr("width", plotWidth * (5.5 / xSpan) + 10)
@@ -295,8 +297,6 @@ export default function ScatterPlot({
     const points = pointsGroup
       .selectAll("circle")
       .data(filteredItems, (d) => d.name);
-
-    const posTransition = d3.transition().duration(500);
 
     const pointEnter = points.enter()
       .append("circle")
