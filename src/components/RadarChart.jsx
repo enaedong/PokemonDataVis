@@ -82,38 +82,66 @@ export default function RadarChart({ statsObj }) {
     });
     points.push(points[0]);
 
-    svg
+    // 애니메이션: 폴리곤
+    const polygon = svg
       .append("polygon")
-      .attr("points", points.map((p) => p.join(",")).join(" "))
+      .attr("points", Array(points.length).fill([center.x, center.y]).map((p) => p.join(",")).join(" "))
       .attr("fill", "rgba(76,175,80,0.20)")
       .attr("stroke", "#4caf50")
       .attr("stroke-width", 2);
 
-    // Stat dots and value labels
-    stats.forEach((stat, i) => {
-      const angle = angleSlice * i - Math.PI / 2;
-      const r = (stat / maxStat) * radius;
-      const x = center.x + r * Math.cos(angle);
-      const y = center.y + r * Math.sin(angle);
+    polygon
+      .transition()
+      .duration(700)
+      .attr("points", points.map((p) => p.join(",")).join(" "));
 
-      svg
-        .append("circle")
-        .attr("cx", x)
-        .attr("cy", y)
-        .attr("r", 4)
-        .attr("fill", "#4caf50")
-        .attr("stroke", "#fff")
-        .attr("stroke-width", 1.5);
+    // Stat dots (애니메이션)
+    const dotSelection = svg.selectAll(".stat-dot")
+      .data(stats)
+      .enter()
+      .append("circle")
+      .attr("class", "stat-dot")
+      .attr("cx", center.x)
+      .attr("cy", center.y)
+      .attr("r", 4)
+      .attr("fill", "#4caf50")
+      .attr("stroke", "#fff")
+      .attr("stroke-width", 1.5);
 
-      svg
-        .append("text")
-        .attr("x", center.x + (r + 15) * Math.cos(angle))
-        .attr("y", center.y + (r + 15) * Math.sin(angle) + 4)
-        .attr("text-anchor", "middle")
-        .attr("font-size", "11px")
-        .attr("fill", "#222")
-        .text(stat);
-    });
+    dotSelection.transition()
+      .duration(700)
+      .attr("cx", (stat, i) => {
+        const angle = angleSlice * i - Math.PI / 2;
+        const r = (stat / maxStat) * radius;
+        return center.x + r * Math.cos(angle);
+      })
+      .attr("cy", (stat, i) => {
+        const angle = angleSlice * i - Math.PI / 2;
+        const r = (stat / maxStat) * radius;
+        return center.y + r * Math.sin(angle);
+      });
+
+    // Stat value labels (애니메이션 후 등장)
+    setTimeout(() => {
+      stats.forEach((stat, i) => {
+        const angle = angleSlice * i - Math.PI / 2;
+        const r = (stat / maxStat) * radius;
+        const x = center.x + (r + 15) * Math.cos(angle);
+        const y = center.y + (r + 15) * Math.sin(angle);
+        svg
+          .append("text")
+          .attr("x", x)
+          .attr("y", y + 4)
+          .attr("text-anchor", "middle")
+          .attr("font-size", "11px")
+          .attr("fill", "#222")
+          .text(stat)
+          .attr("opacity", 0)
+          .transition()
+          .duration(200)
+          .attr("opacity", 1);
+      });
+    }, 700);
   }, [statsObj]);
 
   return <div id="radar-chart" ref={ref}></div>;

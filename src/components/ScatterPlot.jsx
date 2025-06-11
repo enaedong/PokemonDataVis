@@ -23,7 +23,7 @@ export default function ScatterPlot({
 }) {
   const ref = useRef();
   const [hoveredItem, setHoveredItem] = useState(null);
-  const maxAxisLength = 400;
+  const maxAxisLength = 550;
   const marginTop = 60;
   const marginBottom = 40;
   const marginLeft = 50;
@@ -329,6 +329,7 @@ export default function ScatterPlot({
       .style("cursor", "pointer")
 
       .on("click", (event, d) => {
+        event.stopPropagation();
         setSelectedItem(d.name === selectedItem ? null : d.name);
       })
       .on("mouseenter", (event, d) => {
@@ -366,11 +367,13 @@ export default function ScatterPlot({
     // Tooltip group
     if (!items || items.length === 0 || !selectedPokemon) return;
     svg.selectAll(".tooltip-group").remove();
-    const tooltipGroup = svg.append("g").attr("class", "tooltip-group");
+    const tooltipGroup = svg.append("g")
+      .attr("class", "tooltip-group")
+      .attr("pointer-events", "none");
 
     if (hoveredItem) {
-      const tx = hoveredItem.x === "5+" ? x(5.5) : x(hoveredItem.x);
-      const ty = hoveredItem.y === "5+" ? y(5.5) - 30 : y(hoveredItem.y) - 30;
+      let tx = hoveredItem.x === "5+" ? x(5.5) : x(hoveredItem.x);
+      let ty = hoveredItem.y === "5+" ? y(5.5) - 30 : y(hoveredItem.y) - 30;
 
       const tooltip = tooltipGroup
         .append("g")
@@ -403,6 +406,25 @@ export default function ScatterPlot({
       const boxWidth = Math.max(nameBBox.width, moveBBox.width) + 12;
       const boxHeight = nameBBox.height + (moveBBox ? moveBBox.height : 0) + 12;
 
+      // 툴팁 위치 경계 보정
+      const svgWidth = width;
+      const svgHeight = height;
+      let txAdj = tx;
+      let tyAdj = ty;
+      if (tx + boxWidth / 2 > svgWidth) {
+        txAdj = svgWidth - boxWidth / 2 - 4;
+      }
+      if (tx - boxWidth / 2 < 0) {
+        txAdj = boxWidth / 2 + 4;
+      }
+      if (ty - boxHeight < 0) {
+        tyAdj = boxHeight + 4;
+      }
+      if (ty > svgHeight) {
+        tyAdj = svgHeight - 4;
+      }
+      tooltip.attr("transform", `translate(${txAdj}, ${tyAdj})`);
+
       tooltip
         .insert("rect", "text")
         .attr("x", -boxWidth / 2)
@@ -426,6 +448,5 @@ export default function ScatterPlot({
     searchQuery,
   ]);
 
-  return <div style={{width: maxAxisLength + marginLeft + marginRight}}><svg ref={ref} /></div>
-    
+  return <div style={{width: maxAxisLength + marginLeft + marginRight}}><svg ref={ref} onClick={() => setSelectedItem(null)} style={{ cursor: 'pointer' }} /></div>
 }

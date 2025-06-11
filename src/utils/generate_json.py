@@ -116,15 +116,13 @@ def generate_usage_json(month="2025-05", output_file="public/usage.json"):
     base_url = f"https://www.smogon.com/stats/{month}"
     usage_url = f"{base_url}/gen9bssregi-1500.txt"
     bssregi_moveset_url = f"{base_url}/moveset/gen9bssregi-1500.txt"
-    ubers_moveset_url = f"{base_url}/moveset/gen9ubers-0.txt"
-    ag_moveset_url = f"{base_url}/moveset/gen9anythinggoes-0.txt"
+    ou_moveset_url = f"{base_url}/moveset/gen9ou-1500.txt"
 
     try:
         # Fetch moveset data in order of fallback priority
         print("Fetching moveset data...")
         bss_info = fetch_and_parse_moveset(bssregi_moveset_url)
-        ubers_info = fetch_and_parse_moveset(ubers_moveset_url)
-        ag_info = fetch_and_parse_moveset(ag_moveset_url)
+        ou_info = fetch_and_parse_moveset(ou_moveset_url)
 
         # Fetch usage ranking data from BSSregi
         print("Fetching BSS usage ranking...")
@@ -146,25 +144,22 @@ def generate_usage_json(month="2025-05", output_file="public/usage.json"):
         included_names = set()
 
         def get_fallback_info(name):
-            """Tries to get move data from bss, then ubers, then AG."""
+            """Tries to get move data from bss, then ou, then AG."""
             info = bss_info.get(name)
             if info and info.get("moves"):
                 return info
-            info = ubers_info.get(name)
-            if info and info.get("moves"):
-                return info
-            info = ag_info.get(name)
+            info = ou_info.get(name)
             if info and info.get("moves"):
                 return info
             return None
 
         # 1. From BSSregi usage list
+        rank_count = 1
         for line in usage_lines[start_index:]:
             if not line.strip():
                 break
             columns = line.split("|")
             if len(columns) >= 4:
-                rank = int(columns[1].strip())
                 name = columns[2].strip()
                 usage = float(columns[3].strip().replace('%', ''))
                 safe_name = normalize_name(name)
@@ -174,7 +169,7 @@ def generate_usage_json(month="2025-05", output_file="public/usage.json"):
                     continue  # skip Pokémon with no moves in any dataset
 
                 usage_data.append({
-                    "rank": rank,
+                    "rank": rank_count,
                     "name": name,
                     "safe_name": safe_name,
                     "usage": round(usage, 1),
@@ -184,12 +179,12 @@ def generate_usage_json(month="2025-05", output_file="public/usage.json"):
                     "spread": info.get("spread", None),
                 })
                 included_names.add(safe_name)
+                rank_count += 1
 
         print(f"{len(usage_data)} Pokémon from BSSregi usage with valid move data")
 
-        # 2. Append Pokémon not in BSSregi from ubers or AG (only if they have moves)
-        fallback_sources = [ubers_info, ag_info]
-        fallback_names = set(ubers_info.keys()).union(ag_info.keys())
+        # 2. Append Pokémon not in BSSregi from ou or AG (only if they have moves)
+        fallback_names = set(ou_info.keys())
 
         added_count = 0
         for name in sorted(fallback_names):
