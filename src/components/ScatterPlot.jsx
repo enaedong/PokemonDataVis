@@ -31,7 +31,6 @@ export default function ScatterPlot({
 
   useEffect(() => {
     const svg = d3.select(ref.current);
-    svg.selectAll("g").remove();
     svg.selectAll("text").remove(); // To remove previous content
     svg.selectAll("line").remove();
     svg.selectAll("defs").remove();
@@ -296,7 +295,8 @@ export default function ScatterPlot({
     const points = pointsGroup
       .selectAll("circle")
       .data(filteredItems, (d) => d.name);
-      // .join("circle")
+
+    const posTransition = d3.transition().duration(500);
 
     const pointEnter = points.enter()
       .append("circle")
@@ -304,6 +304,31 @@ export default function ScatterPlot({
       .attr("cy", (d) => (d.y === "5+" ? y(5.5) : y(d.y)))
       .attr("r", 0)
       .attr("fill", (d) => d.color)
+      .attr("stroke", "white")
+      .attr("stroke-width", 1)
+      .attr("opacity", 1)
+      .style("cursor", "pointer")
+
+      .on("click", (event, d) => {
+        event.stopPropagation();
+        setSelectedItem(d.name === selectedItem ? null : d.name);
+      })
+      .on("mouseenter", (event, d) => {
+        setHoveredItem(d);
+      })
+      .on("mouseleave", () => {
+        setHoveredItem(null);
+      });
+
+    pointEnter.transition(posTransition)
+      .attr("cx", d => (d.x === "5+" ? x(5.5) : x(d.x)))
+      .attr("cy", d => (d.y === "5+" ? y(5.5) : y(d.y)))
+      .attr("fill", (d) => d.color)
+      .attr("r", (d) => {
+        const isHovered = hoveredItem?.name === d.name;
+        const isMatch = lowerQuery && d.name.toLowerCase().includes(lowerQuery);
+        return isHovered ? 8 : isMatch ? 7 : 5;
+      })
       .attr("stroke", (d) => {
         const isMatch = lowerQuery && d.name.toLowerCase().includes(lowerQuery);
         if (d.name === selectedItem) return "#222"; // exact selected
@@ -325,42 +350,41 @@ export default function ScatterPlot({
         if (isMatch) return 1; // partial match always full opacity
         if (selectedItem) return d.name === selectedItem ? 1 : 0.3;
         return 1;
-      })
-      .style("cursor", "pointer")
-
-      .on("click", (event, d) => {
-        event.stopPropagation();
-        setSelectedItem(d.name === selectedItem ? null : d.name);
-      })
-      .on("mouseenter", (event, d) => {
-        setHoveredItem(d);
-      })
-      .on("mouseleave", () => {
-        setHoveredItem(null);
       });
 
-    pointEnter.transition()
-      .duration(800)
-      .attr("r", (d) => {
-        const isHovered = hoveredItem?.name === d.name;
-        const isMatch = lowerQuery && d.name.toLowerCase().includes(lowerQuery);
-        return isHovered ? 8 : isMatch ? 7 : 5;
-      });
-
-    points.merge(pointEnter)
-      .transition()
-      .duration(800)
+    points.transition(posTransition)      
       .attr("cx", d => (d.x === "5+" ? x(5.5) : x(d.x)))
       .attr("cy", d => (d.y === "5+" ? y(5.5) : y(d.y)))
+      .attr("fill", (d) => d.color)
       .attr("r", (d) => {
         const isHovered = hoveredItem?.name === d.name;
         const isMatch = lowerQuery && d.name.toLowerCase().includes(lowerQuery);
         return isHovered ? 8 : isMatch ? 7 : 5;
+      })
+      .attr("stroke", (d) => {
+        const isMatch = lowerQuery && d.name.toLowerCase().includes(lowerQuery);
+        if (d.name === selectedItem) return "#222"; // exact selected
+        if (isMatch) return "gold"; // partial match
+        return "white";
+      })
+      .attr("stroke-width", (d) => {
+        if (d.name === selectedItem) return 2;
+        if (
+          searchQuery &&
+          d.name.toLowerCase().includes(searchQuery.toLowerCase())
+        )
+          return 2;
+        return 1;
+      })
+      .attr("opacity", (d) => {
+        const isMatch = lowerQuery && d.name.toLowerCase().includes(lowerQuery);
+
+        if (isMatch) return 1; // partial match always full opacity
+        if (selectedItem) return d.name === selectedItem ? 1 : 0.3;
+        return 1;
       });
 
-    points.exit()
-      .transition()
-      .duration(800)
+    points.exit().transition(posTransition)
       .attr("r", 0)
       .remove();
 
@@ -448,5 +472,6 @@ export default function ScatterPlot({
     searchQuery,
   ]);
 
-  return <div style={{width: maxAxisLength + marginLeft + marginRight}}><svg ref={ref} onClick={() => setSelectedItem(null)} style={{ cursor: 'pointer' }} /></div>
+  return <svg ref={ref} onClick={() => setSelectedItem(null)} style={{ cursor: 'pointer' }} />
+  // <div style={{width: maxAxisLength + marginLeft + marginRight}}></div>
 }
