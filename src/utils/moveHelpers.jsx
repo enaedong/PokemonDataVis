@@ -62,7 +62,7 @@ export function EndureKOData({ selectedPokemon, dexData, usageData, typeChart, s
       x: bestMove.hits > 5 ? "5+" : bestMove.hits,
       y: yHits > 5 ? "5+" : yHits,
       speed: merged.stat.spe,
-      type: merged.type[0].toLowerCase(),
+      type: merged.type,
       color: reactiveSpeColor(),
       bestMove: bestMove.name,
     };
