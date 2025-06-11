@@ -26,6 +26,9 @@ export default function App() {
   const [selectedMove, setSelectedMove] = useState(null);
   const [moveList, setMoveList] = useState([]);
 
+  // Speed check state
+  const [speedOnly, setSpeedOnly] = useState(false);
+
   // Load usage data
   useEffect(() => {
     const loadData = async () => {
@@ -177,6 +180,27 @@ export default function App() {
     }
   }, [selectedPokemon, moveList, selectedMove]);
 
+  // Speed check
+  function usePrevious(value) {
+    const ref = useRef();
+    useEffect(() => {
+      ref.current = value;
+    }, [value]);
+    return ref.current;
+  }
+
+  const prevSelectedPokemon = usePrevious(selectedPokemon);
+
+  useEffect(() => {
+    if (
+      prevSelectedPokemon &&
+      selectedPokemon &&
+      prevSelectedPokemon.name !== selectedPokemon.name
+    ) {
+      setSpeedOnly(false);
+    }
+  }, [selectedPokemon, prevSelectedPokemon]);
+  
   /////////////////////////////// return ////////////////////////////////
   return (
     <div className="container">
@@ -237,6 +261,8 @@ export default function App() {
           typeAll={typeAll}
           setTypeAll={setTypeAll}
           typeNames={typeNames}
+          speedOnly={speedOnly}
+          setSpeedOnly={setSpeedOnly}
         />
       </div>
 
@@ -254,6 +280,7 @@ export default function App() {
           selectedWeather={selectedWeather}
           selectedTerrain={selectedTerrain}
           ranks={ranks}
+          speedOnly={speedOnly}
         />
       </div>
 
