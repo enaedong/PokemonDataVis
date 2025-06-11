@@ -28,6 +28,8 @@ export default function EndureKOChart({
   const [verticalRange, setVerticalRange] = useState([0, 5.5]);
   const [horizontalRange, setHorizontalRange] = useState([0, 5.5]);
 
+  const [isDragging, setIsDragging] = useState(false);
+
   const verticalSliderRef = useRef();
   const horizontalSliderRef = useRef();
 
@@ -87,6 +89,7 @@ export default function EndureKOChart({
     const drag = d3
       .drag()
       .on("start", (event) => {
+        setIsDragging(true);
         dragStartRef.current = {
           mouseX: event.x,
           mouseY: event.y,
@@ -104,8 +107,7 @@ export default function EndureKOChart({
         const dx =
           (event.x - dragStartRef.current.mouseX) * (dataMax / minimapSize);
         const dy =
-          -(event.y - dragStartRef.current.mouseY) *
-          (dataMax / minimapSize);
+          -(event.y - dragStartRef.current.mouseY) * (dataMax / minimapSize);
 
         let newXMin = Math.max(
           0,
@@ -120,6 +122,9 @@ export default function EndureKOChart({
 
         setHorizontalRange([newXMin, newXMax]);
         setVerticalRange([newYMin, newYMax]);
+      })
+      .on("end", () => {
+        setIsDragging(false);
       });
 
     rect.call(drag);
@@ -211,38 +216,41 @@ export default function EndureKOChart({
               value={verticalRange}
               onChange={(val) => setVerticalRange(val)}
               allowCross={false}
-              trackStyle={[{
-                background: 'linear-gradient(180deg, #1976d2 0%, #64b5f6 100%)',
-                width: 7,
-                boxShadow: '0 1px 4px rgba(25, 118, 210, 0.10)',
-                borderRadius: 4,
-              }]}
+              trackStyle={[
+                {
+                  background:
+                    "linear-gradient(180deg, #1976d2 0%, #64b5f6 100%)",
+                  width: 7,
+                  boxShadow: "0 1px 4px rgba(25, 118, 210, 0.10)",
+                  borderRadius: 4,
+                },
+              ]}
               handleStyle={[
                 {
-                  borderColor: '#1976d2',
-                  backgroundColor: '#fff',
+                  borderColor: "#1976d2",
+                  backgroundColor: "#fff",
                   width: 18,
                   height: 18,
                   marginLeft: -5.5,
                   marginTop: -5.5,
-                  boxShadow: '0 1px 4px rgba(25, 118, 210, 0.10)',
+                  boxShadow: "0 1px 4px rgba(25, 118, 210, 0.10)",
                   borderWidth: 2,
-                  transition: 'border 0.2s, box-shadow 0.2s',
+                  transition: "border 0.2s, box-shadow 0.2s",
                 },
                 {
-                  borderColor: '#1976d2',
-                  backgroundColor: '#fff',
+                  borderColor: "#1976d2",
+                  backgroundColor: "#fff",
                   width: 18,
                   height: 18,
                   marginLeft: -5.5,
                   marginTop: -5.5,
-                  boxShadow: '0 1px 4px rgba(25, 118, 210, 0.10)',
+                  boxShadow: "0 1px 4px rgba(25, 118, 210, 0.10)",
                   borderWidth: 2,
-                  transition: 'border 0.2s, box-shadow 0.2s',
+                  transition: "border 0.2s, box-shadow 0.2s",
                 },
               ]}
               railStyle={{
-                background: 'linear-gradient(180deg, #e3f2fd 0%, #e0e0e0 100%)',
+                background: "linear-gradient(180deg, #e3f2fd 0%, #e0e0e0 100%)",
                 width: 7,
                 borderRadius: 4,
               }}
@@ -257,7 +265,7 @@ export default function EndureKOChart({
                     left: "-28px",
                     top: `calc(${percent * 100}% )`,
                     background: "#1976d2",
-                    color: '#fff',
+                    color: "#fff",
                     padding: "2px 7px",
                     fontSize: 11,
                     borderRadius: 7,
@@ -265,7 +273,7 @@ export default function EndureKOChart({
                     pointerEvents: "none",
                     transform: "translateY(-50%)",
                     textAlign: "right",
-                    boxShadow: '0 1px 4px rgba(25, 118, 210, 0.07)',
+                    boxShadow: "0 1px 4px rgba(25, 118, 210, 0.07)",
                   }}
                 >
                   {val > 5 ? "5+" : val.toFixed(1)}
@@ -329,38 +337,40 @@ export default function EndureKOChart({
             value={horizontalRange}
             onChange={(val) => setHorizontalRange(val)}
             allowCross={false}
-            trackStyle={[{
-              background: 'linear-gradient(90deg, #1976d2 0%, #64b5f6 100%)',
-              height: 7,
-              boxShadow: '0 1px 4px rgba(25, 118, 210, 0.10)',
-              borderRadius: 4,
-            }]}
+            trackStyle={[
+              {
+                background: "linear-gradient(90deg, #1976d2 0%, #64b5f6 100%)",
+                height: 7,
+                boxShadow: "0 1px 4px rgba(25, 118, 210, 0.10)",
+                borderRadius: 4,
+              },
+            ]}
             handleStyle={[
               {
-                borderColor: '#1976d2',
-                backgroundColor: '#fff',
+                borderColor: "#1976d2",
+                backgroundColor: "#fff",
                 width: 18,
                 height: 18,
                 marginLeft: -5.5,
                 marginTop: -5.5,
-                boxShadow: '0 1px 4px rgba(25, 118, 210, 0.10)',
+                boxShadow: "0 1px 4px rgba(25, 118, 210, 0.10)",
                 borderWidth: 2,
-                transition: 'border 0.2s, box-shadow 0.2s',
+                transition: "border 0.2s, box-shadow 0.2s",
               },
               {
-                borderColor: '#1976d2',
-                backgroundColor: '#fff',
+                borderColor: "#1976d2",
+                backgroundColor: "#fff",
                 width: 18,
                 height: 18,
                 marginLeft: -5.5,
                 marginTop: -5.5,
-                boxShadow: '0 1px 4px rgba(25, 118, 210, 0.10)',
+                boxShadow: "0 1px 4px rgba(25, 118, 210, 0.10)",
                 borderWidth: 2,
-                transition: 'border 0.2s, box-shadow 0.2s',
+                transition: "border 0.2s, box-shadow 0.2s",
               },
             ]}
             railStyle={{
-              background: 'linear-gradient(90deg, #e3f2fd 0%, #e0e0e0 100%)',
+              background: "linear-gradient(90deg, #e3f2fd 0%, #e0e0e0 100%)",
               height: 7,
               borderRadius: 4,
             }}
@@ -375,7 +385,7 @@ export default function EndureKOChart({
                   left: `calc(${percent * 100}%)`,
                   top: "22px",
                   background: "#1976d2",
-                  color: '#fff',
+                  color: "#fff",
                   padding: "2px 7px",
                   fontSize: 11,
                   borderRadius: 7,
@@ -383,7 +393,7 @@ export default function EndureKOChart({
                   pointerEvents: "none",
                   transform: "translateX(-50%)",
                   textAlign: "center",
-                  boxShadow: '0 1px 4px rgba(25, 118, 210, 0.07)',
+                  boxShadow: "0 1px 4px rgba(25, 118, 210, 0.07)",
                 }}
               >
                 {val > 5 ? "5+" : val.toFixed(1)}
@@ -392,8 +402,25 @@ export default function EndureKOChart({
           })}
         </div>
 
-        <div className="search-bar" style={{ marginTop: 16, marginBottom: 8, width: '100%', position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <div style={{ position: 'relative', width: 180, boxSizing: 'border-box' }}>
+        <div
+          className="search-bar"
+          style={{
+            marginTop: 16,
+            marginBottom: 8,
+            width: "100%",
+            position: "relative",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <div
+            style={{
+              position: "relative",
+              width: 180,
+              boxSizing: "border-box",
+            }}
+          >
             <input
               type="text"
               placeholder="Search Pokémon..."
@@ -403,40 +430,40 @@ export default function EndureKOChart({
                 width: 180,
                 height: 32,
                 fontSize: 15,
-                padding: '0 10px',
-                border: '1.5px solid #bbb',
+                padding: "0 10px",
+                border: "1.5px solid #bbb",
                 borderRadius: 0,
-                outline: 'none',
-                boxSizing: 'border-box',
-                boxShadow: '0 1px 4px rgba(0,0,0,0.04)',
-                background: '#fafbfc',
+                outline: "none",
+                boxSizing: "border-box",
+                boxShadow: "0 1px 4px rgba(0,0,0,0.04)",
+                background: "#fafbfc",
                 margin: 0,
-                transition: 'border 0.2s',
-                display: 'block',
+                transition: "border 0.2s",
+                display: "block",
               }}
-              onFocus={e => e.target.style.border = '1.5px solid #4caf50'}
-              onBlur={e => e.target.style.border = '1.5px solid #bbb'}
+              onFocus={(e) => (e.target.style.border = "1.5px solid #4caf50")}
+              onBlur={(e) => (e.target.style.border = "1.5px solid #bbb")}
             />
             {searchQuery && (
               <ul
                 className="search-suggestions"
                 style={{
                   maxHeight: 120,
-                  overflowY: 'auto',
-                  background: '#fff',
-                  border: '1.5px solid #bbb',
-                  borderTop: '1.5px solid #bbb',
+                  overflowY: "auto",
+                  background: "#fff",
+                  border: "1.5px solid #bbb",
+                  borderTop: "1.5px solid #bbb",
                   borderRadius: 0,
                   margin: 0,
                   padding: 0,
-                  position: 'absolute',
+                  position: "absolute",
                   left: 0,
-                  top: '100%',
+                  top: "100%",
                   width: 180,
                   zIndex: 10,
-                  boxSizing: 'border-box',
-                  boxShadow: '0 4px 16px rgba(0,0,0,0.08)',
-                  listStyle: 'none',
+                  boxSizing: "border-box",
+                  boxShadow: "0 4px 16px rgba(0,0,0,0.08)",
+                  listStyle: "none",
                 }}
               >
                 {scatterItems
@@ -451,14 +478,18 @@ export default function EndureKOChart({
                         setSelectedItem(d.name);
                       }}
                       style={{
-                        padding: '8px 14px',
-                        cursor: 'pointer',
+                        padding: "8px 14px",
+                        cursor: "pointer",
                         fontSize: 16,
-                        borderBottom: '1px solid #f3f3f3',
-                        transition: 'background 0.15s',
+                        borderBottom: "1px solid #f3f3f3",
+                        transition: "background 0.15s",
                       }}
-                      onMouseOver={e => e.currentTarget.style.background = '#f3f3f3'}
-                      onMouseOut={e => e.currentTarget.style.background = '#fff'}
+                      onMouseOver={(e) =>
+                        (e.currentTarget.style.background = "#f3f3f3")
+                      }
+                      onMouseOut={(e) =>
+                        (e.currentTarget.style.background = "#fff")
+                      }
                     >
                       {d.name}
                     </li>
