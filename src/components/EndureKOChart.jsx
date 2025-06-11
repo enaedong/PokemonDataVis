@@ -19,6 +19,7 @@ export default function EndureKOChart({
   selectedWeather,
   selectedTerrain,
   ranks,
+  speedOnly,
 }) {
   const [typeChart, setTypeChart] = useState(null);
   const [scatterItems, setScatterItems] = useState([]);
@@ -147,19 +148,33 @@ export default function EndureKOChart({
       }}
     >
       <div style={{ flex: 1, minWidth: 0 }}>
-        <ScatterPlot
-          items={scatterItems}
-          selectedPokemon={dexData.find((p) => p.name === selectedPokemon.name)}
-          selectedItem={selectedItem}
-          setSelectedItem={setSelectedItem}
-          showMove={true}
-          typeChecks={typeChecks}
-          typeNames={typeNames}
-          xRange={horizontalRange}
-          yRange={verticalRange}
-          searchQuery={searchQuery}
-          transitionDuration={isDragging ? 0 : 300}
-        />
+        <div style={{ position: "relative", width: "100%" }}>
+          <div
+            style={{
+              position: "absolute",
+              left: 50, // match marginLeft of your scatter plot SVG
+              top: 20,
+              fontWeight: "bold",
+              fontSize: 15,
+              zIndex: 10,
+            }}
+          >
+            <span style={{ color: "green" }}>Green</span> is faster, <span style={{ color: "red" }}>Red</span> is slower
+          </div>
+          <ScatterPlot
+            items={scatterItems}
+            selectedPokemon={dexData.find((p) => p.name === selectedPokemon.name)}
+            selectedItem={selectedItem}
+            setSelectedItem={setSelectedItem}
+            showMove={true}
+            typeChecks={typeChecks}
+            typeNames={typeNames}
+            xRange={horizontalRange}
+            yRange={verticalRange}
+            searchQuery={searchQuery}
+            speedOnly={speedOnly}
+          />
+        </div>
       </div>
 
       <div
@@ -167,7 +182,7 @@ export default function EndureKOChart({
           display: "flex",
           flexDirection: "column",
           alignItems: "flex-start",
-          marginLeft: 35,
+          marginLeft: 20,
           minWidth: 0,
           marginTop: 50,
         }}

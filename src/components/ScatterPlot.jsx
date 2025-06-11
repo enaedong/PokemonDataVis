@@ -20,6 +20,7 @@ export default function ScatterPlot({
   xRange = [0, 5.5],
   yRange = [0, 5.5],
   searchQuery,
+  speedOnly = false,
   transitionDuration = 300,
 }) {
   const ref = useRef();
@@ -35,12 +36,14 @@ export default function ScatterPlot({
     svg.selectAll("text").remove(); // To remove previous content
     svg.selectAll("line").remove();
     svg.selectAll("defs").remove();
+    svg.selectAll("polygon").remove();
     
     if (!items || items.length === 0 || !selectedPokemon) return;
 
     // Filter items to only include those with checked types
     let filteredItems = items.filter((d) => {
       const types = Array.isArray(d.type) ? d.type : [d.type];
+      // Check if any type is checked
       return types.some((t) => {
         const tNorm = t.trim().toLowerCase();
         const idx = typeNames.findIndex(
@@ -49,6 +52,11 @@ export default function ScatterPlot({
         return idx !== -1 && typeChecks[idx];
       });
     });
+
+    // Filter out items using the speed
+    if (speedOnly) {
+      filteredItems = filteredItems.filter(d => d.color === "green");
+    }
 
     // Calculate axis ranges
     const xMin = Math.min(...xRange);
@@ -124,7 +132,7 @@ export default function ScatterPlot({
       );
     });
 
-    svg.attr("width", width).attr("height", height);
+    svg.attr("width", width + 25).attr("height", height + 50);
 
     // 애니메이션 속도
     const posTransition = d3.transition().duration(transitionDuration);
@@ -207,14 +215,43 @@ export default function ScatterPlot({
       }
     });
     
-    // X axis label
+    // Variabes for axis label and arrows
+    const xLabelY = height - marginBottom + 40; // vertical position for label/arrows
+    const xLabelX = marginLeft + plotWidth / 2; // center of x-axis
+    const ylabelX = marginLeft - 40;
+    const ylabelY = marginTop + plotHeight / 2;
+    const yArrowOffset = 60; // distance from ENDURE label to arrow tip
+    const yArrowBaseOffset = 40; // distance ENDURE from label to arrow base
+    const xArrowOffset = 45; // distance from KO label to arrow tip
+    const xArrowBaseOffset = 25; // distance from KO label to arrow base
+    
+    // Red right arrow (right of KO)
+    svg.append("polygon")
+      .attr("points", [
+        [xLabelX + xArrowOffset, xLabelY],         // tip
+        [xLabelX + xArrowBaseOffset, xLabelY - 7], // top base
+        [xLabelX + xArrowBaseOffset, xLabelY + 7], // bottom base
+      ].map(p => p.join(",")).join(" "))
+      .attr("fill", "red");
+    
+    // Green left arrow (left of KO)
+    svg.append("polygon")
+      .attr("points", [
+        [xLabelX - xArrowOffset, xLabelY],         // tip
+        [xLabelX - xArrowBaseOffset, xLabelY - 7], // top base
+        [xLabelX - xArrowBaseOffset, xLabelY + 7], // bottom base
+      ].map(p => p.join(",")).join(" "))
+      .attr("fill", "green");
+    
+    // KO label (horizontal)
     svg.append("text")
-    .attr("x", marginLeft + plotWidth / 2)
-    .attr("y", height)
-    .attr("text-anchor", "middle")
-    .attr("font-size", 16)
-    .attr("fill", "#222")
-    .text("Hits to KO Selected Pokémon");
+      .attr("x", xLabelX)
+      .attr("y", xLabelY + 5)
+      .attr("text-anchor", "middle")
+      .attr("font-size", 14)
+      .attr("fill", "#222")
+      .attr("font-weight", "bold")
+      .text("KO");
     
     // Draw Y axis line
     svg.append("line")
@@ -243,15 +280,34 @@ export default function ScatterPlot({
       }
     });
     
-    // Y axis label (rotated)
+    // Green up arrow (above ENDURE)
+    svg.append("polygon")
+      .attr("points", [
+        [ylabelX, ylabelY - yArrowOffset],         // tip
+        [ylabelX - 7, ylabelY - yArrowBaseOffset],    // left base
+        [ylabelX + 7, ylabelY - yArrowBaseOffset],    // right base
+      ].map(p => p.join(",")).join(" "))
+      .attr("fill", "green");
+    
+    // Red down arrow (below ENDURE)
+    svg.append("polygon")
+      .attr("points", [
+        [ylabelX, ylabelY + yArrowOffset],         // tip
+        [ylabelX - 7, ylabelY + yArrowBaseOffset],    // left base
+        [ylabelX + 7, ylabelY + yArrowBaseOffset],    // right base
+      ].map(p => p.join(",")).join(" "))
+      .attr("fill", "red");
+    
+    // ENDURE label (rotated)
     svg.append("text")
-    .attr("x", marginLeft - 40)
-    .attr("y", marginTop + plotHeight / 2)
-    .attr("text-anchor", "middle")
-    .attr("font-size", 16)
-    .attr("fill", "#222")
-    .attr("transform", `rotate(-90,${marginLeft - 40},${marginTop + plotHeight / 2})`)
-    .text("Hits each Pokémon can endure from selected move");
+      .attr("x", ylabelX)
+      .attr("y", ylabelY + 5)
+      .attr("text-anchor", "middle")
+      .attr("font-size", 13)
+      .attr("fill", "#222")
+      .attr("font-weight", "bold")
+      .attr("transform", `rotate(-90,${ylabelX},${ylabelY})`)
+      .text("ENDURE");
     
     // X-axis end label (right end)
     svg.append("text")
@@ -471,6 +527,7 @@ export default function ScatterPlot({
     xRange,
     yRange,
     searchQuery,
+    speedOnly,
   ]);
 
   return <svg ref={ref} onClick={() => setSelectedItem(null)} style={{ cursor: 'pointer' }} />
