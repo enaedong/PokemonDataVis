@@ -36,6 +36,7 @@ export default function ScatterPlot({
     svg.selectAll("text").remove(); // To remove previous content
     svg.selectAll("line").remove();
     svg.selectAll("defs").remove();
+    svg.selectAll("polygon").remove();
     
     if (!items || items.length === 0 || !selectedPokemon) return;
 
