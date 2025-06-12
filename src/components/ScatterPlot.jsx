@@ -246,7 +246,7 @@ export default function ScatterPlot({
         [xLabelX + xArrowBaseOffset, xLabelY + 7], // bottom base
       ].map(p => p.join(",")).join(" "))
       .attr("fill", "orange")
-      .attr("opacity", 0.5);
+      .attr("opacity", 0.7);
     
     // Green left arrow (left of KO)
     svg.append("polygon")
@@ -256,7 +256,7 @@ export default function ScatterPlot({
         [xLabelX - xArrowBaseOffset, xLabelY + 7], // bottom base
       ].map(p => p.join(",")).join(" "))
       .attr("fill", "deepskyblue")
-      .attr("opacity", 0.5);
+      .attr("opacity", 0.7);
     
     // KO label (horizontal)
     svg.append("text")
@@ -306,7 +306,7 @@ export default function ScatterPlot({
         [ylabelX + 7, ylabelY - yArrowBaseOffset],    // right base
       ].map(p => p.join(",")).join(" "))
       .attr("fill", "deepskyblue")
-      .attr("opacity", 0.5);
+      .attr("opacity", 0.7);
     
     // Red down arrow (below ENDURE)
     svg.append("polygon")
@@ -316,7 +316,7 @@ export default function ScatterPlot({
         [ylabelX + 7, ylabelY + yArrowBaseOffset],    // right base
       ].map(p => p.join(",")).join(" "))
       .attr("fill", "orange")
-      .attr("opacity", 0.5);
+      .attr("opacity", 0.7);
     
     // ENDURE label (rotated)
     svg.append("text")
