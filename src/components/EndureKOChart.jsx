@@ -176,7 +176,7 @@ export default function EndureKOChart({
           display: "flex",
           flexDirection: "column",
           alignItems: "flex-start",
-          marginLeft: 20,
+          marginLeft: 15,
           minWidth: 0,
           marginTop: 50,
         }}

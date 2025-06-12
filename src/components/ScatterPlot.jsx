@@ -129,7 +129,7 @@ export default function ScatterPlot({
       return dx >= xMin && dx <= xMax && dy >= yMin && dy <= yMax;
     });
 
-    svg.attr("width", width).attr("height", height);
+    svg.attr("width", width+15).attr("height", height+20);
 
     const isViewChange =
       prevXRange.current[0] !== xRange[0] ||
@@ -245,7 +245,8 @@ export default function ScatterPlot({
         [xLabelX + xArrowBaseOffset, xLabelY - 7], // top base
         [xLabelX + xArrowBaseOffset, xLabelY + 7], // bottom base
       ].map(p => p.join(",")).join(" "))
-      .attr("fill", "red");
+      .attr("fill", "orange")
+      .attr("opacity", 0.5);
     
     // Green left arrow (left of KO)
     svg.append("polygon")
@@ -254,7 +255,8 @@ export default function ScatterPlot({
         [xLabelX - xArrowBaseOffset, xLabelY - 7], // top base
         [xLabelX - xArrowBaseOffset, xLabelY + 7], // bottom base
       ].map(p => p.join(",")).join(" "))
-      .attr("fill", "green");
+      .attr("fill", "deepskyblue")
+      .attr("opacity", 0.5);
     
     // KO label (horizontal)
     svg.append("text")
@@ -303,7 +305,8 @@ export default function ScatterPlot({
         [ylabelX - 7, ylabelY - yArrowBaseOffset],    // left base
         [ylabelX + 7, ylabelY - yArrowBaseOffset],    // right base
       ].map(p => p.join(",")).join(" "))
-      .attr("fill", "green");
+      .attr("fill", "deepskyblue")
+      .attr("opacity", 0.5);
     
     // Red down arrow (below ENDURE)
     svg.append("polygon")
@@ -312,7 +315,8 @@ export default function ScatterPlot({
         [ylabelX - 7, ylabelY + yArrowBaseOffset],    // left base
         [ylabelX + 7, ylabelY + yArrowBaseOffset],    // right base
       ].map(p => p.join(",")).join(" "))
-      .attr("fill", "red");
+      .attr("fill", "orange")
+      .attr("opacity", 0.5);
     
     // ENDURE label (rotated)
     svg.append("text")
