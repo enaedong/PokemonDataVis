@@ -130,7 +130,7 @@ export default function HeatmapChart({ items, xKey = "x", yKey = "y", width = 45
       {/* 툴크: hoveredCell이 있으면 React로 SVG에 렌더링 */}
       {hoveredCell && hoveredCell.count > 0 && (
         <g
-          transform={`translate(${hoveredCell.x},${hoveredCell.y - 30})`}
+          transform={`translate(${hoveredCell.x},${hoveredCell.y - 15})`}
           pointerEvents="none"
         >
           <rect
