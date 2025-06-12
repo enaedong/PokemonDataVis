@@ -28,8 +28,6 @@ export default function EndureKOChart({
   const [verticalRange, setVerticalRange] = useState([0, 5.5]);
   const [horizontalRange, setHorizontalRange] = useState([0, 5.5]);
 
-  const [isDragging, setIsDragging] = useState(false);
-
   const verticalSliderRef = useRef();
   const horizontalSliderRef = useRef();
 
@@ -89,7 +87,6 @@ export default function EndureKOChart({
     const drag = d3
       .drag()
       .on("start", (event) => {
-        setIsDragging(true);
         dragStartRef.current = {
           mouseX: event.x,
           mouseY: event.y,
@@ -123,9 +120,6 @@ export default function EndureKOChart({
         setHorizontalRange([newXMin, newXMax]);
         setVerticalRange([newYMin, newYMax]);
       })
-      .on("end", () => {
-        setIsDragging(false);
-      });
 
     rect.call(drag);
 

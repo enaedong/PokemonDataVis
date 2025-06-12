@@ -21,7 +21,6 @@ export default function ScatterPlot({
   yRange = [0, 5.5],
   searchQuery,
   speedOnly = false,
-  transitionDuration = 300,
 }) {
   const ref = useRef();
   const [hoveredItem, setHoveredItem] = useState(null);
@@ -30,6 +29,9 @@ export default function ScatterPlot({
   const marginBottom = 40;
   const marginLeft = 50;
   const marginRight = 20;
+
+  const prevXRange = useRef(xRange);
+  const prevYRange = useRef(yRange);
 
   useEffect(() => {
     const svg = d3.select(ref.current);
@@ -69,8 +71,8 @@ export default function ScatterPlot({
     const yMax = yMaxRaw > 5 ? 5.5 : yMaxRaw;
 
     const xSpan = xMax - xMin;
-    const ySpan = yMax - yMin;    
-    
+    const ySpan = yMax - yMin;
+
     let plotWidth, plotHeight;
 
     if (xSpan >= ySpan) {
@@ -83,7 +85,7 @@ export default function ScatterPlot({
 
     const width = plotWidth + marginLeft + marginRight;
     const height = plotHeight + marginTop + marginBottom;
-    
+
     // Scales
     const x = d3
       .scaleLinear()
@@ -124,64 +126,72 @@ export default function ScatterPlot({
     filteredItems = filteredItems.filter((d) => {
       const dx = d.x === "5+" ? 5.5 : d.x;
       const dy = d.y === "5+" ? 5.5 : d.y;
-      return (
-        dx >= xMin &&
-        dx <= xMax &&
-        dy >= yMin &&
-        dy <= yMax
-      );
+      return dx >= xMin && dx <= xMax && dy >= yMin && dy <= yMax;
     });
 
-    svg.attr("width", width + 25).attr("height", height + 50);
+    svg.attr("width", width).attr("height", height);
+
+    const isViewChange =
+      prevXRange.current[0] !== xRange[0] ||
+      prevXRange.current[1] !== xRange[1] ||
+      prevYRange.current[0] !== yRange[0] ||
+      prevYRange.current[1] !== yRange[1];
 
     // 애니메이션 속도
-    const posTransition = d3.transition().duration(transitionDuration);
+    const posTransition = d3.transition().duration(isViewChange ? 0 : 300);
 
     // 배경색
     const defs = svg.append("defs");
 
-    defs.append('clipPath')
-      .attr('id', 'clip-chart-area')
-      .append('rect')
-      .attr('x', marginLeft)
-      .attr('y', marginTop - 10)
-      .attr('width', plotWidth + 10)
-      .attr('height', plotHeight + 10);
+    defs
+      .append("clipPath")
+      .attr("id", "clip-chart-area")
+      .append("rect")
+      .attr("x", marginLeft)
+      .attr("y", marginTop - 10)
+      .attr("width", plotWidth + 10)
+      .attr("height", plotHeight + 10);
 
-    const gradient = defs.append("linearGradient")
+    const gradient = defs
+      .append("linearGradient")
       .attr("id", "chart-bg-gradient")
       .attr("x1", "0%")
       .attr("y1", "0%")
       .attr("x2", "100%")
-      .attr("y2", "100%");     
+      .attr("y2", "100%");
 
     // 좌측 상단 색깔
-    gradient.append("stop")
+    gradient
+      .append("stop")
       .attr("offset", "0%")
       .attr("stop-color", "DeepSkyBlue")
       .attr("stop-opacity", 0.3);
     // 가운데
-    gradient.append("stop")
+    gradient
+      .append("stop")
       .attr("offset", "50%")
       .attr("stop-color", "white")
       .attr("stop-opacity", 1);
     // 우측 하단 색깔
-    gradient.append("stop")
+    gradient
+      .append("stop")
       .attr("offset", "100%")
       .attr("stop-color", "Orange")
       .attr("stop-opacity", 0.3);
 
     if (svg.select("#bg-rect").empty()) {
-      svg.append("rect")
+      svg
+        .append("rect")
         .attr("x", marginLeft)
         .attr("y", marginTop - 10)
         .attr("width", plotWidth + 10)
         .attr("height", plotHeight + 10)
-        .style("fill", "url(#chart-bg-gradient)")  
-        .attr('clip-path', 'url(#clip-chart-area)')
+        .style("fill", "url(#chart-bg-gradient)")
+        .attr("clip-path", "url(#clip-chart-area)")
         .attr("id", "bg-rect");
     }
-    svg.select("#bg-rect")
+    svg
+      .select("#bg-rect")
       .transition(posTransition)
       .attr("x", marginLeft - plotWidth * (xMin / xSpan))
       .attr("y", marginTop - 10 - plotHeight * ((5.5 - yMax) / ySpan))
@@ -189,7 +199,8 @@ export default function ScatterPlot({
       .attr("height", plotHeight * (5.5 / ySpan) + 10);
 
     // Draw X axis line
-    svg.append("line")
+    svg
+      .append("line")
       .attr("x1", marginLeft)
       .attr("y1", height - marginBottom)
       .attr("x2", marginLeft + plotWidth)
@@ -198,14 +209,16 @@ export default function ScatterPlot({
 
     // Draw X axis ticks and labels
     xTicks.forEach((v) => {
-      svg.append("line")
+      svg
+        .append("line")
         .attr("x1", x(v))
         .attr("y1", height - marginBottom)
         .attr("x2", x(v))
         .attr("y2", height - marginBottom + (Number.isInteger(v) ? 12 : 6))
         .attr("stroke", "#222");
       if (Number.isInteger(v)) {
-        svg.append("text")
+        svg
+          .append("text")
           .attr("x", x(v))
           .attr("y", height - marginBottom + 24)
           .attr("text-anchor", "middle")
@@ -254,29 +267,32 @@ export default function ScatterPlot({
       .text("KO");
     
     // Draw Y axis line
-    svg.append("line")
-    .attr("x1", marginLeft)
-    .attr("y1", height - marginBottom)
-    .attr("x2", marginLeft)
-    .attr("y2", marginTop)
-    .attr("stroke", "#222");
-    
+    svg
+      .append("line")
+      .attr("x1", marginLeft)
+      .attr("y1", height - marginBottom)
+      .attr("x2", marginLeft)
+      .attr("y2", marginTop)
+      .attr("stroke", "#222");
+
     // Draw Y axis ticks and labels
     yTicks.forEach((v) => {
-      svg.append("line")
-      .attr("x1", marginLeft)
-      .attr("y1", y(v))
-      .attr("x2", marginLeft - (Number.isInteger(v) ? 12 : 6))
-      .attr("y2", y(v))
-      .attr("stroke", "#222");
+      svg
+        .append("line")
+        .attr("x1", marginLeft)
+        .attr("y1", y(v))
+        .attr("x2", marginLeft - (Number.isInteger(v) ? 12 : 6))
+        .attr("y2", y(v))
+        .attr("stroke", "#222");
       if (Number.isInteger(v)) {
-        svg.append("text")
-        .attr("x", marginLeft - 16)
-        .attr("y", y(v) + 5)
-        .attr("text-anchor", "end")
-        .attr("font-size", 14)
-        .attr("fill", "#222")
-        .text(v >= 5.5 ? "5+" : v);
+        svg
+          .append("text")
+          .attr("x", marginLeft - 16)
+          .attr("y", y(v) + 5)
+          .attr("text-anchor", "end")
+          .attr("font-size", 14)
+          .attr("fill", "#222")
+          .text(v >= 5.5 ? "5+" : v);
       }
     });
     
@@ -310,25 +326,32 @@ export default function ScatterPlot({
       .text("ENDURE");
     
     // X-axis end label (right end)
-    svg.append("text")
+    svg
+      .append("text")
       .attr("x", x(xMax))
       .attr("y", height - marginBottom + 24)
       .attr("text-anchor", "middle")
       .attr("font-size", 14)
       .attr("fill", "#222")
-      .text(xMaxRaw > 5 ? "5+" : Number.isInteger(xMax) ? xMax : xMax.toFixed(1));
+      .text(
+        xMaxRaw > 5 ? "5+" : Number.isInteger(xMax) ? xMax : xMax.toFixed(1)
+      );
 
     // Y-axis end label (top end)
-    svg.append("text")
+    svg
+      .append("text")
       .attr("x", marginLeft - 16)
       .attr("y", y(yMax) + 5)
       .attr("text-anchor", "end")
       .attr("font-size", 14)
       .attr("fill", "#222")
-      .text(yMaxRaw > 5 ? "5+" : Number.isInteger(yMax) ? yMax : yMax.toFixed(1));
+      .text(
+        yMaxRaw > 5 ? "5+" : Number.isInteger(yMax) ? yMax : yMax.toFixed(1)
+      );
 
     // X-axis start label (left end)
-    svg.append("text")
+    svg
+      .append("text")
       .attr("x", x(xMin))
       .attr("y", height - marginBottom + 24)
       .attr("text-anchor", "middle")
@@ -337,14 +360,15 @@ export default function ScatterPlot({
       .text(Number.isInteger(xMin) ? xMin : xMin.toFixed(1));
 
     // Y-axis start label (bottom end)
-    svg.append("text")
+    svg
+      .append("text")
       .attr("x", marginLeft - 16)
       .attr("y", y(yMin) + 5)
       .attr("text-anchor", "end")
       .attr("font-size", 14)
       .attr("fill", "#222")
       .text(Number.isInteger(yMin) ? yMin : yMin.toFixed(1));
-  
+
     let pointsGroup = svg.select("g.datapoints");
     if (pointsGroup.empty()) {
       pointsGroup = svg.append("g").attr("class", "datapoints");
@@ -355,7 +379,8 @@ export default function ScatterPlot({
       .selectAll("circle")
       .data(filteredItems, (d) => d.name);
 
-    const pointEnter = points.enter()
+    const pointEnter = points
+      .enter()
       .append("circle")
       .attr("cx", (d) => (d.x === "5+" ? x(5.5) : x(d.x)))
       .attr("cy", (d) => (d.y === "5+" ? y(5.5) : y(d.y)))
@@ -377,9 +402,10 @@ export default function ScatterPlot({
         setHoveredItem(null);
       });
 
-    pointEnter.transition(posTransition)
-      .attr("cx", d => (d.x === "5+" ? x(5.5) : x(d.x)))
-      .attr("cy", d => (d.y === "5+" ? y(5.5) : y(d.y)))
+    pointEnter
+      .transition(posTransition)
+      .attr("cx", (d) => (d.x === "5+" ? x(5.5) : x(d.x)))
+      .attr("cy", (d) => (d.y === "5+" ? y(5.5) : y(d.y)))
       .attr("fill", (d) => d.color)
       .attr("r", (d) => {
         const isHovered = hoveredItem?.name === d.name;
@@ -409,9 +435,10 @@ export default function ScatterPlot({
         return 1;
       });
 
-    points.transition(posTransition)      
-      .attr("cx", d => (d.x === "5+" ? x(5.5) : x(d.x)))
-      .attr("cy", d => (d.y === "5+" ? y(5.5) : y(d.y)))
+    points
+      .transition(posTransition)
+      .attr("cx", (d) => (d.x === "5+" ? x(5.5) : x(d.x)))
+      .attr("cy", (d) => (d.y === "5+" ? y(5.5) : y(d.y)))
       .attr("fill", (d) => d.color)
       .attr("r", (d) => {
         const isHovered = hoveredItem?.name === d.name;
@@ -441,14 +468,16 @@ export default function ScatterPlot({
         return 1;
       });
 
-    points.exit().transition(posTransition)
-      .attr("r", 0)
-      .remove();
+    points.exit().transition(posTransition).attr("r", 0).remove();
+    
+    prevXRange.current = xRange;
+    prevYRange.current = yRange;
 
     // Tooltip group
     if (!items || items.length === 0 || !selectedPokemon) return;
     svg.selectAll(".tooltip-group").remove();
-    const tooltipGroup = svg.append("g")
+    const tooltipGroup = svg
+      .append("g")
       .attr("class", "tooltip-group")
       .attr("pointer-events", "none");
 
@@ -530,6 +559,11 @@ export default function ScatterPlot({
     speedOnly,
   ]);
 
-  return <svg ref={ref} onClick={() => setSelectedItem(null)} style={{ cursor: 'pointer' }} />
-  // <div style={{width: maxAxisLength + marginLeft + marginRight}}></div>
+  return (
+    <svg
+      ref={ref}
+      onClick={() => setSelectedItem(null)}
+      style={{ cursor: "pointer" }}
+    />
+  );
 }
