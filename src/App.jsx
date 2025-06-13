@@ -215,9 +215,6 @@ export default function App() {
                 setSelected={(pokemon) => {
                   setSelected(pokemon);
                   setShowUsageTable(false);
-
-                  setTypeChecks(Array(typeNames.length).fill(true));
-                  setTypeAll(true);
                 }}
               />
             </div>
