@@ -189,17 +189,25 @@ export default function App() {
     return ref.current;
   }
 
-  const prevSelectedPokemon = usePrevious(selectedPokemon);
+  const prevSelected = usePrevious(selected);
+
+  useEffect(() => {
+    // 포켓몬을 처음 선택할 때만 모든 타입 필터를 활성화
+    if (prevSelected == null && selected && typeNames.length > 0) {
+      setTypeChecks(Array(typeNames.length).fill(true));
+      setTypeAll(true);
+    }
+  }, [selected, typeNames.length]);
 
   useEffect(() => {
     if (
-      prevSelectedPokemon &&
-      selectedPokemon &&
-      prevSelectedPokemon.name !== selectedPokemon.name
+      prevSelected &&
+      selected &&
+      prevSelected.name !== selected.name
     ) {
       setSpeedOnly(false);
     }
-  }, [selectedPokemon, prevSelectedPokemon]);
+  }, [selected, prevSelected]);
   
   /////////////////////////////// return ////////////////////////////////
   return (
