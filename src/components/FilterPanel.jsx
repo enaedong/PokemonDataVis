@@ -250,6 +250,25 @@ export default function FilterPanel({
             </table>
           )}
         </div>
+        {/* 기술 드롭다운 */}
+        <div className="move-select-group">
+          <label htmlFor="move-select">Move:</label>
+          <Select
+            inputId="move-select"
+            value={moveList.find(m => m === selectedMove) ? { value: selectedMove, label: selectedMove } : null}
+            onChange={opt => setSelectedMove(opt ? opt.value : "")}
+            options={moveList.map(m => ({ value: m, label: m }))}
+            isDisabled={!selectedPokemon}
+            styles={{
+              ...customStylesMove,
+              menuPortal: base => ({ ...base, zIndex: 9999 })
+            }}
+            placeholder="Select move..."
+            menuPlacement="auto"
+            menuPortalTarget={typeof window !== 'undefined' ? window.document.body : undefined}
+            menuPosition="fixed"
+          />
+        </div>
         {/* 날씨 드롭다운 */}
         <table style={{ marginBottom: 24, width: 100 + "%" }}>
           <tbody>
@@ -280,25 +299,6 @@ export default function FilterPanel({
             </tr>
           </tbody>
         </table>
-        {/* 기술 드롭다운 */}
-        <div className="move-select-group">
-          <label htmlFor="move-select">Move:</label>
-          <Select
-            inputId="move-select"
-            value={moveList.find(m => m === selectedMove) ? { value: selectedMove, label: selectedMove } : null}
-            onChange={opt => setSelectedMove(opt ? opt.value : "")}
-            options={moveList.map(m => ({ value: m, label: m }))}
-            isDisabled={!selectedPokemon}
-            styles={{
-              ...customStylesMove,
-              menuPortal: base => ({ ...base, zIndex: 9999 })
-            }}
-            placeholder="Select move..."
-            menuPlacement="auto"
-            menuPortalTarget={typeof window !== 'undefined' ? window.document.body : undefined}
-            menuPosition="fixed"
-          />
-        </div>
         {/* 랭크 슬라이더 */}
         <table className="Rank-Table" style={{ marginBottom: 50 + "px" }}>
           <thead>
