@@ -281,6 +281,7 @@ export default function App() {
           selectedTerrain={selectedTerrain}
           ranks={ranks}
           speedOnly={speedOnly}
+          setSpeedOnly={setSpeedOnly}
         />
       </div>
 

@@ -20,6 +20,7 @@ export default function EndureKOChart({
   selectedTerrain,
   ranks,
   speedOnly,
+  setSpeedOnly,
 }) {
   const [typeChart, setTypeChart] = useState(null);
   const [scatterItems, setScatterItems] = useState([]);
@@ -147,13 +148,24 @@ export default function EndureKOChart({
             style={{
               position: "absolute",
               left: 50, // match marginLeft of your scatter plot SVG
-              top: 20,
+              top: 5,
               fontWeight: "bold",
               fontSize: 15,
               zIndex: 10,
+              display: 'flex',
+              alignItems: 'center',
             }}
           >
-            <span style={{ color: "green" }}>Green</span> is faster, <span style={{ color: "red" }}>Red</span> is slower
+            <span style={{ color: "green", fontWeight: 700, marginRight: 6 }}>Green</span> is faster, <span style={{ color: "red", fontWeight: 700, marginRight: 6 }}>Red</span> is slower
+            <label style={{ marginLeft: 25, display: 'flex', alignItems: 'center', fontWeight: 500, fontSize: 14, cursor: 'pointer', userSelect: 'none' }}>
+              <input
+                type="checkbox"
+                checked={speedOnly}
+                onChange={e => setSpeedOnly(e.target.checked)}
+                style={{ marginRight: 6, width: 16, height: 16, accentColor: '#1976d2', cursor: 'pointer' }}
+              />
+              Show faster only
+            </label>
           </div>
           <ScatterPlot
             items={scatterItems}
@@ -277,6 +289,32 @@ export default function EndureKOChart({
           </div>
 
           <div style={{ position: "relative", width: 200, height: 200 }}>
+            <button
+              onClick={() => {
+                setVerticalRange([0, 5.5]);
+                setHorizontalRange([0, 5.5]);
+              }}
+              style={{
+                position: 'absolute',
+                left: 40,
+                top: -32,
+                zIndex: 5,
+                padding: '4px 12px',
+                fontSize: 13,
+                background: '#fff',
+                border: '1.5px solid #1976d2',
+                color: '#1976d2',
+                borderRadius: 6,
+                cursor: 'pointer',
+                fontWeight: 600,
+                boxShadow: '0 1px 4px rgba(25, 118, 210, 0.08)',
+                transition: 'background 0.2s, color 0.2s',
+              }}
+              onMouseOver={e => { e.currentTarget.style.background = '#1976d2'; e.currentTarget.style.color = '#fff'; }}
+              onMouseOut={e => { e.currentTarget.style.background = '#fff'; e.currentTarget.style.color = '#1976d2'; }}
+            >
+              Reset Range
+            </button>
             <HeatmapChart
               items={scatterItems}
               typeChecks={typeChecks}

@@ -147,22 +147,6 @@ export default function FilterPanel({
               />
               All
             </label>
-            <label
-              style={{
-                fontWeight: "bold",
-                fontSize: "0.8em",
-                marginRight: 12,
-                cursor: "pointer",
-              }}
-            >
-              <input
-                type="checkbox"
-                checked={speedOnly}
-                onChange={e => setSpeedOnly(e.target.checked)}
-                style={{ marginRight: 6, cursor: "pointer" }}
-              />
-              Speed
-            </label>
           </div>
           {/* Conditionally render the table only when typeChecks has been populated */}
           {typeChecks.length > 0 && (
