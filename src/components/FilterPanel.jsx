@@ -121,6 +121,42 @@ export default function FilterPanel({
     },
   };
 
+  const customStylesMove = {
+    control: (styles) => ({
+      ...styles,
+      fontSize: "0.98em",
+      minHeight: 36,
+      borderRadius: 8,
+      border: "1.5px solid #bbb",
+      boxShadow: "none",
+      background: "#fff",
+      paddingLeft: 0,
+      paddingRight: 0,
+      cursor: "pointer",
+    }),
+    singleValue: (styles) => ({
+      ...styles,
+      color: "#222",
+    }),
+    dropdownIndicator: (provided) => ({
+      ...provided,
+      padding: "0px",
+    }),
+    option: (styles, { isDisabled, isFocused, isSelected }) => ({
+      ...styles,
+      backgroundColor: isDisabled
+        ? undefined
+        : isSelected
+        ? "#e3f2fd"
+        : isFocused
+        ? "#f3f3f3"
+        : undefined,
+      color: "#222",
+      fontWeight: isSelected ? 700 : 500,
+      fontSize: "1em",
+    }),
+  };
+
   return (
     <>
       {/* 타입 체크박스 */}
@@ -247,19 +283,21 @@ export default function FilterPanel({
         {/* 기술 드롭다운 */}
         <div className="move-select-group">
           <label htmlFor="move-select">Move:</label>
-          <select
-            id="move-select"
-            value={selectedMove || ""}
-            onChange={(e) => setSelectedMove(e.target.value)}
-            disabled={!selectedPokemon}
-            style={{ marginLeft: 6 }}
-          >
-            {moveList.map((move) => (
-              <option key={`move-${move}`} value={move}>
-                {move}
-              </option>
-            ))}
-          </select>
+          <Select
+            inputId="move-select"
+            value={moveList.find(m => m === selectedMove) ? { value: selectedMove, label: selectedMove } : null}
+            onChange={opt => setSelectedMove(opt ? opt.value : "")}
+            options={moveList.map(m => ({ value: m, label: m }))}
+            isDisabled={!selectedPokemon}
+            styles={{
+              ...customStylesMove,
+              menuPortal: base => ({ ...base, zIndex: 9999 })
+            }}
+            placeholder="Select move..."
+            menuPlacement="auto"
+            menuPortalTarget={typeof window !== 'undefined' ? window.document.body : undefined}
+            menuPosition="fixed"
+          />
         </div>
         {/* 랭크 슬라이더 */}
         <table className="Rank-Table" style={{ marginBottom: 50 + "px" }}>

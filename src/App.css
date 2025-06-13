@@ -425,19 +425,36 @@ body {
 }
 
 .back-btn {
-  background: #f3f3f3;
-  border: 1px solid #bbb;
-  border-radius: 8px;
-  padding: 8px 18px;
-  font-size: 1em;
-  font-weight: bold;
+  background: linear-gradient(90deg, rgba(25,118,210,0.82) 0%, rgba(100,181,246,0.68) 100%);
+  border: none;
+  border-radius: 13px;
+  padding: 7px 10px;
+  font-size: 0.95em;
+  font-weight: 700;
+  color: #fff;
   cursor: pointer;
   margin-bottom: 16px;
-  transition: background 0.18s;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.18s, box-shadow 0.18s, color 0.18s;
+  outline: none;
+  width: 30%;
 }
 
-.back-btn:hover {
-  background: #e0e0e0;
+.back-btn::before {
+  content: '\2190';
+  font-size: 1em;
+  margin-right: 6px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.back-btn:hover, .back-btn:focus {
+  background: linear-gradient(90deg, rgba(21,101,192,0.92) 0%, rgba(25,118,210,0.82) 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.16);
 }
 
 .usage-section img {
@@ -494,7 +511,36 @@ body {
 }
 
 .move-select-group select {
-  padding: 4px 7px;
+  border-radius: 8px;
+  border: 1.5px solid #bbb;
+  min-height: 36px;
+  height: 36px;
+  font-size: 0.98em;
+  background: #fff;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  box-shadow: none;
+  transition: border 0.18s, box-shadow 0.18s;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.move-select-group select:focus {
+  border: 1.5px solid #1976d2;
+}
+
+.move-select-group select option {
+  font-size: 1em;
+  background: #fff;
+  color: #222;
+}
+
+.move-select-group select:disabled {
+  background: #f3f3f3;
+  color: #aaa;
+  cursor: not-allowed;
 }
 
 .stats-section label {

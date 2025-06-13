@@ -231,7 +231,7 @@ export default function App() {
               }}
               style={{ marginBottom: 16 }}
             >
-              ← Back
+              Back
             </button>
             <PokemonDetails
               selected={selected}
