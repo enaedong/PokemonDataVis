@@ -160,7 +160,7 @@ export default function FilterPanel({
   return (
     <>
       {/* 타입 체크박스 */}
-      <div className="vertical-scroll">
+      <div>
         <div style={{ marginBottom: 24 }}>
           <div style={{ marginBottom: 8, marginLeft: 17 }}>
             <label
