@@ -50,6 +50,10 @@ export default function EndureKOChart({
   const rectRef = useRef();
   const dragStartRef = useRef(null);
   const [isDraggingRect, setIsDraggingRect] = useState(false);
+  const rectHandlesRef = useRef([null, null, null, null]);
+
+  // 히트맵 툴팁 상태
+  const [heatmapHoveredCell, setHeatmapHoveredCell] = useState(null);
 
   useEffect(() => {
     fetch("/atkType.json")
@@ -83,56 +87,41 @@ export default function EndureKOChart({
   ]);
 
   useEffect(() => {
-    if (!rectRef.current) return;
-    const rect = d3.select(rectRef.current);
-
-    const drag = d3
-      .drag()
-      .on("start", (event) => {
-        dragStartRef.current = {
-          mouseX: event.x,
-          mouseY: event.y,
-          boxX: horizontalRange[0],
-          boxY: verticalRange[0],
-        };
-        setIsDraggingRect(true);
-      })
-      .on("drag", (event) => {
-        if (!dragStartRef.current) return;
-        const minimapSize = 135;
-        const dataMax = 5.5;
-        const xRangeSize = horizontalRange[1] - horizontalRange[0];
-        const yRangeSize = verticalRange[1] - verticalRange[0];
-
-        const dx =
-          (event.x - dragStartRef.current.mouseX) * (dataMax / minimapSize);
-        const dy =
-          -(event.y - dragStartRef.current.mouseY) * (dataMax / minimapSize);
-
-        let newXMin = Math.max(
-          0,
-          Math.min(dragStartRef.current.boxX + dx, dataMax - xRangeSize)
-        );
-        let newXMax = newXMin + xRangeSize;
-        let newYMin = Math.max(
-          0,
-          Math.min(dragStartRef.current.boxY + dy, dataMax - yRangeSize)
-        );
-        let newYMax = newYMin + yRangeSize;
-
-        setHorizontalRange([newXMin, newXMax]);
-        setVerticalRange([newYMin, newYMax]);
-      })
-      .on("end", () => {
-        setIsDraggingRect(false);
-      });
-
-    rect.call(drag);
-
-    return () => {
-      rect.on(".drag", null);
-    };
-  }, [horizontalRange, verticalRange, displayMax]);
+    rectHandlesRef.current.forEach((handle, idx) => {
+      if (!handle) return;
+      const d3Handle = d3.select(handle);
+      d3Handle.on('.drag', null);
+      const drag = d3.drag()
+        .on('start', (event) => {
+          dragStartRef.current = {
+            mouseX: event.x,
+            mouseY: event.y,
+            boxX: horizontalRange[0],
+            boxY: verticalRange[0],
+          };
+          setIsDraggingRect(true);
+        })
+        .on('drag', (event) => {
+          if (!dragStartRef.current) return;
+          const minimapSize = 135;
+          const dataMax = 5.5;
+          const xRangeSize = horizontalRange[1] - horizontalRange[0];
+          const yRangeSize = verticalRange[1] - verticalRange[0];
+          const dx = (event.x - dragStartRef.current.mouseX) * (dataMax / minimapSize);
+          const dy = -(event.y - dragStartRef.current.mouseY) * (dataMax / minimapSize);
+          let newXMin = Math.max(0, Math.min(dragStartRef.current.boxX + dx, dataMax - xRangeSize));
+          let newXMax = newXMin + xRangeSize;
+          let newYMin = Math.max(0, Math.min(dragStartRef.current.boxY + dy, dataMax - yRangeSize));
+          let newYMax = newYMin + yRangeSize;
+          setHorizontalRange([newXMin, newXMax]);
+          setVerticalRange([newYMin, newYMax]);
+        })
+        .on('end', () => {
+          setIsDraggingRect(false);
+        });
+      d3Handle.call(drag);
+    });
+  }, [rectX, rectYTop, rectWidth, rectHeight, horizontalRange, verticalRange, displayMax]);
 
   if (!selectedPokemon)
     return (
@@ -339,6 +328,8 @@ export default function EndureKOChart({
               width={200}
               height={200}
               isDraggingRect={isDraggingRect}
+              hoveredCell={heatmapHoveredCell}
+              setHoveredCell={setHeatmapHoveredCell}
             />
             <svg
               width={160}
@@ -371,9 +362,76 @@ export default function EndureKOChart({
                 fill="transparent"
                 stroke="black"
                 strokeWidth={3}
+                style={{ pointerEvents: "none" }}
+              />
+              {/* 네 변 드래그 핸들 (투명, 얇은 rect) */}
+              {/* 상단 */}
+              <rect
+                ref={el => (rectHandlesRef.current[0] = el)}
+                x={rectX}
+                y={rectYTop - 6}
+                width={rectWidth}
+                height={12}
+                fill="transparent"
+                style={{ cursor: "move", pointerEvents: "auto" }}
+              />
+              {/* 하단 */}
+              <rect
+                ref={el => (rectHandlesRef.current[1] = el)}
+                x={rectX}
+                y={rectYTop + rectHeight - 6}
+                width={rectWidth}
+                height={12}
+                fill="transparent"
+                style={{ cursor: "move", pointerEvents: "auto" }}
+              />
+              {/* 좌 */}
+              <rect
+                ref={el => (rectHandlesRef.current[2] = el)}
+                x={rectX - 6}
+                y={rectYTop}
+                width={12}
+                height={rectHeight}
+                fill="transparent"
+                style={{ cursor: "move", pointerEvents: "auto" }}
+              />
+              {/* 우 */}
+              <rect
+                ref={el => (rectHandlesRef.current[3] = el)}
+                x={rectX + rectWidth - 6}
+                y={rectYTop}
+                width={12}
+                height={rectHeight}
+                fill="transparent"
                 style={{ cursor: "move", pointerEvents: "auto" }}
               />
             </svg>
+            {/* 히트맵 툴팁 */}
+            {heatmapHoveredCell && heatmapHoveredCell.count > 0 && !isDraggingRect && (
+              <div
+                style={{
+                  position: "absolute",
+                  left: (heatmapHoveredCell.x - 22) + 0,
+                  top: (heatmapHoveredCell.y - 18 - 15) + 0, // y좌표 - 15는 기존 offset
+                  width: 44,
+                  height: 26,
+                  background: "#222",
+                  color: "#fff",
+                  borderRadius: 5,
+                  fontWeight: "bold",
+                  fontSize: 13,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  opacity: 0.97,
+                  zIndex: 99,
+                  pointerEvents: "none",
+                  boxShadow: "0 2px 8px rgba(0,0,0,0.18)",
+                }}
+              >
+                {heatmapHoveredCell.count}
+              </div>
+            )}
           </div>
         </div>
 

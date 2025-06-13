@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import * as d3 from "d3";
 
 // 구간 라벨 및 경계값
@@ -24,9 +24,8 @@ function getColor(count, max) {
   return `rgb(${r},${g},${b})`;
 }
 
-export default function HeatmapChart({ items, xKey = "x", yKey = "y", width = 450, height = 450, typeChecks, typeNames, isDraggingRect }) {
+export default function HeatmapChart({ items, xKey = "x", yKey = "y", width = 450, height = 450, typeChecks, typeNames, isDraggingRect, hoveredCell, setHoveredCell }) {
   const ref = useRef();
-  const [hoveredCell, setHoveredCell] = useState(null);
 
   // 타입 체크 필터링 
   const filteredItems = (items || []).filter((d) => {
@@ -126,34 +125,6 @@ export default function HeatmapChart({ items, xKey = "x", yKey = "y", width = 45
   }, [items, typeChecks, typeNames]);
 
   return (
-    <svg ref={ref} width={width} height={height}>
-      {/* 툴크: hoveredCell이 있으면 React로 SVG에 렌더링 */}
-      {hoveredCell && hoveredCell.count > 0 && !isDraggingRect && (
-        <g
-          transform={`translate(${hoveredCell.x},${hoveredCell.y - 15})`}
-          pointerEvents="none"
-        >
-          <rect
-            x={-22}
-            y={-18}
-            width={44}
-            height={26}
-            rx={5}
-            fill="#222"
-            opacity={0.95}
-          />
-          <text
-            x={0}
-            y={0}
-            textAnchor="middle"
-            fontSize={13}
-            fill="#fff"
-            fontWeight="bold"
-          >
-            {hoveredCell.count}
-          </text>
-        </g>
-      )}
-    </svg>
+    <svg ref={ref} width={width} height={height} />
   );
 } 
