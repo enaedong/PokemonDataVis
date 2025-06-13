@@ -189,17 +189,25 @@ export default function App() {
     return ref.current;
   }
 
-  const prevSelectedPokemon = usePrevious(selectedPokemon);
+  const prevSelected = usePrevious(selected);
+
+  useEffect(() => {
+    // 포켓몬을 처음 선택할 때만 모든 타입 필터를 활성화
+    if (prevSelected == null && selected && typeNames.length > 0) {
+      setTypeChecks(Array(typeNames.length).fill(true));
+      setTypeAll(true);
+    }
+  }, [selected, typeNames.length]);
 
   useEffect(() => {
     if (
-      prevSelectedPokemon &&
-      selectedPokemon &&
-      prevSelectedPokemon.name !== selectedPokemon.name
+      prevSelected &&
+      selected &&
+      prevSelected.name !== selected.name
     ) {
       setSpeedOnly(false);
     }
-  }, [selectedPokemon, prevSelectedPokemon]);
+  }, [selected, prevSelected]);
   
   /////////////////////////////// return ////////////////////////////////
   return (
@@ -207,7 +215,7 @@ export default function App() {
       <div className="usage-section">
         {showUsageTable ? (
           <>
-            <h2>Top Pokémon Usage</h2>
+            <h2 style={{ textAlign: 'center', width: '100%' }}>Top Pokémon Usage</h2>
             <div className="usage-table-container">
               <UsageTable
                 data={usage}
@@ -215,9 +223,6 @@ export default function App() {
                 setSelected={(pokemon) => {
                   setSelected(pokemon);
                   setShowUsageTable(false);
-
-                  setTypeChecks(Array(typeNames.length).fill(true));
-                  setTypeAll(true);
                 }}
               />
             </div>
@@ -231,7 +236,7 @@ export default function App() {
               }}
               style={{ marginBottom: 16 }}
             >
-              ← Back
+              Back
             </button>
             <PokemonDetails
               selected={selected}
@@ -267,7 +272,7 @@ export default function App() {
       </div>
 
       <div className="charts-section" id="charts">
-        <h2>Counter Visualization</h2>
+        <h2 style={{ textAlign: 'center', width: '100%' }}>Counter Visualization</h2>
         <EndureKOChart
           selectedPokemon={selectedPokemon}
           dexData={dex}
@@ -281,11 +286,12 @@ export default function App() {
           selectedTerrain={selectedTerrain}
           ranks={ranks}
           speedOnly={speedOnly}
+          setSpeedOnly={setSpeedOnly}
         />
       </div>
 
       <div className="scatter-detail-section" id="scatter-detail">
-        <h2>Counter Pokémon Details</h2>
+        <h2 style={{ textAlign: 'center', width: '100%' }}>Counter Pokémon Details</h2>
         <PokemonDetails
           selected={selectedItemPokemon}
           pokeDetail={selectedItemDetail}

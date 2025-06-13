@@ -121,10 +121,46 @@ export default function FilterPanel({
     },
   };
 
+  const customStylesMove = {
+    control: (styles) => ({
+      ...styles,
+      fontSize: "0.98em",
+      minHeight: 36,
+      borderRadius: 8,
+      border: "1.5px solid #bbb",
+      boxShadow: "none",
+      background: "#fff",
+      paddingLeft: 0,
+      paddingRight: 0,
+      cursor: "pointer",
+    }),
+    singleValue: (styles) => ({
+      ...styles,
+      color: "#222",
+    }),
+    dropdownIndicator: (provided) => ({
+      ...provided,
+      padding: "0px",
+    }),
+    option: (styles, { isDisabled, isFocused, isSelected }) => ({
+      ...styles,
+      backgroundColor: isDisabled
+        ? undefined
+        : isSelected
+        ? "#e3f2fd"
+        : isFocused
+        ? "#f3f3f3"
+        : undefined,
+      color: "#222",
+      fontWeight: isSelected ? 700 : 500,
+      fontSize: "1em",
+    }),
+  };
+
   return (
     <>
       {/* 타입 체크박스 */}
-      <div className="vertical-scroll">
+      <div>
         <div style={{ marginBottom: 24 }}>
           <div style={{ marginBottom: 8, marginLeft: 17 }}>
             <label
@@ -146,22 +182,6 @@ export default function FilterPanel({
                 style={{ marginRight: 6, cursor: "pointer" }}
               />
               All
-            </label>
-            <label
-              style={{
-                fontWeight: "bold",
-                fontSize: "0.8em",
-                marginRight: 12,
-                cursor: "pointer",
-              }}
-            >
-              <input
-                type="checkbox"
-                checked={speedOnly}
-                onChange={e => setSpeedOnly(e.target.checked)}
-                style={{ marginRight: 6, cursor: "pointer" }}
-              />
-              Speed
             </label>
           </div>
           {/* Conditionally render the table only when typeChecks has been populated */}
@@ -189,16 +209,6 @@ export default function FilterPanel({
                       return (
                         <td
                           key={`typeCell${typeIndex}`}
-                          style={
-                            typeChecks[typeIndex]
-                              ? {
-                                  background:
-                                    TYPE_COLORS[
-                                      typeNames[typeIndex].toLowerCase()
-                                    ],
-                                }
-                              : undefined
-                          }
                         >
                           <label>
                             <input
@@ -214,16 +224,18 @@ export default function FilterPanel({
                             <img
                               src={`/icons/${typeNames[typeIndex]}_icon.png`}
                               style={{
-                                width: 100 + "%",
-                                height: 100 + "%",
+                                width: "100%",
+                                height: "100%",
                                 objectFit: "cover",
-                                margin: 0 + "px",
+                                margin: 0,
+                                backgroundColor: typeChecks[typeIndex] ? TYPE_COLORS[typeNames[typeIndex].toLowerCase()] : "#fff",
+                                transition: "background 0.18s"
                               }}
-                            ></img>
+                            />
                             <div
                               style={{
                                 textAlign: "center",
-                                fontSize: 0.8 + "em",
+                                fontSize: "0.8em",
                               }}
                             >
                               {typeNames[typeIndex]}
@@ -237,6 +249,25 @@ export default function FilterPanel({
               </tbody>
             </table>
           )}
+        </div>
+        {/* 기술 드롭다운 */}
+        <div className="move-select-group">
+          <label htmlFor="move-select">Move:</label>
+          <Select
+            inputId="move-select"
+            value={moveList.find(m => m === selectedMove) ? { value: selectedMove, label: selectedMove } : null}
+            onChange={opt => setSelectedMove(opt ? opt.value : "")}
+            options={moveList.map(m => ({ value: m, label: m }))}
+            isDisabled={!selectedPokemon}
+            styles={{
+              ...customStylesMove,
+              menuPortal: base => ({ ...base, zIndex: 9999 })
+            }}
+            placeholder="Select move..."
+            menuPlacement="auto"
+            menuPortalTarget={typeof window !== 'undefined' ? window.document.body : undefined}
+            menuPosition="fixed"
+          />
         </div>
         {/* 날씨 드롭다운 */}
         <table style={{ marginBottom: 24, width: 100 + "%" }}>
@@ -268,22 +299,6 @@ export default function FilterPanel({
             </tr>
           </tbody>
         </table>
-        {/* 기술 드롭다운 */}
-        <div className="move-select-group">
-          <label htmlFor="move-select">Move:</label>
-          <select
-            id="move-select"
-            value={selectedMove || ""}
-            onChange={(e) => setSelectedMove(e.target.value)}
-            disabled={!selectedPokemon}
-          >
-            {moveList.map((move) => (
-              <option key={`move-${move}`} value={move}>
-                {move}
-              </option>
-            ))}
-          </select>
-        </div>
         {/* 랭크 슬라이더 */}
         <table className="Rank-Table" style={{ marginBottom: 50 + "px" }}>
           <thead>
@@ -309,7 +324,10 @@ export default function FilterPanel({
             {Array.from({ length: 3 }).map((_, i) => (
               <tr key={`rankRow${i}`}>
                 <td>
-                  <label>{getRankText(i)}</label>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: 2, marginLeft: 4 }}>
+                    <span style={{ fontWeight: 600, color: '#1976d2', fontSize: '1em', marginRight: 6 }}>{getRankText(i)}</span>
+                    <span style={{ fontWeight: 600, color: '#1976d2', fontSize: '0.98em' }}>{ranks[i] > 0 ? "+" + ranks[i] : ranks[i]}</span>
+                  </div>
                   <input
                     type="range"
                     min={-6}
@@ -320,12 +338,14 @@ export default function FilterPanel({
                       arr[i] = Number(e.target.value);
                       setRanks(arr);
                     }}
-                    style={{ width: "70%" }}
+                    style={{ width: "90%" }}
                   />
-                  <div>{ranks[i] > 0 ? "+" + ranks[i] : ranks[i]}</div>
                 </td>
                 <td>
-                  <label>{getRankText(i)}</label>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: 2, marginLeft: 4 }}>
+                    <span style={{ fontWeight: 600, color: '#1976d2', fontSize: '1em', marginRight: 6 }}>{getRankText(i)}</span>
+                    <span style={{ fontWeight: 600, color: '#1976d2', fontSize: '0.98em' }}>{ranks[i + 3] > 0 ? "+" + ranks[i + 3] : ranks[i + 3]}</span>
+                  </div>
                   <input
                     type="range"
                     min={-6}
@@ -336,11 +356,8 @@ export default function FilterPanel({
                       arr[i + 3] = Number(e.target.value);
                       setRanks(arr);
                     }}
-                    style={{ width: "70%" }}
+                    style={{ width: "90%" }}
                   />
-                  <div>
-                    {ranks[i + 3] > 0 ? "+" + ranks[i + 3] : ranks[i + 3]}
-                  </div>
                 </td>
               </tr>
             ))}
