@@ -20,6 +20,7 @@ export default function EndureKOChart({
   selectedTerrain,
   ranks,
   speedOnly,
+  setSpeedOnly,
 }) {
   const [typeChart, setTypeChart] = useState(null);
   const [scatterItems, setScatterItems] = useState([]);
@@ -48,6 +49,11 @@ export default function EndureKOChart({
 
   const rectRef = useRef();
   const dragStartRef = useRef(null);
+  const [isDraggingRect, setIsDraggingRect] = useState(false);
+  const rectHandlesRef = useRef([null, null, null, null]);
+
+  // 히트맵 툴팁 상태
+  const [heatmapHoveredCell, setHeatmapHoveredCell] = useState(null);
 
   useEffect(() => {
     fetch("/atkType.json")
@@ -81,55 +87,56 @@ export default function EndureKOChart({
   ]);
 
   useEffect(() => {
-    if (!rectRef.current) return;
-    const rect = d3.select(rectRef.current);
-
-    const drag = d3
-      .drag()
-      .on("start", (event) => {
-        dragStartRef.current = {
-          mouseX: event.x,
-          mouseY: event.y,
-          boxX: horizontalRange[0],
-          boxY: verticalRange[0],
-        };
-      })
-      .on("drag", (event) => {
-        if (!dragStartRef.current) return;
-        const minimapSize = 135;
-        const dataMax = 5.5;
-        const xRangeSize = horizontalRange[1] - horizontalRange[0];
-        const yRangeSize = verticalRange[1] - verticalRange[0];
-
-        const dx =
-          (event.x - dragStartRef.current.mouseX) * (dataMax / minimapSize);
-        const dy =
-          -(event.y - dragStartRef.current.mouseY) * (dataMax / minimapSize);
-
-        let newXMin = Math.max(
-          0,
-          Math.min(dragStartRef.current.boxX + dx, dataMax - xRangeSize)
-        );
-        let newXMax = newXMin + xRangeSize;
-        let newYMin = Math.max(
-          0,
-          Math.min(dragStartRef.current.boxY + dy, dataMax - yRangeSize)
-        );
-        let newYMax = newYMin + yRangeSize;
-
-        setHorizontalRange([newXMin, newXMax]);
-        setVerticalRange([newYMin, newYMax]);
-      })
-
-    rect.call(drag);
-
-    return () => {
-      rect.on(".drag", null);
-    };
-  }, [horizontalRange, verticalRange, displayMax]);
+    rectHandlesRef.current.forEach((handle, idx) => {
+      if (!handle) return;
+      const d3Handle = d3.select(handle);
+      d3Handle.on('.drag', null);
+      const drag = d3.drag()
+        .on('start', (event) => {
+          dragStartRef.current = {
+            mouseX: event.x,
+            mouseY: event.y,
+            boxX: horizontalRange[0],
+            boxY: verticalRange[0],
+          };
+          setIsDraggingRect(true);
+        })
+        .on('drag', (event) => {
+          if (!dragStartRef.current) return;
+          const minimapSize = 135;
+          const dataMax = 5.5;
+          const xRangeSize = horizontalRange[1] - horizontalRange[0];
+          const yRangeSize = verticalRange[1] - verticalRange[0];
+          const dx = (event.x - dragStartRef.current.mouseX) * (dataMax / minimapSize);
+          const dy = -(event.y - dragStartRef.current.mouseY) * (dataMax / minimapSize);
+          let newXMin = Math.max(0, Math.min(dragStartRef.current.boxX + dx, dataMax - xRangeSize));
+          let newXMax = newXMin + xRangeSize;
+          let newYMin = Math.max(0, Math.min(dragStartRef.current.boxY + dy, dataMax - yRangeSize));
+          let newYMax = newYMin + yRangeSize;
+          setHorizontalRange([newXMin, newXMax]);
+          setVerticalRange([newYMin, newYMax]);
+        })
+        .on('end', () => {
+          setIsDraggingRect(false);
+        });
+      d3Handle.call(drag);
+    });
+  }, [rectX, rectYTop, rectWidth, rectHeight, horizontalRange, verticalRange, displayMax]);
 
   if (!selectedPokemon)
-    return <div>Select a Pokémon to view the scatter plot.</div>;
+    return (
+      <div
+        style={{
+          marginTop: 80,
+          textAlign: "center",
+          fontSize: 18,
+          color: "#888",
+          fontWeight: 500,
+        }}
+      >
+        Select a Pokémon to view the scatter plot.
+      </div>
+    );
   if (!selectedMove) return <div>No moves available for this Pokémon.</div>;
 
   return (
@@ -147,13 +154,24 @@ export default function EndureKOChart({
             style={{
               position: "absolute",
               left: 50, // match marginLeft of your scatter plot SVG
-              top: 20,
+              top: 5,
               fontWeight: "bold",
               fontSize: 15,
               zIndex: 10,
+              display: 'flex',
+              alignItems: 'center',
             }}
           >
-            <span style={{ color: "green" }}>Green</span> is faster, <span style={{ color: "red" }}>Red</span> is slower
+            <span style={{ color: "green", fontWeight: 700, marginRight: 6 }}>Green</span> is faster, <span style={{ color: "red", fontWeight: 700, marginRight: 6 }}>Red</span> is slower
+            <label style={{ marginLeft: 25, display: 'flex', alignItems: 'center', fontWeight: 500, fontSize: 14, cursor: 'pointer', userSelect: 'none' }}>
+              <input
+                type="checkbox"
+                checked={speedOnly}
+                onChange={e => setSpeedOnly(e.target.checked)}
+                style={{ marginRight: 6, width: 16, height: 16, accentColor: '#1976d2', cursor: 'pointer' }}
+              />
+              Show faster only
+            </label>
           </div>
           <ScatterPlot
             items={scatterItems}
@@ -277,12 +295,41 @@ export default function EndureKOChart({
           </div>
 
           <div style={{ position: "relative", width: 200, height: 200 }}>
+            <button
+              onClick={() => {
+                setVerticalRange([0, 5.5]);
+                setHorizontalRange([0, 5.5]);
+              }}
+              style={{
+                position: 'absolute',
+                left: 40,
+                top: -32,
+                zIndex: 5,
+                padding: '4px 12px',
+                fontSize: 13,
+                background: '#fff',
+                border: '1.5px solid #1976d2',
+                color: '#1976d2',
+                borderRadius: 6,
+                cursor: 'pointer',
+                fontWeight: 600,
+                boxShadow: '0 1px 4px rgba(25, 118, 210, 0.08)',
+                transition: 'background 0.2s, color 0.2s',
+              }}
+              onMouseOver={e => { e.currentTarget.style.background = '#1976d2'; e.currentTarget.style.color = '#fff'; }}
+              onMouseOut={e => { e.currentTarget.style.background = '#fff'; e.currentTarget.style.color = '#1976d2'; }}
+            >
+              Reset Range
+            </button>
             <HeatmapChart
               items={scatterItems}
               typeChecks={typeChecks}
               typeNames={typeNames}
               width={200}
               height={200}
+              isDraggingRect={isDraggingRect}
+              hoveredCell={heatmapHoveredCell}
+              setHoveredCell={setHeatmapHoveredCell}
             />
             <svg
               width={160}
@@ -297,18 +344,94 @@ export default function EndureKOChart({
                 zIndex: 2,
               }}
             >
+              {/* 네모 외부 어둡게 */}
+              {/* 위쪽 */}
+              <rect x={0} y={0} width={160} height={rectYTop} fill="rgba(0,0,0,0.28)" />
+              {/* 아래쪽 */}
+              <rect x={0} y={rectYTop + rectHeight} width={160} height={160 - (rectYTop + rectHeight)} fill="rgba(0,0,0,0.28)" />
+              {/* 왼쪽 */}
+              <rect x={0} y={rectYTop} width={rectX} height={rectHeight} fill="rgba(0,0,0,0.28)" />
+              {/* 오른쪽 */}
+              <rect x={rectX + rectWidth} y={rectYTop} width={160 - (rectX + rectWidth)} height={rectHeight} fill="rgba(0,0,0,0.28)" />
               <rect
                 ref={rectRef}
                 x={rectX}
                 y={rectYTop}
                 width={rectWidth}
                 height={rectHeight}
-                fill="none"
+                fill="transparent"
                 stroke="black"
-                strokeWidth={5}
+                strokeWidth={3}
+                style={{ pointerEvents: "none" }}
+              />
+              {/* 네 변 드래그 핸들 (투명, 얇은 rect) */}
+              {/* 상단 */}
+              <rect
+                ref={el => (rectHandlesRef.current[0] = el)}
+                x={rectX}
+                y={rectYTop - 6}
+                width={rectWidth}
+                height={12}
+                fill="transparent"
+                style={{ cursor: "move", pointerEvents: "auto" }}
+              />
+              {/* 하단 */}
+              <rect
+                ref={el => (rectHandlesRef.current[1] = el)}
+                x={rectX}
+                y={rectYTop + rectHeight - 6}
+                width={rectWidth}
+                height={12}
+                fill="transparent"
+                style={{ cursor: "move", pointerEvents: "auto" }}
+              />
+              {/* 좌 */}
+              <rect
+                ref={el => (rectHandlesRef.current[2] = el)}
+                x={rectX - 6}
+                y={rectYTop}
+                width={12}
+                height={rectHeight}
+                fill="transparent"
+                style={{ cursor: "move", pointerEvents: "auto" }}
+              />
+              {/* 우 */}
+              <rect
+                ref={el => (rectHandlesRef.current[3] = el)}
+                x={rectX + rectWidth - 6}
+                y={rectYTop}
+                width={12}
+                height={rectHeight}
+                fill="transparent"
                 style={{ cursor: "move", pointerEvents: "auto" }}
               />
             </svg>
+            {/* 히트맵 툴팁 */}
+            {heatmapHoveredCell && heatmapHoveredCell.count > 0 && !isDraggingRect && (
+              <div
+                style={{
+                  position: "absolute",
+                  left: (heatmapHoveredCell.x - 22) + 0,
+                  top: (heatmapHoveredCell.y - 18 - 15) + 0, // y좌표 - 15는 기존 offset
+                  width: 44,
+                  height: 26,
+                  background: "#222",
+                  color: "#fff",
+                  borderRadius: 5,
+                  fontWeight: "bold",
+                  fontSize: 13,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  opacity: 0.97,
+                  zIndex: 99,
+                  pointerEvents: "none",
+                  boxShadow: "0 2px 8px rgba(0,0,0,0.18)",
+                }}
+              >
+                {heatmapHoveredCell.count}
+              </div>
+            )}
           </div>
         </div>
 

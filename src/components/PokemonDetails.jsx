@@ -9,7 +9,19 @@ export default function PokemonDetails({
   pokeStats,
   loading,
 }) {
-  if (!selected) return <h2>Select a Pokémon to see stats.</h2>;
+  if (!selected) return (
+    <div
+      style={{
+        marginTop: 80,
+        textAlign: "center",
+        fontSize: 18,
+        color: "#888",
+        fontWeight: 500,
+      }}
+    >
+      Select a Pokémon to see stats.
+    </div>
+  );
   if (loading) return <div>Loading...</div>;
   if (!pokeDetail) return <div>Error loading data.</div>;
 
