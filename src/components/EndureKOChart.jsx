@@ -130,7 +130,19 @@ export default function EndureKOChart({
   }, [horizontalRange, verticalRange, displayMax]);
 
   if (!selectedPokemon)
-    return <div>Select a Pokémon to view the scatter plot.</div>;
+    return (
+      <div
+        style={{
+          marginTop: 80,
+          textAlign: "center",
+          fontSize: 18,
+          color: "#888",
+          fontWeight: 500,
+        }}
+      >
+        Select a Pokémon to view the scatter plot.
+      </div>
+    );
   if (!selectedMove) return <div>No moves available for this Pokémon.</div>;
 
   return (

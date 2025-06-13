@@ -207,7 +207,7 @@ export default function App() {
       <div className="usage-section">
         {showUsageTable ? (
           <>
-            <h2>Top Pokémon Usage</h2>
+            <h2 style={{ textAlign: 'center', width: '100%' }}>Top Pokémon Usage</h2>
             <div className="usage-table-container">
               <UsageTable
                 data={usage}
@@ -267,7 +267,7 @@ export default function App() {
       </div>
 
       <div className="charts-section" id="charts">
-        <h2>Counter Visualization</h2>
+        <h2 style={{ textAlign: 'center', width: '100%' }}>Counter Visualization</h2>
         <EndureKOChart
           selectedPokemon={selectedPokemon}
           dexData={dex}
@@ -286,7 +286,7 @@ export default function App() {
       </div>
 
       <div className="scatter-detail-section" id="scatter-detail">
-        <h2>Counter Pokémon Details</h2>
+        <h2 style={{ textAlign: 'center', width: '100%' }}>Counter Pokémon Details</h2>
         <PokemonDetails
           selected={selectedItemPokemon}
           pokeDetail={selectedItemDetail}
