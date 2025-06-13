@@ -173,16 +173,6 @@ export default function FilterPanel({
                       return (
                         <td
                           key={`typeCell${typeIndex}`}
-                          style={
-                            typeChecks[typeIndex]
-                              ? {
-                                  background:
-                                    TYPE_COLORS[
-                                      typeNames[typeIndex].toLowerCase()
-                                    ],
-                                }
-                              : undefined
-                          }
                         >
                           <label>
                             <input
@@ -198,16 +188,18 @@ export default function FilterPanel({
                             <img
                               src={`/icons/${typeNames[typeIndex]}_icon.png`}
                               style={{
-                                width: 100 + "%",
-                                height: 100 + "%",
+                                width: "100%",
+                                height: "100%",
                                 objectFit: "cover",
-                                margin: 0 + "px",
+                                margin: 0,
+                                backgroundColor: typeChecks[typeIndex] ? TYPE_COLORS[typeNames[typeIndex].toLowerCase()] : "#fff",
+                                transition: "background 0.18s"
                               }}
-                            ></img>
+                            />
                             <div
                               style={{
                                 textAlign: "center",
-                                fontSize: 0.8 + "em",
+                                fontSize: "0.8em",
                               }}
                             >
                               {typeNames[typeIndex]}
@@ -260,6 +252,7 @@ export default function FilterPanel({
             value={selectedMove || ""}
             onChange={(e) => setSelectedMove(e.target.value)}
             disabled={!selectedPokemon}
+            style={{ marginLeft: 6 }}
           >
             {moveList.map((move) => (
               <option key={`move-${move}`} value={move}>
@@ -293,7 +286,10 @@ export default function FilterPanel({
             {Array.from({ length: 3 }).map((_, i) => (
               <tr key={`rankRow${i}`}>
                 <td>
-                  <label>{getRankText(i)}</label>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: 2, marginLeft: 4 }}>
+                    <span style={{ fontWeight: 600, color: '#1976d2', fontSize: '1em', marginRight: 6 }}>{getRankText(i)}</span>
+                    <span style={{ fontWeight: 600, color: '#1976d2', fontSize: '0.98em' }}>{ranks[i] > 0 ? "+" + ranks[i] : ranks[i]}</span>
+                  </div>
                   <input
                     type="range"
                     min={-6}
@@ -304,12 +300,14 @@ export default function FilterPanel({
                       arr[i] = Number(e.target.value);
                       setRanks(arr);
                     }}
-                    style={{ width: "70%" }}
+                    style={{ width: "90%" }}
                   />
-                  <div>{ranks[i] > 0 ? "+" + ranks[i] : ranks[i]}</div>
                 </td>
                 <td>
-                  <label>{getRankText(i)}</label>
+                  <div style={{ display: 'flex', alignItems: 'center', marginBottom: 2, marginLeft: 4 }}>
+                    <span style={{ fontWeight: 600, color: '#1976d2', fontSize: '1em', marginRight: 6 }}>{getRankText(i)}</span>
+                    <span style={{ fontWeight: 600, color: '#1976d2', fontSize: '0.98em' }}>{ranks[i + 3] > 0 ? "+" + ranks[i + 3] : ranks[i + 3]}</span>
+                  </div>
                   <input
                     type="range"
                     min={-6}
@@ -320,11 +318,8 @@ export default function FilterPanel({
                       arr[i + 3] = Number(e.target.value);
                       setRanks(arr);
                     }}
-                    style={{ width: "70%" }}
+                    style={{ width: "90%" }}
                   />
-                  <div>
-                    {ranks[i + 3] > 0 ? "+" + ranks[i + 3] : ranks[i + 3]}
-                  </div>
                 </td>
               </tr>
             ))}
