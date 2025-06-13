@@ -49,6 +49,7 @@ export default function EndureKOChart({
 
   const rectRef = useRef();
   const dragStartRef = useRef(null);
+  const [isDraggingRect, setIsDraggingRect] = useState(false);
 
   useEffect(() => {
     fetch("/atkType.json")
@@ -94,6 +95,7 @@ export default function EndureKOChart({
           boxX: horizontalRange[0],
           boxY: verticalRange[0],
         };
+        setIsDraggingRect(true);
       })
       .on("drag", (event) => {
         if (!dragStartRef.current) return;
@@ -121,6 +123,9 @@ export default function EndureKOChart({
         setHorizontalRange([newXMin, newXMax]);
         setVerticalRange([newYMin, newYMax]);
       })
+      .on("end", () => {
+        setIsDraggingRect(false);
+      });
 
     rect.call(drag);
 
@@ -333,6 +338,7 @@ export default function EndureKOChart({
               typeNames={typeNames}
               width={200}
               height={200}
+              isDraggingRect={isDraggingRect}
             />
             <svg
               width={160}
@@ -347,15 +353,24 @@ export default function EndureKOChart({
                 zIndex: 2,
               }}
             >
+              {/* 네모 외부 어둡게 */}
+              {/* 위쪽 */}
+              <rect x={0} y={0} width={160} height={rectYTop} fill="rgba(0,0,0,0.28)" />
+              {/* 아래쪽 */}
+              <rect x={0} y={rectYTop + rectHeight} width={160} height={160 - (rectYTop + rectHeight)} fill="rgba(0,0,0,0.28)" />
+              {/* 왼쪽 */}
+              <rect x={0} y={rectYTop} width={rectX} height={rectHeight} fill="rgba(0,0,0,0.28)" />
+              {/* 오른쪽 */}
+              <rect x={rectX + rectWidth} y={rectYTop} width={160 - (rectX + rectWidth)} height={rectHeight} fill="rgba(0,0,0,0.28)" />
               <rect
                 ref={rectRef}
                 x={rectX}
                 y={rectYTop}
                 width={rectWidth}
                 height={rectHeight}
-                fill="none"
+                fill="transparent"
                 stroke="black"
-                strokeWidth={5}
+                strokeWidth={3}
                 style={{ cursor: "move", pointerEvents: "auto" }}
               />
             </svg>

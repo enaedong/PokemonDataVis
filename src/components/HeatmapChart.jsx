@@ -24,7 +24,7 @@ function getColor(count, max) {
   return `rgb(${r},${g},${b})`;
 }
 
-export default function HeatmapChart({ items, xKey = "x", yKey = "y", width = 450, height = 450, typeChecks, typeNames }) {
+export default function HeatmapChart({ items, xKey = "x", yKey = "y", width = 450, height = 450, typeChecks, typeNames, isDraggingRect }) {
   const ref = useRef();
   const [hoveredCell, setHoveredCell] = useState(null);
 
@@ -116,10 +116,10 @@ export default function HeatmapChart({ items, xKey = "x", yKey = "y", width = 45
           .attr("fill", getColor(count, maxCount))
           .attr("stroke", "#eee")
           .on("mouseenter", function () {
-            if (count > 0) setHoveredCell({ xi, yi, x: cx, y: cy, count });
+            if (!isDraggingRect && count > 0) setHoveredCell({ xi, yi, x: cx, y: cy, count });
           })
           .on("mouseleave", function () {
-            setHoveredCell(null);
+            if (!isDraggingRect) setHoveredCell(null);
           });
       }
     }
@@ -128,7 +128,7 @@ export default function HeatmapChart({ items, xKey = "x", yKey = "y", width = 45
   return (
     <svg ref={ref} width={width} height={height}>
       {/* 툴크: hoveredCell이 있으면 React로 SVG에 렌더링 */}
-      {hoveredCell && hoveredCell.count > 0 && (
+      {hoveredCell && hoveredCell.count > 0 && !isDraggingRect && (
         <g
           transform={`translate(${hoveredCell.x},${hoveredCell.y - 15})`}
           pointerEvents="none"
