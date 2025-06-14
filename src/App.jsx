@@ -266,8 +266,6 @@ export default function App() {
           typeAll={typeAll}
           setTypeAll={setTypeAll}
           typeNames={typeNames}
-          speedOnly={speedOnly}
-          setSpeedOnly={setSpeedOnly}
         />
       </div>
 
