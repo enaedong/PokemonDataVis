@@ -162,7 +162,30 @@ export default function EndureKOChart({
               alignItems: 'center',
             }}
           >
-            <span style={{ color: "green", fontWeight: 700, marginRight: 6 }}>Green</span> is faster, <span style={{ color: "red", fontWeight: 700, marginRight: 6 }}>Red</span> is slower
+            {/* Green circle */}
+            <svg width="18" height="18" style={{ marginRight: 1,  }}>
+              <circle
+                cx="9"
+                cy="10"
+                r="7"
+                fill="green"
+                stroke="white"
+                strokeWidth="1"
+              />
+            </svg>
+            : Faster
+            {/* Red circle */}
+            <svg width="18" height="18" style={{ marginLeft: 10, marginRight: 1 }}>
+              <circle
+                cx="9"
+                cy="10"
+                r="7"
+                fill="red"
+                stroke="white"
+                strokeWidth="1"
+              />
+            </svg>
+            : Slower
             <label style={{ marginLeft: 25, display: 'flex', alignItems: 'center', fontWeight: 500, fontSize: 14, cursor: 'pointer', userSelect: 'none' }}>
               <input
                 type="checkbox"
