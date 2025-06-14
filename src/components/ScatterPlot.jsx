@@ -39,7 +39,7 @@ export default function ScatterPlot({
     svg.selectAll("line").remove();
     svg.selectAll("defs").remove();
     svg.selectAll("polygon").remove();
-    
+
     if (!items || items.length === 0 || !selectedPokemon) return;
 
     // Filter items to only include those with checked types
@@ -57,7 +57,7 @@ export default function ScatterPlot({
 
     // Filter out items using the speed
     if (speedOnly) {
-      filteredItems = filteredItems.filter(d => d.color === "green");
+      filteredItems = filteredItems.filter((d) => d.color === "green");
     }
 
     // Calculate axis ranges
@@ -99,27 +99,29 @@ export default function ScatterPlot({
     // X-axis ticks
     const xTicks = [];
     let v = Math.ceil(xMin * 10) / 10;
-    while (v < xMax - 1e-8) {
-      xTicks.push(Math.round(v * 10) / 10);
+    while (v < xMaxRaw - 1e-8) {
+      const rounded = Math.round(v * 10) / 10;
+      if (rounded <= 5.0 || rounded >= 5.5) {
+        xTicks.push(rounded);
+      }
       v += 0.1;
     }
-    if (xMaxRaw > 5) {
-      xTicks.push(5.5); // Only add 5+ tick if over 5
-    } else {
-      xTicks.push(Math.round(xMax * 10) / 10);
+    if (xMaxRaw >= 5.0 && !xTicks.includes(5.5)) {
+      xTicks.push(5.5);
     }
 
     // Y-axis ticks
     const yTicks = [];
     v = Math.ceil(yMin * 10) / 10;
-    while (v < yMax - 1e-8) {
-      yTicks.push(Math.round(v * 10) / 10);
+    while (v < yMaxRaw - 1e-8) {
+      const rounded = Math.round(v * 10) / 10;
+      if (rounded <= 5.0 || rounded >= 5.5) {
+        yTicks.push(rounded);
+      }
       v += 0.1;
     }
-    if (yMaxRaw > 5) {
+    if (yMaxRaw >= 5.0 && !yTicks.includes(5.5)) {
       yTicks.push(5.5);
-    } else {
-      yTicks.push(Math.round(yMax * 10) / 10);
     }
 
     // Further filter to only show points within the current axis range
@@ -129,7 +131,7 @@ export default function ScatterPlot({
       return dx >= xMin && dx <= xMax && dy >= yMin && dy <= yMax;
     });
 
-    svg.attr("width", width+15).attr("height", height+20);
+    svg.attr("width", width + 15).attr("height", height + 20);
 
     const isViewChange =
       prevXRange.current[0] !== xRange[0] ||
@@ -227,7 +229,7 @@ export default function ScatterPlot({
           .text(v >= 5.5 ? "5+" : v);
       }
     });
-    
+
     // Variabes for axis label and arrows
     const xLabelY = height - marginBottom + 40; // vertical position for label/arrows
     const xLabelX = marginLeft + plotWidth / 2; // center of x-axis
@@ -237,29 +239,42 @@ export default function ScatterPlot({
     const yArrowBaseOffset = 40; // distance ENDURE from label to arrow base
     const xArrowOffset = 45; // distance from KO label to arrow tip
     const xArrowBaseOffset = 25; // distance from KO label to arrow base
-    
+
     // Red right arrow (right of KO)
-    svg.append("polygon")
-      .attr("points", [
-        [xLabelX + xArrowOffset, xLabelY],         // tip
-        [xLabelX + xArrowBaseOffset, xLabelY - 7], // top base
-        [xLabelX + xArrowBaseOffset, xLabelY + 7], // bottom base
-      ].map(p => p.join(",")).join(" "))
+    svg
+      .append("polygon")
+      .attr(
+        "points",
+        [
+          [xLabelX + xArrowOffset, xLabelY], // tip
+          [xLabelX + xArrowBaseOffset, xLabelY - 7], // top base
+          [xLabelX + xArrowBaseOffset, xLabelY + 7], // bottom base
+        ]
+          .map((p) => p.join(","))
+          .join(" ")
+      )
       .attr("fill", "orange")
       .attr("opacity", 0.7);
-    
+
     // Green left arrow (left of KO)
-    svg.append("polygon")
-      .attr("points", [
-        [xLabelX - xArrowOffset, xLabelY],         // tip
-        [xLabelX - xArrowBaseOffset, xLabelY - 7], // top base
-        [xLabelX - xArrowBaseOffset, xLabelY + 7], // bottom base
-      ].map(p => p.join(",")).join(" "))
+    svg
+      .append("polygon")
+      .attr(
+        "points",
+        [
+          [xLabelX - xArrowOffset, xLabelY], // tip
+          [xLabelX - xArrowBaseOffset, xLabelY - 7], // top base
+          [xLabelX - xArrowBaseOffset, xLabelY + 7], // bottom base
+        ]
+          .map((p) => p.join(","))
+          .join(" ")
+      )
       .attr("fill", "deepskyblue")
       .attr("opacity", 0.7);
-    
+
     // KO label (horizontal)
-    svg.append("text")
+    svg
+      .append("text")
       .attr("x", xLabelX)
       .attr("y", xLabelY + 5)
       .attr("text-anchor", "middle")
@@ -267,7 +282,7 @@ export default function ScatterPlot({
       .attr("fill", "#222")
       .attr("font-weight", "bold")
       .text("KO");
-    
+
     // Draw Y axis line
     svg
       .append("line")
@@ -297,29 +312,42 @@ export default function ScatterPlot({
           .text(v >= 5.5 ? "5+" : v);
       }
     });
-    
+
     // Green up arrow (above ENDURE)
-    svg.append("polygon")
-      .attr("points", [
-        [ylabelX, ylabelY - yArrowOffset],         // tip
-        [ylabelX - 7, ylabelY - yArrowBaseOffset],    // left base
-        [ylabelX + 7, ylabelY - yArrowBaseOffset],    // right base
-      ].map(p => p.join(",")).join(" "))
+    svg
+      .append("polygon")
+      .attr(
+        "points",
+        [
+          [ylabelX, ylabelY - yArrowOffset], // tip
+          [ylabelX - 7, ylabelY - yArrowBaseOffset], // left base
+          [ylabelX + 7, ylabelY - yArrowBaseOffset], // right base
+        ]
+          .map((p) => p.join(","))
+          .join(" ")
+      )
       .attr("fill", "deepskyblue")
       .attr("opacity", 0.7);
-    
+
     // Red down arrow (below ENDURE)
-    svg.append("polygon")
-      .attr("points", [
-        [ylabelX, ylabelY + yArrowOffset],         // tip
-        [ylabelX - 7, ylabelY + yArrowBaseOffset],    // left base
-        [ylabelX + 7, ylabelY + yArrowBaseOffset],    // right base
-      ].map(p => p.join(",")).join(" "))
+    svg
+      .append("polygon")
+      .attr(
+        "points",
+        [
+          [ylabelX, ylabelY + yArrowOffset], // tip
+          [ylabelX - 7, ylabelY + yArrowBaseOffset], // left base
+          [ylabelX + 7, ylabelY + yArrowBaseOffset], // right base
+        ]
+          .map((p) => p.join(","))
+          .join(" ")
+      )
       .attr("fill", "orange")
       .attr("opacity", 0.7);
-    
+
     // ENDURE label (rotated)
-    svg.append("text")
+    svg
+      .append("text")
       .attr("x", ylabelX)
       .attr("y", ylabelY + 5)
       .attr("text-anchor", "middle")
@@ -328,7 +356,7 @@ export default function ScatterPlot({
       .attr("font-weight", "bold")
       .attr("transform", `rotate(-90,${ylabelX},${ylabelY})`)
       .text("ENDURE");
-    
+
     // X-axis end label (right end)
     svg
       .append("text")
@@ -414,7 +442,8 @@ export default function ScatterPlot({
       .attr("r", (d) => {
         const isHovered = hoveredItem?.name === d.name;
         const isMatch = lowerQuery && d.name.toLowerCase().includes(lowerQuery);
-        return isHovered ? 8 : isMatch ? 7 : 5;
+        const isSelected = d.name === selectedItem;
+        return isSelected ? 7 : isHovered ? 8 : isMatch ? 7 : 5;
       })
       .attr("stroke", (d) => {
         const isMatch = lowerQuery && d.name.toLowerCase().includes(lowerQuery);
@@ -447,7 +476,8 @@ export default function ScatterPlot({
       .attr("r", (d) => {
         const isHovered = hoveredItem?.name === d.name;
         const isMatch = lowerQuery && d.name.toLowerCase().includes(lowerQuery);
-        return isHovered ? 8 : isMatch ? 7 : 5;
+        const isSelected = d.name === selectedItem;
+        return isSelected ? 7 : isHovered ? 8 : isMatch ? 7 : 5;
       })
       .attr("stroke", (d) => {
         const isMatch = lowerQuery && d.name.toLowerCase().includes(lowerQuery);
@@ -473,7 +503,7 @@ export default function ScatterPlot({
       });
 
     points.exit().transition(posTransition).attr("r", 0).remove();
-    
+
     prevXRange.current = xRange;
     prevYRange.current = yRange;
 
