@@ -106,7 +106,10 @@ export default function ScatterPlot({
       }
       v += 0.1;
     }
-    if (xMaxRaw >= 5.0 && !xTicks.includes(5.5)) {
+    const finalTick = Math.round(xMaxRaw * 10) / 10;
+    if (xMaxRaw < 5.0 && !xTicks.includes(finalTick)) {
+      xTicks.push(finalTick);
+    } else if (xMaxRaw >= 5.0 && !xTicks.includes(5.5)) {
       xTicks.push(5.5);
     }
 
@@ -120,7 +123,10 @@ export default function ScatterPlot({
       }
       v += 0.1;
     }
-    if (yMaxRaw >= 5.0 && !yTicks.includes(5.5)) {
+    const finalYTick = Math.round(yMaxRaw * 10) / 10;
+    if (yMaxRaw < 5.0 && !yTicks.includes(finalYTick)) {
+      yTicks.push(finalYTick);
+    } else if (yMaxRaw >= 5.0 && !yTicks.includes(5.5)) {
       yTicks.push(5.5);
     }
 
