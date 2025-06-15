@@ -19,8 +19,6 @@ export default function FilterPanel({
   typeAll,
   setTypeAll,
   typeNames,
-  speedOnly,
-  setSpeedOnly,
 }) {
   const weatherOptions = [
     { value: "", label: "Clear", type: undefined },
