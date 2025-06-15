@@ -282,6 +282,7 @@ export default function FilterPanel({
             menuPlacement="auto"
             menuPortalTarget={typeof window !== 'undefined' ? window.document.body : undefined}
             menuPosition="fixed"
+            isSearchable={false}
           />
         </div>
         {/* 날씨 드롭다운 */}
@@ -296,6 +297,7 @@ export default function FilterPanel({
                   onChange={(e) => setSelectedWeather(e.value)}
                   options={weatherOptions}
                   styles={customStylesWeather}
+                  isSearchable={false}
                 />
               </td>
             </tr>
@@ -309,6 +311,7 @@ export default function FilterPanel({
                   onChange={(e) => setSelectedTerrain(e.value)}
                   options={terrainOptions}
                   styles={customStylesTerrain}
+                  isSearchable={false}
                 />
               </td>
             </tr>
