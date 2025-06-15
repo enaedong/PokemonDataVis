@@ -2,6 +2,7 @@
 import { color } from "d3";
 import TYPE_COLORS from "../utils/typeColors";
 import Select from "react-select";
+import { getMoveDetails } from "../utils/moveHelpers";
 
 export default function FilterPanel({
   selectedWeather,
@@ -120,39 +121,47 @@ export default function FilterPanel({
   };
 
   const customStylesMove = {
-    control: (styles) => ({
+    control: (styles, { selectProps, getValue }) => {
+      const selected = getValue()[0];
+      const type = selected?.type;
+      return {
+        ...styles,
+        fontSize: "0.98em",
+        minHeight: 36,
+        borderRadius: 8,
+        border: "1.5px solid #bbb",
+        boxShadow: "none",
+        backgroundColor: type ? TYPE_COLORS[type.toLowerCase()] : "#fff",
+        paddingLeft: 0,
+        paddingRight: 0,
+        cursor: "pointer",
+      };
+    },
+    singleValue: (styles, { data }) => ({
       ...styles,
-      fontSize: "0.98em",
-      minHeight: 36,
-      borderRadius: 8,
-      border: "1.5px solid #bbb",
-      boxShadow: "none",
-      background: "#fff",
-      paddingLeft: 0,
-      paddingRight: 0,
-      cursor: "pointer",
-    }),
-    singleValue: (styles) => ({
-      ...styles,
-      color: "#222",
+      color: data.type ? "white" : "#222",
     }),
     dropdownIndicator: (provided) => ({
       ...provided,
       padding: "0px",
     }),
-    option: (styles, { isDisabled, isFocused, isSelected }) => ({
-      ...styles,
-      backgroundColor: isDisabled
-        ? undefined
-        : isSelected
-        ? "#e3f2fd"
-        : isFocused
-        ? "#f3f3f3"
-        : undefined,
-      color: "#222",
-      fontWeight: isSelected ? 700 : 500,
-      fontSize: "1em",
-    }),
+    option: (styles, { data, isDisabled, isFocused, isSelected }) => {
+      return {
+        ...styles,
+        backgroundColor: isDisabled
+          ? undefined
+          : isSelected
+          ? data.type
+            ? TYPE_COLORS[data.type.toLowerCase()]
+            : TYPE_COLORS["normal"]
+          : isFocused
+          ? "#f3f3f3"
+          : undefined,
+        color: isSelected && data.type ? "white" : "#222",
+        fontWeight: isSelected ? 700 : 500,
+        fontSize: "1em",
+      };
+    },
   };
 
   return (
@@ -253,9 +262,17 @@ export default function FilterPanel({
           <label htmlFor="move-select">Move:</label>
           <Select
             inputId="move-select"
-            value={moveList.find(m => m === selectedMove) ? { value: selectedMove, label: selectedMove } : null}
+            value={(() => {
+              const details = getMoveDetails(selectedMove);
+              return moveList.find(m => m === selectedMove)
+                ? { value: selectedMove, label: selectedMove, type: details.type }
+                : null;
+            })()}
             onChange={opt => setSelectedMove(opt ? opt.value : "")}
-            options={moveList.map(m => ({ value: m, label: m }))}
+            options={moveList.map(m => {
+              const details = getMoveDetails(m);
+              return { value: m, label: m, type: details.type };
+            })}
             isDisabled={!selectedPokemon}
             styles={{
               ...customStylesMove,
