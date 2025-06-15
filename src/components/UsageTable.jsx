@@ -75,15 +75,6 @@ export default function UsageTable({ data, selected, setSelected }) {
           ))}
         </tbody>
       </table>
-      <button
-        className="back-btn"
-        onClick={() => {
-          setShowUsageTable(true);
-        }}
-        style={{ marginBottom: 28 }}
-      >
-        ← Back
-      </button>
     </div>
   );
 }
